@@ -38,6 +38,9 @@ for n in news:
     data["news"].append(
         {
         "link": n["link"],
+        "_public": True,
+        "showlastday": True,
+        
         "image": [{
             "_id": n["image"],
             "stylehome": n["style"],
@@ -48,7 +51,6 @@ for n in news:
             "test": True, 
             "_public": True,
             "archiv": True,
-            "showlastday": True,
             "start": datetime.strptime(n["showhomestart"], date_format),
             "end": datetime.strptime(n["showhomeend"], date_format),
             "title_de": n["title_de"],
@@ -127,6 +129,26 @@ for n in data["news"]:
             n["image"][0]["_id"] = newbild.inserted_id
     news.insert_one(n)
 
+
+image_list = ['white.jpg']
+
+path = ["../../mi-hp/static/images/", "../../mi-hp/static/images/Dozenten/"]
+for p in path:
+    for file in os.listdir(p):
+        try:
+            mime = file.split(".")[1]
+            if mime in ["jpg", "jpeg", "png"]:
+                image_list.append(p + file)
+        except:
+            pass
+
+for filename in image_list:
+    titel = filename.split(".")[0]
+    mime = filename.split(".")[1].lower()
+    with open(filename, 'rb') as image_file:
+        encoded_image = bson.binary.Binary(image_file.read())
+        print(filename)
+        bild.insert_one({"filename": filename, "mime": mime, "data": encoded_image, "titel": titel, "bildnachweis": ""})
 
 print("Check schema")
 import schema_init
