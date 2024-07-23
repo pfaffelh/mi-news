@@ -67,12 +67,8 @@ carouselnews_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Nachricht für das Carousel.",
-        "required": ["test", "_public", "start", "end", "interval", "image_id", "left", "right", "bottom", "text"],
+        "required": ["_public", "start", "end", "interval", "image_id", "left", "right", "bottom", "text"],
         "properties": {
-            "test": {
-                "bsonType": "bool",
-                "description": "Gibt an, ob die News auf monitortest erscheint -- required"
-            },
             "_public": {
                 "bsonType": "bool",
                 "description": "Gibt an, ob die News auf monitor erscheint -- required"
@@ -123,11 +119,23 @@ news_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Nachricht.",
-        "required": ["link", "image", "home", "monitor"],
+        "required": ["link", "_public", "archiv", "showlastday", "image", "home", "monitor"],
         "properties": {
             "link": {
                 "bsonType": "string",
                 "description": "Gibt einen Link für diese News an (oder '') -- required"
+            },
+            "_public": {
+                "bsonType": "bool",
+                "description": "Gibt an, ob die News auf home zu sehen ist.  -- required"
+            },
+            "archiv": {
+                "bsonType": "bool",
+                "description": "Gibt an, ob die News nach end ins Archiv auf home übernommen wird.  -- required"
+            },
+            "showlastday": {
+                "bsonType": "bool",
+                "description": "Gibt an, ob der letzte Tag speziell markiert werden soll. -- required"
             },
             "image": {
                 "bsonType": "array",
@@ -161,24 +169,8 @@ news_validator = {
             "home": {
                 "bsonType": "object",
                 "description": "Details für home",
-                "required": ["test", "_public", "archiv", "showlastday", "start", "end", "title_de", "title_en", "text_de", "text_en", "popover_title_de", "popover_title_en", "popover_text_de", "popover_text_en"],
+                "required": ["start", "end", "title_de", "title_en", "text_de", "text_en", "popover_title_de", "popover_title_en", "popover_text_de", "popover_text_en"],
                 "properties": {
-                    "test": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob die News auf hometest zu sehen ist.  -- required"
-                    },
-                    "_public": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob die News auf home zu sehen ist.  -- required"
-                    },
-                    "archiv": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob die News nach end ins Archiv auf home übernommen wird.  -- required"
-                    },
-                    "showlastday": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob der letzte Tag speziell markiert werden soll. -- required"
-                    },
                     "start": {
                         "bsonType": "date",
                         "description": "Startdatum für die News auf home -- required"
@@ -224,20 +216,8 @@ news_validator = {
             "monitor": {
                 "bsonType": "object",
                 "description": "Details für monitor",
-                "required": ["test", "_public", "showlastday", "start", "end", "title", "text"],
+                "required": ["start", "end", "title", "text"],
                 "properties": {
-                    "test": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob die News auf monitortest zu sehen ist.  -- required"
-                    },
-                    "_public": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob die News auf monitor zu sehen ist.  -- required"
-                    },
-                    "showlastday": {
-                        "bsonType": "bool",
-                        "description": "Gibt an, ob der letzte Tag speziell markiert werden soll. -- required"
-                    },
                     "start": {
                         "bsonType": "date",
                         "description": "Startdatum für die News auf monitor -- required"
@@ -259,6 +239,4 @@ news_validator = {
         }
     }
 }
-
-
 

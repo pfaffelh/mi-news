@@ -23,7 +23,7 @@ logger = configure_logging(log_file)
 
 def setup_session_state():
     # Das ist die mongodb; 
-    # vvz enthält alle Daten für das Vorlesungsverzeichnis. 
+    # news enthält alle News. 
     # user ist aus dem Cluster user und wird nur bei der Authentifizierung benötigt
     try:
         cluster = pymongo.MongoClient(mongo_location)

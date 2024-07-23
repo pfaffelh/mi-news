@@ -131,7 +131,7 @@ def display_navigation():
     st.session_state.tage = st.sidebar.slider("Welche News sollen angezeigt werden?", 0, 500, 25)
     st.sidebar.write("Nur News der letzten ", st.session_state.tage, "Tage werden angezeigt.")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
-    st.sidebar.page_link("pages/00_News.py", label="News")
+    st.sidebar.page_link("pages/00_New.py", label="News")
     st.sidebar.page_link("pages/02_Carouselnews.py", label="News im Carousel")
     st.sidebar.page_link("pages/04_Bild.py", label="Bilder")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)

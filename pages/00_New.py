@@ -5,6 +5,9 @@ import pymongo
 import pandas as pd
 from itertools import chain
 from bson import ObjectId
+from streamlit_image_select import image_select
+from PIL import Image
+import io
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -20,19 +23,26 @@ import misc.tools as tools
 # Navigation in Sidebar anzeigen
 tools.display_navigation()
 
-tools.delete_temporary()
-
 # Es geht hier vor allem um diese Collection:
-collection = util.news
+bild = st.session_state.bild
+news = st.session_state.news
+carouselnews = st.session_state.carouselnews
+collection = news
 
 # Ab hier wird die Seite angezeigt
+st.write(st.session_state.logged_in)
 if st.session_state.logged_in:
     st.header("News")
-    with st.popover(f'Neue News anlegen'):
-        _public = st.checkbox()
-        showlastday = st.checkbox()
-        titel = st.text_input()
+    with st.expander(f'Neue News anlegen'):
+        _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
+        showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
+        archiv = st.toggle("Archivieren", value = False, help = "News erscheint im Archiv nach dem Ablauf.")
+        titel = st.text_input("Titel", "")
+        images = [Image.open(io.BytesIO(b["data"])) for b in list(bild.find({"mime": "jpeg"}))]
+        img = image_select("Bild auswählen", images)
+
         
+
         name_de=st.text_input('Name (de)', "")
         name_en=st.text_input('Name (en)', "")
         kurzname=st.text_input('Kurzname', "", help = "Wird im Raumplan verwendet.")

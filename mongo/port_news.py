@@ -16,7 +16,6 @@ data["carouselnews"] = []
 for n in carouselnews:
     data["carouselnews"].append(
         {
-            "test": True,
             "_public": True, 
             "start": datetime.strptime(n["showstart"], date_format),
             "end": datetime.strptime(n["showend"], date_format),
@@ -40,7 +39,7 @@ for n in news:
         "link": n["link"],
         "_public": True,
         "showlastday": True,
-        
+        "archiv": True,      
         "image": [{
             "_id": n["image"],
             "stylehome": n["style"],
@@ -48,9 +47,6 @@ for n in news:
             "widthmonitor": 5
         }] if n["image"] != "" else [],
         "home": {
-            "test": True, 
-            "_public": True,
-            "archiv": True,
             "start": datetime.strptime(n["showhomestart"], date_format),
             "end": datetime.strptime(n["showhomeend"], date_format),
             "title_de": n["title_de"],
@@ -63,9 +59,6 @@ for n in news:
             "popover_text_en": n["popover_text_en"],
         },
         "monitor": {
-            "test": True, 
-            "_public": True,
-            "showlastday": True,
             "start": datetime.strptime(n["showmonitorstart"], date_format),
             "end": datetime.strptime(n["showmonitorend"], date_format),
             "title": n["title_de"],
@@ -79,7 +72,7 @@ for n in news:
 
 # Now we write data in the mongodb
 
-os.system("mongo news --eval 'db.dropDatabase()'")
+os.system("mongosh news --eval 'db.dropDatabase()'")
 
 # Write to database:
 # Collections are: 
