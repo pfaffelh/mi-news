@@ -64,6 +64,23 @@ def setup_session_state():
     # Determines which page we are on
     if "page" not in st.session_state:
         st.session_state.page = ""
+    if "uploaded_file" not in st.session_state:
+        st.session_state.uploaded_file = None
+    if "w" not in st.session_state:
+        st.session_state.w = 0
+    if "wnew" not in st.session_state:
+        st.session_state.wnew = 0
+    if "h" not in st.session_state:
+        st.session_state.h = 0
+    if "hnew" not in st.session_state:
+        st.session_state.hnew = 0
+    if "crop_left" not in st.session_state:
+        st.session_state.crop_left = 0
+        st.session_state.crop_top = 0
+        st.session_state.crop_right = 0
+        st.session_state.crop_bottom = 0
+
+
 
     ### temporary data ###
     ### should be also cleared on every page with tools.
@@ -75,22 +92,24 @@ def setup_session_state():
         st.session_state.translation_tmp = None  # Could be specified
 
     st.session_state.collection_name = {
-        bild: "Bilder",
+        bild: "Bild",
         news: "News",
         carouselnews: "News im Carousel"
     }
 
 
     st.session_state.leer = {
-                bild: bild.find_one({"titel": "white"})["_id"]
+                bild: bild.find_one({"filename": "white.jpg"})["_id"]
                 }
     leer = st.session_state.leer
 
     st.session_state.new = {
-        bild: {"data": base64.b64encode(b""),
+        bild: { "data": base64.b64encode(b""),
+                "menu": True,
                 "mime": "", 
                 "filename": "", 
                 "titel": "", 
+                "kommentar": "", 
                 "bildnachweis": ""},
         carouselnews: {
                 "test": True, 
@@ -107,11 +126,10 @@ def setup_session_state():
         news: {
             "link": "",
             "image": [],
+            "_public": True,
+            "archiv": True,
+            "showlastday": True,
             "home": {
-                "test": True, 
-                "_public": True,
-                "archiv": True,
-                "showlastday": True,
                 "start": datetime.now(),
                 "end": datetime.now() + timedelta(days=7),
                 "title_de": "",
@@ -124,9 +142,6 @@ def setup_session_state():
                 "popover_text_en": "",
             },
             "monitor": {
-                "test": True, 
-                "_public": True,
-                "showlastday": True,
                 "start": datetime.now(),
                 "end": datetime.now() + timedelta(days=7),
                 "title": "",
@@ -145,3 +160,6 @@ leer = st.session_state.leer
 new = st.session_state.new
 abhaengigkeit = st.session_state.abhaengigkeit
 
+bild = st.session_state.bild
+news = st.session_state.news
+carouselnews = st.session_state.carouselnews

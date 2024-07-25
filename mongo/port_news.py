@@ -1,11 +1,15 @@
 import json
 from datetime import datetime
 from pymongo import MongoClient
-import os
-import bson.binary
+import os, io
+from PIL import Image
+import base64   
 
+bild_no = 1
+news_no = 1
+carouselnews_no = 1
 date_format = '%d.%m.%Y %H:%M'
-
+    
 # The is the file from mi-hp
 with open('home.json') as f:
     data = json.load(f)    
@@ -13,10 +17,28 @@ with open('home.json') as f:
 carouselnews = data["carouselmonitor"]
 data["carouselnews"] = []
 
+def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,128), rang = 0, menu = True, kommentar = ""):
+    with Image.open(filename) as img:
+        if img.mode == 'RGBA':
+            print("enter RGBA")
+            img = img.convert('RGB')
+        encoded_image = io.BytesIO()
+        img.save(encoded_image, format='JPEG')
+        encoded_image = encoded_image.getvalue()
+#        encoded_image = base64.b64encode(encoded_image).decode('utf-8') 
+        # Thumbnail erstellen
+        img.thumbnail(thumbnail_size)
+        encoded_thumbnail = io.BytesIO()
+        img.save(encoded_thumbnail, format='JPEG')
+        encoded_thumbnail = encoded_thumbnail.getvalue()
+#        encoded_thumbnail = base64.b64encode(encoded_thumbnail).decode('utf-8')
+        newbild = bild.insert_one({"filename": filename, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang, "menu": menu, "kommentar": kommentar})
+        return newbild.inserted_id
+
 for n in carouselnews:
     data["carouselnews"].append(
         {
-            "_public": True, 
+            "_public": True,
             "start": datetime.strptime(n["showstart"], date_format),
             "end": datetime.strptime(n["showend"], date_format),
             "interval": int(n["interval"]),
@@ -72,7 +94,7 @@ for n in news:
 
 # Now we write data in the mongodb
 
-os.system("mongosh news --eval 'db.dropDatabase()'")
+os.system("mongo news --eval 'db.dropDatabase()'")
 
 # Write to database:
 # Collections are: 
@@ -100,13 +122,12 @@ for n in data["carouselnews"]:
         n["image_id"] = im["_id"]
     else:
         print(n["image_id"])
-        with open(f'../../mi-hp{n["image_id"]}', 'rb') as image_file:
-            encoded_image = bson.binary.Binary(image_file.read())
-            newbild = bild.insert_one({"filename": n["image_id"], "mime": n["image_id"].split(".")[1].lower(), "data": encoded_image, "titel": "", "bildnachweis": ""})
-
-        n["image_id"] = newbild.inserted_id
-        
+        newbild = store_image(f'../../mi-hp{n["image_id"]}', titel = "", bildnachweis = "", rang = bild_no)
+        bild_no = bild_no + 1
+        n["image_id"] = newbild
+    n["rang"] = carouselnews_no
     carouselnews.insert_one(n)
+    carouselnews_no = carouselnews_no +1 
 
 for n in data["news"]:
     if n["image"] != []:
@@ -116,12 +137,12 @@ for n in data["news"]:
             n["image"][0]["_id"] = im["_id"]
         else:
             print(n["image"][0]["_id"])
-            with open(f'../../mi-hp{n["image"][0]["_id"]}', 'rb') as image_file:
-                encoded_image = bson.binary.Binary(image_file.read())
-                newbild = bild.insert_one({"filename": n["image"][0]["_id"], "mime": n["image"][0]["_id"].split(".")[1].lower(), "data": encoded_image, "titel": "", "bildnachweis": ""})
-            n["image"][0]["_id"] = newbild.inserted_id
+            newbild = store_image(f'../../mi-hp{n["image"][0]["_id"]}', titel = "", bildnachweis = "", rang = bild_no)
+            bild_no = bild_no + 1
+            n["image"][0]["_id"] = newbild
+    n["rang"] = news_no
     news.insert_one(n)
-
+    news_no = news_no +1 
 
 image_list = ['white.jpg']
 
@@ -138,10 +159,12 @@ for p in path:
 for filename in image_list:
     titel = filename.split(".")[0]
     mime = filename.split(".")[1].lower()
-    with open(filename, 'rb') as image_file:
-        encoded_image = bson.binary.Binary(image_file.read())
-        print(filename)
-        bild.insert_one({"filename": filename, "mime": mime, "data": encoded_image, "titel": titel, "bildnachweis": ""})
+    try:
+        store_image(filename, rang = bild_no)
+        bild_no = bild_no + 1
+    except:
+        print("Error with "+ filename)
+        pass
 
 print("Check schema")
 import schema_init

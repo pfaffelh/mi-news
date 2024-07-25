@@ -37,19 +37,27 @@ bild_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Ein Bild.",
-        "required": ["data", "mime", "filename", "titel", "bildnachweis"],
+        "required": ["filename", "menu", "mime", "data", "thumbnail", "titel", "kommentar", "bildnachweis", "rang"],
         "properties": {
-            "data": {
-                "bsonType": "binData", 
-                "description": "Das File, wie es in der Datenbank abgespeichert wird -- required"
+            "filename": {
+                "bsonType": "string",
+                "description": "Filename of the image -- required"
+            },
+            "menu": {
+                "bsonType": "bool",
+                "description": "In Auswahlmenüs sichtbar? -- required"
             },
             "mime": {
                 "bsonType": "string",
                 "description": "jpg, jpeg, png etc -- required"
             },
-            "filename": {
-                "bsonType": "string",
-                "description": "Filename of the image -- required"
+            "data": {
+                "bsonType": "binData", 
+                "description": "Das File, wie es in der Datenbank abgespeichert wird -- required"
+            },
+            "thumbnail": {
+                "bsonType": "binData", 
+                "description": "Thumbnail des Bildes -- required"
             },
             "titel": {
                 "bsonType": "string",
@@ -58,6 +66,14 @@ bild_validator = {
             "bildnachweis": {
                 "bsonType": "string",
                 "description": "Der Bildnachweis -- required"
+            },
+            "kommentar": {
+                "bsonType": "string",
+                "description": "Ein Kommentar -- required"
+            },
+            "rang": {
+                "bsonType": "int",
+                "description": "...um alles in eine Reihenfolge zu bringen -- required"
             }
         }
     }
@@ -67,7 +83,7 @@ carouselnews_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Nachricht für das Carousel.",
-        "required": ["_public", "start", "end", "interval", "image_id", "left", "right", "bottom", "text"],
+        "required": ["_public", "start", "end", "interval", "image_id", "left", "right", "bottom", "text", "rang"],
         "properties": {
             "_public": {
                 "bsonType": "bool",
@@ -111,6 +127,10 @@ carouselnews_validator = {
                 "bsonType": "string",
                 "description": "Text im Bild -- required"
             },
+            "rang": {
+                "bsonType": "int",
+                "description": "...um alles in eine Reihenfolge zu bringen -- required"
+            }
         }
     }
 }
@@ -119,7 +139,7 @@ news_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Nachricht.",
-        "required": ["link", "_public", "archiv", "showlastday", "image", "home", "monitor"],
+        "required": ["link", "_public", "archiv", "showlastday", "image", "home", "monitor", "rang"],
         "properties": {
             "link": {
                 "bsonType": "string",
@@ -236,6 +256,10 @@ news_validator = {
                     },                   
                 },
             },
+            "rang": {
+                "bsonType": "int",
+                "description": "...um alles in eine Reihenfolge zu bringen -- required"
+            }
         }
     }
 }

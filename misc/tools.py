@@ -6,6 +6,7 @@ import ldap
 import misc.util as util
 from bson import ObjectId
 from misc.config import *
+from PIL import Image
 
 def move_up(collection, x, query = {}):
     query["rang"] = {"$lt": x["rang"]}
@@ -132,7 +133,7 @@ def display_navigation():
     st.sidebar.write("Nur News der letzten ", st.session_state.tage, "Tage werden angezeigt.")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/00_New.py", label="News")
-    st.sidebar.page_link("pages/02_Carouselnews.py", label="News im Carousel")
+    st.sidebar.page_link("pages/02_Carouselnews.py", label="Carouselnews")
     st.sidebar.page_link("pages/04_Bild.py", label="Bilder")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/06_Dokumentation.py", label="Dokumentation")
@@ -160,3 +161,22 @@ def delete_temporary(except_field = ""):
     if not except_field == "veranstaltung_tmp":
         st.session_state.veranstaltung_tmp.clear()
         st.session_state.translation_tmp = None
+
+def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,128), rang = 0):
+    with Image.open(filename) as img:
+        print(filename) 
+        if img.mode == 'RGBA':
+            print("enter RGBA")
+            img = img.convert('RGB')
+        encoded_image = io.BytesIO()
+        img.save(encoded_image, format='JPEG')
+        encoded_image = encoded_image.getvalue()
+#        encoded_image = base64.b64encode(encoded_image).decode('utf-8') 
+        # Thumbnail erstellen
+        img.thumbnail(thumbnail_size)
+        encoded_thumbnail = io.BytesIO()
+        img.save(encoded_thumbnail, format='JPEG')
+        encoded_thumbnail = encoded_thumbnail.getvalue()
+#        encoded_thumbnail = base64.b64encode(encoded_thumbnail).decode('utf-8')
+        newbild = util.bild.insert_one({"filename": filename, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang})
+        return newbild.inserted_id
