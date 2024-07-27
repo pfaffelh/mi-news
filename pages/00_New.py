@@ -3,9 +3,6 @@ from streamlit_extras.switch_page_button import switch_page
 from datetime import datetime, timedelta 
 
 import pymongo
-import pandas as pd
-from itertools import chain
-from bson import ObjectId
 from streamlit_image_select import image_select
 from PIL import Image
 import io
@@ -32,7 +29,6 @@ if st.session_state.logged_in:
     st.header("News")
     key = "news_anlegen"
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
-        st.write(f"expanded: {st.session_state.expanded}")
         _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
         nurmonitor = st.toggle("Nur Monitor", value = True, help = "News erscheint nur auf dem Monitor, nicht auf der Homepage.")
@@ -58,7 +54,7 @@ if st.session_state.logged_in:
             img = []
         btn = st.button("News anlegen")
         if btn:
-            new = st.session_state.new[util.news]
+            new = st.session_state.new[collection]
             new["_public"] = _public
             new["showlastday"] = showlastday
             new["home"]["title_de"] = title
@@ -70,18 +66,14 @@ if st.session_state.logged_in:
             new["home"]["end"] = tools.heutenulluhr() if nurmonitor else datetime.combine(enddatum, endzeit)
             new["monitor"]["end"] = datetime.combine(enddatum, endzeit)
             new["image"] = img
-            new["rang"] = min([x["rang"] for x in list(util.news.find())])-1
-            if "_id" in new:
-                del new["_id"]
-            n = util.news.insert_one(new)
-            st.session_state.edit = n.inserted_id            
-            st.session_state.expanded = ""
-            switch_page("News_edit")
-                
+            new["rang"] = min([x["rang"] for x in list(collection.find())])-1
+            st.session_state.expanded = "grunddaten"
+            tools.new(collection, ini = new, switch = True)
+
     def compute_end(n):
         return max(n["home"]["end"], n["monitor"]["end"])   
 
-    news_display = list(util.news.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]},sort=[("rang", pymongo.ASCENDING)]))
+    news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]},sort=[("rang", pymongo.ASCENDING)]))
 
     co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
     co4.markdown("**Titel**")
@@ -108,13 +100,14 @@ if st.session_state.logged_in:
                 st.image(b["thumbnail"])
         with co4:
             abk = f"{x["monitor"]['title'].strip()}"
-            submit = st.button(tools.repr(util.news, x["_id"], False), key=f"edit-{x['_id']}")
+            submit = st.button(tools.repr(collection, x["_id"], False), key=f"edit-{x['_id']}")
         with co5: 
             st.write(monitordate)
         with co6: 
             st.write(homedate)
         if submit:
             st.session_state.edit = x["_id"]
+            st.session_state.expanded = ""
             switch_page("news edit")
 
 

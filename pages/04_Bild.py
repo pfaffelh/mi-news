@@ -1,11 +1,6 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
-import datetime 
 import pymongo
-import pandas as pd
-from itertools import chain
-from bson import ObjectId
-from streamlit_image_select import image_select
 from PIL import Image
 import io, sys
 
@@ -37,6 +32,8 @@ if st.session_state.logged_in:
     with st.expander(f'Neues Bild anlegen', expanded = True if st.session_state.uploaded_file is not None else False):
         titel = st.text_input("Titel des Bildes")
         bildnachweis = st.text_input("Bildnachweis")
+        menu = st.toggle("In Auswahlmenüs sichtbar", value = True, key = "menu")
+        kommentar = st.text_input("Kommentar")
         col1, col2 = st.columns([1,1]) 
         uploaded_file = col1.file_uploader("Bildatei", type = ["jpg", "jpeg", "png"], help = "Erlaubte Formate sind jpg/jpeg/png.")
         st.session_state.uploaded_file = uploaded_file
@@ -63,31 +60,30 @@ if st.session_state.logged_in:
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()
 
-            b = {
+            ini = {
+                "menu": menu,
                 "filename": filename,
                 "mime": "JPEG",
                 "data": encoded_image,
                 "thumbnail": encoded_thumbnail,
                 "titel": titel,
                 "bildnachweis": bildnachweis,
+                "kommentar": kommentar,
                 "rang" : min([b["rang"] for b in bilder]) - 1 
             }
-            newbild = bild.insert_one(b)
-            st.session_state.edit = newbild.inserted_id
-            switch_page("Bild edit")
+            tools.new(collection, ini = ini, switch = True)
     
     if bilder is not None:
         for b in bilder:
-            col1, col2, col3, col4 = st.columns([1,1,4,15]) 
-            with col1:
+            col0, col1, col2, col3, col4 = st.columns([1,1,1,4,15]) 
+            with col0:
                 st.button('↓', key=f'down-{b["_id"]}', on_click = tools.move_down, args = (collection, b,))
+            with col1:
+                st.button('↓↓', key=f'alldown-{b["_id"]}', on_click = tools.move_alldown, args = (collection, b,))
             with col2:
                 st.button('↑', key=f'up-{b["_id"]}', on_click = tools.move_up, args = (collection, b,))
             with col3:
                 st.image(b["thumbnail"])
-#                image = Image.open(io.BytesIO(b["thumbnail"]))
-#                w, h = image.size
-#                st.write(f"width: {w}, height: {h}, Größe {int(sys.getsizeof(b["thumbnail"])/1024)} kb")
             with col4:
                 s = f"{b['titel']} ({b['filename']}))"
                 submit = st.button(s, key=f"edit-{b['_id']}")

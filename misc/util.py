@@ -14,7 +14,7 @@ def configure_logging(file_path, level=logging.INFO):
     logger.setLevel(level)
     file_handler = logging.FileHandler(file_path)
     file_handler.setLevel(level)
-    formatter = logging.Formatter("%(asctime)s - %(levelname)s - MI-VVZ - %(message)s")
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - MI-NEWS - %(message)s")
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
     return logger
@@ -79,7 +79,8 @@ def setup_session_state():
         st.session_state.crop_top = 0
         st.session_state.crop_right = 0
         st.session_state.crop_bottom = 0
-
+    if "changeimage" not in st.session_state:
+        st.session_state.changeimage = False
 
 
     ### temporary data ###
@@ -94,7 +95,7 @@ def setup_session_state():
     st.session_state.collection_name = {
         bild: "Bild",
         news: "News",
-        carouselnews: "News im Carousel"
+        carouselnews: "Carouselnews"
     }
 
 
@@ -152,7 +153,10 @@ def setup_session_state():
 
     st.session_state.abhaengigkeit = {
         bild: [{"collection": carouselnews, "field": "image_id", "list": False},
-               {"collection": news, "field": "image", "list": True}]    }
+               {"collection": news, "field": "image", "list": True}],
+        news: [],
+        carouselnews: []        
+        }
 
 setup_session_state()
 collection_name = st.session_state.collection_name

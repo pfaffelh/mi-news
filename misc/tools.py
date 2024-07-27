@@ -8,6 +8,7 @@ from bson import ObjectId
 from misc.config import *
 from datetime import datetime, timedelta 
 from PIL import Image
+import io
 
 def move_up(collection, x, query = {}):
     query["rang"] = {"$lt": x["rang"]}
@@ -24,6 +25,11 @@ def move_down(collection, x, query = {}):
         n= target["rang"]
         collection.update_one({"_id": target["_id"]}, {"$set": {"rang": x["rang"]}})    
         collection.update_one({"_id": x["_id"]}, {"$set": {"rang": n}})    
+
+def move_alldown(collection, x, query = {}):
+    highestrank = max([x["rang"] for x in collection.find()])    
+    if highestrank:
+        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": highestrank+1}})    
 
 def remove_from_list(collection, id, field, element):
     collection.update_one({"_id": id}, {"$pull": {field: element}})
@@ -155,7 +161,7 @@ def repr(collection, id, show_collection = True):
         res = f"{title}  _{monitordate}; {homedate}_"
         res = f"{title}"
     elif collection == util.carouselnews:
-        res = x['text'][0:30]
+        res = x['text'][0:50]
     elif collection == util.bild:
         res = x['titel']
     if show_collection:
@@ -171,24 +177,10 @@ def delete_temporary(except_field = ""):
         st.session_state.veranstaltung_tmp.clear()
         st.session_state.translation_tmp = None
 
-def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,128), rang = 0):
-    with Image.open(filename) as img:
-        print(filename) 
-        if img.mode == 'RGBA':
-            print("enter RGBA")
-            img = img.convert('RGB')
-        encoded_image = io.BytesIO()
-        img.save(encoded_image, format='JPEG')
-        encoded_image = encoded_image.getvalue()
-#        encoded_image = base64.b64encode(encoded_image).decode('utf-8') 
-        # Thumbnail erstellen
-        img.thumbnail(thumbnail_size)
-        encoded_thumbnail = io.BytesIO()
-        img.save(encoded_thumbnail, format='JPEG')
-        encoded_thumbnail = encoded_thumbnail.getvalue()
-#        encoded_thumbnail = base64.b64encode(encoded_thumbnail).decode('utf-8')
-        newbild = util.bild.insert_one({"filename": filename, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang})
-        return newbild.inserted_id
-
 def heutenulluhr():
     return datetime.combine(datetime.today(), datetime.min.time())
+
+def changeimagefun(collection, x, x_updated):
+    st.session_state.changeimage = False
+    st.session_state.expanded = "bild"
+    update_confirm(collection, x, x_updated, False)

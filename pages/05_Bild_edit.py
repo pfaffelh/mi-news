@@ -1,7 +1,5 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
-import time
-import pymongo
 from PIL import Image
 import io, sys
 
@@ -63,7 +61,7 @@ if st.session_state.logged_in:
             filename = st.text_input("Dateiname", value = x["filename"])
             btn1 = st.form_submit_button("Grunddaten speichern")        
             if btn1:
-                collection.update_one({"_id": x["_id"]}, {"$set": {"menu": menu, "titel": titel, "bildnachweis": bildnachweis, "kommentar": kommentar, "filename": filename}})
+                tools.update_confirm(collection, x, {"menu": menu, "titel": titel, "bildnachweis": bildnachweis, "kommentar": kommentar, "filename": filename}, reset = False)            
     with col2:
         image = Image.open(io.BytesIO(x["data"]))
         st.session_state.w, st.session_state.h = image.size                   
@@ -93,7 +91,8 @@ if st.session_state.logged_in:
                 encoded_thumbnail = io.BytesIO()
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()
-                collection.update_one({"_id": x["_id"]}, {"$set": {"filename": filename, "data": encoded_image, "thumbnail": encoded_thumbnail}})
+                x_updated = {"filename": filename, "data": encoded_image, "thumbnail": encoded_thumbnail}
+                tools.update_confirm(collection, x, x_updated, reset = False)
                 st.session_state.uploaded_file = None
                 st.session_state.expanded = key
                 st.rerun()
@@ -113,7 +112,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            collection.update_one({"_id": x["_id"]}, {"$set": {"data": encoded_image, "thumbnail": encoded_thumbnail}})
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -126,7 +125,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            collection.update_one({"_id": x["_id"]}, {"$set": {"data": encoded_image, "thumbnail": encoded_thumbnail}})
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -176,7 +175,7 @@ if st.session_state.logged_in:
                 encoded_thumbnail = io.BytesIO()
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()            
-                collection.update_one({"_id": x["_id"]}, {"$set": {"data": encoded_image, "thumbnail": encoded_thumbnail}})
+                tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
                 st.session_state.expanded = ""
                 st.rerun()
 
@@ -214,7 +213,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            collection.update_one({"_id": x["_id"]}, {"$set": {"data": encoded_image, "thumbnail": encoded_thumbnail}})
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
             st.session_state.expanded = key
             st.rerun()
 
@@ -242,7 +241,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            collection.update_one({"_id": x["_id"]}, {"$set": {"data": encoded_image, "thumbnail": encoded_thumbnail}})
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
             st.session_state.expanded = key
             st.rerun()
             

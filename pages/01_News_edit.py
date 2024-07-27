@@ -35,13 +35,11 @@ collection = util.news
 # dictionary saving keys from all expanders
 ver_updated_all = dict()
 save_all = False
-changeimage = False
 addimage = False
-
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
-    x = util.news.find_one({"_id": st.session_state.edit})
+    x = collection.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(collection, x["_id"]))
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
@@ -57,14 +55,14 @@ if st.session_state.logged_in:
             st.write("Kopiere " + tools.repr(collection, x["_id"]))
             st.write("Was soll mitkopiert werden?")
             kopiere_grunddaten = st.checkbox("Grunddaten inkl Bild", value = True, key = f"kopiere_news_{x['_id']}_grunddaten")
-            kopiere_monitor = st.checkbox("Daten für Monitor", value = False, key = f"kopiere_veranstaltung_{x['_id']}_monitor")
-            kopiere_home = st.checkbox("Daten für Homepage", value = True, key = f"kopiere_veranstaltung_{x['_id']}_komm")
-            daten_anpassen = st.checkbox("Startdatum heute, Enddatum in 7 Tagen", value = True, key = f"kopiere_veranstaltung_{x['_id']}_daten")
+            kopiere_monitor = st.checkbox("Daten für Monitor", value = True, key = f"kopiere_veranstaltung_{x['_id']}_monitor")
+            kopiere_home = st.checkbox("Daten für Homepage", value = True, key = f"kopiere_news_{x['_id']}_home")
+            daten_anpassen = st.checkbox("Startdatum der kopierten News heute, Enddatum in 7 Tagen", value = True, key = f"kopiere_news_{x['_id']}_datena")
             colu1, colu2 = st.columns([1,1])
             with colu1:
                 submit = st.button(label = "News kopieren", type = 'primary', key = f"copy-{x['_id']}")
                 if submit:
-                    new = st.session_state.new[util.news]
+                    new = st.session_state.new[collection]
                     if kopiere_grunddaten:
                         new["image"] = x["image"]
                         new["_public"] = x["_public"]
@@ -82,11 +80,10 @@ if st.session_state.logged_in:
                         new["home"]["end"] = tools.heutenulluhr() + timedelta(days=7)
                     if "_id" in new:
                         del new["_id"]
-                    n = util.news.insert_one(new)
-                    st.session_state.edit = n.inserted_id            
-                    st.session_state.expanded = ""
-                    switch_page("News_edit")
-                    st.rerun()
+                    new["rang"] = min([x["rang"] for x in list(collection.find())])-1
+                    st.session_state.expanded = "grunddaten"            
+                    tools.new(collection, new)
+
             with colu2: 
                 st.button(label="Abbrechen", on_click = st.success, args=("Nicht kopiert!",), key = f"not-copied-{x['_id']}")
 
@@ -108,23 +105,25 @@ if st.session_state.logged_in:
         link = st.text_input('Link', x["link"])
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
-            util.news.update_one({"_id": x["_id"]}, { "$set" : { "_public" : _public, "showlastaday": showlastday, "archiv" : archiv, "link" : link}})
+            x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link}
+            tools.update_confirm(collection, x, x_updated, False)
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
         title = st.text_input("Titel", x["monitor"]["title"])
         text = st.text_area("Text", x["monitor"]["text"])
         col1, col2 = st.columns([1,1])
         with col1:
-            startdatum = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_monitor")
+            startdatum_monitor = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_monitor")
         with col2:
-            startzeit = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_monitor")
+            startzeit_monitor = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_monitor")
         with col1:
-            enddatum = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_monitor")
+            enddatum_monitor = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_monitor")
         with col2:
-            endzeit = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor")
+            endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor")
         btnmonitor = st.button("Monitordaten ändern")
         if btnmonitor:
-            util.news.update_one({"_id": x["_id"]}, { "$set" : { "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit)} }})
+            x_updated = { "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} }
+            tools.update_confirm(collection, x, x_updated, False)
             st.success("Monitordaten erfolgreich geändert!")
             st.session_state.expanded = ""
             switch_page("News_edit")
@@ -140,28 +139,30 @@ if st.session_state.logged_in:
         popover_text_en = st.text_area("Popover Text (en)", x["home"]["popover_text_en"])        
         col1, col2 = st.columns([1,1])
         with col1:
-            startdatum = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home")
+            startdatum_home = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home")
         with col2:
-            startzeit = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_home")
+            startzeit_home = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_home")
         with col1:
-            enddatum = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home")
+            enddatum_home = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home")
         with col2:
-            endzeit = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_home")
+            endzeit_home = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_home")
         btnhome = st.button("Homepage, Daten ändern")
         if btnhome:
-            util.news.update_one({"_id": x["_id"]}, { "$set" : { "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit)} }})
+            x_updated = { "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+            tools.update_confirm(collection, x, x_updated, False)
             st.success("Homepage, Daten erfolgreich geändert!")
+            time.sleep(1)
             st.session_state.expanded = ""
-            switch_page("News_edit")
+            st.rerun()
 
     if save_all:
-        util.news.update_one({"_id": x["_id"]}, { "$set" : { "_public" : _public, "showlastaday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit)} }})
-        st.success("News geändert!")
-        time.sleep(2)
-#        switch_page("NEWS")
+        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+        tools.update_confirm(collection, x, x_updated, False)
+        switch_page("NEWS")
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
-        co1, co2, co3 = st.columns([2,2,2])
+        st.write("\n  ")
+        co1, co2, co3, co4 = st.columns([5,1, 5,5])
         if x["image"] != []:
             stylehome = x["image"][0]["stylehome"]
             stylemonitor = x["image"][0]["stylemonitor"]
@@ -169,46 +170,47 @@ if st.session_state.logged_in:
             with co1:
                 b = util.bild.find_one({"_id": x["image"][0]["_id"] })
                 st.image(b["data"])
-            with co2: 
-                changeimage = st.button("Bild ändern", key = "changeimage")
             with co3: 
+                changeimage = st.session_state.changeimage
+                changeimage = st.toggle("Bild ändern", value = False, key = "changeimage")
+            with co4: 
                 deleteimage = st.button("Bild löschen", key = "delete_image")   
-                if deleteimage:
-                    util.news.update_one({"_id": x["_id"]}, { "$set": { "image" : [] }})
+                if deleteimage:                    
+                    collection.update_one({"_id": x["_id"]}, { "$set": { "image" : [] }})
                     st.success("Bild erfolgreich gelöscht!")
                     st.rerun()
         else:
             stylehome = ""
             stylemonitor = ""
             widthmonitor = 5
-            addimage = st.button("Bild hinzufügen", key = "addimage")
-        if changeimage or addimage:
+            addimage = st.toggle("Bild hinzufügen", value = addimage, key = "addimage")
+
+        if st.session_state.changeimage or addimage:
+            st.session_state.expanded = "bild"
             bilderliste = list(util.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
             images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
             img = image_select("Bild auswählen", images, return_value = "index")
             img = bilderliste[img]["_id"]
             img = [{"_id": img, "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
-            n = util.news.update_one({"_id": x["_id"]}, { "$set" : { "image" : img } })
-            st.success("Bild erfolgreich geändert!")
-            st.session_state.edit = n.upserted_id            
-            st.session_state.expanded = ""
-            switch_page("News_edit")
-
+            btn2 = st.button("Bild übernehmen", on_click = tools.changeimagefun, args = (collection, x, { "image" : img }))
     if x["image"] != []:
        with st.expander("Einstellung für das Bild", expanded = True if st.session_state.expanded == "cssimage" else False):
+            st.write("\n  ")
+            st.markdown("Styles müssen mit ; getrennt werden. Mögliche Styles sind:\n  * height: 18vw; Dies begrenzt die Höhe des Bildes\n  * width: 10vw; Dies begrenzt die Breite des Bildes.\n  * object-fit: cover; Hier wird das Bild vergrößert, so dass die maximale Fläche ausgenutzt wird.\n  * object-fit: contain; hier werden Ränder gelassen, das Bild ist aber vollständig sichtbar.")
+            
             stylehome = st.text_input("css-Style für die Homepage", value = x["image"][0]["stylehome"])
             stylemonitor = st.text_input("css-Style für den Monitor", value = x["image"][0]["stylemonitor"])
-            widthmonitor = st.text_input("css-Style für die Homepage", value = x["image"][0]["widthmonitor"])
+            
+            st.divider()
+            st.markdown("Der Monitor ist in ein Raster mit 12 Spalten eingeteilt. Hier gibt man an, wie viele Spalten das Bild breit sein soll.")
+            widthmonitor = st.number_input("Breite für die Homepage", value = x["image"][0]["widthmonitor"], min_value = 0, max_value = 12)
+            st.divider()
             takecss = st.button("Daten übernehmen", key = "takecss")
             if takecss:
                 img = [{"_id": x["image"][0]["_id"], "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
-                n = util.news.update_one({"_id": x["_id"]}, { "$set" : { "image" : img } })
-                st.success("Einstellungen des Bildes erfolgreich geändert!")
-                st.session_state.edit = n.inserted_id
                 st.session_state.expanded = ""
+                tools.update_confirm(collection, x, { "image" : img }, False)
                 switch_page("News_edit")
-
-
 
 else: 
     switch_page("NEWS")
