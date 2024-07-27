@@ -49,7 +49,7 @@ def setup_session_state():
 
     # sem ist ein gewähltes Semester
     if "days_back" not in st.session_state:
-        st.session_state.daysback = 180
+        st.session_state.daysback = 25
     # expanded zeigt an, welches Element ausgeklappt sein soll
     if "expanded" not in st.session_state:
         st.session_state.expanded = ""
@@ -114,8 +114,8 @@ def setup_session_state():
         carouselnews: {
                 "test": True, 
                 "_public": True, 
-                "start": datetime.now(),
-                "end": datetime.now() + timedelta(days=7),
+                "start": datetime.combine(datetime.today(), datetime.min.time()),
+                "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
                 "interval": 5000, 
                 "image_id": leer[bild],
                 "left": 30,
@@ -163,3 +163,6 @@ abhaengigkeit = st.session_state.abhaengigkeit
 bild = st.session_state.bild
 news = st.session_state.news
 carouselnews = st.session_state.carouselnews
+
+datetime_format = '%d.%m.%y (%H:%M)'
+dateshort_format = '%d.%m'

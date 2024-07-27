@@ -162,7 +162,7 @@ for filename in image_list:
     try:
         store_image(filename, rang = bild_no)
         bild_no = bild_no + 1
-    except:
+    except:        
         print("Error with "+ filename)
         pass
 

@@ -6,6 +6,7 @@ import ldap
 import misc.util as util
 from bson import ObjectId
 from misc.config import *
+from datetime import datetime, timedelta 
 from PIL import Image
 
 def move_up(collection, x, query = {}):
@@ -143,8 +144,16 @@ def display_navigation():
 def repr(collection, id, show_collection = True):
     x = collection.find_one({"_id": id})
     if collection == util.news:        
-        res = x['monitor']['title']
-        res = res if res != "" else x['home']['title_de']
+        title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
+        title = f"**{title}**"
+        ms = x["monitor"]["start"]
+        me = x["monitor"]["end"]
+        hs = x["home"]["start"]
+        he = x["home"]["end"]
+        monitordate = f"monitor: {ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if ms < me else "monitor: -"
+        homedate = f"home: {hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if hs < he else "home: -"
+        res = f"{title}  _{monitordate}; {homedate}_"
+        res = f"{title}"
     elif collection == util.carouselnews:
         res = x['text'][0:30]
     elif collection == util.bild:
@@ -180,3 +189,6 @@ def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,1
 #        encoded_thumbnail = base64.b64encode(encoded_thumbnail).decode('utf-8')
         newbild = util.bild.insert_one({"filename": filename, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang})
         return newbild.inserted_id
+
+def heutenulluhr():
+    return datetime.combine(datetime.today(), datetime.min.time())
