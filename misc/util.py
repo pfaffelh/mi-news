@@ -41,12 +41,6 @@ def setup_session_state():
         logger.error("Verbindung zur Datenbank nicht möglich!")
         st.write("**Verbindung zur Datenbank nicht möglich!**  \nKontaktieren Sie den Administrator.")
 
-    user = st.session_state.user
-    group = st.session_state.group
-    bild = st.session_state.bild
-    news = st.session_state.news
-    carouselnews = st.session_state.carouselnews
-
     # sem ist ein gewähltes Semester
     if "days_back" not in st.session_state:
         st.session_state.daysback = 25
@@ -57,7 +51,7 @@ def setup_session_state():
     if "user" not in st.session_state:
         st.session_state.user = ""
     if "logged_in" not in st.session_state:
-        st.session_state.logged_in = True # change later back to False
+        st.session_state.logged_in = False # change later back to False
     # Element to edit
     if "edit" not in st.session_state:
         st.session_state.edit = ""
@@ -93,38 +87,38 @@ def setup_session_state():
         st.session_state.translation_tmp = None  # Could be specified
 
     st.session_state.collection_name = {
-        bild: "Bild",
-        news: "News",
-        carouselnews: "Carouselnews"
+        st.session_state.bild: "Bild",
+        st.session_state.news: "News",
+        st.session_state.carouselnews: "Carouselnews"
     }
 
 
     st.session_state.leer = {
-                bild: bild.find_one({"filename": "white.jpg"})["_id"]
+                st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"]
                 }
     leer = st.session_state.leer
 
     st.session_state.new = {
-        bild: { "data": base64.b64encode(b""),
+        st.session_state.bild: { "data": base64.b64encode(b""),
                 "menu": True,
                 "mime": "", 
                 "filename": "", 
                 "titel": "", 
                 "kommentar": "", 
                 "bildnachweis": ""},
-        carouselnews: {
+        st.session_state.carouselnews: {
                 "test": True, 
                 "_public": True, 
                 "start": datetime.combine(datetime.today(), datetime.min.time()),
                 "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
                 "interval": 5000, 
-                "image_id": leer[bild],
+                "image_id": leer[st.session_state.bild],
                 "left": 30,
                 "right": 70, 
                 "bottom": 30,
                 "text": ""
         },
-        news: {
+        st.session_state.news: {
             "link": "",
             "image": [],
             "_public": True,
@@ -152,10 +146,10 @@ def setup_session_state():
     }
 
     st.session_state.abhaengigkeit = {
-        bild: [{"collection": carouselnews, "field": "image_id", "list": False},
-               {"collection": news, "field": "image", "list": True}],
-        news: [],
-        carouselnews: []        
+        st.session_state.bild: [{"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
+               {"collection": st.session_state.news, "field": "image", "list": True}],
+        st.session_state.news: [],
+        st.session_state.carouselnews: []        
         }
 
 setup_session_state()
@@ -164,6 +158,8 @@ leer = st.session_state.leer
 new = st.session_state.new
 abhaengigkeit = st.session_state.abhaengigkeit
 
+user = st.session_state.user
+group = st.session_state.group
 bild = st.session_state.bild
 news = st.session_state.news
 carouselnews = st.session_state.carouselnews

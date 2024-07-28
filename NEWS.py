@@ -22,14 +22,15 @@ with placeholder.form("login"):
 ## TODO: Develop mode. Remove this later!
 
 #placeholder.empty()
-st.session_state.logged_in = True
-st.write(st.session_state.logged_in)
+#st.session_state.logged_in = True
+#st.write(st.session_state.logged_in)
 #st.success("Login successful")
 #util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
 # make all neccesary variables available to session_state
-util.setup_session_state()
-switch_page("New")
-st.write("here")
+#util.setup_session_state()
+#switch_page("New")
+#st.write("here")
+
 if submit:
     if tools.authenticate(kennung, password): 
         if tools.can_edit(kennung):
@@ -41,7 +42,8 @@ if submit:
             util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
             # make all neccesary variables available to session_state
             util.setup_session_state()
-            switch_page("news")
+            time.sleep(1)
+            switch_page("new")
         else:
             st.error("Nicht genügend Rechte, um NEWS zu editieren.")
             util.logger.info(f"User {kennung} hatte nicht gebügend Rechte, um sich einzuloggen.")
