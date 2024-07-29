@@ -79,7 +79,7 @@ if st.session_state.logged_in:
             #st.write(key)
             #st.write(f"{filename}_austauschen")
             if key != f"{filename}_austauschen":
-                st.image(image, caption = f"{filename}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x["data"])/1024)} kb")
+                st.image(image, caption = f"{filename}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x['data'])/1024)} kb")
             btn2 = st.button("Bild austauschen")
             if btn2:
                 if image.mode == 'RGBA':
