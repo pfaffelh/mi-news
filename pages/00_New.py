@@ -99,7 +99,7 @@ if st.session_state.logged_in:
 #                st.write(x["image"][0])
                 st.image(b["thumbnail"])
         with co4:
-            abk = f"{x["monitor"]['title'].strip()}"
+            abk = f"{x['monitor']['title'].strip()}"
             submit = st.button(tools.repr(collection, x["_id"], False), key=f"edit-{x['_id']}")
         with co5: 
             st.write(monitordate)
