@@ -65,7 +65,7 @@ if st.session_state.logged_in:
     with col2:
         image = Image.open(io.BytesIO(x["data"]))
         st.session_state.w, st.session_state.h = image.size                   
-        col2.image(x["data"], caption = f"{x['filename']}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x["data"])/1024)} kb")
+        col2.image(x["data"], caption = f"{x['filename']}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x['data'])/1024)} kb")
 
     key = f"{x['filename']}_austauschen"
     with st.expander("Bild austauschen", expanded = True if st.session_state.expanded == key else False):
