@@ -65,7 +65,7 @@ if st.session_state.logged_in:
     with col2:
         image = Image.open(io.BytesIO(x["data"]))
         st.session_state.w, st.session_state.h = image.size                   
-        col2.image(x["data"], caption = f"{x["filename"]}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x["data"])/1024)} kb")
+        col2.image(x["data"], caption = f"{x['filename']}, width: {st.session_state.w}, height: {st.session_state.h}, Größe {int(sys.getsizeof(x["data"])/1024)} kb")
 
     key = f"{x['filename']}_austauschen"
     with st.expander("Bild austauschen", expanded = True if st.session_state.expanded == key else False):
@@ -97,7 +97,7 @@ if st.session_state.logged_in:
                 st.session_state.expanded = key
                 st.rerun()
 
-    key = f"{x["_id"]}_rotieren"
+    key = f"{x['_id']}_rotieren"
     with st.expander("Bild rotieren", expanded = True if st.session_state.expanded == key else False):
         col1, col2 = st.columns([1, 1])
         btn_left = col1.button("Nach links drehen")
@@ -130,7 +130,7 @@ if st.session_state.logged_in:
             st.session_state.expanded = key
             st.rerun()
 
-    key = f"{x["_id"]}_crop"
+    key = f"{x['_id']}_crop"
     with st.expander("Bild zuschneiden", expanded = True if st.session_state.expanded == key else False):
         st.write("Wieviele Pixel sollen von jeder Seite entfernt werden?")
         col1, col2 = st.columns([2, 1])
@@ -162,7 +162,7 @@ if st.session_state.logged_in:
             image.save(encoded_image, format='JPEG')
             encoded_image = encoded_image.getvalue()
             a, b = image.size
-            st.image(image, caption = f"{x["filename"]}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
+            st.image(image, caption = f"{x['filename']}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
         with col1: 
             btn4 = st.button("Bild übernehmen", key = key)
             if btn4:
@@ -179,7 +179,7 @@ if st.session_state.logged_in:
                 st.session_state.expanded = ""
                 st.rerun()
 
-    key = f"{x["_id"]}_resize"
+    key = f"{x['_id']}_resize"
     with st.expander("Bild verkleinern", expanded = True if st.session_state.expanded == key else False):
         col1, col2 = st.columns([2, 1])
         with col1:
@@ -196,7 +196,7 @@ if st.session_state.logged_in:
             image.save(encoded_image, format='JPEG')
             encoded_image = encoded_image.getvalue()
             a, b = image.size
-            st.image(image, caption = f"{x["filename"]}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
+            st.image(image, caption = f"{x['filename']}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
             st.session_state.expanded = key
 
         btn5 = st.button("Bild übernehmen", key = key)
@@ -217,7 +217,7 @@ if st.session_state.logged_in:
             st.session_state.expanded = key
             st.rerun()
 
-    key = f"{x["_id"]}_quality"
+    key = f"{x['_id']}_quality"
     with st.expander("Qualität des Bildes verringern", expanded = True if st.session_state.expanded == key else False):
         col1, col2 = st.columns([2, 1])
         with col1:
@@ -228,7 +228,7 @@ if st.session_state.logged_in:
             image.save(encoded_image, optimize=True, quality=quality, format='JPEG')
             encoded_image = encoded_image.getvalue()
             a, b = image.size
-            st.image(encoded_image, caption = f"{x["filename"]}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
+            st.image(encoded_image, caption = f"{x['filename']}, width: {a}, height: {b}, Größe {int(sys.getsizeof(encoded_image)/1024)} kb")
             st.session_state.expanded = key
 
         btn6 = st.button("Bild übernehmen", key = key)
