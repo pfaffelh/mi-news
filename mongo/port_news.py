@@ -20,7 +20,6 @@ data["carouselnews"] = []
 def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,128), rang = 0, menu = True, kommentar = ""):
     with Image.open(filename) as img:
         if img.mode == 'RGBA':
-            print("enter RGBA")
             img = img.convert('RGB')
         encoded_image = io.BytesIO()
         img.save(encoded_image, format='JPEG')
@@ -32,7 +31,8 @@ def store_image(filename, titel = "", bildnachweis = "", thumbnail_size = (128,1
         img.save(encoded_thumbnail, format='JPEG')
         encoded_thumbnail = encoded_thumbnail.getvalue()
 #        encoded_thumbnail = base64.b64encode(encoded_thumbnail).decode('utf-8')
-        newbild = bild.insert_one({"filename": filename, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang, "menu": menu, "kommentar": kommentar})
+        filename_store = filename.split("/")[-1]
+        newbild = bild.insert_one({"filename": filename_store, "mime": "JPEG", "data": encoded_image, "thumbnail": encoded_thumbnail, "titel": titel, "bildnachweis": bildnachweis, "rang": rang, "menu": menu, "kommentar": kommentar})
         return newbild.inserted_id
 
 for n in carouselnews:
@@ -146,7 +146,7 @@ for n in data["news"]:
 
 image_list = ['white.jpg']
 
-path = ["../../mi-hp/static/images/", "../../mi-hp/static/images/Dozenten/"]
+path = ["../../mi-hp/static/images/", "../../mi-hp/static/images/Dozenten/", "/home/pfaffelh/Downloads/images/", "/home/pfaffelh/Downloads/images/geschichte/"]
 for p in path:
     for file in os.listdir(p):
         try:
@@ -162,7 +162,8 @@ for filename in image_list:
     try:
         store_image(filename, rang = bild_no)
         bild_no = bild_no + 1
-    except:        
+        print("Stored file " + filename)
+    except:
         print("Error with "+ filename)
         pass
 
