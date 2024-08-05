@@ -31,7 +31,8 @@ if st.session_state.logged_in:
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
-        nurmonitor = st.toggle("Nur Monitor", value = True, help = "News erscheint nur auf dem Monitor, nicht auf der Homepage.")
+        fuermonitor = st.toggle("Für den Monitor", value = True, help = "News erscheint auf dem Monitor.")
+        fuerhome = st.toggle("Für Lehre-Homepage", value = True, help = "News erscheint auf der Lehre-Homepage.")
         title = st.text_input("Titel", "")
         text = st.text_area("Text", "")
         col1, col2 = st.columns([1,1])
@@ -57,13 +58,15 @@ if st.session_state.logged_in:
             new = st.session_state.new[collection]
             new["_public"] = _public
             new["showlastday"] = showlastday
+            new["home"]["fuerhome"] = fuerhome
+            new["monitor"]["fuermonitor"] = fuermonitor
             new["home"]["title_de"] = title
             new["monitor"]["title"] = title
             new["home"]["text_de"] = text
             new["monitor"]["text"] = text
-            new["home"]["start"] = tools.heutenulluhr() if nurmonitor else datetime.combine(startdatum, startzeit)
+            new["home"]["start"] = datetime.combine(startdatum, startzeit)
             new["monitor"]["start"] = datetime.combine(startdatum, startzeit)
-            new["home"]["end"] = tools.heutenulluhr() if nurmonitor else datetime.combine(enddatum, endzeit)
+            new["home"]["end"] = datetime.combine(enddatum, endzeit)
             new["monitor"]["end"] = datetime.combine(enddatum, endzeit)
             new["image"] = img
             new["rang"] = min([x["rang"] for x in list(collection.find())])-1
@@ -86,8 +89,8 @@ if st.session_state.logged_in:
         me = x["monitor"]["end"]
         hs = x["home"]["start"]
         he = x["home"]["end"]
-        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if ms < me else " -- "
-        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if hs < he else " -- "
+        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if x["home"]["fuerhome"] else " -- "
+        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if x["monitor"]["fuermonitor"] else " -- "
         with co1: 
             st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
         with co2:

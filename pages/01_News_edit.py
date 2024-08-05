@@ -32,6 +32,11 @@ tools.display_navigation()
 # Es geht hier vor allem um diese Collection:
 collection = util.news
 
+def save(x_updated, text):
+    tools.update_confirm(collection, x, x_updated, False)
+    st.success(text)
+    st.session_state.expanded = ""
+
 # dictionary saving keys from all expanders
 ver_updated_all = dict()
 save_all = False
@@ -109,54 +114,42 @@ if st.session_state.logged_in:
             tools.update_confirm(collection, x, x_updated, False)
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
-        title = st.text_input("Titel", x["monitor"]["title"])
-        text = st.text_area("Text", x["monitor"]["text"])
+        fuermonitor = st.toggle("Für den Monitor", value = x["monitor"]["fuermonitor"], help = "News erscheint auf dem Monitor.")
+        title = st.text_input("Titel", x["monitor"]["title"], disabled = not fuermonitor)
+        text = st.text_area("Text", x["monitor"]["text"], disabled = not fuermonitor)
         col1, col2 = st.columns([1,1])
         with col1:
-            startdatum_monitor = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_monitor")
+            startdatum_monitor = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_monitor", disabled = not fuermonitor)
         with col2:
-            startzeit_monitor = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_monitor")
+            startzeit_monitor = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_monitor", disabled = not fuermonitor)
         with col1:
-            enddatum_monitor = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_monitor")
+            enddatum_monitor = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_monitor", disabled = not fuermonitor)
         with col2:
-            endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor")
-        btnmonitor = st.button("Monitordaten ändern")
-        if btnmonitor:
-            x_updated = { "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} }
-            tools.update_confirm(collection, x, x_updated, False)
-            st.success("Monitordaten erfolgreich geändert!")
-            st.session_state.expanded = ""
-            switch_page("News_edit")
-
+            endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor", disabled = not fuermonitor)
+        btnmonitor = st.button("Monitordaten ändern", on_click=save, args = ({ "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} },"Monitordaten erfolgreich geändert!",))
     with st.expander("Daten für Homepage ändern", expanded = True if st.session_state.expanded == "homepagedaten" else False):
-        title_de = st.text_input("Titel (de)", x["home"]["title_de"])
-        title_en = st.text_input("Titel (en)", x["home"]["title_en"])
-        text_de = st.text_area("Text (de)", x["home"]["text_de"])
-        text_en = st.text_area("Text (en)", x["home"]["text_en"])
-        popover_title_de = st.text_input("Popover Titel (de)", x["home"]["popover_title_de"])
-        popover_title_en = st.text_input("Popover Titel (en)", x["home"]["popover_title_en"])
-        popover_text_de = st.text_area("Popover Text (de)", x["home"]["popover_text_de"])
-        popover_text_en = st.text_area("Popover Text (en)", x["home"]["popover_text_en"])        
+        fuerhome = st.toggle("Für Lehre-Homepage", value =  x["home"]["fuerhome"], help = "News erscheint auf der Lehre-Homepage.")
+        title_de = st.text_input("Titel (de)", x["home"]["title_de"], disabled = not fuerhome)
+        title_en = st.text_input("Titel (en)", x["home"]["title_en"], disabled = not fuerhome)
+        text_de = st.text_area("Text (de)", x["home"]["text_de"], disabled = not fuerhome)
+        text_en = st.text_area("Text (en)", x["home"]["text_en"], disabled = not fuerhome)
+        popover_title_de = st.text_input("Popover Titel (de)", x["home"]["popover_title_de"], disabled = not fuerhome)
+        popover_title_en = st.text_input("Popover Titel (en)", x["home"]["popover_title_en"], disabled = not fuerhome)
+        popover_text_de = st.text_area("Popover Text (de)", x["home"]["popover_text_de"], disabled = not fuerhome)
+        popover_text_en = st.text_area("Popover Text (en)", x["home"]["popover_text_en"], disabled = not fuerhome)        
         col1, col2 = st.columns([1,1])
         with col1:
-            startdatum_home = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home")
+            startdatum_home = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home", disabled = not fuerhome)
         with col2:
-            startzeit_home = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_home")
+            startzeit_home = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_home", disabled = not fuerhome)
         with col1:
-            enddatum_home = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home")
+            enddatum_home = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home", disabled = not fuerhome)
         with col2:
-            endzeit_home = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_home")
-        btnhome = st.button("Homepage, Daten ändern")
-        if btnhome:
-            x_updated = { "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
-            tools.update_confirm(collection, x, x_updated, False)
-            st.success("Homepage, Daten erfolgreich geändert!")
-            time.sleep(1)
-            st.session_state.expanded = ""
-            st.rerun()
+            endzeit_home = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_home", disabled = not fuerhome)
+        btnmonitor = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
 
     if save_all:
-        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False)
         switch_page("NEWS")
 
