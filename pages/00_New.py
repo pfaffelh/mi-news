@@ -89,8 +89,8 @@ if st.session_state.logged_in:
         me = x["monitor"]["end"]
         hs = x["home"]["start"]
         he = x["home"]["end"]
-        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if x["home"]["fuerhome"] else " -- "
-        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if x["monitor"]["fuermonitor"] else " -- "
+        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if x["monitor"]["fuermonitor"] else " -- "
+        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if x["home"]["fuerhome"] else " -- "
         with co1: 
             st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
         with co2:
