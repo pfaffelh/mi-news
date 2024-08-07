@@ -46,11 +46,21 @@ addimage = False
 if st.session_state.logged_in:
     x = collection.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(collection, x["_id"]))
+    col1, col2 = st.columns([1, 1])
+    with col1: 
+        st.write("[http://gateway.mathematik.uni-freiburg.de/monitortest](Testansicht des Monitors)")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/monitor](Veröffentlichte Ansicht des Monitors)")
+    with col2: 
+        st.write("[http://gateway.mathematik.uni-freiburg.de/de/test](Testansicht der Homepage (de))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/en/test](Testansicht der Homepage (en))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/de/](Veröffentlichte Ansicht der Homepage (de))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/en/](Veröffentlichte Ansicht der Homepage (en))")
+    
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
     with col1:
         if st.button("Zurück (ohne Speichern)"):
-            switch_page("News")
+            switch_page("new")
     with col2:
         if st.button("Alles Speichern (außer Änderungen am Bild)", type = 'primary'):
             save_all = True # the actual saving needs to be done after the expanders
@@ -151,7 +161,7 @@ if st.session_state.logged_in:
     if save_all:
         x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False)
-        switch_page("NEWS")
+        switch_page("new")
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
         st.write("\n  ")

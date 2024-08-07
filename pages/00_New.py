@@ -27,6 +27,16 @@ collection = util.news
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("News")
+    col1, col2 = st.columns([1, 1])
+    with col1: 
+        st.write("[http://gateway.mathematik.uni-freiburg.de/monitortest](Testansicht des Monitors)")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/monitor](Veröffentlichte Ansicht des Monitors)")
+    with col2: 
+        st.write("[http://gateway.mathematik.uni-freiburg.de/de/test](Testansicht der Homepage (de))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/en/test](Testansicht der Homepage (en))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/de/](Veröffentlichte Ansicht der Homepage (de))")
+        st.write("[http://gateway.mathematik.uni-freiburg.de/en/](Veröffentlichte Ansicht der Homepage (en))")
+
     key = "news_anlegen"
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")

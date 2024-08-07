@@ -117,7 +117,7 @@ if st.session_state.logged_in:
     if save_all:
         x_updated = {"_public" : _public, "text" : text, "image_id" : img, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
         tools.update_confirm(collection, x, x_updated, False)
-        switch_page("NEWS")
+        switch_page("carouselnews")
 
 else: 
     switch_page("NEWS")

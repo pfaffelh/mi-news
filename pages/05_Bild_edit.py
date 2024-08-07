@@ -250,7 +250,3 @@ else:
     switch_page("NEWS")
 
 st.sidebar.button("logout", on_click = tools.logout)
-
-
-
-
