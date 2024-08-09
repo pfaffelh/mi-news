@@ -153,5 +153,4 @@ def setup_session_state():
 
 
 date_format = '%d.%m.%Y um %H:%M:%S.'
-bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(date_format)}"                    
 date_format_no_space = '%Y%m%d%H%M'
