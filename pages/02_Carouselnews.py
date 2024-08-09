@@ -25,11 +25,27 @@ import misc.tools as tools
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = util.carouselnews
+collection = st.session_state.carouselnews
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("Carouselnews")
+    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
+    col1, col2 = st.columns([1, 1])
+    with col1: 
+        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
+    with col2: 
+        ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
+    with col1: 
+        t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
+        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+    with col2: 
+        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == "news_anlegen" else False):
         st.write("\n  ")
         _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
@@ -49,15 +65,15 @@ if st.session_state.logged_in:
             endzeit = st.time_input("Endzeit", value = datetime.min.time(), key = f"endzeit")
         mitbild = st.toggle("...mit Bild", value = False, key=None, help="Falls nicht, ist der Hintergrund weiß.")
         if mitbild:
-            bilderliste = list(util.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+            bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
             images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
             img = image_select("Bild auswählen", images, return_value = "index")
             img = bilderliste[img]["_id"]
         else:
-            img = st.session_state.leer[util.bild]
+            img = st.session_state.leer[st.session_state.bild]
         btn = st.button("News anlegen")
         if btn:
-            ini = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "image_id" : img, "rang" : min([x["rang"] for x in list(collection.find())])-1}
+            ini = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "bearbeitet": bearbeitet, "image_id" : img, "rang" : min([x["rang"] for x in list(collection.find())])-1}
             st.session_state.expanded = "grunddaten"
             tools.new(collection, ini = ini, switch = True)
 
@@ -75,7 +91,7 @@ if st.session_state.logged_in:
         with co2:
             st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
         with co3:
-            b = util.bild.find_one({"_id": x["image_id"]})
+            b = st.session_state.bild.find_one({"_id": x["image_id"]})
             st.image(b["thumbnail"])
         with co4:
             submit = st.button(tools.repr(collection, x["_id"], False), key=f"edit-{x['_id']}")

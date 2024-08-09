@@ -35,7 +35,7 @@ def remove_from_list(collection, id, field, element):
     collection.update_one({"_id": id}, {"$pull": {field: element}})
 
 def update_confirm(collection, x, x_updated, reset = True):
-    util.logger.info(f"User {st.session_state.user} hat in {util.collection_name[collection]} Item {repr(collection, x['_id'])} geändert.")
+    util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} Item {repr(collection, x['_id'])} geändert.")
     collection.update_one({"_id" : x["_id"]}, {"$set": x_updated })
     if reset:
         reset_vars("")
@@ -44,22 +44,22 @@ def update_confirm(collection, x, x_updated, reset = True):
 def new(collection, ini = {}, switch = True):
     z = list(collection.find(sort = [("rang", pymongo.ASCENDING)]))
     rang = z[0]["rang"]-1
-    util.new[collection]["rang"] = rang    
+    st.session_state.new[collection]["rang"] = rang    
     for key, value in ini.items():
-        util.new[collection][key] = value
-    util.new[collection].pop("_id", None)
-    x = collection.insert_one(util.new[collection])
+        st.session_state.new[collection][key] = value
+    st.session_state.new[collection].pop("_id", None)
+    x = collection.insert_one(st.session_state.new[collection])
     st.session_state.edit=x.inserted_id
-    util.logger.info(f"User {st.session_state.user} hat in {util.collection_name[collection]} ein neues Item angelegt.")
+    util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} ein neues Item angelegt.")
     if switch:
-        switch_page(f"{util.collection_name[collection].lower()} edit")
+        switch_page(f"{st.session_state.collection_name[collection].lower()} edit")
 
 
 # Finde in collection.field die id, und gebe im Datensatz return_field zurück. Falls list=True,
 # dann ist collection.field ein array.
 def references(collection, field, list = False):    
     res = {}
-    for x in util.abhaengigkeit[collection]:
+    for x in st.session_state.abhaengigkeit[collection]:
         res = res | { collection: references(x["collection"], x["field"], x["list"]) } 
     if list:
         z = list(collection.find({field: {"$elemMatch": {"$eq": id}}}))
@@ -72,7 +72,7 @@ def references(collection, field, list = False):
 # dann ist collection.field ein array.
 def find_dependent_items(collection, id):
     res = []
-    for x in util.abhaengigkeit[collection]:
+    for x in st.session_state.abhaengigkeit[collection]:
         if x["list"]:
             for y in list(x["collection"].find({x["field"].replace(".$",""): { "$elemMatch": { "$eq": id }}})):
                 res.append(repr(x["collection"], y["_id"]))
@@ -82,26 +82,26 @@ def find_dependent_items(collection, id):
     return res
 
 def delete_item_update_dependent_items(collection, id, switch = True):
-    if collection in util.leer.keys() and id == util.leer[collection]:
+    if collection in st.session_state.leer.keys() and id == st.session_state.leer[collection]:
             st.toast("Fehler! Dieses Item kann nicht gelöscht werden!")
             reset_vars("")
     else:
-        for x in util.abhaengigkeit[collection]:
+        for x in st.session_state.abhaengigkeit[collection]:
             if x["list"]:
                 x["collection"].update_many({x["field"].replace(".$",""): { "$elemMatch": { "$eq": id }}}, {"$pull": { x["field"] : id}})
             else:
-                st.write(util.collection_name[x["collection"]])
-                x["collection"].update_many({x["field"]: id}, { "$set": { x["field"].replace(".", ".$."): util.leer[collection]}})             
+                st.write(st.session_state.collection_name[x["collection"]])
+                x["collection"].update_many({x["field"]: id}, { "$set": { x["field"].replace(".", ".$."): st.session_state.leer[collection]}})             
         s = ("  \n".join(find_dependent_items(collection, id)))
         if s:
             s = f"\n{s}  \ngeändert."     
-        util.logger.info(f"User {st.session_state.user} hat in {util.collection_name[collection]} item {repr(collection, id)} gelöscht, und abhängige Felder geändert.")
+        util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} item {repr(collection, id)} gelöscht, und abhängige Felder geändert.")
         collection.delete_one({"_id": id})
         reset_vars("")
         st.success(f"🎉 Erfolgreich gelöscht!  {s}")
         time.sleep(4)
         if switch:
-            switch_page(util.collection_name[collection].lower())
+            switch_page(st.session_state.collection_name[collection].lower())
 
 # Die Authentifizierung gegen den Uni-LDAP-Server
 def authenticate(username, password):
@@ -120,8 +120,8 @@ def authenticate(username, password):
         return False
 
 def can_edit(username):
-    u = util.user.find_one({"rz": username})
-    id = util.group.find_one({"name": app_name})["_id"]
+    u = st.session_state.users.find_one({"rz": username})
+    id = st.session_state.group.find_one({"name": app_name})["_id"]
     return (True if id in u["groups"] else False)
 
 def logout():
@@ -149,7 +149,7 @@ def display_navigation():
 # short Version ohne abhängige Variablen
 def repr(collection, id, show_collection = True):
     x = collection.find_one({"_id": id})
-    if collection == util.news:        
+    if collection == st.session_state.news:        
         title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
         title = f"**{title}**"
         ms = x["monitor"]["start"]
@@ -160,12 +160,12 @@ def repr(collection, id, show_collection = True):
         homedate = f"home: {hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if hs < he else "home: -"
         res = f"{title}  _{monitordate}; {homedate}_"
         res = f"{title}"
-    elif collection == util.carouselnews:
+    elif collection == st.session_state.carouselnews:
         res = x['text'][0:50]
-    elif collection == util.bild:
+    elif collection == st.session_state.bild:
         res = x['titel']
     if show_collection:
-        res = f"{util.collection_name[collection]}: {res}"
+        res = f"{st.session_state.collection_name[collection]}: {res}"
     return res
 
 def hour_of_datetime(dt):
@@ -175,7 +175,6 @@ def delete_temporary(except_field = ""):
     """ Delete temporary data except for the given field."""
     if not except_field == "veranstaltung_tmp":
         st.session_state.veranstaltung_tmp.clear()
-        st.session_state.translation_tmp = None
 
 def heutenulluhr():
     return datetime.combine(datetime.today(), datetime.min.time())

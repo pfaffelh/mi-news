@@ -22,20 +22,27 @@ import misc.tools as tools
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = util.news
+collection = st.session_state.news
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("News")
+    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
     col1, col2 = st.columns([1, 1])
     with col1: 
-        st.write("[http://gateway.mathematik.uni-freiburg.de/monitortest](Testansicht des Monitors)")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/monitor](Veröffentlichte Ansicht des Monitors)")
+        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
     with col2: 
-        st.write("[http://gateway.mathematik.uni-freiburg.de/de/test](Testansicht der Homepage (de))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/en/test](Testansicht der Homepage (en))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/de/](Veröffentlichte Ansicht der Homepage (de))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/en/](Veröffentlichte Ansicht der Homepage (en))")
+        ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
+    with col1: 
+        t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
+        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+    with col2: 
+        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
 
     key = "news_anlegen"
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
@@ -56,7 +63,7 @@ if st.session_state.logged_in:
             endzeit = st.time_input("Endzeit", value = datetime.min.time(), key = f"endzeit")
         mitbild = st.toggle("...mit Bild", value = False, key=None, help="Gibt an, ob es kein oder ein Bild für die News gibt.")
         if mitbild:
-            bilderliste = list(util.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+            bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
             images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
             img = image_select("Bild auswählen", images, return_value = "index")
             img = bilderliste[img]["_id"]
@@ -79,6 +86,7 @@ if st.session_state.logged_in:
             new["home"]["end"] = datetime.combine(enddatum, endzeit)
             new["monitor"]["end"] = datetime.combine(enddatum, endzeit)
             new["image"] = img
+            new["bearbeitet"] = bearbeitet
             new["rang"] = min([x["rang"] for x in list(collection.find())])-1
             st.session_state.expanded = "grunddaten"
             tools.new(collection, ini = new, switch = True)
@@ -108,7 +116,7 @@ if st.session_state.logged_in:
         with co3:
             if x["image"] != []:
 #                st.write(x)
-                b = util.bild.find_one({"_id": x["image"][0]["_id"]})
+                b = st.session_state.bild.find_one({"_id": x["image"][0]["_id"]})
 #                st.write(x["image"][0])
                 st.image(b["thumbnail"])
         with co4:

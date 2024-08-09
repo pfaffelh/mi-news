@@ -20,6 +20,8 @@ def configure_logging(file_path, level=logging.INFO):
     return logger
 
 logger = configure_logging(log_file)
+datetime_format = '%d.%m.%y (%H:%M)'
+dateshort_format = '%d.%m'
 
 def setup_session_state():
     # Das ist die mongodb; 
@@ -28,18 +30,19 @@ def setup_session_state():
     try:
         cluster = pymongo.MongoClient(mongo_location)
         mongo_db_users = cluster["user"]
-        st.session_state.user = mongo_db_users["user"]
+        st.session_state.users = mongo_db_users["user"]
         st.session_state.group = mongo_db_users["group"]
-
         mongo_db = cluster["news"]
         logger.debug("Connected to MongoDB")
         st.session_state.bild = mongo_db["bild"]
         st.session_state.carouselnews = mongo_db["carouselnews"]
         st.session_state.news = mongo_db["news"]
 
+
     except: 
         logger.error("Verbindung zur Datenbank nicht möglich!")
         st.write("**Verbindung zur Datenbank nicht möglich!**  \nKontaktieren Sie den Administrator.")
+
 
     # sem ist ein gewähltes Semester
     if "days_back" not in st.session_state:
@@ -50,6 +53,8 @@ def setup_session_state():
     # Name of the user
     if "user" not in st.session_state:
         st.session_state.user = ""
+    if "username" not in st.session_state:
+        st.session_state.username = ""
     if "logged_in" not in st.session_state:
         st.session_state.logged_in = False # change later back to False
     # Element to edit
@@ -76,22 +81,11 @@ def setup_session_state():
     if "changeimage" not in st.session_state:
         st.session_state.changeimage = False
 
-
-    ### temporary data ###
-    ### should be also cleared on every page with tools.
-    # data for new termine
-    if "veranstaltung_tmp" not in st.session_state:
-        st.session_state.veranstaltung_tmp = dict()
-    # data for translations
-    if "translation_tmp" not in st.session_state:
-        st.session_state.translation_tmp = None  # Could be specified
-
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",
         st.session_state.news: "News",
         st.session_state.carouselnews: "Carouselnews"
     }
-
 
     st.session_state.leer = {
                 st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"]
@@ -104,6 +98,7 @@ def setup_session_state():
                 "mime": "", 
                 "filename": "", 
                 "titel": "", 
+                "bearbeitet": "", 
                 "kommentar": "", 
                 "bildnachweis": ""},
         st.session_state.carouselnews: {
@@ -116,31 +111,35 @@ def setup_session_state():
                 "left": 30,
                 "right": 70, 
                 "bottom": 30,
+                "bearbeitet": "", 
+                "kommentar": "", 
                 "text": ""
         },
         st.session_state.news: {
-            "link": "",
-            "image": [],
-            "_public": True,
-            "archiv": True,
-            "showlastday": True,
-            "home": {
-                "start": datetime.now(),
-                "end": datetime.now() + timedelta(days=7),
-                "title_de": "",
-                "title_en": "",
-                "text_de": "",
-                "text_en": "",
-                "popover_title_de": "",
-                "popover_title_en": "",
-                "popover_text_de": "",
-                "popover_text_en": "",
-            },
-            "monitor": {
-                "start": datetime.now(),
-                "end": datetime.now() + timedelta(days=7),
-                "title": "",
-                "text": ""
+                "link": "",
+                "image": [],
+                "_public": True,
+                "archiv": True,
+                "showlastday": True,
+                "bearbeitet": "", 
+                "kommentar": "", 
+                "home": {
+                    "start": datetime.now(),
+                    "end": datetime.now() + timedelta(days=7),
+                    "title_de": "",
+                    "title_en": "",
+                    "text_de": "",
+                    "text_en": "",
+                    "popover_title_de": "",
+                    "popover_title_en": "",
+                    "popover_text_de": "",
+                    "popover_text_en": "",
+                },
+                "monitor": {
+                    "start": datetime.now(),
+                    "end": datetime.now() + timedelta(days=7),
+                    "title": "",
+                    "text": ""
             }
         }
     }
@@ -152,17 +151,7 @@ def setup_session_state():
         st.session_state.carouselnews: []        
         }
 
-setup_session_state()
-collection_name = st.session_state.collection_name
-leer = st.session_state.leer
-new = st.session_state.new
-abhaengigkeit = st.session_state.abhaengigkeit
 
-user = st.session_state.user
-group = st.session_state.group
-bild = st.session_state.bild
-news = st.session_state.news
-carouselnews = st.session_state.carouselnews
-
-datetime_format = '%d.%m.%y (%H:%M)'
-dateshort_format = '%d.%m'
+date_format = '%d.%m.%Y um %H:%M:%S.'
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(date_format)}"                    
+date_format_no_space = '%Y%m%d%H%M'

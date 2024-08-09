@@ -25,7 +25,9 @@ import misc.tools as tools
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = util.carouselnews
+collection = st.session_state.carouselnews
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
+
 
 # dictionary saving keys from all expanders
 ver_updated_all = dict()
@@ -36,6 +38,23 @@ addimage = False
 if st.session_state.logged_in:
     x = collection.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(collection, x["_id"]))
+
+    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
+    col1, col2 = st.columns([1, 1])
+    with col1: 
+        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
+    with col2: 
+        ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
+    with col1: 
+        t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
+        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+    with col2: 
+        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
+
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
     with col1:
@@ -58,6 +77,7 @@ if st.session_state.logged_in:
                     if daten_anpassen:
                         new["start"] = tools.heutenulluhr()
                         new["end"] = tools.heutenulluhr() + timedelta(days=7)
+                    new["bearbeitet"] = bearbeitet
                     new["rang"] = min([x["rang"] for x in list(collection.find())])-1
                     st.session_state.expanded = "grunddaten"            
                     tools.new(collection, ini = new)
@@ -83,6 +103,7 @@ if st.session_state.logged_in:
         right = st.number_input("Rechter Rand (in Prozent der ganzen Breite)", value = x["right"], min_value = 0, max_value = 100)
         bottom = st.number_input("Unterer Rand (in Prozent der ganzen Höhe)", value = x["bottom"], min_value = 0, max_value = 100)
         interval = st.number_input("Intervall bis zum nächsten Bild in Milisekunden", value = x["interval"], min_value = 0)
+        kommentar = st.text_input("Kommentar", x["kommentar"])
         col1, col2 = st.columns([1,1])
         with col1:
             startdatum = st.date_input("Startdatum", value = x["start"].date(), format = "DD.MM.YYYY", key = f"startdatum")
@@ -94,30 +115,31 @@ if st.session_state.logged_in:
             endzeit = st.time_input("Endzeit", value = x["end"].time(), key = f"endzeit")
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
-            x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
+            x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "bearbeitet": bearbeitet, "kommentar": kommentar, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
             tools.update_confirm(collection, x, x_updated, False)
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
         st.write("\n  ")
         co1, co2, co3, co4 = st.columns([5,1, 5,5])
         with co1:
-            b = util.bild.find_one({"_id": x["image_id"] })
+            b = st.session_state.bild.find_one({"_id": x["image_id"] })
             st.image(b["data"])
         with co3: 
             changeimage = st.session_state.changeimage
             changeimage = st.toggle("Bild ändern", value = False, key = "changeimage")
         if st.session_state.changeimage:
             st.session_state.expanded = "bild"
-            bilderliste = list(util.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+            bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
             images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
             img = image_select("Bild auswählen", images, return_value = "index")
             img = bilderliste[img]["_id"]
-            btn2 = st.button("Bild übernehmen", on_click = tools.changeimagefun, args = (collection, x, {"image_id" : img}, ))
+            btn2 = st.button("Bild übernehmen", on_click = tools.changeimagefun, args = (collection, x, {"image_id" : img, "bearbeitet": bearbeitet}, ))
 
     if save_all:
-        x_updated = {"_public" : _public, "text" : text, "image_id" : img, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
+        x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "bearbeitet": bearbeitet, "kommentar" : kommentar, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
         tools.update_confirm(collection, x, x_updated, False)
         switch_page("carouselnews")
+    st.write(x["bearbeitet"])
 
 else: 
     switch_page("NEWS")

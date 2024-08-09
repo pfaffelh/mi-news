@@ -8,6 +8,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="centered", initial
 from misc.config import *
 import misc.util as util
 import misc.tools as tools
+util.setup_session_state()
 
 # Ab hier wird die Seite angezeigt
 st.header("NEWS Login")
@@ -17,21 +18,10 @@ with placeholder.form("login"):
     kennung = st.text_input("Benutzerkennung")
     password = st.text_input("Passwort", type="password")
     submit = st.form_submit_button("Login")
-    st.session_state.user = kennung
 
-## TODO: Develop mode. Remove this later!
-
-#placeholder.empty()
-#st.session_state.logged_in = True
-#st.write(st.session_state.logged_in)
-#st.success("Login successful")
-#util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
-# make all neccesary variables available to session_state
-#util.setup_session_state()
-#switch_page("New")
-#st.write("here")
 
 if submit:
+    st.session_state.user = kennung
     if tools.authenticate(kennung, password): 
         if tools.can_edit(kennung):
             # If the form is submitted and the email and password are correct,
@@ -39,9 +29,10 @@ if submit:
             placeholder.empty()
             st.session_state.logged_in = True
             st.success("Login successful")
+            u = st.session_state.users.find_one({"rz": st.session_state.user})
+            st.session_state.username = " ".join([u["vorname"], u["name"]])
             util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
             # make all neccesary variables available to session_state
-            util.setup_session_state()
             time.sleep(1)
             switch_page("new")
         else:

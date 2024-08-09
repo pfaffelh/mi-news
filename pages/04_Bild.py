@@ -69,6 +69,7 @@ if st.session_state.logged_in:
                 "titel": titel,
                 "bildnachweis": bildnachweis,
                 "kommentar": kommentar,
+                "bearbeitet": util.bearbeitet,
                 "rang" : min([b["rang"] for b in bilder]) - 1 
             }
             tools.new(collection, ini = ini, switch = True)

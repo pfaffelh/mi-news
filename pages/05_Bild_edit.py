@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
 from PIL import Image
 import io, sys
+from datetime import datetime
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -22,7 +23,9 @@ init_css()
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = util.bild
+collection = st.session_state.bild
+date_format = '%d.%m.%Y um %H:%M:%S.'
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(date_format)}"
 
 # Ab hier wird die Webseite erzeugt
 if st.session_state.logged_in:
@@ -61,7 +64,7 @@ if st.session_state.logged_in:
             filename = st.text_input("Dateiname", value = x["filename"])
             btn1 = st.form_submit_button("Grunddaten speichern")        
             if btn1:
-                tools.update_confirm(collection, x, {"menu": menu, "titel": titel, "bildnachweis": bildnachweis, "kommentar": kommentar, "filename": filename}, reset = False)            
+                tools.update_confirm(collection, x, {"menu": menu, "titel": titel, "bildnachweis": bildnachweis, "kommentar": kommentar, "bearbeitet": bearbeitet, "filename": filename}, reset = False)            
     with col2:
         image = Image.open(io.BytesIO(x["data"]))
         st.session_state.w, st.session_state.h = image.size                   
@@ -91,7 +94,7 @@ if st.session_state.logged_in:
                 encoded_thumbnail = io.BytesIO()
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()
-                x_updated = {"filename": filename, "data": encoded_image, "thumbnail": encoded_thumbnail}
+                x_updated = {"filename": filename, "bearbeitet": bearbeitet, "data": encoded_image, "thumbnail": encoded_thumbnail}
                 tools.update_confirm(collection, x, x_updated, reset = False)
                 st.session_state.uploaded_file = None
                 st.session_state.expanded = key
@@ -112,7 +115,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -125,7 +128,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -175,7 +178,7 @@ if st.session_state.logged_in:
                 encoded_thumbnail = io.BytesIO()
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()            
-                tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
+                tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
                 st.session_state.expanded = ""
                 st.rerun()
 
@@ -213,7 +216,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
             st.session_state.expanded = key
             st.rerun()
 
@@ -241,10 +244,11 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
             st.session_state.expanded = key
             st.rerun()
             
+    st.write(x["bearbeitet"])
 
 else: 
     switch_page("NEWS")

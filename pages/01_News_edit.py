@@ -2,14 +2,10 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
 from streamlit_image_select import image_select
 import pymongo
-import time
-import pandas as pd
-import translators as ts
-from itertools import chain
-from bson import ObjectId
 from datetime import datetime, timedelta
 from PIL import Image
 import io, sys
+from datetime import datetime 
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -30,7 +26,8 @@ import misc.tools as tools
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = util.news
+collection = st.session_state.news
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 def save(x_updated, text):
     tools.update_confirm(collection, x, x_updated, False)
@@ -46,15 +43,22 @@ addimage = False
 if st.session_state.logged_in:
     x = collection.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(collection, x["_id"]))
+
+    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
     col1, col2 = st.columns([1, 1])
     with col1: 
-        st.write("[http://gateway.mathematik.uni-freiburg.de/monitortest](Testansicht des Monitors)")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/monitor](Veröffentlichte Ansicht des Monitors)")
+        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
     with col2: 
-        st.write("[http://gateway.mathematik.uni-freiburg.de/de/test](Testansicht der Homepage (de))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/en/test](Testansicht der Homepage (en))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/de/](Veröffentlichte Ansicht der Homepage (de))")
-        st.write("[http://gateway.mathematik.uni-freiburg.de/en/](Veröffentlichte Ansicht der Homepage (en))")
+        ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
+    with col1: 
+        t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
+        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+    with col2: 
+        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
     
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
@@ -118,9 +122,10 @@ if st.session_state.logged_in:
         showlastday = st.toggle("Letzten Tag anzeigen", value = x["showlastday"], help = "News erscheint gelb am letzten Tag.")
         archiv = st.toggle("Ins Archiv aufnehmen", value = x["archiv"], help = "Erscheint nach Ablauf im Archiv auf der Homepage.")        
         link = st.text_input('Link', x["link"])
+        kommentar = st.text_input('Kommentar', x["kommentar"])
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
-            x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link}
+            x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
             tools.update_confirm(collection, x, x_updated, False)
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
@@ -159,7 +164,7 @@ if st.session_state.logged_in:
         btnmonitor = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
 
     if save_all:
-        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False)
         switch_page("new")
 
@@ -171,7 +176,7 @@ if st.session_state.logged_in:
             stylemonitor = x["image"][0]["stylemonitor"]
             widthmonitor = x["image"][0]["widthmonitor"]
             with co1:
-                b = util.bild.find_one({"_id": x["image"][0]["_id"] })
+                b = st.session_state.bild.find_one({"_id": x["image"][0]["_id"] })
                 image = Image.open(io.BytesIO(b["data"]))
                 wi, he = image.size            
                 st.image(b["data"], caption = f"{b['filename']}, width: wi, height: he, Größe {int(sys.getsizeof(b['data'])/1024)} kb")                
@@ -192,12 +197,12 @@ if st.session_state.logged_in:
 
         if st.session_state.changeimage or addimage:
             st.session_state.expanded = "bild"
-            bilderliste = list(util.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+            bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
             images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
             img = image_select("Bild auswählen", images, return_value = "index")
             img = bilderliste[img]["_id"]
             img = [{"_id": img, "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
-            btn2 = st.button("Bild übernehmen", on_click = tools.changeimagefun, args = (collection, x, { "image" : img }))
+            btn2 = st.button("Bild übernehmen", on_click = tools.changeimagefun, args = (collection, x, { "image" : img, "bearbeitet": bearbeitet }))
     if x["image"] != []:
        with st.expander("Einstellung für das Bild", expanded = True if st.session_state.expanded == "cssimage" else False):
             st.write("\n  ")
@@ -214,8 +219,9 @@ if st.session_state.logged_in:
             if takecss:
                 img = [{"_id": x["image"][0]["_id"], "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
                 st.session_state.expanded = ""
-                tools.update_confirm(collection, x, { "image" : img }, False)
+                tools.update_confirm(collection, x, { "image" : img, "bearbeitet": bearbeitet }, False)
                 switch_page("News_edit")
+    st.write(x["bearbeitet"])
 
 else: 
     switch_page("NEWS")
