@@ -3,6 +3,7 @@ from streamlit_extras.switch_page_button import switch_page
 import pymongo
 from PIL import Image
 import io, sys
+from datetime import datetime
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -23,6 +24,7 @@ bild = st.session_state.bild
 news = st.session_state.news
 carouselnews = st.session_state.carouselnews
 collection = bild
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 bilder = list(bild.find({}, sort=[("rang", pymongo.ASCENDING)]))
 
@@ -69,7 +71,7 @@ if st.session_state.logged_in:
                 "titel": titel,
                 "bildnachweis": bildnachweis,
                 "kommentar": kommentar,
-                "bearbeitet": util.bearbeitet,
+                "bearbeitet": bearbeitet,
                 "rang" : min([b["rang"] for b in bilder]) - 1 
             }
             tools.new(collection, ini = ini, switch = True)
