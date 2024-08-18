@@ -50,20 +50,21 @@ except:
     pass
     # logger.warning("No connection to Database 1")
 
+
 path = ["/home/pfaffelh/Downloads/intern/bilder/junker/"]
-image_list = []
+image_list = ["white.jpg"]
 for p in path:
     for file in os.listdir(p):
         try:
             mime = file.split(".")[1].lower()
-            if mime in ["jpg", "jpeg", "png"]:
-                image_list.append(p + file)
+#            if mime in ["jpg", "jpeg", "png"]:
+#                image_list.append(p + file)
         except:
             pass
 print("Image List")
 print(image_list)
 
-bild_no = 300
+bild_no = 700
 for filename in image_list:
     titel = filename.split(".")[0]
     mime = filename.split(".")[1].lower()

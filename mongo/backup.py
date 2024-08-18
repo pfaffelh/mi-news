@@ -10,5 +10,5 @@ os.system("mongo news --eval 'db.dropDatabase()'")
 
 # Restore complete database
 # Should be executed from mi-vvz/mongo/
-os.system(f"mongorestore --archive='news_backup_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}'")  
+os.system(f"mongorestore --drop --archive='news_backup_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}'")  
 
