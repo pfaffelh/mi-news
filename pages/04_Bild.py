@@ -88,7 +88,7 @@ if st.session_state.logged_in:
             with col3:
                 st.image(b["thumbnail"])
             with col4:
-                s = f"{b['titel']} ({b['filename']}))"
+                s = f"{b['titel']} ({b['filename']})"
                 submit = st.button(s, key=f"edit-{b['_id']}")
             if submit:
                 st.session_state.edit = b["_id"]
