@@ -142,8 +142,9 @@ if st.session_state.logged_in:
         with col2:
             endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor", disabled = not fuermonitor)
         btnmonitor = st.button("Monitordaten ändern", on_click=save, args = ({ "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} },"Monitordaten erfolgreich geändert!",))
-    with st.expander("Daten für Homepage ändern", expanded = True if st.session_state.expanded == "homepagedaten" else False):
-        fuerhome = st.toggle("Für Lehre-Homepage", value =  x["home"]["fuerhome"], help = "News erscheint auf der Lehre-Homepage.")
+    with st.expander("Daten für Lehre-Homepage ändern", expanded = True if st.session_state.expanded == "homepagedaten" else False):
+        fuerhome = st.toggle("Für Lehre-Homepage", value =  x["home"]["fuerhome"], disabled = True if x["image"] == [] else False, help = "Kann hier nur mit Bild veröffentlicht werden!")
+        fuerhome = fuerhome and x["image"] != []
         title_de = st.text_input("Titel (de)", x["home"]["title_de"], disabled = not fuerhome)
         title_en = st.text_input("Titel (en)", x["home"]["title_en"], disabled = not fuerhome)
         text_de = st.text_area("Text (de)", x["home"]["text_de"], disabled = not fuerhome)
