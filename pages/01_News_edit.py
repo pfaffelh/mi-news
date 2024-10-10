@@ -196,11 +196,6 @@ if st.session_state.logged_in:
             widthmonitor = 5
             addimage = st.toggle("Bild hinzufügen", value = addimage, key = "addimage")
 
-        bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
-        images = [tools.get_thumbnail(b["_id"]) for b in bilderliste]
-        for i in images:
-            st.write(i)
-
         if st.session_state.changeimage or addimage:
             st.session_state.expanded = "bild"
             bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
