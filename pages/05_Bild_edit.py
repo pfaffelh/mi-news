@@ -57,7 +57,7 @@ if st.session_state.logged_in:
     col1, col2 = st.columns([1,1])
     with col1:
         with st.form(f'ID-{x["_id"]}'):
-            menu = st.toggle("In Auswahlmenüs sichtbar", value = True)
+            menu = st.toggle("In Auswahlmenüs sichtbar", value = x["menu"])
             titel = st.text_input("Titel des Bildes", value = x["titel"])
             bildnachweis = st.text_input("Bildnachweis", value = x["bildnachweis"])
             kommentar = st.text_input("Kommentar", value = x["kommentar"])

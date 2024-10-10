@@ -10,6 +10,14 @@ from datetime import datetime, timedelta
 from PIL import Image
 import io
 
+def get_thumbnail(_id):
+    b = st.session_state.bild.find_one({"_id": _id})
+    try:
+        res = Image.open(io.BytesIO(b["thumbnail"]))
+    except:
+        res = Image.open(io.BytesIO(b["data"]))
+    return res
+
 def move_up(collection, x, query = {}):
     query["rang"] = {"$lt": x["rang"]}
     target = collection.find_one(query, sort = [("rang",pymongo.DESCENDING)])
