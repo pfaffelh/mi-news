@@ -52,13 +52,13 @@ if st.session_state.logged_in:
         ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
     with col1: 
         t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
-        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
-        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+        st.write(f"[Testansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitor/{t})")
     with col2: 
-        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
-        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
+        st.write(f"[Testansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
     
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
@@ -154,14 +154,14 @@ if st.session_state.logged_in:
         popover_text_en = st.text_area("Popover Text (en)", x["home"]["popover_text_en"], disabled = not fuerhome)        
         col1, col2 = st.columns([1,1])
         with col1:
-            startdatum_home = st.date_input("Startdatum", value = x["monitor"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home", disabled = not fuerhome)
+            startdatum_home = st.date_input("Startdatum", value = x["home"]["start"].date(), format = "DD.MM.YYYY", key = "startdatum_home", disabled = not fuerhome)
         with col2:
-            startzeit_home = st.time_input("Startzeit", value = x["monitor"]["start"].time(), key = "startzeit_home", disabled = not fuerhome)
+            startzeit_home = st.time_input("Startzeit", value = x["home"]["start"].time(), key = "startzeit_home", disabled = not fuerhome)
         with col1:
-            enddatum_home = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home", disabled = not fuerhome)
+            enddatum_home = st.date_input("Enddatum", value = x["home"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home", disabled = not fuerhome)
         with col2:
-            endzeit_home = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_home", disabled = not fuerhome)
-        btnmonitor = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
+            endzeit_home = st.time_input("Endzeit", value = x["home"]["end"].time(), key = "endzeit_home", disabled = not fuerhome)
+        btnhome = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
 
     if save_all:
         x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
