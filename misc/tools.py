@@ -151,7 +151,7 @@ def repr(collection, id, show_collection = True):
     x = collection.find_one({"_id": id})
     if collection == st.session_state.news:        
         title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
-        title = f"**{title}**"
+        title = f"**{title.strip()}**"
         ms = x["monitor"]["start"]
         me = x["monitor"]["end"]
         hs = x["home"]["start"]
