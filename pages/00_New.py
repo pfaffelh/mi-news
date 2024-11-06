@@ -1,11 +1,24 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
 from datetime import datetime, timedelta 
-
+import pandas as pd
 import pymongo
 from streamlit_image_select import image_select
 from PIL import Image
 import io
+import tarfile
+
+
+def create_tgz_in_memory(files):
+    tgz_buffer = io.BytesIO()
+    with tarfile.open(fileobj=tgz_buffer, mode="w:gz") as tar:
+        for filename, file_content in files.items():
+            file_obj = io.BytesIO(file_content)
+            tarinfo = tarfile.TarInfo(name=filename)
+            tarinfo.size = len(file_content)
+            tar.addfile(tarinfo, fileobj=file_obj)
+    tgz_buffer.seek(0)  # Setze den Zeiger auf den Anfang des Streams
+    return tgz_buffer
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -23,7 +36,7 @@ tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
 collection = st.session_state.news
-bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
@@ -131,6 +144,30 @@ if st.session_state.logged_in:
             st.session_state.expanded = ""
             switch_page("news edit")
 
+    st.divider()        
+    with st.expander("Download data"):
+        bilder = {}
+        data = []
+        for x in news_display:
+            item = {}
+            item["titel"] = x["home"]["title_de"]
+            item["text"] = x["home"]["text_de"]
+            item["link"] = x["link"]
+            item["filename"] = ""
+            if x["image"] != []:
+                b = st.session_state.bild.find_one({"_id" : x["image"][0]["_id"]})
+                bilder[b["filename"]] = b["data"]
+                item["filename"] = b["filename"]
+            data.append(item)
+        df = pd.DataFrame.from_records(data)
+        st.write(df)
+        tgz_buffer = create_tgz_in_memory(bilder)
+        st.download_button(
+            label="Download .tgz",
+            data=tgz_buffer,
+            file_name="bilder.tgz",
+            mime="application/x-tgz"
+        )
 
 else: 
     switch_page("NEWS")
