@@ -50,14 +50,16 @@ def update_confirm(collection, x, x_updated, reset = True):
     st.toast("🎉 Erfolgreich geändert!")
 
 def new(collection, ini = {}, switch = True):
-    z = list(collection.find(sort = [("rang", pymongo.ASCENDING)]))
-    rang = z[0]["rang"]-1
-    st.session_state.new[collection]["rang"] = rang    
+    if list(collection.find({ "rang" : { "$exists": True }})) != []:
+        z = list(collection.find(sort = [("rang", pymongo.ASCENDING)]))
+        rang = z[0]["rang"]-1
+        st.session_state.new[collection]["rang"] = rang    
     for key, value in ini.items():
         st.session_state.new[collection][key] = value
     st.session_state.new[collection].pop("_id", None)
     x = collection.insert_one(st.session_state.new[collection])
-    st.session_state.edit=x.inserted_id
+    if switch:
+        st.session_state.edit=x.inserted_id
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} ein neues Item angelegt.")
     if switch:
         switch_page(f"{st.session_state.collection_name[collection].lower()} edit")
@@ -93,8 +95,8 @@ def find_dependent_items(collection, id, ini = {}):
 
 def delete_item_update_dependent_items(collection, id, switch = True):
     if collection in st.session_state.leer.keys() and id == st.session_state.leer[collection]:
-            st.toast("Fehler! Dieses Item kann nicht gelöscht werden!")
-            reset_vars("")
+        st.toast("Fehler! Dieses Item kann nicht gelöscht werden!")
+        reset_vars("")
     else:
         for x in st.session_state.abhaengigkeit[collection]:
             if x["list"]:
@@ -107,10 +109,10 @@ def delete_item_update_dependent_items(collection, id, switch = True):
             s = f"\n{s}  \ngeändert."     
         util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} item {repr(collection, id)} gelöscht, und abhängige Felder geändert.")
         collection.delete_one({"_id": id})
-        reset_vars("")
         st.success(f"🎉 Erfolgreich gelöscht!  {s}")
-        time.sleep(4)
+        time.sleep(.2)
         if switch:
+            reset_vars("")
             switch_page(st.session_state.collection_name[collection].lower())
 
 # Die Authentifizierung gegen den Uni-LDAP-Server
