@@ -91,7 +91,7 @@ def setup_session_state():
         st.session_state.vortrag: "Vortrag"
     }
 
-    st.session_state.leer = {
+    leer = st.session_state.leer = {
                 st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"],
                 st.session_state.vortragsreihe: st.session_state.vortragsreihe.find_one({"kurzname": "alle"})["_id"]
                 }
