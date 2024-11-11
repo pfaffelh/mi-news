@@ -202,4 +202,5 @@ def setup_session_state():
 
 date_format = '%d.%m.%Y um %H:%M:%S.'
 date_format_no_space = '%Y%m%d%H%M'
+setup_session_state()
 leer = st.session_state.leer
