@@ -81,6 +81,8 @@ def setup_session_state():
         st.session_state.crop_bottom = 0
     if "changeimage" not in st.session_state:
         st.session_state.changeimage = False
+    if "leer" not in st.session_state:
+        st.session_state.leer = ""
 
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",
