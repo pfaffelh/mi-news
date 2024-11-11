@@ -1,0 +1,697 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2019-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190410T090500
+DTSTART:20190416T090000
+DTEND:20190416T180000
+SUMMARY:Algebraic and geometric aspects in Quantum Field Theory - See webpage for details.
+DESCRIPTION:Titel: See webpage for details.\nVeranstaltung: Algebraic and geometric aspects in Quantum Field Theory
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Ernst-Zermelo-Str. 1
+DTSTAMP:20190410T102300
+DTSTART:20190416T140000
+DTEND:20190416T150000
+SUMMARY:Oberseminar: Stochastik - A Theory of FinTech 
+DESCRIPTION:Titel: A Theory of FinTech \nVeranstaltung: Oberseminar: Stochastik\nSprecher: Prof. Steven Kou (Boston University) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190410T090600
+DTSTART:20190417T090000
+DTEND:20190417T180000
+SUMMARY:Algebraic and geometric aspects in Quantum Field Theory - See webpage for details.
+DESCRIPTION:Titel: See webpage for details.\nVeranstaltung: Algebraic and geometric aspects in Quantum Field Theory
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190410T090600
+DTSTART:20190418T090000
+DTEND:20190418T122000
+SUMMARY:Algebraic and geometric aspects in Quantum Field Theory - See webpage for details.
+DESCRIPTION:Titel: See webpage for details.\nVeranstaltung: Algebraic and geometric aspects in Quantum Field Theory
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190307T131500
+DTSTART:20190425T170000
+DTEND:20190425T180000
+SUMMARY:Kolloquium - Pure mathematics in crisis?
+DESCRIPTION:Titel: Pure mathematics in crisis?\nSprecher: Prof. Kevin Buzzard,   Imperial College
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190415T103800
+DTSTART:20190429T140000
+DTEND:20190429T160000
+SUMMARY:Oberseminar: Mathematische Logik - The classification of R-subgroups of the finite dimensional Beidleman near vector spaces
+DESCRIPTION:Titel: The classification of R-subgroups of the finite dimensional Beidleman near vector spaces\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Prudence Djagba
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190422T180000
+DTSTART:20190429T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Weighted Hurwitz numbers and topological recursion
+DESCRIPTION:Titel: Weighted Hurwitz numbers and topological recursion\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Alexander Alexandrov (IBS Center for Geometry and Physics, Pohang)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190429T161000
+DTSTART:20190430T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Magnetic Domains in Thin Ferromagnetic Films with Strong Perpendicular Anisotropy
+DESCRIPTION:Titel: Magnetic Domains in Thin Ferromagnetic Films with Strong Perpendicular Anisotropy\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Hans Knuepfer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Ernst-Zermelo-Str. 1
+DTSTAMP:20190429T085600
+DTSTART:20190503T120000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Inferring Demographic Histories using Coalescent Hidden Markov Models
+DESCRIPTION:Titel: Inferring Demographic Histories using Coalescent Hidden Markov Models\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Matthias Steinrücken
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190319T145200
+DTSTART:20190506T090000
+SUMMARY:[Event] Workshop - Workshop on Analysis, Simulation, and Modeling of Elastic Curves
+DESCRIPTION:Titel: Workshop on Analysis, Simulation, and Modeling of Elastic Curves\nVeranstaltung: [Event] Workshop\nSprecher: Eingeladene Sprecher
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal I, Physik-Hochhaus, Hermann-Herder-Straße 3
+DTSTAMP:20190417T185200
+DTSTART:20190506T121500
+SUMMARY:Minicourse - String mass spectra, Lecture I
+DESCRIPTION:Titel: String mass spectra, Lecture I\nVeranstaltung: Minicourse\nSprecher: Anne Taormina (Durham)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190504T125700
+DTSTART:20190506T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Elliptic Genera of ADE singularities
+DESCRIPTION:Titel: Elliptic Genera of ADE singularities\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Yuhang Hou
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190402T132800
+DTSTART:20190507T121500
+SUMMARY:Minicourse - String mass spectra, Lecture II
+DESCRIPTION:Titel: String mass spectra, Lecture II\nVeranstaltung: Minicourse\nSprecher: Anne Taormina (Durham)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190507T094200
+DTSTART:20190507T193000
+DTEND:20190507T210000
+SUMMARY:Didaktisches Seminar - Wer wagt, gewinnt? Wie wir Kindern und Jugendlichen Risikokompetenz vermitteln können
+DESCRIPTION:Titel: Wer wagt, gewinnt? Wie wir Kindern und Jugendlichen Risikokompetenz vermitteln können\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Laura Martignon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190402T133000
+DTSTART:20190509T121500
+SUMMARY:Minicourse - String mass spectra, Lecture III
+DESCRIPTION:Titel: String mass spectra, Lecture III\nVeranstaltung: Minicourse\nSprecher: Anne Taormina (Durham)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190110T172900
+DTSTART:20190509T170000
+DTEND:20190509T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190510T093200
+DTSTART:20190510T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Knörrer type equivalences for cyclic quotient surface singularities
+DESCRIPTION:Titel: Knörrer type equivalences for cyclic quotient surface singularities\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Dr. Martin Kalck
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190508T105100
+DTSTART:20190513T160000
+DTEND:20190513T180000
+SUMMARY:Projektseminar: Geometrische PDE  - Asymptotic behavior of flows by powers of the Gaussian curvature
+DESCRIPTION:Titel: Asymptotic behavior of flows by powers of the Gaussian curvature\nVeranstaltung: Projektseminar: Geometrische PDE \nSprecher: Li Chen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190503T135300
+DTSTART:20190513T161500
+DTEND:20190513T171500
+SUMMARY:Oberseminar: Differentialgeometrie - Introduction to the spinor flow
+DESCRIPTION:Titel: Introduction to the spinor flow\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Lothar Schiemanowski
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190506T140400
+DTSTART:20190517T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Continuous K-theory and cohomology of rigid spaces
+DESCRIPTION:Titel: Continuous K-theory and cohomology of rigid spaces\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Christian Dahlhausen 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190517T125900
+DTSTART:20190520T101500
+DTEND:20190520T120000
+SUMMARY:Minicourse - Lecture Series 'Hypoelliptic laplacian and applications'
+DESCRIPTION:Titel: Lecture Series 'Hypoelliptic laplacian and applications'\nVeranstaltung: Minicourse\nSprecher: Jean-Michel Bismut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190508T170100
+DTSTART:20190520T141500
+DTEND:20190520T154500
+SUMMARY:Oberseminar: Mathematische Logik - Eine Verallgemeinerung des Martin-Axioms
+DESCRIPTION:Titel: Eine Verallgemeinerung des Martin-Axioms\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Sebastian Hahn
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190513T092400
+DTSTART:20190520T161500
+DTEND:20190520T171500
+SUMMARY:Oberseminar: Differentialgeometrie - On the space of initial value pairs satisfying the dominant energy condition strictly
+DESCRIPTION:Titel: On the space of initial value pairs satisfying the dominant energy condition strictly\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jonathan Glöckle (Regensburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190517T130000
+DTSTART:20190521T101500
+DTEND:20190521T120000
+SUMMARY:Minicourse - Lecture Series 'Hypoelliptic laplacian and applications'
+DESCRIPTION:Titel: Lecture Series 'Hypoelliptic laplacian and applications'\nVeranstaltung: Minicourse\nSprecher: Jean-Michel Bismut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190513T121400
+DTSTART:20190521T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - wird noch bekanntgegeben
+DESCRIPTION:Titel: wird noch bekanntgegeben\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dr. Mikhail Cherdantsev
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190507T094400
+DTSTART:20190521T193000
+DTEND:20190521T210000
+SUMMARY:Didaktisches Seminar - Schritte zum Problemlösen - auch in der Sekundarstufe II
+DESCRIPTION:Titel: Schritte zum Problemlösen - auch in der Sekundarstufe II\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Benjamin Rott - Universität Köln
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190517T130100
+DTSTART:20190522T101500
+DTEND:20190522T120000
+SUMMARY:Minicourse - Lecture Series 'Hypoelliptic laplacian and applications'
+DESCRIPTION:Titel: Lecture Series 'Hypoelliptic laplacian and applications'\nVeranstaltung: Minicourse\nSprecher: Jean-Michel Bismut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190517T130200
+DTSTART:20190523T101500
+DTEND:20190523T120000
+SUMMARY:Minicourse - Lecture Series 'Hypoelliptic laplacian and applications'
+DESCRIPTION:Titel: Lecture Series 'Hypoelliptic laplacian and applications'\nVeranstaltung: Minicourse\nSprecher: Jean-Michel Bismut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190517T170600
+DTSTART:20190523T170000
+DTEND:20190523T180000
+SUMMARY:Kolloquium - Hypoelliptic Laplacian, index theory and the trace formula
+DESCRIPTION:Titel: Hypoelliptic Laplacian, index theory and the trace formula\nSprecher: Prof. Jean-Michel Bismut (Paris 11)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190514T151400
+DTSTART:20190524T083000
+DTEND:20190524T160000
+SUMMARY:[Event] Schüler-Info-Tag - Schüler-Info-Tag
+DESCRIPTION:Titel: Schüler-Info-Tag\nVeranstaltung: [Event] Schüler-Info-Tag
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20190517T130300
+DTSTART:20190524T101500
+DTEND:20190524T120000
+SUMMARY:Minicourse - Lecture Series 'Hypoelliptic laplacian and applications'
+DESCRIPTION:Titel: Lecture Series 'Hypoelliptic laplacian and applications'\nVeranstaltung: Minicourse\nSprecher: Jean-Michel Bismut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190516T141400
+DTSTART:20190524T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Grothendieck groups of isolated quotient singularities
+DESCRIPTION:Titel: Grothendieck groups of isolated quotient singularities\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Nebojsa Pavic
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190520T095200
+DTSTART:20190527T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Generalised Spencer cohomology and supersymmetry
+DESCRIPTION:Titel: Generalised Spencer cohomology and supersymmetry\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: José Figueroa-O'Farrill (Edinburgh)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190524T140400
+DTSTART:20190531T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Gorensteinness and iteration of Cox rings
+DESCRIPTION:Titel: Gorensteinness and iteration of Cox rings\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Lukas Braun (Tübingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190529T192900
+DTSTART:20190603T161500
+DTEND:20190603T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Classifying 8-dimensional E-manifolds
+DESCRIPTION:Titel: Classifying 8-dimensional E-manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Csaba Nagy (Melbourne)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190507T094500
+DTSTART:20190604T193000
+DTEND:20190604T210000
+SUMMARY:Didaktisches Seminar - Vektorgeometrie mediengestützt entdecken
+DESCRIPTION:Titel: Vektorgeometrie mediengestützt entdecken\nVeranstaltung: Didaktisches Seminar\nSprecher: StD Jürgen Kury - Seminar für didaktik und Lehrerbildung Freiburg
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190110T172800
+DTSTART:20190606T170000
+DTEND:20190606T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190520T160700
+DTSTART:20190606T170000
+DTEND:20190606T180000
+SUMMARY:Kolloquium - Arithmetic of Curves 
+DESCRIPTION:Titel: Arithmetic of Curves \nSprecher: Minhyong Kim,  Oxford
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190603T134600
+DTSTART:20190607T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Tame topology and algebraic geometry
+DESCRIPTION:Titel: Tame topology and algebraic geometry\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Bruno Klingler (HU Berlin)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190613T162700
+DTSTART:20190617T161500
+SUMMARY:Oberseminar: Differentialgeometrie - G2 manifolds with isolated conical singularities and asymptotically conical G2 manifolds
+DESCRIPTION:Titel: G2 manifolds with isolated conical singularities and asymptotically conical G2 manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jin Li
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190617T122200
+DTSTART:20190621T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Motives
+DESCRIPTION:Titel: Motives\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Annette Huber-Klawitter
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190621T092400
+DTSTART:20190624T141500
+SUMMARY:Oberseminar: Mathematische Logik - Cardinal Preserving Forcing of Closed Unbounded Sets into Stationary Sets
+DESCRIPTION:Titel: Cardinal Preserving Forcing of Closed Unbounded Sets into Stationary Sets\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Daniel Kurz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190621T145800
+DTSTART:20190624T161500
+SUMMARY:Oberseminar: Differentialgeometrie - The parametrix construction in the b-calculus: a case study
+DESCRIPTION:Titel: The parametrix construction in the b-calculus: a case study\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Nelvis Fornasin (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190617T114800
+DTSTART:20190625T160000
+DTEND:20190625T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Q-Curvature Equation in Dimension 1
+DESCRIPTION:Titel: Q-Curvature Equation in Dimension 1\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Meiyue Jiang (Peking University)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190507T094700
+DTSTART:20190625T193000
+DTEND:20190625T210000
+SUMMARY:Didaktisches Seminar - Die Erstellung von Erklärvideos im Mathematikunterricht
+DESCRIPTION:Titel: Die Erstellung von Erklärvideos im Mathematikunterricht\nVeranstaltung: Didaktisches Seminar\nSprecher: Frau Simone Schütze - Studienreferendarin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190624T102400
+DTSTART:20190628T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Constructible sheaves
+DESCRIPTION:Titel: Constructible sheaves\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Olaf Schnürer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190625T150700
+DTSTART:20190701T161500
+DTEND:20190701T171500
+SUMMARY:Oberseminar: Differentialgeometrie - Geometrische Multiplizität des zweiten Schrödinger-Eigenwerts auf geschlossenen zusammenhängenden Flächen
+DESCRIPTION:Titel: Geometrische Multiplizität des zweiten Schrödinger-Eigenwerts auf geschlossenen zusammenhängenden Flächen\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Alexander Grom
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190701T121800
+DTSTART:20190702T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - On Caccioppoli's inequalities of Stokes and Navier-Stokes equations up to boundary
+DESCRIPTION:Titel: On Caccioppoli's inequalities of Stokes and Navier-Stokes equations up to boundary\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. Kyungkeun Kang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190627T100600
+DTSTART:20190702T160000
+DTEND:20190702T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Stability of graph tori with almost nonnegative scalar curvature
+DESCRIPTION:Titel: Stability of graph tori with almost nonnegative scalar curvature\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Christian Ketterer (University of Toronto)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190701T123400
+DTSTART:20190703T140000
+SUMMARY:Oberseminar: Angewandte Mathematik - Nonlocal evolution transport densities   
+DESCRIPTION:Titel: Nonlocal evolution transport densities   \nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. José Francisco Rodrigues
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Ernst-Zermelo-Str. 1
+DTSTAMP:20190702T172800
+DTSTART:20190704T103000
+DTEND:20190704T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - One-sided exact categories and glider representations.
+DESCRIPTION:Titel: One-sided exact categories and glider representations.\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Ruben Henrard
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190110T172900
+DTSTART:20190704T170000
+DTEND:20190704T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190702T173000
+DTSTART:20190705T103000
+DTEND:20190705T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie -  Localizing (one-sided) exact categories
+DESCRIPTION:Titel:  Localizing (one-sided) exact categories\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Adam-Christiaan van Roosmalen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal Physik, Hermann-Herder-Str. 3a
+DTSTAMP:20190611T101300
+DTSTART:20190705T150000
+SUMMARY:[Event] Fakultätsfest und Abschlussfeier - Fakultätsfest und Abschlussfeier 2019
+DESCRIPTION:Titel: Fakultätsfest und Abschlussfeier 2019\nVeranstaltung: [Event] Fakultätsfest und Abschlussfeier
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190702T131700
+DTSTART:20190708T141500
+DTEND:20190708T161500
+SUMMARY:Oberseminar: Mathematische Logik - Geometrische Reduktionen in algebraisch abgeschlossenen bewerteten Körpern
+DESCRIPTION:Titel: Geometrische Reduktionen in algebraisch abgeschlossenen bewerteten Körpern\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Martin Hils
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190618T113400
+DTSTART:20190708T161500
+DTEND:20190708T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Orientation problems for PDEs and instanton moduli spaces
+DESCRIPTION:Titel: Orientation problems for PDEs and instanton moduli spaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Dr. Markus Upmeier (Oxford)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190704T181000
+DTSTART:20190709T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Sobolev embeddings of higher order, isoperimetric inequalities and Frostman measures
+DESCRIPTION:Titel: Sobolev embeddings of higher order, isoperimetric inequalities and Frostman measures\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Luboš Pick (Karls-Universität Prag)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190708T151900
+DTSTART:20190709T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Sobolev embeddings of higher order, isoperimetric inequalities and Frostman measures
+DESCRIPTION:Titel: Sobolev embeddings of higher order, isoperimetric inequalities and Frostman measures\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. Luboš Pick
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190507T094800
+DTSTART:20190709T193000
+DTEND:20190709T210000
+SUMMARY:Didaktisches Seminar - Das gymnasiale Lehramtsstudium – Ansätze zur Gestaltung unter widerstreitenden Anforderungen
+DESCRIPTION:Titel: Das gymnasiale Lehramtsstudium – Ansätze zur Gestaltung unter widerstreitenden Anforderungen\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Thomas Bauer - Universität Marburg
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190619T101500
+DTSTART:20190711T161500
+DTEND:20190711T171500
+SUMMARY:Kolloquium - Around the residue symbol
+DESCRIPTION:Titel: Around the residue symbol\nSprecher: Dr. Oliver Bräunling
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190705T182900
+DTSTART:20190712T103000
+DTEND:20190712T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Zero cycles on moduli spaces of curves 
+DESCRIPTION:Titel: Zero cycles on moduli spaces of curves \nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Johannes Schmitt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190709T092700
+DTSTART:20190715T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Cohomogeneity one Spin(7)-manifolds
+DESCRIPTION:Titel: Cohomogeneity one Spin(7)-manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fabian Lehmann (University College London)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20190710T100700
+DTSTART:20190716T090000
+DTEND:20190716T100000
+SUMMARY:Oberseminar: Differentialgeometrie - Semi-local and global Properties of Jacobi-related Geometries
+DESCRIPTION:Titel: Semi-local and global Properties of Jacobi-related Geometries\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jonas Schnitzer (Salerno)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20190712T095100
+DTSTART:20190716T110000
+DTEND:20190716T120000
+SUMMARY:Oberseminar: Differentialgeometrie - Essential self-adjointness of powers of first order differential operators on noncompact manifolds with low regularity metrics
+DESCRIPTION:Titel: Essential self-adjointness of powers of first order differential operators on noncompact manifolds with low regularity metrics\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Dr. Hemanth Saratchandran (Augsburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190708T151800
+DTSTART:20190716T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Nicht-Eindeutigkeit von Entropielösungen der Euler-Gleichungen
+DESCRIPTION:Titel: Nicht-Eindeutigkeit von Entropielösungen der Euler-Gleichungen\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Kilian Klasen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Ernst-Zermelo-Str. 1
+DTSTAMP:20190711T134800
+DTSTART:20190716T141500
+SUMMARY:Oberseminar: Differentialgeometrie - Removable singularities of Kähler metrics of constant holomorphic sectional curvature
+DESCRIPTION:Titel: Removable singularities of Kähler metrics of constant holomorphic sectional curvature\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Bin Xu
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190628T112500
+DTSTART:20190716T160000
+DTEND:20190716T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Interior estimate for scalar curvature equations
+DESCRIPTION:Titel: Interior estimate for scalar curvature equations\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Guohuan Qiu (The Chinese University of Hong Kong)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190715T125700
+DTSTART:20190719T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Wall crossing morphisms for moduli of stable pairs
+DESCRIPTION:Titel: Wall crossing morphisms for moduli of stable pairs\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Giovanni Inchiostro (Brown University) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Ernst-Zermelo-Str. 1
+DTSTAMP:20190711T115600
+DTSTART:20190719T141500
+SUMMARY:Oberseminar: Differentialgeometrie - Singular hyperbolic metrics on Riemann surfaces
+DESCRIPTION:Titel: Singular hyperbolic metrics on Riemann surfaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Bin Xu
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190604T114900
+DTSTART:20190722T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Computational aspects of orbifold equivalence
+DESCRIPTION:Titel: Computational aspects of orbifold equivalence\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ana Ros-Camacho (Utrecht)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20190717T165700
+DTSTART:20190723T090000
+DTEND:20190723T100000
+SUMMARY:Oberseminar: Differentialgeometrie - Riemann-Roch-Grothendieck theorem for families of curves with hyperbolic cusps and its applications to the moduli space of curves
+DESCRIPTION:Titel: Riemann-Roch-Grothendieck theorem for families of curves with hyperbolic cusps and its applications to the moduli space of curves\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Siarhei Finski (Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20190718T123400
+DTSTART:20190723T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Optimierung mit fraktionellen Differentialoperatoren bei der Regularisierung und Zerlegung von Bildern
+DESCRIPTION:Titel: Optimierung mit fraktionellen Differentialoperatoren bei der Regularisierung und Zerlegung von Bildern\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Nico Weber
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190703T125700
+DTSTART:20190723T160000
+DTEND:20190723T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Maximum principles for a fully nonlinear nonlocal equation on unbounded domains
+DESCRIPTION:Titel: Maximum principles for a fully nonlinear nonlocal equation on unbounded domains\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Xiaoming He (Minzu University of China)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190110T173000
+DTSTART:20190725T170000
+DTEND:20190725T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-77@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190726T085700
+DTSTART:20190726T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Moduli of special cubic 4-folds
+DESCRIPTION:Titel: Moduli of special cubic 4-folds\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Greg Pearlstein (Texas A&M)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190713T154600
+DTSTART:20190729T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Monopoles with arbitrary symmetry breaking
+DESCRIPTION:Titel: Monopoles with arbitrary symmetry breaking\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Benoit Charbonneau
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20190801T171000
+DTSTART:20190807T134500
+DTEND:20190807T144500
+SUMMARY:Oberseminar: Differentialgeometrie - Scalar Curvature Deformation
+DESCRIPTION:Titel: Scalar Curvature Deformation\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Gaetan Leclerc (Rennes)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20190906T162700
+DTSTART:20190909T000000
+SUMMARY:[Event] Workshop - o-Minimal structures in Algebraic Geometry
+DESCRIPTION:Titel: o-Minimal structures in Algebraic Geometry\nVeranstaltung: [Event] Workshop\nSprecher: Benjamin Bakker, Yohan Brunebarbe and Bruno Klingler
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2019-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Ernst-Zermelo-Str. 1
+DTSTAMP:20190906T104700
+DTSTART:20190911T160000
+SUMMARY:Oberseminar: Mathematische Logik - Stably embedded pairs and applications
+DESCRIPTION:Titel: Stably embedded pairs and applications\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Pablo Cubides-Kovacsics
+END:VEVENT
+END:VCALENDAR

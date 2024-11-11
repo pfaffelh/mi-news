@@ -1,0 +1,776 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2010-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100412T154000
+DTSTART:20100420T161500
+DTEND:20100420T171700
+SUMMARY:AG Geometrische Analysis - The Willmore functional: a perturbative approach
+DESCRIPTION:Titel: The Willmore functional: a perturbative approach\nVeranstaltung: AG Geometrische Analysis\nSprecher: Mondino, Andrea
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100419T102800
+DTSTART:20100422T101500
+SUMMARY:Oberseminar Stochastik - On the last common ancestor problem in branching processes
+DESCRIPTION:Titel: On the last common ancestor problem in branching processes\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Krishna Athreya (University of Iowa) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100419T133800
+DTSTART:20100422T170000
+SUMMARY:Kolloquium - Models of the term structure of interest rates
+DESCRIPTION:Titel: Models of the term structure of interest rates\nSprecher: Prof. Dr. Oldrich A. Vasicek (San Francisco)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100420T165700
+DTSTART:20100426T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Adiabatische Grenzwerte von &#951;-Invarianten
+DESCRIPTION:Titel: Adiabatische Grenzwerte von &#951;-Invarianten\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20100420T113300
+DTSTART:20100427T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Schwache Lösungen der instationären Stokes-Gleichungen auf bewegter Geometrie.
+DESCRIPTION:Titel: Schwache Lösungen der instationären Stokes-Gleichungen auf bewegter Geometrie.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Elena Mäder
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100422T152400
+DTSTART:20100427T161500
+DTEND:20100427T181800
+SUMMARY:AG Geometrische Analysis - Ricci flow of surfaces
+DESCRIPTION:Titel: Ricci flow of surfaces\nVeranstaltung: AG Geometrische Analysis\nSprecher: Chao Xia
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127 
+DTSTAMP:20100427T151800
+DTSTART:20100428T141500
+SUMMARY:Oberseminar Algebra - Gemischte Hodge-Strukturen
+DESCRIPTION:Titel: Gemischte Hodge-Strukturen\nVeranstaltung: Oberseminar Algebra\nSprecher: Patrick Graf
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100422T144300
+DTSTART:20100429T091500
+DTEND:20100429T111100
+SUMMARY:Oberseminar Stabilitätstheorie - Connectivity of Centralizers of Tori in Groups of Finite Morley Rank
+DESCRIPTION:Titel: Connectivity of Centralizers of Tori in Groups of Finite Morley Rank\nVeranstaltung: Oberseminar Stabilitätstheorie\nSprecher: Jeffrey Burdges
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100423T105400
+DTSTART:20100429T151500
+SUMMARY:Vorstellungsvortrag - Endomorphismen omega-kategorischer Strukturen
+DESCRIPTION:Titel: Endomorphismen omega-kategorischer Strukturen\nVeranstaltung: Vorstellungsvortrag\nSprecher: Markus Junker
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100706T105400
+DTSTART:20100429T170000
+SUMMARY:Kolloquium - Lokale Positivität und Seshadri-Konstanten
+DESCRIPTION:Titel: Lokale Positivität und Seshadri-Konstanten\nSprecher: Prof. Dr. Thomas Bauer (Marburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100427T100500
+DTSTART:20100503T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Introduction to the Yamabe invariant
+DESCRIPTION:Titel: Introduction to the Yamabe invariant\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20100419T185300
+DTSTART:20100504T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - t.b.a.
+DESCRIPTION:Titel: t.b.a.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Prof. H. W. Alt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100422T152700
+DTSTART:20100504T161500
+DTEND:20100504T181800
+SUMMARY:AG Geometrische Analysis - "Introduction to Ricci flow for n>2"
+DESCRIPTION:Titel: "Introduction to Ricci flow for n>2"\nVeranstaltung: AG Geometrische Analysis\nSprecher: M.Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100426T140700
+DTSTART:20100504T193000
+SUMMARY:Didaktisches Seminar - Algebraische Geometrie. Reine Mathematik, wo man sie vielleicht nicht vernutet.
+DESCRIPTION:Titel: Algebraische Geometrie. Reine Mathematik, wo man sie vielleicht nicht vernutet.\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Stefan Kebekus (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100428T165300
+DTSTART:20100505T111500
+DTEND:20100505T121200
+SUMMARY:AG Algebra - Shimuravarietaeten, Arakelov Geometrie und Kudlas Vermutungen
+DESCRIPTION:Titel: Shimuravarietaeten, Arakelov Geometrie und Kudlas Vermutungen\nVeranstaltung: AG Algebra\nSprecher: Fritz Hoermann, ETH Zürich/Humboldt-Universität Berlin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100427T152000
+DTSTART:20100505T141500
+SUMMARY:Oberseminar Algebra - Variation von Hodge-Strukturen
+DESCRIPTION:Titel: Variation von Hodge-Strukturen\nVeranstaltung: Oberseminar Algebra\nSprecher: Dr. Sebastian Neumann 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142000
+DTSTART:20100506T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:IMBI, Stefan-Meier-Str.26
+DTSTAMP:20100429T114600
+DTSTART:20100507T093000
+DTEND:20100507T101000
+SUMMARY:FDM-Seminar - Estimation of direct effect for survival data using the Aalen additive hazards model
+DESCRIPTION:Titel: Estimation of direct effect for survival data using the Aalen additive hazards model\nVeranstaltung: FDM-Seminar\nSprecher: Torben Martinussen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100426T134800
+DTSTART:20100507T111500
+DTEND:20100507T131300
+SUMMARY:FDM-Seminar - Detecting the Emergence of a Signal in a Noisy Image
+DESCRIPTION:Titel: Detecting the Emergence of a Signal in a Noisy Image\nVeranstaltung: FDM-Seminar\nSprecher: Prof. David O. Siegmund
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20100413T112200
+DTSTART:20100507T111500
+SUMMARY:AG Algebra - Differential forms on singular spaces
+DESCRIPTION:Titel: Differential forms on singular spaces\nVeranstaltung: AG Algebra\nSprecher: Dr. Daniel Greb
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100503T223900
+DTSTART:20100510T161500
+DTEND:20100510T171700
+SUMMARY:Oberseminar über Differentialgeometrie - Der Twistorraum von Quaternionisch-Kähler Mannigfaltigkeiten und Skalarkrümmung
+DESCRIPTION:Titel: Der Twistorraum von Quaternionisch-Kähler Mannigfaltigkeiten und Skalarkrümmung\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Nico Weinert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100422T152900
+DTSTART:20100511T161500
+DTEND:20100511T181800
+SUMMARY:AG Geometrische Analysis - "Manifolds with positive curvature operators are space forms" Teil I:
+DESCRIPTION:Titel: "Manifolds with positive curvature operators are space forms" Teil I:\nVeranstaltung: AG Geometrische Analysis\nSprecher: A.Schlichting
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100427T152200
+DTSTART:20100512T141500
+SUMMARY:Oberseminar Algebra - Klassifizierende Räume für Hodge-Strukturen 
+DESCRIPTION:Titel: Klassifizierende Räume für Hodge-Strukturen \nVeranstaltung: Oberseminar Algebra\nSprecher: Stephen Enright-Ward 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142700
+DTSTART:20100513T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:FRIAS House, Albertstr. 19, lecture hall
+DTSTAMP:20100514T090000
+DTSTART:20100517T101500
+SUMMARY:Interdisciplinary lecture series - Microstructure of a double auction market
+DESCRIPTION:Titel: Microstructure of a double auction market\nVeranstaltung: Interdisciplinary lecture series\nSprecher: Rosario Nunzio MANTEGNA (Prof. for Appl. Physics; University of Palermo)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100429T091900
+DTSTART:20100517T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Remarks about the curvatures of regular curves in euclidean spaces
+DESCRIPTION:Titel: Remarks about the curvatures of regular curves in euclidean spaces\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Prof. Eugene Gutkin (Torun)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:FRIAS House, Albertstr. 19, lecture hall
+DTSTAMP:20100514T085800
+DTSTART:20100518T101500
+SUMMARY:Interdisciplinary lecture series - Correlation and hierarchies in finacial markets
+DESCRIPTION:Titel: Correlation and hierarchies in finacial markets\nVeranstaltung: Interdisciplinary lecture series\nSprecher: Rosario Nunzio MANTEGNA (Prof. for Appl. Physics; University of Palermo)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20100514T133600
+DTSTART:20100518T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Electrolit flows in porous media.
+DESCRIPTION:Titel: Electrolit flows in porous media.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Prof. Vladimir Shelukhin (Novosibirsk)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100422T152900
+DTSTART:20100518T161500
+DTEND:20100518T181800
+SUMMARY:AG Geometrische Analysis - "Manifolds with positive curvature operators are space forms" Teil II:
+DESCRIPTION:Titel: "Manifolds with positive curvature operators are space forms" Teil II:\nVeranstaltung: AG Geometrische Analysis\nSprecher: Zhengxiang Chen,
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100510T105900
+DTSTART:20100518T193000
+SUMMARY:Didaktisches Seminar - Stochastische Paradoxien als didaktische Provokation
+DESCRIPTION:Titel: Stochastische Paradoxien als didaktische Provokation\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Thomas Jahnke (Universität Potsdam)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100427T152300
+DTSTART:20100519T141500
+SUMMARY:Oberseminar Algebra - Beispiele für Hodge-Strukturen
+DESCRIPTION:Titel: Beispiele für Hodge-Strukturen\nVeranstaltung: Oberseminar Algebra\nSprecher: Sabine Lechner 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:FRIAS House, Albertstr. 19, lecture hall
+DTSTAMP:20100514T121200
+DTSTART:20100519T161500
+SUMMARY:Interdisciplinary lecture series - Investment proviles of classes of investors
+DESCRIPTION:Titel: Investment proviles of classes of investors\nVeranstaltung: Interdisciplinary lecture series\nSprecher: Rosario Nunzio MANTEGNA (Prof. for Appl. Physics; University of Palermo)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100414T141500
+DTSTART:20100520T170000
+SUMMARY:Kolloquium - Geometrische singuläre Störungstheorie
+DESCRIPTION:Titel: Geometrische singuläre Störungstheorie\nSprecher: Dr. Dirk Lebiedz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20100505T135700
+DTSTART:20100521T111500
+SUMMARY:AG Algebra - Free monomial resolutions
+DESCRIPTION:Titel: Free monomial resolutions\nVeranstaltung: AG Algebra\nSprecher: Anton Khoroshkin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100423T104100
+DTSTART:20100521T111500
+DTEND:20100521T131300
+SUMMARY:FDM-Seminar - From genomes to phenotypes - statistical applications in transcriptomics, high-throughput RNAi and microscopy image based phenotyping
+DESCRIPTION:Titel: From genomes to phenotypes - statistical applications in transcriptomics, high-throughput RNAi and microscopy image based phenotyping\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Wolfgang Huber
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100514T122000
+DTSTART:20100521T161500
+DTEND:20100521T171700
+SUMMARY:Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Symmetry and Regularity of Solutions for Nonlinear Integral and PDE Systems
+DESCRIPTION:Titel: Symmetry and Regularity of Solutions for Nonlinear Integral and PDE Systems\nVeranstaltung: Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Dr. Wenxiong Chen (Yeshiva University, New York)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142200
+DTSTART:20100527T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142800
+DTSTART:20100527T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100527T105300
+DTSTART:20100531T160000
+DTEND:20100531T181800
+SUMMARY:Oberseminar über Differentialgeometrie - Curvature Operators On Quaternion Kähler Manifolds
+DESCRIPTION:Titel: Curvature Operators On Quaternion Kähler Manifolds\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: David Nellessen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100422T153000
+DTSTART:20100601T161500
+DTEND:20100601T181800
+SUMMARY:AG Geometrische Analysis - "Manifolds with positive curvature operators are space forms" Teil III:
+DESCRIPTION:Titel: "Manifolds with positive curvature operators are space forms" Teil III:\nVeranstaltung: AG Geometrische Analysis\nSprecher: M.Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100601T131900
+DTSTART:20100602T141500
+SUMMARY:Oberseminar Algebra - Krümmungseigenschaften von Periodengebieten I
+DESCRIPTION:Titel: Krümmungseigenschaften von Periodengebieten I\nVeranstaltung: Oberseminar Algebra\nSprecher: Daniel Greb
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100511T141800
+DTSTART:20100602T161500
+DTEND:20100602T171700
+SUMMARY:Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - On the MEMS equations
+DESCRIPTION:Titel: On the MEMS equations\nVeranstaltung: Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Dr. Dong Ye (University of Metz, France)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142900
+DTSTART:20100603T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100526T130800
+DTSTART:20100604T141500
+SUMMARY:Vorstellungsvortrag - Ricci-flache komplexe Geometrie
+DESCRIPTION:Titel: Ricci-flache komplexe Geometrie\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. Marco Kühnel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100510T122200
+DTSTART:20100607T140000
+DTEND:20100607T151500
+SUMMARY:FDM-Seminar - Electrochemical oscillations and chaos on macro- and microscales: phase diffusion, synchronization, and pacemaker design
+DESCRIPTION:Titel: Electrochemical oscillations and chaos on macro- and microscales: phase diffusion, synchronization, and pacemaker design\nVeranstaltung: FDM-Seminar\nSprecher: Istvan Z. Kiss
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100517T174100
+DTSTART:20100607T161500
+SUMMARY:Oberseminar über Differentialgeometrie - On commuting Tonelli Hamiltonians
+DESCRIPTION:Titel: On commuting Tonelli Hamiltonians\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Prof. Dr. Xiaojung Cui
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100604T101000
+DTSTART:20100608T161500
+DTEND:20100608T181800
+SUMMARY:AG Geometrische Analysis - T.B.A
+DESCRIPTION:Titel: T.B.A\nVeranstaltung: AG Geometrische Analysis\nSprecher: G.Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100510T110900
+DTSTART:20100608T193000
+SUMMARY:Didaktisches Seminar - Mathematische Einblicke ins Freiburg-Seminar - Berichte und Erfahrungen aus der Begabtenförderung
+DESCRIPTION:Titel: Mathematische Einblicke ins Freiburg-Seminar - Berichte und Erfahrungen aus der Begabtenförderung\nVeranstaltung: Didaktisches Seminar\nSprecher: Dr. Gerhard Metzger, Ralf Erens (Freiburg-Seminar)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100601T132000
+DTSTART:20100609T141500
+SUMMARY:Oberseminar Algebra - Krümmungseigenschaften von Periodengebieten II
+DESCRIPTION:Titel: Krümmungseigenschaften von Periodengebieten II\nVeranstaltung: Oberseminar Algebra\nSprecher: Daniel Greb
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100416T145700
+DTSTART:20100610T170000
+SUMMARY:Kolloquium - Optimalsteuerung mit partiellen Differentialgleichungen: Eine Einführung
+DESCRIPTION:Titel: Optimalsteuerung mit partiellen Differentialgleichungen: Eine Einführung\nSprecher: Prof. Dr. Roland Herzog (TU Chemnitz)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20100608T113400
+DTSTART:20100611T111500
+SUMMARY:AG Algebra - Der Cox-Ring einer algebraischen Varietät mit Toruswirkung
+DESCRIPTION:Titel: Der Cox-Ring einer algebraischen Varietät mit Toruswirkung\nVeranstaltung: AG Algebra\nSprecher: Prof. Dr. Jürgen Hausen (Tübingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100423T103900
+DTSTART:20100611T111500
+DTEND:20100611T131300
+SUMMARY:FDM-Seminar - MODEL SELECTION BASED ON FDR-THRESHOLDING -- OPTIMIZING THE AREA UNDER THE RECEIVER -- OPERATING CHARACTERISTIC CURVE
+DESCRIPTION:Titel: MODEL SELECTION BASED ON FDR-THRESHOLDING -- OPTIMIZING THE AREA UNDER THE RECEIVER -- OPERATING CHARACTERISTIC CURVE\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Alexandra Graf
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20100609T121800
+DTSTART:20100611T130000
+SUMMARY:Oberseminar Modelltheorie - Pseudo-finite groups and groups of finite Morley rank
+DESCRIPTION:Titel: Pseudo-finite groups and groups of finite Morley rank\nVeranstaltung: Oberseminar Modelltheorie\nSprecher: Professor Alexandre V. Borovik, University of Manchester
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Tübingen
+DTSTAMP:20100510T095000
+DTSTART:20100611T133000
+SUMMARY:SWAS Süd-West-Arithmetik-Seminar - Iterierte Integrale und Anwendungen
+DESCRIPTION:Titel: Iterierte Integrale und Anwendungen\nVeranstaltung: SWAS Süd-West-Arithmetik-Seminar\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100601T155600
+DTSTART:20100615T161500
+DTEND:20100615T181800
+SUMMARY:AG Geometrische Analysis - Willmore surfaces with isolated singularities of finite density in any codimension
+DESCRIPTION:Titel: Willmore surfaces with isolated singularities of finite density in any codimension\nVeranstaltung: AG Geometrische Analysis\nSprecher: Y.Bernard
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100603T175600
+DTSTART:20100616T141500
+SUMMARY:Oberseminar Algebra - Ahlfors-Lemma und Anwendungen
+DESCRIPTION:Titel: Ahlfors-Lemma und Anwendungen\nVeranstaltung: Oberseminar Algebra\nSprecher: Daniel Lohmann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-82@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100615T150100
+DTSTART:20100617T111500
+SUMMARY:Oberseminar Stabilitätstheorie - Representations of finite Morley rank
+DESCRIPTION:Titel: Representations of finite Morley rank\nVeranstaltung: Oberseminar Stabilitätstheorie\nSprecher: Adrien Deloro
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100706T105300
+DTSTART:20100617T170000
+SUMMARY:Kolloquium - Anwendung der Topologie in der algebraischen Geometrie
+DESCRIPTION:Titel: Anwendung der Topologie in der algebraischen Geometrie\nSprecher: Prof. Dr. Marc Levine (Essen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127
+DTSTAMP:20100617T085800
+DTSTART:20100618T111500
+DTEND:20100618T121200
+SUMMARY:AG Algebra - Algebraischer Kobordismus und Erweiterungen
+DESCRIPTION:Titel: Algebraischer Kobordismus und Erweiterungen\nVeranstaltung: AG Algebra\nSprecher: Marc Levine
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100604T160400
+DTSTART:20100618T111500
+DTEND:20100618T131300
+SUMMARY:FDM-Seminar - Risk aggregation: New techniques and new problems
+DESCRIPTION:Titel: Risk aggregation: New techniques and new problems\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Giovanni Puccetti
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100615T194800
+DTSTART:20100618T153000
+SUMMARY:Vorstellungsvortrag - A characterization of parallelepipeds related to weak derivatives
+DESCRIPTION:Titel: A characterization of parallelepipeds related to weak derivatives\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. Heinz Weisshaupt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-85@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100615T131000
+DTSTART:20100621T161500
+SUMMARY:Oberseminar über Differentialgeometrie - On minimal closed normal currents
+DESCRIPTION:Titel: On minimal closed normal currents\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Patrick Emmerich
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100512T164600
+DTSTART:20100622T161500
+DTEND:20100622T181800
+SUMMARY:AG Geometrische Analysis - Ueber Abbildungen der Kreisscheibe mit minimaler Oberflaeche, vorgegebenem Volumen und konvexer Stuetzmannigfaltigkeit
+DESCRIPTION:Titel: Ueber Abbildungen der Kreisscheibe mit minimaler Oberflaeche, vorgegebenem Volumen und konvexer Stuetzmannigfaltigkeit\nVeranstaltung: AG Geometrische Analysis\nSprecher: A.Ludwig
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-83@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100614T115800
+DTSTART:20100622T193000
+SUMMARY:Didaktisches Seminar - Vorträge über die 2. Staatsexamensarbeit (Sonnensystem Kl. 5), quadr. Funktionen mit GTR (Kl. 8)
+DESCRIPTION:Titel: Vorträge über die 2. Staatsexamensarbeit (Sonnensystem Kl. 5), quadr. Funktionen mit GTR (Kl. 8)\nVeranstaltung: Didaktisches Seminar\nSprecher: Anna Petry (A.-Schweitzer-Gymn. Gundelfingen), Maraike Stricker (St. Ursula-Gymnasium Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-77@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100601T132200
+DTSTART:20100623T141500
+SUMMARY:Oberseminar Algebra - The Nilpotent Orbit Theorem
+DESCRIPTION:Titel: The Nilpotent Orbit Theorem\nVeranstaltung: Oberseminar Algebra\nSprecher: Prof. Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142400
+DTSTART:20100624T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-81@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20100623T134300
+DTSTART:20100625T111500
+SUMMARY:AG Algebra - Nicht-kommutative Fitting-Invarianten
+DESCRIPTION:Titel: Nicht-kommutative Fitting-Invarianten\nVeranstaltung: AG Algebra\nSprecher: Dr. Andreas Nickel, Regensburg
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-90@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal I, Physikhochhaus
+DTSTAMP:20100623T145700
+DTSTART:20100625T141500
+SUMMARY:Mathematics-Physics Colloquium - Loop Integrals and Number Theory
+DESCRIPTION:Titel: Loop Integrals and Number Theory\nVeranstaltung: Mathematics-Physics Colloquium\nSprecher: Prof. Jochum van der Bij
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-87@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100623T124900
+DTSTART:20100628T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Total curvature of one-dimensional laminations
+DESCRIPTION:Titel: Total curvature of one-dimensional laminations\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Johannes Frank
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100604T101200
+DTSTART:20100629T161500
+DTEND:20100629T181800
+SUMMARY:AG Geometrische Analysis - 16.15-18.00 Uhr 	AG Geometrische Analysis Raum 404, Eckerstr. 1 M.Simon: "Manifolds with positive curvature operators are space forms" Teil IV: Von der Arbeit von Böhm/Wilking : "Manifolds with positive curvature operators are space forms".
+DESCRIPTION:Titel: 16.15-18.00 Uhr 	AG Geometrische Analysis Raum 404, Eckerstr. 1 M.Simon: "Manifolds with positive curvature operators are space forms" Teil IV: Von der Arbeit von Böhm/Wilking : "Manifolds with positive curvature operators are space forms".\nVeranstaltung: AG Geometrische Analysis\nSprecher: M.Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100603T175700
+DTSTART:20100630T141500
+SUMMARY:Oberseminar Algebra - The SL_2 Orbit Theorem
+DESCRIPTION:Titel: The SL_2 Orbit Theorem\nVeranstaltung: Oberseminar Algebra\nSprecher: Prof. Wolfgang Soergel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100706T105400
+DTSTART:20100701T170000
+SUMMARY:Kolloquium - The global geometry of the moduli space of curves
+DESCRIPTION:Titel: The global geometry of the moduli space of curves\nSprecher: Prof. Dr. Gavril Farkas (HU Berlin)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-84@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20100623T170500
+DTSTART:20100702T111500
+SUMMARY:AG Algebra - Refinement of the Parshin symbol for surfaces
+DESCRIPTION:Titel: Refinement of the Parshin symbol for surfaces\nVeranstaltung: AG Algebra\nSprecher: Dr. Ivan Horozov, Universität Tübingen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-88@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100623T135700
+DTSTART:20100705T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Introduction to Vafa-Witten Bounds
+DESCRIPTION:Titel: Introduction to Vafa-Witten Bounds\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Alex Koenen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100610T171900
+DTSTART:20100706T161500
+DTEND:20100706T181800
+SUMMARY:AG Geometrische Analysis - Das Curve Diffusion Problem - Homothetische und Translatierende Lösungen
+DESCRIPTION:Titel: Das Curve Diffusion Problem - Homothetische und Translatierende Lösungen\nVeranstaltung: AG Geometrische Analysis\nSprecher: M.Franzen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-92@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100701T103800
+DTSTART:20100707T141500
+SUMMARY:Oberseminar über Differentialgeometrie - About integrability of geodesic flows and isospectrality of Riemannian manifolds
+DESCRIPTION:Titel: About integrability of geodesic flows and isospectrality of Riemannian manifolds\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Gabriela P. Ovando
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-94@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127 
+DTSTAMP:20100705T115600
+DTSTART:20100707T141500
+SUMMARY:Oberseminar Algebra - Limiting Mixed Hodge Structures
+DESCRIPTION:Titel: Limiting Mixed Hodge Structures\nVeranstaltung: Oberseminar Algebra\nSprecher: Prof. Annette Huber
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-91@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20100625T091800
+DTSTART:20100708T101500
+SUMMARY:Oberseminar Stochastik - Blackwell Prediction
+DESCRIPTION:Titel: Blackwell Prediction\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. H. R. Lerche
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100706T095100
+DTSTART:20100708T170000
+SUMMARY:Kolloquium - Density models for credit risk
+DESCRIPTION:Titel: Density models for credit risk\nSprecher: Prof. Dr. Monique Jeanblanc (Evry)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-93@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 125
+DTSTAMP:20100706T112600
+DTSTART:20100709T000000
+SUMMARY:AG Algebra - Einige Phänomene im Umfeld der Gross-Zagier-Formel
+DESCRIPTION:Titel: Einige Phänomene im Umfeld der Gross-Zagier-Formel\nVeranstaltung: AG Algebra\nSprecher: Dr. Kathrin Maurischat
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Rundbau, Albertstr. 21a
+DTSTAMP:20100527T150400
+DTSTART:20100709T143000
+SUMMARY:Alumni-Tag der Fakultät - 
+DESCRIPTION:\nVeranstaltung: Alumni-Tag der Fakultät
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Innenhof des Physikalischen Instituts
+DTSTAMP:20100527T151700
+DTSTART:20100709T170000
+SUMMARY:Sommerfest 2010 der Fakultät für Mathematik und Physik - 
+DESCRIPTION:\nVeranstaltung: Sommerfest 2010 der Fakultät für Mathematik und Physik
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Freiburg
+DTSTAMP:20100510T095200
+DTSTART:20100712T133000
+SUMMARY:SWAS Süd-West-Arithmetik-Seminar - Chens iterierte Integrale und Anwendungen
+DESCRIPTION:Titel: Chens iterierte Integrale und Anwendungen\nVeranstaltung: SWAS Süd-West-Arithmetik-Seminar\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 427, Eckerstr. 1
+DTSTAMP:20100708T110700
+DTSTART:20100712T161500
+SUMMARY:Oberseminar über Differentialgeometrie - The classifying space of locally filtered vector bundles
+DESCRIPTION:Titel: The classifying space of locally filtered vector bundles\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Jan Schlüter
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100712T140000
+DTSTART:20100713T161500
+DTEND:20100713T181800
+SUMMARY:AG Geometrische Analysis - Update zu Ricci-flachen vollstaendigen Kaehlermetriken / Ideen zu einem Kaehlerfluss.
+DESCRIPTION:Titel: Update zu Ricci-flachen vollstaendigen Kaehlermetriken / Ideen zu einem Kaehlerfluss.\nVeranstaltung: AG Geometrische Analysis\nSprecher: M.Kühnel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-95@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127
+DTSTAMP:20100705T115800
+DTSTART:20100714T141500
+SUMMARY:Oberseminar Algebra - The Clemens-Schmid sequence
+DESCRIPTION:Titel: The Clemens-Schmid sequence\nVeranstaltung: Oberseminar Algebra\nSprecher: Dr. Stephen Meagher
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-96@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100706T120400
+DTSTART:20100714T161500
+DTEND:20100714T171700
+SUMMARY:Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Minimal submanifolds of higher codimension
+DESCRIPTION:Titel: Minimal submanifolds of higher codimension\nVeranstaltung: Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Professor Yuanlong Xin (Fudan University, Shanghai, z. Z. Max-Planck-Inst. für Math., Leipzig)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100323T142500
+DTSTART:20100715T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-97@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100720T135900
+DTSTART:20100721T161500
+SUMMARY:Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - t.b.a.
+DESCRIPTION:Titel: t.b.a.\nVeranstaltung: Kolloquium des SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Henrik Schumacher (Göttingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-86@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100622T101200
+DTSTART:20100723T111500
+SUMMARY:Oberseminar Stochastik - Filtering equations for sufficient statistics in twodimensional disorder problems for exponential families of Lévy processes
+DESCRIPTION:Titel: Filtering equations for sufficient statistics in twodimensional disorder problems for exponential families of Lévy processes\nVeranstaltung: Oberseminar Stochastik\nSprecher: Dr. Pavel Gapeev (The London School of Economics and Political Science, UK ) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2010-98@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100820T101500
+DTSTART:20100820T141500
+SUMMARY:AG Algebra - Motives of some algebraic groups associated to central simple algebras
+DESCRIPTION:Titel: Motives of some algebraic groups associated to central simple algebras\nVeranstaltung: AG Algebra\nSprecher: Evgeny Shinder, z.Zt. MPI Bonn
+END:VEVENT
+END:VCALENDAR

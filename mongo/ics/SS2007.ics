@@ -1,0 +1,468 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2007-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20070316T103800
+DTSTART:20070320T101500
+SUMMARY:Oberseminar Stochastik - Konstruktion und Analyse von adversarial Netzwerkalgorithmen
+DESCRIPTION:Titel: Konstruktion und Analyse von adversarial Netzwerkalgorithmen\nVeranstaltung: Oberseminar Stochastik\nSprecher: Alexander Heinzel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070416T123100
+DTSTART:20070420T111500
+SUMMARY:FDM-Seminar - Taylor Expansions of Option Prices with applications to Interest Rate Theory
+DESCRIPTION:Titel: Taylor Expansions of Option Prices with applications to Interest Rate Theory\nVeranstaltung: FDM-Seminar\nSprecher: Maria Siopacha (TU Wien)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070419T135100
+DTSTART:20070420T141500
+DTEND:20070420T161600
+SUMMARY:AG Geometrische Analysis - On surfaces of finite total curvature (Arbeit von Stefan Müller und Vladimir Sverak) I
+DESCRIPTION:Titel: On surfaces of finite total curvature (Arbeit von Stefan Müller und Vladimir Sverak) I\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yuxiang Li
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Mensa Rempartstraße, Freiburg
+DTSTAMP:20070417T113600
+DTSTART:20070421T110000
+DTEND:20070421T161600
+SUMMARY:heads & hands - Berufsorientierung für Studierende - Zukunftsmesse heads & hands des career center der Universität
+DESCRIPTION:Titel: Zukunftsmesse heads & hands des career center der Universität\nVeranstaltung: heads & hands - Berufsorientierung für Studierende\nSprecher: Unternehmenspräsentationen, Vorträge, Workshops
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070417T134000
+DTSTART:20070423T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Tropische Spiele und holomorphe Entartungen I
+DESCRIPTION:Titel: Tropische Spiele und holomorphe Entartungen I\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Bernd Siebert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070424T111500
+DTSTART:20070427T141500
+DTEND:20070427T161600
+SUMMARY:AG Geometrische Analysis - Conformal surfaces with a bound on the Willmore Energy
+DESCRIPTION:Titel: Conformal surfaces with a bound on the Willmore Energy\nVeranstaltung: AG Geometrische Analysis\nSprecher: Ernst Kuwert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Auditorium Maximum
+DTSTAMP:20070619T114600
+DTSTART:20070427T170000
+SUMMARY:Kolloquium - <b>Gauß-Vorlesung</b>
+DESCRIPTION:Titel: <b>Gauß-Vorlesung</b>\nSprecher: Prof. Dr. Dieter Wolke, Prof. Dr. Don Zagier
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Audimax, KG II
+DTSTAMP:20070105T122200
+DTSTART:20070427T170000
+DTEND:20070427T202000
+SUMMARY:Gauß Vorlesung der DMV im Rahmen des 550-jährigen Universitätsjubiläums - Zahlentheorie und die Kreiszahl pi
+DESCRIPTION:Titel: Zahlentheorie und die Kreiszahl pi\nVeranstaltung: Gauß Vorlesung der DMV im Rahmen des 550-jährigen Universitätsjubiläums\nSprecher: Prof. Dr. Don Zagier, MPI Bonn und Collège de France, Paris
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070417T134200
+DTSTART:20070430T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Tropische Spiele und holomorphe Entartungen II
+DESCRIPTION:Titel: Tropische Spiele und holomorphe Entartungen II\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Bernd Siebert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20070504T154000
+DTSTART:20070507T161500
+DTEND:20070507T171700
+SUMMARY:Oberseminar über Differentialgeometrie - Lagrange Faserungen auf 4-dim. Hyperkählermannigfaltigkeiten 
+DESCRIPTION:Titel: Lagrange Faserungen auf 4-dim. Hyperkählermannigfaltigkeiten \nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Christian Thier
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135200
+DTSTART:20070511T141500
+DTEND:20070511T161600
+SUMMARY:AG Geometrische Analysis - Conformal surfaces with a bound on the Willmore Energy II
+DESCRIPTION:Titel: Conformal surfaces with a bound on the Willmore Energy II\nVeranstaltung: AG Geometrische Analysis\nSprecher: Ernst Kuwert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125
+DTSTAMP:20070507T145500
+DTSTART:20070514T161500
+DTEND:20070514T171700
+SUMMARY:Oberseminar über Differentialgeometrie - Die Wittendeformation für singuläre Räume der dim 2
+DESCRIPTION:Titel: Die Wittendeformation für singuläre Räume der dim 2\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Ursula Ludwig
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135300
+DTSTART:20070518T141500
+DTEND:20070518T161600
+SUMMARY:AG Geometrische Analysis - Pseudolocality Theorems for flows with speed bounded by c/t
+DESCRIPTION:Titel: Pseudolocality Theorems for flows with speed bounded by c/t\nVeranstaltung: AG Geometrische Analysis\nSprecher: Miles Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20070515T172600
+DTSTART:20070521T161500
+DTEND:20070521T171700
+SUMMARY:Oberseminar über Differentialgeometrie - Lokal nilpotente Vektorbündel, eine geometrische Realisierung der algebraischen K-Theorie ?
+DESCRIPTION:Titel: Lokal nilpotente Vektorbündel, eine geometrische Realisierung der algebraischen K-Theorie ?\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Jan Schlüter
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20070504T153800
+DTSTART:20070522T141500
+DTEND:20070522T161600
+SUMMARY:Oberseminar über Angewandte Mathematik - Optimal Cardinality of a Standard Adaptive Finite Element Method
+DESCRIPTION:Titel: Optimal Cardinality of a Standard Adaptive Finite Element Method\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Christian Kreuzer (Augsburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070508T091500
+DTSTART:20070522T193000
+DTEND:20070522T202000
+SUMMARY:Didaktisches Seminar - Aktivitäten mit Hand und Verstand 
+DESCRIPTION:Titel: Aktivitäten mit Hand und Verstand \nVeranstaltung: Didaktisches Seminar\nSprecher: Thomas Vogt (Emanuel-Felke-Gymnasium Bad Sobernheim)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135300
+DTSTART:20070525T141500
+DTEND:20070525T161600
+SUMMARY:AG Geometrische Analysis - Pseudolocality Theorems for flows with speed bounded by c/t (Teil II)
+DESCRIPTION:Titel: Pseudolocality Theorems for flows with speed bounded by c/t (Teil II)\nVeranstaltung: AG Geometrische Analysis\nSprecher: Miles Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070510T073400
+DTSTART:20070525T170000
+SUMMARY:Kolloquium - On combinatorial link Floer homology
+DESCRIPTION:Titel: On combinatorial link Floer homology\nSprecher: Prof. Dr. Anna Beliakova (Universität Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070601T082400
+DTSTART:20070604T160000
+SUMMARY:Kolloquium - Life Distributions: Structure of nonparametric, semiparametric and parametric families
+DESCRIPTION:Titel: Life Distributions: Structure of nonparametric, semiparametric and parametric families\nSprecher: Prof. Dr. Ingram Olkin  (Stanford University , USA)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125
+DTSTAMP:20070529T160300
+DTSTART:20070604T161500
+DTEND:20070604T171700
+SUMMARY:Oberseminar über Differentialgeometrie - Über die Nichtdifferenzierbarkeit der stabilen Norm in Kodimension eins
+DESCRIPTION:Titel: Über die Nichtdifferenzierbarkeit der stabilen Norm in Kodimension eins\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Hannes Junginger-Gestrich
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070420T120200
+DTSTART:20070608T141500
+DTEND:20070608T151500
+SUMMARY:AG Geometrische Analysis - Stabilität nicht kompakter Mannigfaltigkeiten unter Krümmungsflussen
+DESCRIPTION:Titel: Stabilität nicht kompakter Mannigfaltigkeiten unter Krümmungsflussen\nVeranstaltung: AG Geometrische Analysis\nSprecher: Oliver Schnürer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070420T120400
+DTSTART:20070608T153000
+DTEND:20070608T161600
+SUMMARY:Ag Geometrische Analysis - Stabiltät des R^n unter Ricci Fluss
+DESCRIPTION:Titel: Stabiltät des R^n unter Ricci Fluss\nVeranstaltung: Ag Geometrische Analysis\nSprecher: Felix SChulze
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070522T152000
+DTSTART:20070612T193000
+DTEND:20070612T202000
+SUMMARY:Didaktisches Seminar - Leitidee Daten und Zufall im computergestützten Stochastikunterricht in den Sekundarstufen
+DESCRIPTION:Titel: Leitidee Daten und Zufall im computergestützten Stochastikunterricht in den Sekundarstufen\nVeranstaltung: Didaktisches Seminar\nSprecher: Rolf Biehler (Universität Kassel)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135600
+DTSTART:20070615T141500
+DTEND:20070615T161600
+SUMMARY:AG Geometrische Analysis - Weierstrass representation of surfaces (I)
+DESCRIPTION:Titel: Weierstrass representation of surfaces (I)\nVeranstaltung: AG Geometrische Analysis\nSprecher: Patrick Breuning
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20070611T162700
+DTSTART:20070618T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Charakteristische Klassen flacher Bündel
+DESCRIPTION:Titel: Charakteristische Klassen flacher Bündel\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135800
+DTSTART:20070622T141500
+DTEND:20070622T161600
+SUMMARY:AG Geometrische Analaysis - Weiertsrass representation of surfaces (II)
+DESCRIPTION:Titel: Weiertsrass representation of surfaces (II)\nVeranstaltung: AG Geometrische Analaysis\nSprecher: Partick Breuning
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070619T114000
+DTSTART:20070622T170000
+SUMMARY:Kolloquium - Spaces with variable exponents and applications
+DESCRIPTION:Titel: Spaces with variable exponents and applications\nSprecher: Dr. Lars Diening (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070508T092800
+DTSTART:20070626T193000
+DTEND:20070626T202000
+SUMMARY:Didaktisches Seminar - 65 Jahre, 30 als Lehrer in Freiburg 
+DESCRIPTION:Titel: 65 Jahre, 30 als Lehrer in Freiburg \nVeranstaltung: Didaktisches Seminar\nSprecher: Dieter Wolke (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070430T135700
+DTSTART:20070629T141500
+DTEND:20070629T161600
+SUMMARY:AG Geometrische Analysis - Asymptotic des Partitionproblems
+DESCRIPTION:Titel: Asymptotic des Partitionproblems\nVeranstaltung: AG Geometrische Analysis\nSprecher: Andre Ludwig
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070619T113800
+DTSTART:20070629T170000
+SUMMARY:Kolloquium - Stochastische Löwner-Evolution und konforme Invarianz
+DESCRIPTION:Titel: Stochastische Löwner-Evolution und konforme Invarianz\nSprecher: Prof. Dr. Robert Bauer (University of Illinois, Urbana-Champaign)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20070614T130600
+DTSTART:20070703T141500
+DTEND:20070703T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Existence and time-asymptotics of global strong solutions to dynamic\nKorteweg models
+DESCRIPTION:Titel: Existence and time-asymptotics of global strong solutions to dynamic\nKorteweg models\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Matthias Kotschote (Uni Leipzig)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070625T104000
+DTSTART:20070706T111500
+SUMMARY:FDM-Seminar - Pricing of financial derivatives using multivariate jump processes
+DESCRIPTION:Titel: Pricing of financial derivatives using multivariate jump processes\nVeranstaltung: FDM-Seminar\nSprecher: Dipl.-Math. Christoph Winter (ETH Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070702T122000
+DTSTART:20070706T140000
+DTEND:20070706T151500
+SUMMARY:AG Geometrische Analysis -  On the $&#092;sigma_2$-scalar curvature
+DESCRIPTION:Titel:  On the $&#092;sigma_2$-scalar curvature\nVeranstaltung: AG Geometrische Analysis\nSprecher: Goufang Wang, Universität Magdeburg
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal der Physik
+DTSTAMP:20070522T145900
+DTSTART:20070706T143000
+DTEND:20070706T181800
+SUMMARY:Internationaler Alumni Tag im Rahmen des 550. Universitätsjubiläums - 
+DESCRIPTION:\nVeranstaltung: Internationaler Alumni Tag im Rahmen des 550. Universitätsjubiläums\nSprecher: Prof. Dr. G. Herten  /  Prof. Dr. M. Ruzicka /  Prof. Dr. V. Schmidt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070703T072800
+DTSTART:20070706T170000
+SUMMARY:Kolloquium - Mean curvature flow of networks
+DESCRIPTION:Titel: Mean curvature flow of networks\nSprecher: Prof. Dr. Alexandre Freire (University of Tennessee, Knoxville)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070703T083900
+DTSTART:20070709T091500
+SUMMARY:AG Algebra - "Modulo p^n monodromy of the j-line"
+DESCRIPTION:Titel: "Modulo p^n monodromy of the j-line"\nVeranstaltung: AG Algebra\nSprecher:  M.E. Arasteh Rad (Universität Padua, Italien)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070508T093100
+DTSTART:20070710T193000
+DTEND:20070710T202000
+SUMMARY:Didaktisches Seminar - Mathematik  das gehasste Fach?!
+DESCRIPTION:Titel: Mathematik  das gehasste Fach?!\nVeranstaltung: Didaktisches Seminar\nSprecher: Attila Furdek (Lender-Gymnasium, Sasbach)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20070706T092000
+DTSTART:20070711T100000
+SUMMARY:Oberseminar Stochastik - Penalizing Brownian paths
+DESCRIPTION:Titel: Penalizing Brownian paths\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Marc Yor, Université Paris VI
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20070705T160900
+DTSTART:20070713T111500
+SUMMARY:AG Algebra - Quantisierte symmetrische Algebren
+DESCRIPTION:Titel: Quantisierte symmetrische Algebren\nVeranstaltung: AG Algebra\nSprecher: Sebastian Zwicknagel, University of California at Riverside
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070710T133000
+DTSTART:20070713T111500
+SUMMARY:FDM-Seminar - Regulatory networks in T cells: from experiments to models and back
+DESCRIPTION:Titel: Regulatory networks in T cells: from experiments to models and back\nVeranstaltung: FDM-Seminar\nSprecher: Prof. Dr. Thomas Höfer (DKFZ Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070625T094800
+DTSTART:20070713T141500
+DTEND:20070713T161600
+SUMMARY:AG Geometrische Analysis - 
+DESCRIPTION:\nVeranstaltung: AG Geometrische Analysis\nSprecher: Johannes Schygulla
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20070705T160700
+DTSTART:20070713T151500
+SUMMARY:AG Algebra - Link homology theories and geometry
+DESCRIPTION:Titel: Link homology theories and geometry\nVeranstaltung: AG Algebra\nSprecher: Ben Webster, IAS Princeton
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070709T142900
+DTSTART:20070713T170000
+SUMMARY:Kolloquium - Wolfgang Doeblin (1915-1940). A look at his too brief life and his work on Kolmogoroff's equation.
+DESCRIPTION:Titel: Wolfgang Doeblin (1915-1940). A look at his too brief life and his work on Kolmogoroff's equation.\nSprecher: Prof. Dr. Marc Yor (Université Paris VI, Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070702T094000
+DTSTART:20070716T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Periodic orbits close to elliptic tori for the N-body problem
+DESCRIPTION:Titel: Periodic orbits close to elliptic tori for the N-body problem\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Frederico Coglitore (Rom)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 111b, Hermann-Herder-Str. 10
+DTSTAMP:20070621T172300
+DTSTART:20070716T163000
+DTEND:20070716T171700
+SUMMARY:Oberseminar über Angewandte Mathematik - A multiscale model for suspensions of rod--like molecules
+DESCRIPTION:Titel: A multiscale model for suspensions of rod--like molecules\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Christiane Helzel (Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20070615T142200
+DTSTART:20070717T141500
+DTEND:20070717T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Gelförmige Treibstoffe - Eine Vision für sicherere und regelbare Raketen- und Staustrahlantriebe
+DESCRIPTION:Titel: Gelförmige Treibstoffe - Eine Vision für sicherere und regelbare Raketen- und Staustrahlantriebe\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Dr. H. Ciezki (DLR Lampoldshausen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20070716T133400
+DTSTART:20070717T160000
+DTEND:20070717T171700
+SUMMARY:Oberseminar über Angewandte Mathematik - Numerik fuer einen Stoerungsansatz in der nichtlinearen Akustik
+DESCRIPTION:Titel: Numerik fuer einen Stoerungsansatz in der nichtlinearen Akustik\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Kathrin Baeumler
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070711T141400
+DTSTART:20070720T100000
+DTEND:20070720T111100
+SUMMARY:AG Geometrische Analysis - Minimisers of the Willmore functional with prescribed conformal type
+DESCRIPTION:Titel: Minimisers of the Willmore functional with prescribed conformal type\nVeranstaltung: AG Geometrische Analysis\nSprecher: Ernst Kuwert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20070704T135000
+DTSTART:20070720T111500
+DTEND:20070720T131300
+SUMMARY:AG Geometrische Analysis - Some energy identities on harmonic maps
+DESCRIPTION:Titel: Some energy identities on harmonic maps\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yuxiang Li (Humboldt-Stipendium)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20070711T150100
+DTSTART:20070720T111500
+SUMMARY:AG Algebra - Graduierte Kategorien und Koszulität für SL_3
+DESCRIPTION:Titel: Graduierte Kategorien und Koszulität für SL_3\nVeranstaltung: AG Algebra\nSprecher: Sebastian Holzmann, Universität Wuppertal
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070706T004400
+DTSTART:20070720T170000
+SUMMARY:Kolloquium - Professorinnen in der Mathematik - Karriere im Spannungsfeld von Förderung und Diskriminierung
+DESCRIPTION:Titel: Professorinnen in der Mathematik - Karriere im Spannungsfeld von Förderung und Diskriminierung\nSprecher: Prof. Dr. Irene Pieper-Seier (Universität Oldenburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2007-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20070717T113500
+DTSTART:20070723T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Curvature-free upper bounds for the length of stationary objects
+DESCRIPTION:Titel: Curvature-free upper bounds for the length of stationary objects\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Professor Regina Rotman (Toronto)
+END:VEVENT
+END:VCALENDAR

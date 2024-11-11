@@ -1,0 +1,931 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:WS2015-2016-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151014T163500
+DTSTART:20151019T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Analytic continuation of hypergeometric functions
+DESCRIPTION:Titel: Analytic continuation of hypergeometric functions\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Emanuel Scheidegger
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20151019T145000
+DTSTART:20151020T140000
+SUMMARY:Oberseminar: Angewandte Mathematik - Low volume-fraction microstructures in shape memory alloys
+DESCRIPTION:Titel: Low volume-fraction microstructures in shape memory alloys\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Barbara Zwicknagl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151020T151600
+DTSTART:20151021T163000
+SUMMARY:Oberseminar: Mathematische Logik - Amoeba Forcing
+DESCRIPTION:Titel: Amoeba Forcing\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Giorgio Laguzzi
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150810T130700
+DTSTART:20151022T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151019T180100
+DTSTART:20151026T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Laminationen von hyperbolischen Mannigfaltigkeiten durch minimierende Hyperflächen
+DESCRIPTION:Titel: Laminationen von hyperbolischen Mannigfaltigkeiten durch minimierende Hyperflächen\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Cornelius Schröder
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151014T080400
+DTSTART:20151026T171500
+SUMMARY:Gastvortrag - Joint Hitting-Time Densities for Finite State Markov Processes
+DESCRIPTION:Titel: Joint Hitting-Time Densities for Finite State Markov Processes\nVeranstaltung: Gastvortrag\nSprecher: Prof. Dr. Monique Jeanblanc (Université d'Evry, Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20150928T164700
+DTSTART:20151027T140000
+SUMMARY:Oberseminar: Angewandte Mathematik -  Integral operators and inequalities with weights
+DESCRIPTION:Titel:  Integral operators and inequalities with weights\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Herr M.Sc. Martin Krepela (Karlstad, Schweden)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151019T150300
+DTSTART:20151027T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Optimal rigidity estimates for nearly umbilical surfaces (1)
+DESCRIPTION:Titel: Optimal rigidity estimates for nearly umbilical surfaces (1)\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Marco Mattuschka
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151023T123500
+DTSTART:20151028T163000
+SUMMARY:Oberseminar: Mathematische Logik - Amoeba Forcing (Zweiter Teil)
+DESCRIPTION:Titel: Amoeba Forcing (Zweiter Teil)\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Giorgio Laguzzi
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151005T092400
+DTSTART:20151029T170000
+SUMMARY:Kolloquium - Die Quantisierung der Gravitation
+DESCRIPTION:Titel: Die Quantisierung der Gravitation\nSprecher:  Prof. Dr. (emer.) Claus Gerhardt, Universität Heidelberg
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151015T093000
+DTSTART:20151030T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Triangulated categories of 1-motivic sheaves
+DESCRIPTION:Titel: Triangulated categories of 1-motivic sheaves\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Simon Pepin-Lehalleur, Universität Zürich
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151021T173500
+DTSTART:20151102T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Positive scalar curvature and stable homotopy theory
+DESCRIPTION:Titel: Positive scalar curvature and stable homotopy theory\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Dr. Johannes Ebert (Münster)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151019T150900
+DTSTART:20151103T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Optimal rigidity estimates for nearly umbilical surfaces (2)
+DESCRIPTION:Titel: Optimal rigidity estimates for nearly umbilical surfaces (2)\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Guofang Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151104T112000
+DTSTART:20151105T123000
+DTEND:20151105T190000
+SUMMARY:Kolloquium - Sonderkolloquium Stochastik
+DESCRIPTION:Titel: Sonderkolloquium Stochastik\nSprecher: Dr. Philipp Harms, Dr. Martin Herdegen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150723T111700
+DTSTART:20151105T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151029T160300
+DTSTART:20151106T080000
+DTEND:20151106T120000
+SUMMARY:Kolloquium - Sonderkolloquium Stochastik
+DESCRIPTION:Titel: Sonderkolloquium Stochastik\nSprecher: Dr. Jakob Söhl, Dr. Joscha Diehl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151027T110300
+DTSTART:20151106T101500
+DTEND:20151106T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Foam categories from categorified quantum groups
+DESCRIPTION:Titel: Foam categories from categorified quantum groups\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Hoel Queffelec
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151021T173200
+DTSTART:20151109T161500
+SUMMARY:Oberseminar: Differentialgeometrie - t.b.a., part I
+DESCRIPTION:Titel: t.b.a., part I\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Dr. Stefan Kebekus (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151103T124100
+DTSTART:20151110T160000
+DTEND:20151110T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Mass in Kähler geometry
+DESCRIPTION:Titel: Mass in Kähler geometry\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Zhiqiang Sun
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151103T122100
+DTSTART:20151112T170000
+SUMMARY:Kolloquium - Super-Ricci flows of metric measure spaces
+DESCRIPTION:Titel: Super-Ricci flows of metric measure spaces\nSprecher: Prof. Dr. Karl-Theodor  Sturm
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151016T103500
+DTSTART:20151113T101500
+DTEND:20151113T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - New counterexamples to Quillen's conjecture
+DESCRIPTION:Titel: New counterexamples to Quillen's conjecture\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151021T173400
+DTSTART:20151116T161500
+SUMMARY:Oberseminar: Differentialgeometrie - t.b.a., part II
+DESCRIPTION:Titel: t.b.a., part II\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Dr. Stefan Kebekus (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20151030T160000
+DTSTART:20151117T140000
+SUMMARY:Oberseminar: Angewandte Mathematik - Duality, regularity and uniqueness for $BV$-minimizers
+DESCRIPTION:Titel: Duality, regularity and uniqueness for $BV$-minimizers\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Lisa Beck
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151113T143700
+DTSTART:20151117T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Quantitative rigidity results for conformal immersions
+DESCRIPTION:Titel: Quantitative rigidity results for conformal immersions\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Ernst Kuwert
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151113T130900
+DTSTART:20151118T163000
+SUMMARY:Oberseminar: Mathematische Logik - Bemerkungen über einige Redukte
+DESCRIPTION:Titel: Bemerkungen über einige Redukte\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Markus Junker
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151119T140500
+DTSTART:20151119T170000
+SUMMARY:Kolloquium - Aspherical manifolds, what we know and what we do not know
+DESCRIPTION:Titel: Aspherical manifolds, what we know and what we do not know\nSprecher:  Prof. Dr. Wolfgang Lück
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151102T140800
+DTSTART:20151120T101500
+DTEND:20151120T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Six operations on dg enhancements of derived categories of sheaves and applications
+DESCRIPTION:Titel: Six operations on dg enhancements of derived categories of sheaves and applications\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Olaf Schnürer (Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20151102T150100
+DTSTART:20151124T140000
+SUMMARY:Oberseminar: Angewandte Mathematik - Rayleigh-Benard convection at finite Prandtl number: bounds on the Nusselt number.
+DESCRIPTION:Titel: Rayleigh-Benard convection at finite Prandtl number: bounds on the Nusselt number.\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Camilla Nobili
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151110T174100
+DTSTART:20151124T160000
+SUMMARY:Projektseminar: Geometrische Analysis - A phase field model for Willmore´s energy with topological constraint
+DESCRIPTION:Titel: A phase field model for Willmore´s energy with topological constraint\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Patrick Dondl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151119T095400
+DTSTART:20151126T170000
+SUMMARY:Kolloquium - The Nash problem for arc spaces
+DESCRIPTION:Titel: The Nash problem for arc spaces\nSprecher:  Roi Docampo Alvarez
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151127T154500
+DTSTART:20151127T100000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The arc space of Grassmannians
+DESCRIPTION:Titel: The arc space of Grassmannians\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Roi Docampo Alvarez
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151020T133800
+DTSTART:20151130T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Symplectic topology of classical field theories via polysaturated models
+DESCRIPTION:Titel: Symplectic topology of classical field theories via polysaturated models\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Dr. O. Fabert
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151130T091600
+DTSTART:20151201T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Geometric inequalities in almost positive Ricci curvature
+DESCRIPTION:Titel: Geometric inequalities in almost positive Ricci curvature\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Dr. Christian Ketterer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151120T101500
+DTSTART:20151203T170000
+SUMMARY:Kolloquium - Change-Point Analysis of Volatility
+DESCRIPTION:Titel: Change-Point Analysis of Volatility\nSprecher: Prof. Dr. Matthias Vetter, Universität Kiel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151130T144500
+DTSTART:20151204T100500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Schottky groups acting on homogeneous rational manifolds
+DESCRIPTION:Titel: Schottky groups acting on homogeneous rational manifolds\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Christian Miebach (University of Littoral)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20151204T113700
+DTSTART:20151204T140000
+DTEND:20151204T153000
+SUMMARY:Oberseminar: Mathematische Logik - CCMA, and its imaginaries
+DESCRIPTION:Titel: CCMA, and its imaginaries\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Martin Bays
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Ort noch nicht bekannt
+DTSTAMP:20151120T092700
+DTSTART:20151207T000000
+SUMMARY:Minikurs Mikrostrukturen in Finance - Mikrostrukturen in Finance
+DESCRIPTION:Titel: Mikrostrukturen in Finance\nVeranstaltung: Minikurs Mikrostrukturen in Finance\nSprecher: Prof. Dr. Winfried Stute (Universität Gießen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151202T160900
+DTSTART:20151207T161500
+SUMMARY:Oberseminar: Differentialgeometrie - cdh-differential forms
+DESCRIPTION:Titel: cdh-differential forms\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Shane Kelly (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Ort noch nicht bekannt
+DTSTAMP:20151120T092800
+DTSTART:20151208T000000
+SUMMARY:Minikurs Mikrostrukturen in Finance - Mikrostrukturen in Finance
+DESCRIPTION:Titel: Mikrostrukturen in Finance\nVeranstaltung: Minikurs Mikrostrukturen in Finance\nSprecher: Prof. Dr. Winfried Stute (Universität Gießen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20151207T123200
+DTSTART:20151208T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Stability of closed, immersed hypersurfaces under pinching of the first Laplace eigenvalue, 
+DESCRIPTION:Titel: Stability of closed, immersed hypersurfaces under pinching of the first Laplace eigenvalue, \nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Dr. Julian Scheuer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Ort noch nicht bekannt
+DTSTAMP:20151120T092900
+DTSTART:20151209T000000
+SUMMARY:Minikurs Mikrostrukturen in Finance - Mikrostrukturen in Finance
+DESCRIPTION:Titel: Mikrostrukturen in Finance\nVeranstaltung: Minikurs Mikrostrukturen in Finance\nSprecher: Prof. Dr. Winfried Stute (Universität Gießen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151204T161800
+DTSTART:20151209T163000
+SUMMARY:Oberseminar: Mathematische Logik - Ein Satz von Tarski
+DESCRIPTION:Titel: Ein Satz von Tarski\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Martin Ziegler
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Weismann-Haus, Albertstr. 21a
+DTSTAMP:20151120T080700
+DTSTART:20151209T170000
+DTEND:20151209T180000
+SUMMARY:Seminar über Datenanalyse und Modelbildung - Der multivariate Kaplan-Meier Schätzer
+DESCRIPTION:Titel: Der multivariate Kaplan-Meier Schätzer\nVeranstaltung: Seminar über Datenanalyse und Modelbildung\nSprecher: Prof. Dr. Winfried Stute (Universität Gießen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Ort noch nicht bekannt
+DTSTAMP:20151120T092900
+DTSTART:20151210T000000
+SUMMARY:Minikurs Mikrostrukturen in Finance - Mikrostrukturen in Finance
+DESCRIPTION:Titel: Mikrostrukturen in Finance\nVeranstaltung: Minikurs Mikrostrukturen in Finance\nSprecher: Prof. Dr. Winfried Stute (Universität Gießen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150723T111700
+DTSTART:20151210T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151125T132700
+DTSTART:20151211T100000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Curves of Genus 2 with Bad Reduction and Complex Multiplication
+DESCRIPTION:Titel: Curves of Genus 2 with Bad Reduction and Complex Multiplication\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Philipp Habegger 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151207T090000
+DTSTART:20151214T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Landau-Ginzburg superpotential and topological recursion
+DESCRIPTION:Titel: Landau-Ginzburg superpotential and topological recursion\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Paul Norbury (Melbourne)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T085500
+DTSTART:20160108T101500
+DTEND:20160108T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Non-archimedean links of singularities 
+DESCRIPTION:Titel: Non-archimedean links of singularities \nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Lorenzo Fantini (Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-77@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20160108T133000
+DTSTART:20160112T160000
+SUMMARY:Projektseminar: Geometrische Analysis - On (spinoral) Yamabe equations on noncompact manifolds
+DESCRIPTION:Titel: On (spinoral) Yamabe equations on noncompact manifolds\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Nadine Große
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151215T092400
+DTSTART:20160114T161500
+SUMMARY:Antrittsvorlesung - Von der Praxis in die Theorie der Finanzmathematik: Eine sprunghafte Angelegenheit
+DESCRIPTION:Titel: Von der Praxis in die Theorie der Finanzmathematik: Eine sprunghafte Angelegenheit\nVeranstaltung: Antrittsvorlesung\nSprecher: Prof. Dr. Thorsten Schmidt
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151215T092600
+DTSTART:20160114T171500
+SUMMARY:Antrittsvorlesung - Numerische Analysis: Kleine Tricks statt großer Maschinen
+DESCRIPTION:Titel: Numerische Analysis: Kleine Tricks statt großer Maschinen\nVeranstaltung: Antrittsvorlesung\nSprecher: Prof. Dr. Sören Bartels
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151012T110000
+DTSTART:20151217T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151130T142500
+DTSTART:20151218T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - On Beauville's conjectural weak splitting property
+DESCRIPTION:Titel: On Beauville's conjectural weak splitting property\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Ulrike Rieß
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151211T141000
+DTSTART:20151221T140000
+SUMMARY:Kolloquium - Ample Geometrien von endlichem Morley Rang
+DESCRIPTION:Titel: Ample Geometrien von endlichem Morley Rang\nSprecher: Prof. Dr. Katrin Tent
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151217T152700
+DTSTART:20151221T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Differential forms in algebraic geometry – a new perspective in the singular case
+DESCRIPTION:Titel: Differential forms in algebraic geometry – a new perspective in the singular case\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Annette Huber-Klawitter
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150401T143500
+DTSTART:20151224T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150401T143500
+DTSTART:20151231T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20151222T135300
+DTSTART:20160107T170000
+SUMMARY:Kolloquium - Nonlocal Aspects in Geometric Analysis
+DESCRIPTION:Titel: Nonlocal Aspects in Geometric Analysis\nSprecher: Dr. Armin Schikorra
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20151223T161100
+DTSTART:20160112T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Existenz und Eindeutigkeit der stochastischen Allen-Cahn-Gleichung
+DESCRIPTION:Titel: Existenz und Eindeutigkeit der stochastischen Allen-Cahn-Gleichung\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Juliane Noel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150401T143500
+DTSTART:20160114T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151015T093400
+DTSTART:20160115T101500
+DTEND:20160115T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Classifying line bundles over rigid analytic varieties
+DESCRIPTION:Titel: Classifying line bundles over rigid analytic varieties\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Helene Sigloch
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160104T124900
+DTSTART:20160118T161500
+DTEND:20160118T171500
+SUMMARY:Oberseminar: Differentialgeometrie - Hitchin and Calabi-Yau integrable systems 
+DESCRIPTION:Titel: Hitchin and Calabi-Yau integrable systems \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Florian Beck 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T111700
+DTSTART:20160119T080000
+SUMMARY:Kolloquium - Computational Complexity Theory of Metric Spaces
+DESCRIPTION:Titel: Computational Complexity Theory of Metric Spaces\nSprecher: Prof. Dr. Martin Ziegler
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T113300
+DTSTART:20160119T101500
+SUMMARY:Kolloquium - Definierbare Gruppen in Erweiterungen algebraisch abgeschlossener Körper
+DESCRIPTION:Titel: Definierbare Gruppen in Erweiterungen algebraisch abgeschlossener Körper\nSprecher: Dr. Amador Martin-Pizarro
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-85@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20160114T091200
+DTSTART:20160119T161500
+SUMMARY:Projektseminar: Geometrische Analysis - Harnack inequalities in curvature flows
+DESCRIPTION:Titel: Harnack inequalities in curvature flows\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Dr. Julian Scheuer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20160111T113400
+DTSTART:20160120T080000
+SUMMARY:Kolloquium - Eine Logik für uniforme Analysis
+DESCRIPTION:Titel: Eine Logik für uniforme Analysis\nSprecher: Dr. Immanuel Halupczok
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-81@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T113500
+DTSTART:20160120T101500
+SUMMARY:Kolloquium - Mathias forcing associated to filters and its applications
+DESCRIPTION:Titel: Mathias forcing associated to filters and its applications\nSprecher: Dr. Lyubomyr Zdomskyy
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-82@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T115400
+DTSTART:20160120T130000
+SUMMARY:Kolloquium - Splitting, bounding and almost disjoint families
+DESCRIPTION:Titel: Splitting, bounding and almost disjoint families\nSprecher: Dr. Vera Fischer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-84@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160111T115700
+DTSTART:20160120T151500
+SUMMARY:Kolloquium - Applications of the projective Fraisse limit construction
+DESCRIPTION:Titel: Applications of the projective Fraisse limit construction\nSprecher: Dr. Aleksandra Kwiatkowska
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150810T130800
+DTSTART:20160121T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160118T095500
+DTSTART:20160122T100000
+DTEND:20160122T110000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Degenerations of polarized Calabi-Yau manifolds
+DESCRIPTION:Titel: Degenerations of polarized Calabi-Yau manifolds\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Sebastien Boucksom
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160115T093700
+DTSTART:20160125T161500
+SUMMARY:Mathematisch-Physikalisches Kolloquium - Mock Modular Forms in Mathematics and Physics
+DESCRIPTION:Titel: Mock Modular Forms in Mathematics and Physics\nVeranstaltung: Mathematisch-Physikalisches Kolloquium\nSprecher: Don Zagier (MPI Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20160114T090700
+DTSTART:20160126T161500
+SUMMARY:Projektseminar: Geometrische Analysis - Limits of \alpha-harmonic maps
+DESCRIPTION:Titel: Limits of \alpha-harmonic maps\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Tobias Lamm
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150401T143500
+DTSTART:20160128T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-91@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160122T170000
+DTSTART:20160129T101500
+DTEND:20160129T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Frobenius splittings in birational geometry
+DESCRIPTION:Titel: Frobenius splittings in birational geometry\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Jakub Witaszek
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-87@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160115T125000
+DTSTART:20160202T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The cotangential and the derived de Rham complex in the h-topology
+DESCRIPTION:Titel: The cotangential and the derived de Rham complex in the h-topology\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Rene Recktenwald
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-90@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160122T110100
+DTSTART:20160202T120000
+SUMMARY:Vorstellungsvortrag Graduiertenkolleg - Orientation Reversing Gauge Transformations
+DESCRIPTION:Titel: Orientation Reversing Gauge Transformations\nVeranstaltung: Vorstellungsvortrag Graduiertenkolleg\nSprecher: Jørgen Olsen Lye (Oslo)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-88@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20160119T140100
+DTSTART:20160202T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Symmetry breaking in indented elastic cones
+DESCRIPTION:Titel: Symmetry breaking in indented elastic cones\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Heiner Olbermann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-93@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20160201T101200
+DTSTART:20160202T161500
+SUMMARY:Projektseminar: Geometrische Analysis - Hessian metrics and local Lagrangian immersions
+DESCRIPTION:Titel: Hessian metrics and local Lagrangian immersions\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Dr. Guofang Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-92@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 119, Eckerstr. 1
+DTSTAMP:20160128T142500
+DTSTART:20160204T090000
+DTEND:20160204T100000
+SUMMARY:Gastvortrag - Mixed Tate Motives
+DESCRIPTION:Titel: Mixed Tate Motives\nVeranstaltung: Gastvortrag\nSprecher: Prof. Dr. Markus Spitzweck
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20160126T143300
+DTSTART:20160204T170000
+SUMMARY:Kolloquium - ERROR BOUNDS AND QUANTIFIABLE CONVERGENCE OF PROXIMAL METHODS FOR NONSMOOTH/(NON)CONVEX OPTIMIZATION 
+DESCRIPTION:Titel: ERROR BOUNDS AND QUANTIFIABLE CONVERGENCE OF PROXIMAL METHODS FOR NONSMOOTH/(NON)CONVEX OPTIMIZATION \nSprecher: Prof. Russell Luke (Universität Göttingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-86@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160114T092600
+DTSTART:20160205T100000
+DTEND:20160205T110000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Abundance conjecture for varieties with many differential forms
+DESCRIPTION:Titel: Abundance conjecture for varieties with many differential forms\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Vladimir Lazić
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Weismann-Haus (Albertstr. 21a)
+DTSTAMP:20160115T093600
+DTSTART:20160205T141500
+SUMMARY:Mathematisch-Physikalisches Kolloquium - Hamiltonian field theory: Where Geometry meets Physics
+DESCRIPTION:Titel: Hamiltonian field theory: Where Geometry meets Physics\nVeranstaltung: Mathematisch-Physikalisches Kolloquium\nSprecher: Olga Rossi (Ostrava)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20151209T151300
+DTSTART:20160208T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Regularität von Laminationen der Kodimension 1
+DESCRIPTION:Titel: Regularität von Laminationen der Kodimension 1\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Benjamin Häublein
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-89@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20160126T140600
+DTSTART:20160209T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Remarks on the convergence of pseudospectra
+DESCRIPTION:Titel: Remarks on the convergence of pseudospectra\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Petr Siegl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-103@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160210T121700
+DTSTART:20160210T163000
+SUMMARY:Oberseminar: Mathematische Logik - Symmetrische Namen fuer Paare von Vitaliklassen reeller Zahlen
+DESCRIPTION:Titel: Symmetrische Namen fuer Paare von Vitaliklassen reeller Zahlen\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Heike Mildenberger
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20150723T112000
+DTSTART:20160211T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160204T093500
+DTSTART:20160212T100000
+DTEND:20160212T110000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Effective Matsusaka for surfaces in positive characteristic 
+DESCRIPTION:Titel: Effective Matsusaka for surfaces in positive characteristic \nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Andrea Fanelli
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-95@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T124300
+DTSTART:20160212T140000
+DTEND:20160212T150000
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - The Rearrangement Algorithm: Properties and Applications
+DESCRIPTION:Titel: The Rearrangement Algorithm: Properties and Applications\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Steven Vanduffel, Vrije Universiteit Brussel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-94@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160204T125700
+DTSTART:20160212T141500
+DTEND:20160212T150000
+SUMMARY:Vorstellungsvortrag Graduiertenkolleg - t.b.a
+DESCRIPTION:Titel: t.b.a\nVeranstaltung: Vorstellungsvortrag Graduiertenkolleg\nSprecher: Stefan Anell (Göttingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-102@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160206T112500
+DTSTART:20160212T141500
+SUMMARY:Vorstellungsvortrag Graduiertenkolleg - Integration in Differential Cohomology
+DESCRIPTION:Titel: Integration in Differential Cohomology\nVeranstaltung: Vorstellungsvortrag Graduiertenkolleg\nSprecher: Stefan Anell (Göttingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-96@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T124800
+DTSTART:20160212T150000
+DTEND:20160212T154500
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Fractional Levy processes: Theory, statistical inference and applications
+DESCRIPTION:Titel: Fractional Levy processes: Theory, statistical inference and applications\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Jeannette Woerner, Technische Universität Dortmund
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-97@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T125000
+DTSTART:20160212T161500
+DTEND:20160212T170000
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Controlling the false discovery rate for discrete data
+DESCRIPTION:Titel: Controlling the false discovery rate for discrete data\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Sebastian Döhler, Technische Hochschule Darmstadt
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-98@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T125100
+DTSTART:20160212T170000
+DTEND:20160212T180000
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Optimal Transport from Random Allocation to Ricci Flow
+DESCRIPTION:Titel: Optimal Transport from Random Allocation to Ricci Flow\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Karl-Theodor Sturm; Universität Bonn
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-99@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T125300
+DTSTART:20160213T093000
+DTEND:20160213T103000
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Equilibrium equations in Resource Dependent Branching Processes with immigration
+DESCRIPTION:Titel: Equilibrium equations in Resource Dependent Branching Processes with immigration\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. F. Thomas Bruss, Universite Libre de Bruxelles
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-100@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T125400
+DTSTART:20160213T103000
+DTEND:20160213T111500
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Polya Urns Via the Contraction Method
+DESCRIPTION:Titel: Polya Urns Via the Contraction Method\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Ralph Neininger, Universität Frankfurt
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-101@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160205T125500
+DTSTART:20160213T114500
+DTEND:20160213T124500
+SUMMARY:Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis" - Bernoulli and tail-dependence compatibility
+DESCRIPTION:Titel: Bernoulli and tail-dependence compatibility\nVeranstaltung: Workshop "Recent Developments in Finance, Risk Theory and Stochastic Analysis"\nSprecher: Prof. Dr. Paul Embrechts, ETH Zürich
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160221T092700
+DTSTART:20160222T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Quantization of Hitchin spectral curves and G-opers
+DESCRIPTION:Titel: Quantization of Hitchin spectral curves and G-opers\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Motohico Mulase (UC Davis)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-104@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20160222T142100
+DTSTART:20160223T141500
+SUMMARY:Oberseminar: Angewandte Mathematik -  Absolute instability of spatially developing/temporally oscillating unbounded flows and media 
+DESCRIPTION:Titel:  Absolute instability of spatially developing/temporally oscillating unbounded flows and media \nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dr. Leonid Brevdo
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-106@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160303T133500
+DTSTART:20160308T101500
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Transgressions and Flows
+DESCRIPTION:Titel: Transgressions and Flows\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Daniel Cibotaru
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-107@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160303T133500
+DTSTART:20160309T101500
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Transgressions and Flows
+DESCRIPTION:Titel: Transgressions and Flows\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Daniel Cibotaru
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-105@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160308T155700
+DTSTART:20160309T131500
+SUMMARY:Vorstellungsvortrag Graduiertenkolleg - Geometric measure theory
+DESCRIPTION:Titel: Geometric measure theory\nVeranstaltung: Vorstellungsvortrag Graduiertenkolleg\nSprecher: Yiwen Chen (Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-108@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20160303T133600
+DTSTART:20160310T101500
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Transgressions and Flows
+DESCRIPTION:Titel: Transgressions and Flows\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Daniel Cibotaru
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-109@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160304T084800
+DTSTART:20160311T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Etale motivic cohomology
+DESCRIPTION:Titel: Etale motivic cohomology\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Dr. Thomas Geisser (Rikkyo Univ., Tokyo)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-111@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160311T094000
+DTSTART:20160314T101500
+DTEND:20160314T120000
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Introduction to Geometric Complexity Theory
+DESCRIPTION:Titel: Introduction to Geometric Complexity Theory\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Jesko Hüttenhain
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-112@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160311T094100
+DTSTART:20160315T101500
+DTEND:20160315T120000
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Algebraic Complexity Theory
+DESCRIPTION:Titel: Algebraic Complexity Theory\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Jesko Hüttenhain
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-110@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160310T140600
+DTSTART:20160315T141500
+SUMMARY:Gastvortrag - Group actions and non-negative sectional curvature
+DESCRIPTION:Titel: Group actions and non-negative sectional curvature\nVeranstaltung: Gastvortrag\nSprecher: Prof. Dr. Krishnan Shankar
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-113@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160311T094200
+DTSTART:20160316T101500
+DTEND:20160316T120000
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Actions and Representation Theory of Affine Reductive Groups
+DESCRIPTION:Titel: Actions and Representation Theory of Affine Reductive Groups\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Jesko Hüttenhain
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-114@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160311T094300
+DTSTART:20160317T101500
+DTEND:20160317T120000
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - Geometric Complexity Theory
+DESCRIPTION:Titel: Geometric Complexity Theory\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Jesko Hüttenhain
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2015-2016-115@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20160311T094400
+DTSTART:20160318T101500
+DTEND:20160318T120000
+SUMMARY:Vorlesungsreihe Graduiertenkolleg - The Boundary of Orbit Closures of Homogeneous Forms
+DESCRIPTION:Titel: The Boundary of Orbit Closures of Homogeneous Forms\nVeranstaltung: Vorlesungsreihe Graduiertenkolleg\nSprecher: Jesko Hüttenhain
+END:VEVENT
+END:VCALENDAR

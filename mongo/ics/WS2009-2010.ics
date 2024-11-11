@@ -1,0 +1,1000 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:WS2009-2010-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20090908T172300
+DTSTART:20090914T140000
+DTEND:20090914T171700
+SUMMARY:SFB/TR 71 Workshop -  Numerical Methods for Partial Differential Equations on Surfaces
+DESCRIPTION:Titel:  Numerical Methods for Partial Differential Equations on Surfaces\nVeranstaltung: SFB/TR 71 Workshop
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20090908T172400
+DTSTART:20090915T090000
+DTEND:20090915T171700
+SUMMARY:SFB/TR 71 Workshop -  Numerical Methods for Partial Differential Equations on Surfaces
+DESCRIPTION:Titel:  Numerical Methods for Partial Differential Equations on Surfaces\nVeranstaltung: SFB/TR 71 Workshop
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20090908T172400
+DTSTART:20090916T090000
+DTEND:20090916T171700
+SUMMARY:SFB/TR 71 Workshop -  Numerical Methods for Partial Differential Equations on Surfaces
+DESCRIPTION:Titel:  Numerical Methods for Partial Differential Equations on Surfaces\nVeranstaltung: SFB/TR 71 Workshop
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20090908T172400
+DTSTART:20090917T090000
+DTEND:20090917T131300
+SUMMARY:SFB/TR 71 Workshop - Numerical Methods for Partial Differential Equations on Surfaces
+DESCRIPTION:Titel: Numerical Methods for Partial Differential Equations on Surfaces\nVeranstaltung: SFB/TR 71 Workshop
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20090914T100400
+DTSTART:20090925T110000
+SUMMARY:AG algebraische Geometrie - Variations of semipositivity theorems
+DESCRIPTION:Titel: Variations of semipositivity theorems\nVeranstaltung: AG algebraische Geometrie\nSprecher: Yujiro Kawamata
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20091005T124700
+DTSTART:20091008T111500
+SUMMARY:Oberseminar Stochastik - Zentrale Grenzwertsätze für NächsteNachbar Graphen und gerichtete minimale Spannbäume 
+DESCRIPTION:Titel: Zentrale Grenzwertsätze für NächsteNachbar Graphen und gerichtete minimale Spannbäume \nVeranstaltung: Oberseminar Stochastik\nSprecher: Björn Sieber 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091008T145300
+DTSTART:20091012T094500
+DTEND:20091012T171700
+SUMMARY:The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing - Working sessions - I & II
+DESCRIPTION:Titel: Working sessions - I & II\nVeranstaltung: The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091008T145700
+DTSTART:20091013T100000
+DTEND:20091013T171700
+SUMMARY:The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing - Working sessions - III & IV
+DESCRIPTION:Titel: Working sessions - III & IV\nVeranstaltung: The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Rundbau, Albertstr. 21a
+DTSTAMP:20091008T150000
+DTSTART:20091014T100000
+DTEND:20091014T121200
+SUMMARY:The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing - Working session - V
+DESCRIPTION:Titel: Working session - V\nVeranstaltung: The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091008T150400
+DTSTART:20091015T093000
+SUMMARY:The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing - Working sessions - VI & VII
+DESCRIPTION:Titel: Working sessions - VI & VII\nVeranstaltung: The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091008T150800
+DTSTART:20091016T100000
+SUMMARY:The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing - Working Session VIII
+DESCRIPTION:Titel: Working Session VIII\nVeranstaltung: The 4th Russian-German Advanced Research Workshop on Computational Science and High Performance Computing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091015T154500
+DTSTART:20091019T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Vorbesprechung
+DESCRIPTION:Titel: Vorbesprechung\nVeranstaltung: Oberseminar über Differentialgeometrie
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091015T184100
+DTSTART:20091020T193000
+SUMMARY:Didaktisches Seminar - Zur Propädeutik der Algebra in Klasse 7 und 8
+DESCRIPTION:Titel: Zur Propädeutik der Algebra in Klasse 7 und 8\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Lisa Hefendehl-Hebeker (Universität Duisburg-Essen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090727T104600
+DTSTART:20091022T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20091015T143700
+DTSTART:20091023T111500
+SUMMARY:AG Algebra - Nichtkommutative Iwasawa-Theorie für Varietäten über endlichen Körpern
+DESCRIPTION:Titel: Nichtkommutative Iwasawa-Theorie für Varietäten über endlichen Körpern\nVeranstaltung: AG Algebra\nSprecher: Dr. Malte Witte, Regensburg
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20091021T095200
+DTSTART:20091026T141500
+DTEND:20091026T151500
+SUMMARY:AG Algebra - Divisibility properties of motivic cohomology
+DESCRIPTION:Titel: Divisibility properties of motivic cohomology\nVeranstaltung: AG Algebra\nSprecher: Prof. Bruno Kahn, Paris VII
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091020T102000
+DTSTART:20091026T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Introduction to Mather theory
+DESCRIPTION:Titel: Introduction to Mather theory\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Dr.X.Cui (Nanjing University, z.Zt. Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091020T154300
+DTSTART:20091027T161500
+DTEND:20091027T181800
+SUMMARY:AG Geometrische Analysis - Exotic function spaces and (their use in the theory of) integration by compensation: Lect.2
+DESCRIPTION:Titel: Exotic function spaces and (their use in the theory of) integration by compensation: Lect.2\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yann Bernard
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091022T095100
+DTSTART:20091028T161500
+DTEND:20091028T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Surfaces of Willmore type in Riemannian manifolds
+DESCRIPTION:Titel: Surfaces of Willmore type in Riemannian manifolds\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Dr. Jan Metzger (Max-Planck-Institut für Gravitationsphysik)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090727T104600
+DTSTART:20091029T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127, Eckerstr. 1
+DTSTAMP:20091014T160300
+DTSTART:20091030T111500
+DTEND:20091030T121200
+SUMMARY:AG Algebra - Equations defining isogeny classes of ordinary abelian varieties
+DESCRIPTION:Titel: Equations defining isogeny classes of ordinary abelian varieties\nVeranstaltung: AG Algebra\nSprecher: Dr. Stephen Meagher
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091022T120600
+DTSTART:20091030T111500
+SUMMARY:Oberseminar Stochastik - Regeneration und perfektes Simulieren von Teilchensystemen mit unendlicher Interaktionsreichweite
+DESCRIPTION:Titel: Regeneration und perfektes Simulieren von Teilchensystemen mit unendlicher Interaktionsreichweite\nVeranstaltung: Oberseminar Stochastik\nSprecher: PD Dr. E. Löcherbach (Universität Paris)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091023T121700
+DTSTART:20091102T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Homology of finite K-area: Part I
+DESCRIPTION:Titel: Homology of finite K-area: Part I\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091020T154600
+DTSTART:20091103T161500
+DTEND:20091103T181800
+SUMMARY:AG Geometrische Analysis - Exotic function spaces and (their use in the theory of) integration by compensation: Lect3
+DESCRIPTION:Titel: Exotic function spaces and (their use in the theory of) integration by compensation: Lect3\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yann Bernard
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091027T195200
+DTSTART:20091103T193000
+SUMMARY:Didaktisches Seminar - Die dunklen Mächte des Universums
+DESCRIPTION:Titel: Die dunklen Mächte des Universums\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Horst Fischer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091030T153400
+DTSTART:20091105T090000
+SUMMARY:Oberseminar Mathematische Logik - On some theories of algebraic groups with a predicate for a subgroup
+DESCRIPTION:Titel: On some theories of algebraic groups with a predicate for a subgroup\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Juan Diego Caycedo
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090925T171100
+DTSTART:20091105T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091023T121900
+DTSTART:20091109T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Homology of finite K-area, Part II
+DESCRIPTION:Titel: Homology of finite K-area, Part II\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091023T121500
+DTSTART:20091110T140000
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - On 2-scalar curvature
+DESCRIPTION:Titel: On 2-scalar curvature\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Dr. Wang (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20091023T121900
+DTSTART:20091110T160000
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Gauß curvature flows of entire graphs
+DESCRIPTION:Titel: Gauß curvature flows of entire graphs\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: PD Dr. Oliver Schnürer (Freie Universität Berlin)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091106T145200
+DTSTART:20091112T090000
+SUMMARY:Oberseminar Mathematische Logik - Eklof's &#915;-invariant and the structure of Ext in certain models of set theory
+DESCRIPTION:Titel: Eklof's &#915;-invariant and the structure of Ext in certain models of set theory\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Lutz Strüngmann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091014T163400
+DTSTART:20091112T170000
+SUMMARY:Kolloquium - Asymptotic Geometric Analysis: Geometrization of Probability
+DESCRIPTION:Titel: Asymptotic Geometric Analysis: Geometrization of Probability\nSprecher: Prof. Dr. Vitali Milman (Tel Aviv)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127
+DTSTAMP:20091027T140700
+DTSTART:20091113T111500
+SUMMARY:AG Algebra - Varietäten über &#8484;_p bis auf Isometrie
+DESCRIPTION:Titel: Varietäten über &#8484;_p bis auf Isometrie\nVeranstaltung: AG Algebra\nSprecher: Immanuel Halupczok
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091106T104600
+DTSTART:20091116T161500
+SUMMARY:Oberseminar über Differentialgeometrie - A convex compact manifold carrying a complete, but no closed geodesic
+DESCRIPTION:Titel: A convex compact manifold carrying a complete, but no closed geodesic\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Nena Röttgen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20091113T140900
+DTSTART:20091117T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Numerical solutions of Euler equations by Discontinuous Galerkin finite element method.
+DESCRIPTION:Titel: Numerical solutions of Euler equations by Discontinuous Galerkin finite element method.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Ioannis Toulopoulos, PhD
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20091113T142400
+DTSTART:20091117T141500
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Numerical solutions of Euler equations by Discontinuous Galerkin finite element method.
+DESCRIPTION:Titel: Numerical solutions of Euler equations by Discontinuous Galerkin finite element method.\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Ioannis Toulopoulos, PhD
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091023T150000
+DTSTART:20091117T161500
+DTEND:20091117T181800
+SUMMARY:AG Geometrische Analysis - Polyharmonische Abbildungen
+DESCRIPTION:Titel: Polyharmonische Abbildungen\nVeranstaltung: AG Geometrische Analysis\nSprecher: Prof. Dr. Andreas Gastel (Erlangen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091109T104400
+DTSTART:20091117T193000
+SUMMARY:Didaktisches Seminar - Summen von Quadratzahlen
+DESCRIPTION:Titel: Summen von Quadratzahlen\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Annette Huber-Klawitter
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091106T145500
+DTSTART:20091119T090000
+SUMMARY:Oberseminar Mathematische Logik - Eklof's &#915;-invariant and the structure of Ext in certain models of set theory
+DESCRIPTION:Titel: Eklof's &#915;-invariant and the structure of Ext in certain models of set theory\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Lutz Strüngmann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091103T155600
+DTSTART:20091119T170000
+SUMMARY:Kolloquium - Global aspects of local positivity
+DESCRIPTION:Titel: Global aspects of local positivity\nSprecher: Prof. Dr. Tomasz Szemberg (PU Kraków, z. Zt. Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20091008T132600
+DTSTART:20091120T111500
+SUMMARY:AG Algebra - L-Funktionen und Motive
+DESCRIPTION:Titel: L-Funktionen und Motive\nVeranstaltung: AG Algebra\nSprecher: Jakob Scholbach
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Lecture hall Hermann-Herder-Straße 6
+DTSTAMP:20091116T115300
+DTSTART:20091120T141500
+SUMMARY:Mathematisch-Physikalisches Kolloquium - Symmetries and reduction in classical mechanics and deformation quantization
+DESCRIPTION:Titel: Symmetries and reduction in classical mechanics and deformation quantization\nVeranstaltung: Mathematisch-Physikalisches Kolloquium\nSprecher: PD Dr. Nikolai Neumaier
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091116T143400
+DTSTART:20091123T161500
+SUMMARY:Oberseminar über Differentialgeometrie - eta-Invarianten von Seifert-Mannigfaltigkeiten, Dedekind-Summen und der Diffeomorphietyp gewisser 7-Mannigfaltigkeiten
+DESCRIPTION:Titel: eta-Invarianten von Seifert-Mannigfaltigkeiten, Dedekind-Summen und der Diffeomorphietyp gewisser 7-Mannigfaltigkeiten\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091117T143100
+DTSTART:20091124T161500
+DTEND:20091124T181800
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Harmonic maps and Dirac-harmonic maps from degenerating surfaces
+DESCRIPTION:Titel: Harmonic maps and Dirac-harmonic maps from degenerating surfaces\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Dr. Zhu (ETH Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091123T134000
+DTSTART:20091124T161500
+DTEND:20091124T181800
+SUMMARY:AG Geometrische Analysis - Harmonic maps and Dirac-harmonic maps from degenerating surfaces
+DESCRIPTION:Titel: Harmonic maps and Dirac-harmonic maps from degenerating surfaces\nVeranstaltung: AG Geometrische Analysis\nSprecher: Dr. Zhu (ETH Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091022T095200
+DTSTART:20091125T161500
+DTEND:20091125T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Calderón & Zygmund estimates for parabolic obstacle problems
+DESCRIPTION:Titel: Calderón & Zygmund estimates for parabolic obstacle problems\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Dr. Verena Bögelein (Universität Erlangen-Nürnberg/Universität Parma)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091026T152500
+DTSTART:20091125T173000
+DTEND:20091125T181800
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Foliations of asymptotically flat manifolds by surfaces of Willmore type
+DESCRIPTION:Titel: Foliations of asymptotically flat manifolds by surfaces of Willmore type\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Dr. Felix Schulze (Freie Universität Berlin)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091118T141000
+DTSTART:20091126T090000
+SUMMARY:Oberseminar Mathematische Logik - Recurrent double sequences over finite sets
+DESCRIPTION:Titel: Recurrent double sequences over finite sets\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Mihai Prunescu
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091111T164100
+DTSTART:20091126T170000
+SUMMARY:Kolloquium - Cellular covers of groups and modules
+DESCRIPTION:Titel: Cellular covers of groups and modules\nSprecher: PD Dr. Lutz Strüngmann (Duisburg-Essen, z. Zt. Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 125
+DTSTAMP:20091123T104100
+DTSTART:20091127T110000
+SUMMARY:AG Algebra - Kohomologie von Geradenbündeln auf Fahnenmannigfaltigkeiten
+DESCRIPTION:Titel: Kohomologie von Geradenbündeln auf Fahnenmannigfaltigkeiten\nVeranstaltung: AG Algebra\nSprecher: Wolfgang Soergel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091124T105300
+DTSTART:20091130T161500
+SUMMARY:Oberseminar über Differentialgeometrie - eta-Invarianten von Seifert-Mannigfaltigkeiten, Dedekind-Summen und der Diffeomorphietyp gewisser 7-Mannigfaltigkeiten II
+DESCRIPTION:Titel: eta-Invarianten von Seifert-Mannigfaltigkeiten, Dedekind-Summen und der Diffeomorphietyp gewisser 7-Mannigfaltigkeiten II\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091020T182300
+DTSTART:20091201T161500
+DTEND:20091201T181800
+SUMMARY:AG Geometrische Analysis - Exotic function spaces and (their use in the theory of) integration by compensation : Lect 4.
+DESCRIPTION:Titel: Exotic function spaces and (their use in the theory of) integration by compensation : Lect 4.\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yann Bernard
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091123T114100
+DTSTART:20091201T193000
+SUMMARY:Didaktisches Seminar - Das Problem der 13 Kugeln
+DESCRIPTION:Titel: Das Problem der 13 Kugeln\nVeranstaltung: Didaktisches Seminar\nSprecher: OStR Clemens Hauser (Theodor-Heuss-Gymnasium Schopfheim)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-82@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091201T165000
+DTSTART:20091203T090000
+SUMMARY:Oberseminar Mathematische Logik - The diamond principle is a cardinal statement
+DESCRIPTION:Titel: The diamond principle is a cardinal statement\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: PD Dr. Lutz Strüngmann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091124T154800
+DTSTART:20091203T170000
+SUMMARY:Kolloquium - Die Impulsabbildung und Konvexität
+DESCRIPTION:Titel: Die Impulsabbildung und Konvexität\nSprecher: Prof. Dr. Peter Heinzner (Bochum)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Seminarraum 125, Eckerstr.1
+DTSTAMP:20091028T200600
+DTSTART:20091204T111500
+DTEND:20091204T121200
+SUMMARY:AG Algebra - Verschwindungss&aumltze und Seshadri-Konstanten
+DESCRIPTION:Titel: Verschwindungss&aumltze und Seshadri-Konstanten\nVeranstaltung: AG Algebra\nSprecher: Tomasz Szemberg
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20091118T090600
+DTSTART:20091204T151500
+DTEND:20091204T161600
+SUMMARY:AG Algebra - Subgroup lattices of Hall's power groups
+DESCRIPTION:Titel: Subgroup lattices of Hall's power groups\nVeranstaltung: AG Algebra\nSprecher: A.Lakhshi
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091202T172100
+DTSTART:20091207T161500
+SUMMARY:Oberseminar über Differentialgeometrie - On the classification of 2-connected 7-manifolds
+DESCRIPTION:Titel: On the classification of 2-connected 7-manifolds\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Dr. Diarmuid Crowley (Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20091116T172500
+DTSTART:20091208T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Local discontinuous Galerkin methods for the nonlinear wave equations.
+DESCRIPTION:Titel: Local discontinuous Galerkin methods for the nonlinear wave equations.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Dr. Yan Xu
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091202T113700
+DTSTART:20091208T161500
+DTEND:20091208T181800
+SUMMARY:AG Geometrische Analysis - T.b.a
+DESCRIPTION:Titel: T.b.a\nVeranstaltung: AG Geometrische Analysis\nSprecher: Arthur Schlichting
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-84@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091201T214600
+DTSTART:20091210T090000
+SUMMARY:Oberseminar Mathematische Logik - Amenable groups
+DESCRIPTION:Titel: Amenable groups\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Prof. Dr. Martin Ziegler
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-88@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20091203T111200
+DTSTART:20091210T111500
+SUMMARY:Oberseminar Stochastik - Modelling credit risk by indifference pricing 
+DESCRIPTION:Titel: Modelling credit risk by indifference pricing \nVeranstaltung: Oberseminar Stochastik\nSprecher: Gechun Liang (University of Oxford) 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091204T115900
+DTSTART:20091210T170000
+SUMMARY:Kolloquium - On the evolution of the von Mises notion of RANDOMNESS
+DESCRIPTION:Titel: On the evolution of the von Mises notion of RANDOMNESS\nSprecher:  Prof Dr. Drs. h.c. Albert Shiryaev (Moskau)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 125, Eckerstr. 1
+DTSTAMP:20091105T143000
+DTSTART:20091211T111500
+SUMMARY:AG Algebra - Tropische analytische Geometrie und die Bogomolov-Vermutung
+DESCRIPTION:Titel: Tropische analytische Geometrie und die Bogomolov-Vermutung\nVeranstaltung: AG Algebra\nSprecher: Prof. Dr. Walter Gubler, Tübingen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-91@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091209T172100
+DTSTART:20091214T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Rigidity of cylinders without conjugate points
+DESCRIPTION:Titel: Rigidity of cylinders without conjugate points\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Patrick Emmerich
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-87@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20091202T143600
+DTSTART:20091215T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Die Wärmeleitungsgleichung auf bewegten Oberflächen.
+DESCRIPTION:Titel: Die Wärmeleitungsgleichung auf bewegten Oberflächen.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Andrea Schumacher
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091202T113700
+DTSTART:20091215T161500
+DTEND:20091215T181800
+SUMMARY:AG Geometrische Analysis - Two recent results in anisotropic PDE
+DESCRIPTION:Titel: Two recent results in anisotropic PDE\nVeranstaltung: AG Geometrische Analysis\nSprecher: Chao Xia
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091126T102700
+DTSTART:20091216T161500
+DTEND:20091216T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - New Harnack inequalities for Ricci flow
+DESCRIPTION:Titel: New Harnack inequalities for Ricci flow\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Peter Topping (Warwick)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-90@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20091203T145500
+DTSTART:20091217T090000
+SUMMARY:Oberseminar Mathematische Logik - On possible values of Ext(H,W) for torsion free groups W
+DESCRIPTION:Titel: On possible values of Ext(H,W) for torsion free groups W\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Dominik Klein (Duisburg-Essen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-89@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Seminarraum 125/126, Eckerstr. 1
+DTSTAMP:20091203T111600
+DTSTART:20091217T111500
+SUMMARY:Oberseminar Stochastik - Pareto efficiency for the concave order and multivariate comonotonicity 
+DESCRIPTION:Titel: Pareto efficiency for the concave order and multivariate comonotonicity \nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Alfred Galichon (Ecole Polytechnique Paris) 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091202T172300
+DTSTART:20091217T170000
+SUMMARY:Kolloquium - Relativistic Diffusions
+DESCRIPTION:Titel: Relativistic Diffusions\nSprecher: Prof Dr. Jaques Franchi (Strasbourg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-94@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091215T120800
+DTSTART:20091221T111500
+DTEND:20091221T121200
+SUMMARY:AG Algebra - Dirac cohomology of Harish-Chandra modules
+DESCRIPTION:Titel: Dirac cohomology of Harish-Chandra modules\nVeranstaltung: AG Algebra\nSprecher: Pavle Pandzic
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-83@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091201T181400
+DTSTART:20091221T161500
+SUMMARY:Oberseminar über Differentialgeometrie - The Gauß Bonnet Theorem for Foliations
+DESCRIPTION:Titel: The Gauß Bonnet Theorem for Foliations\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Johannes Frank
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090727T104600
+DTSTART:20091231T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091204T141200
+DTSTART:20100107T170000
+SUMMARY:Kolloquium - Vom Jungbrunnen zur Regeneration : Nummelin-Splitting für Harris-rekurrente Markovprozesse in stetiger Zeit und Grenzwertsätze für additive Funktionale
+DESCRIPTION:Titel: Vom Jungbrunnen zur Regeneration : Nummelin-Splitting für Harris-rekurrente Markovprozesse in stetiger Zeit und Grenzwertsätze für additive Funktionale\nSprecher: PD Dr. Eva Löcherbach (Paris 12, z. Zt. Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127, Eckerstr. 1
+DTSTAMP:20091130T173500
+DTSTART:20100108T111500
+DTEND:20100108T121200
+SUMMARY:AG Algebra - Higher direct images of the structure sheaf in positive characteristic
+DESCRIPTION:Titel: Higher direct images of the structure sheaf in positive characteristic\nVeranstaltung: AG Algebra\nSprecher: Dr. Kay Rülling
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091020T141400
+DTSTART:20100111T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Minimal curvature trajectories: Riemannian geometry concepts for computing slow attracting manifolds in chemical kinetics
+DESCRIPTION:Titel: Minimal curvature trajectories: Riemannian geometry concepts for computing slow attracting manifolds in chemical kinetics\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Jonas Unger
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100112T102500
+DTSTART:20100114T170000
+SUMMARY:Kolloquium - Trends in Nichtlinearer Gemischt-Ganzzahliger Optimalsteuerung
+DESCRIPTION:Titel: Trends in Nichtlinearer Gemischt-Ganzzahliger Optimalsteuerung\nSprecher: Dr. Sebastian Sager (Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127
+DTSTAMP:20091113T215400
+DTSTART:20100115T111500
+DTEND:20100115T121200
+SUMMARY:AG Algebra - Defect via logarithmic differential forms
+DESCRIPTION:Titel: Defect via logarithmic differential forms\nVeranstaltung: AG Algebra\nSprecher: Prof. Dr. Slawomir Rams
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-98@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20100111T093900
+DTSTART:20100118T151500
+SUMMARY:Oberseminar Stochastik - Quickest detection problems
+DESCRIPTION:Titel: Quickest detection problems\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Drs. h.c. Albert N. Shiryaev (Moskau)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-92@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091221T175000
+DTSTART:20100118T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Naturally reductive pseudo-Riemannian nilpotent Lie groups
+DESCRIPTION:Titel: Naturally reductive pseudo-Riemannian nilpotent Lie groups\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Dr. Gabriela Ovando
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-101@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100118T101900
+DTSTART:20100119T161500
+DTEND:20100119T181800
+SUMMARY:AG Geometrische Analysis - Exotic function spaces and (their use in the theory of) integration by compensation : Lect 5
+DESCRIPTION:Titel: Exotic function spaces and (their use in the theory of) integration by compensation : Lect 5\nVeranstaltung: AG Geometrische Analysis\nSprecher: Yann Bernard
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091123T103200
+DTSTART:20100119T193000
+SUMMARY:Didaktisches Seminar - Kompetenzorientierte und technologiegestützte Konzepte im Mathematikunterricht
+DESCRIPTION:Titel: Kompetenzorientierte und technologiegestützte Konzepte im Mathematikunterricht\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Regina Bruder
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-86@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091202T123100
+DTSTART:20100120T161500
+DTEND:20100120T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Regularity of optimal transportation maps on compact locally nearly spherical manifolds
+DESCRIPTION:Titel: Regularity of optimal transportation maps on compact locally nearly spherical manifolds\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Dr. Yuxin Ge (Paris XII)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-104@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100118T115300
+DTSTART:20100121T090000
+SUMMARY:Oberseminar Mathematische Logik - Model completion of varieties of Heyting algebras
+DESCRIPTION:Titel: Model completion of varieties of Heyting algebras\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Dr. Markus Junker
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-99@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20100111T093800
+DTSTART:20100121T110000
+SUMMARY:Oberseminar Stochastik - Optimal rebalancing a portfolio in the disordered Black-Sholes model
+DESCRIPTION:Titel: Optimal rebalancing a portfolio in the disordered Black-Sholes model\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Drs. h.c. Albert N. Shiryaev (Moskau)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090925T171400
+DTSTART:20100121T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 125, Eckerstr. 1
+DTSTAMP:20100113T125600
+DTSTART:20100122T111500
+DTEND:20100122T121200
+SUMMARY:AG Algebra - Gorenstein Liaison and determinantal scheme
+DESCRIPTION:Titel: Gorenstein Liaison and determinantal scheme\nVeranstaltung: AG Algebra\nSprecher: Prof. Dr. Elisa Gorla
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-105@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Physikhochhaus
+DTSTAMP:20100121T105400
+DTSTART:20100122T141500
+SUMMARY:Physikalisch-Mathematisches Kolloquium - Hamiltonian group actions in Complex Geometry
+DESCRIPTION:Titel: Hamiltonian group actions in Complex Geometry\nVeranstaltung: Physikalisch-Mathematisches Kolloquium\nSprecher: Dr. Daniel Greb
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-109@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100122T114700
+DTSTART:20100125T161500
+SUMMARY:Oberseminar über Differentialgeometrie - tba
+DESCRIPTION:Titel: tba\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: David Nellesen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-95@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20100118T182800
+DTSTART:20100126T141500
+SUMMARY:Oberseminar über Angewandte Mathematik - Erhaltungsgleichungen auf Mannigfaltigkeiten.
+DESCRIPTION:Titel: Erhaltungsgleichungen auf Mannigfaltigkeiten.\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Thomas Müller
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-102@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100118T102000
+DTSTART:20100126T161500
+DTEND:20100126T181800
+SUMMARY:AG Geometrische Analysis - T.b.a
+DESCRIPTION:Titel: T.b.a\nVeranstaltung: AG Geometrische Analysis\nSprecher: Goufang Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-108@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100121T111200
+DTSTART:20100128T090000
+SUMMARY:Oberseminar Mathematische Logik - Model completion of varieties of Heyting algebras II
+DESCRIPTION:Titel: Model completion of varieties of Heyting algebras II\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Dr. Markus Junker
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091123T141800
+DTSTART:20100128T170000
+SUMMARY:Kolloquium - Harmonic maps and the Bernstein problem
+DESCRIPTION:Titel: Harmonic maps and the Bernstein problem\nSprecher: Prof. Dr. Jürgen Jost (Leipzig)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-81@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 125
+DTSTAMP:20100127T084300
+DTSTART:20100129T110000
+DTEND:20100129T131300
+SUMMARY:AG Algebra - Differenzen-abgeschlossene und pseudo-endliche Körper
+DESCRIPTION:Titel: Differenzen-abgeschlossene und pseudo-endliche Körper\nVeranstaltung: AG Algebra\nSprecher: Dr. Bijan Afshordel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-113@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100127T154000
+DTSTART:20100129T111500
+DTEND:20100129T131300
+SUMMARY:FDM-Seminar - Robust partial correlation graphs
+DESCRIPTION:Titel: Robust partial correlation graphs\nVeranstaltung: FDM-Seminar\nSprecher: Prof. Dr. Roland Fried, Daniel Vogel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-100@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100114T105400
+DTSTART:20100201T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Closed geodesics in Lorentzian surfaces
+DESCRIPTION:Titel: Closed geodesics in Lorentzian surfaces\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Stefan Suhr
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-103@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100118T102200
+DTSTART:20100202T161500
+DTEND:20100202T181800
+SUMMARY:AG Geometrische Analysis - T.b.a
+DESCRIPTION:Titel: T.b.a\nVeranstaltung: AG Geometrische Analysis\nSprecher: Patrick Breuning
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-114@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100127T172800
+DTSTART:20100202T161500
+DTEND:20100202T181800
+SUMMARY:AG Geometrische Analysis - Immersionen mit gleichmäßiger lokaler Lipschitz Darstellung
+DESCRIPTION:Titel: Immersionen mit gleichmäßiger lokaler Lipschitz Darstellung\nVeranstaltung: AG Geometrische Analysis\nSprecher: Patrick Breuning
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-111@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100122T235400
+DTSTART:20100202T193000
+SUMMARY:Didaktisches Seminar - Dialogischer Mathematikunterricht
+DESCRIPTION:Titel: Dialogischer Mathematikunterricht\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Peter Gallin 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-110@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20100202T131800
+DTSTART:20100203T100000
+SUMMARY:AG algebraische Geometrie - Stabilität von Vektorbündeln bezüglich beweglicher Kurven
+DESCRIPTION:Titel: Stabilität von Vektorbündeln bezüglich beweglicher Kurven\nVeranstaltung: AG algebraische Geometrie\nSprecher: Prof. Dr. Matei Toma
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-85@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20091202T120900
+DTSTART:20100203T161500
+DTEND:20100203T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - "Almost positivity" in the fourth order clamped  plate equation
+DESCRIPTION:Titel: "Almost positivity" in the fourth order clamped  plate equation\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Prof. Dr. Grunau (Otto-von-Guericke-Universität Magdeburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-112@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100125T110300
+DTSTART:20100204T090000
+SUMMARY:Oberseminar Mathematische Logik - Model theory of some exponential maps
+DESCRIPTION:Titel: Model theory of some exponential maps\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Dr. Martin Bays (Oxford)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100128T152300
+DTSTART:20100204T170000
+SUMMARY:Kolloquium - Können &#950;-Funktionen Diophantische Gleichungen lösen?
+DESCRIPTION:Titel: Können &#950;-Funktionen Diophantische Gleichungen lösen?\nSprecher: Prof. Dr. Otmar Venjakob (Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20100128T143500
+DTSTART:20100205T111500
+DTEND:20100205T121200
+SUMMARY:AG Algebra - Über die nichtkommutative Hauptvermutung CM-elliptischer Kurven.
+DESCRIPTION:Titel: Über die nichtkommutative Hauptvermutung CM-elliptischer Kurven.\nVeranstaltung: AG Algebra\nSprecher: Prof. Dr. Otmar Venjakob, Heidelberg
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-107@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20100120T121100
+DTSTART:20100205T111500
+SUMMARY:Oberseminar Stochastik - Modelization of membrane potentials and information transmission in large systems of neurons
+DESCRIPTION:Titel: Modelization of membrane potentials and information transmission in large systems of neurons\nVeranstaltung: Oberseminar Stochastik\nSprecher: Prof. Dr. Reinhard Höpfner (Universität Mainz) 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-115@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:IMBI, Stefan-Meier-Str.26
+DTSTAMP:20100129T104900
+DTSTART:20100205T140000
+DTEND:20100205T151500
+SUMMARY:FDM-Seminar - Critical Periods During Childhood and Adolescence: A Study of Adult Height Among Immigrant Siblings
+DESCRIPTION:Titel: Critical Periods During Childhood and Adolescence: A Study of Adult Height Among Immigrant Siblings\nVeranstaltung: FDM-Seminar\nSprecher: Prof. Gerard J. van den Berg
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-93@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20091214T102400
+DTSTART:20100208T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Reidemeistertorsion homogener Raeume
+DESCRIPTION:Titel: Reidemeistertorsion homogener Raeume\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Helene Sigloch
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-116@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100201T111300
+DTSTART:20100210T161500
+DTEND:20100210T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Complete Ricci-flat open Kähler manifolds
+DESCRIPTION:Titel: Complete Ricci-flat open Kähler manifolds\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Dr. Marco Kuehnel (Goethe-Universität Frankfurt)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-117@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100205T141100
+DTSTART:20100211T090000
+SUMMARY:Oberseminar Mathematische Logik - Locally modular strongly minimal sets
+DESCRIPTION:Titel: Locally modular strongly minimal sets\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Prof. Dr. Martin Ziegler
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20090925T171300
+DTSTART:20100211T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-96@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Eckerstr. 1
+DTSTAMP:20100108T111100
+DTSTART:20100212T111500
+DTEND:20100212T121200
+SUMMARY:AG Algebra - The function sheaf dictionary
+DESCRIPTION:Titel: The function sheaf dictionary\nVeranstaltung: AG Algebra\nSprecher: W. Soergel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-97@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 127
+DTSTAMP:20100112T141000
+DTSTART:20100212T141500
+DTEND:20100212T151500
+SUMMARY:AG Algebra - Derived categories, constructible sheaves and Verdier duality
+DESCRIPTION:Titel: Derived categories, constructible sheaves and Verdier duality\nVeranstaltung: AG Algebra\nSprecher: A. Huber
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-118@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20100209T111000
+DTSTART:20100219T161500
+DTEND:20100219T171700
+SUMMARY:SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen" - Geometric quantization on manifolds with boundary
+DESCRIPTION:Titel: Geometric quantization on manifolds with boundary\nVeranstaltung: SFB/Transregio 71 "Geometrische Partielle Differentialgleichungen"\nSprecher: Weiping Zhang (Chern Inst. of Math.)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-119@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100224T131900
+DTSTART:20100225T111500
+SUMMARY:Oberseminar Mathematische Logik - Die p-torsion abelscher Varietäten und endliche Gruppenschemata
+DESCRIPTION:Titel: Die p-torsion abelscher Varietäten und endliche Gruppenschemata\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Leander Jehl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-120@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100211T160400
+DTSTART:20100311T090000
+SUMMARY:Oberseminar Mathematische Logik - Die p-torsion abelscher Varietäten und endliche Gruppenschemata II
+DESCRIPTION:Titel: Die p-torsion abelscher Varietäten und endliche Gruppenschemata II\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Leander Jehl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2009-2010-121@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 318, Eckerstr. 1
+DTSTAMP:20100315T100700
+DTSTART:20100318T090000
+DTEND:20100318T101000
+SUMMARY:Oberseminar Mathematische Logik - Gemeine Körper
+DESCRIPTION:Titel: Gemeine Körper\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Olivier Roche
+END:VEVENT
+END:VCALENDAR

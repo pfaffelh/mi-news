@@ -107,7 +107,7 @@ if st.session_state.logged_in:
     def compute_end(n):
         return max(n["home"]["end"], n["monitor"]["end"])   
 
-    news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]},sort=[("rang", pymongo.ASCENDING)]))
+    news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]}, sort=[("rang", pymongo.ASCENDING)]))
 
     co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
     co4.markdown("**Titel**")

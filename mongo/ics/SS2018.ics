@@ -1,0 +1,671 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2018-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20180406T144200
+DTSTART:20180409T160000
+DTEND:20180409T180000
+SUMMARY:Vortragsreihe Prof. Xiaodong Wang - Comparison and rigidity results on compact Riemannian manifolds with boundary
+DESCRIPTION:Titel: Comparison and rigidity results on compact Riemannian manifolds with boundary\nVeranstaltung: Vortragsreihe Prof. Xiaodong Wang\nSprecher: Xiaodong Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20180406T144200
+DTSTART:20180416T160000
+DTEND:20180416T180000
+SUMMARY:Vortragsreihe Prof. Xiaodong Wang - Comparison and rigidity results on compact Riemannian manifolds with boundary
+DESCRIPTION:Titel: Comparison and rigidity results on compact Riemannian manifolds with boundary\nVeranstaltung: Vortragsreihe Prof. Xiaodong Wang\nSprecher: Xiaodong Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20180406T144200
+DTSTART:20180423T160000
+DTEND:20180423T180000
+SUMMARY:Vortragsreihe Prof. Xiaodong Wang - Comparison and rigidity results on compact Riemannian manifolds with boundary
+DESCRIPTION:Titel: Comparison and rigidity results on compact Riemannian manifolds with boundary\nVeranstaltung: Vortragsreihe Prof. Xiaodong Wang\nSprecher: Xiaodong Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180418T100000
+DTSTART:20180423T161500
+DTEND:20180423T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Gong Show: What I found on the arXiv 
+DESCRIPTION:Titel: Gong Show: What I found on the arXiv \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fornasin, Hou, Kertels, Lye
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180410T102600
+DTSTART:20180425T163000
+DTEND:20180425T180000
+SUMMARY:Oberseminar: Mathematische Logik - A Model Without Aleph-2 Suslin Trees
+DESCRIPTION:Titel: A Model Without Aleph-2 Suslin Trees\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Amin Shuaib
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180416T161300
+DTSTART:20180427T120000
+DTEND:20180427T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Consistency of stepwise uncertainty reduction strategies for Gaussian processes
+DESCRIPTION:Titel: Consistency of stepwise uncertainty reduction strategies for Gaussian processes\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Francois Bachoc
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20180406T144200
+DTSTART:20180430T160000
+DTEND:20180430T180000
+SUMMARY:Vortragsreihe Prof. Xiaodong Wang - Comparison and rigidity results on compact Riemannian manifolds with boundary
+DESCRIPTION:Titel: Comparison and rigidity results on compact Riemannian manifolds with boundary\nVeranstaltung: Vortragsreihe Prof. Xiaodong Wang\nSprecher: Xiaodong Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180327T101700
+DTSTART:20180419T170000
+DTEND:20180419T180000
+SUMMARY:Kolloquium - Habilitationsvortrag: Fast visualization of Mandelbrot and Julia sets
+DESCRIPTION:Titel: Habilitationsvortrag: Fast visualization of Mandelbrot and Julia sets\nSprecher: Dr. Fritz Hörmann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180118T141700
+DTSTART:20180426T170000
+DTEND:20180426T180000
+SUMMARY:Kolloquium -  Motivationsentwicklung im Mathematikstudium
+DESCRIPTION:Titel:  Motivationsentwicklung im Mathematikstudium\nSprecher: Michael Liebendörfer,  Universität Hannover
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180130T093400
+DTSTART:20180426T170000
+DTEND:20180426T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180418T100100
+DTSTART:20180430T161500
+DTEND:20180430T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Gong Show: What I found on the arXiv
+DESCRIPTION:Titel: Gong Show: What I found on the arXiv\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fornasin, Hou, Kertels, Lye
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180425T122100
+DTSTART:20180507T141500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Homology of Lie algebras of generalized Jacobi matrices and its orthogonal, symplectic variants.
+DESCRIPTION:Titel: Homology of Lie algebras of generalized Jacobi matrices and its orthogonal, symplectic variants.\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Kenji Iohara (Lyon)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180409T182100
+DTSTART:20180507T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Topological field theory on r-spin surfaces and the Arf invariant
+DESCRIPTION:Titel: Topological field theory on r-spin surfaces and the Arf invariant\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Lorant Szegedy (Hamburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180430T160000
+DTSTART:20180507T171500
+DTEND:20180507T181500
+SUMMARY:Oberseminar: Differentialgeometrie - Hodge Numbers from Differential Equations
+DESCRIPTION:Titel: Hodge Numbers from Differential Equations\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Charles Doran (University of Alberta, ICERM@Brown University)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180430T161200
+DTSTART:20180508T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Optimal Control of Thermoviscoplasticity
+DESCRIPTION:Titel: Optimal Control of Thermoviscoplasticity\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dipl. math. Ailyn Stötzner
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180530T141000
+DTSTART:20180509T163000
+DTEND:20180509T180000
+SUMMARY:Oberseminar: Mathematische Logik - Verallgemeinerte Quantorenelemination und was nun? 
+DESCRIPTION:Titel: Verallgemeinerte Quantorenelemination und was nun? \nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Jörg Flum
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:FRIAS
+DTSTAMP:20180509T134100
+DTSTART:20180511T103000
+DTEND:20180511T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Some global analytic properties of VHS (…and of Hodge Modules)
+DESCRIPTION:Titel: Some global analytic properties of VHS (…and of Hodge Modules)\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Philippe Eyssidieux
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180508T152500
+DTSTART:20180514T000000
+SUMMARY:Workshop: Geometry, Analysis, and Approximation of Variational Problems - http://home.mathematik.uni-freiburg.de/gaav/index.html
+DESCRIPTION:Titel: http://home.mathematik.uni-freiburg.de/gaav/index.html\nVeranstaltung: Workshop: Geometry, Analysis, and Approximation of Variational Problems
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180418T100300
+DTSTART:20180514T161500
+DTEND:20180514T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Gong Show: What I found on the arXiv
+DESCRIPTION:Titel: Gong Show: What I found on the arXiv\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fornasin, Hou, Kertels, Lye
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180513T141900
+DTSTART:20180516T163000
+SUMMARY:Oberseminar: Mathematische Logik - The Paris-Harrington theorem
+DESCRIPTION:Titel: The Paris-Harrington theorem\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Adrian Mathias
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180511T112100
+DTSTART:20180517T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Hyperbolicity of moduli spaces of CY
+DESCRIPTION:Titel: Hyperbolicity of moduli spaces of CY\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Yohan Brunebarbe 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:HS Anatomiem (FRIAS), Albertstraße 17 
+DTSTAMP:20180504T091200
+DTSTART:20180517T170000
+DTEND:20180517T180000
+SUMMARY:Kolloquium - Universal Features of Price Formation in Financial Markets: Perspectives From Deep Learning 
+DESCRIPTION:Titel: Universal Features of Price Formation in Financial Markets: Perspectives From Deep Learning \nSprecher:  Professor Rama Cont, Imperial College London; CNRS; Norges Bank 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION: HS Anatomiem (FRIAS), Albertstraße 17 
+DTSTAMP:20180506T155700
+DTSTART:20180517T180000
+DTEND:20180517T184500
+SUMMARY:Kolloquium - Ernst Zermelo, Freiburg, and Set Theory 
+DESCRIPTION:Titel: Ernst Zermelo, Freiburg, and Set Theory \nSprecher: Prof. Akihiro Kanamori,  Boston University 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180511T112400
+DTSTART:20180518T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Mixed Hodge theory and representations of fundamental groups of algebraic varieties
+DESCRIPTION:Titel: Mixed Hodge theory and representations of fundamental groups of algebraic varieties\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Louis-Clément Lefèvre
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180511T113300
+DTSTART:20180518T140000
+DTEND:20180518T150000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Intro Talk
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180515T150300
+DTSTART:20180528T161500
+DTEND:20180528T171500
+SUMMARY:Oberseminar: Differentialgeometrie - On stable, closed geodesics on a K3
+DESCRIPTION:Titel: On stable, closed geodesics on a K3\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jørgen Olsen Lye
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180523T152300
+DTSTART:20180530T160500
+SUMMARY:Oberseminar: Mathematische Logik - Iterated Ultrapowers in Set Theory
+DESCRIPTION:Titel: Iterated Ultrapowers in Set Theory\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Martin Ruzicka
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Basel
+DTSTAMP:20180416T112700
+DTSTART:20180601T000000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Number Theory Day
+DESCRIPTION:Titel: Number Theory Day\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Bergeron, Binyamini, Blomer, Caraiani, DeMarco
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20180522T111000
+DTSTART:20180601T141500
+DTEND:20180601T150000
+SUMMARY:  - Isolated singularities of conformal flat metrics
+DESCRIPTION:Titel: Isolated singularities of conformal flat metrics\nVeranstaltung:  \nSprecher: Jin Li
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180507T093100
+DTSTART:20180604T161500
+SUMMARY:Oberseminar: Differentialgeometrie - A general mirror symmetry construction
+DESCRIPTION:Titel: A general mirror symmetry construction\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Mark Gross FRS (Cambridge)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180511T110500
+DTSTART:20180607T100000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 1
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180420T113500
+DTSTART:20180608T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Claire Voisin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180504T101900
+DTSTART:20180608T120000
+DTEND:20180608T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Volatility estimation for stochastic PDEs using high-frequency observations
+DESCRIPTION:Titel: Volatility estimation for stochastic PDEs using high-frequency observations\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: JProf. Matthias Trabs
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180511T110700
+DTSTART:20180608T140000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 2
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180503T102300
+DTSTART:20180611T131500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Quantised dihedral angles and quantum dilogarithms
+DESCRIPTION:Titel: Quantised dihedral angles and quantum dilogarithms\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Rinat Kashaev
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180504T214500
+DTSTART:20180611T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Moduli Spaces of Nonnegatively Curved Riemannian Metrics
+DESCRIPTION:Titel: Moduli Spaces of Nonnegatively Curved Riemannian Metrics\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Wilderich Tuschmann (Karlsruhe)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180604T142500
+DTSTART:20180612T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Norm-Resolvent Convergence in Perforated Domains
+DESCRIPTION:Titel: Norm-Resolvent Convergence in Perforated Domains\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Frank Roesler
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180511T110800
+DTSTART:20180612T160000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 3
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 119, Ernst-Zermelo-Str. 1
+DTSTAMP:20180606T125700
+DTSTART:20180614T100000
+SUMMARY:Vortrag (Kandidat für eine Doktorandenstelle im GK) - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortrag (Kandidat für eine Doktorandenstelle im GK)\nSprecher: David Krusche (Duisburg-Essen)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180611T095100
+DTSTART:20180615T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Andre Belotto
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180511T110900
+DTSTART:20180615T140000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 4
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180611T094000
+DTSTART:20180618T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Wave equations with initial data on compact Cauchy horizons
+DESCRIPTION:Titel: Wave equations with initial data on compact Cauchy horizons\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Oliver Lindblad Petersen (Hamburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180604T143100
+DTSTART:20180619T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Heuristic Solvers for Edge Clique Cover Graph Problems Based on Deep Neural Networks
+DESCRIPTION:Titel: Heuristic Solvers for Edge Clique Cover Graph Problems Based on Deep Neural Networks\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Nil-Jana Akpinar
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180508T102600
+DTSTART:20180620T163000
+DTEND:20180620T180000
+SUMMARY:Oberseminar: Mathematische Logik - Anwendungen von Typen in der Theorie reeller Körper
+DESCRIPTION:Titel: Anwendungen von Typen in der Theorie reeller Körper\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Philip Dittmann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180511T111000
+DTSTART:20180621T100000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 5
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Ernst-Zermelo-Str. 1
+DTSTAMP:20180616T105500
+DTSTART:20180621T141500
+SUMMARY:Freiburg / Göttingen Seminar on Gauge Theory and Physics - Multi-monopole invariants and Vertex Algebras
+DESCRIPTION:Titel: Multi-monopole invariants and Vertex Algebras\nVeranstaltung: Freiburg / Göttingen Seminar on Gauge Theory and Physics\nSprecher: Sergei Gukov
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180130T093700
+DTSTART:20180621T170000
+DTEND:20180621T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180616T105400
+DTSTART:20180621T170000
+DTEND:20180621T180000
+SUMMARY:Mathematisch-Physikalisches Kolloquium - Dynamical Systems, Topology, and Modular Forms
+DESCRIPTION:Titel: Dynamical Systems, Topology, and Modular Forms\nVeranstaltung: Mathematisch-Physikalisches Kolloquium\nSprecher: Sergei Gukov
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180621T094600
+DTSTART:20180622T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Moduli spaces of sheaves on K3 surfaces and irreducible symplectic varieties
+DESCRIPTION:Titel: Moduli spaces of sheaves on K3 surfaces and irreducible symplectic varieties\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Arvid Perego
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180511T111100
+DTSTART:20180622T140000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 6
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180618T124600
+DTSTART:20180625T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Equivalence of field theories in the BV-BFV formalism. Insights from General Relativity
+DESCRIPTION:Titel: Equivalence of field theories in the BV-BFV formalism. Insights from General Relativity\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Michele Schiavina (UC Berkeley and MPIM Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180511T111200
+DTSTART:20180626T160000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 7
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180427T093000
+DTSTART:20180627T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - A variety that cannot be dominated by one that lifts
+DESCRIPTION:Titel: A variety that cannot be dominated by one that lifts\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Remy van Dobben de Bruyn
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180511T111300
+DTSTART:20180628T100000
+SUMMARY:Vortragsreihe "D-Modules and Hodge Modules" - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Vortragsreihe "D-Modules and Hodge Modules"\nSprecher: Talk 8
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180606T092400
+DTSTART:20180629T120000
+DTEND:20180629T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Learning Genetic Architecture of Complex Traits Across Populations
+DESCRIPTION:Titel: Learning Genetic Architecture of Complex Traits Across Populations\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Hua Tang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180615T114700
+DTSTART:20180702T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Introduction to contact dynamics
+DESCRIPTION:Titel: Introduction to contact dynamics\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: D. Hein
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180629T094000
+DTSTART:20180703T103000
+SUMMARY:Representation Theory Seminar - Soergel's Endomorphismensatz for perverse sheaves
+DESCRIPTION:Titel: Soergel's Endomorphismensatz for perverse sheaves\nVeranstaltung: Representation Theory Seminar\nSprecher: Simon Riche, Université Clermont Auvergne
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180629T151000
+DTSTART:20180703T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - 
+DESCRIPTION:\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Luigi Berselli
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180614T102700
+DTSTART:20180704T163000
+DTEND:20180704T180000
+SUMMARY:Oberseminar: Mathematische Logik - Commutators of simply-connected o-minimal groups
+DESCRIPTION:Titel: Commutators of simply-connected o-minimal groups\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Elias Baro
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180705T100000
+DTSTART:20180706T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The rigidity theorem for motives of non-archimedean analytic spaces
+DESCRIPTION:Titel: The rigidity theorem for motives of non-archimedean analytic spaces\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Federico Bambozzi
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180619T130600
+DTSTART:20180709T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Global Serre dualities
+DESCRIPTION:Titel: Global Serre dualities\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Falk Beckert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180621T130500
+DTSTART:20180709T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Vector-valued automorphic functions and their Fourier series
+DESCRIPTION:Titel: Vector-valued automorphic functions and their Fourier series\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ksenia Fedosova
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal der Physik, Hermann-Herder-Straße 3a
+DTSTAMP:20180627T141000
+DTSTART:20180710T154500
+DTEND:20180710T174500
+SUMMARY:Besuch des Rektors an der Fakultät für Mathematik und Physik - Connecting Creative Minds – Trinational, European, Global
+DESCRIPTION:Titel: Connecting Creative Minds – Trinational, European, Global\nVeranstaltung: Besuch des Rektors an der Fakultät für Mathematik und Physik\nSprecher: Prof. Dr. Dr. h.c. Hans-Jochen Schiewer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180704T141500
+DTSTART:20180711T163000
+DTEND:20180711T180000
+SUMMARY:Oberseminar: Mathematische Logik - Baumforcings und Ideale
+DESCRIPTION:Titel: Baumforcings und Ideale\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Brendan Stuber-Rousselle
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180705T111100
+DTSTART:20180712T103000
+SUMMARY:Representation Theory Seminar - Tilting modules for reductive algebraic groups and their quantum counterparts.
+DESCRIPTION:Titel: Tilting modules for reductive algebraic groups and their quantum counterparts.\nVeranstaltung: Representation Theory Seminar\nSprecher: Henning Haahr-Andersen, Aarhus University
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180601T103400
+DTSTART:20180712T170000
+DTEND:20180712T180000
+SUMMARY:Kolloquium - Two-point functions in differential geometry and the Lawson conjecture
+DESCRIPTION:Titel: Two-point functions in differential geometry and the Lawson conjecture\nSprecher: Julian Scheuer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180712T095400
+DTSTART:20180713T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Sheaves on the alcoves and modular representations
+DESCRIPTION:Titel: Sheaves on the alcoves and modular representations\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Peter Fiebig
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Bibliothek Angewandte Mathematik, R216, RZ, Hermann-Herder-Strasse 10
+DTSTAMP:20180712T164100
+DTSTART:20180713T120000
+SUMMARY:Oberseminar: Angewandte Mathematik - Sobolev spaces with non-Muckenhoupt weights, fractional elliptic operators, and applications
+DESCRIPTION:Titel: Sobolev spaces with non-Muckenhoupt weights, fractional elliptic operators, and applications\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Harbir Antil
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal Physik, Hermann-Herder-Str. 3a
+DTSTAMP:20180611T091600
+DTSTART:20180713T150000
+SUMMARY:Sommerfest und Abschlussfeier - Festvortrag: "Das brauche ich nicht zu lernen, das habe ich erlebt!"
+DESCRIPTION:Titel: Festvortrag: "Das brauche ich nicht zu lernen, das habe ich erlebt!"\nVeranstaltung: Sommerfest und Abschlussfeier\nSprecher: Martin Kramer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180711T183500
+DTSTART:20180716T161500
+SUMMARY:Oberseminar: Differentialgeometrie - The Weyl Denominator Identity in light of the structure of root systems 
+DESCRIPTION:Titel: The Weyl Denominator Identity in light of the structure of root systems \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Julian Strohm
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Ernst-Zermelo-Str. 1
+DTSTAMP:20180706T132600
+DTSTART:20180717T101500
+DTEND:20180717T111500
+SUMMARY:Vortrag (Kandidat für eine Doktorandenstelle im GK) - Systoles of $\mathbb{C}P^n$ - freedom and rigidity
+DESCRIPTION:Titel: Systoles of $\mathbb{C}P^n$ - freedom and rigidity\nVeranstaltung: Vortrag (Kandidat für eine Doktorandenstelle im GK)\nSprecher: Daniel Räde (LMU München)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180713T121500
+DTSTART:20180717T103000
+SUMMARY:Representation Theory Seminar - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Representation Theory Seminar\nSprecher: Shotaro Makisumi, Columbia University
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180717T125900
+DTSTART:20180718T163000
+DTEND:20180718T180000
+SUMMARY:Oberseminar: Mathematische Logik - Stationäre Unabhängigkeit und die Erweiterung partieller Automorphismen
+DESCRIPTION:Titel: Stationäre Unabhängigkeit und die Erweiterung partieller Automorphismen\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Isabel Müller
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20180504T103000
+DTSTART:20180719T170000
+DTEND:20180719T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal FRIAS, Albertstr. 19
+DTSTAMP:20180717T091300
+DTSTART:20180720T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Variations on the theme of moment graphs
+DESCRIPTION:Titel: Variations on the theme of moment graphs\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Martina Lanini
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20180802T174100
+DTSTART:20180806T113000
+DTEND:20180806T123000
+SUMMARY:Oberseminar: Angewandte Mathematik - wird noch bekanntgegeben
+DESCRIPTION:Titel: wird noch bekanntgegeben\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Ethan O'Brien
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2018-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20180904T144600
+DTSTART:20180924T000000
+SUMMARY:Workshop Analysis of Differential Operators on Manifolds  - Die Veranstaltung geht vom 24. bis zum 26. September.
+DESCRIPTION:Titel: Die Veranstaltung geht vom 24. bis zum 26. September.\nVeranstaltung: Workshop Analysis of Differential Operators on Manifolds 
+END:VEVENT
+END:VCALENDAR

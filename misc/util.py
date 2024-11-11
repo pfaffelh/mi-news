@@ -37,7 +37,8 @@ def setup_session_state():
         st.session_state.bild = mongo_db["bild"]
         st.session_state.carouselnews = mongo_db["carouselnews"]
         st.session_state.news = mongo_db["news"]
-
+        st.session_state.vortragsreihe = mongo_db["vortragsreihe"]
+        st.session_state.vortrag = mongo_db["vortrag"]
 
     except: 
         logger.error("Verbindung zur Datenbank nicht möglich!")
@@ -84,73 +85,119 @@ def setup_session_state():
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",
         st.session_state.news: "News",
-        st.session_state.carouselnews: "Carouselnews"
+        st.session_state.vortragsreihe: "Vortragsreihe",
+        st.session_state.vortrag: "Vortrag"
     }
 
     st.session_state.leer = {
-                st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"]
+                st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"],
+                st.session_state.vortragsreihe: st.session_state.vortragsreihe.find_one({"kurzname": "alle"})["_id"]
                 }
-    leer = st.session_state.leer
 
     st.session_state.new = {
-        st.session_state.bild: { "data": base64.b64encode(b""),
-                "menu": True,
-                "mime": "", 
-                "filename": "", 
-                "titel": "", 
-                "bearbeitet": "", 
-                "kommentar": "", 
-                "bildnachweis": ""},
+        st.session_state.bild: { 
+            "data": base64.b64encode(b""),
+            "menu": True,
+            "mime": "", 
+            "filename": "", 
+            "titel": "", 
+            "bearbeitet": "", 
+            "kommentar": "", 
+            "bildnachweis": ""},
         st.session_state.carouselnews: {
-                "test": True, 
-                "_public": True, 
-                "start": datetime.combine(datetime.today(), datetime.min.time()),
-                "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
-                "interval": 5000, 
-                "image_id": leer[st.session_state.bild],
-                "left": 30,
-                "right": 70, 
-                "bottom": 30,
-                "bearbeitet": "", 
-                "kommentar": "", 
-                "text": ""
+            "test": True, 
+            "_public": True, 
+            "start": datetime.combine(datetime.today(), datetime.min.time()),
+            "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
+            "interval": 5000, 
+            "image_id": leer[st.session_state.bild],
+            "left": 30,
+            "right": 70, 
+            "bottom": 30,
+            "bearbeitet": "", 
+            "kommentar": "", 
+            "text": ""
         },
         st.session_state.news: {
-                "link": "",
-                "image": [],
-                "_public": True,
-                "archiv": True,
-                "showlastday": True,
-                "bearbeitet": "", 
-                "kommentar": "", 
-                "home": {
-                    "start": datetime.now(),
-                    "end": datetime.now() + timedelta(days=7),
-                    "title_de": "",
-                    "title_en": "",
-                    "text_de": "",
-                    "text_en": "",
-                    "popover_title_de": "",
-                    "popover_title_en": "",
-                    "popover_text_de": "",
-                    "popover_text_en": "",
-                },
-                "monitor": {
-                    "start": datetime.now(),
-                    "end": datetime.now() + timedelta(days=7),
-                    "title": "",
-                    "text": ""
+            "link": "",
+            "image": [],
+            "_public": True,
+            "archiv": True,
+            "showlastday": True,
+            "bearbeitet": "", 
+            "kommentar": "", 
+            "home": {
+                "start": datetime.now(),
+                "end": datetime.now() + timedelta(days=7),
+                "title_de": "",
+                "title_en": "",
+                "text_de": "",
+                "text_en": "",
+                "popover_title_de": "",
+                "popover_title_en": "",
+                "popover_text_de": "",
+                "popover_text_en": "",
+            },
+            "monitor": {
+                "start": datetime.now(),
+                "end": datetime.now() + timedelta(days=7),
+                "title": "",
+                "text": ""
             }
+        },
+        st.session_state.vortragsreihe: { 
+            "kurzname" : "", 
+            "title_de" : "", 
+            "title_en" : "", 
+            "text_de" : "", 
+            "text_en" : "", 
+            "url" : "",
+            "ort_de_ default" : "",
+            "duration_default" : 90,
+            "ort_en_default" : "",
+            "_public" : False, 
+            "_public_default" : False, 
+            "sync_with_calendar" : False, 
+            "calendar_url" : "", 
+            "bearbeitet" : "", 
+            "kommentar" : ""
+        },
+        st.session_state.vortrag: { 
+            "vortragsreihe" : [], 
+            "sprecher" : "", 
+            "sprecher_en" : "", 
+            "sprecher_affiliation_de" : "", 
+            "sprecher_affiliation_en" : "", 
+            "ort_de" : "", 
+            "ort_en" : "", 
+            "title_de" : "", 
+            "title_en" : "", 
+            "text_de" : "", 
+            "text_en" : "", 
+            "link" : "", 
+            "lang" : "deutsch", 
+            "_public" : False, 
+            "start" : datetime.combine(datetime.today(), datetime.min.time()),
+            "end" : datetime.combine(datetime.today(), datetime.min.time()),
+            "bearbeitet" : "", 
+            "kommentar_de" : "",
+            "kommentar_en" : "",
+            "kommentar_intern" : ""
         }
     }
 
-    st.session_state.abhaengigkeit = {
-        st.session_state.bild: [{"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
-               {"collection": st.session_state.news, "field": "image", "list": True}],
-        st.session_state.news: [],
-        st.session_state.carouselnews: []        
-        }
 
+    st.session_state.abhaengigkeit = {
+        st.session_state.bild: [
+            {"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
+            {"collection": st.session_state.news, "field": "image", "list": True}],
+        st.session_state.news: [],
+        st.session_state.carouselnews: [],
+        st.session_state.vortragsreihe: [
+            {"collection": st.session_state.vortrag, "field": "vortragsreihe", "list": True}],
+        st.session_state.vortrag: []
+        }
 
 date_format = '%d.%m.%Y um %H:%M:%S.'
 date_format_no_space = '%Y%m%d%H%M'
+leer = st.session_state.leer

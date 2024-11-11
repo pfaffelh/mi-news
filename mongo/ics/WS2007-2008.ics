@@ -1,0 +1,584 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:WS2007-2008-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20070913T133900
+DTSTART:20070925T100000
+SUMMARY:Oberseminar Stochastik - Super-Hedging-Akzeptabilität und zeitkonsistente Risikomaße in zeitstetigen Finanzmärkten
+DESCRIPTION:Titel: Super-Hedging-Akzeptabilität und zeitkonsistente Risikomaße in zeitstetigen Finanzmärkten\nVeranstaltung: Oberseminar Stochastik\nSprecher: Gregor Erhardt 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Eckerstr. 1
+DTSTAMP:20070913T134100
+DTSTART:20070925T111500
+SUMMARY:Oberseminar Stochastik - Kohärente Risikoallokation und Spieltheorie 
+DESCRIPTION:Titel: Kohärente Risikoallokation und Spieltheorie \nVeranstaltung: Oberseminar Stochastik\nSprecher: Jörg Bleile 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20071002T120500
+DTSTART:20071012T111500
+SUMMARY:Oberseminar Stochastik - Grenzwertsätze für rekursive Algorithmen mit periodischem Verhalten
+DESCRIPTION:Titel: Grenzwertsätze für rekursive Algorithmen mit periodischem Verhalten\nVeranstaltung: Oberseminar Stochastik\nSprecher: Dorothea Simons
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Seminarraum 125
+DTSTAMP:20071011T161200
+DTSTART:20071018T141500
+SUMMARY:Gastvortrag in der Abteilung für mathematische Logik - Approximationsalgorithmen in der parametrischen Komplexitätstheorie
+DESCRIPTION:Titel: Approximationsalgorithmen in der parametrischen Komplexitätstheorie\nVeranstaltung: Gastvortrag in der Abteilung für mathematische Logik\nSprecher: Prof. Dr. Martin Grohe
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071010T120800
+DTSTART:20071023T193000
+SUMMARY:Didaktisches Seminar - Mathematik und Sport   -   Modellieren auf ungewöhnlichem Feld
+DESCRIPTION:Titel: Mathematik und Sport   -   Modellieren auf ungewöhnlichem Feld\nVeranstaltung: Didaktisches Seminar\nSprecher: Matthias Ludwig (PH Weingarten)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20071016T122900
+DTSTART:20071026T111500
+SUMMARY:FDM-Seminar - Turning Risk into Value
+DESCRIPTION:Titel: Turning Risk into Value\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Stefan Jaschke (Münchner Rück)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T152300
+DTSTART:20071026T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T182100
+DTSTART:20071029T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Dirac Bündel und Dirac Operatoren
+DESCRIPTION:Titel: Dirac Bündel und Dirac Operatoren\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232
+DTSTAMP:20071025T123700
+DTSTART:20071102T111500
+SUMMARY:Oberseminar Stochastik - Approximative Lösungen von Stoppproblemen
+DESCRIPTION:Titel: Approximative Lösungen von Stoppproblemen\nVeranstaltung: Oberseminar Stochastik\nSprecher: Andreas Faller 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T182500
+DTSTART:20071105T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Seiberg Witten Gleichungen in N-Dimensionen
+DESCRIPTION:Titel: Seiberg Witten Gleichungen in N-Dimensionen\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20071008T090700
+DTSTART:20071106T141500
+DTEND:20071106T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Reduzierte Basis-Methoden für parametrisierte partielle Differentialgleichungen
+DESCRIPTION:Titel: Reduzierte Basis-Methoden für parametrisierte partielle Differentialgleichungen\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Karsten Urban (Ulm)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T153900
+DTSTART:20071109T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173400
+DTSTART:20071112T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie I
+DESCRIPTION:Titel: Kähler-Geometrie I\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Christian Ketterer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20071106T170100
+DTSTART:20071113T091500
+DTEND:20071113T111100
+SUMMARY:AG Algebra - Springer correspondence and decomposition matrices
+DESCRIPTION:Titel: Springer correspondence and decomposition matrices\nVeranstaltung: AG Algebra\nSprecher: Daniel Juteau, Paris
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20071105T165700
+DTSTART:20071113T111500
+DTEND:20071113T121200
+SUMMARY:AG Algebra - The smooth locus of moment graphs
+DESCRIPTION:Titel: The smooth locus of moment graphs\nVeranstaltung: AG Algebra\nSprecher: Peter Fiebig
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20071108T122500
+DTSTART:20071113T150000
+DTEND:20071113T161600
+SUMMARY:Three-City Geometric PDE Seminar - Defect measures and dimension reduction for biharmonic maps
+DESCRIPTION:Titel: Defect measures and dimension reduction for biharmonic maps\nVeranstaltung: Three-City Geometric PDE Seminar\nSprecher: Christoph Scheven (Universität Düsseldorf)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20071108T122600
+DTSTART:20071113T164500
+DTEND:20071113T171700
+SUMMARY:Three-City Geometric PDE Seminar - Symplectic surfaces in K-E surfaces
+DESCRIPTION:Titel: Symplectic surfaces in K-E surfaces\nVeranstaltung: Three-City Geometric PDE Seminar\nSprecher: Jiayu Li
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20071031T131900
+DTSTART:20071116T111500
+SUMMARY:FDM-Seminar - Bayesian Structured Hazard Regression
+DESCRIPTION:Titel: Bayesian Structured Hazard Regression\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Thomas Kneib (Universität München)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071102T125700
+DTSTART:20071116T170000
+SUMMARY:Kolloquium - On symplectic mean curvature flows
+DESCRIPTION:Titel: On symplectic mean curvature flows\nSprecher: Prof. Jiayu Li (ICTP Trieste und Chinese Academy, Beijing)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173500
+DTSTART:20071119T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie II
+DESCRIPTION:Titel: Kähler-Geometrie II\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Patrick Emmerich
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Rundbau, Albertstr. 21a
+DTSTAMP:20071114T120500
+DTSTART:20071120T110000
+DTEND:20071120T121200
+SUMMARY:Tag der offenen Tür - Mathematik - Einblicke in die Angewandte Mathematik
+DESCRIPTION:Titel: Einblicke in die Angewandte Mathematik\nVeranstaltung: Tag der offenen Tür - Mathematik\nSprecher: Dr. Andreas Dedner
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20071114T121000
+DTSTART:20071120T140000
+DTEND:20071120T151500
+SUMMARY:Tag der offenen Tür - Mathematik - Einführung in das Studienfach Mathematik; Informationen zum Bachelorstudiengang Mathematik
+DESCRIPTION:Titel: Einführung in das Studienfach Mathematik; Informationen zum Bachelorstudiengang Mathematik\nVeranstaltung: Tag der offenen Tür - Mathematik\nSprecher: Prof. Dr. Wolfgang Soergel (Studiendekan);  Dr. Markus Junker (Studiengangkoordinator)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071109T154300
+DTSTART:20071123T170000
+SUMMARY:Kolloquium - Extrapolation nach Rubio de Francia
+DESCRIPTION:Titel: Extrapolation nach Rubio de Francia\nSprecher: Dr. Lars Diening (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173500
+DTSTART:20071126T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie III
+DESCRIPTION:Titel: Kähler-Geometrie III\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Krause
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal des Physikalischen Instituts, Hermann-Herder-Str. 3
+DTSTAMP:20071114T114900
+DTSTART:20071126T171500
+SUMMARY:Antrittsvorlesung der Fakultät für Mathematik und Physik - Molekulare Nanomagnete: Anziehend schön
+DESCRIPTION:Titel: Molekulare Nanomagnete: Anziehend schön\nVeranstaltung: Antrittsvorlesung der Fakultät für Mathematik und Physik\nSprecher: Prof. Dr. Oliver Waldmann, Physikalisches Institut
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20071122T105700
+DTSTART:20071130T111500
+SUMMARY:FDM-Seminar - Divergence Utilities
+DESCRIPTION:Titel: Divergence Utilities\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Michael Kupper (WU Wien)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071123T101200
+DTSTART:20071130T170000
+SUMMARY:Kolloquium - Darstellungen von Gruppen und Lusztigs Vermutung
+DESCRIPTION:Titel: Darstellungen von Gruppen und Lusztigs Vermutung\nSprecher: Dr. Peter Fiebig
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173700
+DTSTART:20071203T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie IV
+DESCRIPTION:Titel: Kähler-Geometrie IV\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Jan Schlüter
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071128T173300
+DTSTART:20071204T193000
+SUMMARY:Didaktisches Seminar - Tropische Geometrie
+DESCRIPTION:Titel: Tropische Geometrie\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Siebert
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20071203T131400
+DTSTART:20071207T111500
+SUMMARY:Oberseminar Stochastik - RDEU - äquivalente Risikomaße
+DESCRIPTION:Titel: RDEU - äquivalente Risikomaße\nVeranstaltung: Oberseminar Stochastik\nSprecher: Claudius Ludwig
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T152300
+DTSTART:20071207T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173800
+DTSTART:20071210T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie V
+DESCRIPTION:Titel: Kähler-Geometrie V\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Victor Bangert
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20071126T172300
+DTSTART:20071211T141500
+DTEND:20071211T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - On jump conditions at phase interfaces
+DESCRIPTION:Titel: On jump conditions at phase interfaces\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Christiane Kraus
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T164300
+DTSTART:20071214T090000
+DTEND:20071214T090900
+SUMMARY:Vorstellungsvortag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortag\nSprecher: Dr. Thomas Gruhn (Max-Planck-Institut f. Kolloid-u. Grenzflächenforschung, Potsdam)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T165700
+DTSTART:20071214T103000
+DTEND:20071214T111100
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. W. Bessler (IWR, Uni Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T165200
+DTSTART:20071214T120000
+DTEND:20071214T121200
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. M. Moseler (Fraunhofer-Institut f. Werkstoffmechanik, Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T165600
+DTSTART:20071214T150000
+DTEND:20071214T151500
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Priv.-Doz. Dr. D. Sebastiani (Max-Planck-Institut f. Polymerforschung, Mainz)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071204T143100
+DTSTART:20071214T170000
+SUMMARY:Kolloquium - Algebraische Gruppen und Gebäude
+DESCRIPTION:Titel: Algebraische Gruppen und Gebäude\nSprecher: Prof. Dr. Katrin Tent (Bielefeld)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071022T173900
+DTSTART:20071217T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie VI
+DESCRIPTION:Titel: Kähler-Geometrie VI\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Stefan Suhr
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20071214T132100
+DTSTART:20071218T141500
+DTEND:20071218T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Time-asymptotic behaviour of weak solutions for a viscoelastic two-phase model with nonlocal capillarity
+DESCRIPTION:Titel: Time-asymptotic behaviour of weak solutions for a viscoelastic two-phase model with nonlocal capillarity\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: A. Dressel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20071217T161300
+DTSTART:20071220T101500
+SUMMARY:Oberseminar Stochastik - Komonotone Verbesserung und optimle Risikoallokation
+DESCRIPTION:Titel: Komonotone Verbesserung und optimle Risikoallokation\nVeranstaltung: Oberseminar Stochastik\nSprecher: Irina Weber
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T170000
+DTSTART:20071221T090000
+DTEND:20071221T090900
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. J. Harting (Uni Stuttgart)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T170500
+DTSTART:20071221T103000
+DTEND:20071221T111100
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Prof. Dr. S. Mayr (Physikalisches Institut, Uni Göttingen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071206T170700
+DTSTART:20071221T120000
+DTEND:20071221T121200
+SUMMARY:Vorstellungsvortrag - 
+DESCRIPTION:\nVeranstaltung: Vorstellungsvortrag\nSprecher: Dr. T. Schilling (Institut f. Physik, Uni Mainz)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T152300
+DTSTART:20071221T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071218T141800
+DTSTART:20080107T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler-Geometrie VII
+DESCRIPTION:Titel: Kähler-Geometrie VII\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20071219T182700
+DTSTART:20080111T111500
+SUMMARY:AG Algebra - Restringierte Darstellungen in der kritischen Hyperebene
+DESCRIPTION:Titel: Restringierte Darstellungen in der kritischen Hyperebene\nVeranstaltung: AG Algebra\nSprecher: Peter Fiebig
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20071219T182800
+DTSTART:20080111T141500
+SUMMARY:AG Algebra - The nilpotent bicone of a reductive Lie algebra
+DESCRIPTION:Titel: The nilpotent bicone of a reductive Lie algebra\nVeranstaltung: AG Algebra\nSprecher: Dr. Anne Moreau, ETH Zürich
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071024T144000
+DTSTART:20080111T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071029T131300
+DTSTART:20080114T160000
+SUMMARY:Oberseminar über Differentialgeometrie - Spectral Invariants of Type &#961;
+DESCRIPTION:Titel: Spectral Invariants of Type &#961;\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Dr. Sara Azzali (Metz)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20080107T135600
+DTSTART:20080115T161500
+SUMMARY:FDM-Seminar - Time Series Modelling for the Neurosciences: The Innovation Approach
+DESCRIPTION:Titel: Time Series Modelling for the Neurosciences: The Innovation Approach\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Andreas Galka (Universität Kiel)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080114T235500
+DTSTART:20080115T193000
+SUMMARY:Didaktisches Seminar - Fachpraktische Seminare im Lehramtsstudium 
+DESCRIPTION:Titel: Fachpraktische Seminare im Lehramtsstudium \nVeranstaltung: Didaktisches Seminar\nSprecher: Dr. Karl Reichmann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20071024T170100
+DTSTART:20080118T170000
+SUMMARY:Kolloquium - Cluster algebras, Grassmannians and Perverse Sheaves
+DESCRIPTION:Titel: Cluster algebras, Grassmannians and Perverse Sheaves\nSprecher: Prof. Philippe Caldero (Univ. Lyon)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080110T144400
+DTSTART:20080121T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler Geometrie VIII
+DESCRIPTION:Titel: Kähler Geometrie VIII\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Mario Listing
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Eckerstr. 1
+DTSTAMP:20080118T182800
+DTSTART:20080125T141500
+SUMMARY:AG Geometrische Analysis - The convexity of solution of fully elliptic PDE and its geometry applications.
+DESCRIPTION:Titel: The convexity of solution of fully elliptic PDE and its geometry applications.\nVeranstaltung: AG Geometrische Analysis\nSprecher:  Xinan Ma
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T152300
+DTSTART:20080125T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080117T084000
+DTSTART:20080128T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler and Sasakian Einstein Reduced Metrics
+DESCRIPTION:Titel: Kähler and Sasakian Einstein Reduced Metrics\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Oana Mihaela Dragulete
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080123T112100
+DTSTART:20080129T193000
+SUMMARY:Didaktisches Seminar - Die Römerstadt Augusta Raurica - ein Lernfeld im Mathematikunterricht von Klasse 7
+DESCRIPTION:Titel: Die Römerstadt Augusta Raurica - ein Lernfeld im Mathematikunterricht von Klasse 7\nVeranstaltung: Didaktisches Seminar\nSprecher: Simone Walter
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20080117T073700
+DTSTART:20080201T111500
+SUMMARY:FDM-Seminar - Nonparametric inference in a model of recurrent events in the presence of a terminal event and independent right-censoring
+DESCRIPTION:Titel: Nonparametric inference in a model of recurrent events in the presence of a terminal event and independent right-censoring\nVeranstaltung: FDM-Seminar\nSprecher: Ségolen Geffray (University of Nantes)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080124T152300
+DTSTART:20080201T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080131T145100
+DTSTART:20080204T161500
+SUMMARY:Oberseminar über Differentialgeometrie - Kähler Geometrie IX
+DESCRIPTION:Titel: Kähler Geometrie IX\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: Miles Simon
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20080125T162500
+DTSTART:20080208T111500
+SUMMARY:FDM-Seminar - Navigation von und Interaktion mit humanoiden Robotern
+DESCRIPTION:Titel: Navigation von und Interaktion mit humanoiden Robotern\nVeranstaltung: FDM-Seminar\nSprecher: Dr. Maren Bennewitz (Universität Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20070910T152300
+DTSTART:20080208T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:\nSprecher: N.N.
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080124T191800
+DTSTART:20080211T161500
+SUMMARY:Oberseminar über Differentialgeometrie - The prescribed Q-curvature problem on riemannian four-manifolds
+DESCRIPTION:Titel: The prescribed Q-curvature problem on riemannian four-manifolds\nVeranstaltung: Oberseminar über Differentialgeometrie\nSprecher: PD Dr. Mohameden Ould Ahmedou, Tübingen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20080130T142400
+DTSTART:20080212T141500
+DTEND:20080212T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Zweiphasen-Probleme für die Navier-Stokes-Gleichungen mit Oberflächenspannung
+DESCRIPTION:Titel: Zweiphasen-Probleme für die Navier-Stokes-Gleichungen mit Oberflächenspannung\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Jan Pruess
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20080125T162700
+DTSTART:20080215T111500
+SUMMARY:FDM-Seminar - On semi-parametric random censorship models
+DESCRIPTION:Titel: On semi-parametric random censorship models\nVeranstaltung: FDM-Seminar\nSprecher: Prof. Dr. Gerhard Dikta (FH Aachen)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20080128T124800
+DTSTART:20080215T170000
+SUMMARY:Kolloquium - The derivative map for diffeomorphisms of disks
+DESCRIPTION:Titel: The derivative map for diffeomorphisms of disks\nSprecher: Prof. Kiyoshi Igusa (Brandeis University, Boston)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2007-2008-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20080307T004900
+DTSTART:20080312T141500
+DTEND:20080312T151500
+SUMMARY:Oberseminar über Angewandte Mathematik - Anwendung der Reduzierten Basis Methode auf quadratisch\nnichtlineare Differentialgleichungen
+DESCRIPTION:Titel: Anwendung der Reduzierten Basis Methode auf quadratisch\nnichtlineare Differentialgleichungen\nVeranstaltung: Oberseminar über Angewandte Mathematik\nSprecher: Nadine Jung
+END:VEVENT
+END:VCALENDAR

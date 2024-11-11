@@ -1,0 +1,483 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2022-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20220423T133200
+DTSTART:20220425T161500
+SUMMARY:Oberseminar: Differentialgeometrie -  Rigidity of  mean convex subsets in non-negatively curved $RCD$ spaces and stability of  mean curvature bounds
+DESCRIPTION:Titel:  Rigidity of  mean convex subsets in non-negatively curved $RCD$ spaces and stability of  mean curvature bounds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Christian Ketterer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220420T115300
+DTSTART:20220503T143000
+DTEND:20220503T160000
+SUMMARY:Oberseminar: Mathematische Logik - The group configuration in stable theories
+DESCRIPTION:Titel: The group configuration in stable theories\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Charlotte Bartnick
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20220428T151900
+DTSTART:20220503T160000
+SUMMARY:Projektseminar: Geometrische Analysis - Lower bounds for the transversal Ricci curvature of a Riemannian foliation via entropy convexity
+DESCRIPTION:Titel: Lower bounds for the transversal Ricci curvature of a Riemannian foliation via entropy convexity\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Christian Ketterer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220412T141700
+DTSTART:20220505T151500
+SUMMARY:Fakultätsratsitzung - 
+DESCRIPTION:\nVeranstaltung: Fakultätsratsitzung
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220506T100200
+DTSTART:20220506T103000
+DTEND:20220506T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Reshetikhin-Turaev representations as Kähler local systems
+DESCRIPTION:Titel: Reshetikhin-Turaev representations as Kähler local systems\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Philippe Eyssidieux
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220509T091400
+DTSTART:20220512T170000
+DTEND:20220512T180000
+SUMMARY:Kolloquium - General relativity, spectral theory, and microlocal analysis
+DESCRIPTION:Titel: General relativity, spectral theory, and microlocal analysis\nSprecher: Prof. Dr. Peter Hintz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220413T115600
+DTSTART:20220517T193000
+SUMMARY:Didaktisches Seminar - ... und wie erklärst du?
+DESCRIPTION:Titel: ... und wie erklärst du?\nVeranstaltung: Didaktisches Seminar\nSprecher: Dr. Mona Weinhuber
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220506T133200
+DTSTART:20220520T103000
+DTEND:20220520T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie -  Lifting globally F-split surfaces over the Witt vectors
+DESCRIPTION:Titel:  Lifting globally F-split surfaces over the Witt vectors\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Fabio Bernasconi
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220511T161500
+DTSTART:20220523T090000
+SUMMARY:[Event]Workshop on Nonlinear Bending - Workshop on Nonlinear Bending
+DESCRIPTION:Titel: Workshop on Nonlinear Bending\nVeranstaltung: [Event]Workshop on Nonlinear Bending\nSprecher: Invited Speakers
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T130900
+DTSTART:20220523T093000
+DTEND:20220523T102500
+SUMMARY:Oberseminar: Angewandte Mathematik - Shape transitions in non-Euclidean ribbons
+DESCRIPTION:Titel: Shape transitions in non-Euclidean ribbons\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Cy Maor
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T131100
+DTSTART:20220523T140000
+DTEND:20220523T145500
+SUMMARY:Oberseminar: Angewandte Mathematik - Mechanical properties of plants: structural background and what can be learnt for biomimetic applications
+DESCRIPTION:Titel: Mechanical properties of plants: structural background and what can be learnt for biomimetic applications\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Thomas Speck
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T131200
+DTSTART:20220523T155000
+DTEND:20220523T164500
+SUMMARY:Oberseminar: Angewandte Mathematik - Numerical Approximations of Thin Structures Undergoing Large Deformations
+DESCRIPTION:Titel: Numerical Approximations of Thin Structures Undergoing Large Deformations\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Andrea Bonito
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Online / SR 125
+DTSTAMP:20220516T154100
+DTSTART:20220523T161500
+SUMMARY:Oberseminar: Differentialgeometrie -  Homogeneous G-structures
+DESCRIPTION:Titel:  Homogeneous G-structures\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Luca Vitagliano
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T131300
+DTSTART:20220524T093000
+DTEND:20220524T102500
+SUMMARY:Oberseminar: Angewandte Mathematik - Wrinkles in nature and technology
+DESCRIPTION:Titel: Wrinkles in nature and technology\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Andreas Fery
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T131400
+DTSTART:20220524T140000
+DTEND:20220524T145500
+SUMMARY:Oberseminar: Angewandte Mathematik - Understanding the mechanical interaction of plants with their environment
+DESCRIPTION:Titel: Understanding the mechanical interaction of plants with their environment\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Yasmine Meroz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220517T155800
+DTSTART:20220524T143000
+SUMMARY:Oberseminar: Mathematische Logik - Classes of graphs characterizable by finitely many homomorhism counts
+DESCRIPTION:Titel: Classes of graphs characterizable by finitely many homomorhism counts\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Jörg Flum
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220512T131600
+DTSTART:20220524T155000
+DTEND:20220524T164500
+SUMMARY:Oberseminar: Angewandte Mathematik - Design of origami structures with curved tiles between the creases
+DESCRIPTION:Titel: Design of origami structures with curved tiles between the creases\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Richard D. James
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20220523T130600
+DTSTART:20220527T120000
+DTEND:20220527T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Agent-Based Modelling of Single Cell Variability of CRISPR-Cas Interference and Adaptation
+DESCRIPTION:Titel: Agent-Based Modelling of Single Cell Variability of CRISPR-Cas Interference and Adaptation\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Christian Fleck
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20220516T155200
+DTSTART:20220530T161500
+SUMMARY:Oberseminar: Differentialgeometrie - The strong Homotopy Structure of Phase Space Reduction in Deformation Quantization
+DESCRIPTION:Titel: The strong Homotopy Structure of Phase Space Reduction in Deformation Quantization\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jonas Schnitzer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220519T150100
+DTSTART:20220531T143000
+SUMMARY:Oberseminar: Mathematische Logik -  The space of types with a spectral topology
+DESCRIPTION:Titel:  The space of types with a spectral topology\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Daniel Palacín (Complutense Madrid)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Online-Vortrag
+DTSTAMP:20220413T115700
+DTSTART:20220531T193000
+SUMMARY:Didaktisches Seminar - Beweise als Imitationsgrundlage
+DESCRIPTION:Titel: Beweise als Imitationsgrundlage\nVeranstaltung: Didaktisches Seminar\nSprecher: PD Dr. Stephan Berendonk
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220530T140900
+DTSTART:20220602T111500
+SUMMARY:Oberseminar: Angewandte Mathematik - Fractional total variation denoising model with L^1 fidelity
+DESCRIPTION:Titel: Fractional total variation denoising model with L^1 fidelity\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Konstantinos Bessas
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220530T141000
+DTSTART:20220602T121500
+SUMMARY:Oberseminar: Angewandte Mathematik - On the existence of isoperimetric sets on nonnegatively curved spaces
+DESCRIPTION:Titel: On the existence of isoperimetric sets on nonnegatively curved spaces\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Marco Pozzetta
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220412T141900
+DTSTART:20220602T151500
+SUMMARY:Fakultätsratsitzung - 
+DESCRIPTION:\nVeranstaltung: Fakultätsratsitzung
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220518T110500
+DTSTART:20220603T103000
+DTEND:20220603T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Global properties of period maps at infinity
+DESCRIPTION:Titel: Global properties of period maps at infinity\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Colleen Robles
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 218, Ernst-Zermelo-Str. 1
+DTSTAMP:20220530T163800
+DTSTART:20220614T103000
+DTEND:20220614T113000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Orbit Method: From Matrices to Unitary Representations
+DESCRIPTION:Titel: Orbit Method: From Matrices to Unitary Representations\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Zhu Chengbo (National University of Singapore) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220615T160000
+DTSTART:20220621T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Theory and Implementation of Bowed Strings using Cosserat Rod theory and the Null Space method
+DESCRIPTION:Titel: Theory and Implementation of Bowed Strings using Cosserat Rod theory and the Null Space method\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Jakob R
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220615T164200
+DTSTART:20220621T143000
+SUMMARY:Oberseminar: Mathematische Logik - Blockfilters as Parameter Sets of Tree-Forcings
+DESCRIPTION:Titel: Blockfilters as Parameter Sets of Tree-Forcings\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Christian Bräuninger
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220413T115500
+DTSTART:20220621T193000
+SUMMARY:Didaktisches Seminar - Binomialkoeffizienten - verstehen oder rechnen?
+DESCRIPTION:Titel: Binomialkoeffizienten - verstehen oder rechnen?\nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Norbert Henze
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220610T110600
+DTSTART:20220624T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The derived category of permutation modules
+DESCRIPTION:Titel: The derived category of permutation modules\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Dr. Martin Gallauer, MPI Bonn
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220624T105600
+DTSTART:20220628T143000
+SUMMARY:Oberseminar: Mathematische Logik - Generalised Tree Properties
+DESCRIPTION:Titel: Generalised Tree Properties\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Hannes Jakob
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220628T103500
+DTSTART:20220701T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Geometrical aspects of singular surfaces and their smoothings
+DESCRIPTION:Titel: Geometrical aspects of singular surfaces and their smoothings\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Giancarlo Andres Urzua Elia
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20220505T122100
+DTSTART:20220701T120000
+DTEND:20220701T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Reporting in Radiology - the challenge of structuring reports
+DESCRIPTION:Titel: Reporting in Radiology - the challenge of structuring reports\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Elmar Kotter
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Großer Hörsaal Physik & Garten der Physik
+DTSTAMP:20220613T133900
+DTSTART:20220701T140000
+DTEND:20220701T160000
+SUMMARY:[Event]Fakultätsfest und Abschlussfeier der Fakultät - Fakultätsfest und Abschlussfeier 2022
+DESCRIPTION:Titel: Fakultätsfest und Abschlussfeier 2022\nVeranstaltung: [Event]Fakultätsfest und Abschlussfeier der Fakultät\nSprecher: Mathematisches Institut
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20220622T093400
+DTSTART:20220704T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Lorentzian complex powers and spectral zeta function densities 
+DESCRIPTION:Titel: Lorentzian complex powers and spectral zeta function densities \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Michal Wrochna
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220701T101500
+DTSTART:20220705T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Numerical Optimal Control for Differential Equations with State Dependent Switches and Jumps
+DESCRIPTION:Titel: Numerical Optimal Control for Differential Equations with State Dependent Switches and Jumps\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Armin Nurkanović 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Weismann-Haus, Albertstr. 21a und online (Zoom)
+DTSTAMP:20220704T110300
+DTSTART:20220707T120000
+DTEND:20220707T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Roll-Over Risk in Benchmark Rates
+DESCRIPTION:Titel: Roll-Over Risk in Benchmark Rates\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: David Skovmand
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220412T141900
+DTSTART:20220707T151500
+SUMMARY:Fakultätsratsitzung - 
+DESCRIPTION:\nVeranstaltung: Fakultätsratsitzung
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220630T093800
+DTSTART:20220708T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The wild ramification locus
+DESCRIPTION:Titel: The wild ramification locus\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Dr. Katharina Hübner (Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20220704T110600
+DTSTART:20220708T120000
+DTEND:20220708T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Evolutionary Algorithms: what can do for you?
+DESCRIPTION:Titel: Evolutionary Algorithms: what can do for you?\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Noor Awad
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 125, Ernst-Zermelo-Str. 1
+DTSTAMP:20220703T184900
+DTSTART:20220711T161500
+SUMMARY:Oberseminar: Differentialgeometrie - A Lie algebra constructed from BPS states of a torus conformal field theory
+DESCRIPTION:Titel: A Lie algebra constructed from BPS states of a torus conformal field theory\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fabian Kertels
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220413T115900
+DTSTART:20220712T193000
+SUMMARY:Didaktisches Seminar - "Wie soll ich das beweisen?" - Neue Wege und Trends aus der Schul- und Hochschuldidaktik zur Didaktik des Beweisens
+DESCRIPTION:Titel: "Wie soll ich das beweisen?" - Neue Wege und Trends aus der Schul- und Hochschuldidaktik zur Didaktik des Beweisens\nVeranstaltung: Didaktisches Seminar\nSprecher: Jun.-Prof. Dr. Leander Kempen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Aula
+DTSTAMP:20220707T105600
+DTSTART:20220714T090000
+DTEND:20220714T180000
+SUMMARY:Abschlusskolloquium Graduiertenkolleg  - 
+DESCRIPTION:\nVeranstaltung: Abschlusskolloquium Graduiertenkolleg 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Aula im Kollegiengebäude I
+DTSTAMP:20220512T141600
+DTSTART:20220714T170000
+DTEND:20220714T180000
+SUMMARY:Kolloquium - On analytic and topological torsion
+DESCRIPTION:Titel: On analytic and topological torsion\nSprecher: Prof. Dr. Ursula Ludwig
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Aula
+DTSTAMP:20220707T105800
+DTSTART:20220715T093000
+DTEND:20220715T120500
+SUMMARY:Abschlusskolloquium Graduiertenkolleg  - 
+DESCRIPTION:\nVeranstaltung: Abschlusskolloquium Graduiertenkolleg 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 127, Ernst-Zermelo-Str. 1
+DTSTAMP:20220712T151600
+DTSTART:20220718T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Well-posedness of the Laplacian with pure Neumann boundary conditions on domains with corners and cusps
+DESCRIPTION:Titel: Well-posedness of the Laplacian with pure Neumann boundary conditions on domains with corners and cusps\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Marius Amann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220708T131400
+DTSTART:20220719T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Numerical Optimal Control of a Rotary Crane - From Modeling to Real-world Experiments
+DESCRIPTION:Titel: Numerical Optimal Control of a Rotary Crane - From Modeling to Real-world Experiments\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Jens Nussberger
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220720T085800
+DTSTART:20220722T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Towards automatic diagram chasing
+DESCRIPTION:Titel: Towards automatic diagram chasing\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Yannis Monbru
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20220722T095000
+DTSTART:20220726T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - TBA
+DESCRIPTION:Titel: TBA\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dr. Maria Kaimaki (Imperial College of London)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220722T165700
+DTSTART:20220726T143000
+SUMMARY:Oberseminar: Mathematische Logik - Compactness for weak square at singulars of uncountable cofinality
+DESCRIPTION:Titel: Compactness for weak square at singulars of uncountable cofinality\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Maxwell Levine
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220412T142000
+DTSTART:20220728T151500
+SUMMARY:Fakultätsratsitzung - 
+DESCRIPTION:\nVeranstaltung: Fakultätsratsitzung
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20220720T113500
+DTSTART:20220729T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Excision in algebraic K-theory and applications
+DESCRIPTION:Titel: Excision in algebraic K-theory and applications\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Prof. Dr. Georg Tamme (Mainz)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20220722T172600
+DTSTART:20220729T120000
+DTEND:20220729T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Inferring 3 Parameters from 2 Data Points
+DESCRIPTION:Titel: Inferring 3 Parameters from 2 Data Points\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Tim Litwin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220915T123200
+DTSTART:20220920T143000
+SUMMARY:Oberseminar: Mathematische Logik - Keisler‘s Order and Boolean Ultrapowers
+DESCRIPTION:Titel: Keisler‘s Order and Boolean Ultrapowers\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Patrick Meurin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2022-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20220922T144400
+DTSTART:20220926T150000
+SUMMARY:Oberseminar: Differentialgeometrie - Deformations, Twists and Frobenius Lie Algebras
+DESCRIPTION:Titel: Deformations, Twists and Frobenius Lie Algebras\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Anthony Giaquinto
+END:VEVENT
+END:VCALENDAR

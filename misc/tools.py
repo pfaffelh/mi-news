@@ -78,14 +78,16 @@ def references(collection, field, list = False):
 
 # Finde in collection.field die id, und gebe im Datensatz return_field zurück. Falls list=True,
 # dann ist collection.field ein array.
-def find_dependent_items(collection, id):
+def find_dependent_items(collection, id, ini = {}):
     res = []
     for x in st.session_state.abhaengigkeit[collection]:
         if x["list"]:
-            for y in list(x["collection"].find({x["field"].replace(".$",""): { "$elemMatch": { "$eq": id }}})):
+            ini[x["field"]] = { "$elemMatch": { "$eq": id }}
+            for y in list(x["collection"].find(ini)):
                 res.append(repr(x["collection"], y["_id"]))
         else:
-            for y in list(x["collection"].find({x["field"]: id})):
+            ini[x["field"]] = id
+            for y in list(x["collection"].find(ini)):
                 res.append(repr(x["collection"], y["_id"]))
     return res
 
@@ -151,11 +153,13 @@ def display_navigation():
     st.sidebar.page_link("pages/02_Carouselnews.py", label="Carouselnews")
     st.sidebar.page_link("pages/04_Bild.py", label="Bilder")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
-    st.sidebar.page_link("pages/06_Dokumentation.py", label="Dokumentation")
+    st.sidebar.page_link("pages/06_Wochenprogramm.py", label="Wochenprogramm")
+    st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
+    st.sidebar.page_link("pages/08_Dokumentation.py", label="Dokumentation")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
 
 # short Version ohne abhängige Variablen
-def repr(collection, id, show_collection = True):
+def repr(collection, id, short = False, show_collection = True):
     x = collection.find_one({"_id": id})
     if collection == st.session_state.news:        
         title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
@@ -172,6 +176,13 @@ def repr(collection, id, show_collection = True):
         res = x['text'][0:50]
     elif collection == st.session_state.bild:
         res = x['titel']
+    elif collection == st.session_state.vortragsreihe:
+        res = x['kurzname'] if short else x['title_de'] 
+    elif collection == st.session_state.vortrag:
+        res = f"{x['start'].strftime('%d.%m.%Y')}: "
+        res = res + f"{x['sprecher']}, {x['title_de']}"
+        vre = ", ".join([repr(st.session_state.vortragsreihe, y, True, False) for y in x['vortragsreihe']])
+        res = (res + f" ({vre})").replace("\n", "")
     if show_collection:
         res = f"{st.session_state.collection_name[collection]}: {res}"
     return res

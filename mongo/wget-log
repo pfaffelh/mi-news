@@ -1,0 +1,10 @@
+--2024-11-11 09:30:59--  http://wochenprogramm.mathematik.uni-freiburg.de/ical/s
+Auflösen des Hostnamens wochenprogramm.mathematik.uni-freiburg.de (wochenprogramm.mathematik.uni-freiburg.de)… 132.230.30.6
+Verbindungsaufbau zu wochenprogramm.mathematik.uni-freiburg.de (wochenprogramm.mathematik.uni-freiburg.de)|132.230.30.6|:80 … verbunden.
+HTTP-Anforderung gesendet, auf Antwort wird gewartet … 301 Moved Permanently
+Platz: https://wochenprogramm.mathematik.uni-freiburg.de/ical/s [folgend]
+--2024-11-11 09:30:59--  https://wochenprogramm.mathematik.uni-freiburg.de/ical/s
+Verbindungsaufbau zu wochenprogramm.mathematik.uni-freiburg.de (wochenprogramm.mathematik.uni-freiburg.de)|132.230.30.6|:443 … verbunden.
+HTTP-Anforderung gesendet, auf Antwort wird gewartet … 404 No such file
+2024-11-11 09:30:59 FEHLER 404: No such file.
+

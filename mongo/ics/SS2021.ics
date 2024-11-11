@@ -1,0 +1,437 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2021-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20210419T100100
+DTSTART:20210423T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Categorical Quantum Mechanics: An Introduction
+DESCRIPTION:Titel: Categorical Quantum Mechanics: An Introduction\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: James Hefford (Oxford University)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210426T093000
+DTSTART:20210426T161500
+SUMMARY:Oberseminar: Differentialgeometrie - From scattering amplitudes to quiver representations and back
+DESCRIPTION:Titel: From scattering amplitudes to quiver representations and back\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Severin Barmeier
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210421T114700
+DTSTART:20210427T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Stationäre mikropolare elektrorheologische Fluide - Existenz schwacher Lösungen bei Spannungstensoren mit voneinander verschiedenen Wachstumseigenschaften
+DESCRIPTION:Titel: Stationäre mikropolare elektrorheologische Fluide - Existenz schwacher Lösungen bei Spannungstensoren mit voneinander verschiedenen Wachstumseigenschaften\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Mirjam Hoferichter 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BBB-Raum Philidor
+DTSTAMP:20210427T174000
+DTSTART:20210428T103000
+DTEND:20210428T120000
+SUMMARY:Oberseminar Mathematische Logik - Open Core in dichten echten Paaren reell abgeschlossener Körper
+DESCRIPTION:Titel: Open Core in dichten echten Paaren reell abgeschlossener Körper\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Aaron Vollprecht
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20210427T113800
+DTSTART:20210430T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Which properties of the canonical class depend only on its first Chern class?
+DESCRIPTION:Titel: Which properties of the canonical class depend only on its first Chern class?\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Lazić, Valdimir (Saarbrücken)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210428T154600
+DTSTART:20210503T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Refined Weyl Law for the Perturbed Harmonic Oscillator
+DESCRIPTION:Titel: Refined Weyl Law for the Perturbed Harmonic Oscillator\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Moritz Doll
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-8@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210421T114900
+DTSTART:20210504T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Variational models for line-defects in materials.
+DESCRIPTION:Titel: Variational models for line-defects in materials.\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dr. Roberta Marziani
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Philidor
+DTSTAMP:20210430T090500
+DTSTART:20210504T143000
+DTEND:20210504T160000
+SUMMARY:Oberseminar Mathematische Logik - Überlagerungen der komplexen Zahlen und die kanonische Basis Eigenschaft
+DESCRIPTION:Titel: Überlagerungen der komplexen Zahlen und die kanonische Basis Eigenschaft\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Michael Lösch
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20210426T140600
+DTSTART:20210507T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Higher dimensional slope inequalities
+DESCRIPTION:Titel: Higher dimensional slope inequalities\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Luca Tasin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210504T145300
+DTSTART:20210510T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Maurer-Cartan elements, twisting and homotopy
+DESCRIPTION:Titel: Maurer-Cartan elements, twisting and homotopy\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jonas Schnitzer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210503T160900
+DTSTART:20210511T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - On the minimization of various energies of Riesz-type.
+DESCRIPTION:Titel: On the minimization of various energies of Riesz-type.\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. Aldo Pratelli
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Philidor
+DTSTAMP:20210507T161100
+DTSTART:20210511T143000
+DTEND:20210511T160000
+SUMMARY:Oberseminar Mathematische Logik - Combinatorial characterizations of Canjar filters   
+DESCRIPTION:Titel: Combinatorial characterizations of Canjar filters   \nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Christian Bräuninger
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210510T113100
+DTSTART:20210514T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Highly connected 7-manifolds and non-negative sectional curvature
+DESCRIPTION:Titel: Highly connected 7-manifolds and non-negative sectional curvature\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Goette, Sebastian (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210503T114500
+DTSTART:20210517T161500
+DTEND:20210517T174500
+SUMMARY:Oberseminar: Differentialgeometrie - t.b.a
+DESCRIPTION:Titel: t.b.a\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Vincent Müller (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION: Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210512T125600
+DTSTART:20210518T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Taylor Scaling for curvature driven interfaces in random media
+DESCRIPTION:Titel: Taylor Scaling for curvature driven interfaces in random media\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Luca Courte (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-34@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BBB Philidor
+DTSTAMP:20210517T103600
+DTSTART:20210518T143000
+DTEND:20210518T160000
+SUMMARY:Oberseminar Mathematische Logik - Forcing With Canjar Filters and With Generic Ultrafilters
+DESCRIPTION:Titel: Forcing With Canjar Filters and With Generic Ultrafilters\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Heike Mildenberger
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: kasparov
+DTSTAMP:20210512T123100
+DTSTART:20210520T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Valuation rings in the context of Algebraic Geometry
+DESCRIPTION:Titel: Valuation rings in the context of Algebraic Geometry\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Bernhard Paping
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210506T113200
+DTSTART:20210521T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Cox rings of algebraic stacks
+DESCRIPTION:Titel: Cox rings of algebraic stacks\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Hochenegger, Andreas (Milano)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210518T082000
+DTSTART:20210521T130000
+DTEND:20210521T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Uncertainty under small data 
+DESCRIPTION:Titel: Uncertainty under small data \nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Thorsten Schmidt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210522T111100
+DTSTART:20210528T130000
+DTEND:20210528T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Deep dynamic modeling with a small number of time points
+DESCRIPTION:Titel: Deep dynamic modeling with a small number of time points\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Harald Binder
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:ZOOM (link in the email)
+DTSTAMP:20210531T000600
+DTSTART:20210531T101500
+SUMMARY:Oberseminar: Differentialgeometrie - Narrow escape problem on Riemannian manifolds
+DESCRIPTION:Titel: Narrow escape problem on Riemannian manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Medet Nursultanov
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210526T111300
+DTSTART:20210601T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Homogenization of second order level set PDE in periodic media
+DESCRIPTION:Titel: Homogenization of second order level set PDE in periodic media\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Peter Morfe
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210601T231400
+DTSTART:20210607T000000
+SUMMARY:Oberseminar: Differentialgeometrie - On a stochastic version of transfer operators
+DESCRIPTION:Titel: On a stochastic version of transfer operators\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ksenia Fedosova
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210823T143600
+DTSTART:20210611T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - A surface and a threefold with equivalent singularity categories
+DESCRIPTION:Titel: A surface and a threefold with equivalent singularity categories\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Martin Kalck
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T110500
+DTSTART:20210611T130000
+DTEND:20210611T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - 
+DESCRIPTION:\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Rolf Backofen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210511T174700
+DTSTART:20210614T161500
+DTEND:20210614T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Deformed G_2 Shatashvili-Vafa algebra for superstrings on AdS_3 × M^7
+DESCRIPTION:Titel: Deformed G_2 Shatashvili-Vafa algebra for superstrings on AdS_3 × M^7\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Marc-Antoine Fiset (ETH Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210601T101300
+DTSTART:20210615T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Homogenization in a class of non-periodically perforated domains
+DESCRIPTION:Titel: Homogenization in a class of non-periodically perforated domains\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Sylvain Wolf
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Philidor
+DTSTAMP:20210613T142000
+DTSTART:20210615T143000
+DTEND:20210615T160000
+SUMMARY:Oberseminar Mathematische Logik - Verallgemeinerte metrische Räume mit  einfacher Automorphismengruppe
+DESCRIPTION:Titel: Verallgemeinerte metrische Räume mit  einfacher Automorphismengruppe\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Martin Ziegler
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:https://uni-freiburg.zoom.us/j/3852066250?pwd=Rk5IYklvdWt5OFVDWExUMWJhazd2dz09 Kenncode: NZUWh12NY  
+DTSTAMP:20210520T094800
+DTSTART:20210615T193000
+SUMMARY:Didaktisches Seminar - Neue Ideen zum Einsatz von DGS-Software und Tabellenkalkulationen im Geometrieunterricht der Sekundarstufe I 
+DESCRIPTION:Titel: Neue Ideen zum Einsatz von DGS-Software und Tabellenkalkulationen im Geometrieunterricht der Sekundarstufe I \nVeranstaltung: Didaktisches Seminar\nSprecher: Prof. Dr. Boris Girnat (Universität Hildesheim)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: vGK1821
+DTSTAMP:20210611T134400
+DTSTART:20210617T141500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Liquid Tensor Experiment -- a Progress Report
+DESCRIPTION:Titel: Liquid Tensor Experiment -- a Progress Report\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Johan Commelin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T110600
+DTSTART:20210618T130000
+DTEND:20210618T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - 
+DESCRIPTION:\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Michael Bock
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BBB Anderssen
+DTSTAMP:20210614T160500
+DTSTART:20210621T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Classification of ground states for critical Dirac equations
+DESCRIPTION:Titel: Classification of ground states for critical Dirac equations\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: William Borrelli
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210621T090600
+DTSTART:20210625T110000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - On the Boucksom-Zariski decomposition for irreducible symplectic varieties and bounded negativity
+DESCRIPTION:Titel: On the Boucksom-Zariski decomposition for irreducible symplectic varieties and bounded negativity\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Pacienza, Gianluca (Nancy)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T110700
+DTSTART:20210625T130000
+DTEND:20210625T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Process-guided neural networks: a case on domain adaptation
+DESCRIPTION:Titel: Process-guided neural networks: a case on domain adaptation\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Carsten Dormann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Euwe (SR 226) 
+DTSTAMP:20210625T134500
+DTSTART:20210628T161500
+SUMMARY:Oberseminar: Differentialgeometrie - On the geometry of resolutions of G2-conifolds
+DESCRIPTION:Titel: On the geometry of resolutions of G2-conifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jin Li
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Ort: https://uni-freiburg.zoom.us/j/3852066250?pwd=Rk5IYklvdWt5OFVDWExUMWJhazd2dz09  Kenncode: NZUWh12NY
+DTSTAMP:20210520T095200
+DTSTART:20210629T193000
+SUMMARY:Didaktisches Seminar - Digitales Lernmaterial zur Netflix Challenge (Sek. II)
+DESCRIPTION:Titel: Digitales Lernmaterial zur Netflix Challenge (Sek. II)\nVeranstaltung: Didaktisches Seminar\nSprecher: Sarah Schönbrodt (SCC / Karlsruher Institut für Technologie)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210628T094600
+DTSTART:20210702T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Birational geometry of foliations
+DESCRIPTION:Titel: Birational geometry of foliations\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Roberto Svaldi (EPFL)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210628T115600
+DTSTART:20210705T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Singularity categories and singular Hochschild cohomology
+DESCRIPTION:Titel: Singularity categories and singular Hochschild cohomology\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Zhengfang Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BBB-Raum Philidor
+DTSTAMP:20210702T134800
+DTSTART:20210706T143000
+SUMMARY:Oberseminar Mathematische Logik - Regularitätsbedingungen für den verallgemeinerten Cantorraum
+DESCRIPTION:Titel: Regularitätsbedingungen für den verallgemeinerten Cantorraum\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Brendan Stuber-Rousselle
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210614T105300
+DTSTART:20210709T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Frobenius kernels for automorphism group schemes
+DESCRIPTION:Titel: Frobenius kernels for automorphism group schemes\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Schröer, Stefan (Düsseldorf)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T110900
+DTSTART:20210709T130000
+DTEND:20210709T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Deep Learning for Brain Signals
+DESCRIPTION:Titel: Deep Learning for Brain Signals\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Tonio Ball
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:bbb Raum Anderssen
+DTSTAMP:20210705T211600
+DTSTART:20210712T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Relativistische Modelle des Universums um einen zentralen Stern
+DESCRIPTION:Titel: Relativistische Modelle des Universums um einen zentralen Stern\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Elias Hofmann (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BBB Philidor
+DTSTAMP:20210709T162500
+DTSTART:20210713T133000
+SUMMARY:Oberseminar Mathematische Logik - Trees, Stationary Reflexion, and Mahlo Cardinals
+DESCRIPTION:Titel: Trees, Stationary Reflexion, and Mahlo Cardinals\nVeranstaltung: Oberseminar Mathematische Logik\nSprecher: Maxwell Levine
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210708T123700
+DTSTART:20210713T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Finite Element Approximation of Hamilton-Jacobi-Bellman equations with nonlinear mixed boundary conditions
+DESCRIPTION:Titel: Finite Element Approximation of Hamilton-Jacobi-Bellman equations with nonlinear mixed boundary conditions\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Max Jensen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210706T084500
+DTSTART:20210716T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Cohen-Lenstra-Martinet heuristics on class groups of number fields
+DESCRIPTION:Titel: Cohen-Lenstra-Martinet heuristics on class groups of number fields\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Alex Bartel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T111000
+DTSTART:20210716T130000
+DTEND:20210716T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - 
+DESCRIPTION:\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Hannah Bast
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Anderssen (BBB)
+DTSTAMP:20210713T103000
+DTSTART:20210719T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Determinants, group cocycles and multiplicative Chern character
+DESCRIPTION:Titel: Determinants, group cocycles and multiplicative Chern character\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ryszard Nest
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210708T124100
+DTSTART:20210720T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Variable exponent Bochner-Lebesgue spaces with symmetric gradient structure
+DESCRIPTION:Titel: Variable exponent Bochner-Lebesgue spaces with symmetric gradient structure\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Alex Kaltenbach
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum Lasker
+DTSTAMP:20210608T121500
+DTSTART:20210723T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The effective model structure and infinity-groupoid objects
+DESCRIPTION:Titel: The effective model structure and infinity-groupoid objects\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Karol Szumiło
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2021-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210515T111300
+DTSTART:20210723T130000
+DTEND:20210723T143000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Federated analysis using different cohorts - are we comparing apples and oranges?
+DESCRIPTION:Titel: Federated analysis using different cohorts - are we comparing apples and oranges?\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Daniela Zöller
+END:VEVENT
+END:VCALENDAR

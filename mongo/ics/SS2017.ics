@@ -1,0 +1,859 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2017-14@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170413T174300
+DTSTART:20170419T160000
+DTEND:20170419T180000
+SUMMARY:Oberseminar: Mathematische Logik - Applications of ultraproducts of finite structures to Combinatorics
+DESCRIPTION:Titel: Applications of ultraproducts of finite structures to Combinatorics\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Dario Garcia (University of Leeds)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170120T142200
+DTSTART:20170427T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170426T131700
+DTSTART:20170428T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Holography and the representation theory of residue families
+DESCRIPTION:Titel: Holography and the representation theory of residue families\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Petr Somberg, Charles University, Prague
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 232, Eckerstr. 1
+DTSTAMP:20170424T130500
+DTSTART:20170428T110000
+DTEND:20170428T120000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Short-time near-the-money skew in rough fractional stochastic volatility models
+DESCRIPTION:Titel: Short-time near-the-money skew in rough fractional stochastic volatility models\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Blanka Horvath
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170403T140200
+DTSTART:20170428T120000
+DTEND:20170428T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - A General Framework for Uncovering Dependence Networks
+DESCRIPTION:Titel: A General Framework for Uncovering Dependence Networks\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Johannes Lederer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170426T153700
+DTSTART:20170502T150000
+SUMMARY:Oberseminar: Angewandte Mathematik - Weakly coupled systems of conservation laws on moving surfaces
+DESCRIPTION:Titel: Weakly coupled systems of conservation laws on moving surfaces\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Andrea Korsch
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170511T164000
+DTSTART:20170503T163000
+SUMMARY:Oberseminar: Mathematische Logik - Social welfare relation and irregular sets
+DESCRIPTION:Titel: Social welfare relation and irregular sets\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Giorgio Laguzzi
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170203T114200
+DTSTART:20170504T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170504T172400
+DTSTART:20170508T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Zeta regularized determinant and Functorial QFT
+DESCRIPTION:Titel: Zeta regularized determinant and Functorial QFT\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Santosh Kandel (University of Zurich)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170511T163900
+DTSTART:20170510T163000
+SUMMARY:Oberseminar: Mathematische Logik - What can be expressed in first-order logic with bounded quantifier rank and why do we want to know that?
+DESCRIPTION:Titel: What can be expressed in first-order logic with bounded quantifier rank and why do we want to know that?\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Jörg Flum
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-36@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170505T125900
+DTSTART:20170512T101500
+DTEND:20170512T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Quotients of the unit ball by unipotent discrete groups
+DESCRIPTION:Titel: Quotients of the unit ball by unipotent discrete groups\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Christian Miebach
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170403T141000
+DTSTART:20170512T120000
+DTEND:20170512T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Statistical methodology for comparing curves
+DESCRIPTION:Titel: Statistical methodology for comparing curves\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Holger Dette
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170505T165100
+DTSTART:20170515T161500
+DTEND:20170515T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Spin structures on 3- and 4-manifolds
+DESCRIPTION:Titel: Spin structures on 3- and 4-manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Yi-Sheng Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170511T163600
+DTSTART:20170517T163000
+SUMMARY:Oberseminar: Mathematische Logik - Ultrametric spaces, isometry, and isometry groups
+DESCRIPTION:Titel: Ultrametric spaces, isometry, and isometry groups\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Luca Motto Ros
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170508T105600
+DTSTART:20170518T170000
+DTEND:20170518T000000
+SUMMARY:Kolloquium - Norm resolvent concergence of operators in varying spaces and applications
+DESCRIPTION:Titel: Norm resolvent concergence of operators in varying spaces and applications\nSprecher: Prof. Olaf Post, Universität Trier 	
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170427T144700
+DTSTART:20170522T161500
+DTEND:20170522T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Klt varieties with trivial canonical class - holonomy, differential forms, and fundamental groups
+DESCRIPTION:Titel: Klt varieties with trivial canonical class - holonomy, differential forms, and fundamental groups\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Dr. Stefan Kebekus
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170519T154200
+DTSTART:20170523T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Dissertationsthema
+DESCRIPTION:Titel: Dissertationsthema\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Christoph Gersbacher
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170515T114400
+DTSTART:20170523T161500
+SUMMARY:Projektseminar: Geometrische Analysis - An extension problem for Riemannian metrics
+DESCRIPTION:Titel: An extension problem for Riemannian metrics\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Richard Schoen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170511T163800
+DTSTART:20170524T163000
+SUMMARY:Oberseminar: Mathematische Logik - Neeman-Forcing
+DESCRIPTION:Titel: Neeman-Forcing\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Vera Gahlen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170524T091100
+DTSTART:20170526T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Volumes of open surfaces
+DESCRIPTION:Titel: Volumes of open surfaces\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Valery Alexeev 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170516T150400
+DTSTART:20170529T161500
+DTEND:20170529T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Homotopy Theory for Connective Spaces
+DESCRIPTION:Titel: Homotopy Theory for Connective Spaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Philip Turk
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170526T123900
+DTSTART:20170530T160000
+DTEND:20170530T180000
+SUMMARY:Projektseminar: Geometrische Analysis - An extension problem for Riemannian metrics 
+DESCRIPTION:Titel: An extension problem for Riemannian metrics \nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Chao Xia (Xiamen University)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170528T130100
+DTSTART:20170530T160000
+DTEND:20170530T180000
+SUMMARY:Projektseminar: Geometrische Analysis -  Minkowski's formula, Reilly's formula and Alexandrov's theorem
+DESCRIPTION:Titel:  Minkowski's formula, Reilly's formula and Alexandrov's theorem\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Prof. Chao Xia, Xiamen University
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170529T180300
+DTSTART:20170530T161500
+DTEND:20170530T181500
+SUMMARY:Projektseminar: Geometrische Analysis - Minkowski's formula, Reilly's formula and Alexandrov's theorem
+DESCRIPTION:Titel: Minkowski's formula, Reilly's formula and Alexandrov's theorem\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Chao Xia
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Strasbourg, IRMA, Salle de conf'erences
+DTSTAMP:20170502T123200
+DTSTART:20170601T093000
+DTEND:20170601T103000
+SUMMARY:Joint Seminar Dijon-Freiburg-Strasbourg - Localization of locally analytic admissible p-adic representation
+DESCRIPTION:Titel: Localization of locally analytic admissible p-adic representation\nVeranstaltung: Joint Seminar Dijon-Freiburg-Strasbourg\nSprecher: Christine Huyghe (Strasbourg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Strasbourg, IRMA, Salle de conf'erences
+DTSTAMP:20170502T123400
+DTSTART:20170601T110000
+DTEND:20170601T120000
+SUMMARY:Joint Seminar Dijon-Freiburg-Strasbourg - p-adic Hodge theory in motivic homotopy
+DESCRIPTION:Titel: p-adic Hodge theory in motivic homotopy\nVeranstaltung: Joint Seminar Dijon-Freiburg-Strasbourg\nSprecher: Frédéric Déglise (Dijon)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Strasbourg, IRMA, Salle de conf'erences
+DTSTAMP:20170502T123600
+DTSTART:20170601T143000
+DTEND:20170601T153000
+SUMMARY:Joint Seminar Dijon-Freiburg-Strasbourg - Tate Motives in Representation Theory
+DESCRIPTION:Titel: Tate Motives in Representation Theory\nVeranstaltung: Joint Seminar Dijon-Freiburg-Strasbourg\nSprecher: Wolfgang Soergel (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170526T091500
+DTSTART:20170601T170000
+DTEND:20170601T180000
+SUMMARY:Kolloquium - Gluing constructions by singular perturbation methods in Differential Geometry
+DESCRIPTION:Titel: Gluing constructions by singular perturbation methods in Differential Geometry\nSprecher: Prof. Nicos Kapouleas,  Brown University
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170524T163900
+DTSTART:20170602T120000
+DTEND:20170602T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Deep Learning
+DESCRIPTION:Titel: Deep Learning\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Thomas Brox
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092100
+DTSTART:20170605T090000
+SUMMARY:Summer School on Modern Knot Theory -  Introduction to DNA topology: enzymes that unknot and unlink DNA by local reconnection and local crossing changes
+DESCRIPTION:Titel:  Introduction to DNA topology: enzymes that unknot and unlink DNA by local reconnection and local crossing changes\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Javier Arsuaga/Mariel Vazquez
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092100
+DTSTART:20170605T101500
+SUMMARY:Summer School on Modern Knot Theory - Classical invariants of knot theory 
+DESCRIPTION:Titel: Classical invariants of knot theory \nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Radmila Sazdanović
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170602T152900
+DTSTART:20170605T113000
+DTEND:20170605T123000
+SUMMARY:Summer School on Modern Knot Theory - Helicity and its role in dynamo theory
+DESCRIPTION:Titel: Helicity and its role in dynamo theory\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Keith Moffatt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092200
+DTSTART:20170605T140000
+SUMMARY:Summer School on Modern Knot Theory - Introduction: regularity of finite energy curves
+DESCRIPTION:Titel: Introduction: regularity of finite energy curves\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Paweł Strzelecki/Heiko von der Mosel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092300
+DTSTART:20170606T090000
+SUMMARY:Summer School on Modern Knot Theory - Introduction on categorification
+DESCRIPTION:Titel: Introduction on categorification\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Radmila Sazdanović
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-59@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170602T153000
+DTSTART:20170606T101500
+SUMMARY:Summer School on Modern Knot Theory - Relaxation under topological constraints 
+DESCRIPTION:Titel: Relaxation under topological constraints \nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Keith Moffatt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170502T174300
+DTSTART:20170606T113000
+DTEND:20170606T123000
+SUMMARY:Summer School on Modern Knot Theory - Physical Knots
+DESCRIPTION:Titel: Physical Knots\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Louis H. Kauffman
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092400
+DTSTART:20170606T140000
+SUMMARY:Summer School on Modern Knot Theory - Average crossing number estimates and other corollaries of regularity
+DESCRIPTION:Titel: Average crossing number estimates and other corollaries of regularity\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Paweł Strzelecki/Heiko von der Mosel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092500
+DTSTART:20170606T151500
+SUMMARY:Summer School on Modern Knot Theory - The tangle method: Modeling local reconnection using band surgery
+DESCRIPTION:Titel: The tangle method: Modeling local reconnection using band surgery\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Javier Arsuaga/Mariel Vazquez
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092600
+DTSTART:20170606T163000
+SUMMARY:Summer School on Modern Knot Theory - Introduction to Knotplot
+DESCRIPTION:Titel: Introduction to Knotplot\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Javier Arsuaga/Mariel Vazquez
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:HS 2006 im Kollegiengebäude II
+DTSTAMP:20170509T112800
+DTSTART:20170606T193000
+DTEND:20170606T203000
+SUMMARY:Summer School on Modern Knot Theory - Why (k)not knots?
+DESCRIPTION:Titel: Why (k)not knots?\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Prof. Dr. Louis Kauffman (University of Illinois at Chicago)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170602T153100
+DTSTART:20170607T090000
+SUMMARY:Summer School on Modern Knot Theory - Minimum energy states of knots and links 
+DESCRIPTION:Titel: Minimum energy states of knots and links \nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Keith Moffatt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092700
+DTSTART:20170607T101500
+SUMMARY:Summer School on Modern Knot Theory - Characterizing finite energy curves
+DESCRIPTION:Titel: Characterizing finite energy curves\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Paweł Strzelecki/Heiko von der Mosel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170502T174400
+DTSTART:20170607T113000
+DTEND:20170607T123000
+SUMMARY:Summer School on Modern Knot Theory - Physical Knots
+DESCRIPTION:Titel: Physical Knots\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Louis H. Kauffman
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092800
+DTSTART:20170607T140000
+SUMMARY:Summer School on Modern Knot Theory - Analysis of DNA packing in viruses using random knotting
+DESCRIPTION:Titel: Analysis of DNA packing in viruses using random knotting\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Javier Arsuaga/Mariel Vazquez
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092900
+DTSTART:20170607T151500
+SUMMARY:Summer School on Modern Knot Theory - Khovanov link homology 
+DESCRIPTION:Titel: Khovanov link homology \nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Radmila Sazdanović
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170502T174900
+DTSTART:20170608T113000
+DTEND:20170608T123000
+SUMMARY:Summer School on Modern Knot Theory - Physical Knots
+DESCRIPTION:Titel: Physical Knots\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Louis H. Kauffman
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T092900
+DTSTART:20170609T090000
+SUMMARY:Summer School on Modern Knot Theory - Symmetric critical knots
+DESCRIPTION:Titel: Symmetric critical knots\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Paweł Strzelecki/Heiko von der Mosel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T093000
+DTSTART:20170609T101500
+SUMMARY:Summer School on Modern Knot Theory - Random linking of minicircles in trypanosomes
+DESCRIPTION:Titel: Random linking of minicircles in trypanosomes\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Javier Arsuaga/Mariel Vazquez
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170602T153200
+DTSTART:20170609T113000
+SUMMARY:Summer School on Modern Knot Theory - Topological jumps of minimum area soap-films
+DESCRIPTION:Titel: Topological jumps of minimum area soap-films\nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Keith Moffatt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Virologie, Hermann-Herder-Straße 11
+DTSTAMP:20170604T093500
+DTSTART:20170609T140000
+SUMMARY:Summer School on Modern Knot Theory - Quantum invariants of links and 3-manifolds 
+DESCRIPTION:Titel: Quantum invariants of links and 3-manifolds \nVeranstaltung: Summer School on Modern Knot Theory\nSprecher: Radmila Sazdanović
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170529T094500
+DTSTART:20170612T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Mirror symmetry of Calabi-Yau manifolds looked from the moduli spaces
+DESCRIPTION:Titel: Mirror symmetry of Calabi-Yau manifolds looked from the moduli spaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Shinobu Hosono (Gakushuin University, Tokyo)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-77@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170612T103800
+DTSTART:20170613T160000
+DTEND:20170613T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Geometric analysis on stratified spaces
+DESCRIPTION:Titel: Geometric analysis on stratified spaces\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Ilaria Mondello
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170612T180900
+DTSTART:20170613T170000
+SUMMARY:Projektseminar: Geometrische Analysis - Stability of lower curvature bounds under $C0$ deformations of the metric
+DESCRIPTION:Titel: Stability of lower curvature bounds under $C0$ deformations of the metric\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Thomas Richard
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170504T173700
+DTSTART:20170614T163000
+DTEND:20170614T180000
+SUMMARY:Oberseminar: Mathematische Logik - Amenability of automorphism groups of generic structures
+DESCRIPTION:Titel: Amenability of automorphism groups of generic structures\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Zaniar Ghadernezhad
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170603T104300
+DTSTART:20170616T101500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Two-block Springer fibers and Springer representations in type D
+DESCRIPTION:Titel: Two-block Springer fibers and Springer representations in type D\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Arik Wilbert
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-82@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170616T165100
+DTSTART:20170619T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Moment maps: from symplectic geometry to G_2 and Spin(7)
+DESCRIPTION:Titel: Moment maps: from symplectic geometry to G_2 and Spin(7)\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Martin Callies
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170612T114400
+DTSTART:20170620T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - The Half-Wave Maps Equation
+DESCRIPTION:Titel: The Half-Wave Maps Equation\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: E. Lenzmann
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170531T120400
+DTSTART:20170620T151500
+SUMMARY:Oberseminar: Angewandte Mathematik - Keller-Segel models coupled to fluid equations.
+DESCRIPTION:Titel: Keller-Segel models coupled to fluid equations.\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. K. Kang
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170613T102500
+DTSTART:20170621T163000
+DTEND:20170621T180000
+SUMMARY:Oberseminar: Mathematische Logik - Higher Amalgamation and Finite Covers (of first order structures)
+DESCRIPTION:Titel: Higher Amalgamation and Finite Covers (of first order structures)\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Tim Zander
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-84@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170619T094400
+DTSTART:20170623T101500
+DTEND:20170623T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Algebraic models of the euclidean plane
+DESCRIPTION:Titel: Algebraic models of the euclidean plane\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Adrien Dubouloz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170526T085200
+DTSTART:20170626T161500
+DTEND:20170626T171500
+SUMMARY:Oberseminar: Differentialgeometrie - On the Dirac equation in Condensed  Matter Physics
+DESCRIPTION:Titel: On the Dirac equation in Condensed  Matter Physics\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: William Borrelli (Paris Dauphine)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170516T095200
+DTSTART:20170628T163000
+DTEND:20170628T180000
+SUMMARY:Oberseminar: Mathematische Logik - Free homogeneous structures
+DESCRIPTION:Titel: Free homogeneous structures\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Daoud Siniora
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170623T091900
+DTSTART:20170629T170000
+DTEND:20170629T000000
+SUMMARY:Kolloquium - Discrete Geodesic Paths in the Space of Images
+DESCRIPTION:Titel: Discrete Geodesic Paths in the Space of Images\nSprecher: Prof. Martin Rumpf, Uni. Bonn
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170613T150900
+DTSTART:20170630T101500
+DTEND:20170630T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - The Mumford-Tate conjecture for products of K3 surfaces
+DESCRIPTION:Titel: The Mumford-Tate conjecture for products of K3 surfaces\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Johan Commelin
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170608T120500
+DTSTART:20170630T120000
+DTEND:20170630T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Computational Models as Drivers of Cardiac Research
+DESCRIPTION:Titel: Computational Models as Drivers of Cardiac Research\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Peter Kohl
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170626T132500
+DTSTART:20170703T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Self-Adjoint Fredholm Operators in K-Theory 
+DESCRIPTION:Titel: Self-Adjoint Fredholm Operators in K-Theory \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Eva-Maria Müller
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-85@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170629T091500
+DTSTART:20170704T103000
+SUMMARY:Vorstellungsvortrag Graduiertenkolleg -  Asymptotic behavior of discrete Laplacian
+DESCRIPTION:Titel:  Asymptotic behavior of discrete Laplacian\nVeranstaltung: Vorstellungsvortrag Graduiertenkolleg\nSprecher: Yuhang Hou (Zürich)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-88@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170630T162500
+DTSTART:20170704T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Globale Existenz schwacher Lösungen für die Interaktion eines Newtonschen Fluides mit einer linearen, transversalen Koiter-Schale unter natürlichen Randbedingungen
+DESCRIPTION:Titel: Globale Existenz schwacher Lösungen für die Interaktion eines Newtonschen Fluides mit einer linearen, transversalen Koiter-Schale unter natürlichen Randbedingungen\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Hannes Eberlein
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-83@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170616T140900
+DTSTART:20170706T141500
+SUMMARY:Oberseminar: Angewandte Mathematik -  Bio-inspired materials research: Tapping the wondrous world of plant structures and functions 
+DESCRIPTION:Titel:  Bio-inspired materials research: Tapping the wondrous world of plant structures and functions \nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. Dr. T. Speck
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170623T091500
+DTSTART:20170706T170000
+DTEND:20170706T000000
+SUMMARY:Kolloquium - Modules as exact functors
+DESCRIPTION:Titel: Modules as exact functors\nSprecher: Prof. Mike Prest,  University of Manchester
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-87@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170627T155800
+DTSTART:20170707T101500
+DTEND:20170707T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - A decomposition theorem for the pushforwards of pluricanonical bundles to abelian varieties
+DESCRIPTION:Titel: A decomposition theorem for the pushforwards of pluricanonical bundles to abelian varieties\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Luigi Lombardi
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-50@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170706T150800
+DTSTART:20170710T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Compactification of a moduli space of lattice polarized K3 surfaces
+DESCRIPTION:Titel: Compactification of a moduli space of lattice polarized K3 surfaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Thomas Spittler
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-91@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170710T142500
+DTSTART:20170711T160000
+DTEND:20170711T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Ancient pancakes
+DESCRIPTION:Titel: Ancient pancakes\nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Mat Langford 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-93@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170713T131600
+DTSTART:20170714T101500
+DTEND:20170714T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - On a theorem of Campana and Paun
+DESCRIPTION:Titel: On a theorem of Campana and Paun\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Christian Schnell
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170519T120600
+DTSTART:20170714T120000
+DTEND:20170714T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Forensic DNA Phenotyping
+DESCRIPTION:Titel: Forensic DNA Phenotyping\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Dr. Amke Caliebe
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-90@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170706T154100
+DTSTART:20170714T130000
+DTEND:20170714T140000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Time-delay reservoir computers: nonlinear stability of functional differential systems and optimal nonlinear information processing capacity. Applications to stochastic nonlinear time series forecasting.
+DESCRIPTION:Titel: Time-delay reservoir computers: nonlinear stability of functional differential systems and optimal nonlinear information processing capacity. Applications to stochastic nonlinear time series forecasting.\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Ph.D. Juan-Pablo Ortega
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170518T101700
+DTSTART:20170717T161500
+DTEND:20170717T174500
+SUMMARY:Oberseminar: Differentialgeometrie - One can hear the corners of a drum
+DESCRIPTION:Titel: One can hear the corners of a drum\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Prof. Dr. Julie Rowlett (Chalmers)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-94@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T095700
+DTSTART:20170718T141500
+DTEND:20170718T154500
+SUMMARY:Lecture Series - Introduction to  Motives I
+DESCRIPTION:Titel: Introduction to  Motives I\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-95@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T095800
+DTSTART:20170719T101500
+DTEND:20170719T114500
+SUMMARY:Lecture Series - Introduction to  Motives II
+DESCRIPTION:Titel: Introduction to  Motives II\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170511T133700
+DTSTART:20170719T163000
+DTEND:20170719T180000
+SUMMARY:Oberseminar: Mathematische Logik - Interpretable Fields in algebraically closed fields
+DESCRIPTION:Titel: Interpretable Fields in algebraically closed fields\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Zeynep Kısakürek
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-89@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 403, Eckerstr. 1
+DTSTAMP:20170705T091900
+DTSTART:20170720T141500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Representation theory in stable derivators and tilting bimodules
+DESCRIPTION:Titel: Representation theory in stable derivators and tilting bimodules\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Jan Stovicek
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170706T101300
+DTSTART:20170720T170000
+DTEND:20170720T180000
+SUMMARY:Kolloquium - Singularity Formation in Geometric Flows
+DESCRIPTION:Titel: Singularity Formation in Geometric Flows\nSprecher: Prof. Simon Brendle,  Columbia University
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-92@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170713T090500
+DTSTART:20170721T101500
+DTEND:20170721T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - An Extension Theorem for differential forms on 4-dimensional GIT-quotients
+DESCRIPTION:Titel: An Extension Theorem for differential forms on 4-dimensional GIT-quotients\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Stefan Heuver
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-96@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T095900
+DTSTART:20170721T141500
+DTEND:20170721T154500
+SUMMARY:Lecture Series - Introduction to  Motives III
+DESCRIPTION:Titel: Introduction to  Motives III\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170720T151400
+DTSTART:20170724T161500
+DTEND:20170724T171500
+SUMMARY:Oberseminar: Differentialgeometrie - The large scale geometry of the Higgs bundle moduli space
+DESCRIPTION:Titel: The large scale geometry of the Higgs bundle moduli space\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jan Swoboda (LMU München)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-97@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T100000
+DTSTART:20170725T141500
+DTEND:20170725T154500
+SUMMARY:Lecture Series - Introduction to  Motives IV
+DESCRIPTION:Titel: Introduction to  Motives IV\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-103@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170720T121900
+DTSTART:20170725T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Depinning as a coagulation process
+DESCRIPTION:Titel: Depinning as a coagulation process\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. M. Mungang (Istanbul)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-104@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20170720T122000
+DTSTART:20170725T164500
+SUMMARY:Oberseminar: Angewandte Mathematik - Phase-Field Models for Thin Elastic Structures
+DESCRIPTION:Titel: Phase-Field Models for Thin Elastic Structures\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Stephan Wojtowytsch (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-102@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170719T102900
+DTSTART:20170725T170000
+DTEND:20170725T180000
+SUMMARY:Projektseminar: Geometrische Analysis - Some maximum principles on complete manifolds and their applications in geometry and analysis 
+DESCRIPTION:Titel: Some maximum principles on complete manifolds and their applications in geometry and analysis \nVeranstaltung: Projektseminar: Geometrische Analysis\nSprecher: Chen Qun (Wuhan University) 
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-98@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T100000
+DTSTART:20170726T101500
+DTEND:20170726T114500
+SUMMARY:Lecture Series - Introduction to  Motives V
+DESCRIPTION:Titel: Introduction to  Motives V\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-105@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 119, Eckerstraße 1
+DTSTAMP:20170721T102500
+DTSTART:20170726T120000
+DTEND:20170726T130000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Some consequences from Hodge theory in representation theory
+DESCRIPTION:Titel: Some consequences from Hodge theory in representation theory\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Leonardo Patimo
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-86@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170709T193000
+DTSTART:20170726T163000
+SUMMARY:Oberseminar: Mathematische Logik - Essentially Different Functions
+DESCRIPTION:Titel: Essentially Different Functions\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Fiorella Guichardaz
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20170120T142500
+DTSTART:20170727T170000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-81@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170721T141000
+DTSTART:20170728T101500
+DTEND:20170728T111500
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Motivic Hodge modules and the Decomposition Theorem
+DESCRIPTION:Titel: Motivic Hodge modules and the Decomposition Theorem\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Bradley Drew
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-100@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170717T123400
+DTSTART:20170728T120000
+DTEND:20170728T130000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Linking differential equation modeling to population statistics in metabolomics - insights from general population data for statistical analyses and study design of metabolome wide association analyses
+DESCRIPTION:Titel: Linking differential equation modeling to population statistics in metabolomics - insights from general population data for statistical analyses and study design of metabolome wide association analyses\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Johannes Hertel
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-99@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 414, Eckerstr. 1
+DTSTAMP:20170717T100200
+DTSTART:20170728T141500
+DTEND:20170728T154500
+SUMMARY:Lecture Series - Introduction to  Motives VI
+DESCRIPTION:Titel: Introduction to  Motives VI\nVeranstaltung: Lecture Series\nSprecher: Matthias Wendt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-106@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170728T091200
+DTSTART:20170802T101500
+SUMMARY:Seminar Graduiertenkolleg - All-Order Volume Conjecture for Closed 3-Manifolds from Complex Chern-Simons Theory
+DESCRIPTION:Titel: All-Order Volume Conjecture for Closed 3-Manifolds from Complex Chern-Simons Theory\nVeranstaltung: Seminar Graduiertenkolleg\nSprecher: Mauricio Romo (IAS Princeton)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2017-107@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Eckerstr. 1
+DTSTAMP:20170905T105200
+DTSTART:20170920T160000
+DTEND:20170920T170000
+SUMMARY:Oberseminar: Mathematische Logik - The Colored Pseudospace
+DESCRIPTION:Titel: The Colored Pseudospace\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Anna-Maria Ammer
+END:VEVENT
+END:VCALENDAR

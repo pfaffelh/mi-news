@@ -1,0 +1,549 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:WS2020-2021-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20201012T084600
+DTSTART:20201014T100000
+DTEND:20201014T110000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - The triply graded link homology - A new approach
+DESCRIPTION:Titel: The triply graded link homology - A new approach\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Vivien Vogelmann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:der Lernplattform "kosmic" (Vorlesung online, Tutorate in Präsenz in verschiedenen Räumen) und endet am 23.10
+DTSTAMP:20201001T165600
+DTSTART:20201019T000000
+SUMMARY:[Event] Vorkurs - Vorkurs Mathematik
+DESCRIPTION:Titel: Vorkurs Mathematik\nVeranstaltung: [Event] Vorkurs\nSprecher: Peter Pfaffelhuber
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Räumen des Mathematischen Instituts, Ernst-Zermelo-Straße 1
+DTSTAMP:20201001T171600
+DTSTART:20201026T093000
+SUMMARY:[Event] Einführungswoche - Einführungswoche
+DESCRIPTION:Titel: Einführungswoche\nVeranstaltung: [Event] Einführungswoche
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20201029T094700
+DTSTART:20201102T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Parallel spinors, Calabi-Yau manifolds, and special holonomy
+DESCRIPTION:Titel: Parallel spinors, Calabi-Yau manifolds, and special holonomy\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Bernd Ammann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, virtuell Euwe
+DTSTAMP:20201015T142100
+DTSTART:20201103T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Discontinuous Galerkin methods on arbitrarily shaped elements and their application to interface problems.
+DESCRIPTION:Titel: Discontinuous Galerkin methods on arbitrarily shaped elements and their application to interface problems.\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Emmanuil Georgoulis
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-30@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Virtueller SR 318 (Kasparov)
+DTSTAMP:20201103T170800
+DTSTART:20201109T161500
+DTEND:20201109T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Nu-Invariants of Extra Twisted Connected Sums
+DESCRIPTION:Titel: Nu-Invariants of Extra Twisted Connected Sums\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Sebastian Goette
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-33@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20201103T153300
+DTSTART:20201110T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Derivation of a bending plate model for nematic liquid-crystal elastomers via Gamma-convergence
+DESCRIPTION:Titel: Derivation of a bending plate model for nematic liquid-crystal elastomers via Gamma-convergence\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Max Griehl 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-35@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113500
+DTSTART:20201113T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Geometric Coding Theory
+DESCRIPTION:Titel: Geometric Coding Theory\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Jens Eberhardt (Bonn)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-42@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Virtual raum Lasker
+DTSTAMP:20201111T152400
+DTSTART:20201117T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Formoptimierung eindimensionaler Strukturen für den Haupteigenwert zweidimensionaler Gebiete
+DESCRIPTION:Titel: Formoptimierung eindimensionaler Strukturen für den Haupteigenwert zweidimensionaler Gebiete\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: David Berthold
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-44@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:BigBlueButton. Synchrone und asynchrone Angebote, siehe Webseite (auf Titel klicken)
+DTSTAMP:20201111T161400
+DTSTART:20201118T110000
+SUMMARY:[Event] Tag der offenen Tür - Tag der offenen Tür
+DESCRIPTION:Titel: Tag der offenen Tür\nVeranstaltung: [Event] Tag der offenen Tür
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113500
+DTSTART:20201120T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Bogomolov's inequality and its applications
+DESCRIPTION:Titel: Bogomolov's inequality and its applications\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Adrian Langer (Warschau)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-45@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR TF4 (Krush)
+DTSTAMP:20201111T161500
+DTSTART:20201120T141500
+SUMMARY:Oberseminar: Differentialgeometrie - Noncommutative differential forms 
+DESCRIPTION:Titel: Noncommutative differential forms \nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Boris Tsygan
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20201111T180600
+DTSTART:20201123T161500
+SUMMARY:Oberseminar: Differentialgeometrie - A geometric model for weight variations and wall-crossing on moduli spaces of parabolic Higgs bundles over the Riemann sphere
+DESCRIPTION:Titel: A geometric model for weight variations and wall-crossing on moduli spaces of parabolic Higgs bundles over the Riemann sphere\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Claudio Meneses
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-46@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: lasker
+DTSTAMP:20201120T114300
+DTSTART:20201127T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Exponential periods and o-minimality
+DESCRIPTION:Titel: Exponential periods and o-minimality\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Dr. Johan Commelin
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-31@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20201103T141800
+DTSTART:20201130T161500
+SUMMARY:Oberseminar: Differentialgeometrie - On SU(2)-bundles on 1-connected spin 7-manifolds
+DESCRIPTION:Titel: On SU(2)-bundles on 1-connected spin 7-manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Vera Gahlen
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-43@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Virtual Raum Lasker
+DTSTAMP:20201111T152700
+DTSTART:20201201T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - A bounded numerical solution with a small mesh size implies existence of a smooth solution to the Navier-Stokes equations 
+DESCRIPTION:Titel: A bounded numerical solution with a small mesh size implies existence of a smooth solution to the Navier-Stokes equations \nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Prof. Buyang Li (Hong Kong)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201211T125000
+DTSTART:20201204T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Enriques surface fibrations of even index
+DESCRIPTION:Titel: Enriques surface fibrations of even index\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: John Christian Ottem (Oslo)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-6@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR 404 (Lasker)
+DTSTAMP:20201205T100600
+DTSTART:20201207T160000
+SUMMARY:Oberseminar: Differentialgeometrie - Equivariant Cerf theory and perturbative SU(n) Casson invariants
+DESCRIPTION:Titel: Equivariant Cerf theory and perturbative SU(n) Casson invariants\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Boyu Zhang
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell:Lasker)
+DTSTAMP:20201209T104600
+DTSTART:20201208T133000
+SUMMARY:Oberseminar: Angewandte Mathematik - On variational models for martensitic inclusions
+DESCRIPTION:Titel: On variational models for martensitic inclusions\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Barbara Zwicknagl
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-37@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113600
+DTSTART:20201211T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - ..sth around Riemann-Zariski space of valuations
+DESCRIPTION:Titel: ..sth around Riemann-Zariski space of valuations\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Christian Dahlhausen (Heidelberg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-49@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20201209T170500
+DTSTART:20201211T150000
+DTEND:20201211T163000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Thousand and one genes: Next Generation Sequencing for neurodevelopmental disorders
+DESCRIPTION:Titel: Thousand and one genes: Next Generation Sequencing for neurodevelopmental disorders\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Miriam Schmidts
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-55@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Kasparov
+DTSTAMP:20201211T144200
+DTSTART:20201214T161500
+DTEND:20201214T174500
+SUMMARY:Oberseminar: Differentialgeometrie - Homogenität und Anisotropie in der ART
+DESCRIPTION:Titel: Homogenität und Anisotropie in der ART\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Tobias Oelschlegel
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-47@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION: Hörsaal II (virtuell:Lasker)
+DTSTAMP:20201202T115100
+DTSTART:20201215T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Linear and nonlinear methods for model reduction
+DESCRIPTION:Titel: Linear and nonlinear methods for model reduction\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Diane Guignard
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-38@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113700
+DTSTART:20201218T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - o-minimal homotopy theory
+DESCRIPTION:Titel: o-minimal homotopy theory\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Reid Barton (Pittsburgh)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-39@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113400
+DTSTART:20210108T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - S-unit equation and Chabauty
+DESCRIPTION:Titel: S-unit equation and Chabauty\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Alex J. Best (Boston)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20210108T200000
+DTSTART:20210111T160000
+SUMMARY:Oberseminar: Differentialgeometrie - Monopoles and Landau-Ginzburg Models
+DESCRIPTION:Titel: Monopoles and Landau-Ginzburg Models\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Donghao Wang
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-56@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell:Lasker)
+DTSTAMP:20210112T100300
+DTSTART:20210112T140000
+SUMMARY:Oberseminar: Angewandte Mathematik - Approximation of Integral Fractional Laplacian and Fractional PDEs via sinc-Basis
+DESCRIPTION:Titel: Approximation of Integral Fractional Laplacian and Fractional PDEs via sinc-Basis\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Ludwig Striet
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T113800
+DTSTART:20210115T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Algebraic cycles and refined unramified cohomology
+DESCRIPTION:Titel: Algebraic cycles and refined unramified cohomology\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Stefan Schreieder (Hannover)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-32@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR217 (Steinitz)
+DTSTAMP:20210110T193100
+DTSTART:20210115T141500
+SUMMARY:Oberseminar: Differentialgeometrie - Multiplication of BPS states in VOAs from string theory
+DESCRIPTION:Titel: Multiplication of BPS states in VOAs from string theory\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Fabian Kertels
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-60@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T105100
+DTSTART:20210118T083000
+DTEND:20210118T091500
+SUMMARY:Kolloquium - Numerical Analysis of Implicitly Constituted Incompressible Flow
+DESCRIPTION:Titel: Numerical Analysis of Implicitly Constituted Incompressible Flow\nSprecher: Dr. Pablo Alexei Gazca Orozco
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-61@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T105200
+DTSTART:20210118T110000
+DTEND:20210118T114500
+SUMMARY:Kolloquium - The benefits of smoothness in Isogeometric Analysis
+DESCRIPTION:Titel: The benefits of smoothness in Isogeometric Analysis\nSprecher: Dr. Espen Sande
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:bbb Konferenzraum 1 (PW Konferenz3210)
+DTSTAMP:20210107T235600
+DTSTART:20210118T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Simple Singularities and Their Symmetries
+DESCRIPTION:Titel: Simple Singularities and Their Symmetries\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Thomas Beisitzer
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-62@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T104300
+DTSTART:20210119T083000
+DTEND:20210119T091500
+SUMMARY:Kolloquium - Multispecies kinetic modelling and mathematical theory for physical applications
+DESCRIPTION:Titel: Multispecies kinetic modelling and mathematical theory for physical applications\nSprecher: Dr. Marlies Pirner
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-63@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T104600
+DTSTART:20210119T110000
+DTEND:20210119T114500
+SUMMARY:Kolloquium - Approximation of the Willmore energy by a discrete geometry model
+DESCRIPTION:Titel: Approximation of the Willmore energy by a discrete geometry model\nSprecher: Dr. Peter Gladbach
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-64@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T104700
+DTSTART:20210119T140000
+DTEND:20210119T144500
+SUMMARY:Kolloquium - Compensated Compactness and L1-estimates
+DESCRIPTION:Titel: Compensated Compactness and L1-estimates\nSprecher: Dr. Bogdan Raita
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal Rundbau, Albertstr. 21a
+DTSTAMP:20201020T134300
+DTSTART:20210119T193000
+DTEND:20210119T210000
+SUMMARY:Didaktisches Seminar - Mathematikunterricht in einer durch Digitalisierung geprägten Welt
+DESCRIPTION:Titel: Mathematikunterricht in einer durch Digitalisierung geprägten Welt\nVeranstaltung: Didaktisches Seminar\nSprecher: Dr. Frank Reinhold, StR (PH Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-65@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T104800
+DTSTART:20210122T083000
+DTEND:20210122T091500
+SUMMARY:Kolloquium - Numerical methods for conservation laws with nonlocal and discontinuous fluxes
+DESCRIPTION:Titel: Numerical methods for conservation laws with nonlocal and discontinuous fluxes\nSprecher: Dr. Adrian Ruf
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-40@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20210118T132700
+DTSTART:20210122T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Irregular fibrations and derived categories
+DESCRIPTION:Titel: Irregular fibrations and derived categories\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Luigi Lombardi (Milano)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-66@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T104900
+DTSTART:20210122T110000
+DTEND:20210122T114500
+SUMMARY:Kolloquium - Asymptotic Behavior of Gradient Flows and Nonlinear Spectral Theory
+DESCRIPTION:Titel: Asymptotic Behavior of Gradient Flows and Nonlinear Spectral Theory\nSprecher: Dr. Leon Bungert
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-67@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210113T105000
+DTSTART:20210122T140000
+DTEND:20210122T144500
+SUMMARY:Kolloquium - Space-time deep neural network approximations for high-dimensional PDEs
+DESCRIPTION:Titel: Space-time deep neural network approximations for high-dimensional PDEs\nSprecher: Dr. Diyora Salimova
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-29@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20210108T172900
+DTSTART:20210125T161500
+SUMMARY:Oberseminar: Differentialgeometrie - On certain lattice polarized K3 surfaces
+DESCRIPTION:Titel: On certain lattice polarized K3 surfaces\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Vincent Holst
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-73@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum vWang
+DTSTAMP:20210125T083500
+DTSTART:20210126T100000
+DTEND:20210126T110000
+SUMMARY:AG Geometrische Analysis - Minimisation of the Willmore functional under isoperimetric constraint
+DESCRIPTION:Titel: Minimisation of the Willmore functional under isoperimetric constraint\nVeranstaltung: AG Geometrische Analysis\nSprecher: Christian Scharrer (Warwick, UK) 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-68@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum vWang
+DTSTAMP:20210121T153700
+DTSTART:20210126T113000
+DTEND:20210126T123000
+SUMMARY:AG Geometrische Analysis - A Local Singularity Analysis for the Ricci flow
+DESCRIPTION:Titel: A Local Singularity Analysis for the Ricci flow\nVeranstaltung: AG Geometrische Analysis\nSprecher: Gianmichele Di Matteo (London, UK)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-71@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210123T104400
+DTSTART:20210126T140000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Modelling mRNA counts of single-cells and small pools of cells
+DESCRIPTION:Titel: Modelling mRNA counts of single-cells and small pools of cells\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Lisa Amrhein
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-57@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell:Lasker)
+DTSTAMP:20210121T130400
+DTSTART:20210126T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Colour Image Denoising: Numerical Approximation of the Constrained Total Variation Flow
+DESCRIPTION:Titel: Colour Image Denoising: Numerical Approximation of the Constrained Total Variation Flow\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Vera Jackisch
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-74@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller SR 125 Anderssen
+DTSTAMP:20210125T102100
+DTSTART:20210126T143000
+DTEND:20210126T160000
+SUMMARY:Oberseminar: Mathematische Logik - Modellbegleiter und die Definable Multiplicity Property (DMP)
+DESCRIPTION:Titel: Modellbegleiter und die Definable Multiplicity Property (DMP)\nVeranstaltung: Oberseminar: Mathematische Logik\nSprecher: Tobias Engler
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-69@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum vWang
+DTSTAMP:20210121T153800
+DTSTART:20210126T150000
+DTEND:20210126T160000
+SUMMARY:AG Geometrische Analysis - Prescribed curvature measure problem in hyperbolic space
+DESCRIPTION:Titel: Prescribed curvature measure problem in hyperbolic space\nVeranstaltung: AG Geometrische Analysis\nSprecher: Fengrui Yang (McGill, Canada)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-70@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum vWang
+DTSTAMP:20210121T154000
+DTSTART:20210126T163000
+DTEND:20210126T173000
+SUMMARY:AG Geometrische Analysis - Mobius Invariant Equations in Dimension Two
+DESCRIPTION:Titel: Mobius Invariant Equations in Dimension Two\nVeranstaltung: AG Geometrische Analysis\nSprecher: Han Lu (Rutgers, USA)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201105T114200
+DTSTART:20210129T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Cone structures and parabolic geometries
+DESCRIPTION:Titel: Cone structures and parabolic geometries\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Katharina Neusser (Masaryk, Brno)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20201029T094800
+DTSTART:20210201T161500
+SUMMARY:Oberseminar: Differentialgeometrie - tba
+DESCRIPTION:Titel: tba\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ksenia Fedosova
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-75@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20210128T094800
+DTSTART:20210201T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Spectral theory of infinite-volume hyperbolic manifolds
+DESCRIPTION:Titel: Spectral theory of infinite-volume hyperbolic manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ksenia Fedosova
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-58@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell:Lasker)
+DTSTAMP:20210126T130100
+DTSTART:20210202T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Singular Solutions and Adaptive Approximations of Total Variation Problems
+DESCRIPTION:Titel: Singular Solutions and Adaptive Approximations of Total Variation Problems\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Friedrich Wassmer 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-53@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:SR 404
+DTSTAMP:20201211T125500
+DTSTART:20210205T103000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - tba
+DESCRIPTION:Titel: tba\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Heather Macbeth (Fordham)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-51@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20201209T170800
+DTSTART:20210205T150000
+DTEND:20210205T163000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Multi-state models for inferring patient pathways from clinical routine data
+DESCRIPTION:Titel: Multi-state models for inferring patient pathways from clinical routine data\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Nadine Binder
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-77@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR318 (Kasparov)
+DTSTAMP:20210205T114700
+DTSTART:20210208T161500
+SUMMARY:Oberseminar: Differentialgeometrie - The Laplace on unbounded domains with mixed boundary conditions
+DESCRIPTION:Titel: The Laplace on unbounded domains with mixed boundary conditions\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Marius Amann
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-76@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II (virtuell: Lasker)
+DTSTAMP:20210202T093400
+DTSTART:20210209T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Variational convergences for functionals and differential operators depending on vector fields
+DESCRIPTION:Titel: Variational convergences for functionals and differential operators depending on vector fields\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Dr. Alberto Maione 
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-72@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210123T104700
+DTSTART:20210212T120000
+DTEND:20210212T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Use the Market’s Heartbeat to Predict Extreme Financial Risks
+DESCRIPTION:Titel: Use the Market’s Heartbeat to Predict Extreme Financial Risks\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Prof. Dr. Roxana Halbleib
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-52@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20201209T170900
+DTSTART:20210212T150000
+DTEND:20210212T163000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Deep Learning for Tabular Datasets
+DESCRIPTION:Titel: Deep Learning for Tabular Datasets\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Josif Grabocka
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-54@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:zoom
+DTSTAMP:20210211T131500
+DTSTART:20210212T150000
+SUMMARY:Oberseminar Algebra und Zahlentheorie - Complex rank 3 vector bundles on CP^5
+DESCRIPTION:Titel: Complex rank 3 vector bundles on CP^5\nVeranstaltung: Oberseminar Algebra und Zahlentheorie\nSprecher: Morgan Opie (Harvard)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-78@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vKasparov
+DTSTAMP:20210208T085300
+DTSTART:20210215T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Gelfand-Tripel
+DESCRIPTION:Titel: Gelfand-Tripel\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Sören Andres
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-81@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Sonderkolloquium – Angewandte Mathematik virtueller Konferenzraum 3 (Konferenz3210)
+DTSTAMP:20210219T105000
+DTSTART:20210225T150000
+DTEND:20210225T160000
+SUMMARY:Kolloquium - On the space of metrics with invertible Dirac operator
+DESCRIPTION:Titel: On the space of metrics with invertible Dirac operator\nSprecher: JunProf. Dr. Nadine Große
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-80@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:online: Zoom
+DTSTAMP:20210210T103700
+DTSTART:20210226T120000
+DTEND:20210226T133000
+SUMMARY:Seminar über Datenanalyse und Modellbildung - Deep Learning for Brain Signals
+DESCRIPTION:Titel: Deep Learning for Brain Signals\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Tonio Ball
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2020-2021-79@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vKasparov
+DTSTAMP:20210208T091800
+DTSTART:20210304T120000
+SUMMARY:Oberseminar: Differentialgeometrie - Masse von Sternen und die TOV-Gleichung
+DESCRIPTION:Titel: Masse von Sternen und die TOV-Gleichung\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Jonas Pleyer
+END:VEVENT
+END:VCALENDAR

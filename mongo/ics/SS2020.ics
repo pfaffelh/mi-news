@@ -1,0 +1,235 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:SS2020-5@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Veranstaltung ist abgesagt!
+DTSTAMP:20200316T161300
+DTSTART:20200406T090000
+DTEND:20200406T163000
+SUMMARY:[Event] Schnupperstudium - Schnupperstudium 2020 - abgesagt!
+DESCRIPTION:Titel: Schnupperstudium 2020 - abgesagt!\nVeranstaltung: [Event] Schnupperstudium\nSprecher: Organisation: Dr. Susanne Knies
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-9@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:.
+DTSTAMP:20200316T161900
+DTSTART:20200419T000000
+SUMMARY:[Event] Einstellung des Lehrbetriebs an der Universität Freiburg bis 19.04.2020 - Einstellung des Lehrbetriebs an der Universität Freiburg bis 19.04.2020
+DESCRIPTION:Titel: Einstellung des Lehrbetriebs an der Universität Freiburg bis 19.04.2020\nVeranstaltung: [Event] Einstellung des Lehrbetriebs an der Universität Freiburg bis 19.04.2020
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-1@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200218T095600
+DTSTART:20200423T170000
+DTEND:20200423T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-2@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200218T095600
+DTSTART:20200514T170000
+DTEND:20200514T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-10@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtuellen SR 125
+DTSTAMP:20200518T192700
+DTSTART:20200602T161500
+DTEND:20200602T170000
+SUMMARY:Vorstellungsvortrag für das GK 1821 "Cohomological Methods in Geometry" - Steenrod-Squares in differential cohomology
+DESCRIPTION:Titel: Steenrod-Squares in differential cohomology\nVeranstaltung: Vorstellungsvortrag für das GK 1821 "Cohomological Methods in Geometry"\nSprecher: Jonas Lenthe (Freiburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-7@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20200608T105700
+DTSTART:20200608T161500
+SUMMARY:Oberseminar: Differentialgeometrie - Twists of quaternionic Kähler manifolds
+DESCRIPTION:Titel: Twists of quaternionic Kähler manifolds\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Arpan Saha
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-11@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20200612T125000
+DTSTART:20200612T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Fields of definition of elliptic fibrations on covers of certain extremal rational elliptic surfaces
+DESCRIPTION:Titel: Fields of definition of elliptic fibrations on covers of certain extremal rational elliptic surfaces\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Victoria Cantoral Farfan
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-13@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, Hermann-Herder-Str. 10
+DTSTAMP:20200611T112900
+DTSTART:20200616T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - ODE methods in non-local equations
+DESCRIPTION:Titel: ODE methods in non-local equations\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Azahara DelaTorre Pedraza
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-3@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200218T095700
+DTSTART:20200625T170000
+DTEND:20200625T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-15@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:v404
+DTSTAMP:20200616T090300
+DTSTART:20200626T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - "(Ir)rationality of L-values"
+DESCRIPTION:Titel: "(Ir)rationality of L-values"\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Dr. Johannes Sprang (Regensburg)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-16@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller SR 226, HH-10
+DTSTAMP:20200626T110100
+DTSTART:20200630T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Shape optimization of convex, rotational symmetric domains for an eigenvalue problem arising in optimal insulation
+DESCRIPTION:Titel: Shape optimization of convex, rotational symmetric domains for an eigenvalue problem arising in optimal insulation\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Hedwig Keller
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-17@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 226, virtuell Euwe
+DTSTAMP:20200707T111200
+DTSTART:20200707T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - Multiscale simulation of bone tissue regeneration
+DESCRIPTION:Titel: Multiscale simulation of bone tissue regeneration\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: María-Angeles Pérez Ansón
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-12@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20200618T105800
+DTSTART:20200710T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Computing discrete invariants of varieties in positive characteristic
+DESCRIPTION:Titel: Computing discrete invariants of varieties in positive characteristic\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Ben Moonen
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-18@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtual SR226 (Euwe)
+DTSTAMP:20200708T121700
+DTSTART:20200714T141500
+SUMMARY:Oberseminar: Angewandte Mathematik - On fluctuations in particle systems and their links to partial differential equations
+DESCRIPTION:Titel: On fluctuations in particle systems and their links to partial differential equations\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Johannes Zimmer
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-21@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20200713T102300
+DTSTART:20200717T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - Motives of moduli spaces of bundles over a curve
+DESCRIPTION:Titel: Motives of moduli spaces of bundles over a curve\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Victoria Hoskins
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-22@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtual SR404 
+DTSTAMP:20200714T080600
+DTSTART:20200720T161500
+SUMMARY:Oberseminar: Differentialgeometrie -  On a stochastic version of transfer operators
+DESCRIPTION:Titel:  On a stochastic version of transfer operators\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Ksenia Fedosova
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-20@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtual SR226 (Euwe)
+DTSTAMP:20200720T125100
+DTSTART:20200721T141500
+DTEND:20200721T151500
+SUMMARY:Oberseminar: Angewandte Mathematik - Discretizations of the total variation for singular functions
+DESCRIPTION:Titel: Discretizations of the total variation for singular functions\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Antonin Chambolle
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-4@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200218T095700
+DTSTART:20200723T170000
+DTEND:20200723T180000
+SUMMARY:Kolloquium - 
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-23@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtueller Raum 404
+DTSTAMP:20200714T134700
+DTSTART:20200724T103000
+SUMMARY:Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie - K-Motives and Koszul duality
+DESCRIPTION:Titel: K-Motives and Koszul duality\nVeranstaltung: Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie\nSprecher: Jens Eberhardt
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-19@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:virtual SR226 (Euwe)
+DTSTAMP:20200707T112000
+DTSTART:20200728T141500
+DTEND:20200728T151500
+SUMMARY:Oberseminar: Angewandte Mathematik - Phase field approaches for tumour growth
+DESCRIPTION:Titel: Phase field approaches for tumour growth\nVeranstaltung: Oberseminar: Angewandte Mathematik\nSprecher: Harald Garcke
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-24@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200727T105100
+DTSTART:20200730T100000
+DTEND:20200730T111000
+SUMMARY:Workshop on Geometric Analysis - Limit spaces of Riemannian manifolds under integral curvature bounds
+DESCRIPTION:Titel: Limit spaces of Riemannian manifolds under integral curvature bounds\nVeranstaltung: Workshop on Geometric Analysis\nSprecher: Lothar Schiemanowski	
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-25@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Hörsaal II, Albertstr. 23b
+DTSTAMP:20200727T105400
+DTSTART:20200730T110000
+DTEND:20200730T120000
+SUMMARY:Workshop on Geometric Analysis - Bernstein and Spherical Bernstein theorems in codimension 2
+DESCRIPTION:Titel: Bernstein and Spherical Bernstein theorems in codimension 2\nVeranstaltung: Workshop on Geometric Analysis\nSprecher: Renan Assimos Martins (MPI Leipzig)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-26@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20200730T091900
+DTSTART:20200730T140000
+DTEND:20200730T150000
+SUMMARY:Workshop on Geometric Analysis - Prescribed Curvature Problems in Two Dimensions
+DESCRIPTION:Titel: Prescribed Curvature Problems in Two Dimensions\nVeranstaltung: Workshop on Geometric Analysis\nSprecher: Franziska Borer (Frankfurt)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-27@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20200730T090800
+DTSTART:20200730T163000
+DTEND:20200730T173000
+SUMMARY:Workshop on Geometric Analysis - The Willmore Flow of Tori of Revolution
+DESCRIPTION:Titel: The Willmore Flow of Tori of Revolution\nVeranstaltung: Workshop on Geometric Analysis\nSprecher: Marius Müller (Ulm)
+END:VEVENT
+BEGIN:VEVENT
+UID:SS2020-28@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:vSR 404
+DTSTAMP:20200911T154500
+DTSTART:20200917T161500
+DTEND:20200917T173000
+SUMMARY:Oberseminar: Differentialgeometrie - Symmetries of deformed c-map metrics and the HK/QK correspondence
+DESCRIPTION:Titel: Symmetries of deformed c-map metrics and the HK/QK correspondence\nVeranstaltung: Oberseminar: Differentialgeometrie\nSprecher: Danu Thung
+END:VEVENT
+END:VCALENDAR
