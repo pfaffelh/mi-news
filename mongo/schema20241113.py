@@ -297,7 +297,7 @@ vortragsreihe_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Vortragsreihe.",
-        "required": ["sichtbar", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_ default", "duration_default", "ort_en_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
+        "required": ["sichtbar", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_default", "duration_default", "ort_en_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
         "properties": {
             "sichtbar": {
                 "bsonType": "bool",
