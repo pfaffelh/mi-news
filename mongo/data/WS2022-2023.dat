@@ -1,0 +1,1336 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="4";
+SemA="2022-10-01";
+SemE="2023-03-31";
+Semestername="Wintersemester 2022/2023";
+Type="Info";
+VzA="2022-10-17";
+VzE="2023-02-11";
+}
+{
+Editors="10.5.30.2""10.5.30.3";
+ID="sfbtrr71";
+Members="sfbtrr71koll""OS-AM""OS-DiffGeo""PS-GeomAna""PS-NNF";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modellbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modellbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Bemerkungen="";
+Benutzer="junker";
+EMinute="0";
+EStunde="13";
+LastModified="2022-09-28 11:39:00";
+LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
+LfdNr="2";
+Ort="Hörsaal Weismann-Haus, Albertstr. 21a";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="";
+Titel="Vorstellung der Schwerpunktgebiete des Mathematischen Instituts<br>(für Bachelor-Studierende ab dem 3. Semester)";
+Type="Vortrag";
+Veranst="[Event]Vorstellung der Schwerpunktgebiete des Mathematischen Instituts";
+Zeit="2022-10-13 12:00:00";
+Zusammenf="Vorstellung der Schwerpunktgebiete des Mathematischen Instituts: Worum geht es in den Gebieten und welche Vorlesungen sollte man gehört haben, um eine Bachelor-Arbeit in dem Gebiet schreiben zu können?";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2022-10-10 13:10:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jonah Reuss";
+Titel="Yamabe Metriken mit Nullwertiger Skalarkrümmung ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-10-24 16:15:00";
+Zusammenf="Wir werden eine bestimmte\nEigenschaft auf nicht-kompakten Riemannschen Mannigfaltigkeiten definieren, welche die\nExistenz vollständiger Yamabe Metriken mit nullwertiger Skalarkrümmung impliziert.\nDarüber hinaus werden wir zeigen, dass diese Eigenschaft auf asymptotisch flachen\nMannigfaltigkeiten mit einer gewissen Abfallsrate für die Skalarkrümmung immer erfüllt\nist. Zum Abschluss dieses Vortrags werden wir einen Ausblick zur Gültigkeit dieser\nEigenschaft auf asymptotisch lokal flachen Mannigfaltigkeiten geben.\n";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-10-21 10:53:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="7";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Daniel Burkhardt";
+Titel="Shape recognition in 3D point clouds";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-10-25 14:15:00";
+Zusammenf="Used in many applications such as 3D-vision, logistics, and mapping, the point cloud has become one of the most important data types in recent years.\nHowever, due to their nature of being unstructured and unordered data, we face difficulties while processing them e.g. for shape recognition purposes.\nOur goal will be to develop techniques to classify point clouds into a predefined number of shapes. We will tackle this problem with a machine-learning approach and provide three types of neural networks operating on point clouds. Furthermore, we will prove a version of the Universal Approximation Theorem for neural networks operating on point clouds to mathematically prove the foundation of one of our neural network types.\n\nLastly, we will extract information on the data by describing some geometric invariances of the shapes to classify for. We will present our results, and the difficulties we faced as well as provide some tips on how to overcome them and give suggestions for future work and improvement. \n\nThe talk is suitable for anyone who has finished the basic mathematic lectures. It is of use to know the fundamentals of machine learning but we will briefly revise all the definitions and concepts necessary.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-10-21 12:46:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="10";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Francesco Gallinaro";
+Titel="Dividing lines in positive model theory ";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-10-25 14:30:00";
+Zusammenf="Positive logic is first-order logic where formulas are built without negation and using only existential quantifiers. By choosing the right languages to work with, this turns out to be a proper generalization of first-order logic. It is then natural to ask how much of usual model theory we can transfer to this setting; for example, one might ask about the dividing lines in classification theory, such as stability and simplicity: these notions, mostly introduced by Shelah, have been fruitfully used to classify theories with respect to various properties, for example the number of their models in a given cardinality or the existence of certain independence relations.\nIn this talk I will briefly introduce positive model theory and some of the ideas about dividing lines, before discussing some work in progress (joint with Anna Dmitrieva and Mark Kamsma) about their interplay. ";
+}
+{
+Bemerkungen="";
+Benutzer="junker";
+EMinute="0";
+EStunde="16";
+LastModified="2022-09-28 11:32:00";
+LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
+LfdNr="1";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="http://home.mathematik.uni-freiburg.de/didaktik/veranstaltungen.html#mathetage";
+Sprecher="";
+Titel="Mathematik-Tag für Schülerinnen und Schüler";
+Type="Vortrag";
+Veranst="[Event]Mathematik-Tag für Schülerinnen und Schüler";
+Zeit="2022-10-28 08:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmila Frei";
+EMinute="0";
+EStunde="12";
+LastModified="2022-10-11 12:24:00";
+LastModifiedBy="mfs.mathematik.privat (10.4.30.167)";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ruijie Yang (HU zu Berlin)";
+Titel="Higher multiplier ideals ";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-10-28 10:00:00";
+Zusammenf="For any Q-divisor D on a complex manifold X, there is a multiplier ideal associated to the pair (X,D), which is an ideal sheaf measuring the singularity of the pair and has many important applications in algebraic geometry. It turns out that this is only a small piece of a larger picture. In this talk, I will discuss the construction of a family of ideal sheaves indexed by an integer indicating the Hodge level, called higher multiplier ideals, such that the lowest level recovers the usual multiplier ideals. We describe their local and global properties: the local properties rely on Saito's theory of rational mixed Hodge modules and a small technical result from Sabbah's theory of twistor D-modules; while the global properties need Sabbah-Schnell's theory of complex mixed Hodge modules and Beilinson-Bernstein’s theory of twisted D-modules from geometric representation theory. I will also compare this with the theory of Hodge ideals recently developed by Mustata and Popa. If time permits, I will discuss some application to the singularity of theta divisors on principally polarized abelian varieties. This is joint work with Christian Schnell.\n";
+}
+{
+Bemerkungen="";
+Benutzer="kf1023";
+EMinute="";
+EStunde="";
+LastModified="2022-10-28 12:35:00";
+LastModifiedBy="jenga.mathematik.privat (10.5.30.49)";
+LfdNr="12";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ksenia Fedosova";
+Titel="Whittaker Fourier type solutions to differential equations arising from string theory";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-10-31 16:15:00";
+Zusammenf="In this talk, we find the full Fourier expansion of some special functions describing the graviton scattering in the string theory. We give a connection of the boundary condition on such Fourier series with convolution formulas on the divisor functions. Using\nmanipulations with divergent series, we obtain a class of\nformulas evaluating an infinite sum of divisor functions, including a\nsurprising equality\n$$\n\bsum d(|n_1|) d(|n_2|) (  (n_2-n_1) \blog( | n_1/n_2  |  ) + 2  ) =\n(2-\blog(4 \bpi^2 |n|) ) d(|n|),\n$$\nwhere $\bsum$ denotes the sum over all possible non-zero integers\n$n_1$ and $n_2$ such that $n_1+n_2=n$.\n\nThis is a joint work with Kim Klinger-Logan.";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="A. Huber-Klawitter";
+KeinKolloquium="false";
+LastModified="2022-10-20 13:12:00";
+LastModifiedBy="belchen.mathematik.privat (10.5.30.167)";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Loeffler";
+TMinute="45";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="15";
+Titel="(folgt)";
+Type="deleted";
+Zeit="2022-11-02 16:15:00";
+Zusammenf="(folgt)";
+}
+{
+Bemerkungen="";
+Benutzer="pfaffelh";
+EMinute="";
+EStunde="";
+LastModified="2022-11-02 11:20:00";
+LastModifiedBy="UNKNOWN (10.4.37.180)";
+LfdNr="13";
+Ort="Raum 232, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sebastian Stroppel";
+Titel="Grenzwertaussagen in chemischen Reaktionsnetzwerken";
+Type="Vortrag";
+Veranst="Oberseminar: Stochastik";
+Zeit="2022-11-04 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Thorsten Hertl";
+EMinute="45";
+EStunde="17";
+LastModified="2022-10-18 20:21:00";
+LastModifiedBy="alea.mathematik.privat (10.5.30.44)";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Thorsten Hertl";
+Titel="Concordances in Positive Scalar Curvature and Index Theory";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-11-07 16:15:00";
+Zusammenf="Scalar curvature is a local invariant of a Riemannian manifold. It measures\nasymptotically the volume growth of geodesic balls. Understanding the topological space of\nall positive scalar curvature metrics on a closed manifold has been an active field of study\nduring the last 30 years. So far, these spaces have been considered from an isotopy\nviewpoint. I will describe a new approach to study this space based on the notion of\nconcordance. To this end, I construct with the help of cubical set theory a comparison space\nthat only encodes concordance information and in which the space of positive scalar\ncurvature metrics canonically embeds. After the presentation of some of its properties, I will\nshow that the indexdifference factors over the comparison space using a new model of real\nK-theory that is based on pseudo Dirac operators.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-04 13:30:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="15";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Oliver Suchan";
+Titel="Rendering Models for Scattering from Specular Rough Surfaces";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-11-08 14:15:00";
+Zusammenf="Wave optics can be used to describe linearly polarized light that propagates in free\nspace in the form of waves. Thus, it enables to explain many optical phenomena such\nas interference, diffraction, dispersion and coherence. Surfaces with structures the\nsize of the wavelength of the incident light lead to such effects, which are essential to\nthe natural appearance.\n\nIn the scope of this work, the Helmholtz equation endowed with the impedance\nboundary condition is used to model sunlight incident on rough metallic surfaces.\nAfter proving unique solvability of this electromagnetic scattering problem, the\nboundary integral equation method is used to calculate such solutions for micro\nsurface patches. Numerically, this is done by means of the boundary element method,\nfor which a GPGPU implementation is introduced. This setup allows the local\ndescription of the aforementioned wave-optical phenomena, which are presented in\nthe form of BRDFs. The results are then used to assess one particular prior work.\nThere, approximate wave optics are employed for which it is not entirely clear how\nthese simplifications affect the quality. Although our results contain systematic\ndifferences, the overall agreement is good, confirming the validity of the more efficient\nprior work.\n";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2022-11-03 12:21:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="14";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="http://arxiv.org/abs/2209.10891";
+Sprecher="Amador Martin-Pizarro";
+Titel="Simplicity of the automorphism group of fields with operators";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-11-08 14:30:00";
+Zusammenf="In a recent preprint with T. Blossier, Z. Chatzidakis and C. Hardouin, we have adapted a proof of Lascar to show that certain groups of automorphisms of various theories of fields with operators are simple. It particularly applies to the theory of difference closed fields, which is simple and hence has possibly no saturated models in their uncountable cardinality. \n \n";
+}
+{
+Bemerkungen="";
+Benutzer="Commelin";
+EMinute="";
+EStunde="";
+LastModified="2022-11-07 16:40:00";
+LastModifiedBy="UNKNOWN (10.4.30.180)";
+LfdNr="20";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Reid Barton";
+Titel="Homotopy theory via o-minimal geometry";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-11-11 10:30:00";
+Zusammenf="O-minimality is a branch of model theory, with roots in real algebraic geometry, that provides a setting for \qtame topology\q. This talk will describe the construction of a homotopy theory of spaces based on a given o-minimal structure, and give a taste of how algebraic topology can be developed in this framework.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-04 13:36:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="17";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Evelyn Herberg ";
+Titel="Learning the time step size in Deep Neural Networks";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-11-15 14:15:00";
+Zusammenf="\n\nAbstract: Feature propagation in Deep Neural Networks (DNNs) can be associated to nonlinear discrete dynamical systems. Here, we are defining the discretization parameter (time step-size) to be an additional variable in the DNN. Hence, the time step-size can vary from layer to layer and is learned in an optimization framework. The proposed framework can be applied to any of the existing networks such as ResNet, DenseNet or Fractional-DNN. This framework is shown to help overcome the vanishing and exploding gradient issues. To illustrate the advantages, the proposed approach is applied to an ill-posed 3D-Maxwell's equation. ";
+}
+{
+Bemerkungen="";
+Benutzer="Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-11-11 14:21:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="24";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Omer Keshet";
+Titel="Failure of GCH on a Measurable Cardinal";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-11-15 14:30:00";
+Zusammenf="Let GCH hold in $V$, and let $\bkappa$ be a cardinal with a definable elementary embedding $j:V\brightarrow M$ such that ${\brm crit}(j)=\bkappa$, ${}^{\bkappa}M\bsubseteq M$ and $\bkappa^{++}=(\bkappa^{++})^{M}$ (in particular, $\bkappa$ is measurable). H. Woodin proved that there is a cofinality preserving generic extension in which $\bkappa$ stays measurable and GCH fails on it. This is achieved by using an Easton support iteration of Cohen forcings for having $2^{\balpha}=\balpha^{++}$ for every inaccessible $\balpha\bleq\bkappa$, and then adding an additional forcing to ensure the elementary embedding extends to the generic extension. Y. Ben Shalom proved in his thesis that this last forcing is unnecessary for the construction, and further extended the result to get $2^{\bkappa}=\bkappa^{+\bgamma}$ assuming $\bkappa^{+\bgamma}=(\bkappa^{+\bgamma})^{M}$, for any successor ordinal $1<\bgamma<\bkappa$. We will present these results in some detail, and further extend the result of Ben Shalom for $\bgamma=\bkappa+1$ assuming $\bkappa^{+\bkappa+1}=(\bkappa^{+\bkappa+1})^{M}$.";
+}
+{
+Bemerkungen="";
+Benutzer="junker";
+EMinute="0";
+EStunde="15";
+LastModified="2022-11-10 15:53:00";
+LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
+LfdNr="22";
+Ort="BigBlueButton (online)";
+Passwort=Geheim
+SeeAlsoURL="https://www.math.uni-freiburg.de/lehre/tag_der_offenen_tuer.html";
+Sprecher="";
+Titel="Tag der Offenen Tür";
+Type="Vortrag";
+Veranst="[Event]Tag der Offenen Tür";
+Zeit="2022-11-16 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-17 14:37:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="18";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Steve Wolff-Vorbeck";
+Titel="Polymorphic Uncertainty Quantification for the Additive Manufacturing of Elastic Rods.";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-11-22 14:15:00";
+Zusammenf="We derive comprehensive models enabling an efficient uncertainty quantification of mechanical\nproperties for additively manufactured rod-shaped elastic solids Orod = (0, L) × hS(x1) in terms\nof errors introduced within the manufacturing process. Here, we consider the fused-filamentfabrication process where the main sources of uncertainties are given by variations of material\nproperties caused by fluctuation of material density and geometric deviations of the printed object from the designed object, see [CKB+18, PVB+19, KRJM+18]. The 3d-printed objects investigated in this work are made of polycarprolactone, a bioresorbable, biocompatible, polymer-based\nmaterial, which is used in the engineering of patient specific bone scaffolds, see [VDF+19].\nWe then deduce a comprehensive modelling approach in three space dimensions for determining\nthe effective mechanical properties of randomly perturbed elastic rods considering aleatoric and\nepistemic uncertainties in the representation of the random perturbations. To do so, we use the\npolymorphic uncertainty model of fuzzy structural analysis from [MGB00] which includes the\nrepresentation of random perturbations as fuzzy random fields (e.g. [PRZ93, Kwa78]) and MonteCarlo simulations (e.g. [KNP20, CGST11]) combined with finite element methods.\nFurthermore, we introduce an one-dimensional surrogate model for rod-shaped structures Orod =\n(0, L) × hS with a fixed cross-section S ⊂ R\n2\n. By this the problem can be reduced to an onedimensional optimization problem requiring only the solution of a system of ordinary differential equations. This leads to a marked reduction of computational effort compared to the threedimensional model concerning the computation of mechanical properties of randomly perturbed\nelastic rods.";
+}
+{
+Bemerkungen="";
+Benutzer="Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-11-18 18:42:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="28";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Heike Mildenberger";
+Titel="Predicting with Diamond Sequences and with Ostaszewski Club Sequences";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-11-22 14:30:00";
+Zusammenf="An Ostaszewski club sequence is a weakening of Jensen's diamond.\nIn contrast to the diamond, the club does not imply the continuum hypothesis.\nNumerous questions about the club stay open, and we know only few models in which\nthere is just a club sequence but no diamond sequence. In recent joint\nwork with Shelah we found that a winning strategy for the completeness player\nin a bounding game on a forcing order does not suffice to establish the club\nin the extension.";
+}
+{
+Bemerkungen="";
+EMinute="15";
+EStunde="17";
+Einladender="A. Huber-Klawitter";
+KeinKolloquium="false";
+LastModified="2022-11-10 11:08:00";
+LastModifiedBy="belchen.mathematik.privat (10.5.30.167)";
+LfdNr="21";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="David Loeffler";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="15";
+Titel="\qL-functions, Euler systems, and the Birch-Swinnerton-Dyer conjecture\q";
+Type="Kolloquium";
+Zeit="2022-11-23 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-04 13:32:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="16";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Matteo Negri";
+Titel="Effective toughness of brittle composite laminates";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-11-24 11:30:00";
+Zusammenf="We consider a periodic layer of brittle elastic materials. As the layers become fine, the composite behaves elastically as a spatially homogeneous (averaged) material, whose stiffness modulus can be computed in terms of the relative volumes and the elastic modulus of the single layers. However, in the presence of a crack evolving through the layers it is still unclear if the quasi-static evolution is still represented in terms of a spatially homogeneous material with a crack. In particular not much is known on the effective (or averaged) toughness. Experimental measures, numerical simulations and theoretical estimates show surprising features of the effective toughness: it depends not only on the toughness and the size of the layers but also on their elastic moduli, and it may be even larger than the toughness of the layers (which is known as toughening effect).\nIn this framework, we provide a theoretical study and a couple of examples. We provide an abstract formula for the (possibly non-constant) effective toughness, then we prove convergence of the evolution and convergence of the energy identities, as the size of the layers vanishes. As a by-product we link the toughening effect to the micro-instabilities of the evolution, occurring at the interfaces between the layers of the composite. The two examples provide instead explicit calculations of the effective toughness, one of which presents a toughening effect.";
+}
+{
+Bemerkungen="";
+Benutzer="Kalck";
+EMinute="";
+EStunde="";
+LastModified="2022-11-11 13:40:00";
+LastModifiedBy="sogo.mathematik.privat (10.4.30.34)";
+LfdNr="23";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Evgeny Shinder (Bonn)";
+Titel="Homological Bondal-Orlov localization conjecture";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-11-25 10:30:00";
+Zusammenf="An old conjecture going back to Bondal and Orlov predicts a precise relation between the derived categories of a variety with rational singularities and its resolution of singularities. I will explain the proof of the surjectivity part of this conjecture, based on an argument from Hodge theory. This is joint work with Mirko Mauri.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-11-16 15:34:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="25";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Lasse Heje Petersen";
+Titel="Machine Learning about Implementable Portfolios";
+Type="Vortrag";
+Veranst="Seminar für Datenanalyse und Modellbildung";
+Zeit="2022-11-25 12:00:00";
+Zusammenf="We develop a framework that integrates trading-cost-aware portfolio optimization with machine learning (ML). While numerous studies use ML return forecasts to generate portfolios, their agnosticism toward trading costs leads to excessive reliance on eeting small-scale characteristics, resulting in poor net returns. We propose that investment strategies should be evaluated based on their implementable ecient frontier, and show that our method produces a superior frontier. The superior net-of-cost performance is achieved by integrating ML into the portfolio problem, learning directly about portfolio weights (rather than returns). Lastly, our model gives rise to a new measure of \qeconomic feature importance\q.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-28 12:51:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="29";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alberto Maione";
+Titel="Variational methods for a class of mixed local-nonlocal operators";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-11-29 14:15:00";
+Zusammenf="Problems driven by operators of mixed local and nonlocal type have\nraised a certain interest in the last few years, for example in\nconnection with the study of optimal animal foraging strategies. From a\npure mathematical point of view, the superposition of local and\nnonlocal operators, such as the Laplacian and the Fractional Laplacian,\ngenerates a lack of scale invariance that can lead to unexpected\ncomplications. Our goal is to prove the existence of solutions of\nsemilinear elliptic problems governed by these operators and dependent\non a real parameter: when the parameter is sufficiently large, our\nexistence results are known or applications of standard variational\nmethods, but when the real parameter is too small, the situation\nsuddenly becomes more delicate, especially since the operator is no\nlonger positive-definite, the naturally associated bilinear form does\nnot induce a scalar product nor a norm, the variational spectrum may\nhave negative eigenvalues, and even the maximum principle may fail. In\nthis talk, I show how to overcome these difficulties and obtain the\nexpected existence results.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmila Frei";
+EMinute="0";
+EStunde="12";
+LastModified="2022-11-29 11:50:00";
+LastModifiedBy="mfs.mathematik.privat (10.4.30.167)";
+LfdNr="31";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Raymond Cheng";
+Titel="Title: q-bic Hypersurfaces";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-12-02 10:00:00";
+Zusammenf="Let’s count: 1, 2, q+1. The eponymous objects are special projective hypersurfaces of degree q+1, where q is a power of the positive ground field characteristic. This talk will sketch an analogy between the geometry of q-bic hypersurfaces and that of quadric and cubic hypersurfaces. For instance, the moduli spaces of linear spaces in q-bics are smooth and themselves have rich geometry. In the case of q-bic threefolds, I will describe an analogue of result of Clemens and Griffiths, which relates the intermediate Jacobian of the q-bic with the Albanese of its surface of lines.";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2022-11-21 16:00:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Maximillian Rein";
+Titel="Diracoperatoren  mit magnetischer Verschlingung";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-12-05 16:15:00";
+Zusammenf="In der Quantenmechanik beschreibt der Aharonov-Bohm-Effekt, welche Auswirkungen ein magnetisches Vektorpotential auf interferierende Elektronenstrahlen hat, die sich außerhalb eines Magnetfeldes befinden. Bei der Verallgemeinerung diese Effekts gehen wir nun von Magnetfeldern in $ \bmathbb{S}^3 $ aus, die auf glatten, geschlossenen Kurven getragen sind. Der Vortrag befasst sich mit Dirac-Operatoren, die das Vektorpotential eines solchen Magnetfeldes beinhalten. Die Selbstadjungiertheit dieser Operatoren ist zu Anfang nur bei der Wahl einer Domain ersichtlich, die sich nicht in der Nähe des Magnetfeldes befindet. Es soll nun darum gehen, selbstadjungierte Erweiterungen zu finden, die das Verhalten nahe des Feldes beschreibt.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-04 13:35:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="19";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Morfe";
+Titel="TBA";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-12-06 14:15:00";
+Zusammenf="TBA";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-11-29 08:33:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="30";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Morfe";
+Titel="Zero Temperature Surface Growth and Some Strange Fully Nonlinear Equations ";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-12-06 14:15:00";
+Zusammenf="I will describe recent work on scaling limits of zero temperature (deterministic) surface growth models, motivated by KPZ universality and related to gradient \bphi interface models.  Chatterjee (2021) and Chatterjee and Souganidis (2021) showed that a smooth choice of the dynamics leads to the deterministic KPZ equation.  I will describe a class of examples with non-smooth dynamics, which, at large scales, are described by fully nonlinear parabolic equations with discontinuous coefficients.  Joint work with P.E. Souganidis.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-12-03 11:52:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="37";
+Ort="Raum 318, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Heike Mildenberger";
+Titel="Ramsey Theory and a New Forcing Order";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-12-06 14:30:00";
+Zusammenf="We use parametrized localized Ramsey spaces to\ndefine a new kind of forcing orders. There will be a generalized\ntype of fusion sequence for showing that the forcings preserve\n$\baleph_1$.\n";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2022-11-30 12:14:00";
+LastModifiedBy="UNKNOWN (10.23.8.6)";
+LfdNr="32";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Rahul Gupta";
+Titel="Bloch's formula with modulus";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-12-09 10:30:00";
+Zusammenf="The general idea of the talk will be to show connections between various invariants of a smooth variety. We shall begin the talk by recalling Bloch's formula for smooth varieties and unramified class field theory over finite fields. After discussing ramified class field theory, we shall explain the meaning of Bloch's formula with modulus. We shall then discuss the main idea of the proof of Bloch's formula with modulus over finite fields. The talk will be based on joint works with Prof. Amalendu Krishna.";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-12-02 15:49:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="36";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Adriani Nikolakopoulou";
+Titel="What works best? Methods for ranking competing treatments";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-12-09 12:00:00";
+Zusammenf="Systematic reviews often compare multiple interventions simultaneously. Data from such reviews form networks of interventions and are synthesized through network meta-analysis, a technique which is used to combine evidence coming from all possible paths within the network. The main output of network meta-analysis is the set of all relative effects between competing treatments. A treatment hierarchy is also often of interest and several ranking metrics exist. In this talk I will describe available methods for ranking treatments and a method we developed in order to attach ranking to a clinically relevant decision question. Our approach is a stepwise approach to express clinically relevant decision questions as hierarchy questions and quantify the uncertainty of the criteria that constitute them. I will demonstrate the approach using the R package nmarank, available in CRAN.";
+}
+{
+Bemerkungen="";
+Benutzer="schnitzer";
+EMinute="";
+EStunde="";
+LastModified="2022-12-07 09:29:00";
+LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LfdNr="38";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jonas Schnitzer";
+Titel="Hands on the Algebraic Index Theorem ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-12-12 16:15:00";
+Zusammenf="In my talk I want to give a summary of results from Fedosov/Tsygan/Nest on the so-called algebraic index theorem, which links symplectic deformation quantizations to topological invariants and reproduces the Atiyah-Singer Index Theorem for the canonical quantization of cotangent bundles. The talk includes a gentle introduction to deformation quantization.  ";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-12-02 12:23:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="35";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jakub Woznicki ";
+Titel="Non-Newtonian fluids with discontinuous-in-time stress tensor.";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-12-13 14:15:00";
+Zusammenf="We consider the system of equations describing the flow of incompressible fluids in bounded domain. In the considered setting, the Cauchy stress tensor is a monotone mapping and has asymptotically $(s-1)$-growth with the parameter $s$ depending on the spatial and time variable. We do not assume any smoothness of $s$ with respect to time variable and assume the log-H\b\q{o}lder continuity with respect to spatial variable. Such a setting is a natural choice if the material properties are instantaneous, e.g. changed by the switched electric field. We establish the long time and the large data existence of weak solution provided that $s \bge \bfrac{3d+2}{d+2}$.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-12-12 09:39:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="43";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jakub Skrzeczkowski";
+Titel="Non-local effects and degenerate Cahn-Hilliard equation";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-12-13 15:00:00";
+Zusammenf="I will discuss several situations when one has to perform\nlimit passage from non-local to local operators in the context of the\ndegenerate Cahn-Hilliard equation. This includes kinetic derivation of\nthe equation (arXiv:2208.01026, with C. Elbar, M. Mason, B. Perthame),\nfairly classical problem of passage to the limit from non-local to\nlocal equation (arXiv:2208.08955, with C. Elbar) and the same problem\nfor aggregation-diffusion system (in progress, together with J. A.\nCarrillo, C. Elbar). Not all of these problems are fully understood and\nto some of them, solutions are available only on the torus.";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="0";
+EStunde="18";
+LastModified="2022-12-01 16:05:00";
+LastModifiedBy="boccia.mathematik.privat (10.5.30.128)";
+LfdNr="34";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Lukas Braun";
+Titel="tba";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-12-19 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2022-12-07 09:27:00";
+LastModifiedBy="boccia.mathematik.privat (10.5.30.128)";
+LfdNr="39";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Lukas Braun (Freiburg)";
+Titel="ODD Riemannian metrics";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-12-19 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="15";
+EStunde="15";
+LastModified="2022-12-07 10:48:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="40";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Enzo Vitillaro (Perugia)";
+Titel="The wave equation with acoustic boundary conditions on non-locally reacting surfaces";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-10 14:15:00";
+Zusammenf="The subject of the talk are some recent results on the wave equation posed in a suitably regular open domain of R\nN , supplied\nwith an acoustic boundary condition on a part of the boundary and an homogeneous Neumann boundary condition on the\n(possibly empty) remaining part of it, contained in the recent joint book with Delio Mugnolo.\n\nIn this talk we shall focus on non–locally reacting boundaries without any Dirichlet boundary conditions. We first give well–\nposedness results in the natural energy space and regularity results. Hence we shall give precise qualitative results for solutions\nwhen Ω is bounded and r = 2, ρ = Const., k, δ ≥ 0. In particular we shall exhibit some physically inexplicable trivial solutions\nwhich make the problem not asymptotically stable, even with an effective damping, while the problem is asymptotically stable\nwhen the initial data are restricted to a 1-codimensional subspace, which is invariant under the flow.\nThis mathematical result motivated a re-thinking of the physical derivation of the Acoustic Wave Equation, found in most\ntexbooks in Theoretical Acoustic and Classical Mechanics, and of the specific Acoustic Boundary Conditions. The main outcome\nof this detailed analysis is described as follows. In both the Eulerian and the Lagrangian frameworks, due to Hooke’s law, the\nPDEs appearing in it need to be integrated with the integral constraint found in the stability analysis in order to correctly model\nthe physical problem. This fact was never observed in the existing literature";
+}
+{
+Bemerkungen="";
+Benutzer="junker";
+EMinute="";
+EStunde="";
+LastModified="2022-12-16 09:43:00";
+LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
+LfdNr="47";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Patrick Dondl";
+Titel="Informationsveranstaltung zu Auslandsaufenthalten";
+Type="Vortrag";
+Veranst="[Event]Informationsveranstaltung Auslandsaufenthalte";
+Zeit="2023-01-11 18:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kalck";
+EMinute="";
+EStunde="";
+LastModified="2022-12-20 16:21:00";
+LastModifiedBy="sogo.mathematik.privat (10.4.30.34)";
+LfdNr="48";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Nebojsa Pavic (Hannover)";
+Titel="Derived categories of singular projective varieties";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2023-01-13 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2023-01-06 10:02:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="50";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Hieber";
+Titel="Valuation and Risk Management of Guaranteed Minimum Death Benefits (GMDB) by Randomization";
+Type="Vortrag";
+Veranst="Seminar für Datenanalyse und Modellbildung";
+Zeit="2023-01-13 12:00:00";
+Zusammenf="Randomization is a technique in Finance to replace known quantities (like the time to maturity) by random variables. This sometimes gives moments or quantiles of the payoff in closed-form, avoiding any kind of integration, Fourier inversion or simulation algorithm. We apply this idea to insurance and Guaranteed Minimum Death Benefits (GMDB) where payoff dates are per se random. The remaining lifetime is expanded in terms of a Laguerre series while the financial market follows a regime switching model with two-sided phase-type jumps. For European-type GMDBs, we obtain the density of the payoff in closed form as a Laurent series. Payoff distributions of contracts with path-dependent guarantee features can be expressed in terms of solutions of Sylvester equations (=matrix equations of the form AX + XB =C).\n\nThis is joint work with Griselda Deelstra (Université Libre de Bruxelles).\n\nA paper version is available here: Deelstra, Griselda and Hieber, Peter, Randomization and the Valuation of Guaranteed Minimum Death Benefits, https://ssrn.com/abstract=4115505.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="15";
+EStunde="15";
+LastModified="2023-01-10 09:37:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="45";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Marret Wissel";
+Titel="Das Babuška-Paradoxon";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-17 14:15:00";
+Zusammenf="Das Babuška-Paradoxon ist beim linearen Biegen von Platten zu beobachten. Es tritt bei einer stückweise linearen Approximation eines gekrümmten Plattenrandes. Die Lösung auf dem somit definierten Gebiet konvergiert demnach nicht gegen die „echte“ Lösung. Eine Rolle spielt es somit insbesondere beim Berechnen numerischer Lösungen z.B. mit der Finite Elemente Methode. In diesem Vortrag werden wir eine mathematische Herleitung des Paradoxon nachvollziehen und versuchen dessen Auftreten durch numerische Experimente zu verifizieren. Hierbei werden wir jedoch einige Diskrepanzen zwischen unseren Ergebnissen und etablierter Theorie feststellen.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmila Frei";
+EMinute="";
+EStunde="";
+LastModified="2022-12-13 12:10:00";
+LastModifiedBy="mfs.mathematik.privat (10.4.30.167)";
+LfdNr="44";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Enrica Mazzon (Regensburg)";
+Titel="(Non-archimedean) SYZ fibrations for Calabi-Yau hypersurfaces";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2023-01-20 10:30:00";
+Zusammenf="The SYZ conjecture is a conjectural geometric explanation of mirror symmetry. Based on this, Kontsevich and Soibelman proposed a non-archimedean approach, which led to the construction of non-archimedean SYZ fibrations by Nicaise-Xu-Yu. A recent result by Li relates explicitly the non-archimedean approach to the classical SYZ conjecture.\n\nIn this talk, I will give an overview of this subject and I will focus on families of Calabi-Yau hypersurfaces in P^n. For this class, in collaboration with Jakob Hultgren, Mattias Jonsson and Nick McCleerey, we solve a non-archimedean conjecture proposed by Li and deduce that classical SYZ fibrations exist on a large open region of CY hypersurfaces.";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="0";
+EStunde="13";
+LastModified="2023-01-13 18:17:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="51";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Patrick Dondl ";
+Titel="A phase field model for soma-germline interactions in Drosophila oogenesis ";
+Type="Vortrag";
+Veranst="Seminar für Datenanalyse und Modellbildung";
+Zeit="2023-01-20 12:00:00";
+Zusammenf="In [1], we study the signals mediating the mechanical interaction between somatic epithelial cells and the germline of Drosophila. We discover that, during the development of the egg chamber, the transcriptational regulator “Eyes absent” (Eya) modulates the affinity of the apical surface of epithelial cells to the nurse cells and the oocyte in the egg chamber. Using a phase field model, we develop a quantitative, mechanical description of epithelial cell behavior and demonstrate that the spatio-temporal expression of Eya controls the epithelial cells’ shape and movement during all phases of Drosophila oogenesis to establish a suitable match between epithelial cells and germline cells. Further we show that differential expression of Eya in follicle cells also controls oocyte growth via cell-cell affinity.\n\n \n\n[1] V. Weichselberger, P. Dondl, A.-K. Classen (2022): Eya-controlled affinity between cell lineages drives tissue self-organization during Drosophila oogenesis. Nat Commun 13(1):6377. DOI: 10.1038/s41467-022-33845-1";
+}
+{
+Bemerkungen="";
+Benutzer="th1108";
+EMinute="0";
+EStunde="18";
+LastModified="2023-01-06 15:16:00";
+LastModifiedBy="alea.mathematik.privat (10.5.30.44)";
+LfdNr="33";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Agnese Mantione";
+Titel="Positive scalar curvature and 2-type: an analysis via the Gromov--Lawson--Rosenberg conjecture. ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2023-01-23 16:15:00";
+Zusammenf="I will talk about a conjecture that claims the PSC space of a (spin) manifold only depends on its 2-type. In particular, focusing on fundamental groups that satisfy the Gromov--Lawson--Rosenberg conjecture one can obtain positive results in certain cases. The latter conjecture claims that the non-vanishing of a certain cobordism invariant represents a total obstruction to positive scalar curvature. Index theory and surgery theory are at the base of the whole argument.";
+}
+{
+Bemerkungen="";
+Benutzer="Dondl";
+EMinute="15";
+EStunde="15";
+LastModified="2023-01-02 14:56:00";
+LastModifiedBy="bronto.mathematik.privat (10.4.12.211)";
+LfdNr="41";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="http://www.mis.mpg.de/ried/";
+Sprecher="Tobias Ried";
+Titel="A variational approach to the regularity of optimal transportation";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-24 14:15:00";
+Zusammenf="In this talk I want to present a purely variational approach to the regularity theory for the Monge-Ampère equation, or rather optimal transportation, introduced by Goldman—Otto. Following De Giorgi’s strategy for the regularity theory of minimal surfaces, it is based on the approximation of the displacement by a harmonic gradient, which leads to a one-step improvement lemma, and feeds into a Campanato iteration on the C^{1,\balpha}-level for the displacement.\n\nThe variational approach is flexible enough to cover general cost functions by importing the concept of almost-minimality: if the cost is quantitatively close to the Euclidean cost function |x-y|^2, a minimiser for the optimal transport problem with general cost is an almost-minimiser for the one with quadratic cost. This allows us to reprove the C^{1,\balpha}-regularity result of De Philippis—Figalli, while bypassing Caffarelli’s celebrated theory. (This is joint work with F. Otto and M. Prod’homme)";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="15";
+EStunde="15";
+LastModified="2023-01-19 12:40:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="52";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stefan Kater ";
+Titel="Algorithmic Solution of Elliptic Optimal Control Problems with Control Constraints by Means of the Semismooth Newton Method“";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-24 14:15:00";
+Zusammenf="I will consider the standard elliptic optimal control problem governed by the Poisson equation where the control space $U$ is chosen to be either $L^2(\bOmega)$ or $H^1_0(\bOmega)$. In particular, I will introduce an abstract framework that provides q-superlinear convergence of the semismooth Newton method and which can be applied to get this convergence rate for any of the choices of $U$. Further, semismoothness results and characterizations of the elements in the generalized differential will be done. The talk will focus on the infinite dimensional setting, but error estimates and numerical results will also be provided.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2023-01-23 09:03:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="56";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="https://wochenprogramm.mathematik.uni-freiburg.de/v.html?Semester=WS2022-2023&V=Oberseminar+Mathematische+Logik";
+Sprecher="Omer Keshet";
+Titel="A Proof of the Halpern-Läuchli Partition Theorem without Metamathematical Argumentation";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2023-01-24 14:30:00";
+Zusammenf="The Halpern-Läuchli Theorem is a fundamental Ramsey type principle concerning partitions of finite products of trees. Historically the proof of the theorem was given using meta-mathematical reasoning. We will show a direct proof given by S.A Argyros, V. Felouzis and V. Kanellopoulos that uses anly standard mathematical arguments. The theorem talks about finite dimensional products of trees, but (time permitting) we will give a discussion of the infinite dimensional case.";
+}
+{
+Bemerkungen="";
+Benutzer="soergel";
+EMinute="30";
+EStunde="11";
+LastModified="2023-01-24 12:17:00";
+LastModifiedBy="soertux.mathematik.privat (10.4.30.78)";
+LfdNr="58";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Jens Eberhardt (Bergische Universität Wuppertal)";
+Titel="Hyperbolic Localization and Extension Algebras";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2023-01-27 10:30:00";
+Zusammenf="A smooth projective variety with a nice torus action, such as a Grassmannian, can be decomposed into attracting cells (Białynicki-Birula stratification). In this talk we give a cohomological description of the extension algebra of constant sheaves on the attracting cells based on Drinfeld-Gaitsgory's account of Braden's hyperbolic localization functor. This algebra describes the gluing data of the category of constructible sheaves and, in the case of flag varieties, plays an important role in the representation theory of reductive algebraic groups/Lie algebras. ";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2023-01-20 12:31:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="55";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Christian Gourieroux";
+Titel="Generalized Covariance Estimator ";
+Type="Vortrag";
+Veranst="Seminar für Datenanalyse und Modellbildung";
+Zeit="2023-01-27 12:00:00";
+Zusammenf="We consider a class of semi-parametric dynamic models with iid errors, including the nonlinear mixed causal-noncausal Vector Autoregressive (VAR), Double-Autoregressive (DAR) and stochastic volatility models. To estimate the parameters characterizing the (nonlinear) serial dependence, we introduce a generic Generalized Covariance (GCov) estimator, which minimizes a residual-based multivariate portmanteau statistic. In comparison to the standard methods of moments, the GCov estimator has an interpretable objective function, circumvents the inversion of high-dimensional matrices, and achieves semi-parametric efficiency in one step. We derive the asymptotic properties of the GCov estimator and show its semi-parametric efficiency. We also prove that the associated residual-based portmanteau statistic is asymptotically chi-square distributed. The finite sample performance of the GCov estimator is illustrated in a simulation study. The estimator is then applied to a dynamic model of commodity futures.\nChristian Gourieroux & Joann Jasiak (2022): Generalized Covariance Estimator,Journal of Business & Economic Statistics, DOI:10.1080/07350015.2022.2120486";
+}
+{
+Bemerkungen="";
+Benutzer="JonasLenthe";
+EMinute="";
+EStunde="";
+LastModified="2023-01-23 18:12:00";
+LastModifiedBy="mancala.mathematik.privat (10.5.30.32)";
+LfdNr="57";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jonas Lenthe";
+Titel="Localization methods and the Witten genus";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2023-01-30 16:15:00";
+Zusammenf="In this talk I will give a brief introduction to equivariant cohomology and the localization formula. Applying the formula to infinite dimensional siutations one recovers interesting invariants like the A-hat genus or the Witten genus. In this representation one finds a natural explanation for the modularity of the Witten genus.";
+}
+{
+Bemerkungen="";
+Benutzer="Dondl";
+EMinute="15";
+EStunde="15";
+LastModified="2022-12-09 12:59:00";
+LastModifiedBy="tux00.mathematik.uni-freiburg.de (132.230.30.32)";
+LfdNr="42";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Mahdi Jaber";
+Titel="tba";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-31 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="15";
+EStunde="15";
+LastModified="2023-01-19 12:46:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="46";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Mahdi Jaber";
+Titel="Multiscale computer model of bone regeneration within scaffolds in T2DM";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-01-31 14:15:00";
+Zusammenf="\nBone has the fascinating ability to self-regenerate. However, under certain conditions, such as\nlarge bone defects, this ability is impaired. The treatment of large bone defects is a major\nclinical challenge. There are a number of existing treatments such as the addition of growth\nfactors or autologous bone grafting, but with many associated side effects (Roddy et al., 2018).\n3D printed scaffolds might help to overcome these challenges by providing guiding cues for\ntissue regeneration (Pobloth et al., 2018), however their design remains challenging and mainly\nbased on an experimental trial and error approach. Moreover, the treatment of large bone defects\ngets even more challenging when comorbid with Type 2 diabetes mellitus (T2DM). T2DM is a\nchronic metabolic disease known by the presence of elevated blood glucose levels that is\nassociated with reduced bone regeneration, high fracture risk and non-union. Currently, the\ntreatment of bone defects mostly depends on clinical imaging with some references to patients’\nphysiology and medical history (Wiss, D.A. and W.B. Stetson. 1996), but lacks details about\nthe patient-specific healing potential. Omics offer quantifiable biological indication for\npatients’ intrinsic bone regenerative capacity. In this study, in silico computer modelling\napproaches are used to 1) investigate the effect of scaffold design on the bone regeneration\noutcome, 2) understand the underlying mechanisms behind impaired bone regeneration in\nT2DM and 3) investigate the potential of using an omics informed computer model to predict\npatient-specific bone regeneration.\nA multiscale in silico approach was used that combines finite element and agent based models,\nwhich allow to quantify the mechanical environment within the defect region and to simulate\nthe cellular response. Using these models, bone regeneration was investigated in healthy and\nT2DM conditions, as well as within different scaffold designs. Moreover, the potential of\nomics-driven cellular activity rates to predict bone regeneration was investigated.\nOur validated models suggest that scaffolds with strut-like architecture are beneficial over\nscaffolds with gyroid architecture promoting cell migration towards the scaffold core, both in\nhealthy and T2DM conditions. Impaired MSC proliferation, MSC migration and osteoblast\ndifferentiation were identified as key players behind impaired bone regeneration in T2DM.\nOur results show that bone regeneration is influenced by scaffold architecture agreeing with\nexperimental studies showing different healing outcomes for different scaffold designs. The\nidentification of the key cellular activities behind impaired bone regeneration in T2DM should\nallow the optimization of the scaffold design to promote bone regeneration in co-morbid\npatients.";
+}
+{
+Bemerkungen="";
+Benutzer="bh987";
+EMinute="";
+EStunde="";
+LastModified="2023-01-25 08:46:00";
+LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
+LfdNr="59";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jun.-Prof. Dr. Katja Lenz (PH Heidelberg)";
+Titel="Brüche verstehensorientiert unterrichten - adaptiv und sprachsensibel";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2023-01-31 19:30:00";
+Zusammenf="Das Unterrichten in heterogenen Lerngruppen und die damit verbundenen Herausforderungen haben in den letzten Jahren eine erhöhte Aufmerksamkeit in der Schulpraxis und in der Forschung erfahren. Neben der fachlichen Leistung rücken zunehmend auch andere lernrelevante Bereiche der Heterogenität in den Blick, wie etwa die sprachlichen Voraussetzungen der Lernenden. Dass Sprache für den Lernerfolg in Mathematik eine zentrale Rolle spielt, ist vielfach belegt. Doch wo genau liegen die Unterschiede zwischen sprachlich schwachen und sprachlich starken Lernenden und wie können beide Lernendengruppen im Unterricht angemessen berücksichtigt werden? Dieser grundlegenden Frage soll exemplarisch für den Lerngegenstand Brüche nachgegangen werden. Im Vortrag wird die Entwicklung und Evaluation eines adaptiven sprachsensiblen Lernangebotes zur Förderung des konzeptuellen Wissens zu Brüchen beschrieben, das binnendifferenzierend im Unterricht eingesetzt wurde. Aus der Erprobung des Materials werden qualitative und quantitative Ergebnisse vorgestellt, die zeigen, wie sich die sprachliche Unterstützung auf sprachlich stärkere und sprachlich schwächere Lernende auswirkt. ";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmila Frei";
+EMinute="";
+EStunde="";
+LastModified="2023-01-04 16:02:00";
+LastModifiedBy="mfs.mathematik.privat (10.4.30.167)";
+LfdNr="49";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Aryaman Patel (Essen)";
+Titel="Uniformization of complex projective klt varieties by bounded symmetric domains";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2023-02-03 10:30:00";
+Zusammenf="Using classical results from Hodge theory and more contemporary ones valid for complex projective varieties with Kawamata log terminal (klt) singularities, we deduce necessary and sufficient conditions for such varieties to be uniformized by each of the four irreducible Hermitian symmetric spaces of non compact type. We also deduce necessary and sufficient conditions for uniformization by a polydisk, which generalizes a classical result of Simpson.";
+}
+{
+Bemerkungen="";
+Benutzer="th1108";
+EMinute="15";
+EStunde="18";
+LastModified="2022-11-16 16:34:00";
+LastModifiedBy="alea.mathematik.privat (10.5.30.44)";
+LfdNr="26";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dominik Gutwein";
+Titel="TBA";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2023-02-06 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="th1108";
+EMinute="0";
+EStunde="18";
+LastModified="2023-01-25 11:12:00";
+LastModifiedBy="alea.mathematik.privat (10.5.30.44)";
+LfdNr="27";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dominik Gutwein";
+Titel="Special submanifolds in Joyce’s generalised Kummer constructions";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2023-02-06 16:15:00";
+Zusammenf="Associative and coassociative submanifolds are the natural subobjects of 7-dimensional G2-manifolds. Besides having minimal volume among all submanifolds realising a fixed homology class, they play a prominent role in higher-dimensional gauge theory. In this talk we will focus on G2-manifolds arising as desingularisations of flat orbifolds\nand explain a method of constructing coassociatives inside them. The novelty of this construction is that the volume of these submanifolds tends to zero as the ambient manifold\napproaches its orbifold-limit.";
+}
+{
+Bemerkungen="TBA";
+Benutzer="coffi";
+EMinute="0";
+EStunde="15";
+LastModified="2023-01-19 12:49:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="53";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jörn Wichmann";
+Titel="";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-02-07 14:15:00";
+Zusammenf="TBA";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2023-01-26 15:16:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="60";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jörn Wichmann";
+Titel="An averaged space-time discretization of the stochastic p-Laplace system";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-02-07 14:15:00";
+Zusammenf="\nAbstract: In this talk we discuss the stochastic p-Laplace system. In\ngeneral non-linear as well as stochastic equations have limited\nregularization properties. Thus, the solution does not enjoy arbitrary\nhigh regularity. This leads to difficulties in the numerical\napproximation. We propose a new numerical scheme based on the\napproximation of time averaged values of the (unknown) solution.\nAdditionally, we provide a sampling algorithm to approximate the\nstochastic input. We verify optimal convergence of rate 1/2 in time and\n1 in space. This is a joint work with Lars Diening (Bielefeld) and\nMartina Hofmanová (Bielefeld).";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2023-01-31 19:45:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="61";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="https://wochenprogramm.mathematik.uni-freiburg.de/v.html?V=OS-ML";
+Sprecher="Maxwell Levine";
+Titel="Disjoint Stationary Sequences";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2023-02-07 14:30:00";
+Zusammenf="Disjoint stationary sequences were introduced by Krueger to study\nforcings that add clubs through stationary sets. We answer a question\nof his by obtaining disjoint stationary sequences on successive\ncardinals. This talk will survey the area developed by Krueger and\npresent the general idea of our new result.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="45";
+EStunde="15";
+LastModified="2023-01-19 12:50:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="54";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher=" Dominik Schneider";
+Titel="TBA";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-02-07 15:00:00";
+Zusammenf="TBA";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:01:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="62";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jannek LInk";
+Titel="Profinite Sets and Extremally Disconnected Sets";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-10 10:00:00";
+Zusammenf="This lecture is providing back ground knowledge for the Crash Course in the following week.";
+}
+{
+Bemerkungen="This lecture is providing back ground knowledge for the Crash Course in the following week.";
+Benutzer="huber";
+EMinute="30";
+EStunde="15";
+LastModified="2023-02-03 16:01:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="63";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Annette Huber";
+Titel="Ext-Groups";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-10 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:02:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="64";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 1";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-13 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="schnitzer";
+EMinute="";
+EStunde="";
+LastModified="2023-03-09 18:48:00";
+LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LfdNr="72";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Thomas Weber (University of Turin)";
+Titel="Hopf-Galois extension in noncommutative differential geometry";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2023-03-13 15:00:00";
+Zusammenf="In this seminar I give a gentle introduction to the theory of Hopf-Galois extensions and their role in noncommutative differential geometry. From a geometric point of view they correspond to principal bundles on noncommutative algebras with a Hopf algebra replacing the structure group. Principality of such a bundle can equivalently be phrased in terms of a noncommutative Atiyah sequence. We continue by discussing differential calculi on Hopf-Galois extensions, proving that in the faithfully flat case such a calculus amplifies to a graded Hopf-Galois extensions if and only if the corresponding Atiyah sequence is exact, as well. As an example we discuss the q-monopole fibration. The presentation is partially based on a collaboration with Aschieri, Fioresi and Latini.";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:00:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="65";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 2";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-14 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2023-02-23 15:28:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="70";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Klaus Deckelnick";
+Titel="Discrete hyperbolic curvature flow in the plane";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2023-03-14 14:15:00";
+Zusammenf="\n\nAbstract: Hyperbolic curvature flow is a geometric evolution equation that in the plane\ncan be viewed as the natural hyperbolic analogue of curve shortening flow.\nIt was proposed by Gurtin and Podio-Guidugli to model certain wave\nphenomena in solid-liquid interfaces. We propose a semidiscrete finite difference method\nfor the approximation of hyperbolic curvature flow and prove error bounds  in natural norms.\nWe also present numerical simulations, including the onset of singularities starting\nfrom smooth strictly convex initial data. This is joint work with Robert N\b\qurnberg (Trento).";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:02:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="66";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 3";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-15 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:02:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="67";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 4";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-16 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="11";
+LastModified="2023-02-03 16:03:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="68";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 5";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-17 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="30";
+EStunde="15";
+LastModified="2023-02-03 16:03:00";
+LastModifiedBy="UNKNOWN (10.23.8.13)";
+LfdNr="69";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://math.commelin.net/2023/condensed/";
+Sprecher="Reid Barton and Johan Commelin";
+Titel="Lecture 6";
+Type="Vortrag";
+Veranst="Crash Course on Condensed Mathematics";
+Zeit="2023-03-17 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Organisatoren: Guiseppe Ancona, Thomas Dreyfus, Philipp Habegger, Annette Huber, Amador Martin-Pizarro";
+Benutzer="huber";
+EMinute="30";
+EStunde="16";
+LastModified="2023-03-07 12:44:00";
+LastModifiedBy="yinsh.mathematik.privat (10.4.30.33)";
+LfdNr="71";
+Ort="IRMA Strasbourg";
+Passwort=Geheim
+SeeAlsoURL="https://indico.math.cnrs.fr/category/633/";
+Sprecher="Thomas Dreyfus, Ksenia Fedosova, Gerold Schefer";
+Titel="Rhine Seminar on Transcendence";
+Type="Vortrag";
+Veranst="[Event] Rhine Seminar on";
+Zeit="2023-03-23 10:30:00";
+Zusammenf="";
+}

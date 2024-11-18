@@ -169,7 +169,7 @@ if st.session_state.logged_in:
                 st.success("Daten des Vortrages geändert!")
                 st.rerun()
 
-    st.write(y["bearbeitet"])
+        st.write(y["bearbeitet"])
 
 else: 
     switch_page("NEWS")

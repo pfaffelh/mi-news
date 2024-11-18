@@ -1,0 +1,940 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="15";
+KTMinute="00";
+KTStunde="16";
+KWochentag="4";
+SemA="2024-10-01";
+SemE="2025-03-31";
+Semestername="Wintersemester 2024/2025";
+Type="Info";
+VzA="2023-10-14";
+VzE="2024-02-08";
+}
+{
+Editors="10.5.30.2""10.5.30.3";
+ID="sfbtrr71";
+Members="sfbtrr71koll""OS-AM""OS-DiffGeo""PS-GeomAna""PS-NNF";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modellbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modellbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Bemerkungen="";
+Benutzer="ok1029";
+EMinute="15";
+EStunde="18";
+LastModified="2024-10-01 12:07:00";
+LastModifiedBy="fibonacci.mathematik.privat (10.5.30.55)";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="https://aam.uni-freiburg.de/workshops/ruzicka-wang/index.html";
+Sprecher="";
+Titel="Nonlinear Partial Differential Equations in Freiburg";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 09:00:00";
+Zusammenf="Homepage von Analysis-Gruppe:\nhttp://home.mathematik.uni-freiburg.de/analysis/";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:02:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Lars Diening";
+Titel="A Journey with Michael Ruzicka";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 09:45:00";
+Zusammenf="In 1996, Professors Rajagopal and Ruzicka introduced a new model for electrorheological fluids. In this talk, I will reflect on how this model sparked the beginning of a rewarding scientific journey shared between Michael Ruzicka and myself. I will also present some of the subsequent advancements of those results.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:15:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Knut Smoczyk";
+Titel="Codimension two mean curvature flow of entire graphs";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 11:00:00";
+Zusammenf="We consider the graphical mean curvature flow of maps $f:\bmathbb{R}^m\bto\bmathbb{R}^n$, $m\bge 2$, and derive estimates on the growth rates of the evolved graphs, based on a new version of the maximum principle for properly immersed submanifolds that extends the well-known maximum principle of Ecker and Huisken. In the case of uniformly area decreasing maps $f:\bmathbb{R}^m\bto\bmathbb{R}^2$, we use this maximum principle to show that the graphicality and the area decreasing property are preserved. Moreover, if the initial graph is asymptotically conical at infinity, we prove that the normalized mean curvature flow smoothly converges to a self-expander. This is joint work with Andreas Savas-Halilaj. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:13:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="8";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Yoshiyuki Kagei";
+Titel=" On the stability of bifurcating periodic patterns of compressible viscous fluid equations";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 11:45:00";
+Zusammenf="In systems of equations describing the motion of viscous fluids, solutions exhibit various interesting spatiotemporal pattern dynamics. In this talk, we will consider the bifurcation and stability problem of spatially periodic vortex patterns in a rotating fluid system. We will present results on the bifurcation of stationary periodic patterns and the stability and instability of bifurcating periodic patterns when the Mach number is small. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:15:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Yuxin Ge";
+Titel="Conformal fill in by Poincaré-Einstein metrics in dimension 4";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 14:00:00";
+Zusammenf="Given a closed riemannian manfiold of dimension 3 $(M^3,[h])$, when will we fill in an asymptotically hyperbolic Einstein manifold of dimension 4 $(X^4,g_+)$ such that $r^2 g_+|_M =h$ on the boundary $M=\bpartial X$ for some defining function $r$ on $X^4$? This problem is motivated by the correspondance AdS/CFT in quantum gravity proposed by Maldacena in 1998 et comes also from the study of the structure of asymptotically hyperbolic Einstein manifolds.\nIn this talk, I discuss some existence and uniqueness issue of asymptotically hyperbolic Einstein manifolds in dimension 4. It is based on the recent works with Alice Chang. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:13:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="10";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Luigi Berselli";
+Titel=" Geometrical criteria and \qregular\q solutions to the Navier-Stokes equations";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 14:45:00";
+Zusammenf="In this talk, I will give an overview of results on linking the regularity of the solutions to the 3D Navier-Stokes equations and the geometry of the velocity/vorticity fields. In particular, starting from the celebrated criterion of Constantin and Fefferman (Indiana Univ. Math. J., 1993) about the vorticity direction, I will present some variations and improvement along various paths.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:16:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Julian Scheuer";
+Titel=" Stability for anisotropic curvature functionals";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 16:00:00";
+Zusammenf="Anisotropic integrands are used to model surface energies of inhomogeneous materials, where the energy density depends on the direction of the surface. Under suitable assumptions, minimisers of the associated functionals are known to be so-called Wulff shapes, those being certain convex bodies which induce a Minkowski norm on Euclidean space. The first variation being the anisotropic mean curvature, the anisotropic Alexandrov-type theorem says that a surface with constant anisotropic mean curvature must be the corresponding Wulff shape. There are various related rigidity results for other anisotropic curvature functionals and in this talk we discuss their stability: In case the curvature condition is “almost” satisfied, is the surface “close” to the Wulff shape? This is joint work with Xuwen Zhang (University of Freiburg). ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:19:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="12";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Luboš Pick";
+Titel="Regularity of functions in fractional Orlicz--Sobolev spaces";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 16:45:00";
+Zusammenf="Homogeneous fractional Orlicz--Sobolev spaces extend classical fractional Sobolev spaces governed by the Gagliardo--Slobodetskii seminorm, which were introduced in late 1950's and which are defined in terms of a non-integer smoothness parameter. They provide a natural framework for solutions to nonlocal elliptic problems associated with non-polynomial nonlinearities. This is achieved by replacing the power type integrability with an integrability condition expressed in terms of a Young function. Fractional Orlicz--Sobolev spaces were introduced in 2019 by Fernandez-Bonder and Salort, and their functional properties have been intensively investigated ever since, either out of the pure mathematical curiosity, or in connection with one or more of its many applications.\b\b\nLike for any type of Sobolev spaces, relations to other function spaces constitute a fundamental issue in the theory of fractional Orlicz--Sobolev spaces, as they provide a crucial tool for transferring regularity from the data to solution in related differential equations. Properties of functions in these spaces are governed by the smoothness parameter and the Young function.\b\b\nWe shall focus on various types of regularity of functions belonging to fractional Orlicz--Sobolev spaces in both the so-called subcritical and supercritical regimes. In the former regime we shall mainly concentrate on sharp embeddings into spaces defined in terms of global integrability properties of functions, called rearrangement-invariant spaces, while, in the latter regime, we shall call for finer properties of functions such as criteria for continuity, optimal moduli of continuity, or a control of mean oscillation expressed by a membership into spaces of generalized Campanato type.\b\b\nThe aptness of the notion of fractional Orlicz--Sobolev spaces which we adopt is supported by the fact that, unlikely in the classical case, setting the smoothness parameter as an integer exactly matches their counterparts for integer-order Orlicz--Sobolev spaces. Interestingly, customary techniques that have proved appropriate for classical fractional Sobolev spaces, such as characterizations of Hölder spaces in terms of Campanato spaces, Littlewood--Paley decompositions and Hardy-type inequalities fail to yield optimal conclusions for fractional Orlicz--Sobolev spaces. This discrepancy forces us to adopt novel approaches.\b\b\nIn the talk we shall give a survey of recent results on fractional Orlicz--Sobolev spaces obtained jointly with Angela Alberico, Andrea Cianchi and Lenka Slavíková. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:24:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="13";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Thomas Körber";
+Titel=" The Penrose inequality in extrinsic geometry";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-02 17:30:00";
+Zusammenf="The Riemannian Penrose inequality is a fundamental result in mathematical relativity. It has been a long-standing conjecture of G. Huisken that an analogous result should hold in the context of extrinsic geometry. In this talk, I will present recent work that resolves this conjecture: The exterior mass m of an asymptotically flat support surface $S\bsubset \bmathbb{R}$ with nonnegative mean curvature and outermost free boundary minimal surface D is bounded in terms of\n$$\nm\bge \bsqrt{\bfrac{|D|}{\bpi}}.\n$$\nIf equality holds, then the unbounded component of $S\bsetminus\bpartial D$ is a half-catenoid. To prove this result, we develop the theory of a weak foliation of the region above $S$ by minimal capillary surfaces supported on $S$ that emerges from $D$ and admits a nondecreasing quantity associated with its leaves. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:49:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="14";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Martin Křepela";
+Titel=" Homogeneous rearrangement-invariant function spaces";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 09:00:00";
+Zusammenf="Let us consider the dilation operator, defined in the usual way by\n$$\nD_r f(t)=f(rt),\bquad t>0,$$\nwhere $r>0$ is the dilation parameter and $f:[0,\binfty)\bto \bmathbb{R}$ is a Lebesgue-measurable function. With $p\bin [1,\binfty]$, a space $(X,\b|\bcdot\b|_X)$, consisting of functions defined on $[0,\binfty)$, is called $p$-homogeneous if the function norm $\b|\bcdot\b|_X$ satisfies\n$$\n\b|D_r f \b|_X=r^{−\bfrac1p}\b|f\b|_X$$\nfor every $f\bin X$ and $r>0$. We will focus on the homogeneity property within the class of rearrangement-invariant spaces, i.e., function spaces $X$ where the norm $\b|f\b|_X$ depends only on the measure of the level sets of $f$. More precisely, given a measurable $f:[0,\binfty)\bto R$, its nonincreasing rearrangement is given by\n$$\nf^∗(t)=inf{s>0; \blambda({x\bin [0,\binfty):|f(x)|>s})\ble t},\bquad t>0,$$\nwhere $\blambda$ stands for the Lebesgue measure. A Banach function space $(X,\b|\bcdot\b|_X)$ is then called rearrangement-invariant (r.i.) if $\b|f\b|_X=\b|g\b|_X$ whenever $f^∗=g^∗$. \n\nIn the talk, various properties of homogeneous r.i. spaces will be discussed. We will see that a typical example of a such space is the Lorentz $L^{p,q}$ space. However, the homogeneity property is not restricted only to this class of spaces, which will be shown by constructing other examples, for instance by using certain interpolation and extrapolation techniques.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:54:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="15";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Miles Simon";
+Titel="Ricci flow with $L^p$ bounded scalar curvature";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 09:45:00";
+Zusammenf="In this talk, we show that localised, weighted curvature integral estimates for solutions to the Ricci flow in the setting of a smooth four dimensional Ricci flow or a closed $n$-dimensional Kähler Ricci flow always hold. These integral estimates improve and extend the integral curvature estimates shown in an earlier paper by the speaker. If $M^4$ is closed and four dimensional, and the spatial $L^p$ norm of the scalar curvature is uniformly bounded for some $p>2$, for $t\bin [0,T)$, $T<\binfty$, then we show:\n\na) a uniform bound on the spatial $L^2$ norm of the Riemannian curvature tensor for $t\bin [0,T)$,\n\nb) uniform non-expanding and non-inflating estimates for $t\bin [0,T)$,\n\nc) convergence to an orbifold as $t\bto T$,\n\nd) existence of an extension of the flow to times $t\bin [0,T+\bsigma)$ for some $\bsigma >0$ using the orbifold Ricci flow.\n\nThis is joint work with Jiawei Liu. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:55:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="16";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Andreas Prohl";
+Titel=" A new convergent method to solve the Fokker-Planck equation in higher dimensions";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 11:00:00";
+Zusammenf="A recent topic in the area of numerics of PDEs is their approximation in higher space dimensions. While different strategies are available by now that are supported by motivating heuristics, it is that most of them lack a rigorous convergence theory. In the talk, I propose a new discretization approach for the Fokker-Planck equation, and prove its convergence. The method combines tools from stochastics and mathematical statistics, as does the related convergence theory. This is joint work with Max Jensen (UC London) and Fabian Merle (U Tübingen).";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 10:56:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="17";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Azahara DelaTorre Pedraza";
+Titel=" Non-degeneracy of the bubble in a fractional and singular 1D Liouville equation";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 11:45:00";
+Zusammenf="In this talk, we will focus on a stationary fractional nonlinear equation with exponential non-linearity defined on the whole real line in presence of a singular term. We will show the non-degeneracy of its solutions. This particular equation appears as a limit problem to physical models for the description of galvanic corrosion phenomena for simple electrochemical systems. We use conformal transformations to rewrite the linearized equation as a Steklov eigenvalue problem posed in a Lipschitz bounded domain. We conclude by proving the simplicity of the corresponding eigenvalue. The argument used to prove our main result can also be applied to prove that the second eigenvalue of Steklov’s problem on the ellipse is simple, as long as the ellipse is not a circle. The talk is based on a work done in collaboration with G. Mancini and A. Pistoia. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:04:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="18";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Arianna Passerini";
+Titel=" About the Onset of the Hopf Bifurcation for Convective Flows in Horizontal Annuli";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 14:00:00";
+Zusammenf="Experimental and numerical results can not yet settle whether, between horizontal coaxial cylinders, if the curvature is large, the first transition for convection is an exchange of stability or rather an Hopf bifurcation. We directly show that if the curvature tends to infinity, no periodic linear perturbation exists when the Rayleigh number is equal to the critical one for non-linear stability.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:05:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="19";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Chao Xia";
+Titel=" Rigidity on capillary constant mean curvature hypersurfaces";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 14:45:00";
+Zusammenf="In this talk, we introduce our recent developments, joint with Professor Guofang Wang, on capillary constant mean curvature (CMC) hypersurfaces, including a resolution to a question of Ros and Sternberg-Zumbrun on classification of stable capillary CMC hypersurfaces in a Euclidean ball via Minkowski-type formula, and a new proof of Alexandrov-Wente’s theorem on embedded capillary CMC hypersurfaces in a half-space via Heintze-Karcher-type inequality. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:07:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="20";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alex Kaltenbach";
+Titel="Fully-discrete finite element approximation of an unsteady electro-rheological fluid flow model: convergence and error analysis";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 16:00:00";
+Zusammenf="In this talk, a fully-discrete approximation of an unsteady electro-rheological fluid flow model employing an implicit Euler step in time and a discretely inf-sup-stable finite element approximation in space is examined for its well-posedness, stability, and (weak) convergence under minimal regularity assumptions on the data. Furthermore, numerical experiments are presented to complement the theoretical findings. ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:08:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="21";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Christian Ketterer";
+Titel=" Gromov-Hausdorff stability of tori under Ricci and integral scalar curvature bounds";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 16:45:00";
+Zusammenf="In this talk, we provide characterizations on the Gromov-Hausdorff stability to a flat torus from a closed Riemannian manifold with Ricci and integral scalar curvature bounds, in terms of harmonic maps and harmonic forms. Applications include a new topological stability result to a flat torus. This is a joint work with C. Ketterer, I. Mondello, R. Perales and C. Rigoni.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:09:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="22";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Gudrun Thäter";
+Titel=" Magma and aircraft hulls: Convection is fascinating";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-03 17:30:00";
+Zusammenf="Since 1992 I have been thinking about Fluid flow. My first publication was about the Boussinesq approximation of power-law materials. My co-authors chose it in order to apply well established tools to a slightly nonstandard problem - the flow of magma. One of them was Michael Růžička. A few years later we started to build convection models together with the right frame for their validation with Yoshiyuki Kagei and Michael Růžička. When collecting ideas for my habilitation I decided to let power-law materials convect again and presented model derivation and solvability theory in one volume. After that from 2006 on Arianna Passerini invited Michael Růžička and myself to study flow in annuli. Which seemed simple enough but keeps us interested and busy up to today. I invite the audience to revisit the Boussinesq approximation and the study of convection in different domains.";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:12:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="23";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Marius Müller";
+Titel=" Short closed geodesics and the Willmore energy";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-04 09:00:00";
+Zusammenf="In this talk we study the relation between two geometric quantities for smooth closed $2d$-surfaces $\bSigma$ -- the Willmore bending energy $W(\bSigma)$ and the minimal length of a closed geodesic $\bell(\bSigma)$. It turns out that for surfaces of Willmore energy less than $6\bpi$ (with normalized area), $\bell(\bSigma)$ is bounded below in terms of $W(\bSigma)$. The threshold of $6\bpi$ is optimal for such a result -- we will see that surfaces above this threshold can indeed have geodesic bottlenecks. Our inequality can be proved very easily if one assumes that the shortest closed geodesic has no self-intersections. The discussion of this assumption leads to intriguing insights. This is joint work with Fabian Rupp (Vienna) and Christian Scharrer (Bonn). ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:13:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="24";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Takayoshi Ogawa";
+Titel=" Endpoint maximal regularity and free boundary problem for the Navier-Stokes system in scaling invariant case";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-04 09:45:00";
+Zusammenf="We consider the free boundary problem of the incompressible Navier-Stokes system in the scaling critical Besov space. By translation into the Lagrange coordinate, the system can be considered on the fixed region without the convection term, while all the spatial derivatives are changed into the covariant derivatives involving higher order nonlinearity and the system becomes a quasi-linear system. To control such terms, we introduce endpoint maximal regularity of the solution and show the global existence of the free boundary problem for the Naiver-Stokes system near the half Euclidean space. This talk is based on a joint work with Senjo Shimizu (Kyoto University). ";
+}
+{
+Bemerkungen="";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2024-10-01 11:15:00";
+LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
+LfdNr="25";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Pengfei Guan";
+Titel=" Gauss curvature flow: it's variations and applications";
+Type="Vortrag";
+Veranst="Workshop 02.10.-04.10.2024";
+Zeit="2024-10-04 11:00:00";
+Zusammenf="Firey introduced the Gauss curvature flow in 1974 to model evolution of tumbling stones. Andrews proved the convergence to a round point in dimension two in 1999. The same result holds for in high dimensions, the flow converges to a soliton (Guan-Ni) and the soliton is sphere (Brendle-Choi-Daskalopoulos). The convergence relies on the estimates of entropy type quantity and related entropy points. This approach can be adapted to deal with variations of Gauss curvature type flows: inhomogeneous and anisotropy Gauss curvature flows, and application to the Lp-Minkowski type problems. We will also discuss a type of anisotropic flow arising from the $L^p$ Christoffel-Minkowski problem. ";
+}
+{
+Bemerkungen="";
+Benutzer="maximilian_stegemeyer";
+EMinute="";
+EStunde="";
+LastModified="2024-10-14 16:57:00";
+LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
+LfdNr="31";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Maximilian Stegemeyer";
+Titel="The Frobenius relation in string topology";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-10-21 16:15:00";
+Zusammenf="String topology is the study of algebraic operations on the homology of the free loop space of a closed manifold. Two prominent operations are the Chas-Sullivan product and the Goresky-Hingston coproduct. It is an important question what structure these two operations form together. We show that under a transversality condition a Frobenius-type relation for the product and the coproduct holds. As an application this yields the behaviour of the coproduct on product manifolds. This talk is based on joint work with Nathalie Wahl.\n";
+}
+{
+Bemerkungen=" \n\n";
+Benutzer="Ludmila Frei";
+EMinute="";
+EStunde="";
+LastModified="2024-10-22 08:32:00";
+LastModifiedBy="brigach.mathematik.privat (10.4.30.183)";
+LfdNr="36";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Tianxin Cai (Zhejiang University)";
+Titel="Mathematics and Arts";
+Type="Vortrag";
+Veranst="Projektseminar: Geometrische Analysis ";
+Zeit="2024-10-22 16:00:00";
+Zusammenf="Our civilization has been developed based on modern knowledge and tradition, or oriental and occidental, but there is an important third source which has often been neglected: interdisciplinary and intercultural inference and exchange. In this talk, Professor Cai will focus on the interplay between science and humanity and, in particular, the similarities between mathematics, arts, and daily life. Prof. Cai will demonstrate it through classical and modern paintings together with photographs that he has taken all around the world.  \n\nDr. Cai Tianxin is a mathematician, poet and essayist, an outstanding professor of Zhejiang University, China. He is the author of over 30 books of literature, academic and popular science works. His work has been translated and published into more than 20 languages, including 7 in English. He is a winner of the 2013 Naji Naaman Poetry Award (Beirut) and the 2019 Kadark Literature Award (Darka), the 2017 National Award of Science and Technology (Beijing) for his book Mathematical Legends and the 2024 National Award for Science Popularization, he is the only mathematician who won the prize awarded every 4 years.\n";
+}
+{
+Bemerkungen="";
+Benutzer="CP1072";
+EMinute="";
+EStunde="";
+LastModified="2024-09-25 11:51:00";
+LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
+LfdNr="1";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Birke-Johanna Weber (Universität Kiel)";
+Titel="Verbindung zwischen schulischer und akademischer Mathematik – Lehramtsaufgaben als Mittel zur Adressierung der doppelten Diskontinuität?";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2024-10-22 18:30:00";
+Zusammenf="Lehramtsstudierende zeigen häufig Schwierigkeiten, Verbindungen zwischen der akademischen\nMathematik, die sie an der Hochschule lernen, und der Schulmathematik, die sie später unterrichten\nsollen, herzustellen. Viele Hochschulen versuchen diesem bereits von Felix Klein (1908)\nbeschriebenen Problem der doppelten Diskontinuität durch den Einsatz professionsspezifischer\nÜbungsaufgaben zu begegnen. Diese „Lehramtsaufgaben“ adressieren explizit Verbindungen\nzwischen Schul- und Hochschulmathematik und sollen dazu beitragen, dass Studierende\nHochschulmathematik als relevant für die Schulmathematik wahrnehmen. In dem Vortrag wird\nanhand einer Fragebogenstudie erörtert, inwiefern Lehramtsaufgaben einer wahrgenommenen\ndoppelten Diskontinuität entgegenwirken können. Ergänzend werden Ergebnisse einer\nInterviewstudie vorgestellt zu der Frage, was genau Lehramtsaufgaben für Studierende relevant\nmacht, sodass zusammenfassend diskutiert werden kann, welche Ansatzpunkte sich zur\nWeiterentwicklung professionsspezifischer Lerngelegenheiten zur Adressierung der doppelten\nDiskontinuität ableiten lassen.";
+}
+{
+Bemerkungen="";
+Benutzer="Brackenhofer";
+EMinute="";
+EStunde="";
+LastModified="2024-10-21 10:05:00";
+LastModifiedBy="tikal.mathematik.privat (10.4.30.72)";
+LfdNr="35";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Christoph Brackenhofer";
+Titel="Semi-algebraic differential forms";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2024-10-25 10:30:00";
+Zusammenf="Modifying a construction by Hardt, Lambrechts, Turchin and Volić, we will present ($\bmathbb{Q}$-)semi-algebraic differential forms and explain connections to period numbers.";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="0";
+EStunde="13";
+LastModified="2024-10-23 15:50:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="41";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fabian Fuchs (Universität Bielefeld)";
+Titel="A comparison principle based on couplings of partial integro-differential operators";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2024-10-25 12:00:00";
+Zusammenf="In this talk, we present a new perspective on the comparison principle for viscosity solutions of Hamilton-Jacobi (HJ), HJ-Bellman, and HJ-Isaacs equations. Our approach innovates in three ways: (1) We reinterpret the classical doubling-of-variables method in the context of second-order equations by casting the Ishii-Crandall Lemma into a test-function framework. This adaptation allows us to effectively handle non-local integral operators, such as those associated with Lévy processes. (2) We translate the key estimate on the difference of Hamiltonians in terms of an adaptation of the probabilistic notion of couplings, providing a unified approach that applies to both continuous and discrete operators. (3) We strengthen the sup-norm contractivity resulting from the comparison principle to one that encodes continuity in the strict topology. We apply our theory to derive well-posedness results for partial integro-differential operators. In the context of spatially dependent Lévy operators, we show that the comparison principle is implied by a Wasserstein-contractivity property on the Lévy jump measures.\n\nJoint work with Serena Della Corte (TU Delft), Richard Kraaij (TU Delft) and Max Nendel (University of Bielefeld)";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2024-10-24 10:58:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="29";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Bernd Ammann (Regensburg)";
+Titel="Self-adjoint codimension 2 boundary conditions for Dirac operators";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-10-28 16:15:00";
+Zusammenf="Joint work with Nadine Große.\n\nLet $N$ be an oriented compact submanifold in an oriented complete Riemannian manifold $M$. We assume that $M\bsetminus N$ is spin and carries a unitary line bundle $L$. We study the associated twisted Dirac operator, a priori defined on smooth section with compact support in the interior of $M\bsetminus N$. We are interested in self-adjoint extensions of this operator.\n\nIf $N$ has codimension~$1$, then this is the well-studied subject of classical\nboundary values for Dirac operators. If $N$ has codimension at least $3$, or if $N$ has codimension $2$ and if $L$ has trivial monodromy around $N$, then we obtain a unique self-adjoint extension which coincides with the classical self-adjoint Dirac operator on $M$. The submanifold $N$ is thus ``invisible''.\n\nThe main topic of this talk is thus the case of codimension~$2$ with non-trivial monodromy. We will classify all selfadjoint extensions.\n\nThis work is motivated by work of Portman, Sok and Solovej, who treated the special case of $M=S^3$ with a link, a case important in mathematical physics.\nWe thank Boris Botvinnik and Nikolai Saveliev for stimulating discussions about this topic.";
+}
+{
+Bemerkungen="";
+Benutzer="sk1425";
+EMinute="15";
+EStunde="15";
+LastModified="2024-10-22 15:51:00";
+LastModifiedBy="UNKNOWN (10.23.0.43)";
+LfdNr="40";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Philipp Reiter (TU Chemnitz)";
+Titel="On a Complete Riemannian Metric on the Space of Closed Embedded Curves";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2024-10-29 14:15:00";
+Zusammenf="On a Complete Riemannian Metric on the Space of Closed Embedded Curves\njoint work with Elias Döhrer and Henrik Schumacher (Chemnitz University\nof Technology / Univ. of Georgia)\n\nIn pursuit of choosing optimal paths in the manifold of closed embedded\nspace curves we introduce a Riemannian metric which is inspired by a\nself-contact avoiding functional, namely the tangent-point potential.\nThe latter blows up if an embedding degenerates which yields infinite\nbarriers between different isotopy classes.\n\nFor finite-dimensional Riemannian manifolds the Hopf—Rinow theorem\nstates that the Heine—Borel property (bounded sets are relatively\ncompact), geodesic completeness (long-time existence of geodesic\nshooting), and metric completeness of the geodesic distance are\nequivalent. Moreover, it states that existence of length-minimizing\ngeodesics follows from each of these statements. Albeit the Hopf—Rinow\ntheorem does not hold true in this generality for infinite-dimensional\nRiemannian manifolds, we can prove all its four assertions for a\nsuitably chosen Riemannian metric on the space of closed embedded\ncurves.\n";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="16";
+Einladender="David Criens";
+KeinKolloquium="false";
+LastModified="2024-10-22 13:02:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="37";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Nina Gantert (TUM)";
+TMinute="0";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="Biased random walk on dynamical percolation";
+Type="Kolloquium";
+Zeit="2024-11-07 15:00:00";
+Zusammenf="As an example for a random walk in random environment, we study biased random walk for dynamical percolation on the d-dimensional lattice. We establish a law\nof large numbers and an invariance principle for this random walk using regeneration times.\nMoreover, we verify that the Einstein relation holds, and we investigate the speed of the walk\nas a function of the bias. While for d = 1 the speed is increasing, we show that in general this\nfails in dimension d ≥ 2. As our main result, we establish two regimes of parameters, separated\nby a critical curve, such that the speed is either eventually strictly increasing or eventually\nstrictly decreasing. This is in sharp contrast to the biased random walk on a static supercritical\npercolation cluster, where the speed is known to be eventually zero.\n\nBased on joint work with Sebastian Andres, Dominik Schmid and Perla Sousi.";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2024-10-14 16:54:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="26";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Charlotte Dietze (LMU)";
+Titel="Weyl formulae for some singular metrics with application to acoustic modes in gas giants";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-11-11 16:15:00";
+Zusammenf="We prove eigenvalue asymptotics of the Laplace-Beltrami operator for certain singular Riemannian metrics. This is motivated by the study of propagation of soundwaves in gas planets.  This is joint work with Yves Colin de Verdière, Maarten de Hoop and Emmanuel Trélat.";
+}
+{
+Bemerkungen="";
+Benutzer="sk1425";
+EMinute="15";
+EStunde="15";
+LastModified="2024-11-07 08:54:00";
+LastModifiedBy="fili.mathematik.privat (10.4.12.100)";
+LfdNr="46";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Florian Theil (Warwick)";
+Titel="Rigorous justification of kinetic equations: Recent progress and finite size corrections";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2024-11-12 14:15:00";
+Zusammenf="The justification of kinetic equations for long times is a longstanding mathematical challenge; in fact, Hilbert's 6th problem refers specifically to the Boltzmann equation. In my talk I will discuss the case of hard spheres and the very recent progress by Deng & Hani. Finally, I will present results on finite size corrections.";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2024-11-07 13:38:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="44";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Charlotte Bartnick";
+Titel="On (non-)elimination of imaginaries";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2024-11-12 14:30:00";
+Zusammenf="Imaginaries are a way of introducing canonical representatives of equivalence classes. Given a theory, an important question is whether equivalence classes are already coded in the models of the theory so that one can avoid working with imaginaries (i.e. we say that the theory then eliminates imaginaries).\n\nIn this talk, we want to present a criterion that yields the failure of elimination of imaginaries due to equivalence classes that arise as cosets of subgroups. We will illustrate the main ideas by considering the example of the theory of beautiful pairs of algebraically closed fields. Pillay and Vassiliev proved that this theory does not have elimination of imaginaries. In this talk, we will present a different proof that generalizes to more theories of fields.";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="";
+EStunde="";
+LastModified="2024-11-13 09:58:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="48";
+Ort="Raum 232, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Nicolai Palm (LMU München) ";
+Titel="Central limit theorems under non-stationarity via relative weak convergence";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2024-11-15 13:00:00";
+Zusammenf="Traditional central limit theorems (CLTs) have limited applicability to non-stationary sequences, restricting their use in real-world, dynamic data contexts. We introduce relative weak convergence, a generalisation of classical weak convergence that provides a natural framework for CLTs in non-stationary settings. Within this framework we can prove multivariate, uniform, and sequential relative CLTs for dynamic sequences under general assumptions. These results bridge a critical gap in asymptotic statistics, enabling researchers to rigorously study the asymptotic behaviour of dynamic sequences that do not satisfy traditional assumptions of stationarity. ";
+}
+{
+Bemerkungen="";
+Benutzer="maximilian_stegemeyer";
+EMinute="";
+EStunde="";
+LastModified="2024-10-30 16:49:00";
+LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
+LfdNr="28";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Zhen Gao (Universität Augsburg)";
+Titel="Symplectic topology and rectangular peg problem";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-11-18 16:15:00";
+Zusammenf="The rectangular peg problem, an extension of the square peg problem which has a long history, is easy to outline but challenging to prove through elementary methods. I will report the recent progress on the existence and multiplicity results, utilizing advanced concepts from symplectic topology, e.g. J-holomorphic curves and Floer theory.";
+}
+{
+Bemerkungen="";
+Benutzer="nov25";
+EMinute="";
+EStunde="";
+LastModified="2024-10-23 15:39:00";
+LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LfdNr="42";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Misha Temkin";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-11-25 16:00:00";
+Zusammenf="TBA";
+}
+{
+Bemerkungen="";
+Benutzer="junker";
+EMinute="";
+EStunde="";
+LastModified="2024-11-06 15:14:00";
+LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
+LfdNr="47";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Moritz Hallbauer";
+Titel="Omega-kategorische Ringe";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2024-11-26 14:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2024-10-22 15:25:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="39";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Lukas Hoffmann";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-12-02 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2024-11-05 12:31:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="43";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stefan Ludwig";
+Titel="Model theory of difference fields with an additive character on the fixed field";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2024-12-03 14:30:00";
+Zusammenf="Motivated by work of Hrushovski on pseudofinite fields with an additive character we investigate the theory ACFA+ which is the model companion of the theory of difference fields with an additive character on the fixed field working in (a mild version of) continuous logic. Building on results by Hrushovski we can recover it as the characteristic 0 asymptotic theory of the algebraic closure of finite fields with the Frobenius-automorphism and the standard character on the fixed field. We characterise 3-amalgamation in ACFA+ and obtain that ACFA+ is simple as well as a description of the connected component of the Kim-Pillay group. If time permits we present some results on higher amalgamation.\n";
+}
+{
+Bemerkungen="";
+Benutzer="CP1072";
+EMinute="";
+EStunde="";
+LastModified="2024-09-25 11:54:00";
+LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Patrick Bronner (Friedrich Gymnasium, Freiburg)";
+Titel="Apps, Projekte und KI-Tools für den digitalen Mathematikunterricht";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2024-12-03 18:30:00";
+Zusammenf="Im Zeitalter der Künstlichen Intelligenz sollten digitale Medien im Mathematikunterricht nicht nur zur Reproduktion von Wissen, sondern vor allem zur Förderung und Stärkung von Kompetenzen eingesetzt werden. Dazu ist die Verknüpfung von mobilen Endgeräten mit individuellen, forschenden, kreativen und projektartigen Arbeitsaufträgen unerlässlich. Im Vortrag werden zunächst praktische Hinweise zum effektiven Einsatz digitaler Medien im Mathematikunterricht gegeben und einzelne Apps vorgestellt, die den Unterricht bereichern können. Anschließend wird auf die Bedeutung einer projektorientierten Lernkultur und den gezielten Einsatz von künstlicher Intelligenz eingegangen. Langfristiges Ziel eines digital angereicherten Mathematikunterrichts ist die\nEtablierung einer neuen Lern- und Prüfungskultur, die es den Schülerinnen und Schülern ermöglicht, ihre Fähigkeiten in einer dynamischen und vernetzten Welt optimal zu entfalten.";
+}
+{
+Bemerkungen="";
+Benutzer="maximilian_stegemeyer";
+EMinute="";
+EStunde="";
+LastModified="2024-10-14 17:18:00";
+LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
+LfdNr="32";
+Ort="Raum 414, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stephan Mescher (Uni Halle)";
+Titel="TBA";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-12-05 10:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2024-11-04 12:01:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="45";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Pierre Touchard (TU Dresden)";
+Titel="About generalized indiscernibles and dividing lines";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2024-12-10 14:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="maximilian_stegemeyer";
+EMinute="0";
+EStunde="12";
+LastModified="2024-10-17 16:22:00";
+LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
+LfdNr="34";
+Ort="Raum 414, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stephan Mescher (Uni Halle)";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-12-12 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2024-10-09 15:36:00";
+LastModifiedBy="boccia.mathematik.privat (10.5.30.128)";
+LfdNr="30";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Jan Steinebrunner (Cambridge)";
+Titel="t.b.a.";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2024-12-16 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="CP1072";
+EMinute="";
+EStunde="";
+LastModified="2024-09-25 11:57:00";
+LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Wolfgang Riemer (Universität Bonn)";
+Titel="Ein roter Faden durch die Stochastik";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2024-12-17 18:30:00";
+Zusammenf="Wenn man darauf verzichtet, Wahrscheinlichkeiten als objektiv - unabhängig vom Menschen - existierende Größen zu begreifen, sie stattdessen konsequent als unsichere und revidierbare Festlegungen deutet, die als Modelle dadurch entstehen, dass aus Erfahrungen Erwartungen werden, verschwinden seit Jahrzehnten ungelöste didaktische Probleme.\n\nUnter dem Hut eines neu entwickelten Wahrscheinlichkeits-begriffs wachsen der klassische (LAPLACE), der frequentistische (V. MISES), der subjektivistische (BAYES) und der axiomatische (KOLMOGOROFF) Wahrscheinlichkeitsbegriff zu einer Einheit zusammen. Mit seiner Hilfe entspinnt sich ein roter Faden durch die Stochastik, der Wahrscheinlichkeitsrechnung mit beschreibender und beurteilender Statistik von der Grundschule bis zum Abitur … und auch danach … zu einer Einheit verschmelzen lässt.\n\nMöglicherweise wird der in diesem Experimentalvortrag, vorgenommene Perspektivwechsel Ihr stochastisches Weltbild erweitern, vielleicht sogar konstruktiv erschüttern, wenigstens ein bisschen!";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="16";
+Einladender="";
+KeinKolloquium="false";
+LastModified="2024-10-22 13:03:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="38";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Rupert Frank";
+TMinute="0";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="Sharp functional inequalities and their stability";
+Type="Kolloquium";
+Zeit="2025-01-09 15:00:00";
+Zusammenf="The Sobolev inequality is a paradigmatic example of a functional inequality with many applications in the Calculus of Variations, Geometric Analysis and PDEs. In some of these applications the optimal value of the constant is of importance, as is a characterization of the set of optimizers. The stability question is whether functions whose Sobolev quotient is almost minimal are close to minimizers of the inequality and, if so, in which sense. We give a gentle introduction to this question and review some recent results on the Sobolev inequality and other functional inequalities of a similar nature.";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2024-10-07 10:06:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="27";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Nelia Charalambous (University of Cyprus)";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2025-01-13 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="CP1072";
+EMinute="";
+EStunde="";
+LastModified="2024-09-25 11:58:00";
+LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="OStR Simon Oswald (BSZ Waldkirch)";
+Titel="Problemlösen in Prüfungssituationen";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2025-01-21 18:30:00";
+Zusammenf="Problemlösefähigkeit gilt als eine der Kernkompetenzen für das Lernen und Arbeiten im 21.\nJahrhundert und ist eine der zentralen Begründungen für den Mathematik-Unterricht. Im Unterricht\nbieten „Problemlöseaufgaben“ (auch Modellierungs- und Begründungsaufgaben) ein großes\nPotenzial zur kognitiven Aktivierung. Daher bilden seit 2021 „Problemlösen“ und „Modellieren“\neigene Bildungsplaneinheiten im beruflichen Gymnasium in Baden-Württemberg. Seit dem Abitur\n2024 findet sich in der schriftlichen Prüfung des beruflichen Gymnasiums eine eigene,\nausgewiesene „Problemlöseaufgabe“, über die speziell diese Prozesskompetenz beurteilt werden\nsoll. Im Vortrag wird die Entwicklung und bisherige Erfahrung am beruflichen Gymnasium zum\nThema „Problemlösen in Prüfungssituationen“ vorgestellt.";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2024-10-15 11:32:00";
+LastModifiedBy="UNKNOWN (10.23.8.30)";
+LfdNr="33";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Urs Lang (ETHZ)";
+Titel="t.b.a.";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2025-01-27 16:15:00";
+Zusammenf="";
+}

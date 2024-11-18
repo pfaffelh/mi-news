@@ -1,0 +1,1084 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="4";
+SemA="2022-04-01";
+SemE="2022-09-30";
+Semestername="Sommersemester 2022";
+Type="Info";
+VzA="2021-04-25";
+VzE="2021-07-30";
+}
+{
+Editors="10.5.30.2""10.5.30.3";
+ID="sfbtrr71";
+Members="sfbtrr71koll""OS-AM""OS-DiffGeo""PS-GeomAna""PS-NNF";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modellbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modellbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2022-04-23 13:32:00";
+LastModifiedBy="remote239-204.home.uni-freiburg.de (132.230.239.204)";
+LfdNr="12";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Christian Ketterer";
+Titel=" Rigidity of  mean convex subsets in non-negatively curved $RCD$ spaces and stability of  mean curvature bounds";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-04-25 16:15:00";
+Zusammenf="Kasue showed the following theorem. Let $M$ be a Riemannian manifold with non-negative Ricci curvature and mean convex boundary $\bpartial M=N$ that is disconnected. Then it follows that $M$ is isometric to $[0,D]\btimes N$.  I present a generalization of Kasue's rigidity result for a non-smooth context. For this purpose  a synthetic and stable notion of mean curvature bounded from below of subsets in $RCD$ metric measure spaces is introduced. A consequence is a Frankel-type theorem for mean convex subsets in $RCD$ spaces.";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="0";
+EStunde="16";
+LastModified="2022-04-20 11:53:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="11";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Charlotte Bartnick";
+Titel="The group configuration in stable theories";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-05-03 14:30:00";
+Zusammenf="A group configuration is a geometric incidence configuration consisting of 6 points which in stable theories is related to the existence of a type definable group. In the first part of the talk, we will introduce the above concepts and point out why a group gives rise to a group configuration. Moreover, by a result from Hrushovski, any group configuration in a stable theory yields the existence of a type definable group. We will discuss the basic ideas of this proof. The second part of the talk will present an application. Hrushovski and Pillay showed that any definable group in a real closed field F is locally isomorphic to the F-rational points of an algebraic group defined over F. This is achieved by considering a group configuration of the group in the algebraic closures of F.";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2022-04-28 15:19:00";
+LastModifiedBy="mfs.mathematik.privat (10.4.30.167)";
+LfdNr="13";
+Ort="Raum 127, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Christian Ketterer";
+Titel="Lower bounds for the transversal Ricci curvature of a Riemannian foliation via entropy convexity";
+Type="Vortrag";
+Veranst="Projektseminar: Geometrische Analysis";
+Zeit="2022-05-03 16:00:00";
+Zusammenf="The transversal Ricci curvature of a Riemannian foliation\nis the trace of the transversal Riemannian curvature tensor on the associated normal bundle of the leaves. Lower bounds for the transversal Ricci tensor, for instance,  imply  estimates for the first eigenvalue of the basic Laplacian by results of Richardson. In this talk we will see that transversal lower Ricci bounds imply (and in some cases also require) entropy convexity estimates along special Kantorovich Rubinstein geodesics. A correction term that involves the mean curvature vector of the leaves will play a special role.";
+}
+{
+Bemerkungen="";
+Benutzer="uf1003";
+EMinute="";
+EStunde="";
+LastModified="2022-04-12 14:17:00";
+LastModifiedBy="blox.mathematik.privat (10.5.30.35)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Fakultätsratsitzung";
+Zeit="2022-05-05 15:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="pedro";
+EMinute="30";
+EStunde="11";
+LastModified="2022-05-06 10:02:00";
+LastModifiedBy="halma.mathematik.privat (10.4.30.74)";
+LfdNr="15";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Philippe Eyssidieux";
+Titel="Reshetikhin-Turaev representations as Kähler local systems";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-05-06 10:30:00";
+Zusammenf="From a joint work, partially in progress, with Louis Funar. In Orbifold Kähler Groups related to Mapping Class groups, arXiv:2112.06726, we constructed certain orbifold compactifications of the moduli stack of stable pointed curves labelled by an integer p such that the corresponding Reshetikhin Turaev representation of the mapping class group descends to a representation of the orbifold fundamental group. I will explain the construction of that orbifold and why it is uniformizable. I will then report on a work in progress on the uniformization of these orbifolds. I will sketch a proof of the steiness of its universal covering p odd large enough. An interesting new quantum topological consequence is that the image of the fundamental group of the smooth base of a non isotrivial complex algebraic family of smooth complete curves of genus greater than 2 by the Reshetikhin-Turaev representation is infinite (generalizing the Funar-Masbaum and the Koberda-Santharoubane-Funar-Lochak infiniteness theorems).";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="Nadine Große";
+KeinKolloquium="false";
+LastModified="2022-05-09 09:14:00";
+LastModifiedBy="belchen.mathematik.privat (10.5.30.167)";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Peter Hintz";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="General relativity, spectral theory, and microlocal analysis";
+Type="Kolloquium";
+Zeit="2022-05-12 17:00:00";
+Zusammenf=" A central problem in General Relativity is to describe the behavior of various spacetimes, such as flat spacetimes or black holes, under perturbations. I will describe recent results related to the stability of black holes, with particular emphasis on the roles played by spectral theory and microlocal analysis.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="Schuler";
+EMinute="";
+EStunde="";
+LastModified="2022-04-13 11:56:00";
+LastModifiedBy="didaktik.mathematik.uni-freiburg.de (132.230.30.183)";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Mona Weinhuber";
+Titel="... und wie erklärst du?";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2022-05-17 19:30:00";
+Zusammenf="\nFragt man Schülerinnen und Schüler, was eine gute Lehrkraft auszeichnet, nennen diese zumeist die Fähigkeit, gut erklären zu können. Doch was zeichnet verständliche und lernförderliche Erklärungen aus? Worauf sollten Lehrkräfte achten, wenn Sie Erklärungen für Schülerinnen und Schüler formulieren? Woran liegt es, dass viele Lehrkräfte durchaus in der Lage sind, gut zu erklären, dies jedoch im Schulkontext oftmals trotzdem nicht tun? Diesen und weiteren Fragen geht Frau Dr. Weinhuber in ihrem interaktiven Vortrag nach. ";
+}
+{
+Bemerkungen="";
+Benutzer="pedro";
+EMinute="30";
+EStunde="11";
+LastModified="2022-05-06 13:32:00";
+LastModifiedBy="halma.mathematik.privat (10.4.30.74)";
+LfdNr="16";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fabio Bernasconi";
+Titel=" Lifting globally F-split surfaces over the Witt vectors";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-05-20 10:30:00";
+Zusammenf="Given a projective variety X over an algebraically closed field k of characteristic p, it is natural to understand the possible geometric and arithmetic obstructions to the existence of a lifting to characteristic zero. Motivated by the case of abelian manifolds and K3 surfaces, a folklore conjecture claims that ordinary Calabi-Yau manifolds should admit a lifting over the ring of Witt vectors W(k). I will report a joint work with I. Brivio, T. Kawakami and J. Witaszek where we show that globally F-split surfaces (which can be thought of as log Calabi-Yau surfaces that behave arithmetically well) are liftable over W(k) and we deduce several geometric consequences (as the Bogomolov bound on the number of singular points of klt del Pezzo F-split surfaces).";
+}
+{
+Bemerkungen="May 23-25";
+Benutzer="Bartels";
+EMinute="";
+EStunde="";
+LastModified="2022-05-11 16:15:00";
+LastModifiedBy="faramir.mathematik.privat (10.4.12.64)";
+LfdNr="17";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="https://aam.uni-freiburg.de/workshops/bend22";
+Sprecher="Invited Speakers";
+Titel="Workshop on Nonlinear Bending";
+Type="Vortrag";
+Veranst="[Event]Workshop on Nonlinear Bending";
+Zeit="2022-05-23 09:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="25";
+EStunde="10";
+LastModified="2022-05-12 13:09:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="18";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Cy Maor";
+Titel="Shape transitions in non-Euclidean ribbons";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-23 09:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="55";
+EStunde="14";
+LastModified="2022-05-12 13:11:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="19";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Thomas Speck";
+Titel="Mechanical properties of plants: structural background and what can be learnt for biomimetic applications";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-23 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="45";
+EStunde="16";
+LastModified="2022-05-12 13:12:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="20";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Andrea Bonito";
+Titel="Numerical Approximations of Thin Structures Undergoing Large Deformations";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-23 15:50:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="schnitzer";
+EMinute="";
+EStunde="";
+LastModified="2022-05-16 15:41:00";
+LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LfdNr="26";
+Ort="Online / SR 125";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Luca Vitagliano";
+Titel=" Homogeneous G-structures";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-05-23 16:15:00";
+Zusammenf="G-structures unify several interesting geometries including: almost complex, Riemannian, almost symplectic geometry, etc., the integrable versions of which being complex, flat Riemannian, symplectic geometry, etc. Contact manifolds are odd dimensional analogues of symplectic manifolds but, despite this, there is no natural way to understand them as manifolds with an ordinary integrable G-structure. In this talk, we present a possible solution to this discrepancy.  Our proposal is based on a new notion of homogeneous G-structures. Interestingly, besides contact, the latter include other nice (old and new) geometries including: cosymplectic, almost contact, and a curious “homogeneous version” of Riemannian geometry. This is joint work with A. G. Tortorella and O. Yudilevich.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="25";
+EStunde="10";
+LastModified="2022-05-12 13:13:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="21";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Andreas Fery";
+Titel="Wrinkles in nature and technology";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-24 09:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="55";
+EStunde="14";
+LastModified="2022-05-12 13:14:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="22";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Yasmine Meroz";
+Titel="Understanding the mechanical interaction of plants with their environment";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-24 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2022-05-17 15:58:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="25";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jörg Flum";
+Titel="Classes of graphs characterizable by finitely many homomorhism counts";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-05-24 14:30:00";
+Zusammenf="In 1967 Lovász showed that up to isomorphism every finite relational structure A  is determined by the homomorphism counts hom(B,A), i.e, by the number of homomorphisms from B to A, where B ranges over all structures (of the same vocabulary as A).\nMoreover, it suffices that B ranges over the structures with at most as many elements as A.\n\nIn the talk, we deal with classes C of graphs characterizable by finitely many homomorphism counts, i.e., classes for which there are finitely many graphs F_1,...,F_k such that for every graph G already hom(F_1,G),...,hom(F_k,G) determines whether G is in C. Among others, we show which prefix classes of first-order logic have the property that each class of graphs definable by a sentence of this prefix class is characterizable by finitely many homomorphism counts.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="45";
+EStunde="16";
+LastModified="2022-05-12 13:16:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="23";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Richard D. James";
+Titel="Design of origami structures with curved tiles between the creases";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-05-24 15:50:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-05-23 13:06:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="33";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Christian Fleck";
+Titel="Agent-Based Modelling of Single Cell Variability of CRISPR-Cas Interference and Adaptation";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-05-27 12:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="schnitzer";
+EMinute="";
+EStunde="";
+LastModified="2022-05-16 15:52:00";
+LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LfdNr="27";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jonas Schnitzer";
+Titel="The strong Homotopy Structure of Phase Space Reduction in Deformation Quantization";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-05-30 16:15:00";
+Zusammenf="A Hamiltonian action on a Poisson manifold induces a Poisson structure on a reduced manifold,\ngiven by the Poisson version of the Marsden-Weinstein reduction or equivalently the BRST-method.\nFor the latter there is a version in deformation quantization for equivariant star products, i.e. invariant\nunder the action and admitting a quantum momentum map which produces a star product on the\nreduced manifold.\nFixing a Lie group action on a manifold, one can define a curved Lie algebra whose Maurer-Cartan\nelements are invariant star products together with quantum momentum maps. Star products on the\nreduced manifold are Maurer-Cartan elements of the usual DGLA of polydifferential operators. Thus,\nreduction is just a map between these two sets of Maurer-Cartan elements. In my talk I want to show\nthat one can construct an $L_\binfty$-morphism, which on the level of Maurer Cartan elements provides a\nreduction map.\nThis a joint work with Chiara Esposito and Andreas Kraft (arXiv: 2202.08750).";
+}
+{
+Bemerkungen="";
+Benutzer="pizarro";
+EMinute="";
+EStunde="";
+LastModified="2022-05-19 15:01:00";
+LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LfdNr="32";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Daniel Palacín (Complutense Madrid)";
+Titel=" The space of types with a spectral topology";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-05-31 14:30:00";
+Zusammenf="Influenced by results in real algebraic geometry, Pillay  pointed out in 1988 that the space of types of an o-minimal expansion of a real closed field admits a spectral topology. With this topology, this space is quasi-compact and T_0, yet not Hausdorff. Nonetheless, the subspace of all closed points turns out to be quasi-compact and Hausdorff. \n\nIn this talk, I will relate the space of closed points with other topological spaces, such as the space of mu-types considered first by Peterzil and Starchenko. In addition, I will explain how to characterize coheir types of an o-minimal expansion of a real closed field within invariant types, using the spectral topology.\n\n";
+}
+{
+Bemerkungen="ONLINE-VORTRAG\nZugangsdaten werden auf unserer Homepage bekanntgegeben";
+Benutzer="Schuler";
+EMinute="";
+EStunde="";
+LastModified="2022-04-13 11:57:00";
+LastModifiedBy="didaktik.mathematik.uni-freiburg.de (132.230.30.183)";
+LfdNr="8";
+Ort="Online-Vortrag";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="PD Dr. Stephan Berendonk";
+Titel="Beweise als Imitationsgrundlage";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2022-05-31 19:30:00";
+Zusammenf="\nBeim Betreiben von Mathematik, insbesondere beim Definieren, Analogisieren und Generalisieren, greifen wir typischerweise auf vorhandene Beweise zurück. Wir versuchen diese auf unbekanntes Terrain zu übertragen und dabei so weit wie möglich an den Beweisideen festzuhalten. Die bestehenden Beweise bieten unserem Denken bei der Suche nach geeigneten Definitionen und interessanten Sätzen eine Orientierung. Dass Beweise im Kontext des Entdeckens nicht nur Ziel, sondern auch Ausgangspunkt und Werkzeug mathematischer Betrachtungen sein können, ist eine bezogen auf das Wesen der Mathematik grundlegende Einsicht, deren schulische Vermittlung fortwährend didaktische Aufmerksamkeit verdient. Im Vortrag soll die hier angesprochene entdeckende Funktion von Beweisen an einfachen elementarmathematischen Beispielen entfaltet werden. ";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-05-30 14:09:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="34";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Konstantinos Bessas";
+Titel="Fractional total variation denoising model with L^1 fidelity";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-06-02 11:15:00";
+Zusammenf="We study a nonlocal version of the total variation-based model with $L^1$ fidelity for image denoising,\nwhere the regularizing term is replaced with the fractional s-total variation.\nWe discuss regularity of the level sets and uniqueness of solutions, both for high and low values of the fidelity parameter.\nWe analyse in detail the case of binary data given by the characteristic functions of convex sets.\n";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-05-30 14:10:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="35";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Marco Pozzetta";
+Titel="On the existence of isoperimetric sets on nonnegatively curved spaces";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-06-02 12:15:00";
+Zusammenf="We consider the isoperimetric problem on Riemannian manifolds with nonnegative\nRicci curvature and Euclidean volume growth, i.e., such that the volume of balls grows\nlike the one of Euclidean ones as the radius diverges. The problem aims at minimizing the\nperimeter among sets having a fixed volume. Under an additional natural assumption on\nasymptotic cones to the manifold, we prove existence of minimizers, called isoperimetric\nsets, for any sufficiently large volume. The existence result holds without additional\nassumptions on manifolds with nonnegative sectional curvature.\nThe proof builds on an asymptotic mass decomposition result for minimizing sequences, on a sharp isoperimetric inequality, and on concavity properties of the isoperimetric profile.\nMore generally, the results hold on N-dimensional RCD(0, N) metric measure spaces,\nwhich are spaces having Ricci curvature bounded from below by zero in a generalized\nsense.\nThe results mentioned are contained in works in collaboration with G. Antonelli, E.\nBru`e, M. Fogagnolo, S. Nardulli, E. Pasqualetto, and D. Semola.";
+}
+{
+Bemerkungen="";
+Benutzer="uf1003";
+EMinute="";
+EStunde="";
+LastModified="2022-04-12 14:19:00";
+LastModifiedBy="blox.mathematik.privat (10.5.30.35)";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Fakultätsratsitzung";
+Zeit="2022-06-02 15:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="pedro";
+EMinute="30";
+EStunde="11";
+LastModified="2022-05-18 11:05:00";
+LastModifiedBy="halma.mathematik.privat (10.4.30.74)";
+LfdNr="29";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Colleen Robles";
+Titel="Global properties of period maps at infinity";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-06-03 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Soergel";
+EMinute="30";
+EStunde="11";
+LastModified="2022-05-30 16:38:00";
+LastModifiedBy="soertux.mathematik.privat (10.4.30.78)";
+LfdNr="36";
+Ort="Raum 218, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Zhu Chengbo (National University of Singapore) ";
+Titel="Orbit Method: From Matrices to Unitary Representations";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-06-14 10:30:00";
+Zusammenf="The talk is intended as a leisurely introduction to one of the fundamental tasks of representation theory: the construction of irreducible unitary representations. I will first discuss two major sources of unitary representations of Lie groups, one from Symplectic Geometry (Kirillov theory) and another from Number Theory (Arthur’s conjecture).  I will then introduce a constructive method called theta lifting which has been fruitful for representations of classical groups and discuss some recent applications of this method to unitary representation theory.\n";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-06-15 16:00:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="38";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jakob R";
+Titel="Theory and Implementation of Bowed Strings using Cosserat Rod theory and the Null Space method";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-06-21 14:15:00";
+Zusammenf="\n\nStarting point is the so called Helmholtz Motion discovered by Helmholtz in 1877 for bowed string instruments. We aimed to simulate the same motion.\nFirst we adapt the existence theory for struts designed as Cosserat Rod (Paper of S. Antman and T. Seidman [2005]) to a clamped violin string. The existence theory is still in progress.\nFocus is set on the implementation of a bowed string including bowing and torsional constraints that also can appear in bowed strings. We are able to show the same energy behavior as in the theoretical part.\nMoreover we present the Null Space method for Cosserat rods (Paper by P. Betsch [2005]) and how to apply it in this setting.\nThe second main aspect is the inclusion of a two-step algorithm to realize mechanical damping in order to get the desired energy decay and get more realistic simulations.\nFinally, numerous simulations are shown produced with C++ and MatLab.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-06-15 16:42:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="39";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Christian Bräuninger";
+Titel="Blockfilters as Parameter Sets of Tree-Forcings";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-06-21 14:30:00";
+Zusammenf="The space of blocks consists of all non-empty finite sets of natural numbers. Given any filter on the natural numbers, the sets of blocks of filter elements generate a filter on the blockspace and, vice versa, each filter on the blockspace yields a filter on the natural numbers by taking unions of filter elements.\nIn this talk, we will make some observations about this relation and the question of whether the maximality of filters is or can possibly be preserved by it. As an application we will show how filters and coideals on the blockspace can be used as parameter sets of tree-forcings with the aim of diagonalizing a given filter on the natural numbers.\n \n ";
+}
+{
+Bemerkungen="";
+Benutzer="Schuler";
+EMinute="";
+EStunde="";
+LastModified="2022-04-13 11:55:00";
+LastModifiedBy="didaktik.mathematik.uni-freiburg.de (132.230.30.183)";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Norbert Henze";
+Titel="Binomialkoeffizienten - verstehen oder rechnen?";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2022-06-21 19:30:00";
+Zusammenf="\nIn diesem Vortrag geht es um Altbekanntes, aber offenbar in Vergessenheit Geratenes, nämlich Konzepte und nachhaltige Erkenntnis im Zusammenhang mit Binomialkoeffizienten. Dabei spielen binäre Tupel eine Schlüsselrolle. Diese Tupel sind auch grundlegend für ein wirkliches Verständnis der Binomialverteilung, die momentan als Schlüsselkonzept fungiert. ";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2022-06-10 11:06:00";
+LastModifiedBy="remote239-60.home.uni-freiburg.de (132.230.239.60)";
+LfdNr="24";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Martin Gallauer, MPI Bonn";
+Titel="The derived category of permutation modules";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-06-24 10:30:00";
+Zusammenf="To a field k and a finite group G one associates the derived\ncategory of kG-modules, an important invariant that is difficult to\nunderstand in general. At least, its tensor-triangulated structure\nadmits a familiar description in terms of the support variety.\n\nWe propose to study a refinement, the derived category of G-permutation\nmodules over k. It has interesting interpretations in algebraic\ngeometry, representation theory and equivariant homotopy theory. We\nwill say a few things we know about its tensor-triangulated structure. \nThis is based on joint work, mostly in progress, with Paul Balmer.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-06-24 10:56:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="41";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Hannes Jakob";
+Titel="Generalised Tree Properties";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-06-28 14:30:00";
+Zusammenf="The talk will be a survey of my master's thesis. The topic of the thesis are two cardinal properties which are similar to the tree property and arise naturally from the consideration of a generalised tree.\nWe will first introduce both properties and then outline their similarities and differences, both in the way they can be proven consistent at small cardinals and what they imply.\nWe will show that, despite being equivalent for inaccessible cardinals, one property is strictly stronger than the other at small cardinals.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2022-06-28 10:35:00";
+LastModifiedBy="kaiserstuhl.mathematik.privat (10.5.30.43)";
+LfdNr="42";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Giancarlo Andres Urzua Elia";
+Titel="Geometrical aspects of singular surfaces and their smoothings";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-07-01 10:30:00";
+Zusammenf="Degenerations of nonsingular algebraic surfaces into surfaces with only cyclic quotient singularities (c.q.s.) are relevant for the study of the Kollár--Shepherd-Barron--Alexeev (KSBA) compactification of the moduli of surfaces of general type, for the existence of surfaces with given invariants, etc, and lately to find semi-orthogonal decompositions (s.o.d.) of the derived categories of the surfaces involved. Thanks to the work of Kollár--Shepherd-Barron (1988), the local picture of these degenerations is well-understood via P-resolutions of c.q.s. (partial resolutions with only T-singularities and positive relative canonical class), which can be replaced in a one-to-one correspondence by M-resolutions (partial resolutions with only Wahl singularities and nonnegative relative canonical class). Hence arbitrary degenerations with only c.q.s. can be replaced by Q-Gorenstein smoothings of Wahl surfaces, i.e. surfaces with only Wahl singularities. The purpose of this talk is to show how geometry works in this setting, for example how to find minimal models via flips and divisorial contractions (in the joint work \qFlipping surfaces\q with P. Hacking and J. Tevelev). Particularly I hope to be able to state what the N-resolution of an M-resolution is, how to find it via antiflips, and some consequences on particular s.o.d. of the derived category of the singular and the nonsingular fibers. This is about the joint work with Jenia Tevelev https://arxiv.org/abs/2204.13225.";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-05-05 12:21:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="14";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Elmar Kotter";
+Titel="Reporting in Radiology - the challenge of structuring reports";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-07-01 12:00:00";
+Zusammenf="Summary:\n\nTraditionally, radiologists produce reports using a microphone and speech recognition while browsing through a very large number of images using a mouse. The result is a plain text report that is neither structured nor linked to the content of the images. Most radiologists agree that producing structured reports which are semantically linked to the images would have many advantages over traditional reporting. Systems to produce structured reports have been developed over the past 10-15 years, these systems are all build around graphical, mouse controlled interfaces. These systems are not well accepted by radiologists since they distract visual attention from the images to the reporting interface. Producing reports this way is more time consuming than using a microphone. So called report templates have been developed. These report templates describe the elements radiologists should describe in a given clinical setting (i.e. pancreatic carcinoma). It has been shown that the use of structured reporting using report templates results in more complete radiological reports. Producing structured reports would result in having the data stored in databases that could be used in many different ways. Structured report is easier to search, data elements can be used to trigger actions (actionable reports, i.e. presence of pulmonary embolism triggering further work-up), and the data elements could also be used as labels for the training of AI algorithms. On the other hand, report templates can be pre-populated by AI-algorithms before the reporting process by the radiologist is initiated. Also, since the report template constitutes a set of \qquestions\q to be answered by the radiologist, it could support the extraction of data from the spoken word of radiologists. A combination of both could facilitate the production of radiology reports.";
+}
+{
+Bemerkungen="";
+Benutzer="ioannis";
+EMinute="0";
+EStunde="16";
+LastModified="2022-06-13 13:39:00";
+LastModifiedBy="frodo.mathematik.privat (10.4.12.1)";
+LfdNr="37";
+Ort="Großer Hörsaal Physik & Garten der Physik";
+Passwort=Geheim
+SeeAlsoURL="https://www.math.uni-freiburg.de/aktuell/Programm_Abschlussfeier_2022_fin_neu.pdf";
+Sprecher="Mathematisches Institut";
+Titel="Fakultätsfest und Abschlussfeier 2022";
+Type="Vortrag";
+Veranst="[Event]Fakultätsfest und Abschlussfeier der Fakultät";
+Zeit="2022-07-01 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2022-06-22 09:34:00";
+LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LfdNr="40";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Michal Wrochna";
+Titel="Lorentzian complex powers and spectral zeta function densities ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-07-04 16:15:00";
+Zusammenf="The spectral theory of the Laplace–Beltrami operator on Riemannian manifolds is known to be intimately related to geometric invariants. This kind of relationships has inspired many developments in relativistic physics, but a priori it only applies to the case of Euclidean signature. In contrast, the physical setting of Lorentzian manifolds has remained problematic for very fundamental reasons. \n\nIn this talk I will present results that demonstrate that there is a well-posed Lorentzian spectral theory nevertheless, and moreover, it is related to Lorentzian geometry in a way that parallels the Euclidean case to a large extent. In particular, in a recent work with Nguyen Viet Dang (Sorbonne Université), we show that the scalar curvature can be obtained as the pole of a spectral zeta function density. The proof indicates that a key role is played by the dynamics of the null geodesic flow and its asymptotic properties. \n\nThe primary consequence is that gravity can be obtained from a spectral action; I will also outline furthermore motivation coming from Quantum Field Theory on curved spacetimes. \n";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-07-01 10:15:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="43";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Armin Nurkanović ";
+Titel="Numerical Optimal Control for Differential Equations with State Dependent Switches and Jumps";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-07-05 14:15:00";
+Zusammenf="Optimal control problems for dynamical systems with state dependent switches are inherently non-smooth and non-convex and therefore difficult to treat numerically. Systems with state dependent jumps are even more difficult to treat than systems with switches, as they lead to discontinuous state trajectories. We present two recently developed ideas: First, the method of Finite Elements with Switch Detection (FESD) to numerically solve optimal control problems of switched systems with high order of accuracy. Second, the time-freezing idea for optimal control problems with state jumps, which allows one to reformulate these problems into the easier class of problems with switches, which can then be treated by the FESD method. Both methods are illustrated with numerical examples including the challenging optimal control problem of a hopping robot with ground contact and friction that should detect an optimal jump sequence to a final position in the presence of holes.";
+}
+{
+Bemerkungen="Diese Veranstaltung findet im Hybridformat statt: Im HS Weismann-Haus und per Zoom. Für den Zoom-Link kontaktieren Sie bitte sec@fdm.uni-freiburg.de.";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-07-04 11:03:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="45";
+Ort="Hörsaal Weismann-Haus, Albertstr. 21a und online (Zoom)";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="David Skovmand";
+Titel="Roll-Over Risk in Benchmark Rates";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-07-07 12:00:00";
+Zusammenf="Modelling the risk that a financial institution may not be able to roll over its debt at the market reference rate, the so--called ``roll--over risk'', we construct a model framework for the dynamics of reference term rates (e.g., LIBOR) and their spread vis-a-vis benchmarks based on overnight reference rates, e.g., rates implied by overnight index swaps (OIS). In this framework, different interest rate term structures are  endogenously generated for each tenor, that is, a different term structure for each choice of the length of the interest rate accrual period, be it overnight (e.g., OIS), three--month LIBOR, six--month LIBOR, etc. A concrete model instance in this framework can be calibrated simultaneously to available market instruments at a particular point in time, but more importantly, we explicitly obtain dynamics of term rates such as LIBOR. Thus models in our framework are amenable to econometric estimation. For a model class based on affine dynamics, we conduct an empirical analysis on EUR data for OIS, interest--rate swaps, basis swaps and credit default swaps.";
+}
+{
+Bemerkungen="";
+Benutzer="uf1003";
+EMinute="";
+EStunde="";
+LastModified="2022-04-12 14:19:00";
+LastModifiedBy="blox.mathematik.privat (10.5.30.35)";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Fakultätsratsitzung";
+Zeit="2022-07-07 15:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2022-06-30 09:38:00";
+LastModifiedBy="remote239-77.home.uni-freiburg.de (132.230.239.77)";
+LfdNr="30";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Katharina Hübner (Heidelberg)";
+Titel="The wild ramification locus";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-07-08 10:30:00";
+Zusammenf="We study the notions of wild and tame ramification in arithmetic geometry. Wildly ramified morphisms tend to behave very differently from what we know about ramification phenomena in characteristic zero. We discuss several approaches to define tame covering spaces and explain how valuative spaces such as adic spaces or Berkovich spaces naturally enter the picture. Points of these spaces are certain valuations, such as discrete valuations coming from a divisor. But in general these valuations tend to be complicated. By analytic methods we show, however, that we can check tameness on divisors. ";
+}
+{
+Bemerkungen="Für den Zoom-Link kontaktieren Sie bitte sec@fdm.uni-freiburg.de.";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-07-04 11:06:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="46";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Noor Awad";
+Titel="Evolutionary Algorithms: what can do for you?";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-07-08 12:00:00";
+Zusammenf="Evolutionary Algorithms (EAs) are model-free population-based methods which generally include mechanisms inspired by nature (i.e. concepts in Darwinian Evolution) and solve problems through processes that emulate the behaviors of living organisms. EAs consist of  a method of initializing a population, mutation, crossover, selection operations, and a notion of fitness. The mix of potential solutions to a problem is populated randomly first. Then the population is tested for fitness -- how well and how quickly it solves a problem. The fittest individuals are then selected for reproduction through mutation and crossover operations. The cycle begins again as the fitness of the population is evaluated and the least fit individuals are eliminated. EAs are excellent at optimizing solutions to problems that cannot be solved easily using other techniques, and seemingly a simple EA can often solve complex problems. It is important to note though that while EAs optimize effectively, they don’t necessarily find the optimal solution. EAs have been known for black-box optimization and successfully used to solve many real-world applications in engineering, economics, bioinformatics, robotics and many others. ";
+}
+{
+Bemerkungen="";
+Benutzer="kertels";
+EMinute="";
+EStunde="";
+LastModified="2022-07-03 18:49:00";
+LastModifiedBy="alhambra.mathematik.privat (10.5.30.33)";
+LfdNr="44";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fabian Kertels";
+Titel="A Lie algebra constructed from BPS states of a torus conformal field theory";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-07-11 16:15:00";
+Zusammenf="Conformal field theories with extended supersymmetry contain a distinguished subspace of BPS (Bogomol'nyi–Prasad–Sommerfield) states. In 1995, physicists Jeffrey Harvey and Gregory Moore proposed a multiplication map to promote such spaces to algebras. I will present my attempt at formalizing this mathematically, specifically for the example theory emerging in the study of a heterotic string on a torus. The result is a Lie bracket on a space obtained from BPS states by a kind of subquotient construction. I intend to highlight, in particular, the very different roles played by the bosonic and fermionic side of the theory in this definition.";
+}
+{
+Bemerkungen="";
+Benutzer="Schuler";
+EMinute="";
+EStunde="";
+LastModified="2022-04-13 11:59:00";
+LastModifiedBy="didaktik.mathematik.uni-freiburg.de (132.230.30.183)";
+LfdNr="10";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jun.-Prof. Dr. Leander Kempen";
+Titel="\qWie soll ich das beweisen?\q - Neue Wege und Trends aus der Schul- und Hochschuldidaktik zur Didaktik des Beweisens";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2022-07-12 19:30:00";
+Zusammenf="Das Beweisen stellt Lernende an Schulen und Hochschulen vor diverse Herausforderungen. International wird diese Thematik daher auch als eine der zentralen Hürden im Übergang von der Schule zur Hochschule in mathematikhaltigen Studiengängen betrachtet. Im Vortrag werden verschiedene Ideen und Konzepte zu der Thematik des Beweisens aufgezeigt und diskutiert, wie man die mathematische Beweisaktivität für Schülerinnen und Schüler und für Studierende sinnstiftend vermitteln kann. Schlagworte sind hierbei u.a.: generische Beweise, transparent pseudo-proofs, proofs without words, Argumentationsbasis etc. ";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="0";
+EStunde="18";
+LastModified="2022-07-07 10:56:00";
+LastModifiedBy="yinsh.mathematik.privat (10.4.30.33)";
+LfdNr="47";
+Ort="Aula";
+Passwort=Geheim
+SeeAlsoURL="https://www.gk1821.uni-freiburg.de/GK Colloquium";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Abschlusskolloquium Graduiertenkolleg ";
+Zeit="2022-07-14 09:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="A. Huber-Klawitter";
+KeinKolloquium="false";
+LastModified="2022-05-12 14:16:00";
+LastModifiedBy="belchen.mathematik.privat (10.5.30.167)";
+LfdNr="1";
+Ort="Aula im Kollegiengebäude I";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Ursula Ludwig";
+TMinute="0";
+TOrt="Aula";
+TStunde="0";
+Titel="On analytic and topological torsion";
+Type="Kolloquium";
+Zeit="2022-07-14 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="5";
+EStunde="12";
+LastModified="2022-07-07 10:58:00";
+LastModifiedBy="yinsh.mathematik.privat (10.4.30.33)";
+LfdNr="48";
+Ort="Aula";
+Passwort=Geheim
+SeeAlsoURL="https://www.gk1821.uni-freiburg.de/GK Colloquium";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Abschlusskolloquium Graduiertenkolleg ";
+Zeit="2022-07-15 09:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-05-18 10:31:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="28";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Tim Litwin";
+Titel="Inferring 3 Parameters from 2 Data Points";
+Type="deleted";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-07-15 12:00:00";
+Zusammenf="Inferring model parameters from measured data, i.e. the “inverse problem”, is a necessary step in evaluating virtually any quantitative model. For linear models, there are already many theoretical results established for parameter inference. Specifically, uniquely estimating the maximum likelihood parameters in a linear model is known to be impossible if there are less data points available than parameters in the model. This is conventionally thought to be also true for non-linear models, setting a threshold for the minimum number of data points necessary to uniquely estimate all the model parameters. However, it is possible to construct examples in which more parameters than data points can be uniquely estimated, i.e. with a unique best estimate and finite 95%-confidence intervals. This is demonstrated on a model with three unknown parameters which can be estimated from just two data points. This talk introduces the basic problem and discusses the two-data-points-three-parameters example, providing background and intuition as well as possible explanations of why this seems to work.";
+}
+{
+Bemerkungen="";
+Benutzer="Marius";
+EMinute="";
+EStunde="";
+LastModified="2022-07-12 15:16:00";
+LastModifiedBy="mahjongg.mathematik.privat (10.5.30.50)";
+LfdNr="50";
+Ort="Raum 127, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Marius Amann";
+Titel="Well-posedness of the Laplacian with pure Neumann boundary conditions on domains with corners and cusps";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-07-18 16:15:00";
+Zusammenf="The Laplacian is invertible/fredholm on a smooth domain with Dirichlet/Neumann boundary conditions on the usual sobolev scale. This is still true for the Dirichlet case on a domain with corners, but no longer holds for the Neumann case. I will show that the statement can be recovered by introducing weighted sobolev spaces and furthermore I want to show that a similar statement holds for cusps.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-07-08 13:14:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="49";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jens Nussberger";
+Titel="Numerical Optimal Control of a Rotary Crane - From Modeling to Real-world Experiments";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-07-19 14:15:00";
+Zusammenf="Numerical optimal control methods were investigated and applied to perform point-to-point motions of a small scale woodyard crane on a pilot plant from Psiori GmbH in Freiburg. Suitable dynamical models were derived and their parameters identified, focusing on the actuator dynamics and the pendulum movements introduced from the actuator motions. An optimal control problem formulation for the given task was derived; its parameterization led to a numerically solvable nonlinear programming problem. Numerical simulation experiments were conducted to explore the solution set of the problem and possible design choices during the implementation process of the online optimization algorithm. A numerical error analysis was done for the parameters arising from the direct multiple shooting approach which led to insights in how to choose the parameters appropriately.";
+}
+{
+Bemerkungen="";
+Benutzer="Commelin";
+EMinute="";
+EStunde="";
+LastModified="2022-07-20 08:58:00";
+LastModifiedBy="UNKNOWN (10.4.30.180)";
+LfdNr="51";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Yannis Monbru";
+Titel="Towards automatic diagram chasing";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-07-22 10:30:00";
+Zusammenf="The goal of this presentation is to explain what I learned\nand what I did during my internship in Freiburg.\n\nDiagram chasing in abelian categories is commonly used as a routine technique. However, as the better way to explain such a proof, is \qdo the only thing you could do\q, thins kind of proof is not going to be accepted by a proof checker.\n\nI will then explain how to go in the direction of automatic diagram chasing, with a particular attention to what worked and didn't worked in my actual implementation. The internship was focused on finding proofs, having the result checked by a proof assistant is future work.";
+}
+{
+Bemerkungen="";
+Benutzer="coffi";
+EMinute="";
+EStunde="";
+LastModified="2022-07-22 09:50:00";
+LastModifiedBy="sam2.mathematik.privat (10.4.12.65)";
+LfdNr="52";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Maria Kaimaki (Imperial College of London)";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2022-07-26 14:15:00";
+Zusammenf="TBA";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-07-22 16:57:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="53";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Maxwell Levine";
+Titel="Compactness for weak square at singulars of uncountable cofinality";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-07-26 14:30:00";
+Zusammenf="We study versions of Jensen's square principle $\bsquare_\bkappa$, a combinatorial principle that holds for all cardinals $\bkappa$ in Gödel's constructible universe $L$. Cummings, Foreman, and Magidor proved that the square principle is non-compact at $\baleph_\bomega$, meaning that it is consistent that $\bsquare_{\baleph_n}$ holds for all $n<\bomega$ while\n$\bsquare_{\baleph_\bomega}$ fails. We investigate the natural question of whether this phenomenon generalizes for singulars of uncountable cofinality. Surprisingly, we show that under some mild hypotheses, the weak square principle $\bsquare_\bkappa^*$ is in fact compact at singulars of uncountable cofinality, and that an even stronger version of these hypotheses is not enough for compactness of weak square at $\baleph_\bomega$.";
+}
+{
+Bemerkungen="";
+Benutzer="uf1003";
+EMinute="";
+EStunde="";
+LastModified="2022-04-12 14:20:00";
+LastModifiedBy="blox.mathematik.privat (10.5.30.35)";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="";
+Titel="";
+Type="Vortrag";
+Veranst="Fakultätsratsitzung";
+Zeit="2022-07-28 15:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2022-07-20 11:35:00";
+LastModifiedBy="yinsh.mathematik.privat (10.4.30.33)";
+LfdNr="31";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Georg Tamme (Mainz)";
+Titel="Excision in algebraic K-theory and applications";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2022-07-29 10:30:00";
+Zusammenf="Algebraic K-groups of rings or schemes are interesting invariants, which appear in different areas of mathematics, e.g. in number theory, algebraic geometry, or topology. Unfortunately, computations of algebraic K-groups are usually quite hard. One reason for this is that useful tools, familiar from singular homology, like homotopy invariance or some long exact Mayer-Vietoris sequences, are missing in algebraic K-theory. In the talk I will give an introduction to algebraic K-theory and in particular discuss the following question about `excision': When does a given cartesian square of rings give rise to a long exact sequence of algebraic K-groups? Surprisingly, the answer turns out be `almost always’.  I will explain this result and some of its consequences. (Based on joint work with Markus Land)";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="30";
+EStunde="13";
+LastModified="2022-07-22 17:26:00";
+LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
+LfdNr="54";
+Ort="online: Zoom";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Tim Litwin";
+Titel="Inferring 3 Parameters from 2 Data Points";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2022-07-29 12:00:00";
+Zusammenf="Inferring model parameters from measured data, i.e. the “inverse problem”, is a necessary step in evaluating virtually any quantitative model. For linear models, there are already many theoretical results established for parameter inference. Specifically, uniquely estimating the maximum likelihood parameters in a linear model is known to be impossible if there are less data points available than parameters in the model. This is conventionally thought to be also true for non-linear models, setting a threshold for the minimum number of data points necessary to uniquely estimate all the model parameters. However, it is possible to construct examples in which more parameters than data points can be uniquely estimated, i.e. with a unique best estimate and finite 95%-confidence intervals. This is demonstrated on a model with three unknown parameters which can be estimated from just two data points. This talk introduces the basic problem and discusses the two-data-points-three-parameters example, providing background and intuition as well as possible explanations of why this seems to work.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2022-09-15 12:32:00";
+LastModifiedBy="sudoku.mathematik.privat (10.4.23.36)";
+LfdNr="55";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Patrick Meurin";
+Titel="Keisler‘s Order and Boolean Ultrapowers";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2022-09-20 14:30:00";
+Zusammenf="In 1967, Keisler introduced a partial order on first-order theories, that depends, roughly speaking, on whether certain ultrapower models of the theories in question are $\blambda^+$-saturated.  In a pre-print of 2018, Douglas Urich introduced among other things a Compactness Theorem for Boolean-valued structures, generalized the machinery developed previously by Malliaris and Shelah and provided more flexible tools for proving or disproving propositions of the form ``$T_0 \btrianglelefteq T_1$‘‘, making use of Boolean ultrapowers for more general complete Boolean algebras. Our thesis consists in a detailed walk-through of Ulrich‘s results and we will briefly present some of them in this talk.";
+}
+{
+Bemerkungen="";
+Benutzer="schnitzer";
+EMinute="";
+EStunde="";
+LastModified="2022-09-22 14:44:00";
+LastModifiedBy="gandalf2.mathematik.privat (10.4.12.3)";
+LfdNr="56";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Anthony Giaquinto";
+Titel="Deformations, Twists and Frobenius Lie Algebras";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2022-09-26 15:00:00";
+Zusammenf="Universal deformations formulas (UDFs), or twists, play an important role in the quantization of associative algebras. The history and basic examples of UDFs will be presented along with their connections to the classical Yang-Baxter equation and (quasi)-Frobenius algebras. Some properties and conjectures related to Frobenius Lie algebras will be given.";
+}

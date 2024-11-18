@@ -32,6 +32,7 @@ if st.session_state.logged_in:
         _public = st.toggle("Veröffentlicht", value = False)
         title_de = st.text_input("Titel (de)", "")
         title_en = st.text_input("Titel (en)", "")
+        kurzname = st.text_input("Kurzname", "")
         text_de = st.text_area("Beschreibung (de)", "")
         text_en = st.text_area("Beschreibung (en)", "")
         link = st.text_input("URL für die Vortragsreihe", "")
@@ -102,6 +103,7 @@ if st.session_state.logged_in:
                 _public = st.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
                 title_de = st.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
                 title_en = st.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
+                kurzname = st.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
                 text_de = st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
                 text_en = st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
                 url = st.text_input("URL für die Vortragsreihe", x["url"], key = f"url_{x['_id']}")
@@ -110,7 +112,7 @@ if st.session_state.logged_in:
                 duration_default = st.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
                 _public_default = st.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 sync_with_calendar = st.toggle("Mit einem Kalender synchronisieren", x["sync_with_calendar"], key = f"sync_with_calendar_{x['_id']}")
-                calendar_url = st.text_area("URL des Kalenders", x["calendar_url"]) if sync_with_calendar else x["calendar_url"]
+                calendar_url = st.text_input("URL des Kalenders", x["calendar_url"], key = f"calendar_url_{x['_id']}") if sync_with_calendar else x["calendar_url"]
                 kommentar = st.text_input("Kommentar (intern)", x["kommentar"], key = f"kommentar_{x['_id']}")
                 x_updated = {
                     "sichtbar" : sichtbar,

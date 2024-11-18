@@ -1,0 +1,1484 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="4";
+Semestername="Sommersemester 2013";
+Type="Info";
+VzA="2013-04-15";
+VzE="2013-07-20";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modelbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modelbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Editors="132.230.30.136""132.230.30.4";
+ID="sfbtrr71";
+Members="sfbtrr71koll""OS-AM""OS-DiffGeo""PS-GeomAna""PS-NNF";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+Bemerkungen="";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2013-04-15 11:40:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="21";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="NN";
+Titel="Programmdiskussion";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-04-15 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="logik";
+EMinute="0";
+EStunde="18";
+LastModified="2013-04-12 10:08:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="19";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Luis Miguel Villegas Silva";
+Titel="The principle Diamond Star";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-04-17 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Wendland";
+KeinKolloquium="false";
+LastModified="2013-04-12 11:48:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="1";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Dr. Oliver Fabert, Freiburg, Vorstellungsvortrag";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="Hamiltonian mechanics and holomorphic curves: a round trip";
+Type="Kolloquium";
+Zeit="2013-04-18 17:00:00";
+Zusammenf="Symplectic geometry has its origins in the Hamiltonian\nformulation of classical mechanics. Holomorphic curves are\nthe most important tools to study global properties of\nsymplectic manifolds. In my talk I will provide a return\nticket from holomorphic curves back to Hamiltonian\nmechanics. Translating certain geometric properties of\nholomorphic curves into algebra, I will show that we\nnaturally arrive at Hamiltonian mechanics on an\ninfinite-dimensional (singular) phase space. In the\nsimplest case, this leads to the famous integrable system\ndescribing waves in shallow water.";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2013-04-15 09:34:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="20";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Brad Drew";
+Titel="De Rham realizations of mixed motives over general base schemes";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-04-19 10:00:00";
+Zusammenf="After briefly reviewing the construction of the stable homotopy category SH(X) of a scheme X and the associated formalism of Grothendieck's six functors, I explain how to construct de Rham realization functors from SH(X) into an ind-completion of the bounded derived category of holonomic D_X-modules when X is a smooth, quasi-projective C-scheme. As a corollary, the classical Betti-de Rham comparison theorem furnishes a purely algebraic proof of the Riemann-Hilbert correspondence between the full subcategories of D^b_c(X(C),C) and D^b_hol(D_X)$ spanned by the complexes ``of geometric origin''.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2013-04-15 16:59:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="22";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Victor Bangert";
+Titel="Closed currents and measured laminations";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-04-22 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2013-04-19 10:44:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="25";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="L. Berselli (Pisa) ";
+Titel="Attractors for the 2D Euler equations";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-04-23 14:15:00";
+Zusammenf="The problem of existence of global attractors\nfor the  2D Euler equations with inviscid dissipation is studied.\nIn particular, the critical role of the transport  of the vorticity is \nemphasized,\nwith the choice of the relevant topologies, to have uniform estimates for\narbitrary positive times.";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-04-22 14:09:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="27";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Yann Bernard";
+Titel="\qQuantization for the Willmore functional\q Teil 1";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-04-23 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-23 16:49:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="26";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Martin Ziegler";
+Titel="Pseudoräume";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-04-24 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Huber-Klawitter";
+KeinKolloquium="false";
+LastModified="2013-04-19 13:06:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Anna Wienhard, Heidelberg";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="Geometrie und Dynamik diskreter Untergruppen von halbeinfachen Liegruppen - Dynamics and geometry of discrete subgroups or semi-simple Lie groups";
+Type="Kolloquium";
+Zeit="2013-04-25 17:00:00";
+Zusammenf="In diesem Vortrag werde ich einige geometrische und dynamische Eigenschaften von diskreten Untergruppen in halbeinfachen Liegruppen (z.B. SL(n,R)) diskutieren. Ich werde hierbei insbesondere Untergruppen betrachten, die im Zusammenhang mit höhere Teichmuellertheorie auftreten.\n\nI will discuss dynamical and geometric properties of discrete subgroups of Lie groups (e.g. SL(n,R)).  A special focus will lie on subgroups which arise in connection with higher Teichmüller theory.";
+}
+{
+Bemerkungen="Abstract folgt bzw. siehe Homepage";
+Benutzer="FDM";
+EMinute="0";
+EStunde="13";
+LastModified="2013-04-08 11:00:00";
+LastModifiedBy="oberon2.fdm.uni-freiburg.de (132.230.97.31)";
+LfdNr="17";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="https://www.fdm.uni-freiburg.de/seminar/Bruss";
+Sprecher="Prof. Thomas Bruss";
+Titel="Gesellschaftsform und Überlebenswahrscheinlichkeit: Ein Verzweigungsprozessmodell. ";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modelbildung";
+Zeit="2013-04-26 11:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2013-04-03 11:06:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="16";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Björn Mützel (Montpellier)";
+Titel="Construction of Riemann surfaces with large systoles";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-04-29 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-04-22 14:16:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="28";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Yann Bernard";
+Titel="\qQuantization for the Willmore functional\q Teil 2";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-04-30 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="test";
+Benutzer="test";
+EMinute="";
+EStunde="";
+LastModified="2013-03-27 15:31:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="14";
+Ort="Raum 414, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="test";
+Titel="test";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-05-01 03:00:00";
+Zusammenf="test";
+}
+{
+Bemerkungen="Fakultätsrat";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-03-28 12:16:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-05-02 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-05 18:43:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="44";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="mock";
+Titel="";
+Type="deleted";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-05-05 00:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="";
+EStunde="";
+LastModified="2013-04-29 17:29:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="34";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Sebastian Goette";
+Titel="L^2 index theory for families";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-05-06 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2013-05-03 11:11:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="35";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Jörg Wolf (HU Berlin)";
+Titel="On the existence of a local pressure for general systems of incompressible viscous  fluids";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-05-07 14:15:00";
+Zusammenf="In various models of incompressible viscous fluids one of the most challenging problem is the construction of a pressure function, which can be regarded as a Lagrangian multiplier of the system due to the restrain of divergence free condition of the velocity of the fluid. While for the well-known Navier-Stokes equations this problem can be solved by using the L^p theory for the Stokes operator for general fluid models the problem is unsolved. However, by introducing a new method of constructing a local pressure we are able to prove the existence of a weak solution to such systems, satisfying a new form of local energy identity involving the local pressure. This eventually\nwill lead new results of partial regularity of weak solutions to the equations of Non-Newtonian fluids.\n\n";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2013-05-03 11:57:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="32";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Georg Jaiani (Tbilisi State University)";
+Titel="Cusped Shell-like Structures";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-05-07 14:15:00";
+Zusammenf="The talk is devoted to an updated exploratory survey of results concerning elastic\ncusped shells, plates, and beams and cusped prismatic shell-fluid interaction\nproblems. Mathematically, the corresponding problems lead to non-\nclassical, in general, boundary value and initial-boundary value problems for\ngoverning degenerate elliptic and hyperbolic systems in static and dynamical\ncases, respectively, with the corresponding mechanical (physical) interpretations.\nTwo principally different approaches of investigation are used:\n(1) to get results for 2D (two-dimensional) and 1D (one-dimensional) problems\nfrom results of the corresponding 3D (three-dimensional) problems and (2) to\ninvestigate directly governing degenerate and singular systems of 2D and 1D\nproblems. In both the cases, it is important to study the relationship of 2D and 1D\nproblems with 3D problems. On the one hand, it turned out that the second\napproach allows to investigate such 2D and 1D problems whose corresponding 3D\nproblems are not possible to study within the framework of the 3D model of the\ntheory of elasticity. On the other hand, the second approach is historically\napproved, since first the 1D and 2D models were created and only then the 3D\nmodel was constructed. Hence, the second approach gives a good chance for the\nfurther development (generalization) of the 3D model.";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2013-05-03 11:34:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="36";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Jörg Wolf (HU Berlin) ";
+Titel="On the existence of a local pressure for general systems of incompressible viscous fluids ";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-05-07 15:15:00";
+Zusammenf="In various models of incompressible viscous fluids one of  the most challenging  problem is the construction of a pressure function, which can be regarded as a Lagrangian multiplier of the  system due to the restrain of divergence free condition of the velocity of the fluid.  While for the well-known  Navier-Stokes equations this problem can   be solved by using the $L^p$ theory for the Stokes operator for general fluid models the problem is unsolved.  However, by introducing a new method of constructing a local pressure we are able to prove the existence of a weak solution to such systems, satisfying a new form of local energy identity involving the local pressure.  This eventually will lead new results of partial regularity of weak solutions to the equations of  Non-Newtonian fluids.   ";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-05-03 17:18:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="38";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Jie Wu";
+Titel="Hyperbolic Alexandrov-Fenchel quermassintegral inequalities";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-05-07 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-05 18:38:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="40";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Regula Krapf";
+Titel="The pseudointersection number and the tower number";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-05-08 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Himmelfahrt";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-05-07 13:50:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-05-09 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2013-05-06 08:36:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="45";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Maxim Smirnov, ICTP Trieste";
+Titel="Quantum product for derived categories";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-05-10 10:00:00";
+Zusammenf="Quantum cohomology ring of a smooth projective variety X is a certain deformation of its usual cohomology ring. This structure was introduced at the begging of 90's motivated by works of string theorists. Later on an analogue of the quantum product was defied in the K-theory. In this talk I will describe a way to define an analogue of the quantum product on the derived category of X.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="Katharina Heuser";
+EMinute="";
+EStunde="";
+LastModified="2013-05-06 14:32:00";
+LastModifiedBy="bohnanza.mathematik.uni-freiburg.de (132.230.30.45)";
+LfdNr="29";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Katharina Heuser";
+Titel="Hasse-Weil L-function of elliptic curves over Q and beyond";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-05-13 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2013-05-02 11:24:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="15";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Bernd Rummler (Uni Magdeburg)";
+Titel="Basic findings to Stokes eigenfunctions and notes on applications in rotating Hagen-Poiseuille flow in pipes";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-05-14 14:15:00";
+Zusammenf="We give an overview on results, techniques, decomposition  methods and constraints for the determination of  eigenfunctions of the Stokes operator with homogeneous Dirichlet  boundary conditions on the rigid part of the frontier of three-dimensional domains.\nWe explain wherefore the class of three-dimensional domains accessible for the specification of Stokes eigenfunctions is resticted on only five elements, namely at first the ball and the annulus - and secondary the infinite layer, the interior of a pipe and the interior of a double pipe \n(all equipped with periodic conditions).\nFurthermore, we illustrate the particular importance of explicitely known Stokes eigenfunctions emphasized by the fact, that one needs a good deal more information then - only the existence and completeness of such systems - in calculations and estimations. There we present the numerical\nstudy of rotating Hagen-Poiseuille flow as an example of applications also.";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-05-03 17:21:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="39";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Annibale Magni";
+Titel="Analysis of a mean curvature flow action functional ";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-05-14 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-08 08:53:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="47";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Adrian Mathias";
+Titel="";
+Type="deleted";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-05-15 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-08 08:54:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="41";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Adrian Mathias";
+Titel="Unsound ordinals";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-05-15 16:30:00";
+Zusammenf="An ordinal zeta is *unsound* if there are subsets A_n (n in omega) of it such that as b ranges through the subsets of omega, uncountably many ordertypes are realised by\nthe sets $\bbigcup_{n \bin b} A_n$.\n\nWoodin in 1982 raised the question whether unsound ordinals\nordinals exist; the answer I found then (to be found in a paper\npublished in the Mathematical Proceedings of the Cambridge Philosophical Society volume 96 (1984) pages 391--411) is this:\n\n\nAssume DC. Then the following are equivalent:\n\ni) the ordinal $\bomega_1^{\bomega + 2}$ (ordinal exponentiation) is unsound\n\nii) there is an uncountable well-ordered set of reals\n\nThat implies that if omega_1 is regular and the ordinal mentioned in i) is sound, then omega_1 is strongly inaccessible in the constructible universe. Under DC, every\nordinal strictly less than the ordinal mentioned in i) is sound.\n\n\nThere are many open questions in this area: in particular, in\nSolovay's famous model where all sets of reals are Lebesgue measurable,\nis every ordinal sound ?  The question may be delicate, as Kechris and Woodin have shown that if the Axiom of Determinacy is true then there\nis an unsound ordinal less than omega_2.\n\n";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Soergel";
+KeinKolloquium="false";
+LastModified="2013-06-03 09:57:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Geordie Williamson, Universität Bonn";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-05-16 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="weitere Informationen folgen";
+Benutzer="FDM";
+EMinute="0";
+EStunde="13";
+LastModified="2013-04-26 15:38:00";
+LastModifiedBy="amado.fdm.uni-freiburg.de (132.230.97.40)";
+LfdNr="33";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://www.fdm.uni-freiburg.de/seminar/Riedel";
+Sprecher="Prof. Frank Riedel";
+Titel="Knightian Uncertainty in Economics and Finance ";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modelbildung";
+Zeit="2013-05-17 11:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Pfingstpause";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-03-28 12:19:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-05-23 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Wendland";
+EMinute="";
+EStunde="";
+LastModified="2013-05-03 15:14:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="37";
+Ort="Hörsaal 2, Physik Hochhaus, Hermann-Herder-Straße 3";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="";
+Titel="Das Oberseminar Differentialgeometrie entfällt wegen der Antrittsvorlesung von Herrn Juniorprofessor Dr. Harald Ita um 17:15 im Großen HS des Physikalischen Institutes.";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-05-27 17:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-05-23 15:44:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="49";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="BSc. Zhengxiang Chen";
+Titel="\qConnected sum constructions in geometry and nonlinear analysis \q (Frank Pacard's Note) Teil 1 ";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-05-28 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-23 16:49:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="52";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Heike Mildenberger";
+Titel="Resurrecting Ramsey ultrafilters";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-05-29 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Fronleichnam";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-05-07 13:50:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-05-30 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="sigloch";
+EMinute="0";
+EStunde="11";
+LastModified="2013-05-06 09:36:00";
+LastModifiedBy="boule.mathematik.uni-freiburg.de (132.230.30.108)";
+LfdNr="46";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Peter Arndt (Regensburg)";
+Titel="Rational Motives over deeper bases";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-05-31 10:00:00";
+Zusammenf="We begin with a brief introduction to motivic homotopy\ntheory and motives. Roughly, one notes that cohomology theories for schemes can be approached in close analogy to those for topological spaces: They factorize through a homotopy category, then through a stable homotopy category where they become representable by some object (\qa spectrum\q). If this object is a \qring spectrum\q, they\nfactor further through the category of modules over that ring spectrum - if one starts with motivic cohomology, the latter is the category of motives.\n\nFor a variety of reasons there have been proposed many alternative notions of scheme, e.g. to overcome the asymmetry between the \qfinite primes\q and the \qinfinite primes\q of a number field ($\bmathbb{F}_1$-geometry), to construct cohomology theories for spaces (\qderived algebraic geometry\q) or to handle Frobenius lifts (\qlambda\nalgebraic geometry\q). In this talk we will present a way to construct motives for such alternative schemes: We construct a stable homotopy category and a K-theory spectrum therein, give a rational decomposition, pick a summand (the \qalternative Beilinson spectrum\q) and pass to modules over it. The construction is compatible with base\nchange and admits a different description in terms of the positive rational motivic sphere.";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-05-23 15:46:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="50";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="BSc. Zhengxiang Chen";
+Titel="\qConnected sum constructions in geometry and nonlinear analysis \q (Frank Pacard's Note) Teil 2 ";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-06-04 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-05-31 12:17:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="54";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Giorgio Laguzzi";
+Titel="Generalized random forcing for weakly compact";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-06-05 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Mildenberger";
+KeinKolloquium="false";
+LastModified="2013-05-23 10:04:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="8";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Dr. Luca Motto Ros, Freiburg, Vorstellungsvortrag";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="On the invariant universality property";
+Type="Kolloquium";
+Zeit="2013-06-06 17:00:00";
+Zusammenf="The notion of Borel reducibility has been introduced as a tool for measuring the\ntopological complexity of analytic equivalence relations and quasi-orders, an abstract class of\nobjects which includes many relations from various areas of mathematics such as: isomorphism and\n(algebraic) embeddability between countable structures from model theory, homeomorphism and\ntopological embeddability between continua from general topology, isometry and isometric\nembeddability between Polish spaces from analysis, linear isometry and linear isometric\nembeddability between separable Banach spaces from functional analysis, and many others.\nIntuitively, an analytic quasi-order as above is called invariantly universal if it contains in a\nnatural way a Borel-isomorphic copy of any other analytic quasi-order. In this talk, building on\nprevious work of Louveau and Rosendal we will show that most of the analytic quasi-orders which\nare sufficiently complicated (that is: Borel-complete) are in fact invariantly universal. For\nexample, one can show that for every analytic quasi-order R there is a Borel collection C of\nseparable Banach spaces closed under linear isometry such that the relation of linear isometric\nembeddability on C is Borel-isomorphic to R.\n";
+}
+{
+Bemerkungen="";
+Benutzer="magnus";
+EMinute="";
+EStunde="";
+LastModified="2013-04-24 13:27:00";
+LastModifiedBy="therapy.mathematik.uni-freiburg.de (132.230.30.65)";
+LfdNr="30";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Magnus Engenhorst";
+Titel="Dimer models and toric geometry";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-06-10 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-05-23 15:47:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="51";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="BSc. Zhengxiang Chen";
+Titel="\qConnected sum constructions in geometry and nonlinear analysis \q (Frank Pacard's Note) Teil 3 	";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-06-11 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-06-07 17:20:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="42";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Jörg Flum";
+Titel="On Limitations of the Ehrenfeucht-Fraïssé method ";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-06-12 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-03-27 15:13:17";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort="Geheim";
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-06-13 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="FDM";
+EMinute="0";
+EStunde="13";
+LastModified="2013-05-08 10:28:00";
+LastModifiedBy="oberon2.fdm.uni-freiburg.de (132.230.97.31)";
+LfdNr="48";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="https://www.fdm.uni-freiburg.de/int-info/Graw";
+Sprecher="Frederik Graw";
+Titel="Mathematical Immunology - Using mathematical models to understand infection and immune dynamics ";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modelbildung";
+Zeit="2013-06-14 11:30:00";
+Zusammenf="Interpreting experimental and clinical data with mathematical models and bioinformatical tools represents a new field in biology to reveal mechanisms of interaction between pathogens and immune cells during infection. This methodology helped substantially in understanding the quantitative and mechanistic aspects of viral and immune dynamics. For instance, it allowed us to estimate the lifetime of immune memory cells, or to determine the replication dynamics of human immunodeficiency virus (HIV).\n\nIn this talk, I will give a brief overview of the field of mathematical immunology with its various applications and results. In particular, I will show how we have used different tools to understand the role of a specific type of immune cells, so called CD8+ T cells, during persistent viral infections, as they are for example caused by  HIV or hepatitis C virus.";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="45";
+EStunde="17";
+LastModified="2013-04-15 17:17:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="23";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Katrin Wendland";
+Titel="TBA";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-06-17 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2013-06-09 20:44:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="24";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Katrin Wendland";
+Titel="The elliptic genus of K3";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-06-17 16:15:00";
+Zusammenf="Elliptic genera have been introduced and studied in the late 80s, on the one hand in topology in the context of circle actions on manifolds, and on the other hand in physics in the context of Dirac-like operators on loop spaces. The elliptic genus of a Calabi-Yau manifold X is a modular function which interpolates between some of the known topological invariants of X. A two-variable version of the elliptic genus was suggested by Witten in the mid 90s, which most naturally arises as an invariant of superconformal field theories associated to X, and which encorporates almost all other versions of the elliptic genus as specializations. The precise relations between the conformal field theorists' and the topologists' approaches to the elliptic genus have subsequently been clarified by Malikov/Schechtman/Vaintrob, by Borisov/Libgober, and by Kapustin.\n\n\nThe talk will first give an overview on the construction of the elliptic genus for Calabi-Yau manifolds X. Then specific properties of the elliptic genus for K3 surfaces X will be discussed, including a number of open conjectures related to the so-called \qMathieu Moonshine Phenomenon\q for the elliptic genus of K3.  ";
+}
+{
+Bemerkungen="Dieser Vortrag findet im Rahmen des Eucor-Seminars statt.";
+Benutzer="fritzh";
+EMinute="30";
+EStunde="12";
+LastModified="2013-06-07 18:44:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="58";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Philippe Helluy";
+Titel="Numerical Resolution of Conservation Laws on Graphic Cards";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-06-18 11:00:00";
+Zusammenf="We present several numerical simulations of conservation laws on recent multicore processors, such as GPUs, using the OpenCL programming framework. Depending on the chosen numerical method, different implementation strategies have to be considered, for achieving the best performance. We explain how to program efficiently several methods: a finite volume approach on a structured grid, a high order Discontinuous Galerkin (DG) method on an unstructured grid and a Particle-In-Cell (PIC) method. The three methods are respectively applied to a two-fluid computation, a Maxwell simulation and a Vlasov-Maxwell simulation.";
+}
+{
+Bemerkungen="Dieser Vortrag findet im Rahmen des Eucor-Seminars statt.";
+Benutzer="fritzh";
+EMinute="0";
+EStunde="16";
+LastModified="2013-06-07 18:40:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="53";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Helmut Harbrecht";
+Titel="Analytical and Numerical Methods in Shape Optimization";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-06-18 14:00:00";
+Zusammenf="Shape optimization is quite indispensable for designing and\nconstructing industrial components. Many problems that arise in application, particularly in structural mechanics and in the optimal control of distributed parameter systems, can be formulated as the minimization of functionals defined over a class of admissible domains.\n\nThe present talk aims at surveying on shape optimization.\nEspecially, the following items will be addressed:\n\n- analysis of shape optimization problems,\n\n- the discretization of shapes,\n\n- first and second order shape optimization methods,\n\n- existence and convergence of approximate shapes,\n\n- efficient numerical techniques to compute the state equation.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-06-14 13:32:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="55";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Markus Junker";
+Titel="Heyting algebras";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-06-19 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Cornelius Schröder";
+EMinute="";
+EStunde="";
+LastModified="2013-06-17 12:49:00";
+LastModifiedBy="pcpool02.mathematik.uni-freiburg.de (132.230.30.152)";
+LfdNr="62";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="https://mfsfreiburg.wordpress.com/?de";
+Sprecher="Carla Cederbaum";
+Titel="Forschen als Post-Doc";
+Type="Vortrag";
+Veranst="Mathematik bietet Perspektiven";
+Zeit="2013-06-19 19:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Fakultätsrat";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-03-28 12:17:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="10";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-06-20 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="alex.kueronya";
+EMinute="";
+EStunde="";
+LastModified="2013-06-13 18:21:00";
+LastModifiedBy="jass.mathematik.uni-freiburg.de (132.230.30.79)";
+LfdNr="61";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Alex Küronya";
+Titel="Newton-Okounkov bodies, vanishing sequences, and diophantine approximation";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-06-21 10:00:00";
+Zusammenf="We will study global sections of line bundles on projective varieties.  Newton-Okounkov bodies are a useful tool for handling all global sections of all multiples of a given line bundle at the same time via convex geometry in Euclidean spaces. We go one step further and study functions on Newton-Okounkov bodies that come from valuations on the underlying function field. It turns out that a variation of this theme \nhas led McKinnon and Roth to very interesting results in diophantine approximation. This is an account of joint work with Sebastien Boucksom, Catriona Maclean, and Tomasz Szemberg. ";
+}
+{
+Bemerkungen="";
+Benutzer="schelling";
+EMinute="";
+EStunde="";
+LastModified="2013-06-05 17:27:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="56";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Arkadi Schelling";
+Titel="The Topological eta-Invariant";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-06-24 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="The talk is based on the paper \qOn the Topological Contents of eta-Invariants\q by Ulrich Bunke.";
+Benutzer="Arkadi Schelling";
+EMinute="";
+EStunde="";
+LastModified="2013-06-17 18:18:00";
+LastModifiedBy="pcpool03.mathematik.uni-freiburg.de (132.230.30.153)";
+LfdNr="66";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://arxiv.org/abs/1103.4217";
+Sprecher="Arkadi Schelling";
+Titel="The Topological eta-Invariant";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-06-24 16:15:00";
+Zusammenf="The eta-invariant can be defined on twisted Dirac-operators over Spin^c-manifolds and it fulfills certain index-theorems. First, the talk will show a way to derive a bordism invariant from these theorems and, second, use the Pontrjagin-Thom construction and homotopy theory to construct a bordism invariant by topological means. The talk will state that the two invariants coincide, but won't prove this statement.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-06-20 15:19:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="43";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Menachem Magidor";
+Titel="Inner Models for Set Theory Defined by Generalized Logics";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-06-26 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Mildenberger";
+KeinKolloquium="false";
+LastModified="2013-06-20 09:33:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Menachem Magidor, Jerusalem";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="Some Reflections on the Continuum Hypothesis";
+Type="Kolloquium";
+Zeit="2013-06-27 17:00:00";
+Zusammenf="The Continuum Problem is whether there is a set of reals whose cardinality is\nstrictly between the cardinality of the integers and the reals. This was the first\nproblem on Hilbert’s famous list and it turned out to be undecidable by the usual\naxiom systems for Set Theory. The results of Goedel and Cohen tell us that the\naxioms give very little information about the relative size of the set of integers and\nthe set of reals. Goedel’s conjecture that strong axioms of infinity will settle the\nproblem turned out to be false. Is this the end of the story?\nIn this talk we shall survey some of current approaches of trying to give a mean-\ningful answer to the problem, in spite of its independence. Two direction of research\nwe shall concentrate on will be forcing axioms and the theory of universally Baire\nsets of reals.\n";
+}
+{
+Bemerkungen="";
+Benutzer="alex.kueronya";
+EMinute="0";
+EStunde="11";
+LastModified="2013-06-17 14:02:00";
+LastModifiedBy="jass.mathematik.uni-freiburg.de (132.230.30.79)";
+LfdNr="65";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Olaf Schnürer";
+Titel="Homological smoothness of equivariant derived categories";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-06-28 10:00:00";
+Zusammenf="We introduce the notion of (homological) G-smoothness for a complex G-variety X. If there are only finitely many G-orbits and all stabilizers are connected, we show that X is G-smooth if and only if each orbit is isomorphic to C^n.";
+}
+{
+Bemerkungen="";
+Benutzer="Cornelius Schröder";
+EMinute="";
+EStunde="";
+LastModified="2013-06-17 12:50:00";
+LastModifiedBy="pcpool02.mathematik.uni-freiburg.de (132.230.30.152)";
+LfdNr="63";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort="Geheim";
+SeeAlsoURL="https://mfsfreiburg.wordpress.com/?de";
+Sprecher="Georg Schwing und Marcus Maubach";
+Titel="Bereich: Unternehmensberatung";
+Type="Vortrag";
+Veranst="Mathematik bietet Perspektiven";
+Zeit="2013-07-01 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Cornelius Schröder";
+EMinute="";
+EStunde="";
+LastModified="2013-06-17 12:51:00";
+LastModifiedBy="pcpool02.mathematik.uni-freiburg.de (132.230.30.152)";
+LfdNr="64";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort="Geheim";
+SeeAlsoURL="https://mfsfreiburg.wordpress.com/?de";
+Sprecher="Georg Schwing und Marcus Maubach";
+Titel="Bereich: Unternehmensberatung";
+Type="Vortrag";
+Veranst="Mathematik bietet Perspektiven";
+Zeit="2013-07-01 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Johannes Frank";
+EMinute="";
+EStunde="";
+LastModified="2013-06-11 16:10:00";
+LastModifiedBy="jojo.mathematik.uni-freiburg.de (132.230.30.106)";
+LfdNr="59";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Johannes Frank";
+Titel="Gauss-Bonnet-Theorem for measured laminations";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-07-01 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-06-18 13:49:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="68";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Katharina Hopf";
+Titel="Well-posedness issues for fourth order wave equations";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-07-02 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-06-28 12:50:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="70";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Misha Gavrilovich";
+Titel="A category-theoretic viewpoint on first definitions in general topology";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-07-03 16:30:00";
+Zusammenf="We observe that several definitions in a first course on general topology, such as Hausdorff,\ndense, T_0, T_1, admit an easy reformulation as computations with partial preorders of\ncategory-theoretic nature. Namely, these computations correspond to rules for manipulating\ncommutative diagrams involving only finite topological spaces as constants (and variables). We\nsuggest a calculus based on these rules.\n\n";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-03-27 15:13:17";
+LfdNr="12";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort="Geheim";
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-07-04 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="soergel";
+EMinute="";
+EStunde="";
+LastModified="2013-06-18 12:36:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="67";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Cornelius Pillen";
+Titel="Über die Kohomologie endlicher Chevalley-Gruppen in beschreibender Charakteristik";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-07-05 10:00:00";
+Zusammenf="Von grossem Interesse für  Algebraiker und Topologen sind die Kohomologieringe der endlichen Gruppen. In meinem Vortrag beschränke ich mich auf die endlichen Chevalley-Gruppen. Im Allgemeinen weiss man nicht viel über diese Ringe. Man kennt nicht einmal in allen Fällen  den kleinsten positiven Grad nicht-verschwindender Kohomologieklassen.  Quillen war der erste, der dieses Problem in den siebziger Jahren in Angriff nahm.\n\nObwohl man die Kohomologieringe der algebraischen Gruppen und ihrer Frobenius-Kerne besser versteht, gibt es auch hier viele offene Fragen.  An Hand von Beispielen erkläre ich neue Methoden, die diese beiden Theorien verbinden und zu bisher nicht bekannten Resultaten für die endlichen Gruppen führen. Dieser Vortrag basiert auf gemeinsamen Arbeiten mit Chris Bendel und Dan Nakano.";
+}
+{
+Bemerkungen="";
+Benutzer="felixgrimm";
+EMinute="";
+EStunde="";
+LastModified="2013-07-08 14:34:00";
+LastModifiedBy="catan.mathematik.uni-freiburg.de (132.230.30.82)";
+LfdNr="57";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Felix Grimm";
+Titel="CFT via the Ising Model";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-07-08 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-06-28 17:21:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="71";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Dr. Chao Xia";
+Titel="Gradient estimate and ABP estimate on Finsler manifolds";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-07-09 16:15:00";
+Zusammenf="In this talk, I will present some recent results about anlaysis on Finsler manifolds. I will start by geometry of Finsler manifolds, including Chern connnection, the nonlinear gradient, Hessian and Laplacian as well as weighted Ricci curvature. The first result is Cheng-Yau type local gradient estimate for (nonlinear) harmonic functions on complete noncompact Finsler manifolds with weighted Ricci curvature bounded from below. We apply a refined Moser iteration, which is based on Ohta-Sturm’s Bochner formula, to prove this. The second result is Alexandrov-Bakelman-Pucci (ABP) type estimate on Finsler manifolds with weighted Ricci curvature bounded from below.  We will apply ABP estimate to obtain Harnack inequality for a class of elliptic equation of nondivergent type on Finsler manifolds of Berwald type.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-07-08 09:54:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="69";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ss13/oberseminar-ss13.html";
+Sprecher="Juan-Diego Caycedo";
+Titel="The real field with dense subgroups of the torus";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-07-10 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-04-10 14:59:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="13";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-07-11 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="alex.kueronya";
+EMinute="0";
+EStunde="11";
+LastModified="2013-07-02 13:07:00";
+LastModifiedBy="jass.mathematik.uni-freiburg.de (132.230.30.79)";
+LfdNr="72";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Benjamin Westrich";
+Titel="Feynman graphs, their motives and torus actions";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-07-12 10:00:00";
+Zusammenf="One of the main problems in Quantum Field Theory is the\ncomputation of the coefficients of the renormalized Dyson series, which appears for instance in the pertubative expansion of the scattering matrix. These coefficients are given by an integral of a differential form which is determined by specifying a certain labeled graph. This integral is called a Feynman amplitude and the labeled\ngraphs are called Feynman diagrams. They come with an algebro-geometric object, the so called graph hypersurface. I will review the basic notions and the general theme of motives associated to Feynman diagrams as it was originated in [Bloch, Esnault, Kreimer: 2006]. Then I will discuss the problem of finding and using $\bmathbb{G}_m$-actions\non the graph hypersurfaces to compute the associated motives as well as introducing a class of graphs where the associated graph hypersurface admits a torus action of maximal dimension.\n";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2013-07-12 11:02:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="60";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Emanuel Scheidegger";
+Titel="Spezielle Kähler Geometrie, Quasimodulformen, und topologische Stringtheorie";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-07-15 16:15:00";
+Zusammenf="Basierend auf der Einführung in spezielle Kähler Geometrie im letzten Semester betrachten wir Parameterräume komplexer Strukturen von Calabi-Yau-Mannigfaltigkeiten der Dimension 3. Diese Parameterräume sind projektiv speziell Kähler.\nEs gibt einen differentiellen Polynomring in den Schnitten der Vektorbündel, die natürlich zu einer projektiven speziellen Kähler Mannigfaltigkeit assoziiert sind. \nDieser Ring hat eine ähnliche Struktur wie der Ring der Quasimodulformen. Bei geeigneter Wahl der Calabi-Yau-Mannigfaltigkeit sind die beiden Ringe isomorph. Dies führt zu einer neuen Dualität in topologischer Stringtheorie.";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="0";
+EStunde="18";
+LastModified="2013-07-03 21:31:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="73";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Andre Ludwig";
+Titel="A Relaxed Partitioning Disk for Strictly Convex Domains";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-07-16 16:15:00";
+Zusammenf="We show connectedness of area-minimizing disks for a relaxed\nisoperimetric problem w.r.t. a strictly convex body \bOmega in euclidean R^3. The proof yields disk-type existence of an immersed area-minimizer for every given volume but zero. The free boundary of the minimizing disk is inward.";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2013-07-15 10:51:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="75";
+Ort="Ort noch nicht bekannt";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Eberhard Bänsch (Uni Erlangen)";
+Titel="t.b.a.";
+Type="deleted";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2013-07-17 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Fakultätsrat";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2013-04-10 15:01:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="18";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-07-18 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2013-04-26 08:36:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="31";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Prof. Matthias Flach, Caltech";
+Titel="Weil-etale cohomology and Zeta functions of arithmetic schemes";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-07-19 10:00:00";
+Zusammenf="We report on joint work with Baptiste Morin on a\ndescription of values\nof Zeta functions of arithmetic schemes in terms of\nWeil-etale\ncohomology complexes, extending the original ideas of\nLichtenbaum and\nGeisser to all arithmetic schemes and all integer\narguments.";
+}
+{
+Bemerkungen="Vorstellungsvortrag";
+Benutzer="behringer";
+EMinute="45";
+EStunde="14";
+LastModified="2013-07-25 09:40:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="77";
+Ort="Raum 404, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Ke Ou";
+Titel="Generalised Chernorff Inequality";
+Type="Vortrag";
+Veranst="Talk";
+Zeit="2013-07-25 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="jiewu";
+EMinute="";
+EStunde="";
+LastModified="2013-07-11 13:46:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="74";
+Ort="Raum 125, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Prof. F. Sauvigny (TU Cottbus)";
+Titel="Das Plateausche Problem  für  Wendelkurven";
+Type="deleted";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-07-29 16:00:00";
+Zusammenf="Im Euklidischen Raum R^3  betrachten wir einen linear ansteigenden Jordanbogen über einem Kreis um den Ursprung in der x,y-Ebene, welcher dann geradlinig mit der z-Achse\nzu einer Jordankurve \bGamma verbunden wird. Wir können das Plateausche Problem für diese Kurve, welches nach einer Minimalfläche mit dieser Berandung \bGamma fragt, dann explizit durch die klassische  Wendelfläche, nämlich das Helikoid lösen. Nun ist diese Fläche nicht stabil gegenüber Störung des Randbogens, und wir approximieren die z-Achse durch einen Kreiszylinder Z_{r_1} vom Radius r_1 > 0. Hier sitzt das Helikoid senkrecht auf und löst ein gemischtes Randwertproblem auf einer Riemannschen Fläche mit dem Ursprung als Verzweigungspunkt, der sogenannten etalen Ebene. Da dieses gemischte Randwertproblem nun stabil gegenüber Störung des Randbogens ist, bleibt es auch für nichtlinear ansteigende Bögen über dem Kreis lösbar. Im Grenzübergang r_1 gegen 0 erhalten wir in einem singulären Graphen eine eingebettete Lösung des Plateauschen Problems für Wendelkurven \bGamma, welche einen nichtlinear ansteigenden ordanbogen enthalten. Durch Spiegelung an der z-Achse entsteht schließ^Ylich eine Lösung des Plateauschen Problems zu einer Doppel-Wendelkurve \bGamma*^C, welche einen reversiblen Graphen über der etalen Ebene darstellt. Die Frage nach der Eindeutigkeit des\nPlateauschen Problems können wir jedoch nicht beantworten.";
+}
+{
+Bemerkungen="(Vortrag im Rahmen des SFB Transregio 71)";
+Benutzer="jiewu";
+EMinute="";
+EStunde="";
+LastModified="2013-07-25 10:58:00";
+LastModifiedBy="tablut.mathematik.uni-freiburg.de (132.230.30.70)";
+LfdNr="76";
+Ort="Raum 127, Eckerstr. 1";
+Passwort="Geheim";
+SeeAlsoURL="";
+Sprecher="Prof. F. Sauvigny (TU Cottbus)";
+Titel="Das Plateausche Problem für Wendelkurven";
+Type="Vortrag";
+Veranst="Arbeitsgemeinschaft Geometrische Analysis";
+Zeit="2013-07-29 16:00:00";
+Zusammenf="Im Euklidischen Raum R^3 betrachten wir einen linear ansteigenden Jordanbogen über einem Kreis um den Ursprung in der x,y-Ebene, welcher dann geradlinig mit der z-Achse zu einer Jordankurve \bGamma verbunden wird. Wir können das Plateausche Problem für diese Kurve, welches nach einer Minimalfläche mit dieser Berandung \bGamma fragt, dann explizit durch die klassische Wendelfläche, nämlich das Helikoid lösen. Nun ist diese Fläche nicht stabil gegenüber Störung des Randbogens, und wir approximieren die z-Achse durch einen Kreiszylinder Z_{r_1} vom Radius r_1 > 0. Hier sitzt das Helikoid senkrecht auf und löst ein gemischtes Randwertproblem auf einer Riemannschen Fläche mit dem Ursprung als Verzweigungspunkt, der sogenannten etalen Ebene. Da dieses gemischte Randwertproblem nun stabil gegenüber Störung des Randbogens ist, bleibt es auch für nichtlinear ansteigende Bögen über dem Kreis lösbar. Im Grenzübergang r_1 gegen 0 erhalten wir in einem singulären Graphen eine eingebettete Lösung des Plateauschen Problems für Wendelkurven \bGamma, welche einen nichtlinear ansteigenden ordanbogen enthalten. Durch Spiegelung an der z-Achse entsteht schließ^Ylich eine Lösung des Plateauschen Problems zu einer Doppel-Wendelkurve \bGamma*^C, welche einen reversiblen Graphen über der etalen Ebene darstellt. Die Frage nach der Eindeutigkeit des Plateauschen Problems können wir jedoch nicht beantworten.\n\n";
+}

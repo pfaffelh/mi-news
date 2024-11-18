@@ -87,6 +87,7 @@ def setup_session_state():
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",
         st.session_state.news: "News",
+        st.session_state.carouselnews: "Carouselnews",
         st.session_state.vortragsreihe: "Vortragsreihe",
         st.session_state.vortrag: "Vortrag"
     }

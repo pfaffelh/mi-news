@@ -1,0 +1,1512 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="4";
+SemA="2018-04-01";
+SemE="2018-09-30";
+Semestername="Sommersemester 2018";
+Type="Info";
+VzA="2018-04-16";
+VzE="2018-07-21";
+}
+{
+Editors="132.230.30.136""132.230.30.4";
+ID="sfbtrr71";
+Members="sfbtrr71koll""OS-AM""OS-DiffGeo""PS-GeomAna""PS-NNF";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modellbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modellbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Bemerkungen="";
+Benutzer="Philipp Falk";
+EMinute="0";
+EStunde="18";
+LastModified="2018-04-06 14:42:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="13";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Xiaodong Wang";
+Titel="Comparison and rigidity results on compact Riemannian manifolds with boundary";
+Type="Vortrag";
+Veranst="Vortragsreihe Prof. Xiaodong Wang";
+Zeit="2018-04-09 16:00:00";
+Zusammenf="For compact Riemannian manifolds with nonempty boundary, it is\ninteresting to study the relationship between the geometry on the\nboundary and geometry of the interior. I will discuss comparison and\nrigidity results for manifolds with a lower bound for the Ricci\ncurvature. The focus will be on sharp geometric inequalities that yield\nrigidity results in the equality case.\n\nIf time allows I will also discuss results for manifolds with a lower\nbound for the scalar curvature. Many results and questions in this\ndirection are motivated by general relativity.";
+}
+{
+Bemerkungen="";
+Benutzer="Philipp Falk";
+EMinute="0";
+EStunde="18";
+LastModified="2018-04-06 14:42:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="13";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Xiaodong Wang";
+Titel="Comparison and rigidity results on compact Riemannian manifolds with boundary";
+Type="Vortrag";
+Veranst="Vortragsreihe Prof. Xiaodong Wang";
+Zeit="2018-04-16 16:00:00";
+Zusammenf="For compact Riemannian manifolds with nonempty boundary, it is\ninteresting to study the relationship between the geometry on the\nboundary and geometry of the interior. I will discuss comparison and\nrigidity results for manifolds with a lower bound for the Ricci\ncurvature. The focus will be on sharp geometric inequalities that yield\nrigidity results in the equality case.\n\nIf time allows I will also discuss results for manifolds with a lower\nbound for the scalar curvature. Many results and questions in this\ndirection are motivated by general relativity.";
+}
+{
+Bemerkungen="";
+Benutzer="Philipp Falk";
+EMinute="0";
+EStunde="18";
+LastModified="2018-04-06 14:42:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="13";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Xiaodong Wang";
+Titel="Comparison and rigidity results on compact Riemannian manifolds with boundary";
+Type="Vortrag";
+Veranst="Vortragsreihe Prof. Xiaodong Wang";
+Zeit="2018-04-23 16:00:00";
+Zusammenf="For compact Riemannian manifolds with nonempty boundary, it is\ninteresting to study the relationship between the geometry on the\nboundary and geometry of the interior. I will discuss comparison and\nrigidity results for manifolds with a lower bound for the Ricci\ncurvature. The focus will be on sharp geometric inequalities that yield\nrigidity results in the equality case.\n\nIf time allows I will also discuss results for manifolds with a lower\nbound for the scalar curvature. Many results and questions in this\ndirection are motivated by general relativity.";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2018-04-18 10:00:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="22";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fornasin, Hou, Kertels, Lye";
+Titel="Gong Show: What I found on the arXiv ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-04-23 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-04-10 10:26:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="14";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Amin Shuaib";
+Titel="A Model Without Aleph-2 Suslin Trees";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-04-25 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="cmsadmin";
+EMinute="0";
+EStunde="13";
+LastModified="2018-04-16 16:13:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="20";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Francois Bachoc";
+Titel="Consistency of stepwise uncertainty reduction strategies for Gaussian processes";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2018-04-27 12:00:00";
+Zusammenf="In the first part of the talk, we will introduce spatial Gaussian processes.\nSpatial Gaussian processes are widely studied from a statistical point of view, and have found applications in many fields, including geostatistics, climate science and computer experiments. Exact inference can be conducted for Gaussian processes, thanks to the Gaussian conditioning theorem. Furthermore, covariance parameters can be estimated, for instance by Maximum Likelihood.\nIn the second part of the talk, we will introduce a class of iterative sampling strategies for Gaussian processes, called 'stepwise uncertainty reduction' (SUR). We will give examples of SUR strategies which are widely applied to computer experiments, for instance for optimization or detection of failure domains. We will provide a general consistency result for SUR strategies, together with applications to the most standard examples.";
+}
+{
+Bemerkungen="";
+Benutzer="Philipp Falk";
+EMinute="0";
+EStunde="18";
+LastModified="2018-04-06 14:42:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="13";
+Ort="Raum 125, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Xiaodong Wang";
+Titel="Comparison and rigidity results on compact Riemannian manifolds with boundary";
+Type="Vortrag";
+Veranst="Vortragsreihe Prof. Xiaodong Wang";
+Zeit="2018-04-30 16:00:00";
+Zusammenf="For compact Riemannian manifolds with nonempty boundary, it is\ninteresting to study the relationship between the geometry on the\nboundary and geometry of the interior. I will discuss comparison and\nrigidity results for manifolds with a lower bound for the Ricci\ncurvature. The focus will be on sharp geometric inequalities that yield\nrigidity results in the equality case.\n\nIf time allows I will also discuss results for manifolds with a lower\nbound for the scalar curvature. Many results and questions in this\ndirection are motivated by general relativity.";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="";
+KeinKolloquium="false";
+LastModified="2018-03-27 10:17:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="8";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Dr. Fritz Hörmann";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="Habilitationsvortrag: Fast visualization of Mandelbrot and Julia sets";
+Type="Kolloquium";
+Zeit="2018-04-19 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="";
+KeinKolloquium="false";
+LastModified="2018-01-18 14:17:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Michael Liebendörfer,  Universität Hannover";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel=" Motivationsentwicklung im Mathematikstudium";
+Type="Kolloquium";
+Zeit="2018-04-26 17:00:00";
+Zusammenf="Der Übergang in ein Mathematikstudium wird oft problematisch erlebt.\nViele Studierende verlieren schnell ihre ursprünglich hohe intrinsische\nMotivation, ein hoher Anteil verlässt den Studiengang schon im ersten\nJahr wieder. Der Vortrag betrachtet diese Motivationsproblematik aus der\nPerspektive der Interesse-Forschung und der Selbstbestimmungstheorie der\nMotivation. In einer qualitativen Studie wurden 21 Studierende bis zu\ndrei Mal im ersten Studienjahr zu ihrem Studienerleben interviewt. Die\nAussagen erlauben eine genauere Beschreibung der Interessenentwicklung\nund des Erlebens der psychologischen Grundbedürfnisse. Die Ergebnisse\nzeigen vielfältige Gründe der Motivationsproblematik, insbesondere\nerklärt sich problematisches Autonomieerleben durch Schwierigkeiten der\nStudierenden mit dem selbstgesteuerten Arbeiten. Weiter werden\nVerbindungen zu den Besonderheiten der Hochschulmathematik und dem\nUnterschied zwischen Fach- und Gymnasiallehramtsstudierenden sichtbar.\n\n";
+}
+{
+Bemerkungen="Fakultätsratssitzung";
+EMinute="00";
+EStunde="18";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2018-01-30 09:34:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2018-04-26 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="0";
+Einladender="P. Pfaffelhuber";
+KeinKolloquium="false";
+LastModified="2018-03-22 11:17:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Michael Liebendörfer";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="Motivationsentwicklung im Mathematikstudium";
+Type="deleted";
+Zeit="2018-04-26 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2018-04-18 10:01:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="23";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fornasin, Hou, Kertels, Lye";
+Titel="Gong Show: What I found on the arXiv";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-04-30 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="sm1129";
+EMinute="";
+EStunde="";
+LastModified="2018-05-03 10:25:00";
+LastModifiedBy="jenga.mathematik.uni-freiburg.de (132.230.30.83)";
+LfdNr="33";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="www.ucl.ac.uk/~ucahmca/";
+Sprecher="Matteo Capoferri";
+Titel="T.B.A.";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-05-03 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-04-25 12:21:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="27";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Kenji Iohara (Lyon)";
+Titel="Homology of Lie algebras of generalized Jacobi matrices and its orthogonal, symplectic variants.";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-05-07 14:15:00";
+Zusammenf="In 1983, B. Feigin and B. Tsygan related the Homology of the\nLie algebra of generalized Jacobi matrices over a field k of\ncharacteristic 0. In this talk, I will explain my work with A. Fialowski on extension of their result to i) over any associative unital k-algebra R and ii) their orthogonal and symplectic subalgebras over R. ";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2018-04-09 18:21:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="10";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Lorant Szegedy (Hamburg)";
+Titel="Topological field theory on r-spin surfaces and the Arf invariant";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-05-07 16:15:00";
+Zusammenf="We present a state-sum construction of TFTs on r-spin surfaces which uses a combinatorial model of r-spin structures. We give an example of such a TFT which computes the Arf invariant for r even. We use the combinatorial model and this TFT to calculate diffeomorphism classes of r-spin surfaces with parametrized boundary.";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="15";
+EStunde="18";
+LastModified="2018-04-30 16:00:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="26";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Charles Doran (University of Alberta, ICERM@Brown University)";
+Titel="Hodge Numbers from Differential Equations";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-05-07 17:15:00";
+Zusammenf="A natural way of constructing Calabi-Yau manifolds is to build them as fibrations whose fibers are Calabi-Yau manifolds of lower dimension. For example, elliptic curves can be thought of as fibrations over the projective line by pairs of points, and K3 surfaces fibered over the projective line by elliptic curves form a large class of interesting K3 surfaces. In higher dimensions, the question of computing the Hodge numbers of such Calabi-Yau manifolds becomes a non-trivial one. I’ll talk about a method of computing Hodge numbers starting from the Picard-Fuchs differential equation of a family of Calabi-Yau manifolds. Applying this to families of lattice-polarized K3 surfaces provides a key ingredient in the classification of fibered Calabi-Yau threefolds.";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-04-30 16:12:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="31";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dipl. math. Ailyn Stötzner";
+Titel="Optimal Control of Thermoviscoplasticity";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-05-08 14:15:00";
+Zusammenf="Elastoplastische Verformungen spielen eine wichtige Rolle in industriellen Verformungsprozessen. Oft finden diese unter nicht isothermen Bedingungen statt. Daher ist die Optimierung solcher Probleme nicht nur von mathematischem Interesse sondern insbesondere interessant für industrielle Anwendungen.\n\nIn meinem Vortrag werde ich die Analysis der Existenz von globalen Lösungen eines Optimalsteuerproblems basierend auf einem thermovisko(elasto)plastischen Modell und ihre Differenzierbarkeitseigenschaften diskutieren. Ich werde insbesondere auf die Schwierigkeiten eingehen, die durch die nichtlineare Koppelung der Wärmeleitungsgleichung mit den mechanischen Gleichungen des Models, entstehen.\n\nSchließlich werde ich einige numerische Beispiele präsentieren. ";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-05-30 14:10:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="15";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jörg Flum";
+Titel="Verallgemeinerte Quantorenelemination und was nun? ";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-05-09 16:30:00";
+Zusammenf="Wir charakterisieren Klassen von (endlichen und unendlichen) Strukturen, die eine verallgemeinerte Quantorenelimination erlauben. Dabei erlaubt die Klasse K  verallgemeinerte Quantorenelimination, wenn jede in der Logik der ersten Stufe definierbare Eigenschaft in K bereits durch eine Anzahl q  von Quantoren ausgedrückt werden kann, die nur von K abhängt.\nFalls q = 0 gewählt werden kann, erhalten wir somit den \nklassischen Begriff der Quantorenelimination.\n";
+}
+{
+Bemerkungen="";
+Benutzer="sk380";
+EMinute="30";
+EStunde="11";
+LastModified="2018-05-09 13:41:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="39";
+Ort="FRIAS";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Philippe Eyssidieux";
+Titel="Some global analytic properties of VHS (…and of Hodge Modules)";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-05-11 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Die Veranstaltung geht vom 14. bis zum 16. Mai.";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-05-08 15:25:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="38";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="http://home.mathematik.uni-freiburg.de/gaav/index.html";
+Sprecher="";
+Titel="http://home.mathematik.uni-freiburg.de/gaav/index.html";
+Type="Vortrag";
+Veranst="Workshop: Geometry, Analysis, and Approximation of Variational Problems";
+Zeit="2018-05-14 00:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="45";
+EStunde="17";
+LastModified="2018-04-18 10:03:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="24";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Fornasin, Hou, Kertels, Lye";
+Titel="Gong Show: What I found on the arXiv";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-05-14 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2018-05-13 14:19:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="51";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Adrian Mathias";
+Titel="The Paris-Harrington theorem";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-05-16 16:30:00";
+Zusammenf="Let IRT, the infinite form of Ramsey's theorem, be the statement that for $c$ a finite non-empty set and \n$\bpi:[\bomega]^k \blongrightarrow c$ there is an infinite $Y \bsubset \bomega$ with $\bpi$ constant on $[Y]^k$. \nSuch an $Y$ is called homogeneous for $\bpi$. \n\nLet FRT, the finite form of Ramsey's theorem, be the statement that for $c$ a finite non-empty set and \nevery positive $m$ and $k$ in $\bomega$ there is an $n \bin \bomega$ such that whenever $X$ is a set of size $n$ \nand $\bpi: [X]^k \blongrightarrow c$ there is a set $Y \bin [X]^m$ which is homogeneous for $\bpi$. \n\nA (finite) subset $Z$ of $\bomega$ is called large if the size of $Z$ is at least $\bmin Z$. \n\nThe Paris-Harrington statement, PH, is FRT with the strengthened conclusion that the homogenous set $Y$ \nmay be taken to be large. \n\n\n\nFRT may be deduced from IRT, as can PH; FRT may be proved in Peano arithmetic PA, thus without using the axiom \nof infinity; the remarkable result (1972, published 1977 in the Handbook of Mathematical Logic) of \nParis and Harrington is that PH is too strong to be provable in PA. \n\nThis talk will expound the work of many authors to show that PH fails in many non-standard models of PA. \n";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:21:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="48";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Yohan Brunebarbe ";
+Titel="Hyperbolicity of moduli spaces of CY";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-05-17 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Fakultätsratssitzung";
+EMinute="0";
+EStunde="18";
+Einladender="Herr Schmitt";
+KeinKolloquium="false";
+LastModified="2018-05-04 09:12:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="4";
+Ort="HS Anatomiem (FRIAS), Albertstraße 17 ";
+SeeAlsoURL="";
+Sprecher=" Professor Rama Cont, Imperial College London; CNRS; Norges Bank ";
+TMinute="";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="";
+Titel="Universal Features of Price Formation in Financial Markets: Perspectives From Deep Learning ";
+Type="Kolloquium";
+Zeit="2018-05-17 17:00:00";
+Zusammenf="\nUsing a large-scale Deep Learning approach applied to a high-frequency database containing billions of electronic market quotes and transactions for US equities, we uncover nonparametric evidence for the existence of a universal and stationary price formation mechanism relating the dynamics of supply and demand for a stock, as revealed through the order book, to subsequent variations in its market price. We assess the model by testing its out-of-sample predictions for the direction of price moves given the history of price and order flow, across a wide range of stocks and time periods. The universal price formation model is shown to exhibit a remarkably stable out-of-sample prediction accuracy across time, for a wide range of stocks from different sectors. Interestingly, these results also hold for stocks which are not part of the training sample, showing that the relations captured by the model are universal and not asset-specific.\nThe universal model --- trained on data from all stocks --- outperforms, in terms of out-of-sample prediction accuracy, asset-specific linear and nonlinear models trained on time series of any given stock, showing that the universal nature of price formation weighs in favour of pooling together financial data from various stocks, rather than designing asset or sector-specific models. ";
+}
+{
+Bemerkungen="";
+EMinute="45";
+EStunde="18";
+Einladender="Heike Mildenberger";
+KeinKolloquium="false";
+LastModified="2018-05-06 15:57:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="36";
+Ort=" HS Anatomiem (FRIAS), Albertstraße 17 ";
+SeeAlsoURL="";
+Sprecher="Prof. Akihiro Kanamori,  Boston University ";
+TMinute="";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="";
+Titel="Ernst Zermelo, Freiburg, and Set Theory ";
+Type="Kolloquium";
+Zeit="2018-05-17 18:00:00";
+Zusammenf="\nOn the occasion of the naming of Ernst-Zermelo-Strasse in Freiburg, Zermelo's fundamental and transformative\nwork in set theory is commemoratively brought to the fore in celebration.\nZermelo was an inventive mathematician who also worked throughout in applied mathematics, and we mention this well, in connection with several continuing uses of his name. The overall synopsis:\n\nZermelo made explicit the Axiom of Choice,\nand with it established the Well-Ordering Theorem, bringing in a pivotal proof that can be seen as a new technique in\nmathematics. Then he made explicit the now basic Zermelo axiomatization which initiated the current, abstract\nset theory. During his time in Freiburg, he initiated the current cumulative hierarchy view of set theory, which\nnow provides the basic heuristic for set theory with the iterative conception of set.\n\nIn concluding remarks,  we briefly describe the vicissitudes of his last years in Freiburg both in set theory and at the Institute.\n";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:24:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="49";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Louis-Clément Lefèvre";
+Titel="Mixed Hodge theory and representations of fundamental groups of algebraic varieties";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-05-18 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="0";
+EStunde="15";
+LastModified="2018-05-11 11:33:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="50";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Intro Talk";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-05-18 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Jørgen";
+EMinute="15";
+EStunde="17";
+LastModified="2018-05-15 15:03:00";
+LastModifiedBy="corx.mathematik.uni-freiburg.de (132.230.30.43)";
+LfdNr="21";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jørgen Olsen Lye";
+Titel="On stable, closed geodesics on a K3";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-05-28 16:15:00";
+Zusammenf="I will report on the search for stable, closed geodesics on a K3 surface. In particular, I will sketch the Bourguignon-Yau proof of why the Riemann tensor vanishes along such geodesics, and I will explain how to find totally geodesic tori in highly symmetric Kummer K3s.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2018-05-23 15:23:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="53";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Martin Ruzicka";
+Titel="Iterated Ultrapowers in Set Theory";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-05-30 16:05:00";
+Zusammenf="Given a measurable cardinal in an inner model of set theory we can\nconstruct its ultrapower, which is smaller than any of its factors.\nFollowing Kunen's work, we explain this process and its iteration.\n";
+}
+{
+Bemerkungen="This is a joint event Basel, Zürich, Lausanne. \n";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2018-04-16 11:27:00";
+LastModifiedBy="yinsh.mathematik.uni-freiburg.de (132.230.30.99)";
+LfdNr="19";
+Ort="Basel";
+Passwort=Geheim
+SeeAlsoURL="https://numbertheory.dmi.unibas.ch/NTD2018/";
+Sprecher="Bergeron, Binyamini, Blomer, Caraiani, DeMarco";
+Titel="Number Theory Day";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-01 00:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="haydys";
+EMinute="0";
+EStunde="15";
+LastModified="2018-05-22 11:10:00";
+LastModifiedBy="imperial.mathematik.uni-freiburg.de (132.230.30.40)";
+LfdNr="52";
+Ort="Raum 127, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jin Li";
+Titel="Isolated singularities of conformal flat metrics";
+Type="Vortrag";
+Veranst=" ";
+Zeit="2018-06-01 14:15:00";
+Zusammenf="I will talk about isolated singularities of conformal flat (i.e., Gauss curvature is zero) metrics on Riemann surfaces. Under the condition that the area grows at most polynomially near the singularities, there are two possible types of singularities one of which is conical. I will also present a local expression of the metric near a singularity in suitable coordinates.";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2018-05-07 09:31:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="9";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Mark Gross FRS (Cambridge)";
+Titel="A general mirror symmetry construction";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-06-04 16:15:00";
+Zusammenf="I will talk about joint work with Bernd Siebert, which aims to give a general construction of mirrors to either log Calabi-Yau manifolds or maximal degenerations of Calabi-Yau manifolds. The construction goes by way of building the coordinate ring of the mirror as an abstract ring whose multiplication law is governed by counting curves on the original (log) Calabi-Yau. ";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:05:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="40";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 1";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-07 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-04-20 11:35:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="17";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Claire Voisin";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-08 10:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="cmsadmin";
+EMinute="0";
+EStunde="13";
+LastModified="2018-05-04 10:19:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="34";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="JProf. Matthias Trabs";
+Titel="Volatility estimation for stochastic PDEs using high-frequency observations";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2018-06-08 12:00:00";
+Zusammenf="Motivated by random phenomena in natural science as well as by mathematical finance, stochastic partial differential equations (SPDEs) have been intensively studied during the last fifty years with a main focus on theoretical analytic and probabilistic aspects. Thanks to the exploding number of available data and the fast progress in information technology, SPDE models become nowadays increasingly popular for practitioners, for instance, to model neuronal systems or interest rate fluctuations to give only two examples. Consequently, statistical methods are required to calibrate this class of complex models.\nWe study the parameter estimation for parabolic, linear, second order SPDEs observing a mild solution on a discrete grid in time and space. A high-frequency regime is considered where the mesh of the grid in the time variable goes to zero. Focusing on volatility estimation, we provide an explicit and easy to implement method of moments estimator based on the squared increments of the process. The estimator is consistent and admits a central limit theorem. This is established moreover for the estimation of the integrated volatility in a semi-parametric framework. Starting from a representation of the solution as an infinite factor model and exploiting mixing properties of Gaussian time series, the theory considerably differs from the statistics for semi-martingales literature. The performance of the method is illustrated in a simulation study.\nThis is joint work with Markus Bibinger.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:07:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="41";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 2";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-08 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-03 10:23:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="32";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Rinat Kashaev";
+Titel="Quantised dihedral angles and quantum dilogarithms";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-11 13:15:00";
+Zusammenf="I will describe a relation between quantum dilogarithms and\n3-dimensional hyperbolic geometry obtained by quantising the dihedral\nangles of an ideal hyperbolic tetrahedron with respect to the\nNeumann—Zagier symplectic structure. In this way, one constructs a\n(metaplectic) quantum operator $Q$ realising the 3-3 Pachner move for\n4-dimensional triangulations. This realisation admits a natural\ngeneralisation to any self-dual locally compact abelian group, together\nwith a fixed gaussian exponential. The 5-term operator identity,\nsatisfied by a quantum dilogarithm over such a group, is equivalent to\nan integral identity involving the operator kernel of $Q$.";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2018-05-04 21:45:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="1";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Wilderich Tuschmann (Karlsruhe)";
+Titel="Moduli Spaces of Nonnegatively Curved Riemannian Metrics";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-06-11 16:15:00";
+Zusammenf="I will report on general results and questions about spaces and moduli spaces of Riemannian metrics \nwith non-negative Ricci or non-negative sectional curvature on closed and open manifolds,\nand present recent joint work with Michael Wiemeler. In particular, \nwe construct the first classes of manifolds for which these spaces \nhave non-trivial rational homotopy, homology and cohomology groups.";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-06-04 14:25:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="56";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Frank Roesler";
+Titel="Norm-Resolvent Convergence in Perforated Domains";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-06-12 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:08:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="42";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 3";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-12 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-06-06 12:57:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="59";
+Ort="Raum 119, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="David Krusche (Duisburg-Essen)";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortrag (Kandidat für eine Doktorandenstelle im GK)";
+Zeit="2018-06-14 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-06-11 09:51:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="18";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Andre Belotto";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-15 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:09:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="43";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 4";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-15 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2018-06-11 09:40:00";
+LastModifiedBy="abalone.mathematik.uni-freiburg.de (132.230.30.42)";
+LfdNr="12";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Oliver Lindblad Petersen (Hamburg)";
+Titel="Wave equations with initial data on compact Cauchy horizons";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-06-18 16:15:00";
+Zusammenf="Wave equations are usually studied in globally hyperbolic regions of \nspacetimes. However, to approach the famous strong cosmic censorship \nconjecture, this is not sufficient. One needs to understand the behavior \nof waves close to the boundary of the globally hyperbolic region, the \nCauchy horizon. The purpose of this talk is to discuss the \ncharacteristic Cauchy problem with initial data on a compact Cauchy \nhorizon. We prove an energy estimate close to compact non-degenerate \nCauchy horizons which implies existence and uniqueness results for wave \nequations. In particular, we overcome the essential remaining difficulty \nin proving the Moncrief-Isenberg conjecture in the non-degenerate case. \nThis can be seen as a special case of the strong cosmic censorship \nconjecture.";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-06-04 14:31:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="57";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Nil-Jana Akpinar";
+Titel="Heuristic Solvers for Edge Clique Cover Graph Problems Based on Deep Neural Networks";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-06-19 14:15:00";
+Zusammenf="Combinatorial optimization over graphs often presents NP-hard problems, which require considerable manual effort for deriving problem-specific heuristic solvers. Recent research suggests learning of such solvers with deep neural networks and yields high experimental performance on various problems. Yet a theoretical discussion on learnability from a statistical perspective is omitted. We propose traditional feedforward neural networks (FNN) and recurrent neural networks (RNN) that adapt to graph size, in order to learn heuristic solvers for the NP-hard edge clique cover number (ECCN) problem. Both types of architectures are examined in the framework of statistical learning theory, which allows derivation of problem-independent sample complexity bounds for the respective networks. We find that, whereas iterating through all graphs with n vertices takes O(2^{n^2}), FNN-based solvers require at most O(n^3 ln(n)), and RNN-based solvers at most O(n^6) samples to provide reliable heuristic solvers. Experimental evaluation with random graphs on the ECCN problem con firrms a high solution quality, especially of RNNs. On dense graphs, an accuracy of 82.7% is reached, which outperforms the state-of-the-art heuristic from the operations research literature by 15.6 percentage points.";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-05-08 10:26:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="37";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Philip Dittmann";
+Titel="Anwendungen von Typen in der Theorie reeller Körper";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-06-20 16:30:00";
+Zusammenf="Ein angeordneter Körper heißt archimedisch, falls die Menge der ganzen Zahlen in ihm unbeschränkt ist. Es ist leicht zu sehen, dass diese Eigenschaft nicht erststufig axiomatisierbar ist, weshalb es sich anbietet, schwächere Bedingungen zu studieren. Dies führt auf sehr natürliche Weise zur Sprache von Typen im Sinne der Modelltheorie, und einigen interessanten (und recht subtilen) Fragen zu deren Realisierbarkeit.\n";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:10:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="44";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 5";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-21 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="haydys";
+EMinute="";
+EStunde="";
+LastModified="2018-06-16 10:55:00";
+LastModifiedBy="imperial.mathematik.uni-freiburg.de (132.230.30.40)";
+LfdNr="55";
+Ort="Raum 414, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sergei Gukov";
+Titel="Multi-monopole invariants and Vertex Algebras";
+Type="Vortrag";
+Veranst="Freiburg / Göttingen Seminar on Gauge Theory and Physics";
+Zeit="2018-06-21 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Fakultätsratssitzung";
+EMinute="00";
+EStunde="18";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2018-01-30 09:37:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2018-06-21 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="haydys";
+EMinute="0";
+EStunde="18";
+LastModified="2018-06-16 10:54:00";
+LastModifiedBy="imperial.mathematik.uni-freiburg.de (132.230.30.40)";
+LfdNr="54";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sergei Gukov";
+Titel="Dynamical Systems, Topology, and Modular Forms";
+Type="Vortrag";
+Veranst="Mathematisch-Physikalisches Kolloquium";
+Zeit="2018-06-21 17:00:00";
+Zusammenf="What connects these three subjects? The goal of the talk will be to introduce a function that answers a question in topology, can be computed via methods more common in the theory of dynamical systems, and in the end turns out to enjoy beautiful modular properties of the type first observed by Ramanujan.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-06-21 09:46:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="16";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Arvid Perego";
+Titel="Moduli spaces of sheaves on K3 surfaces and irreducible symplectic varieties";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-22 10:30:00";
+Zusammenf="Irreducible symplectic manifolds are one of the three building blocks of compact K\b\qahler manifolds with numerically trivial canonicl bundle (together with abelian varieties and Calabi-Yau manifolds), thanks to the Beauville-Bogomolov decomposition theorem. A recent result of A. H\b\qoring and T. Peternell has completed the extension of this decomposition theorem to singular projective varieties: irreducible symplectic varieties are the singular analogue of irreducible symplectic manifolds, and they are one of the building blocks of normal, projective varieties having canonical singularities and numerically trivial canonical bundle. In a recent joint work with A. Rapagnetta we prove that all moduli spaces of semistable sheaves over projective K3 surfaces (with respect to a generic polarization) are irreducible symplectic varieties, with the only excption of those isomorphic to symmetric products of K3 surfaces, and compute their Beauville form and Fujiki constant. Similar results are shown to hold for the Albanese fiber of moduli spaces of sheaves over Abelian surfaces.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:11:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="45";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 6";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-22 14:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="skandel1";
+EMinute="";
+EStunde="";
+LastModified="2018-06-18 12:46:00";
+LastModifiedBy="blox.mathematik.uni-freiburg.de (132.230.30.110)";
+LfdNr="61";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Michele Schiavina (UC Berkeley and MPIM Bonn)";
+Titel="Equivalence of field theories in the BV-BFV formalism. Insights from General Relativity";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-06-25 16:15:00";
+Zusammenf="The standard notion of equivalence of field theories roughly requires the Euler-Lagrange loci of the two associated variational problems to be diffeomorphic, possibly modulo the action of the respective symmetry distributions, in some appropriate framework.\nThis can be made stated more precisely in the Batalin-Fradkin-Vilkovisky setting, where some cohomological presentation of said locus is constructed.\nI will discuss a series of examples, all related to General Relativity in different space-time dimensions, that suggest that higher codimension data should play a role in defining (and refining) equivalence between classical theories, and raise the question of whether (and how) this picture carries over to quantisation.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:12:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="46";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 7";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-26 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-04-27 09:30:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="30";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Remy van Dobben de Bruyn";
+Titel="A variety that cannot be dominated by one that lifts";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-06-27 10:30:00";
+Zusammenf="In the sixties, Serre constructed a smooth projective variety in\ncharacteristic p that cannot be lifted to characteristic 0. If a variety\ndoesn't lift, a natural question is whether some variety related to it does\nlift. We construct an example of a smooth projective variety that cannot be\nrationally dominated by a smooth projective variety that lifts.\n";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-05-11 11:13:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="47";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Talk 8";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Vortragsreihe \qD-Modules and Hodge Modules\q";
+Zeit="2018-06-28 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="cmsadmin";
+EMinute="0";
+EStunde="13";
+LastModified="2018-06-06 09:24:00";
+LastModifiedBy="phobos.fdm.uni-freiburg.de (132.230.97.33)";
+LfdNr="58";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Hua Tang";
+Titel="Learning Genetic Architecture of Complex Traits Across Populations";
+Type="Vortrag";
+Veranst="Seminar über Datenanalyse und Modellbildung";
+Zeit="2018-06-29 12:00:00";
+Zusammenf="Genome-wide association studies (GWAS) have become a standard approach for identifying loci influencing complex traits. However, GWAS in non-European populations are hampered by limited sample sizes and are thus underpowered. We introduce an empirical Bayes approach, which improves the power of mapping trait loci relevant in minority populations through adaptively leveraging multi-ethnic evidence. Likewise, trans-ethnic information can improve genetic risk prediction of traits and diseases. I will discuss how these statistical approaches can be extended to integrate other types of biological knowledge. ";
+}
+{
+Bemerkungen="";
+Benutzer="Doris";
+EMinute="";
+EStunde="";
+LastModified="2018-06-15 11:47:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="65";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="D. Hein";
+Titel="Introduction to contact dynamics";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-07-02 16:15:00";
+Zusammenf="This talk will be an introduction to contact geometry and dynamics.\nIn particular, I will explain the relation between Hamiltonian systems and contact dynamics.\nThe main examples are level sets of Hamiltonians from classical mechanics and contact manifolds, ob which the Reeb flow induces an S^1-action with reasonably nice quotients.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-06-29 09:40:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="70";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Simon Riche, Université Clermont Auvergne";
+Titel="Soergel's Endomorphismensatz for perverse sheaves";
+Type="Vortrag";
+Veranst="Representation Theory Seminar";
+Zeit="2018-07-03 10:30:00";
+Zusammenf="A fundamental result obtained by Soergel in his celebrated work\non the BGG category O is the description of the endomorphism algebra of\nthe projective cover of a simple Verma module, in terms of the\n\qcoinvariant algebra\q. Through Beilinson-Bernstein localization, this\nresult can also be stated in terms of perverse sheaves on flag varieties,\nwith complex coefficients. In this talk I will explain a new \qtopological\q\nproof of this result, completely in the setting of perverse sheaves, which\nin fact applies for arbitrary fields of coefficients and leads to a\ndescription of the category of perverse sheaves in terms of commutative\nalgebra. This is joint work with Roman Bezrukavnikov.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-06-29 15:10:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="69";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Luigi Berselli";
+Titel="";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-07-03 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-06-14 10:27:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="64";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Elias Baro";
+Titel="Commutators of simply-connected o-minimal groups";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-07-04 16:30:00";
+Zusammenf="Groups definable in an o-minimal expansion of a real closed field can be seen as a non-standard version of a Lie group (if the real closed field is the real field then such a group is actually a Lie group). For example, algebraic groups over a real closed field are o-minimal groups.  In fact, the behaviour of o-minimal groups rests in between algebraic groups and Lie groups. The definability of the derived subgroup is a good example of this dichotomy.\n\nThe commutator subgroup of an algebraic group is again algebraic. However, the commutator of a Lie group may not be a Lie subgroup (there are even solvable counterexamples). The commutator  of an o-minimal group may not be definable; in previous work with Jaligot and Otero, we proved that it is so if the group is solvable. \nCommutators play an important role in any category of groups; they played a crucial role in Conversano-Onshuus-Starchenko's characterisation of which solvable Lie groups are definable in an o-minimal expansion of the real field. \n\nIn this talk I will present an overview of these results and provide new insights concerning commutators of simply-connected o-minimal groups.\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="sm1129";
+EMinute="";
+EStunde="";
+LastModified="2018-07-05 10:00:00";
+LastModifiedBy="jenga.mathematik.uni-freiburg.de (132.230.30.83)";
+LfdNr="25";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="http://federicobambozzi.eu/index.php";
+Sprecher="Federico Bambozzi";
+Titel="The rigidity theorem for motives of non-archimedean analytic spaces";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-07-06 10:15:00";
+Zusammenf="I will give a quick introduction to the notions of motive and of motivic sheaves. Then, after recalling the main ideas of non-Archimedean analytic geometry I will define the category of motivic sheaves of non-Archimedean analytic spaces. Finally, I will state the Rigidity Theorem in this context and if time permits I will briefly sketch the main ideas about its proof and mention some applications.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-06-19 13:06:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="66";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Falk Beckert";
+Titel="Global Serre dualities";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-07-09 10:30:00";
+Zusammenf="Serre equivalences are important autoequivalences of k-linear categories appearing in different fields of mathematics. In this talk we will ask the following question. In which way are Serre equivalences compatible with k-linear functors? For this we first review the situation in the case of algebraic geometry, where some compatibilty results are known. This motivates us to introduce the notion of a \qglobal Serre duality\q, which is an abstract framework encoding the naturality of Serre equivalences. Afterwards we show the existence of global Serre dualities in the case of (abstract) representation theory. In interesting special cases, we obtain explicit descriptions of Serre equivalences. This last step will require some techniques from abstract cubical homotopy theory. This is part of an on-going project with Moritz Groth.\n";
+}
+{
+Bemerkungen="";
+Benutzer="kf1034";
+EMinute="";
+EStunde="";
+LastModified="2018-06-21 13:05:00";
+LastModifiedBy="mahjongg.mathematik.uni-freiburg.de (132.230.30.96)";
+LfdNr="67";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ksenia Fedosova";
+Titel="Vector-valued automorphic functions and their Fourier series";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-07-09 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Besuch des Rektors an der Fakultät für Mathematik\nund Physik zur offenen Diskussion über die gesamtstrategische Ausrichtung der Universität Freiburg";
+Benutzer="Philipp Falk";
+EMinute="45";
+EStunde="17";
+LastModified="2018-06-27 14:10:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="68";
+Ort="Großer Hörsaal der Physik, Hermann-Herder-Straße 3a";
+Passwort=Geheim
+SeeAlsoURL="https://www.math.uni-freiburg.de/aktuell/Plakat_Besuch_Rektor.pdf";
+Sprecher="Prof. Dr. Dr. h.c. Hans-Jochen Schiewer";
+Titel="Connecting Creative Minds – Trinational, European, Global";
+Type="Vortrag";
+Veranst="Besuch des Rektors an der Fakultät für Mathematik und Physik";
+Zeit="2018-07-10 15:45:00";
+Zusammenf="\n  - Was meint Connecting Creative Minds?\n  - Wie wollen wir dieses Motto – im Großen wie im Kleinen – erfolgreich leben?\n  - Mit welchen Vorhaben können wir künftig die Kreativität aller Mitglieder unserer Universität noch stärken?\n\nAlle Wissenschaftlerinnen und Wissenschaftler, alle Studierenden, alle Mitarbeiterinnen und Mitarbeiter der Fakultät sind herzlich eingeladen, diese Fragen\ngemeinsam mit dem Rektor zu diskutieren und die Gesamtstrategie der Universität weiterzuentwickeln.";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-07-04 14:15:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="62";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Brendan Stuber-Rousselle";
+Titel="Baumforcings und Ideale";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-07-11 16:30:00";
+Zusammenf="Die Topologie des Cantor-Raumes, die durch endliche 0-1-Folgen erzeugt wird,nennen wir die Standardtopologie. Bezüglich dieser Topologie ist eine Teilmenge genau dann nirgends dicht, wenn es zu jeder endlichen Folge eine\nendliche Fortsetzung gibt, die zu keinem Element der Teilmenge Anfangsstück ist. Da jeder Cohen-Baum durch eine endliche Folge definiert wird, können wir das Obige als Definition des Ideals der Cohen-nirgends dichten\nMengen nehmen.  Das $\bsigma$-Ideal der Cohen-mageren Mengen\nbesteht aus abzählbaren Vereinigungen Cohen-nirgends dichter Mengen. Diese beiden Definitionen können wir nun auf beliebige Baumforcings übertragen und uns fragen, ob die beiden Ideale übereinstimmen.\n\nIn dem Vortrag möchte ich nachweisen, dass im klassischen Mathiasforcing die beiden Ideale der Mathias-nirgends dichten Mengen und Mathias-mageren Mengen übereinstimmen, wenn wir jedoch das Mathiasforcing für stark unerreichbares $\bkappa$ verallgemeinern, diese Gleichheit verlieren.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-07-05 11:11:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="71";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Henning Haahr-Andersen, Aarhus University";
+Titel="Tilting modules for reductive algebraic groups and their quantum counterparts.";
+Type="Vortrag";
+Veranst="Representation Theory Seminar";
+Zeit="2018-07-12 10:30:00";
+Zusammenf="Modules which have filtrations by Weyl modules as well as by dual Weyl modules\n\nare called tilting modules. Starting with this definition and a few basic properties I will in this\n\ntalk survey some of the results in representation theory where they have played a key role.\n\n";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="";
+KeinKolloquium="false";
+LastModified="2018-06-01 10:34:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Julian Scheuer";
+TMinute="";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="";
+Titel="Two-point functions in differential geometry and the Lawson conjecture";
+Type="Kolloquium";
+Zeit="2018-07-12 17:00:00";
+Zusammenf="The Lawson conjecture from 1970 states the following:\n\nConjecture (Lawson, 1970).  Any embedded minimal torus in the 3-dimensional unit-sphere is the Cliford torus.\n\n\n\nIn 2013, Brendle confirmed the validity of this conjecture  thereby complementing the case of genus zero due to Almgren. Although Lawson himself provided many crucial ingredients used in the final proof by Brendle, the missing\npiece in the completion of the proof was finally given in form of a sophisticated use\nof the maximum principle on the surface T: Instead of trying to come up with an\nauxiliary function on T, an auxiliary function on the product T × T is constructed,\nwhich contains much more geometric information at points where a maximum is\nachieved. This method followed up similar techniques used earlier in the context of\nnon-collapsing for curvature flows by Andrews  and Huisken. This auxiliary\nfunction led to the conclusion that the second fundamental form on T must have\nconstant length and due to an earlier result of Lawson, Brendle was able to conclude\nthat T must be the Clifford torus up to isometries.\nIn this talk we present this powerful method of two-point functions and sketch\nits various mentioned applications.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-07-12 09:54:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="28";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Fiebig";
+Titel="Sheaves on the alcoves and modular representations";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-07-13 10:30:00";
+Zusammenf="I will give an overview of some recent results obtained jointly with Martina Lanini. While trying to understand the intricacies of the combinatorial category of Andersen, Jantzen and Soergel we came up with a new category that consists of ordinary sheaves on the space of alcoves of an affine Weyl group. I will show how this category provides new methods and tools for the problem of determining rational characters of algebraic groups in positive characteristics.";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="";
+EStunde="";
+LastModified="2018-07-12 16:41:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="73";
+Ort="Bibliothek Angewandte Mathematik, R216, RZ, Hermann-Herder-Strasse 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Harbir Antil";
+Titel="Sobolev spaces with non-Muckenhoupt weights, fractional elliptic operators, and applications";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-07-13 12:00:00";
+Zusammenf="We propose a new variational model in weighted Sobolev spaces with\nnon-standard weights and applications to image processing. We show that\nthese weights are, in general, not of Muckenhoupt type and therefore the\nclassical analysis tools may not apply. For special cases of the\nweights, the resulting variational problem is known to be equivalent to\nthe fractional Poisson problem. The trace space for the weighted Sobolev\nspace is identified to be embedded in a weighted $L^2$ space. We propose\na finite element scheme to solve the Euler-Lagrange equations, and for\nthe image denoising application we propose an algorithm to identify the\nunknown weights. The approach is illustrated on several test problems\nand it yields better results when compared to the existing total\nvariation techniques.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Philipp Falk";
+EMinute="";
+EStunde="";
+LastModified="2018-06-11 09:16:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="60";
+Ort="Großer Hörsaal Physik, Hermann-Herder-Str. 3a";
+Passwort=Geheim
+SeeAlsoURL="https://www.math.uni-freiburg.de/aktuell/Programm_Abschlussfeier_2018.pdf";
+Sprecher="Martin Kramer";
+Titel="Festvortrag: \qDas brauche ich nicht zu lernen, das habe ich erlebt!\q";
+Type="Vortrag";
+Veranst="Sommerfest und Abschlussfeier";
+Zeit="2018-07-13 15:00:00";
+Zusammenf="im Anschluss:\nGemütliches Beisammensein im Rahmen des Sommerfestes der Fakultät im Innenhof des Physikalischen Instituts\n\nFür weitere Informationen und ein Programm finden Sie, klicken Sie bitte auf den beigefügten Link.";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2018-07-11 18:35:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="35";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Julian Strohm";
+Titel="The Weyl Denominator Identity in light of the structure of root systems ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2018-07-16 16:15:00";
+Zusammenf="The Weyl Denominator Identity arises usually as a special case of the Weyl Character Formula of a complex semisimple Lie algebra. Even though it prominently features the roots of the Lie algebra, the original proof provides limited insight into the structure of the root system.\nI will therefore present a direct proof of the Denominator Identity. This alternative approach explicitly uses connections between the roots and the Weyl Group and might provide a different perspective on the Denominator Identity as well as the structure of the root system. ";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="15";
+EStunde="11";
+LastModified="2018-07-06 13:26:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="72";
+Ort="Raum 414, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Daniel Räde (LMU München)";
+Titel="Systoles of $\bmathbb{C}P^n$ - freedom and rigidity";
+Type="Vortrag";
+Veranst="Vortrag (Kandidat für eine Doktorandenstelle im GK)";
+Zeit="2018-07-17 10:15:00";
+Zusammenf="The $k$-systole of a closed Riemannian manifold $(M,g)$ is an\ninvariant that captures the 'size' of the $k$-dimensional homology of $M$. A\nclassic question in systolic geometry is whether there are relations between\ndifferent systoles, which hold for every possible choice of $g$, or if they are\nfree to vary independently when changing the metric. It is, for example, a well\nknown result due to C. Loewner that for every metric on the 2-Torus the length\nof the shortest noncontractible loop is bounded from above by a constant times\nthe total volume.\nIn this talk we will focus on complex projective space and ask whether or not\nit is possible to realize an arbitrary set $a_1,\bldots,a_n$ of positive real\nnumbers as the systoles of $\bmathbb{C}P^n$. We discuss techniques to modify\nsystoles and present some partial results they provide in the general setting.\nAfterwards we focus on the case of $\bmathbb{C}P^2$, where we are able to give a\npositive answer, stating and motivating general results on systolic freedom in\nthe process.";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-07-13 12:15:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="74";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Shotaro Makisumi, Columbia University";
+Titel="TBA";
+Type="Vortrag";
+Veranst="Representation Theory Seminar";
+Zeit="2018-07-17 10:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ricarda Samek";
+EMinute="0";
+EStunde="18";
+LastModified="2018-07-17 12:59:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="63";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Isabel Müller";
+Titel="Stationäre Unabhängigkeit und die Erweiterung partieller Automorphismen";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2018-07-18 16:30:00";
+Zusammenf="Die Automorphismengruppe $G$ einer abzählbaren Struktur erster Ordnung ist, ausgestattet mit der Topologie punktweiser Konvergenz, eine polnische Gruppe. Insbesondere wenn die Struktur als Limes einer Klasse endlicher Strukturen entsteht, gibt es sehr enge Verbindungen zwischen den kombinatorischen Eigenschaften jener Klasse und den topologischen Eigenschaften von $G$.\n\nIn diesem Rahmen wird vor allem der Zusammenhang der Eigenschaft des kleinen Index (SIP) und der Existenz generischer Automorphismen (AG) auf der topologischen Seite und der Erweiterungseigenschaft partieller Automorphismen (EPPA) und der Ramsey-Eigenschaft auf der kombinatorischen Seite untersucht.\n\nDes Weiteren tendieren solche Limesstrukturen häufig dazu, einen Begriff der stationären Unabhängigkeit (SIR) zwischen ihren endlichen Unterstrukturen definieren zu lassen, welche ebenfalls topologische und algebraische Eigenschaften von $G$ determiniert.\n\nIn diesem Überblicksvortrag möchten wir die wichtigsten existierenden Konzepte und Zusammenhänge präsentieren und suggestive Fragen zwischen dem Zusammenhang der kombinatorischen Eigenschaften EPPA und der Existenz einer stationären Unabhängigkeit aufwerfen. ";
+}
+{
+Bemerkungen="";
+EMinute="0";
+EStunde="18";
+Einladender="";
+KeinKolloquium="false";
+LastModified="2018-05-04 10:30:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="";
+TMinute="30";
+TOrt="Sozialraum 331 in der Ernst-Zermelo-Straße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2018-07-19 17:00:00";
+Zusammenf="reserviert von Frau Mildenberger";
+}
+{
+Bemerkungen="";
+Benutzer="irina brunner";
+EMinute="";
+EStunde="";
+LastModified="2018-07-17 09:13:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="29";
+Ort="Hörsaal FRIAS, Albertstr. 19";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Martina Lanini";
+Titel="Variations on the theme of moment graphs";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2018-07-20 10:30:00";
+Zusammenf="Naturally arising as the 1-skeletons of torus actions on\n(nice) complex projective algebraic varieties, moment graphs were\noriginally introduced by Goresky, Kottwitz and MacPherson to compute\nequivariant cohomology of such varieties. In this talk, I will review\nsome applications of moment graph theory, starting from the equivariant\ncohomology of the flag variety, and the representation theory of a\ncomplex finite dimensional simple Lie algebra. Time permitting, I will\nalso discuss some ongoing joint work with Tomoyuki Arakawa on a certain\nclass of modules (\qadmitting a Wakimoto flag\q) for an affine Kac-Moody\nalgebra at a negative level.";
+}
+{
+Bemerkungen="";
+Benutzer="Alexispap";
+EMinute="30";
+EStunde="12";
+LastModified="2018-08-02 17:41:00";
+LastModifiedBy="gloin.mathematik.uni-freiburg.de (132.230.12.204)";
+LfdNr="75";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ethan O'Brien";
+Titel="wird noch bekanntgegeben";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2018-08-06 11:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="ngrosse";
+EMinute="";
+EStunde="";
+LastModified="2018-09-04 14:46:00";
+LastModifiedBy="abalone.mathematik.uni-freiburg.de (132.230.30.42)";
+LfdNr="76";
+Ort="Raum 404, Ernst-Zermelo-Str. 1";
+Passwort=Geheim
+SeeAlsoURL="http://home.mathematik.uni-freiburg.de/murro/workshop/programme.html";
+Sprecher="";
+Titel="Die Veranstaltung geht vom 24. bis zum 26. September.";
+Type="Vortrag";
+Veranst="Workshop Analysis of Differential Operators on Manifolds ";
+Zeit="2018-09-24 00:00:00";
+Zusammenf="";
+}

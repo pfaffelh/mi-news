@@ -1,0 +1,1351 @@
+{
+Feiertage="01.05.2006""25.05.2006""05.06.2006""15.06.2006";
+FerienA="05.06.2006";
+FerienE="10.06.2006";
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="5";
+REALSemA="01.04.2006";
+SemA="01.03.2006";
+SemE="30.09.2006";
+Semestername="Sommersemester 2006";
+Type="Info";
+VzA="23.04.2006";
+VzE="30.07.2006";
+}
+{
+Type="V";
+Name="AG Algebra";
+ID="AG Algebra";
+}
+{
+Type="V";
+Name="AG Spiegelsymmetrie";
+ID="AG Spiegelsymmetrie";
+}
+{
+Type="V";
+Name="Abschiedskolloquium Professor Jürgen Schulte Mönting";
+ID="Abschiedskolloquium Professor Jürgen Schulte Mönting";
+}
+{
+Type="V";
+Name="Antrittsvorlesung";
+ID="Antrittsvorlesung";
+}
+{
+Type="V";
+Name="Didaktisches Seminar";
+ID="DidSem";
+}
+{
+Type="V";
+Name="EUCOR-Kolloquium";
+ID="EUCOR-Kolloquium";
+}
+{
+Type="V";
+Name="FDM-Seminar (im Rahmen des Workshop on Stochastic Calculus and Optimal Stopping)";
+ID="FDM-Seminar (im Rahmen des Workshop on Stochastic Calculus and Optimal Stopping)";
+}
+{
+Type="V";
+Name="FDM-Seminar";
+ID="FDM-Seminar";
+}
+{
+Type="V";
+Name="Fakultätsfest Mathematik-Physik";
+ID="Fakultätsfest Mathematik-Physik";
+}
+{
+Type="V";
+Name="Oberseminar Stochastik";
+ID="Oberseminar Stochastik";
+}
+{
+Type="V";
+Name="Oberseminar über Angewandte Mathematik";
+ID="Oberseminar über Angewandte Mathematik";
+}
+{
+Type="V";
+Name="Oberseminar über Differentialgeometrie";
+ID="Oberseminar über Differentialgeometrie";
+}
+{
+Type="V";
+Name="Three-City Geometric PDE Seminar";
+ID="Three-City Geometric PDE Seminar";
+}
+{
+Type="V";
+Name="Wissenschaftlicher Vortrag ";
+ID="Wissenschaftlicher Vortrag ";
+}
+{
+Type="V";
+Name="Workshop Mathematical Finance";
+ID="Workshop Mathematical Finance";
+}
+{
+Type="V";
+Name="Workshop on Stochastic Calculus and Optimal Stopping";
+ID="Workshop on Stochastic Calculus and Optimal Stopping";
+}
+{
+Type="V";
+Name="im Rahmen der Veranstaltung \qStochastische Prozesse und Finanzmathematik\q";
+ID="im Rahmen der Veranstaltung \qStochastische Prozesse und Finanzmathematik\q";
+}
+{
+Bemerkungen="Finite-volume-based shock capturing methods can most easily be constructed on structured Cartesian meshes. Very high order discretizations are nowadays available, but their applicability is restricted to simple geometries. In this talk, I present an approach in utilizing Cartesian schemes for real-world problems that combines the ghost-fluid idea with block-structured adaptive mesh refinement (SAMR). A scalar level set function storing the distance information to the boundary surface is used to consider arbitrary geometries on the Cartesian mesh without ambiguities. Minor approximation inaccuracies near the embedded boundary are alleviated by increasing the local resolution non-uniformly. Although the boundary consideration throughout the method is first-order for now, various two- and three-dimensional examples will be presented which demonstrate that the utilization of dynamic mesh adaptation makes the overall approach sufficiently accurate for serious computational investigations. Among the examples shown are shock simulations in converging geometry, fully resolved detonation waves in realistic experimental devices, and shock-driven compressible turbulent mixing.\n\n<P>\n\nThe method has been implemented in form of a generic, discretization-independent fluid solver framework and is part of the Virtual Test Facility by the Center for Simulating the Dynamic Response of Materials at the California Institute of Technology [1]. A temporal splitting algorithm will be described that couples the adaptive Eulerian finite volume method to Lagrangian finite element schemes for computational solid dynamics. Particular, the extension of the recursive SAMR algorithm after Berger and Collela for this problem class will be discussed. Three-dimensional fluid-structure interaction simulations involving large plastic deformations or fracture and fragmentation of thin flexible shells will be shown that confirm the applicability of the proposed techniques to real-world problems with heavily evolving topology [2]. Essential auxiliary algorithms like the efficient on-the-fly evaluation of distance functions from triangulated surface meshes will be outlined. The implementation on platforms with distributed memory and software engineering aspects will be sketched briefly.\n<P>\n\n[1]    R. Deiterding, R. Radovitzky, S. P. Mauch, L. Noels, J. C. Cummings, and D. I. Meiron. A virtual test facility for the efficient simulation of solid materials under high energy shock-wave loading. Invited submission to Engineering with Computers, 2005.\n\n<P>\n\n[2]    R. Deiterding, F. Cirak, S. P. Mauch, and D. I. Meiron. A virtual test facility for simulating detonation-induced fracture of thin flexible shells. Accepted for publication in Proc. Int. Conf. on Comp. Science, May 28-31, 2006, Reading, Lecture Notes in Computer Science, Springer, 2006. ";
+Benutzer="cH";
+EMinute="15";
+EStunde="15";
+LastModified="2006-03-21 12:54:00";
+LfdNr="15";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="gloin.mathematik.uni-freiburg.de";
+Sprecher="Dr. Ralf Deiterding (California Institute of Technology)";
+Titel="A Parallel Adaptive Ghost-Fluid Method for Hyperbolic Computational Fluid Dynamics and Fluid-Structure Coupling";
+Type="Vortrag";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-03-28 14:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-03-24 16:17:00";
+LfdNr="16";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. Dr. Pavel V. Gapeev (Humboldt-Universität Berlin)";
+Titel="Perpetual Options in jump-diffusion Models: Barrier, Lookback, Switching and Credit Options";
+Type="Vortrag";
+Veranst="FDM-Seminar";
+Zeit="2006-04-07 11:15:00";
+}
+{
+Bemerkungen="Bereits ein Blick auf die Biographie Robert Musils lässt einen entscheidenden Einfluss der Mathematik auf den Bildungsgang des österreichischen Autors erkennen, der als einer der wichtigsten Vertreter der Klassischen Moderne gilt. Musil erwirbt im Zuge seiner diametral entgegengesetzten Studiengänge der Ingenieurswissenschaften, der Philosophie und Psychologie nicht nur mathematisch-logische Kenntnisse, sondern reflektiert diese auch intensiv. Er entwickelt in Auseinandersetzung mit der Problematik der mathematischen Grundlagenkrise zu Beginn des 20. Jahrhunderts ein differenziertes Bild von der Mathematik, das die wesentlichen Züge ihrer modernen Form betont. Ihre daraus resultierende Sonderstellung zwischen Wissenschaft und Ethik findet schließlich Eingang in die Dichtung Robert Musils, deren Form und Inhalt von der Mathematik entlehnten Modellen und Methoden geprägt sind.   ";
+Benutzer="Didaktisches Seminar";
+EMinute="20";
+EStunde="20";
+LastModified="2006-04-18 09:09:00";
+LfdNr="17";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="Franziska Bomski ";
+Titel="Tapferkeitsluxus der reinen Ratio  Die Mathematik im Denken und Dichten Robert Musils";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2006-04-25 19:30:00";
+}
+{
+Bemerkungen="Anmeldung bei 203-6688\ngsr@imbi.uni-freiburg.de";
+Benutzer="Klinckowstroem";
+EMinute="16";
+EStunde="16";
+LastModified="2006-04-26 14:03:00";
+LfdNr="22";
+Ort="Hörsaal Virologie, Hermann-Herder-Straße 11";
+Passwort=Geheim
+REMOTE_HOST="ahorn.mathematik.uni-freiburg.de";
+Sprecher="Prof. Boehm, Prof. Hellwig, Prof. Korinthenberg, Dr. Gerds, Prof. Schulte Mönting";
+Titel="Abschiedskolloquium Professor Schulte Mönting";
+Type="Vortrag";
+Veranst="Abschiedskolloquium Professor Jürgen Schulte Mönting";
+Zeit="2006-04-28 15:00:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-04-21 12:31:00";
+LfdNr="1";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-04-28 17:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Dziuk";
+KeinKolloquium="false";
+LastModified="2006-04-21 12:32:00";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Wolfgang Dahmen (RWTH Aachen)";
+TMinute="30";
+TStunde="16";
+Titel="Adaptive Wavelet Methoden";
+Type="Kolloquium";
+Zeit="2006-05-05 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="In diesem Vortrag werde ich ein schönes Ergebnis von Bondal und Orlov erklären. Seien X und Y glatte Varietäten und das kanonische Bündel auf X ampel oder anti-ampel. Bondal und Orlov zeigen, dass eine Äquivalenz zwischen den beschränkten derivierten Kategorien von kohärenten Garben auf X und Y bedeutet, dass die Varietäten X und Y schon isomorph sind. Ich werde\nauch weitere Sätze in dieser Richtung diskutieren.";
+Benutzer="Peter Fiebig";
+EMinute="13";
+EStunde="13";
+LastModified="2006-05-04 16:28:00";
+LfdNr="27";
+Ort="Raum 127";
+Passwort=Geheim
+REMOTE_HOST="alhambra.mathematik.uni-freiburg.de";
+Sprecher="Geordie Williamson";
+Titel="Die derivierte Kategorie kohärenter Garben";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-05-12 11:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-04-20 10:57:00";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Claus Hertling (Universität Mannheim)";
+TMinute="30";
+TStunde="16";
+Titel="Verallgemeinerungen von Hodge-Strukturen und oszillierende Integrale";
+Type="Kolloquium";
+Zeit="2006-05-12 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Klinckowstroem";
+EMinute="";
+EStunde="";
+LastModified="2006-04-27 12:05:00";
+LfdNr="23";
+Ort="Hörsaal I , Hermann-Herder-Str. 3 (Physikhochhaus)";
+Passwort=Geheim
+REMOTE_HOST="ahorn.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Jens Timmer, Physikalisches Institut";
+Titel="When Physics meets Biology";
+Type="Vortrag";
+Veranst="Antrittsvorlesung";
+Zeit="2006-05-15 17:15:00";
+}
+{
+Bemerkungen="http://www.stochastik.uni-freiburg.de/aktuelles/Workshop060519.html";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2006-05-12 11:51:00";
+LfdNr="29";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="lebesgue.mathematik.uni-freiburg.de";
+Sprecher="Prof. F. Jamshidian, Universität Twente (Niederlande)";
+Titel="Duality of optimal stopping times and domineering claims";
+Type="Vortrag";
+Veranst="Workshop on Stochastic Calculus and Optimal Stopping";
+Zeit="2006-05-18 14:30:00";
+}
+{
+Bemerkungen="http://www.stochastik.uni-freiburg.de/aktuelles/Workshop060519.html";
+Benutzer="Hattenbach";
+EMinute="";
+EStunde="";
+LastModified="2006-05-12 11:50:00";
+LfdNr="28";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="lebesgue.mathematik.uni-freiburg.de";
+Sprecher="Prof. H. R. Lerche (Freiburg)";
+Titel="Curved boundary crossing of Brownian motion revisited";
+Type="Vortrag";
+Veranst="Workshop on Stochastic Calculus and Optimal Stopping";
+Zeit="2006-05-18 15:45:00";
+}
+{
+Bemerkungen="Webpage: http://www.stochastik.uni-freiburg.de/aktuelles/Workshop060519.html";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-05-02 14:16:00";
+LfdNr="25";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. A. N. Shiryaev (Moskau) ";
+Titel="On stochastic integral representations with applications in analysis ";
+Type="Vortrag";
+Veranst="Workshop on Stochastic Calculus and Optimal Stopping";
+Zeit="2006-05-19 10:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-05-02 12:46:00";
+LfdNr="24";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. Dr. Albrecht Irle (Universität Kiel)";
+Titel=" A forward algorithm for solving optimal stopping problems";
+Type="Vortrag";
+Veranst="FDM-Seminar (im Rahmen des Workshop on Stochastic Calculus and Optimal Stopping)";
+Zeit="2006-05-19 11:15:00";
+}
+{
+Bemerkungen="Webpage: http://www.stochastik.uni-freiburg.de/aktuelles/Workshop060519.html";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-05-02 14:20:00";
+LfdNr="26";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Dr. M. Urusov (Moskau)";
+Titel="On some optimal stopping problems via the Beibel-Lerche approach ";
+Type="Vortrag";
+Veranst="Workshop on Stochastic Calculus and Optimal Stopping";
+Zeit="2006-05-19 14:30:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Lerche";
+KeinKolloquium="false";
+LastModified="2006-04-27 13:28:00";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Goran Peskir, PhD (University of Manchester)";
+TMinute="30";
+TStunde="16";
+Titel="The trap of complacency in predicting the maximum of Brownian motion";
+Type="Kolloquium";
+Zeit="2006-05-19 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="We describe certain presentations and combinatorial structure of the mapping class group Map_g of a closed surface of genus g. ";
+Benutzer="sewa";
+EMinute="17";
+EStunde="17";
+LastModified="2006-05-18 12:12:00";
+LfdNr="32";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="kalaha.mathematik.uni-freiburg.de";
+Sprecher="Dr. Vsevolod Shevchishin";
+Titel="On the combinatorial structure of mapping class groups ";
+Type="Vortrag";
+Veranst="Oberseminar über Differentialgeometrie";
+Zeit="2006-05-22 16:15:00";
+}
+{
+Bemerkungen="<A HREF=http://www.mathematik.uni-freiburg.de/IAM/homepages/moessner/OSAM/freiburg.pdf>Abstract</A>";
+Benutzer="OSAM";
+EMinute="15";
+EStunde="15";
+LastModified="2006-05-22 12:55:00";
+LfdNr="35";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="aam.mathematik.uni-freiburg.de";
+Sprecher="Prof. K. Siebert";
+Titel="Konvergenz adaptiver Finite Elemente";
+Type="Vortrag";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-05-23 14:15:00";
+}
+{
+Bemerkungen="Wie können Schülerinnen und Schüler im Laufe ihrer langjährigen Mathematikausbildung ein tragfähiges, vernetztes Wissensfundament aufbauen, das ihnen flexibel nutzbar zur Verfügung steht? Gerade im Mathematikunterricht der Sekundarstufe entstehen bei vielen Schülerinnen und Schülern zeitweise Wissensinseln, die kaum mehr als den Stoff der gerade aktuellen Unterrichtssequenz umfassen. Zu diesem komplexen Problemfeld werden in der Veranstaltung vielfältige, in der Praxis erprobte Konzepte diskutiert. Die Basis bilden Erfahrungen aus den bundesweiten Programmen SINUS (1998-2003) und SINUS - Transfer (seit 2003). Das Spektrum der vorgestellten Ansätze für kumulatives Lernen reicht von Grundwissenssammlungen über Methoden für explizites Wiederholen und Aufgaben mit vernetzendem Charakter bis hin zum Arbeiten mit Kernideen.";
+Benutzer="Didaktik";
+EMinute="20";
+EStunde="20";
+LastModified="2006-04-18 09:13:00";
+LfdNr="18";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="Volker Ulm (Universität Bayreuth)";
+Titel="Grundwissen sichern  Wissen vernetzen  -Konzepte und Erfahrungen aus den Programmen SINUS und SINUS-Transfer";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2006-05-23 19:30:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Kuwert";
+KeinKolloquium="false";
+LastModified="2006-04-28 14:18:00";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Anthony Tromba, PhD (UC Santa Cruz, z. Zt. MPI Leipzig)";
+TMinute="30";
+TStunde="16";
+Titel="Branch Points for Minimal Surfaces";
+Type="Kolloquium";
+Zeit="2006-05-26 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="We describe certain presentations and combinatorial structure of the mapping class group Map_g of a closed surface of genus g. In particular, Wajnryb's presentation of Map_g as a quotient of a generalised braid group is discussed.";
+Benutzer="sewa";
+EMinute="17";
+EStunde="17";
+LastModified="2006-05-25 16:39:00";
+LfdNr="46";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="kalaha.mathematik.uni-freiburg.de";
+Sprecher="Dr. Vsevolod Shevchishin";
+Titel="On the combinatorial structure of mapping class groups. II";
+Type="Vortrag";
+Veranst="Oberseminar über Differentialgeometrie";
+Zeit="2006-05-29 16:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-06-01 15:59:00";
+LfdNr="47";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Herr Prof. Dr. Dr. h.c. mult. Albert N. Shiryaev (Steklov Institut, Moskau) ";
+Titel="Boundary Crossing of Brownian Motion";
+Type="Vortrag";
+Veranst="im Rahmen der Veranstaltung \qStochastische Prozesse und Finanzmathematik\q";
+Zeit="2006-06-02 14:15:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-05-23 13:15:00";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-06-02 17:00:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-03-09 16:54:00";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="server4.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-06-09 17:00:00";
+}
+{
+Bemerkungen="In der Gesellschaft gilt Mathematik häufig als abstrakt und lebensfern. Darüber hinaus haben die Ergebnisse von TIMSS und PISA gezeigt, dass die deutschen Schülerinnen und Schüler Schwierigkeiten im Anwenden von Mathematik haben. Eine Möglichkeit, um den Lernenden ein angemessenes Bild von Mathematik sowie Fähigkeiten im Anwenden zu vermitteln, stellt die Integration von Realitätsbezügen dar. \nDer Vortrag führt praxisorientiert in das mathematische Modellieren im Unterricht  also das Bearbeiten realistischer Probleme mit Hilfe von Mathematik - ein. Neben den Grundlagen des Anwendens von Mathematik werden Unterrichtsbeispiele und insbesondere Ergebnisse einer Studie vorgestellt, die die Chancen und mögliche Probleme der Integration von Realitätsbezügen in den Schulalltag aufzeigt. ";
+Benutzer="Didaktik";
+EMinute="20";
+EStunde="20";
+LastModified="2006-04-18 09:19:00";
+LfdNr="19";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="Katja Maaß (PH  Freiburg)";
+Titel="Realitätsbezüge in den Mathematikunterricht?!  Nicht immer, aber   ";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2006-06-13 19:30:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-06-09 11:30:00";
+LfdNr="8";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-06-16 17:00:00";
+}
+{
+Bemerkungen="<a href='http://www.mathematik.uni-freiburg.de/IAM/homepages/moessner/OSAM/abstract.pdf'>abstract</a>";
+Benutzer="OSAM";
+EMinute="15";
+EStunde="15";
+LastModified="2006-06-13 13:30:00";
+LfdNr="36";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="archer.mathematik.uni-freiburg.de";
+Sprecher="Jan Schneider";
+Titel="Function Spaces of varying smoothness & 2-Microlocalisation";
+Type="Vortrag";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-06-20 14:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-06-14 13:43:00";
+LfdNr="50";
+Ort="Raum 232, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Christian Lauer";
+Titel="Muster und Alignments in zufälligen Zeichenketten";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-06-22 11:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Peter Fiebig";
+EMinute="16";
+EStunde="16";
+LastModified="2006-05-24 16:10:00";
+LfdNr="45";
+Ort="tba";
+Passwort=Geheim
+REMOTE_HOST="alhambra.mathematik.uni-freiburg.de";
+Sprecher="Steen Ryom-Hansen";
+Titel="Bernstein-Szegö Polynome für Wurzelsysteme";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-06-22 14:15:00";
+}
+{
+Bemerkungen="In a 1998 article, Brenti gave a nonrecursive formula for Kazhdan-Lusztig polynomials and proved it by combinatorial methods. The aim of this talk is to give a geometric proof of Brenti's formula. The two main ingredients of the proof are Kazhdan's and Lusztig's geometric realization of Kazhdan-Lusztig polynomials and a new construction of the\nintermediate extension of a pure perverse sheaf as a weight truncation of its full direct image.";
+Benutzer="Peter Fiebig";
+EMinute="13";
+EStunde="13";
+LastModified="2006-06-01 09:34:00";
+LfdNr="33";
+Ort="Raum 127";
+Passwort=Geheim
+REMOTE_HOST="alhambra.mathematik.uni-freiburg.de";
+Sprecher="Dr. Sophie Morel, Paris";
+Titel="Calculation of Kazhdan-Lusztig polynomials (a geometric\ninterpretation of a formula of Brenti)";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-06-23 11:15:00";
+}
+{
+Bemerkungen="In pattern analysis with kernel methods, it is widely accepted, that the kernel function is the main ingredient to represent any kind of problem specific prior knowledge. A frequently observed kind of prior knowledge is knowledge about pattern variations, e.g. in terms of invariance with respect to transformations of single patterns. For this scenario we present two generic methods of constructing invariant kernels, the first is based on invariant distances, the second on invariant integration. As the former method cannot guarantee to result in positive definite kernels, we discuss the use of indefinite kernels in machine learning and pattern analysis, e.g. learning theoretic statements such as VC-bounds can be derived. Applications in kernel methods, in particular support vector machines, demonstrate the competitiveness with existing methods in terms of prediction-accuracy and computational complexity. Sample applications comprise optical character recognition and classification of bacteria based on micro-Raman-spectroscopy.";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-06-14 11:08:00";
+LfdNr="38";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Bernard Haasdonk (Universität Freiburg)";
+Titel="Invariant Kernel Methods for Pattern Analysis and Machine Learning";
+Type="Vortrag";
+Veranst="FDM-Seminar";
+Zeit="2006-06-23 11:15:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-06-16 12:48:00";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-06-23 17:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="17";
+EStunde="17";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 20:56:00";
+LfdNr="51";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Annette Huber-Klawitter (Universität Leipzig)";
+TMinute="";
+TStunde="";
+Titel="Regulatoren";
+Type="Kolloquium";
+Zeit="2006-06-26 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="19";
+EStunde="19";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 20:57:00";
+LfdNr="52";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Alexander Schmidt (Universität Regensburg)";
+TMinute="";
+TStunde="";
+Titel="Algebraische Zykel und höherdimensionale Klassenkörpertheorie";
+Type="Kolloquium";
+Zeit="2006-06-26 18:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="<a href='http://www.mathematik.uni-freiburg.de/IAM/homepages/moessner/OSAM/mueller.txt'>abstract</a>";
+Benutzer="OSAM";
+EMinute="15";
+EStunde="15";
+LastModified="2006-06-13 09:56:00";
+LfdNr="37";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="archer.mathematik.uni-freiburg.de";
+Sprecher="Bernhard Müller";
+Titel="High Order Numerical Simulation of Aeolian Tones";
+Type="Vortrag";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-06-27 14:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="16";
+EStunde="16";
+LastModified="2006-05-24 14:30:00";
+LfdNr="43";
+Ort="Hörsaal Virologie, Hermann-Herder-Straße 11";
+Passwort=Geheim
+REMOTE_HOST="hochfirst.mathematik.uni-freiburg.de";
+Sprecher="Yuxiang Li (ICTP Trieste)";
+Titel="The applications of capacity in Moser-Trudinger inequalities";
+Type="Vortrag";
+Veranst="Three-City Geometric PDE Seminar";
+Zeit="2006-06-27 15:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="17";
+EStunde="17";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:00:00";
+LfdNr="53";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Urs Hartl (Universität Freiburg)";
+TMinute="";
+TStunde="";
+Titel="Drinfeld-Moduln";
+Type="Kolloquium";
+Zeit="2006-06-27 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="17";
+EStunde="17";
+LastModified="2006-05-24 14:32:00";
+LfdNr="44";
+Ort="Hörsaal Virologie, Hermann-Herder-Straße 11";
+Passwort=Geheim
+REMOTE_HOST="hochfirst.mathematik.uni-freiburg.de";
+Sprecher="Natasa Sesum (Columbia University, z. Z. AEI Potsdam)";
+Titel="Type II collapsing of the maximal solutions of the Ricci flow on R2";
+Type="Vortrag";
+Veranst="Three-City Geometric PDE Seminar";
+Zeit="2006-06-27 16:45:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="19";
+EStunde="19";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:01:00";
+LfdNr="54";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Jörg Brüdern (Universität Stuttgart)";
+TMinute="";
+TStunde="";
+Titel="Perspektiven der diophantischen Analyse";
+Type="Kolloquium";
+Zeit="2006-06-27 18:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Kaum zu glauben, welch nachhaltige Wirkung eine häusliche Aufgabe entfalten kann. In den Jahren 1990 bis `92 hat es am Gymnasium Stein b. Nürnberg einen internen Knobelwettbewerb gegeben. Der Zuspruch ist so groß gewesen, dass die Initiatoren Paul Jainta und Rudolf Großmann auf die Idee kamen, ihre Aufgaben allen sechs Gymnasien in Stadt und Landkreis Fürth zur Verfügung zu stellen. Aus diesem Einfall ist der größte ehrenamtliche Mathematikwettbewerb im süddeutschen Raum entstanden.\nDiese Breitenwirkung erzielt der Wettbewerb durch eine glückhafte Zusammenarbeit von Hochschulen und Schulen mit Sponsoren aus der Wirtschaft. Dadurch wird bei Schülern ein anhaltendes Interesse an der Mathematik geweckt und die Förderung von mathematischen Begabungen kann frühzeitiger erfolgen und breiter gestreut werden.\nUnd natürlich macht der Wettbewerb auch Probleme: Aufgaben zum Mitnehmen. Stellen Sie doch Ihrer Klasse einmal eine oder mehrere dieser Probleme vor. Die etwas anderen Wettbewerbsaufgaben stellen gute Lockerungsübungen für den Unterricht dar. ";
+Benutzer="Didaktik";
+EMinute="20";
+EStunde="20";
+LastModified="2006-04-18 09:24:00";
+LfdNr="20";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="Paul Jainta (Adam-Kraft-Gymnasium Schwabach)";
+Titel="Ausgerechnet Mathematik  Die Förderung mathematisch interessierter Schülerinnen und Schüler am Beispiel der Fürther Mathematik-Olympiade";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2006-06-27 19:30:00";
+}
+{
+Bemerkungen="Der Vortrag findet im Rahmen des Oberseminars über Mathematische Stochastik statt.";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-06-20 10:54:00";
+LfdNr="59";
+Ort="Raum 232, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. P. Vellaisamy";
+Titel="Collapsibility of Regression Coefficients and its Extensions";
+Type="Vortrag";
+Veranst="FDM-Seminar";
+Zeit="2006-06-29 11:15:00";
+}
+{
+Bemerkungen="Ein Abstract ist im pfd-Format unter \nhttp://www.fdm.uni-freiburg.de/aktuelles/fdmseminar.php\nzu finden.";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-06-20 10:40:00";
+LfdNr="39";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. Dr. David Siegmund (Stanford University)";
+Titel="Approximating the variance of predicted states in a Hidden Markov Model";
+Type="Vortrag";
+Veranst="FDM-Seminar";
+Zeit="2006-06-30 11:15:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-06-19 21:23:00";
+LfdNr="12";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-06-30 17:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="17";
+EStunde="17";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:58:00";
+LfdNr="57";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Valentin Blomer (Universität Göttingen)";
+TMinute="";
+TStunde="";
+Titel="Quadratische Formen und additive Zahlentheorie";
+Type="Kolloquium";
+Zeit="2006-07-03 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="19";
+EStunde="19";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:18:00";
+LfdNr="58";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Preda Mihailescu (Universität Göttingen)";
+TMinute="";
+TStunde="";
+Titel="Über Catalans Gleichung und weitere zyklotomische Norm-Gleichungen";
+Type="Kolloquium";
+Zeit="2006-07-03 18:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="17";
+EStunde="17";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:07:00";
+LfdNr="55";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="PD Dr. Elmar Große-Klönne (Universität Münster)";
+TMinute="";
+TStunde="";
+Titel="Darstellungstheorie über nichtarchimedischen Körpern: geometrische Methoden";
+Type="Kolloquium";
+Zeit="2006-07-04 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="19";
+EStunde="19";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-06-19 21:08:00";
+LfdNr="56";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Jan Hendrik Bruinier (Universität Köln)";
+TMinute="";
+TStunde="";
+Titel="Unendliche Produkte und automorphe Formen";
+Type="Kolloquium";
+Zeit="2006-07-04 18:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-05-15 15:17:00";
+LfdNr="31";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Dr. Stefan Ankirchner (Imperial College, London) ";
+Titel="Enlargement of filtrations and information dependence of optimal investment on financial markets";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-07-06 14:15:00";
+}
+{
+Bemerkungen="";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-06-28 09:12:00";
+LfdNr="40";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. Dr. T. Höfer (Humboldt-Universität Berlin)";
+Titel="t.b.a.";
+Type="Geloescht";
+Veranst="FDM-Seminar";
+Zeit="2006-07-07 11:15:00";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-06-30 08:26:00";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-07-07 17:00:00";
+}
+{
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-07-09 16:26:00";
+LfdNr="64";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="server4.mathematik.uni-freiburg.de";
+Sprecher="test";
+Titel="test-titel";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-07-07 17:00:00";
+Zusammenf="test-Zusammenfassung";
+}
+{
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-07-09 16:26:00";
+LfdNr="65";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="server4.mathematik.uni-freiburg.de";
+Sprecher="test";
+Titel="test-titel";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-07-07 17:00:00";
+Zusammenf="test-Zusammenfassung";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-05-24 16:08:00";
+LfdNr="42";
+Ort="Raum 127, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. K. A. Borovkov (University of Melbourn) ";
+Titel="On the asymptotic behaviour of random recursive trees in random environment";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-07-11 10:00:00";
+}
+{
+Benutzer="Didaktik";
+EMinute="20";
+EStunde="20";
+LastModified="2006-07-03 13:55:00";
+LfdNr="21";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="Jürgen Schulte-Mönting (Universität Freiburg)";
+Titel="Was kann elementare Wahrscheinlichkeitsrechnung zum Verständnis der  Zelldifferenzierung beitragen?";
+Type="Vortrag";
+Veranst="Didaktisches Seminar";
+Zeit="2006-07-11 19:30:00";
+Zusammenf="Stammzellen sind ein aktuelles und populäres Thema; nicht nur die embryonalen Stammzellen, sondern alle Formen von nur teilweise spezialisierten Vorläuferzellen, die sich noch weiter ausdifferenzieren können. In einigen Fällen kennt man Oberflächen-Marker, mit deren Hilfe sich die Stammzellen erkennen und separieren lassen, in anderen ist nicht einmal die vermutete Existenz gesichert. Forscher des Freiburger Max-Planck-Institut für Immunbiologie untersuchten den Thymus von 14 Tage alten Mäusen mit dem Ziel, die Existenz einer Vorläuferzelle zu beweisen, die sich noch nach der Geburt in zwei funktional verschiedene Zelltypen differenziert. Mittels einer sporadischen, irreversiblen DNA-Manipulation machten sie Zell-Clone sichtbar, die durch Teilung innerhalb von ca. 28 Zyklen aus ein und derselben Zelle hervorgegangen sein mußten. Aus der Größenverteilung dieser Clone sollte geschlossen werden, daß es wenige bevorzugte Zellen mit erhöhter Teilungsrate geben muß.\nIn Zusammenarbeit mit dem Institut für Medizinische Biometrie und Medizinische Informatik wurde aus den bekannten Rahmenbedingungen für das Organwachstum ein Markov-Modell für die Zellteilung und -differenzierung aufgestellt. Mit Hilfe von Wahrscheinlichkeitserzeugenden Funktionen und deren partiellen Ableitungen wurden die Parameter des Modells so weit eingeschränkt, daß die Annahme der Existenz von unspezifischen Vorläuferzellen eine sehr gute Erklärung der beobachteten Verteilungsmuster liefert.\nDer Vortrag soll zeigen, wie mit überkommenen, vergleichsweise elementaren Methoden der Wahrscheinlichkeitsrechnung Fortschritte in der aktuellen medizinisch-biologischen Forschung zu erzielen sind.";
+}
+{
+Bemerkungen="";
+Benutzer="bogner";
+EMinute="";
+EStunde="";
+LastModified="2006-07-07 08:49:00";
+LfdNr="63";
+Ort="Raum 232, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Heike Topp ";
+Titel="Change-Point-Analyse von DAX-Daten ";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-07-13 11:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="bogner";
+EMinute="";
+EStunde="";
+LastModified="2006-07-10 12:46:00";
+LfdNr="66";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="feldberg.mathematik.uni-freiburg.de";
+Sprecher="Juniorprof. Dr. Urs Hartl";
+Titel="Die Arbeiten von Laurent Lafforgue";
+Type="Vortrag";
+Veranst="Wissenschaftlicher Vortrag ";
+Zeit="2006-07-13 16:15:00";
+Zusammenf="";
+}
+{
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-07-11 15:14:00";
+LfdNr="67";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Dr. h.c. mul. A. N. Shiryaev (Steklov Math. Inst., Moscow)";
+Titel=" Some problems of the technical analysis in financial mathematics and financial engineering";
+Type="Geloescht";
+Veranst="<a href=\qhttp://www.stochastik.uni-freiburg.de/aktuelles/Workshop20060714.html\q>Workshop Mathematical Finance</a>";
+Zeit="2006-07-14 11:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="WEB page: http://www.stochastik.uni-freiburg.de/aktuelles/Workshop20060714.html";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-07-11 15:13:00";
+LfdNr="68";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Dr. h.c. mul. A. N. Shiryaev (Steklov Math. Inst., Moscow)";
+Titel=" Some problems of the technical analysis in financial mathematics and financial engineering";
+Type="Vortrag";
+Veranst="Workshop Mathematical Finance";
+Zeit="2006-07-14 11:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="About thirty years ago, Robert MacPherson provided a construction\nof characteristic classes for singular varieties, thereby \nanswering affirmatively a conjecture formulated by Grothendieck\nand Deligne. We will recall the beautiful functorial properties\nsatisfied by these classes, and describe several recent contexts \nin which they havesomewhat unexpectedlycome to the foreground: birational geometry, an analog to motivic integration, \qstringy\q\nChern classes, and possibly more.";
+Benutzer="siebebbs";
+EMinute="15";
+EStunde="15";
+LastModified="2006-07-06 11:12:00";
+LfdNr="61";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Paolo Aluffi, PhD (Florida State University)";
+Titel="Old and new invariants of singular spaces ";
+Type="Vortrag";
+Veranst="AG Spiegelsymmetrie";
+Zeit="2006-07-14 14:15:00";
+}
+{
+Bemerkungen="WEWB page: http://www.stochastik.uni-freiburg.de/aktuelles/Workshop20060714.html";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-07-11 15:26:00";
+LfdNr="69";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. D. Madan (Univ. of Maryland, USA)";
+Titel=" Equilibrium asset pricing: With non-Gaussian factors and exponential utilities";
+Type="Vortrag";
+Veranst="Workshop Mathematical Finance";
+Zeit="2006-07-14 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="WEB page: http://www.stochastik.uni-freiburg.de/aktuelles/Workshop20060714.html";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-07-11 15:25:00";
+LfdNr="70";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. E. Eberlein (Univ. of Freiburg)";
+Titel="Lévy driven interest rate theory";
+Type="Vortrag";
+Veranst="Workshop Mathematical Finance";
+Zeit="2006-07-14 15:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Siebert";
+KeinKolloquium="false";
+LastModified="2006-07-06 11:22:00";
+LfdNr="10";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Matilde Marcolli (MPI Bonn)";
+TMinute="30";
+TStunde="16";
+Titel="Noncommutative geometry at the boundary of modular curves";
+Type="Kolloquium";
+Zeit="2006-07-14 17:00:00";
+Zusammenf="In this joint work with Yuri Manin (2001) we investigate several\nphenomena that point to the role of the noncommutative space\n<strong>P</strong><sup>1</sup>(<strong>R</strong>)/\nSL<sub>2</sub>(<strong>Z</strong>) as boundary of the modular curve:\n<ul>\n<li>An extension of the\nclassical Gauss-Kuzmin theorem about the distribution of continued\nfractions, which in particular allows one to take into account some\ncongruence properties of successive convergents. (This has an\napplication to the Mixmaster Universe model in general relativity.)\n</li>\n<li>Some averages involving modular symbols show that Dirichlet series\nrelated to modular forms of weight 2 can be obtained by integrating\ncertain functions on the real axis defined in terms of continued\nfractions</li>\n<li>The modular complex can be seen as a sequence of\nK<sub>0</sub>-groups of the crossed product C<sup>*</sup>-algebra\ndescribing the quotient <strong>P</strong>^1(<strong>R</strong>)/\n&#915; (&#915; a congruence subgroup) as a noncommutative\nspace.</li>\n</ul>";
+}
+{
+Benutzer="OSAM";
+EMinute="15";
+EStunde="15";
+LastModified="2006-07-11 16:43:00";
+LfdNr="60";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="archer.mathematik.uni-freiburg.de";
+Sprecher="Christian Kreuzer";
+Titel="Convergence of Adaptive Finite Element Methods for Nonlinear PDEs";
+Type="Geloescht";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-07-18 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="OSAM";
+EMinute="15";
+EStunde="15";
+LastModified="2006-07-11 16:42:00";
+LfdNr="71";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="archer.mathematik.uni-freiburg.de";
+Sprecher="Christian Kreuzer";
+Titel="Convergence of Adaptive Finite Element Methods for Nonlinear PDEs";
+Type="Vortrag";
+Veranst="Oberseminar über Angewandte Mathematik";
+Zeit="2006-07-18 14:15:00";
+Zusammenf="<a href=http://www.mathematik.uni-freiburg.de/IAM/homepages/moessner/OSAM/abstract_kreuzer.pdf>abstract</a>";
+}
+{
+Bemerkungen="We provide an asymptotic theory for penalized least squares estimators of locally constant functions with finitely many jumps which are observed blurred by an operator with random noise. Differences to the direct case are highlighted, particularly, it turns out that a $&#092;sqrt{n}$-rate of convergence is generic. Moreover, locations of jumps are jointly asymptotic normal, which allows to construct confidence regions in these function classes. A minimax result shows that our penalized least squares estimators are rate optimal. Various applications are discussed.\nThis is a joint work with L. Boysen. ";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2006-05-23 12:53:00";
+LfdNr="41";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="gateway.fdm.uni-freiburg.de";
+Sprecher="Prof. Dr. Axel Munk (Universität Göttingen)";
+Titel="Inverse Jumps";
+Type="Vortrag";
+Veranst="FDM-Seminar";
+Zeit="2006-07-21 11:15:00";
+}
+{
+Bemerkungen="Außer den Kategorien endlich dimensionaler Darstellungen (pro-)algebraischer (super-)Gruppen kennt man nur wenige Tensorkategorien. Zumindest über Körpern der Charakteristik Null sind alle \qexotischen\q Beispiele \qInterpolationen\q von Familien von Darstellungskategorien. Deligne hat kürzlich eine Tensorkategorie konstruiert, die man als Kategorie aller Darstellungen der symmetrischen Gruppe S_t auffassen kann, wobei t keine natürliche Zahl zu sein braucht. Ich werde eine Verallgemeinerung dieser Konstruktion vorstellen, die gewissen abelschen (oder allgemeiner: exakten Mal'cev) Kategorien eine Tensorkategorie zuordnet. Insbesondere ergibt dies die Kategorie der Darstellungen von GL(t,F_q) wobei t keine natürliche Zahl zu sein braucht. Die hauptsächliche Idee ist eine Verfeinerung des klassischen Relationenkalküls.";
+Benutzer="Peter Fiebig";
+EMinute="";
+EStunde="";
+LastModified="2006-07-06 17:32:00";
+LfdNr="62";
+Ort="Raum 127";
+Passwort=Geheim
+REMOTE_HOST="alhambra.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Friedrich Knop";
+Titel="Eine Konstruktion halbeinfacher Tensorkategorien";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-07-21 11:15:00";
+}
+{
+Bemerkungen="Heute wird unser Fakultätsfest über die Bühne gehen! \n\nBei gutem Wetter findet es im Hof hinter dem Physikalischen Institut statt; bei schlechtem Wetter werden wir in das Erdgeschoss des Instituts ausweichen. \n\nFür das leibliche Wohl wird gesorgt: zuerst werden Kaffee und Kuchen und später dann Getränke, Grillgut und Salate angeboten.\n \nEingeladen sind Studenten, Angestelle und Professoren der Fakultät (begleitende Gäste sind willkommen) und gewünscht werden Fröhlichkeit und Kommunikation.\n \nVielleicht gelingt es auch wieder ein Unterhaltungsprogramm auf die Beine zu stellen? \n\nAuf jeden Fall werden noch Helfer und Mitwirkende gesucht! \nBitte melden Sie sich bei Frau Susanne Ackermann, Tel. 203/5880!  \n    ";
+Benutzer="Didaktik";
+EMinute="23";
+EStunde="23";
+LastModified="2006-05-15 13:57:00";
+LfdNr="30";
+Ort="Physikalisches Institut (Hof oder Erdgeschoss)";
+Passwort=Geheim
+REMOTE_HOST="hamilton.mathematik.uni-freiburg.de";
+Sprecher="";
+Titel="Großes alljährliches Fakultätsfest";
+Type="Vortrag";
+Veranst="Fakultätsfest Mathematik-Physik";
+Zeit="2006-07-21 16:00:00";
+}
+{
+Bemerkungen="";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="Schneider";
+KeinKolloquium="false";
+LastModified="2006-04-26 11:33:00";
+LfdNr="13";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Monika Ludwig (TU Wien)";
+TMinute="30";
+TStunde="16";
+Titel="Zur Affinoberfläche konvexer Körper";
+Type="Kolloquium";
+Zeit="2006-07-21 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="In first part of the talk we consider classical Prandtl-Reuß plasticity, and we discuss the application of efficient numerical methods for the solution of the discrete finite element approximation.\nWe present the radial return algorithm in the context of convex optimization, and we summarize aspects of parallelization and preconditioning (e.~g., using multigrid methods).\n\nIn the second part we present two new applications. In the first application we show that perfect plasticity can be regularized and approximated with an elasto-plastic Cosserat model (Cooperation with P. Neff, Darmstadt). Then, we consider elasto-plastic porous media simulation in soil mechanics coupling the deformation of the solid skeleton with a pressure driven fluid flow (cooperation with W. Ehlers, Stuttgart)";
+Benutzer="mario";
+EMinute="16";
+EStunde="16";
+LastModified="2006-06-01 17:18:00";
+LfdNr="48";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="isildur.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Christian Wieners";
+Titel="Efficient numerical methods for elasto-plasticity";
+Type="Vortrag";
+Veranst="EUCOR-Kolloquium";
+Zeit="2006-07-25 15:00:00";
+}
+{
+Bemerkungen="A multidimensional model is introduced for the phase transition dynamics of a binary mixture of compressible fluids.\nThe model presented here can accommodate various physical contexts, namely \qliquid - liquid\q, \qgas - liquid\q phase equilibria, as well as  the phase transition  of a  mixture of two distinct gases,  to product species due to combustion, the evolution of gaseous stars in astrophysics, the phase transition dynamics associated with  semiconductors and others.\nThe model is formulated by the Navier-Stokes equations in Euler coordinates, which is now expressed by the conservation of mass, the balance of momentum and entropy and the species conservation equation.\nThese equations take now a new form due to the choice of rather complex constitutive relations which are able to accommodate the multicomponent character of the mixture. The existence of globally defined weak solutions of the Navier-Stokes equations for compressible fluids is established by using weak convergence methods, compactness and interpolation arguments in the spirit  Feireisl and P.L. Lions.";
+Benutzer="mario";
+EMinute="17";
+EStunde="17";
+LastModified="2006-06-01 17:18:00";
+LfdNr="49";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+REMOTE_HOST="isildur.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. Konstantina Trivisa ";
+Titel="On the  Dynamics of Liquid-Vapor Phase Transition ";
+Type="Vortrag";
+Veranst="EUCOR-Kolloquium";
+Zeit="2006-07-25 16:30:00";
+}
+{
+Bemerkungen="Ausgehend vom Galerienmodell von Gaussent--Littelmann werden\nkombinatorische Formeln für Satake Koeffizienten und Strukturkonstanten\nder sphärischen Hecke Algebra bewiesen. Auch werden erste Verbindungen\nzur Nichtnegativität der Koeffizienten der Kostka Polynome gezeigt.";
+Benutzer="Peter Fiebig";
+EMinute="13";
+EStunde="13";
+LastModified="2006-06-19 15:19:00";
+LfdNr="34";
+Ort="Raum 127";
+Passwort=Geheim
+REMOTE_HOST="alhambra.mathematik.uni-freiburg.de";
+Sprecher="Christoph Schwer";
+Titel="Galerien und die sphärische Hecke Algebra";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-07-28 11:15:00";
+}
+{
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+LastModified="2006-07-21 11:40:00";
+LfdNr="14";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="cx.mathematik.uni-freiburg.de";
+Sprecher="N.N.";
+Titel="";
+Type="Geloescht";
+Veranst="Kolloquium";
+Zeit="2006-07-28 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-07-25 16:00:00";
+LfdNr="72";
+Ort="Raum 232, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="Prof. Dr. R. Bauer (University of Illinois at Urbana-Champaign) ";
+Titel="What is the probability that two dimensional Brownian motion surrounds a hole without hitting it?";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-08-01 11:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="geordie.williamson";
+EMinute="";
+EStunde="";
+LastModified="2006-08-02 17:07:00";
+LfdNr="73";
+Ort="Raum 127";
+Passwort=Geheim
+REMOTE_HOST="mancala.mathematik.uni-freiburg.de";
+Sprecher="Alan Stapledon";
+Titel="Motivic Integration";
+Type="Vortrag";
+Veranst="AG Algebra";
+Zeit="2006-08-04 11:15:00";
+Zusammenf="Given two smooth projective varieties X and Y when do they have the same Hodge numbers? In an attempt to answer this question we consider the corresponding infinite dimensional arc spaces and apply the theory of motivic integration.";
+}
+{
+Bemerkungen="";
+Benutzer="Stochastik";
+EMinute="";
+EStunde="";
+LastModified="2006-08-04 18:49:00";
+LfdNr="74";
+Ort="Raum 232, Eckerstr. 1";
+Passwort=Geheim
+REMOTE_HOST="spitzer.mathematik.uni-freiburg.de";
+Sprecher="A. Papapantoleon ";
+Titel="Valuation of exotic and credit derivatives in Levy models";
+Type="Vortrag";
+Veranst="Oberseminar Stochastik";
+Zeit="2006-08-11 11:15:00";
+Zusammenf="";
+}

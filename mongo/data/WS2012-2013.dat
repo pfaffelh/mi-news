@@ -1,0 +1,1706 @@
+{
+KMinute="00";
+KOrt="Hörsaal II, Albertstr. 23b";
+KStunde="17";
+KTMinute="30";
+KTStunde="16";
+KWochentag="4";
+Semestername="Wintersemester 2012/2013";
+Type="Info";
+VzA="2012-10-22";
+VzE="2013-02-16";
+}
+{
+ID="DidSem";
+Name="Didaktisches Seminar";
+Type="V";
+}
+{
+Aliases="FDM-Seminar""Seminar ueber Datenanalyse und Modelbildung";
+ID="DM-Sem";
+Name="Seminar über Datenanalyse und Modelbildung";
+Type="V";
+}
+{
+ID="IRMA-FNS";
+Name="Internationales Forschungsseminar Algebraische Geometrie Freiburg - Nancy - Strasbourg";
+Type="V";
+}
+{
+ID="sfbtrr71koll";
+Name="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="V";
+}
+{
+Aliases="Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar ueber Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""Oberseminar Algebra, Zahlentheorie und algebraische Geometrie""AG Algebra";
+ID="OS-AlgZTalgGeom";
+Name="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Angewandte Mathematik""Oberseminar ueber Angewandte Mathematik";
+ID="OS-AM";
+Name="Oberseminar: Angewandte Mathematik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Differentialgeometrie""Oberseminar ueber Differentialgeometrie";
+ID="OS-DiffGeo";
+Name="Oberseminar: Differentialgeometrie";
+Type="V";
+}
+{
+Aliases="Oberseminar über Mathematische Logik""Oberseminar ueber Mathematische Logik";
+ID="OS-ML";
+Name="Oberseminar: Mathematische Logik";
+Type="V";
+}
+{
+Aliases="Oberseminar über Stochastik""Oberseminar ueber Stochastik";
+ID="OS-Stochastik";
+Name="Oberseminar: Stochastik";
+Type="V";
+}
+{
+Editors="132.230.30.136""132.230.30.4";
+ID="sfbtrr71";
+Members="AG-GeomAna""sfbtrr71koll""OS-AM""OS-DiffGeo""Vortrag im Rahmen des SFB/Transregio 71""Vortragsreihe: Minimalflächen mit freiem Rand""Workshop im Rahmen des SFB Transregio 71 & Alexander-von-Humboldt Stiftung";
+Name="Veranstaltungen des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Type="G";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2012-10-01 13:38:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="20";
+Ort="Hörsaal 1, Physik-Hochhaus, Hermann-Herder-Str. 3a";
+Passwort=Geheim
+SeeAlsoURL="http://portal.uni-freiburg.de/gk1821/news/opening";
+Sprecher="Graduiertenkolleg";
+Titel="Eröffnung";
+Type="Vortrag";
+Veranst="Eröffnungskolloquium des Graduiertenkollegs";
+Zeit="2012-10-22 15:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2012-10-01 13:33:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="18";
+Ort="Hörsaal 1, Physik-Hochhaus, Hermann-Herder-Str. 3a";
+Passwort=Geheim
+SeeAlsoURL="http://portal.uni-freiburg.de/gk1821/news/opening";
+Sprecher="Rahul Pandharipande";
+Titel="Curve/sheaf correspondence for Calabi-Yau 3-folds";
+Type="Vortrag";
+Veranst="Eröffnungskolloquium des Graduiertenkollegs";
+Zeit="2012-10-22 15:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2012-10-19 14:15:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="29";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="siehe Eröffnungskolloquium des Graduiertenkollegs";
+Titel="";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-10-22 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2012-10-01 13:36:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="19";
+Ort="Hörsaal 1, Physik-Hochhaus, Hermann-Herder-Str. 3a";
+Passwort=Geheim
+SeeAlsoURL="http://portal.uni-freiburg.de/gk1821/news/opening";
+Sprecher="Annette Werner";
+Titel="Automorphisms of Drinfeld's half-spaces over a finite field";
+Type="Vortrag";
+Veranst="Eröffnungskolloquium des Graduiertenkollegs";
+Zeit="2012-10-22 17:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="wendland";
+EMinute="";
+EStunde="";
+LastModified="2012-10-09 13:38:00";
+LastModifiedBy="cabale.mathematik.uni-freiburg.de (132.230.30.67)";
+LfdNr="22";
+Ort="Hörsaal Rundbau, Albertstr. 21a";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Emanuel Scheidegger";
+Titel="Spuren singulärer Moduli";
+Type="Vortrag";
+Veranst="wissenschaftlicher Vortrag";
+Zeit="2012-10-24 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Prof. Eberlein";
+KeinKolloquium="false";
+LastModified="2012-10-10 13:33:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="1";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof.  Dr. Hans-Jürgen Engelbert, Unversität Jena";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="deleted";
+Zeit="2012-10-25 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-10-12 11:25:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="23";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-10-25 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Programmdiskussion";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2012-10-29 10:28:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="35";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="NN";
+Titel="NN";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-10-29 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="                                                                -- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-10-29 09:08:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="21";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jun Sun (ICTP Trieste)";
+Titel="Variational characteristics of pesudo-holomorphic curves in symplectic manifold";
+Type="Vortrag";
+Veranst="Projektseminar Geometrische Analysis";
+Zeit="2012-10-30 16:15:00";
+Zusammenf="\nThis talk consists of two parts. First, I will give an overview on symplectic mean curvature flows. Then I will talk about a variational characteristic of pseudo-holomorphic curves in symplectic manifold. The latter one is a recent result jointed with C. Arezzo.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="0";
+EStunde="18";
+LastModified="2012-10-24 18:53:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="31";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/oberseminar-ws12.html";
+Sprecher="Heike Mildenberger";
+Titel="Combinatorics with block sequences";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-10-31 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Erika Wagner-Klimt";
+EMinute="0";
+EStunde="18";
+LastModified="2012-10-29 12:04:00";
+LastModifiedBy="eleusis.mathematik.uni-freiburg.de (132.230.23.51)";
+LfdNr="36";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/oberseminar-ws12.html";
+Sprecher="Heike Mildenberger";
+Titel="Combinatorics with block sequences ";
+Type="deleted";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-10-31 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Feiertag";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-10-11 11:18:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="2";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-11-01 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="graf";
+EMinute="";
+EStunde="";
+LastModified="2012-10-16 10:56:00";
+LastModifiedBy="halma.mathematik.uni-freiburg.de (132.230.30.87)";
+LfdNr="26";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Patrick Graf";
+Titel="Bogomolov-Sommese Vanishing on log canonical pairs";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-11-02 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="goette";
+EMinute="";
+EStunde="";
+LastModified="2012-10-31 17:24:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="42";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sebastian Goette";
+Titel="Fibrewise Morse functions and higher torsion invariants";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-05 16:15:00";
+Zusammenf="I will give a short overview about higher torsion invariants\nfor families of compact manifolds. Then I will sketch a generalisation of Igusa-Klein torsion that has similar properties as Bismut-Lott torsion. This is the first step in the comparison of the two invariants.";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-11-02 12:34:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="41";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Hornung (MPI Leipzig)";
+Titel="Density and regularity results for flat isometric immersions";
+Type="Vortrag";
+Veranst="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Zeit="2012-11-07 16:15:00";
+Zusammenf="This talk is about isometric immersions from a two-dimensional domain (endowed with the standard flat metric in R^2) into R^3. I will present in some detail the proof of the following density result: every isometric immersion with square integrable second fundamental form can be approximated by isometric immersions which are smooth up to the boundary of the domain. This result is a  key ingredient, e.g., in the derivation of several thin-film models from three dimensional elasticity. \nIf time allows, I will also briefly present an optimal regularity result about isometric immersions minimizing the Willmore functional.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2012-10-31 19:05:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="44";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/oberseminar-ws12.html";
+Sprecher="Martin Ziegler";
+Titel="Indiscernibles";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-11-07 16:30:00";
+Zusammenf="We give a simple proof of Shelah's theorem on the existence\nof tree indiscernibles.";
+}
+{
+Bemerkungen="   -";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-10-11 11:15:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="3";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-11-08 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2012-10-26 10:33:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="17";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Georg Oberdieck (ETH Zürich)";
+Titel="Gromov Witten Invariants for the Hilbert scheme of points of a K3 surface";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-11-09 10:00:00";
+Zusammenf="The Yau-Zaslow formula gives an expression of the number of nodal rational curves on a K3 surface in terms of a modular form. In this talk we explain how to extend their result to the Hilbert scheme of 2 points of a K3 surface. In particular, we will present the generating series for the reduced genus 0 GW Invariants which will be given by a weak Jacobi Form.\n";
+}
+{
+Bemerkungen="";
+Benutzer="fabert";
+EMinute="";
+EStunde="";
+LastModified="2012-11-02 17:01:00";
+LastModifiedBy="imperial.mathematik.uni-freiburg.de (132.230.30.40)";
+LfdNr="46";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Oliver Fabert";
+Titel="Floer theory and Gromov-Witten theory";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-12 16:00:00";
+Zusammenf="In his proof of the Arnold conjecture about the number of fixed points of Hamiltonian symplectomorphisms, A. Floer developed a new infinite-dimensional version of Morse homology. While the chain groups are generated by these fixed points, the differential counts pseudoholomorphic sections, which in turn provides a link to Gromov-Witten theory. In my talk I will introduce the basic concepts of Floer homology and its application to the Arnold conjecture. At the end I plan to sketch the main results of my recent paper 1206.1564, where I was able to complete the correspondence between rational Gromov-Witten theory and Floer theory of symplectomorphisms.   ";
+}
+{
+Bemerkungen="";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2012-11-08 11:08:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="38";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Christiane Kraus (WIAS, Berlin) ";
+Titel="A nonlinear PDE system for phase separation and damage";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2012-11-13 14:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Prof. Eberlein";
+KeinKolloquium="false";
+LastModified="2012-10-23 11:14:00";
+LastModifiedBy="server4.mathematik.uni-freiburg.de (132.230.30.4)";
+LfdNr="4";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Hans-Jürgen Engelbert, Unversität Jena";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="Über stochastische Exponentiale stetiger lokaler Martingale";
+Type="Kolloquium";
+Zeit="2012-11-15 17:00:00";
+Zusammenf="Eine Zusammenfassung findet sich auf:\n\nhttp://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/kolloquium_15_11_2012.pdf";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2012-10-26 08:50:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="27";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Randrianarisoa Tovohery Hajatiana (Department of Mathematics, Stellenbosch University)";
+Titel="Drinfeld modules and their application to factoring polynomials";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-11-16 10:00:00";
+Zusammenf="Major works done in Function Field Arithmetic show a strong analogy between the ring of integers Z and the ring of polynomials over a finite field F_q[T]. While an algorithm has been discovered to factor integers using elliptic curves, the discovery of Drinfeld modules, which are analogous to elliptic curves, made it possible to exhibit an algorithm for factorising polynomials in the ring F_q[T]. \nIn this talk, we introduce the notion of Drinfeld modules, then we demonstrate the analogy between Drinfeld modules and Elliptic curves. Finally, we present an algorithm for factoring polynomials over a finite field using Drinfeld modules.\n";
+}
+{
+Bemerkungen="";
+Benutzer="akoenen";
+EMinute="";
+EStunde="";
+LastModified="2012-11-05 08:47:00";
+LastModifiedBy="valdora.mathematik.uni-freiburg.de (132.230.30.127)";
+LfdNr="47";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alex Koenen";
+Titel="Vafa-Witten Estimates";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-19 16:00:00";
+Zusammenf="In 1984 Vafa and Witten developed a method to find an upper bound for the first eigenvalue of a Dirac-Operator. After giving short introduction to the topic, I will explain the connection between Vafa-Witten Estimates and L-infinity variational problems. We will also see a geometric version of a sharp estimate on the projective space.";
+}
+{
+Bemerkungen="(Dozentenversammlung)";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2012-11-14 15:14:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="52";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="kein Vortrag";
+Titel="";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-19 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="5";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-11-22 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="konrad.voelkel";
+EMinute="";
+EStunde="";
+LastModified="2012-10-19 14:04:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="28";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Utsav Choudhury";
+Titel="Motives of Deligne-Mumford Stacks";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-11-23 10:00:00";
+Zusammenf="For every smooth and separated Deligne-Mumford stack F,\nwe will associate a motive M(F) in Voevodsky's category of mixed motives with rational coecients DM^eff(k; Q). For F proper over a field of characteristic 0, we will compare M(F) with the Chow motive associated to F by Toen. Without the properness condition we will show that M(F) is a direct summand of the motive of a smooth quasi-projective\nvariety. Then we will generalize a motivic decomposition theorem due to Karpenko to relative geometrically cellular Deligne-Mumford stacks.\nThis will depend on a vanishing result of Voevodsky. Even in the classical case, our method yields a simpler and more conceptual proof of Karpenko's result.";
+}
+{
+Bemerkungen="";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2012-10-30 10:58:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="39";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Victor Bangert";
+Titel="On the structure of closed currents of finite mass";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-26 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="akoenen";
+EMinute="";
+EStunde="";
+LastModified="2012-11-19 17:35:00";
+LastModifiedBy="valdora.mathematik.uni-freiburg.de (132.230.30.127)";
+LfdNr="55";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alex Koenen";
+Titel="Introduction to Vafa-Witten Estimates";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-11-26 16:15:00";
+Zusammenf="1984 Vafa and Witten developed a method to obtain upper bounds for the first eigenvalue of a Dirac-Operator on a compact manifold. I will explain the method and the related geometry in detail. We will see an example of an optimal Vafa-Witten bound on the projective space obtained by geometric arguments.\nFurthermore, I will give a connection between the Vafa-Witten method and L-infinity variational problems.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2012-11-22 10:59:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="57";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/oberseminar-ws12.html";
+Sprecher="Dr. Giorgio Laguzzi";
+Titel="Silver measurabilty without Miller measurability";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-11-28 16:30:00";
+Zusammenf="In the 1980s, Shelah invented a deep and rather mysterious \nconstruction to build strongly homogeneous algebra, called amalgamation. \nTogether with the notion of sweet forcing, it was the amazing technique to\nget \na model where all sets have the Baire property, without using inaccessible \ncardinals. The aim of the talk is to present an (absolutely less ambitious) \napplication of Shelah´s amalgamation to obtain a model where all sets are \nSilver measurable but there exists a non-Miller measurable set. \n";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="6";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-11-29 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="graf";
+EMinute="";
+EStunde="";
+LastModified="2012-11-12 14:45:00";
+LastModifiedBy="halma.mathematik.uni-freiburg.de (132.230.30.87)";
+LfdNr="25";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Annabelle Hartmann";
+Titel="Rational volume of varieties over complete local fields and Galois extensions";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-11-30 10:00:00";
+Zusammenf="We are interested in the following question: When does a given variety over a complete local field K have a rational point? The rational volume is a motivic invariant of a K-variety X vanishing if X has no K-rational point. For a tame Galois extension L over K, we will compare the rational volume of a K-variety X and of its base change X_L to L. To do so, we construct out of a given weak Néron model of X_L with an action of the Galois group of L over K a weak Néron model of X with some universal property. As an application, we will show that some varieties over K with potential good reduction have K-rational points.";
+}
+{
+Bemerkungen="";
+Benutzer="alex";
+EMinute="";
+EStunde="";
+LastModified="2012-11-30 13:56:00";
+LastModifiedBy="abalone.mathematik.uni-freiburg.de (132.230.30.42)";
+LfdNr="62";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alexander Alexandrov";
+Titel="Free fermions and tau-functions";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-12-03 16:15:00";
+Zusammenf="The formalism of free fermions \nused for construction of tau-functions of classical \nintegrable hierarchies is reviewed.\nWe give a derivation of \ngroup-like properties of the normally ordered exponents, \ntransformations between different normal orderings,\nthe bilinear identity and the generalized Wick's\ntheorem. We also consider various examples of tau-functions\nand give their fermionic realization. ";
+}
+{
+Bemerkungen="Findet im Zuge des SFB TR 71 statt.";
+Benutzer="fritzh";
+EMinute="";
+EStunde="";
+LastModified="2012-12-04 11:08:00";
+LastModifiedBy="pippin.mathematik.uni-freiburg.de (132.230.12.134)";
+LfdNr="56";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Fabio Nobile";
+Titel="Modeling and simulation of fluid-structure interaction in haemodynamics";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2012-12-04 14:15:00";
+Zusammenf="We consider the fluid-structure interaction problem arising in\nhaemodynamic applications where the blood interacts with the arterial\nwall. Blood dynamics is described by the Navier-Stokes equations for\nNewtonian fluids, conveniently rewritten in Arbitrary Lagrangian\nEulerian (ALE) formulation to account for the deformation of the fluid\ndomain boundary; arterial dynamics is described by non-linear\nfinite elasticity equations.\n\nWe consider partitioned algorithms based on Robin interface conditions\nto solve numerically the fluid-structure interaction problem.  At each\ntime step the non-linear or linearized fluid and structure subproblems\nare solved iteratively until convergence and linear combinations of\nvelocities and normal stresses (Robin interface conditions) are\nexchanged at the common interface. In particular, we discuss suitable\nchoices of the coefficients in the Robin conditions based on reduced\nmodels and show how the optimized Robin conditions greatly reduce the\neffect of added mass on the convergence of the iterative algorithm.\n\nWe present finally some simulations of blood flow in carotid\nbifurcations reconstructed from MRI data, from patients having\natherosclerotic plaques, before and after the plaque removal.\n\nReferences\n\n[1] S. Badia, F. Nobile, and C. Vergara (2008). Fluid-structure\npartitioned procedures based on Robin transmission\nconditions. J. Comp. Phy 227, 7027–7051.\n\n[3] P. Causin, J. Gerbeau, and F. Nobile (2005). Added-mass effect in\nthe design of partitioned algorithms for fluid-structure\nproblems. Comput. Methods Appl. Mech. Engrg 194(42-44), 4506– 4527.\n\n[4] F. Nobile, M. Pozzoli, C. Vergara, Exact and inexact partitioned\nalgorithms for fluid-structure interaction problems with finite\nelasticity in haemodynamics, MOX Report 37/2012, submitted.";
+}
+{
+Bemerkungen="";
+Benutzer="dgreb";
+EMinute="";
+EStunde="";
+LastModified="2012-11-05 15:29:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="50";
+Ort="Hörsaal 1, Physik Hochhaus, Hermann-Herder-Straße 3";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Alan Huckleberry (Ruhr-Uni Bochum, Jacobs University Bremen)";
+Titel="Symplectic tools for studying quantum entanglement";
+Type="Vortrag";
+Veranst="QE Seminar und Kolloquium";
+Zeit="2012-12-04 15:45:00";
+Zusammenf="A description for non-specialists of the mathematical tools which have been recently implemented in the development of measuring devices for degrees of quantum entanglement will be given. These methods involve symmetry considerations in representation theoretic settings. The talk will conclude\nwith a survey of recent results.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-11-02 12:13:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="45";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Matthias Röger (Dortmund)";
+Titel="Confined structures of least bending energy";
+Type="deleted";
+Veranst="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Zeit="2012-12-05 16:15:00";
+Zusammenf="We analyze a constrained minimization problem for the Willmore energy. For a given parameter a>0 we consider smooth embeddings of the sphere into the unit ball with surface area $a$. In this class we minimize the Willmore energy and investigate the dependence of the minimal energy value on the parameter a. (This is joint work with Stefan Müller, Bonn.)\n\n";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-11-14 11:10:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="51";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Matthias Röger (TU Dortmund) ";
+Titel="Confined structures of least bending energy";
+Type="Vortrag";
+Veranst="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Zeit="2012-12-05 16:15:00";
+Zusammenf="We analyze a constrained minimization problem for the Willmore energy. For a given parameter a>0 we consider smooth embeddings of the sphere into the unit ball with surface area $a$. In this class we minimize the Willmore energy and investigate the dependence of the minimal energy value on the parameter a. (This is joint work with Stefan Müller, Bonn.)\n";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2012-11-29 17:13:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="61";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Luca Motto Ros";
+Titel="Wadge-like reducibilities on arbitrary (quasi-)Polish spaces";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-12-05 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="7";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-12-06 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="wendt";
+EMinute="";
+EStunde="";
+LastModified="2012-11-22 15:26:00";
+LastModifiedBy="sogo.mathematik.uni-freiburg.de (132.230.30.109)";
+LfdNr="24";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Kevin Hutchinson (UCD)";
+Titel="Homology stability for  special linear group and scissors congruence groups.";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-12-07 10:00:00";
+Zusammenf="The Scissors Congruence group - or pre-Bloch group - P(F),\nof a field F is a group presented by generators and relations which derive from the five-term functional equation of the dilogarithm.\n\nThe Bloch group is a subgroup of P(F) which, by a result of Suslin, is naturally a quotient of the indecomposable K_3 of F, and this in turn is a quotient of the group H_3(SL(2,F),Z). Up to some possible 2-torsion, the kernel of the map H_3(SL(2,F),Z) to K_3^ind(F) coincides with the kernel of the stabilization map from H_3(SL(2,F),Z) to H_3(SL(3,F),Z). We will describe how, for fields with valuations,  lower bounds - and even exact computations - of this latter kernel can be expressed as direct sums of pre-Bloch groups of residue fields.";
+}
+{
+Bemerkungen="";
+Benutzer="degeratu";
+EMinute="0";
+EStunde="18";
+LastModified="2012-10-26 09:53:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="32";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ilarion Melnikov, Max Planck Institut for Gravitational Physics (Albert Einstein Institut) Potsdam-Golm, Germany";
+Titel="";
+Type="deleted";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-12-10 16:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-11-27 10:19:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="60";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Ilarion Melnikov (MPI Potsdam-Golm)";
+Titel="First order deformations in heterotic compactifications";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-12-10 16:00:00";
+Zusammenf="Many beautiful geometric structures, such as Calabi-Yau (CY) manifolds and their moduli spaces, arise naturally in the context of string theory.  In heterotic string theory a generalization of CY geometry is given by holomorphic vector bundles over CY spaces.  This talk is concerned with more general heterotic geometries: vector bundles over complex but typically non-Kaehler manifolds.  I will review this geometric structure and its origin in string theory and then focus on a characterization of the first order deformation space of these geometries.\n\n";
+}
+{
+Bemerkungen="\n-- Vortrag im Rahmen des SFB Transregio 71 --";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2012-12-04 11:27:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="63";
+Ort="Raum 414, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Miles Simon (Magdeburg)";
+Titel="Local results for Ricci flow on regions with curvature bounded from below";
+Type="Vortrag";
+Veranst="Projektseminar Geometrische Analysis";
+Zeit="2012-12-11 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="   -";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-10-11 11:16:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="8";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-12-13 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="dgreb";
+EMinute="";
+EStunde="";
+LastModified="2012-11-11 18:18:00";
+LastModifiedBy="jass.mathematik.uni-freiburg.de (132.230.30.79)";
+LfdNr="30";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jean Ruppenthal (Wuppertal)";
+Titel="L2-dbar-cohomology of singular complex spaces";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-12-14 10:00:00";
+Zusammenf="We will explain how one can use a resolution of singularities to understand the L2-Dolbeault-cohomology of a singular Hermitian complex space $X$\n(in the sense of finding a smooth model for the cohomology). The central tool is an L2-resolution for the Grauert-Riemenschneider canonical sheaf of $X$.\nWe obtain particularly nice results if X is a Gorenstein space with canonical singularities, including an L2-representation of the cohomology of the structure sheaf.\nTo attack the more general case, we introduce a new kind of canonical sheaf, namely the canonical sheaf of square-integrable holomorphic\ntop-degree-forms with some (Dirichlet) boundary condition at the singular set of X. An L2-resolution for this sheaf allows to describe the L2-cohomology of arbitrary isolated singularities.";
+}
+{
+Bemerkungen="Vortrag im Rahmen des SFB Transregio 71";
+Benutzer="goette";
+EMinute="";
+EStunde="";
+LastModified="2012-11-07 16:26:00";
+LastModifiedBy="boccia.mathematik.uni-freiburg.de (132.230.30.107)";
+LfdNr="43";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Hartmut Weiß (LMU München)";
+Titel="Geometric flows and special holonomy";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2012-12-17 16:15:00";
+Zusammenf="Metrics with holonomy contained in G_2 on a 7-manifold are \ninduced by so-called positive 3-forms which are torsionfree, i.e. satisfy a \ncertain nonlinear 1st order PDE. I will discuss a parabolic flow on \npositive 3-forms whose stationary points are precisely given by the\ntorsionfree ones. This is joint work with F. Witt.\nIf time permits I will describe a generalization to a spinorial setting \n(joint with B. Ammann and F. Witt).";
+}
+{
+Bemerkungen="";
+Benutzer="Alex";
+EMinute="45";
+EStunde="17";
+LastModified="2012-12-11 10:34:00";
+LastModifiedBy="valdora.mathematik.uni-freiburg.de (132.230.30.127)";
+LfdNr="64";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alex Koenen";
+Titel="Witten's proof of positive mass theorem";
+Type="Vortrag";
+Veranst="Projektseminar Geometrische Analysis";
+Zeit="2012-12-18 16:15:00";
+Zusammenf="I'll give a talk on Witten's proof of the positive mass theorem using spinors.";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2012-12-13 15:05:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="65";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="http://logik.mathematik.uni-freiburg.de/vorlesungen/ws12/oberseminar-ws12.html";
+Sprecher="Jeff Serbus";
+Titel="Cardinal Invariants and the P-Ideal Dichotomy";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2012-12-19 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Schönfeld Roswitha";
+EMinute="15";
+EStunde="17";
+LastModified="2012-11-23 09:27:00";
+LastModifiedBy="eiche.mathematik.uni-freiburg.de (132.230.42.5)";
+LfdNr="58";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="PD Dr. Dr. Heinz Weisshaupt";
+Titel="Nichtstandardanalysis --- eine Anwendung auf interagierende Teilchensysteme";
+Type="Vortrag";
+Veranst="Antrittsvorlesung";
+Zeit="2012-12-20 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Antrittsvorlesungen";
+EMinute="";
+EStunde="";
+Einladender="Mildenberger und Weisshaupt";
+KeinKolloquium="false";
+LastModified="2012-12-03 17:43:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="9";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="PD Dr. Dr. Heinz Weisshaupt,  Prof. Dr. Heike Mildenberger";
+TMinute="0";
+TOrt="";
+TStunde="";
+Titel="Nichtstandardanalysis --- eine Anwendung auf interagierende Teilchensysteme, Filter und Semifilter";
+Type="Kolloquium";
+Zeit="2012-12-20 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Schönfeld Roswitha";
+EMinute="15";
+EStunde="18";
+LastModified="2012-11-23 09:26:00";
+LastModifiedBy="eiche.mathematik.uni-freiburg.de (132.230.42.5)";
+LfdNr="59";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Heike Mildenberger";
+Titel="Filter und Semifilter";
+Type="Vortrag";
+Veranst="Antrittsvorlesung";
+Zeit="2012-12-20 17:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="kebekus";
+EMinute="0";
+EStunde="11";
+LastModified="2012-10-26 10:33:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="33";
+Ort="Ort noch nicht bekannt";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stefan Kebekus";
+Titel="Pulling back differential forms";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2012-12-21 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Weihnachtsferien";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-11-06 16:51:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="10";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2012-12-27 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Weihnachtsferien";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-11-06 16:51:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="11";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-01-03 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="Vortrag im Rahmen des SFB TR 71";
+Benutzer="bangert";
+EMinute="";
+EStunde="";
+LastModified="2013-01-07 11:44:00";
+LastModifiedBy="boggle.mathematik.uni-freiburg.de (132.230.30.64)";
+LfdNr="68";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr.Blaz Mramor";
+Titel="Laminations of solutions in the Frenkel-Kontorova model with weak coupling ";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-01-07 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-01-02 11:17:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="67";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Philipp Schlicht";
+Titel="Perfect subsets of generalized Baire spaces and Banach-Mazur games ";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-01-09 16:30:00";
+Zusammenf="Let $\bkappa$ be an uncountable cardinal with $\bkappa^{< \bkappa} = \bkappa$. We consider the generalized Baire space of functions $f : \bkappa \bto \bkappa$ with basic open sets $U_s = \b{f \bin \bkappa^\bkappa \bmid s \bsubseteq f \b}$ for $s \bin {}^{< \bkappa} \bkappa$. A subset of $\bkappa^\bkappa$ is perfect if it is the set of branches of a $< \bkappa$-closed subtree of ${}^{< \bkappa} \bkappa$ which splits above every node. We prove that after an inaccessible $\blambda > \bkappa$ is collapsed to $\bkappa^+$, every set $A \bsubseteq \bkappa^\bkappa$ definable from ordinals and subsets of $\bkappa$ either has size $\bleq \bkappa$ or a perfect subset, and that the Banach-Mazur game for $A$ is determined. ";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="12";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-01-10 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="dgreb";
+EMinute="";
+EStunde="";
+LastModified="2013-01-08 09:11:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="49";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Julius Ross (Cambridge)";
+Titel="The Hele Shaw Flow and the Moduli of Holomorphic Discs ";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-01-11 10:00:00";
+Zusammenf="The Hele-Shaw Flow is a model for describing the propagation of\nfluid in a cell consisting of two parallel places separated by a small\ngap.   This model has been intensely studied for over a century, and is a\nparadigm for understanding more complicated systems such as the flow of\nwater in porous media, melting of ice and models of tumor growth.\n\nIn this talk I will discuss how this flow fits into the more general\nframework of \qinverse potential theory\q through the idea of complex\nmoments.   I will then discuss joint work with David Witt Nystrom that\nconnects to the moduli space of holomorphic discs with boundary in a\ntotally real manifold.  Using this we prove a number of short time\nexistence/uniqueness results for the flow, including the case of the Hele\nShaw flow with varying permeability starting from a smooth Jordan domain,\nand for the Hele Shaw flow starting from a single point. ";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="15";
+EStunde="17";
+LastModified="2013-01-08 15:03:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="69";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="http://home.mathematik.uni-freiburg.de/analysis/Abstract_FDuVB.pdf";
+Sprecher="Verena Bögelein und Frank Duzaar (Erlangen)";
+Titel="Talk 1: A sharp quantitative isoperimetric inequality in higher codimension";
+Type="Vortrag";
+Veranst="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Zeit="2013-01-16 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-01-09 14:38:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="71";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Juan-Diego Caycedo";
+Titel="The Pila-Zannier proof of the Manin-Mumford conjecture";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-01-16 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Ludmilla Frei";
+EMinute="";
+EStunde="";
+LastModified="2013-01-08 15:04:00";
+LastModifiedBy="rosskopf.mathematik.uni-freiburg.de (132.230.30.136)";
+LfdNr="70";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="http://home.mathematik.uni-freiburg.de/analysis/Abstract_FDuVB.pdf";
+Sprecher="Verena Bögelein und Frank Duzaar (Erlangen)";
+Titel="Talk 2: A sharp quantitative isoperimetric inequality in higher codimension";
+Type="Vortrag";
+Veranst="Kolloquium des SFB/Transregio 71 \qGeometrische Partielle Differentialgleichungen\q";
+Zeit="2013-01-16 17:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="   -";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-10-11 11:16:00";
+LastModifiedBy="belchen.mathematik.uni-freiburg.de (132.230.30.128)";
+LfdNr="13";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="N.N.";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-01-17 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Helene Sigloch";
+EMinute="0";
+EStunde="11";
+LastModified="2012-11-05 13:53:00";
+LastModifiedBy="boule.mathematik.uni-freiburg.de (132.230.30.108)";
+LfdNr="34";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Anna Abczynski";
+Titel="Modified surgery theory - Application to Bott manifolds";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-01-18 10:00:00";
+Zusammenf="One of the fundamental questions in geometric topology is the question whether two manifolds are diffeomorphic. Surgery theory translated that question as follows: Assuming they are simply connected it now reads: Are our manifolds h-cobordant? But for certain settings yet another transformation of our question is useful leading to modified surgery theory. The key idea here is to compare controlled bordism classes of manifolds.\n\nIn my talk I will explain how one can apply this theory to problems related to Bott manifolds. Bott manifolds are a very nice and explicite class of manifolds given as iterated CP^1-fiber bundles. They are of special interest since, conjecturally, they are diffeomorphic if and only if their cohomology rings are isomorphic.";
+}
+{
+Bemerkungen="";
+Benutzer="Dahms";
+EMinute="";
+EStunde="";
+LastModified="2013-01-15 14:12:00";
+LastModifiedBy="kniffel.mathematik.uni-freiburg.de (132.230.30.59)";
+LfdNr="73";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Svenja Dahms";
+Titel="Adiabatic limit of the Ray-Singer torsion";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-01-21 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-01-17 17:01:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="74";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Giorgio Laguzzi";
+Titel="Amoeba of Sacks forcing without Cohen reals";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-01-23 16:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+EMinute="";
+EStunde="";
+Einladender="Pfaffelhuber";
+KeinKolloquium="false";
+LastModified="2012-12-21 12:52:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="14";
+Ort="Hörsaal II, Albertstr. 23b";
+SeeAlsoURL="";
+Sprecher="Prof. Dr. Martin Hutzenthaler (Goethe-Universität Frankfurt)";
+TMinute="30";
+TOrt="Sozialraum 331 in der Eckerstraße 1";
+TStunde="16";
+Titel="Limitations of the Euler method";
+Type="Kolloquium";
+Zeit="2013-01-24 17:00:00";
+Zusammenf="Our goal is to calculate moments of stochastic differential equations (SDEs)\n(e.g. the stochastic Langevin equation, the stochastic Duffing-van der Pol\nequation, the stochastic Lotka-Volterra model, the Lewis-3/2-volatility\nmodel, the stochastic Lorenz equation). In the global Lipschitz case, the\napproximation method with optimal rate of convergence is the multilevel\nMonte Carlo Euler method. Most of the applied SDEs, however, have\nsuper-linearly growing coefficients. We show for this case that the\nmultilevel Monte Carlo Euler method does not even converge in general. The\nreason herefore is strong divergence of Euler's method. For this reason, we\nrecommend to be careful with Euler's method in applications. Instead, we\npropose a strongly converging numerical method with optimal rate of\nconvergence and provide its short Matlab code.\n";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2012-11-23 09:48:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="53";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Carlo Gasbarri (Strasbourg)";
+Titel="Canonical degree of curves on varieties of general type";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-01-25 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="degeratu";
+EMinute="15";
+EStunde="17";
+LastModified="2013-01-25 13:58:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="75";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Anda Degeratu";
+Titel="Analysis on crepant resolutions of Calabi-Yau orbifolds";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-01-28 16:15:00";
+Zusammenf="A Calabi-Yau orbifold is locally modeled on C^n/G with G a finite subgroup of SU(n). If the singularity is isolated, then the crepant resolution (if it exists) is an ALE manifold, for which index-type results are well known. However, most of the time the singularity is not isolated, and for the corresponding crepant resolution there is no index theorem so far. In this talk, I present the first step towards obtaining such a result: I will introduce the class of iterated cone-edge singular manifolds and the corresponding quasi-asymptotically conical spaces (for which orbifolds and their crepant resolutions are an example), and build-up the general set-up for studying Fredholm properties of geometrical elliptic operators on these spaces. This is joint work with Rafe Mazzeo.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Heike Mildenberger";
+EMinute="";
+EStunde="";
+LastModified="2013-01-17 17:01:00";
+LastModifiedBy="sudoku.mathematik.uni-freiburg.de (132.230.23.50)";
+LfdNr="72";
+Ort="Raum 318, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Alexander Prestel";
+Titel="On rings of continuous p-adic valued functions";
+Type="Vortrag";
+Veranst="Oberseminar: Mathematische Logik";
+Zeit="2013-01-29 11:30:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="huber";
+EMinute="0";
+EStunde="16";
+LastModified="2013-01-29 08:48:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="77";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Daniel Harrer";
+Titel="The Galois closure of ring extensions and a discriminant theorem of Stickelberger";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-01-31 15:15:00";
+Zusammenf="A classical result of algebraic number theory by L. Stickelberger states that the discriminant of a number field is an integer congruent to 0 or 1 modulo 4. We generalize this theorem to n-ic extensions of arbitrary base rings. To achieve this, we use the notion of Galois closures of arbitrary ring extensions, as introduced by M. Bhargava and M. Satriano, combined with new results from invariant theory generalizing the fundamental theorem of symmetric polynomials. In the end, we will also state a conjecture strengthening the given results.";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="15";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-01-31 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="graf";
+EMinute="";
+EStunde="";
+LastModified="2012-11-06 11:14:00";
+LastModifiedBy="halma.mathematik.uni-freiburg.de (132.230.30.87)";
+LfdNr="48";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Patrick Graf";
+Titel="Bogomolov-Sommese vanishing on log canonical pairs";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-02-01 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Katrin Wendland";
+EMinute="45";
+EStunde="11";
+LastModified="2013-01-28 09:36:00";
+LastModifiedBy="kaiserstuhl.mathematik.uni-freiburg.de (132.230.30.132)";
+LfdNr="76";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Jan Priel";
+Titel="(infinity,n)-categories and Segal spaces";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-02-01 11:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="nena";
+EMinute="";
+EStunde="";
+LastModified="2013-01-30 17:26:00";
+LastModifiedBy="tabu.mathematik.uni-freiburg.de (132.230.30.118)";
+LfdNr="37";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Nena Röttgen";
+Titel="Closed Geodesics on Open Manifolds with Convex Ends";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-02-04 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="GuofangWang";
+EMinute="0";
+EStunde="18";
+LastModified="2013-02-01 15:43:00";
+LastModifiedBy="kalaha.mathematik.uni-freiburg.de (132.230.30.86)";
+LfdNr="78";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Anda Degeratu";
+Titel="Bray's proof of the Penrose conjecture";
+Type="Vortrag";
+Veranst="Projektseminar Geometrische Analysis";
+Zeit="2013-02-05 16:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="frei";
+Benutzer="Kolloquium";
+EMinute="";
+EStunde="";
+Einladender="";
+KeinKolloquium="true";
+LastModified="2012-09-28 10:30:23";
+LfdNr="16";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+REMOTE_HOST="anfangswert";
+Sprecher="N.N.";
+TMinute="30";
+TStunde="16";
+Titel="";
+Type="Kolloquium";
+Zeit="2013-02-07 17:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="reserviert Annette HUber";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2012-11-19 08:59:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="54";
+Ort="tba";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="tba";
+Titel="";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-02-08 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="Magnus";
+EMinute="";
+EStunde="";
+LastModified="2012-12-17 14:18:00";
+LastModifiedBy="therapy.mathematik.uni-freiburg.de (132.230.30.65)";
+LfdNr="66";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Magnus Engenhorst";
+Titel="Tilting and mutations";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-02-08 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="";
+EStunde="";
+LastModified="2013-02-04 16:16:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="79";
+Ort="Raum 318, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Natalie Peternell (Freiburg)";
+Titel="Cocycles of characteristic classes in smooth Deligne cohomology";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-02-11 10:15:00";
+Zusammenf="In my talk I will start with an introduction to smooth Deligne cohomology and then present the main results of my diploma thesis.\nLet G be a compact connected Lie group with classifying space BG and let a be an integer cohomology class of even degree p on BG. Let F be a compact connected differentiable manifold with G-action satisfying further topological conditions, e.g. F is a Stiefel manifold. Suppose that a is the image under transgression in the universal G-principal bundle of a certain cohomology class on F. Given any G-principal bundle E on a compact manifold M, I will explain some of the main steps how to construct explicitly a natural class in Deligne cohomology which represents the a-characteristic class of the bundle E.\nAt the end I will dicuss some examples of characteristic classes which satisfy the assumptions made in the main theorem of my diploma thesis. ";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="";
+EStunde="";
+LastModified="2013-02-04 16:18:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="80";
+Ort="Hörsaal II, Albertstr. 23b";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Johannes Neumann (Goettingen)";
+Titel="Becker-Gottlieb-Transfer for cohomology with twisted coefficients";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-02-11 14:15:00";
+Zusammenf="This talk is about Gottlieb's construction of a transfer for a fibre bundle and how it can be adapted to cohomology with twisted coefficients. This is achieved by adapting the primary tool of the transfer, which is integration along the fibre, to twisted cohomology. ";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2013-02-07 10:41:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="82";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Emanuel Scheidegger";
+Titel="Special Kähler geometry";
+Type="Vortrag";
+Veranst="Oberseminar: Differentialgeometrie";
+Zeit="2013-02-11 16:15:00";
+Zusammenf="I will give an introduction to special Kähler structures and some of their aspects. A special Kähler structure is a connection on the tangent bundle of a Kähler manifold with a number of \qspecial\q properties. They appear naturally in the context of certain integrable systems and of moduli spaces of Calabi-Yau threefolds.";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="";
+EStunde="";
+LastModified="2013-02-07 13:26:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="81";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Anja Fuchshuber (Freiburg) ";
+Titel="Eta-forms of families of manifolds";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-02-14 10:15:00";
+Zusammenf="In index theory of families of closed manifolds the exterior differential of the eta-form describes the difference between the analytic and the topological index of a Dirac operator. Under the assumption that the horizontal distribution is integrable the question in my diploma thesis is if the eta-form is closed and defines a cohomology class in de Rham cohomology. At the end I'll look at the special case of a bundle of tori. ";
+}
+{
+Bemerkungen="-- entfällt --";
+Benutzer="huber";
+EMinute="";
+EStunde="";
+LastModified="2013-02-13 16:11:00";
+LastModifiedBy="nn.mathematik.uni-freiburg.de (132.230.30.143)";
+LfdNr="40";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stephen Enright-Ward";
+Titel="";
+Type="Vortrag";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-02-15 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="es1016";
+EMinute="";
+EStunde="";
+LastModified="2013-02-15 15:14:00";
+LastModifiedBy="ligretto.mathematik.uni-freiburg.de (132.230.30.41)";
+LfdNr="83";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Florian Beck (Tübingen)";
+Titel="Spectral curves of harmonic maps";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-02-19 13:15:00";
+Zusammenf="To each harmonic map from a complex one-dimensional torus to the special unitary group SU(2) (respectively the 3-sphere) one can associate a hyperelliptic Riemann surface, the so-called spectral curve. This construction, mainly due to Hitchin, allows one to study such maps essentially by algebro-geometric methods. Its drawback is that it cannot be applied to higher genus. However, Heller has recently carried out an analogous construction for an example of higher genus, Lawson's surface of genus two, for the first time. We sketch an important step in this construction, the abelianization of certain flat connections over Lawson's surface.\n";
+}
+{
+Bemerkungen="";
+Benutzer="Prof. Dr. Katrin Wendland";
+EMinute="15";
+EStunde="10";
+LastModified="2013-02-21 09:51:00";
+LastModifiedBy="kaiserstuhl.mathematik.uni-freiburg.de (132.230.30.132)";
+LfdNr="84";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Lowdon";
+Titel="";
+Type="Vortrag";
+Veranst="Einstellungsvortrag fürs Graduiertenkolleg";
+Zeit="2013-03-01 09:15:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="15";
+EStunde="10";
+LastModified="2013-03-04 14:17:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="85";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Peter Lowdon (Zürich)";
+Titel="Symplectic Constraints of Field Theories";
+Type="Vortrag";
+Veranst="Bewerbungsgespräch für's Graduiertenkolleg";
+Zeit="2013-03-01 09:15:00";
+Zusammenf="For field theories defined on a manifold with a boundary\nthere exists a canonical symplectic structure. This structure enables the constraints of a field theory to be categorised and interpreted geometrically. In particular, Yang-Mills theory, BF theory and Chern-Simons theory all satisfy a theorem which relates the properties of this structure to the form of their actions.\n";
+}
+{
+Bemerkungen="";
+Benutzer="graf";
+EMinute="0";
+EStunde="11";
+LastModified="2013-02-28 12:38:00";
+LastModifiedBy="halma.mathematik.uni-freiburg.de (132.230.30.87)";
+LfdNr="86";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Stefano Urbinati";
+Titel="Log Terminal Singularities (joint work with A. Chiecchio)";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-03-08 10:00:00";
+Zusammenf="Inspired by the work of de Fernex and Hacon on singularities of normal varieties (2009), we define a new notion for Log Terminal singularities. In this context we prove that the relative canonical ring is finitely generated and that log terminal varieties are klt in the usual sense if and only if the anti-canonical ring is finitely generated. We deduce a relation to the Minimal Model Program and some interesting features on defect ideals.";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="0";
+EStunde="11";
+LastModified="2013-03-05 15:11:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="87";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sergei Kovalenko";
+Titel="Transitivität von Automorphismengruppen von Gizatullin-Flächen";
+Type="Vortrag";
+Veranst="wissenschaftlicher Vortrag";
+Zeit="2013-03-12 10:00:00";
+Zusammenf="Abstract siehe http://www.gk1821.uni-freiburg.de/events/vortrag-von-sergei-kovalenko-bochum";
+}
+{
+Bemerkungen="";
+Benutzer="graf";
+EMinute="0";
+EStunde="11";
+LastModified="2013-03-08 19:36:00";
+LastModifiedBy="halma.mathematik.uni-freiburg.de (132.230.30.87)";
+LfdNr="88";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Sergei Kovalenko";
+Titel="Transitivity of automorphism groups of Gizatullin surfaces";
+Type="deleted";
+Veranst="Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie";
+Zeit="2013-03-12 10:00:00";
+Zusammenf="";
+}
+{
+Bemerkungen="";
+Benutzer="behringer";
+EMinute="0";
+EStunde="11";
+LastModified="2013-03-11 15:52:00";
+LastModifiedBy="fits.mathematik.uni-freiburg.de (132.230.30.126)";
+LfdNr="89";
+Ort="Raum 404, Eckerstr. 1";
+Passwort=Geheim
+SeeAlsoURL="";
+Sprecher="Dr. Tim Kirschner";
+Titel="On singular symplectic complex spaces";
+Type="Vortrag";
+Veranst="wissenschaftlicher Vortrag";
+Zeit="2013-03-15 10:00:00";
+Zusammenf="I start out presenting basic results in the deformation theory of singular symplectic complex spaces. Among others I explain how (and in what sense) it is possible to generalize the well-known local Torelli theorem for hyperkähler manifolds to a possibly singular setting. As a consequence one obtains that certain irreducible symplectic spaces satisfy the Fujiki relation. If time allows, I shall discuss applications of the latter fact.";
+}

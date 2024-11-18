@@ -1,0 +1,57 @@
+[
+    {
+        "KMinute": "00",
+        "KOrt": "Hörsaal II, Albertstr. 23b",
+        "KStunde": "17",
+        "KTMinute": "30",
+        "KTStunde": "16",
+        "KWochentag": "4",
+        "SemA": "2025-04-01",
+        "SemE": "2025-09-30",
+        "Semestername": "Sommersemester 2025",
+        "Type": "Info",
+        "VzA": "2025-04-22",
+        "VzE": "2025-07-26"
+    },
+    {
+        "ID": "DidSem",
+        "Name": "Didaktisches Seminar",
+        "Type": "V"
+    },
+    {
+        "Aliases": "FDM-Seminar",
+        "ID": "DM-Sem",
+        "Name": "Seminar über Datenanalyse und Modellbildung",
+        "Type": "V"
+    },
+    {
+        "Aliases": "Oberseminar über Algebra, Zahlentheorie und algebraische Geometrie",
+        "ID": "OS-AlgZTalgGeom",
+        "Name": "Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie",
+        "Type": "V"
+    },
+    {
+        "Aliases": "Oberseminar über Angewandte Mathematik",
+        "ID": "OS-AM",
+        "Name": "Oberseminar: Angewandte Mathematik",
+        "Type": "V"
+    },
+    {
+        "Aliases": "Oberseminar über Differentialgeometrie",
+        "ID": "OS-DiffGeo",
+        "Name": "Oberseminar: Differentialgeometrie",
+        "Type": "V"
+    },
+    {
+        "Aliases": "Oberseminar über Mathematische Logik",
+        "ID": "OS-ML",
+        "Name": "Oberseminar: Mathematische Logik",
+        "Type": "V"
+    },
+    {
+        "Aliases": "Oberseminar über Stochastik",
+        "ID": "OS-Stochastik",
+        "Name": "Oberseminar: Stochastik",
+        "Type": "V"
+    }
+]
