@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:WS2024-2025-41@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20241023T155000
+DTSTART:20241025T120000
+DTEND:20241025T130000
+SUMMARY:A comparison principle based on couplings of partial integro-differential operators
+DESCRIPTION:Titel: A comparison principle based on couplings of partial integro-differential operators\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Fabian Fuchs (Universität Bielefeld)
+END:VEVENT
+BEGIN:VEVENT
+UID:WS2024-2025-48@wochenprogramm.mathematik.uni-freiburg.de
+LOCATION:Raum 404, Ernst-Zermelo-Str. 1
+DTSTAMP:20241112T135800
+DTSTART:20241115T120000
+SUMMARY:Central limit theorems under non-stationarity via relative weak convergence
+DESCRIPTION:Titel: Central limit theorems under non-stationarity via relative weak convergence\nVeranstaltung: Seminar über Datenanalyse und Modellbildung\nSprecher: Nicolai Palm (LMU München) 
+END:VEVENT
+END:VCALENDAR

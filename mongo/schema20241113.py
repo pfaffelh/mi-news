@@ -297,7 +297,7 @@ vortragsreihe_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Vortragsreihe.",
-        "required": ["sichtbar", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_default", "duration_default", "ort_en_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
+        "required": ["sichtbar", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_default", "duration_default", "ort_en_default", "gastgeber_default", "sekretariat_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
         "properties": {
             "sichtbar": {
                 "bsonType": "bool",
@@ -339,6 +339,14 @@ vortragsreihe_validator = {
                 "bsonType": "int",
                 "description": "Default duration in minutes -- required"
             },                   
+            "gastgeber_default": {
+                "bsonType": "string",
+                "description": "Üblicher Gastgeber -- required"
+            },                   
+            "sekretariat_default": {
+                "bsonType": "string",
+                "description": "Übliches Sekretariat -- required"
+            },                   
             "_public": {
                 "bsonType": "bool",
                 "description": "Gibt an, ob die Vortragsreihe veröffentlicht (dh auf home zu sehen) werden soll.  -- required"
@@ -375,7 +383,7 @@ vortrag_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Ein Vortrag.",
-        "required": ["vortragsreihe", "sprecher", "sprecher_en", "sprecher_affiliation_de", "sprecher_affiliation_en", "ort_de", "ort_en", "title_de", "title_en", "text_de", "text_en", "url", "lang", "_public", "start", "end", "bearbeitet", "kommentar_de", "kommentar_en", "kommentar_intern"],
+        "required": ["vortragsreihe", "sprecher", "sprecher_en", "sprecher_affiliation_de", "sprecher_affiliation_en", "ort_de", "ort_en", "title_de", "title_en", "text_de", "text_en", "gastgeber", "sekretariat", "url", "lang", "_public", "start", "end", "bearbeitet", "kommentar_de", "kommentar_en", "kommentar_intern"],
         "properties": {
             "vortragsreihe": {
                 "bsonType": "array",
@@ -399,6 +407,14 @@ vortrag_validator = {
             "sprecher_affiliation_en": {
                 "bsonType": "string",
                 "description": "Sprecher des Vortrages auf englisch, falls abweichend-- required"
+            },
+            "gastgeber": {
+                "bsonType": "string",
+                "description": "Wer hat den Sprecher eingeladen?"
+            },
+            "sekretariat": {
+                "bsonType": "string",
+                "description": "Welches Sekretariat bearbeitet den Vortrag?"
             },
             "ort_de": {
                 "bsonType": "string",

@@ -22,7 +22,6 @@ tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
 collection = st.session_state.vortragsreihe
-bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
@@ -30,16 +29,20 @@ if st.session_state.logged_in:
     key = "vortragsreihe_anlegen"
     with st.expander(f'Neue Vortragsreihe anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = False)
-        title_de = st.text_input("Titel (de)", "")
-        title_en = st.text_input("Titel (en)", "")
-        kurzname = st.text_input("Kurzname", "")
+        col1, col2, col3 = st.columns([1,1,1])
+        title_de = col1.text_input("Titel (de)", "")
+        title_en = col2.text_input("Titel (en)", "")
+        kurzname = col3.text_input("Kurzname", "")
         text_de = st.text_area("Beschreibung (de)", "")
         text_en = st.text_area("Beschreibung (en)", "")
         link = st.text_input("URL für die Vortragsreihe", "")
-        ort_de_default = st.text_input("Üblicher Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
-        ort_en_default = st.text_input("Üblicher Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
-        duration_default = st.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", 90) 
-        _public_default = st.toggle("Vorträge bereits beim anlegen veröffentlichen", value = False)
+        col1, col2, col3 = st.columns([1,1,1])        
+        gastgeber_default = col1.text_input("Üblicher Gastgeber", "")
+        sekretariat_default = col2.text_input("Übliches bearbeitenden Sekretariat", "")
+        _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", value = False)
+        ort_de_default = col1.text_input("Üblicher Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
+        ort_en_default = col2.text_input("Üblicher Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
+        duration_default = col3.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", 90) 
         sync_with_calendar = st.toggle("Mit einem Kalender synchronisieren", value = False)
         calendar_link = st.text_area("URL des Kalenders", "")
         kommentar = st.text_input("Kommentar", "")
@@ -56,15 +59,16 @@ if st.session_state.logged_in:
             new["link"] = link
             new["ort_de_default"] = ort_de_default
             new["ort_en_default"] = ort_en_default
+            new["gastgeber_default"] = gastgeber_default
+            new["sekretariat_default"] = sekretariat_default
             new["duration_default"] = duration_default
             new["_public_default"] = _public_default
             new["sync_with_calendar"] = sync_with_calendar
             new["calendar_link"] = calendar_link
             new["kommentar"] = kommentar
-            new["bearbeitet"] = bearbeitet
+            new["bearbeitet"] = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
             new["rang"] = min([x["rang"] for x in list(collection.find())])-1
             tools.new(collection, ini = new, switch = False)
-
 
     aktuell = st.toggle("Nur aktuelle Vortragsreihen anzeigen", True)
     query = { "sichtbar" : True} if aktuell else {}
@@ -81,7 +85,6 @@ if st.session_state.logged_in:
             if submit:
                 st.session_state.edit = x["_id"]
                 switch_page("Vortrag")
-
         with co3:
             with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
                 with st.popover('Veranstaltungsreihe löschen'):
@@ -101,16 +104,21 @@ if st.session_state.logged_in:
                         st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
                 sichtbar = st.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = st.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
-                title_de = st.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
-                title_en = st.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
-                kurzname = st.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])
+                title_de = col1.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
+                title_en = col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
+                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
                 text_de = st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
                 text_en = st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
                 url = st.text_input("URL für die Vortragsreihe", x["url"], key = f"url_{x['_id']}")
-                ort_de_default = st.text_input("Üblicher Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_de_default"], key = f"ort_de_default_{x['_id']}")
-                ort_en_default = st.text_input("Üblicher Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_en_default"], key = f"ort_en_default_{x['_id']}")
-                duration_default = st.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
-                _public_default = st.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])        
+                gastgeber_default = col1.text_input("Üblicher Gastgeber", x["gastgeber_default"], key = f"gastgeber_default_{x['_id']}")
+                sekretariat_default = col2.text_input("Übliches bearbeitenden Sekretariat", x["sekretariat_default"], key = f"sekretariat_default_{x['_id']}")
+                _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])        
+                ort_de_default = col1.text_input("Üblicher Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_de_default"], key = f"ort_de_default_{x['_id']}")
+                ort_en_default = col2.text_input("Üblicher Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_en_default"], key = f"ort_en_default_{x['_id']}")
+                duration_default = col3.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
                 sync_with_calendar = st.toggle("Mit einem Kalender synchronisieren", x["sync_with_calendar"], key = f"sync_with_calendar_{x['_id']}")
                 calendar_url = st.text_input("URL des Kalenders", x["calendar_url"], key = f"calendar_url_{x['_id']}") if sync_with_calendar else x["calendar_url"]
                 kommentar = st.text_input("Kommentar (intern)", x["kommentar"], key = f"kommentar_{x['_id']}")

@@ -13,6 +13,7 @@ carouselnews = mongo_db["carouselnews"]
 vortragsreihe = mongo_db["vortragsreihe"]
 vortrag = mongo_db["vortrag"]
 i = 1
+date_format = '%d.%m.%Y um %H:%M:%S.'
 
 # Ab hier wird die Datenbank verändert
 print("Ab hier wird verändert")
@@ -30,6 +31,8 @@ def insert_vortragsreihe(ini):
     "url" : "",
     "ort_de_default" : "",
     "duration_default" : 90,
+    "gastgeber_default" : "",
+    "sekretariat_default" : "", 
     "ort_en_default" : "",
     "_public" : True, 
     "sichtbar" : True, 
@@ -201,8 +204,12 @@ for i, file in enumerate(files2):
                 sprecher = d["Sprecher"]
                 dtstart = datetime.strptime(d["Zeit"] , "%Y-%m-%d %H:%M:%S")
                 dtend = dtstart + timedelta(hours=1)
+                gastgeber = d.get("Einladender", "")
+                sekretariat = "",
                 x = vortrag.insert_one({
                     "vortragsreihe" : [id["leer"]], 
+                    "gastgeber" : gastgeber,
+                    "sekretariat" : "",
                     "sprecher" : sprecher,
                     "sprecher_en" : "", 
                     "sprecher_affiliation_de" : "", 
@@ -219,7 +226,7 @@ for i, file in enumerate(files2):
                     "_public" : True, 
                     "start" : dtstart,
                     "end" : dtend,
-                    "bearbeitet" : "", 
+                    "bearbeitet" : f"Übernommen aus altem Wochenprogramm, {datetime.now().strftime(date_format)}", 
                     "kommentar_de" : "",
                     "kommentar_en" : "",
                     "kommentar_intern" : ""
