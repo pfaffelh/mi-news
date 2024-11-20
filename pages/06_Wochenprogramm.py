@@ -25,10 +25,11 @@ collection = st.session_state.vortragsreihe
 
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
-    st.header("Vortragsreihen")
-    key = "vortragsreihe_anlegen"
-    with st.expander(f'Neue Vortragsreihe anlegen', expanded = True if st.session_state.expanded == key else False):
+    st.header("Vortragsreihen und Events")
+    aktuell = st.toggle("Nur aktuelle Vortragsreihen/Events anzeigen", True)
+    with st.expander(f'Neue Vortragsreihe/Event anlegen'):
         _public = st.toggle("Veröffentlicht", value = False)
+        event = st.toggle("Als Event anlegen", value = False)
         col1, col2, col3 = st.columns([1,1,1])
         title_de = col1.text_input("Titel (de)", "")
         title_en = col2.text_input("Titel (en)", "")
@@ -36,6 +37,17 @@ if st.session_state.logged_in:
         text_de = st.text_area("Beschreibung (de)", "")
         text_en = st.text_area("Beschreibung (en)", "")
         link = st.text_input("URL für die Vortragsreihe", "")
+        if event:
+            col1, col2 = st.columns([1,1])        
+            startdatum = col1.date_input("Startdatum", datetime.now())
+            start = datetime.combine(startdatum, datetime.min.time())
+            enddatum = col2.date_input("Enddatum", datetime.now())
+            end = datetime.combine(enddatum, datetime.min.time())
+            anzeigetage = 30
+        else:
+            start = datetime.min
+            end = datetime.max
+            anzeigetage = 7    
         col1, col2, col3 = st.columns([1,1,1])        
         gastgeber_default = col1.text_input("Üblicher Gastgeber", "")
         sekretariat_default = col2.text_input("Übliches bearbeitenden Sekretariat", "")
@@ -47,10 +59,11 @@ if st.session_state.logged_in:
         calendar_link = st.text_area("URL des Kalenders", "")
         kommentar = st.text_input("Kommentar", "")
 
-        btn = st.button("Vortragsreihe anlegen")
+        btn = st.button("Vortragsreihe anlegen", type="primary")
         if btn:
             new = st.session_state.new[collection]
             new["sichtbar"] = True
+            new["event"] = event
             new["_public"] = _public
             new["title_de"] = title_de
             new["title_en"] = title_en
@@ -66,20 +79,26 @@ if st.session_state.logged_in:
             new["sync_with_calendar"] = sync_with_calendar
             new["calendar_link"] = calendar_link
             new["kommentar"] = kommentar
+            new["start"] = start
+            new["end"] = end
+            new["anzeigetage"] = anzeigetage            
             new["bearbeitet"] = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
             new["rang"] = min([x["rang"] for x in list(collection.find())])-1
             tools.new(collection, ini = new, switch = False)
 
-    aktuell = st.toggle("Nur aktuelle Vortragsreihen anzeigen", True)
-    query = { "sichtbar" : True} if aktuell else {}
+    query = { "sichtbar" : True, "event" : False } if aktuell else {"event" : False}
     vortragsreihen = list(collection.find(query,sort=[("rang", pymongo.ASCENDING)]))
 
+    query = { "sichtbar" : True, "event" : True } if aktuell else {"event" : True}
+    events = list(collection.find(query,sort=[("rang", pymongo.ASCENDING)]))
+
+    st.subheader("Vortragsreihen")
     for x in vortragsreihen:
         co1, co2, co3, co4 = st.columns([1,1,15,5]) 
         with co1: 
-            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
+            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, { "event" : False }))
         with co2:
-            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
+            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, { "event" : False }))
         with co4:
             submit = st.button('Zu den Vorträgen', key=f'talks-{x["_id"]}')
             if submit:
@@ -108,6 +127,11 @@ if st.session_state.logged_in:
                 title_de = col1.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
                 title_en = col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
                 kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
+                ev = list(collection.find({"kurzname" : kurzname}))
+                for e in ev: 
+                    if e != x:
+                        st.warning(f"Achtung, Kurzname nicht eindeutig, schon bei {e['title_de']} vor")
+                
                 text_de = st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
                 text_en = st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
                 url = st.text_input("URL für die Vortragsreihe", x["url"], key = f"url_{x['_id']}")
@@ -137,7 +161,88 @@ if st.session_state.logged_in:
                     "calendar_url" : calendar_url,
                     "kommentar" : kommentar
                 }
-                submit = st.button("Speichern", on_click = tools.update_confirm, args = (collection, x, x_updated, ), key = f"save_{x['_id']}")
+                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, ), key = f"save_{x['_id']}")
+
+    st.subheader("Events")
+    for x in events:
+        co1, co2, co3, co4 = st.columns([1,1,15,5]) 
+        with co1: 
+            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, { "event" : True }))
+        with co2:
+            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, { "event" : True }))
+        with co4:
+            submit = st.button('Zu den Vorträgen', key=f'talks-{x["_id"]}')
+            if submit:
+                st.session_state.edit = x["_id"]
+                switch_page("Vortrag")
+        with co3:
+            with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
+                with st.popover('Event löschen'):
+                    ini = {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}
+                    s = ("  \n".join(tools.find_dependent_items(collection, x['_id'], ini)))
+                    if s:
+                        st.write("Eintrag wirklich löschen?  \n" + s + "  \nwerden dadurch geändert.")
+                    else:
+                        st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
+                    colu1, colu2, colu3 = st.columns([1,1,1])
+                    with colu1:
+                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
+                    if submit:
+                        tools.delete_item_update_dependent_items(collection, x['_id'], False)
+                        st.rerun()
+                    with colu3: 
+                        st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
+                sichtbar = st.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
+                _public = st.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])
+                title_de = col1.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
+                title_en = col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
+                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
+                
+                ev = list(collection.find({"kurzname" : kurzname}))
+                for e in ev: 
+                    if e != x:
+                        st.warning(f"Achtung, Kurzname nicht eindeutig, schon bei {e['title_de']} vor")
+
+                col1, col2 = st.columns([1,1])
+                startdatum = col1.date_input("Startdatum", value = x["start"].date(), format = "DD.MM.YYYY", key = f"startdatum_{x['_id']}")
+                start = datetime.combine(startdatum, datetime.min.time())
+                enddatum = col2.date_input("Enddatum", value = x["end"].date(), format = "DD.MM.YYYY", key = f"enddatum_{x['_id']}")
+                end = datetime.combine(enddatum, datetime.min.time())
+                
+                text_de = st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
+                text_en = st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
+                url = st.text_input("URL für das Event", x["url"], key = f"url_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])        
+                gastgeber_default = col1.text_input("Gastgeber", x["gastgeber_default"], key = f"gastgeber_default_{x['_id']}")
+                sekretariat_default = col2.text_input("Sekretariat", x["sekretariat_default"], key = f"sekretariat_default_{x['_id']}")
+                _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
+                col1, col2, col3 = st.columns([1,1,1])        
+                ort_de_default = col1.text_input("Ort (de)", x["ort_de_default"], key = f"ort_de_default_{x['_id']}")
+                ort_en_default = col2.text_input("Ort (en)", x["ort_en_default"], key = f"ort_en_default_{x['_id']}")
+                duration_default = col3.number_input("Übliche Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
+                sync_with_calendar = st.toggle("Mit einem Kalender synchronisieren", x["sync_with_calendar"], key = f"sync_with_calendar_{x['_id']}")
+                calendar_url = st.text_input("URL des Kalenders", x["calendar_url"], key = f"calendar_url_{x['_id']}") if sync_with_calendar else x["calendar_url"]
+                kommentar = st.text_input("Kommentar (intern)", x["kommentar"], key = f"kommentar_{x['_id']}")
+                x_updated = {
+                    "sichtbar" : sichtbar,
+                    "_public" : _public,
+                    "title_de" : title_de,
+                    "title_en" : title_en,
+                    "start"  : start,
+                    "end" : end, 
+                    "text_de" : text_de,
+                    "text_en" : text_en,
+                    "url" : url,
+                    "ort_de_default" : ort_de_default,
+                    "duration_default" : duration_default,
+                    "_public_default" : _public_default,
+                    "sync_with_calendar" : sync_with_calendar,
+                    "calendar_url" : calendar_url,
+                    "kommentar" : kommentar
+                }
+                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, ), key = f"save_{x['_id']}")
+
                 
 
 else: 

@@ -24,6 +24,8 @@ vortrag.drop()
 def insert_vortragsreihe(ini):
     leer = {
     "kurzname" : "alle",
+    "event" : False, 
+    "anzeigetage" : 7, 
     "title_de" : "", 
     "title_en" : "", 
     "text_de" : "", 
@@ -34,6 +36,8 @@ def insert_vortragsreihe(ini):
     "gastgeber_default" : "",
     "sekretariat_default" : "", 
     "ort_en_default" : "",
+    "start" : datetime.min,
+    "end" : datetime.max,
     "_public" : True, 
     "sichtbar" : True, 
     "_public_default" : False, 
@@ -121,6 +125,17 @@ data = {
         "kurzname" : "Logik",
         "title_de" : "Oberseminar: Mathematische Logik",
         "ort_de_default" : "Seminarraum 404",
+        "sichtbar" : True,
+        "_public" : True, 
+        "bearbeitet" : "Initialer Eintrag"
+    },
+    "   " : {
+        "event" : True,
+        "kurzname" : "geomod",
+        "title_de" : "Geomod Conference in Model Theory",
+        "ort_de_default" : "Seminarraum 404",
+        "start" : datetime(2023, 11, 14),
+        "end" : datetime(2023, 11, 17), 
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
@@ -232,7 +247,10 @@ for i, file in enumerate(files2):
                     "kommentar_intern" : ""
                 })
 
-                if "Algebra" in d.get("Veranst", ""):
+                if "Geomod" in d.get("Veranst", ""):
+                    print("Geomod")
+                    vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Geomod"]}})
+                elif "Algebra" in d.get("Veranst", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Algebra"]}})
                 elif "Didakti" in d.get("Veranst", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Didaktik"]}})
@@ -251,7 +269,7 @@ for i, file in enumerate(files2):
                 elif "Kolloquium" in d.get("Type", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Kolloquium"]}})
                 else:
-                    print(d)
+#                    print(d)
                     print(i)
                     i = i+1
 

@@ -42,7 +42,7 @@ if st.session_state.logged_in:
     with st.popover("Neuen Vortrag anlegen"):
         _public = st.toggle("Veröffentlicht", x["_public_default"], key = "public_new")
         vortragsreihe = [util.leer[st.session_state.vortragsreihe], st.session_state.edit]
-        startdatum = st.date_input("Startdatum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
+        startdatum = st.date_input("Startdatum", value = x["start"].date() if x["event"] else datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
         startzeit = st.time_input("Startzeit", value = datetime.min.time(), key = "startzeit_new")
         start = datetime.combine(startdatum, startzeit)
         end = start + timedelta(minutes = x["duration_default"])
@@ -182,7 +182,6 @@ if st.session_state.logged_in:
                 save_all = False
                 st.rerun()
 
-            st.write(y["bearbeitet"])
 
 else: 
     switch_page("NEWS")

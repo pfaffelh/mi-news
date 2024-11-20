@@ -297,11 +297,19 @@ vortragsreihe_validator = {
     "$jsonSchema": {
         "bsonType": "object",
         "title": "Eine Vortragsreihe.",
-        "required": ["sichtbar", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_default", "duration_default", "ort_en_default", "gastgeber_default", "sekretariat_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
+        "required": ["sichtbar", "event", "anzeigetage", "kurzname", "title_de", "title_en", "text_de", "text_en", "url", "ort_de_default", "start", "end", "duration_default", "ort_en_default", "gastgeber_default", "sekretariat_default", "_public", "_public_default", "sync_with_calendar", "calendar_url", "rang", "bearbeitet", "kommentar"],
         "properties": {
             "sichtbar": {
                 "bsonType": "bool",
                 "description": "Gibt an, ob die Vortragsreihe per Default sichbar ist. -- required"
+            },
+            "event": {
+                "bsonType": "bool",
+                "description": "Gibt an, ob es ein Event ist. -- required"
+            },
+            "anzeigetage": {
+                "bsonType": "int",
+                "description": "Anzahl der Tage vor dem Termine, die auf der hp angezeigt werden. -- required"
             },
             "kurzname": {
                 "bsonType": "string",
@@ -347,6 +355,14 @@ vortragsreihe_validator = {
                 "bsonType": "string",
                 "description": "Übliches Sekretariat -- required"
             },                   
+            "start": {
+                "bsonType": "date",
+                "description": "Startdatum für die News auf home -- required"
+            },
+            "end": {
+                "bsonType": "date",
+                "description": "Enddatum für die News auf home -- required"
+            },
             "_public": {
                 "bsonType": "bool",
                 "description": "Gibt an, ob die Vortragsreihe veröffentlicht (dh auf home zu sehen) werden soll.  -- required"
@@ -454,11 +470,11 @@ vortrag_validator = {
             },
             "start": {
                 "bsonType": "date",
-                "description": "Startdatum für die News auf home -- required"
+                "description": "Startdatum und Zeit des Vortrages -- required"
             },
             "end": {
                 "bsonType": "date",
-                "description": "Enddatum für die News auf home -- required"
+                "description": "Enddatum und Zeit des Vortrages -- required"
             },
             "bearbeitet": {
                 "bsonType": "string",
