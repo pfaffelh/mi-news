@@ -129,7 +129,7 @@ data = {
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
     },
-    "   " : {
+    "Geomod" : {
         "event" : True,
         "kurzname" : "geomod",
         "title_de" : "Geomod Conference in Model Theory",
@@ -248,7 +248,6 @@ for i, file in enumerate(files2):
                 })
 
                 if "Geomod" in d.get("Veranst", ""):
-                    print("Geomod")
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Geomod"]}})
                 elif "Algebra" in d.get("Veranst", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Algebra"]}})
