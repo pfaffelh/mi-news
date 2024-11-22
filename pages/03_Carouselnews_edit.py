@@ -41,19 +41,20 @@ if st.session_state.logged_in:
 
     st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
     col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns([1, 1])
     with col1: 
         ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
     with col2: 
         ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
     with col1: 
         t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
-        st.write(f"[Testansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitortest/{t})")
-        st.write(f"[Veröffentlichte Ansicht des Monitors](http://gateway.mathematik.uni-freiburg.de/monitor/{t})")
+        st.write(f"[Testansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitortest/{t})")
+        st.write(f"[Veröffentlichte Ansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitor/{t})")
     with col2: 
-        st.write(f"[Testansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/test/de/{t})")
-        st.write(f"[Testansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/test/en/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](http://gateway.mathematik.uni-freiburg.de/de/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](http://gateway.mathematik.uni-freiburg.de/en/{t})")
+        st.write(f"[Testansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/test/de/{t})")
+        st.write(f"[Testansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/test/en/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/de/{t})")
+        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
 
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 
