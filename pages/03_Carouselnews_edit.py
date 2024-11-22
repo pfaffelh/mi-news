@@ -98,7 +98,7 @@ if st.session_state.logged_in:
                 st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
 
     with st.expander("Grunddaten", expanded = True if st.session_state.expanded == "grunddaten" else False):
-        _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
+        _public = st.toggle("Veröffentlicht", value = x['_public'], help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         text = st.text_area("Text", x["text"])
         left = st.number_input("Linker Rand (in Prozent der ganzen Breite)", value = x["left"], min_value = 0, max_value = 100)
         right = st.number_input("Rechter Rand (in Prozent der ganzen Breite)", value = x["right"], min_value = 0, max_value = 100)
