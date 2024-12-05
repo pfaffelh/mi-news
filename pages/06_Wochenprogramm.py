@@ -67,6 +67,7 @@ if st.session_state.logged_in:
             new["_public"] = _public
             new["title_de"] = title_de
             new["title_en"] = title_en
+            new["kurzname"] = kurzname
             new["text_de"] = text_de
             new["text_en"] = text_en
             new["link"] = link
