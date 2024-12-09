@@ -72,14 +72,12 @@ Type="V";
 }
 {
 Bemerkungen="";
-Benutzer="ok1029";
 EMinute="15";
 EStunde="18";
 LastModified="2024-10-01 12:07:00";
-LastModifiedBy="fibonacci.mathematik.privat (10.5.30.55)";
 LfdNr="5";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="https://aam.uni-freiburg.de/workshops/ruzicka-wang/index.html";
 Sprecher="";
 Titel="Nonlinear Partial Differential Equations in Freiburg";
@@ -90,14 +88,12 @@ Zusammenf="Homepage von Analysis-Gruppe:\nhttp://home.mathematik.uni-freiburg.de
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:02:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="6";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Lars Diening";
 Titel="A Journey with Michael Ruzicka";
@@ -108,14 +104,12 @@ Zusammenf="In 1996, Professors Rajagopal and Ruzicka introduced a new model for 
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:15:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="7";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Knut Smoczyk";
 Titel="Codimension two mean curvature flow of entire graphs";
@@ -126,14 +120,12 @@ Zusammenf="We consider the graphical mean curvature flow of maps $f:\bmathbb{R}^
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:13:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="8";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Yoshiyuki Kagei";
 Titel=" On the stability of bifurcating periodic patterns of compressible viscous fluid equations";
@@ -144,14 +136,12 @@ Zusammenf="In systems of equations describing the motion of viscous fluids, solu
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:15:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="9";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Yuxin Ge";
 Titel="Conformal fill in by Poincaré-Einstein metrics in dimension 4";
@@ -162,14 +152,12 @@ Zusammenf="Given a closed riemannian manfiold of dimension 3 $(M^3,[h])$, when w
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:13:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="10";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Luigi Berselli";
 Titel=" Geometrical criteria and \qregular\q solutions to the Navier-Stokes equations";
@@ -180,14 +168,12 @@ Zusammenf="In this talk, I will give an overview of results on linking the regul
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:16:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="11";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Julian Scheuer";
 Titel=" Stability for anisotropic curvature functionals";
@@ -198,14 +184,12 @@ Zusammenf="Anisotropic integrands are used to model surface energies of inhomoge
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:19:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="12";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Luboš Pick";
 Titel="Regularity of functions in fractional Orlicz--Sobolev spaces";
@@ -216,14 +200,12 @@ Zusammenf="Homogeneous fractional Orlicz--Sobolev spaces extend classical fracti
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:24:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="13";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Thomas Körber";
 Titel=" The Penrose inequality in extrinsic geometry";
@@ -234,14 +216,12 @@ Zusammenf="The Riemannian Penrose inequality is a fundamental result in mathemat
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:49:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="14";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Martin Křepela";
 Titel=" Homogeneous rearrangement-invariant function spaces";
@@ -252,14 +232,12 @@ Zusammenf="Let us consider the dilation operator, defined in the usual way by\n$
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:54:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="15";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Miles Simon";
 Titel="Ricci flow with $L^p$ bounded scalar curvature";
@@ -270,14 +248,12 @@ Zusammenf="In this talk, we show that localised, weighted curvature integral est
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:55:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="16";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Andreas Prohl";
 Titel=" A new convergent method to solve the Fokker-Planck equation in higher dimensions";
@@ -288,14 +264,12 @@ Zusammenf="A recent topic in the area of numerics of PDEs is their approximation
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 10:56:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="17";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Azahara DelaTorre Pedraza";
 Titel=" Non-degeneracy of the bubble in a fractional and singular 1D Liouville equation";
@@ -306,14 +280,12 @@ Zusammenf="In this talk, we will focus on a stationary fractional nonlinear equa
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:04:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="18";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Arianna Passerini";
 Titel=" About the Onset of the Hopf Bifurcation for Convective Flows in Horizontal Annuli";
@@ -324,14 +296,12 @@ Zusammenf="Experimental and numerical results can not yet settle whether, betwee
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:05:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="19";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Chao Xia";
 Titel=" Rigidity on capillary constant mean curvature hypersurfaces";
@@ -342,14 +312,12 @@ Zusammenf="In this talk, we introduce our recent developments, joint with Profes
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:07:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="20";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Alex Kaltenbach";
 Titel="Fully-discrete finite element approximation of an unsteady electro-rheological fluid flow model: convergence and error analysis";
@@ -360,14 +328,12 @@ Zusammenf="In this talk, a fully-discrete approximation of an unsteady electro-r
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:08:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="21";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Christian Ketterer";
 Titel=" Gromov-Hausdorff stability of tori under Ricci and integral scalar curvature bounds";
@@ -378,14 +344,12 @@ Zusammenf="In this talk, we provide characterizations on the Gromov-Hausdorff st
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:09:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="22";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Gudrun Thäter";
 Titel=" Magma and aircraft hulls: Convection is fascinating";
@@ -396,14 +360,12 @@ Zusammenf="Since 1992 I have been thinking about Fluid flow. My first publicatio
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:12:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="23";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Marius Müller";
 Titel=" Short closed geodesics and the Willmore energy";
@@ -414,14 +376,12 @@ Zusammenf="In this talk we study the relation between two geometric quantities f
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:13:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="24";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Takayoshi Ogawa";
 Titel=" Endpoint maximal regularity and free boundary problem for the Navier-Stokes system in scaling invariant case";
@@ -432,14 +392,12 @@ Zusammenf="We consider the free boundary problem of the incompressible Navier-St
 }
 {
 Bemerkungen="";
-Benutzer="Hattenbach";
 EMinute="";
 EStunde="";
 LastModified="2024-10-01 11:15:00";
-LastModifiedBy="bayes.mathematik.privat (10.4.37.89)";
 LfdNr="25";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Pengfei Guan";
 Titel=" Gauss curvature flow: it's variations and applications";
@@ -450,14 +408,12 @@ Zusammenf="Firey introduced the Gauss curvature flow in 1974 to model evolution 
 }
 {
 Bemerkungen="";
-Benutzer="maximilian_stegemeyer";
 EMinute="";
 EStunde="";
 LastModified="2024-10-14 16:57:00";
-LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
 LfdNr="31";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="vortragtour";
 SeeAlsoURL="";
 Sprecher="Maximilian Stegemeyer";
 Titel="The Frobenius relation in string topology";
@@ -468,14 +424,12 @@ Zusammenf="String topology is the study of algebraic operations on the homology 
 }
 {
 Bemerkungen=" \n\n";
-Benutzer="Ludmila Frei";
 EMinute="";
 EStunde="";
 LastModified="2024-10-22 08:32:00";
-LastModifiedBy="brigach.mathematik.privat (10.4.30.183)";
 LfdNr="36";
 Ort="Raum 125, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Tianxin Cai (Zhejiang University)";
 Titel="Mathematics and Arts";
@@ -486,14 +440,12 @@ Zusammenf="Our civilization has been developed based on modern knowledge and tra
 }
 {
 Bemerkungen="";
-Benutzer="CP1072";
 EMinute="";
 EStunde="";
 LastModified="2024-09-25 11:51:00";
-LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
 LfdNr="1";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="1!DidHvNKalender";
 SeeAlsoURL="";
 Sprecher="Dr. Birke-Johanna Weber (Universität Kiel)";
 Titel="Verbindung zwischen schulischer und akademischer Mathematik – Lehramtsaufgaben als Mittel zur Adressierung der doppelten Diskontinuität?";
@@ -504,14 +456,12 @@ Zusammenf="Lehramtsstudierende zeigen häufig Schwierigkeiten, Verbindungen zwis
 }
 {
 Bemerkungen="";
-Benutzer="Brackenhofer";
 EMinute="";
 EStunde="";
 LastModified="2024-10-21 10:05:00";
-LastModifiedBy="tikal.mathematik.privat (10.4.30.72)";
 LfdNr="35";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Christoph Brackenhofer";
 Titel="Semi-algebraic differential forms";
@@ -522,14 +472,12 @@ Zusammenf="Modifying a construction by Hardt, Lambrechts, Turchin and Volić, we
 }
 {
 Bemerkungen="";
-Benutzer="FDM";
 EMinute="0";
 EStunde="13";
 LastModified="2024-10-23 15:50:00";
-LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
 LfdNr="41";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="fdmsec";
 SeeAlsoURL="";
 Sprecher="Fabian Fuchs (Universität Bielefeld)";
 Titel="A comparison principle based on couplings of partial integro-differential operators";
@@ -540,14 +488,12 @@ Zusammenf="In this talk, we present a new perspective on the comparison principl
 }
 {
 Bemerkungen="";
-Benutzer="ngrosse";
 EMinute="";
 EStunde="";
 LastModified="2024-10-24 10:58:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
 LfdNr="29";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Bernd Ammann (Regensburg)";
 Titel="Self-adjoint codimension 2 boundary conditions for Dirac operators";
@@ -558,14 +504,12 @@ Zusammenf="Joint work with Nadine Große.\n\nLet $N$ be an oriented compact subm
 }
 {
 Bemerkungen="";
-Benutzer="sk1425";
 EMinute="15";
 EStunde="15";
 LastModified="2024-10-22 15:51:00";
-LastModifiedBy="UNKNOWN (10.23.0.43)";
 LfdNr="40";
 Ort="Raum 226, Hermann-Herder-Str. 10";
-Passwort="Geheim";
+Passwort="pflaume44";
 SeeAlsoURL="";
 Sprecher="Philipp Reiter (TU Chemnitz)";
 Titel="On a Complete Riemannian Metric on the Space of Closed Embedded Curves";
@@ -581,7 +525,6 @@ EStunde="16";
 Einladender="David Criens";
 KeinKolloquium="false";
 LastModified="2024-10-22 13:02:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
 LfdNr="37";
 Ort="Hörsaal II, Albertstr. 23b";
 SeeAlsoURL="";
@@ -596,14 +539,12 @@ Zusammenf="As an example for a random walk in random environment, we study biase
 }
 {
 Bemerkungen="";
-Benutzer="ngrosse";
 EMinute="";
 EStunde="";
 LastModified="2024-10-14 16:54:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
 LfdNr="26";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Charlotte Dietze (LMU)";
 Titel="Weyl formulae for some singular metrics with application to acoustic modes in gas giants";
@@ -614,14 +555,12 @@ Zusammenf="We prove eigenvalue asymptotics of the Laplace-Beltrami operator for 
 }
 {
 Bemerkungen="";
-Benutzer="sk1425";
 EMinute="15";
 EStunde="15";
 LastModified="2024-11-07 08:54:00";
-LastModifiedBy="fili.mathematik.privat (10.4.12.100)";
 LfdNr="46";
 Ort="Raum 226, Hermann-Herder-Str. 10";
-Passwort="Geheim";
+Passwort="fisch";
 SeeAlsoURL="";
 Sprecher="Florian Theil (Warwick)";
 Titel="Rigorous justification of kinetic equations: Recent progress and finite size corrections";
@@ -632,14 +571,12 @@ Zusammenf="The justification of kinetic equations for long times is a longstandi
 }
 {
 Bemerkungen="";
-Benutzer="pizarro";
 EMinute="";
 EStunde="";
 LastModified="2024-11-07 13:38:00";
-LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
 LfdNr="44";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="pizarro";
 SeeAlsoURL="";
 Sprecher="Charlotte Bartnick";
 Titel="On (non-)elimination of imaginaries";
@@ -650,14 +587,12 @@ Zusammenf="Imaginaries are a way of introducing canonical representatives of equ
 }
 {
 Bemerkungen="";
-Benutzer="FDM";
 EMinute="";
 EStunde="";
 LastModified="2024-11-13 09:58:00";
-LastModifiedBy="phobos.fdm.privat (10.4.37.143)";
 LfdNr="48";
 Ort="Raum 232, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="fdmsec";
 SeeAlsoURL="";
 Sprecher="Nicolai Palm (LMU München) ";
 Titel="Central limit theorems under non-stationarity via relative weak convergence";
@@ -668,14 +603,12 @@ Zusammenf="Traditional central limit theorems (CLTs) have limited applicability 
 }
 {
 Bemerkungen="";
-Benutzer="maximilian_stegemeyer";
 EMinute="";
 EStunde="";
 LastModified="2024-10-30 16:49:00";
-LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
 LfdNr="28";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="vortragtour";
 SeeAlsoURL="";
 Sprecher="Zhen Gao (Universität Augsburg)";
 Titel="Symplectic topology and rectangular peg problem";
@@ -686,32 +619,44 @@ Zusammenf="The rectangular peg problem, an extension of the square peg problem w
 }
 {
 Bemerkungen="";
-Benutzer="nov25";
 EMinute="";
 EStunde="";
-LastModified="2024-10-23 15:39:00";
-LastModifiedBy="imperial.mathematik.privat (10.5.30.36)";
+LastModified="2024-11-24 22:10:00";
 LfdNr="42";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="nov25";
 SeeAlsoURL="";
 Sprecher="Misha Temkin";
-Titel="TBA";
+Titel="Numbers on barcodes and torsion theory";
 Type="Vortrag";
 Veranst="Oberseminar: Differentialgeometrie";
 Zeit="2024-11-25 16:00:00";
-Zusammenf="TBA";
+Zusammenf="Morse function on a manifold M is called strong if all its critical points have different critical values. Given a strong Morse function f and a field F we construct a bunch of elements of F, which we call Bruhat numbers (they're defined up to sign). More concretely, Bruhat number is written on each bar in the barcode of f. It turns out that if homology of M over F is that of a sphere, then the product of all the numbers is independent of f. We then construct the barcode and Bruhat numbers with twisted (a.k.a. local) coefficients and prove that mentioned product equals the Reidemeister torsion of M. In particular, it's again independent of f. This way we link Morse theory to the Reidemeister torsion via barcodes. Based on a joint work with Petya Pushkar. \n";
 }
 {
 Bemerkungen="";
-Benutzer="junker";
+EMinute="15";
+EStunde="15";
+LastModified="2024-11-22 08:29:00";
+LfdNr="49";
+Ort="Raum 226, Hermann-Herder-Str. 10";
+Passwort="pflug";
+SeeAlsoURL="";
+Sprecher="Nick Seinsche";
+Titel="Das Rigidity Phänomen einer Artificial Venus Flytrap";
+Type="Vortrag";
+Veranst="Oberseminar: Angewandte Mathematik";
+Zeit="2024-11-26 14:15:00";
+Zusammenf="Wir werden ein Modell zur Beschreibung einer Artificial Venus Flytrap formulieren, bei dem das Material als rigid angenommen wird. Während dieses rigide Modell numerisch das Phänomen der Curvature Inversion erfasst, werden wir sehen, dass die Annahme der Rigidity dazu führt, dass die planare Lösung die einzige exakte Lösung ist. Darauf aufbauend werden wir nicht-planare Lösungen betrachten, sobald wir die Rigidity-Annahme fallenlassen. Schließlich werden wir besprechen, wie sich eine Beschreibung einer Limit-Theorie angehen lässt.";
+}
+{
+Bemerkungen="";
 EMinute="";
 EStunde="";
 LastModified="2024-11-06 15:14:00";
-LastModifiedBy="skat2.mathematik.privat (10.4.23.32)";
 LfdNr="47";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="OSemLogik";
 SeeAlsoURL="";
 Sprecher="Moritz Hallbauer";
 Titel="Omega-kategorische Ringe";
@@ -722,32 +667,28 @@ Zusammenf="";
 }
 {
 Bemerkungen="";
-Benutzer="ngrosse";
 EMinute="";
 EStunde="";
-LastModified="2024-10-22 15:25:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
+LastModified="2024-11-27 13:08:00";
 LfdNr="39";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
-Sprecher="Lukas Hoffmann";
-Titel="TBA";
+Sprecher="Lou Hoffmann";
+Titel="A spectral result for massive electromagnetic Dirac Hamiltonians";
 Type="Vortrag";
 Veranst="Oberseminar: Differentialgeometrie";
 Zeit="2024-12-02 16:15:00";
-Zusammenf="";
+Zusammenf="From the physical perspective of relativistic wave mechanics, Dirac operators on Riemannian manifolds can be interpreted as infinitesimal generators of time translation, i.e. as Hamiltonians. Most mathematical research on Dirac operators focuses on what amounts to the study of free, massless fields. In this talk however, we will consider a Dirac Hamiltonian that is coupled to an electromagnetic field and a spatially non-constant mass term. After motivating and setting up the necessary notions, we will proceed to show that, given a suitably behaved \qpotential well\q, the spectrum of such a Dirac Hamiltonian must be discrete. The result being presented is a generalization of a theorem by N. Charalambous and N. Große in 2023.";
 }
 {
 Bemerkungen="";
-Benutzer="pizarro";
 EMinute="";
 EStunde="";
 LastModified="2024-11-05 12:31:00";
-LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
 LfdNr="43";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="pizarro";
 SeeAlsoURL="";
 Sprecher="Stefan Ludwig";
 Titel="Model theory of difference fields with an additive character on the fixed field";
@@ -758,14 +699,12 @@ Zusammenf="Motivated by work of Hrushovski on pseudofinite fields with an additi
 }
 {
 Bemerkungen="";
-Benutzer="CP1072";
 EMinute="";
 EStunde="";
 LastModified="2024-09-25 11:54:00";
-LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
 LfdNr="2";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="1!DidHvNKalender";
 SeeAlsoURL="";
 Sprecher="Dr. Patrick Bronner (Friedrich Gymnasium, Freiburg)";
 Titel="Apps, Projekte und KI-Tools für den digitalen Mathematikunterricht";
@@ -776,14 +715,12 @@ Zusammenf="Im Zeitalter der Künstlichen Intelligenz sollten digitale Medien im 
 }
 {
 Bemerkungen="";
-Benutzer="maximilian_stegemeyer";
 EMinute="";
 EStunde="";
 LastModified="2024-10-14 17:18:00";
-LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
 LfdNr="32";
 Ort="Raum 414, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="vortragtour";
 SeeAlsoURL="";
 Sprecher="Stephan Mescher (Uni Halle)";
 Titel="TBA";
@@ -794,50 +731,44 @@ Zusammenf="";
 }
 {
 Bemerkungen="";
-Benutzer="pizarro";
 EMinute="";
 EStunde="";
-LastModified="2024-11-04 12:01:00";
-LastModifiedBy="bakara.mathematik.privat (10.4.23.49)";
+LastModified="2024-11-28 16:33:00";
 LfdNr="45";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Pierre Touchard (TU Dresden)";
-Titel="About generalized indiscernibles and dividing lines";
+Titel="On a generalization  of indiscernible sequences";
 Type="Vortrag";
 Veranst="Oberseminar: Mathematische Logik";
 Zeit="2024-12-10 14:30:00";
-Zusammenf="";
+Zusammenf="Guingona  and Hill introduced and studied a new hierarchy of dividing lines for first-order structures, denoted by (NC_K)_K , where K ranges in the theorie of ultrahomogeneous omega-categorical Ramsey structures. In a subsequent paper, Guigonna, Hill and Scow give a characterisation in terms  of (generalised) K-indiscernible sequences.\nIn this talk, I will present a joint work with  Nadav Meir and Aris Papadopoulos, in which we develop around these notions of K-indiscernibility.   In particular, we will answer (negatively) a question posed by Guingona and Hill about the linearity of the NC_K hierarchy. As an application, we will also see that the ordered random graph admits a unique proper Ramsey reduct, namely the linear order.";
 }
 {
 Bemerkungen="";
-Benutzer="maximilian_stegemeyer";
 EMinute="0";
 EStunde="12";
-LastModified="2024-10-17 16:22:00";
-LastModifiedBy="yamabe.mathematik.privat (10.5.30.57)";
+LastModified="2024-11-21 11:12:00";
 LfdNr="34";
 Ort="Raum 414, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="vortragtour";
 SeeAlsoURL="";
 Sprecher="Stephan Mescher (Uni Halle)";
-Titel="TBA";
+Titel="Sequential topological complexities and sectional categories of subgroup inclusions";
 Type="Vortrag";
 Veranst="Oberseminar: Differentialgeometrie";
 Zeit="2024-12-12 10:00:00";
-Zusammenf="";
+Zusammenf="The sequential topological complexities (TCs) of a space are integer-valued homotopy invariants that are motivated by the motion planning problem from robotics and express the complexity of motion planning if the robots are supposed to make predetermined intermediate stops along their ways. After outlining their definitions, I will discuss the sequential TCs of aspherical spaces in the first part of my talk and describe how they can be investigated by purely algebraic means. We will also take a look at a generalization of this algebraic setting, namely sectional categories of subgroup inclusions. In the second part of my talk, I will present a general lower bound on their values and derive consequences for sequential TCs and parametrized topological complexities of epimorphisms.  We will investigate the methodology of the proof of this lower bound, in which all key steps are carried out using elementary homological algebra. This is joint work with Arturo Espinosa Baro, Michael Farber and John Oprea.";
 }
 {
 Bemerkungen="";
-Benutzer="goette";
 EMinute="45";
 EStunde="17";
 LastModified="2024-10-09 15:36:00";
-LastModifiedBy="boccia.mathematik.privat (10.5.30.128)";
 LfdNr="30";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="gizauyuk";
 SeeAlsoURL="";
 Sprecher="Dr. Jan Steinebrunner (Cambridge)";
 Titel="t.b.a.";
@@ -848,14 +779,12 @@ Zusammenf="";
 }
 {
 Bemerkungen="";
-Benutzer="CP1072";
 EMinute="";
 EStunde="";
 LastModified="2024-09-25 11:57:00";
-LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
 LfdNr="3";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="1!DidHvNKalender";
 SeeAlsoURL="";
 Sprecher="Dr. Wolfgang Riemer (Universität Bonn)";
 Titel="Ein roter Faden durch die Stochastik";
@@ -871,7 +800,6 @@ EStunde="16";
 Einladender="";
 KeinKolloquium="false";
 LastModified="2024-10-22 13:03:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
 LfdNr="38";
 Ort="Hörsaal II, Albertstr. 23b";
 SeeAlsoURL="";
@@ -886,14 +814,12 @@ Zusammenf="The Sobolev inequality is a paradigmatic example of a functional ineq
 }
 {
 Bemerkungen="";
-Benutzer="ngrosse";
 EMinute="";
 EStunde="";
 LastModified="2024-10-07 10:06:00";
-LastModifiedBy="abalone.mathematik.privat (10.5.30.48)";
 LfdNr="27";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="";
 SeeAlsoURL="";
 Sprecher="Nelia Charalambous (University of Cyprus)";
 Titel="TBA";
@@ -904,14 +830,12 @@ Zusammenf="";
 }
 {
 Bemerkungen="";
-Benutzer="CP1072";
 EMinute="";
 EStunde="";
 LastModified="2024-09-25 11:58:00";
-LastModifiedBy="rinken.mathematik.privat (10.5.30.180)";
 LfdNr="4";
 Ort="Hörsaal II, Albertstr. 23b";
-Passwort="Geheim";
+Passwort="1!DidHvNKalender";
 SeeAlsoURL="";
 Sprecher="OStR Simon Oswald (BSZ Waldkirch)";
 Titel="Problemlösen in Prüfungssituationen";
@@ -922,14 +846,12 @@ Zusammenf="Problemlösefähigkeit gilt als eine der Kernkompetenzen für das Ler
 }
 {
 Bemerkungen="";
-Benutzer="goette";
 EMinute="45";
 EStunde="17";
 LastModified="2024-10-15 11:32:00";
-LastModifiedBy="UNKNOWN (10.23.8.30)";
 LfdNr="33";
 Ort="Raum 404, Ernst-Zermelo-Str. 1";
-Passwort="Geheim";
+Passwort="gizauyuk";
 SeeAlsoURL="";
 Sprecher="Urs Lang (ETHZ)";
 Titel="t.b.a.";
