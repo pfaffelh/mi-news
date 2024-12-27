@@ -25,6 +25,7 @@ def insert_vortragsreihe(ini):
     leer = {
     "kurzname" : "alle",
     "event" : False, 
+    "lang_default" : "en",
     "title_de" : "Veranstaltungen und Vorträge", 
     "anzeigetage" : 7, 
     "title_en" : "", 
@@ -67,70 +68,95 @@ def get_sem(start, ende = 2024):
 data = {
     "Didaktik" : {
         "kurzname" : "Didaktik",
+        "lang_default" : "de",
         "title_de" : "Didaktisches Seminar",
+        "title_en" : "Didaktisches Seminar",
         "ort_de_default" : "Hörsaal 2",
+        "ort_en_default" : "Hörsaal 2",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
         },
     "Algebra" : {
         "kurzname" : "Algebra",
+        "lang_default" : "en",
         "title_de" : "Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie",
+        "title_en" : "Oberseminar: Algebra, Zahlentheorie und algebraische Geometrie",
         "ort_de_default" : "Seminarraum 404",
+        "ort_en_default" : "Seminarraum 404",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
     },
     "Angewandte_Mathematik" : {
         "kurzname" : "AM",
+        "lang_default" : "en",
         "title_de" : "Oberseminar: Angewandte Mathematik",
-        "ort_de_default" : "Seminarraum 226",
+        "title_en" : "Oberseminar: Angewandte Mathematik",
+        "ort_de_default" : "Seminarraum 226, HH10",
+        "ort_en_default" : "Seminarraum 226, HH10",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
         },
     "Stochastik" : {
         "kurzname" : "Stochastik",
+        "lang_default" : "en",
         "title_de" : "Oberseminar: Stochastik",
+        "title_en" : "Oberseminar: Stochastik",
         "ort_de_default" : "Seminarraum 232",
+        "ort_en_default" : "Seminarraum 232",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
         },
     "Differentialgeometrie" : {
         "kurzname" : "DiffGeo",
+        "lang_default" : "en",
         "title_de" : "Oberseminar: Differentialgeometrie",
+        "title_en" : "Oberseminar: Differentialgeometrie",
         "ort_de_default" : "Seminarraum 125",
+        "ort_en_default" : "Seminarraum 125",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
         },
     "FDM" : {
         "kurzname" : "FDM",
+        "lang_default" : "en",
         "title_de" : "Seminar über Datenanalyse und Modellbildung",
+        "title_en" : "Seminar über Datenanalyse und Modellbildung",
         "ort_de_default" : "Seminarraum 404",
+        "ort_en_default" : "Seminarraum 404",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
         },
     "Geometrische_Analysis" : {
         "kurzname" : "GeoAna",
+        "lang_default" : "en",
         "title_de" : "Projektseminar Geometrische Analysis",
+        "title_en" : "Projektseminar Geometrische Analysis",
         "ort_de_default" : "Seminarraum 125",
+        "ort_en_default" : "Seminarraum 125",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
     },
     "Mathematische_Logik" : {
         "kurzname" : "Logik",
+        "lang_default" : "en",
         "title_de" : "Oberseminar: Mathematische Logik",
+        "title_en" : "Oberseminar: Mathematische Logik",
         "ort_de_default" : "Seminarraum 404",
+        "ort_en_default" : "Seminarraum 404",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
     },
     "Geomod" : {
         "event" : True,
+        "lang_default" : "en",
         "kurzname" : "geomod",
         "title_de" : "Geomod Conference in Model Theory",
         "ort_de_default" : "Seminarraum 404",
@@ -142,8 +168,11 @@ data = {
     },
     "Kolloquium" : {
         "kurzname" : "Kolloquium",
+        "lang_default" : "en",
         "title_de" : "Mathematisches Kolloquium",
+        "title_en" : "Mathematisches Kolloquium",
         "ort_de_default" : "Hörsaal 2",
+        "ort_en_default" : "Hörsaal 2",
         "sichtbar" : True,
         "_public" : True, 
         "bearbeitet" : "Initialer Eintrag"
@@ -169,7 +198,6 @@ def replace_word_in_file(input_file, output_file):
     # Datei überschreiben
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(updated_content)
-
 
 def convert_to_json(input_file, output_file):
     # Datei einlesen
@@ -223,21 +251,21 @@ for i, file in enumerate(files2):
                 sekretariat = "",
                 x = vortrag.insert_one({
                     "vortragsreihe" : [id["leer"]], 
+                    "lang": "en",
                     "gastgeber" : gastgeber,
                     "sekretariat" : "",
-                    "sprecher" : sprecher,
-                    "sprecher_en" : "", 
+                    "sprecher_de" : sprecher,
+                    "sprecher_en" : sprecher,
                     "sprecher_affiliation_de" : "", 
                     "sprecher_affiliation_en" : "", 
                     "ort_de" : location, 
-                    "ort_en" : "", 
+                    "ort_en" : location, 
                     "url" : "", 
                     "title_de" : summary, 
-                    "title_en" : "", 
+                    "title_en" : summary,
                     "text_de" : description, 
-                    "text_en" : "", 
+                    "text_en" : description,
                     "link" : "", 
-                    "lang" : "deutsch", 
                     "_public" : True, 
                     "start" : dtstart,
                     "end" : dtend,
@@ -252,7 +280,7 @@ for i, file in enumerate(files2):
                 elif "Algebra" in d.get("Veranst", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Algebra"]}})
                 elif "Didakti" in d.get("Veranst", ""):
-                    vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Didaktik"]}})
+                    vortrag.update_one({"_id" : x.inserted_id}, { "$set": {"lang" : "de"}, "$push" : { "vortragsreihe" : id["Didaktik"]}})
                 elif "Angewand" in d.get("Veranst", ""):
                     vortrag.update_one({"_id" : x.inserted_id}, { "$push" : { "vortragsreihe" : id["Angewandte_Mathematik"]}})
                 elif "Datenana" in d.get("Veranst", "") or "FDM" in d.get("Veranst", ""):
@@ -274,6 +302,6 @@ for i, file in enumerate(files2):
 
 # Ab hier wird das Schema gecheckt
 print("Check schema")
-import schema20241113
-mongo_db.command('collMod','vortragsreihe', validator=schema20241113.vortragsreihe_validator, validationLevel='moderate')
-mongo_db.command('collMod','vortrag', validator=schema20241113.vortrag_validator, validationLevel='moderate')
+import schema20241227
+mongo_db.command('collMod','vortragsreihe', validator=schema20241227.vortragsreihe_validator, validationLevel='moderate')
+mongo_db.command('collMod','vortrag', validator=schema20241227.vortrag_validator, validationLevel='moderate')
