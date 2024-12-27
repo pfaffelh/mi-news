@@ -182,7 +182,7 @@ def repr(collection, id, short = False, show_collection = True):
         res = x['kurzname'] if short else (x['title_de'] if x['title_de']!="" else x['title_en'])
     elif collection == st.session_state.vortrag:
         res = f"{x['start'].strftime('%d.%m.%Y')}: "
-        res = res + f"{x['sprecher_de'] if x['sprecher_de'] != "" else x['sprecher_en']}, {x['title_de'] if x['title_de'] != "" else x['title_en']}"
+        res = res + f"{x['sprecher_de'] if x['sprecher_de'] != '' else x['sprecher_en']}, {x['title_de'] if x['title_de'] != '' else x['title_en']}"
         vre = ", ".join([repr(st.session_state.vortragsreihe, y, True, False) for y in x['vortragsreihe']])
         res = (res + f" ({vre})").replace("\n", "")
     if show_collection:
