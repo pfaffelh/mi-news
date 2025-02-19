@@ -121,7 +121,7 @@ if st.session_state.logged_in:
             col2.write("")
             col2.write(y["bearbeitet"])
             col1, col2 = st.columns([1,1])
-            vortragsreihe = col1.multiselect("Vortragsreihen", [y['_id'] for y in st.session_state.vortragsreihe.find(sort = [("kurzname", pymongo.DESCENDING)])], [], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
+            vortragsreihe = col1.multiselect("Vortragsreihen", [y['_id'] for y in st.session_state.vortragsreihe.find(sort = [("kurzname", pymongo.DESCENDING)])], y["vortragsreihe"], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
             col2.write("")
             _public =col2.toggle("Veröffentlicht", y["_public"], key = f"public_{y['_id']}")
 
