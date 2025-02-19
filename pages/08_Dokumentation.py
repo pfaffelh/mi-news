@@ -35,8 +35,8 @@ if st.session_state.logged_in:
         - Soll ein Bild mit angezeigt werden, braucht man ei entsprechendes jpg oder png, sowie eine Idee, ob die News auf dem Bildschirm und/oder der Homepage angezeigt werden soll.  
         - Das Bild lädt man in die Datenbank ('Bilder' in der Navigation). Dort hat man auch eine beschränkte Möglichkeit, das Bild zu bearbeiten (Drehen, zuschneiden, Datei verkleinern. In der Bildunterschrift sieht man jeweils ein paar Daten des Bildes, etwa die Dateigröße.).
         - Unter News -> Neue News anlegen bekommt man ein paar der möglichen Felder angezeigt. Hier ist _Veröffentlicht_ zunächst noch nicht angegeben, weil man ja erstmal die News ansehen will, bevor man sie veröffentlicht. Titel (das ist der Titel auf dem Monitor und der deutsche Titel auf der Homepage), Start/Enddatum der Anzeige lassen sich angeben, sowie das soeben angelegte Bild.  
-        - Man schaut etwa [hier](http://www2.mathematik.privat/monitortest/), wie die News angezeigt wird, und kann sie dann den eigenen Wünschen folgend ändern.  
-        - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [hier](http://www2.mathematik.privat/monitor/) ansehen.
+        - Man schaut etwa [hier](https://www.math.uni-freiburg.de/nlehre/monitortest/), wie die News angezeigt wird, und kann sie dann den eigenen Wünschen folgend ändern.  
+        - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [hier](https://www.math.uni-freiburg.de/nlehre/monitor/) ansehen.
         
         Für Einträge in das Wochenprogramm geht man so vor:
         
