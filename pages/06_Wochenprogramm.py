@@ -110,21 +110,22 @@ if st.session_state.logged_in:
                 switch_page("Vortrag")
         with co3:
             with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
-                with st.popover('Veranstaltungsreihe löschen'):
-                    ini = {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}
-                    s = ("  \n".join(tools.find_dependent_items(collection, x['_id'], ini)))
-                    if s:
-                        st.write("Eintrag wirklich löschen?  \n" + s + "  \nder letzten " + str(st.session_state.tage) + " Tage werden dadurch geändert.")
-                    else:
-                        st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
-                    colu1, colu2, colu3 = st.columns([1,1,1])
-                    with colu1:
-                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
-                    if submit:
-                        tools.delete_item_update_dependent_items(collection, x['_id'], False)
-                        st.rerun()
-                    with colu3: 
-                        st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
+                #with st.popover('Veranstaltungsreihe löschen'):
+                #    ini = {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}
+                #    st.write(collection)
+                #    s = ("  \n".join(tools.find_dependent_items(collection, x['_id'], ini)))
+                #    if s:
+                #        st.write("Eintrag wirklich löschen?  \n" + s + "  \nder letzten " + str(st.session_state.tage) + " Tage werden dadurch geändert.")
+                #    else:
+                #        st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
+                #    colu1, colu2, colu3 = st.columns([1,1,1])
+                #    with colu1:
+                #        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
+                #    if submit:
+                #        tools.delete_item_update_dependent_items(collection, x['_id'], False)
+                #        st.rerun()
+                #    with colu3: 
+                #        st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")

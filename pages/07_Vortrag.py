@@ -26,10 +26,10 @@ import misc.tools as tools
 tools.display_navigation()
 
 # Es geht hier vor allem um diese Collection:
-collection = st.session_state.vortrag
+st.session_state.collection = st.session_state.vortrag
 
 def save(x_updated, text):
-    tools.update_confirm(collection, x, x_updated, False)
+    tools.update_confirm(st.session_state.collection, x, x_updated, False)
     st.success(text)
     st.session_state.expanded = ""
 
@@ -92,14 +92,14 @@ if st.session_state.logged_in:
                             "kommentar_en" : kommentar_en,
                             "kommentar_intern" : kommentar_intern,
                             }
-            tools.new(collection, x_updated, False)
+            tools.new(st.session_state.collection, x_updated, False)
             st.success("Vortrag angelegt!")
 
-    vor = list(collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
+    vor = list(st.session_state.collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
     vorreihe = list(st.session_state.vortragsreihe.find({}, sort=[("rang", pymongo.ASCENDING)]))
     save_all = False
     for y in vor:
-        with st.expander(tools.repr(collection, y['_id'], False, False).replace("\n", "")):
+        with st.expander(tools.repr(st.session_state.collection, y['_id'], False, False).replace("\n", "")):
             col1, col2 = st.columns([4,1])
             submit = col1.button("Speichern", type="primary", key = f"save1_{y['_id']}")
             if submit:
@@ -111,7 +111,7 @@ if st.session_state.logged_in:
                     with colu1:
                         delete = st.button(label = "Ja", type = 'primary', key = f"delete-{y['_id']}")
                     if delete:
-                        tools.delete_item_update_dependent_items(collection, y['_id'], False)
+                        tools.delete_item_update_dependent_items(st.session_state.collection, y['_id'], False)
                         st.rerun()
                     with colu3: 
                         st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{y['_id']}")
@@ -121,7 +121,7 @@ if st.session_state.logged_in:
             col2.write("")
             col2.write(y["bearbeitet"])
             col1, col2 = st.columns([1,1])
-            vortragsreihe = col1.multiselect("Vortragsreihen", [y['_id'] for y in st.session_state.vortragsreihe.find(sort = [("kurzname", pymongo.DESCENDING)])], y["vortragsreihe"], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
+            vortragsreihe = col1.multiselect("Vortragsreihen", [y['_id'] for y in st.session_state.vortragsreihe.find(sort = [("kurzname", pymongo.DESCENDING)])], [], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
             col2.write("")
             _public =col2.toggle("Veröffentlicht", y["_public"], key = f"public_{y['_id']}")
 
@@ -178,7 +178,7 @@ if st.session_state.logged_in:
                              "kommentar_en" : kommentar_en,
                              "kommentar_intern" : kommentar_intern,
                              }
-                tools.update_confirm(collection, y, y_updated, False)
+                tools.update_confirm(st.session_state.collection, y, y_updated, False)
                 st.success("Daten des Vortrages geändert!")
                 save_all = False
                 st.rerun()
