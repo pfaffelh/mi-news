@@ -131,7 +131,7 @@ if st.session_state.logged_in:
                 _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
                 _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
-                lang_default = col1.selectbox("Typische Sprache", ["en", "deutsch"], index = 1 if x["lang_default"] == "deutsch" else 0, key = f"lang_default_{x['_id']}")
+                lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 1 if x["lang_default"] == "de" else 0, key = f"lang_default_{x['_id']}")
                 title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
                 title_en = x["title_en"] if lang_default != "en" else col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
                 kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
@@ -167,7 +167,7 @@ if st.session_state.logged_in:
                     "sekretariat_default" : sekretariat_default,
                     "url" : url,
                     "ort_de_default" : ort_de_default,
-                    "ort_en_default" : ort_de_default,
+                    "ort_en_default" : ort_en_default,
                     "duration_default" : duration_default,
                     "_public_default" : _public_default,
                     "sync_with_calendar" : sync_with_calendar,
