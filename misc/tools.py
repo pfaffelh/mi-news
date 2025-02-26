@@ -147,7 +147,7 @@ def reset_vars(text=""):
 
 def display_navigation():
     st.markdown("<style>.st-emotion-cache-16txtl3 { padding: 2rem 2rem; }</style>", unsafe_allow_html=True)
-    st.sidebar.image("static/ufr.png", use_column_width=True)
+    st.sidebar.image("static/ufr.png", use_container_width=True)
     st.session_state.tage = st.sidebar.slider("Welche News sollen angezeigt werden?", 0, 500, 25)
     st.sidebar.write("Nur News der letzten ", st.session_state.tage, "Tage werden angezeigt.")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
