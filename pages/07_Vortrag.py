@@ -38,6 +38,8 @@ if st.session_state.logged_in:
     x = st.session_state.vortragsreihe.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(st.session_state.vortragsreihe, x['_id']))
     st.write("Der Zeitraum, in dem Vorträge angezeigt werden, kann links oben eingestellt werden.")
+    if x['url'] != "":
+        st.write(f"Die veröffentlichte Ansicht der Vorträge ist [hier]({x['url']})")
     sprachen = ["en", "de"]
     with st.popover("Neuen Vortrag anlegen"):
         col1, col2 = st.columns([1,1])
