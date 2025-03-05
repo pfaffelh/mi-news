@@ -94,7 +94,7 @@ if st.session_state.logged_in:
     vortragsreihen = list(collection.find(query,sort=[("rang", pymongo.ASCENDING)]))
 
     query = { "sichtbar" : True, "event" : True } if aktuell else {"event" : True}
-    events = list(collection.find(query,sort=[("rang", pymongo.ASCENDING)]))
+    events = list(collection.find(query,sort=[("end", pymongo.ASCENDING)]))
 
     st.subheader("Vortragsreihen")
     for x in vortragsreihen:
@@ -110,22 +110,28 @@ if st.session_state.logged_in:
                 switch_page("Vortrag")
         with co3:
             with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
-                #with st.popover('Veranstaltungsreihe löschen'):
-                #    ini = {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}
-                #    st.write(collection)
-                #    s = ("  \n".join(tools.find_dependent_items(collection, x['_id'], ini)))
-                #    if s:
-                #        st.write("Eintrag wirklich löschen?  \n" + s + "  \nder letzten " + str(st.session_state.tage) + " Tage werden dadurch geändert.")
-                #    else:
-                #        st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
-                #    colu1, colu2, colu3 = st.columns([1,1,1])
-                #    with colu1:
-                #        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
-                #    if submit:
-                #        tools.delete_item_update_dependent_items(collection, x['_id'], False)
-                #        st.rerun()
-                #    with colu3: 
-                #        st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
+                with st.popover('Veranstaltungsreihe löschen'):
+                    ini = {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}
+                    s = ("  \n".join(tools.find_dependent_items(collection, x['_id'], ini)))
+                    if s:
+                        st.write("Eintrag wirklich löschen?  \n" + s + "  \nder letzten " + str(st.session_state.tage) + " Tage werden dadurch geändert.")
+                    else:
+                        st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
+                    colu1, colu2, colu3 = st.columns([1,1,1])
+                    with colu1:
+                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
+                    if submit:
+                        tools.delete_item_update_dependent_items(collection, x['_id'], False)
+                        st.rerun()
+                    with colu3: 
+                        st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
+                if x["kurzname"] != "":
+                    st.success(f"Das Event ist im Wochenprogramm [hier](https://www.math.uni-freiburg.de/wochenprogramm/de/vortragsreihe/{x['kurzname']}) zu finden.")
+                else:
+                    st.warning("Kein Kurzname angegeben. Nur mit einem Kurznamen kann das Event in das Wochenprogramm aufgenommen werden!")
+                if x["url"] != "":
+                    st.success(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
+
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
@@ -134,7 +140,7 @@ if st.session_state.logged_in:
                 lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 1 if x["lang_default"] == "de" else 0, key = f"lang_default_{x['_id']}")
                 title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
                 title_en = x["title_en"] if lang_default != "en" else col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
-                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
+                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}", disabled = True if x["_id"] in st.session_state.nonedit_ids else False)
                 ev = list(collection.find({"kurzname" : kurzname}))
                 for e in ev: 
                     if e != x:
@@ -179,10 +185,10 @@ if st.session_state.logged_in:
     st.subheader("Events")
     for x in events:
         co1, co2, co3, co4 = st.columns([1,1,15,5]) 
-        with co1: 
-            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, { "event" : True }))
-        with co2:
-            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, { "event" : True }))
+        #with co1: 
+        #    st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, { "event" : True }))
+        #with co2:
+        #    st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, { "event" : True }))
         with co4:
             submit = st.button('Zu den Vorträgen', key=f'talks-{x["_id"]}')
             if submit:
@@ -205,6 +211,13 @@ if st.session_state.logged_in:
                         st.rerun()
                     with colu3: 
                         st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
+                if x["kurzname"] != "":
+                    st.success(f"Das Event ist im Wochenprogramm [hier](https://www.math.uni-freiburg.de/wochenprogramm/de/event/{x['kurzname']}) zu finden.")
+                else:
+                    st.warning("Kein Kurzname angegeben. Nur mit einem Kurznamen kann das Event in das Wochenprogramm aufgenommen werden!")
+                if x["url"] != "":
+                    st.write(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
+
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
@@ -214,7 +227,10 @@ if st.session_state.logged_in:
                 title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
                 title_en = x["title_de"] if lang_default != "en" else col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
                 kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
-                
+
+                if kurzname == "":
+                    kurzname = (title_de if lang_default == "de" else title_en).replace(" ", "").lower()
+
                 ev = list(collection.find({"kurzname" : kurzname}))
                 for e in ev: 
                     if e != x:

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # Initialize logging
 import logging
-from misc.config import log_file
+from misc.config import log_file, kurznamen
 
 @st.cache_resource
 def configure_logging(file_path, level=logging.INFO):
@@ -39,6 +39,12 @@ def setup_session_state():
         st.session_state.news = mongo_db["news"]
         st.session_state.vortragsreihe = mongo_db["vortragsreihe"]
         st.session_state.vortrag = mongo_db["vortrag"]
+
+        # ids von nicht-editierbare Kurznamen
+        st.session_state.nonedit_ids = []
+        for k in kurznamen:
+            x = st.session_state.vortragsreihe.find_one({"kurzname" : k})
+            st.session_state.nonedit_ids.append(x["_id"])
 
     except: 
         logger.error("Verbindung zur Datenbank nicht möglich!")
