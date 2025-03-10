@@ -47,7 +47,7 @@ def update_confirm(collection, x, x_updated, reset = True):
     collection.update_one({"_id" : x["_id"]}, {"$set": x_updated })
     if reset:
         reset_vars("")
-    st.toast("🎉 Erfolgreich geändert!")
+    st.success("🎉 Erfolgreich geändert!")
 
 def new(collection, ini = {}, switch = True):
     if list(collection.find({ "rang" : { "$exists": True }})) != []:

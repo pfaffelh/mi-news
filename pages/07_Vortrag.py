@@ -46,8 +46,8 @@ if st.session_state.logged_in:
         lang = col1.selectbox("Sprache", sprachen, sprachen.index(x["lang_default"]), key = "lang_new")
         _public = col2.toggle("Veröffentlicht", x["_public_default"], key = "public_new")
         vortragsreihe = [util.leer[st.session_state.vortragsreihe], st.session_state.edit]
-        startdatum = st.date_input("Startdatum", value = x["start"].date() if x["event"] else datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
-        startzeit = st.time_input("Startzeit", value = datetime.min.time(), key = "startzeit_new")
+        startdatum = st.date_input("Datum", value = x["start"].date() if x["event"] else datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
+        startzeit = st.time_input("Uhrzeit", value = datetime.min.time(), key = "startzeit_new")
         start = datetime.combine(startdatum, startzeit)
         end = start + timedelta(minutes = x["duration_default"])
 
@@ -94,8 +94,8 @@ if st.session_state.logged_in:
                             "kommentar_en" : kommentar_en,
                             "kommentar_intern" : kommentar_intern,
                             }
-            tools.new(st.session_state.collection, x_updated, False)
             st.success("Vortrag angelegt!")
+            tools.new(st.session_state.collection, x_updated, False)
 
     vor = list(st.session_state.collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
     vorreihe = list(st.session_state.vortragsreihe.find({}, sort=[("rang", pymongo.ASCENDING)]))
@@ -128,7 +128,7 @@ if st.session_state.logged_in:
             _public =col2.toggle("Veröffentlicht", y["_public"], key = f"public_{y['_id']}")
 
             col1, col2, col3, col4 = st.columns([1,1,1,1])
-            startdatum = col1.date_input("Startdatum", value = y["start"].date(), format = "DD.MM.YYYY", key = f"startdatum_{y['_id']}")
+            startdatum = col1.date_input("Datum", value = y["start"].date(), format = "DD.MM.YYYY", key = f"startdatum_{y['_id']}")
             startzeit = col2.time_input("Startzeit", value = y["start"].time(), key = f"startzeit_{y['_id']}")
             start = datetime.combine(startdatum, startzeit)
             enddatum = startdatum
@@ -180,8 +180,8 @@ if st.session_state.logged_in:
                              "kommentar_en" : kommentar_en,
                              "kommentar_intern" : kommentar_intern,
                              }
-                tools.update_confirm(st.session_state.collection, y, y_updated, False)
                 st.success("Daten des Vortrages geändert!")
+                tools.update_confirm(st.session_state.collection, y, y_updated, False)
                 save_all = False
                 st.rerun()
 
