@@ -95,7 +95,7 @@ if st.session_state.logged_in:
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()
                 x_updated = {"filename": filename, "bearbeitet": bearbeitet, "data": encoded_image, "thumbnail": encoded_thumbnail}
-                tools.update_confirm(collection, x, x_updated, reset = False)
+                tools.update_confirm(collection, x, x_updated, reset = False, text = "🎉 Bild ausgetauscht!")
                 st.session_state.uploaded_file = None
                 st.session_state.expanded = key
                 st.rerun()
@@ -115,7 +115,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False, text = "🎉 Bild gedreht!")
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -128,7 +128,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False, text = "🎉 Bild gedreht!")
             st.session_state.uploaded_file = None
             st.session_state.expanded = key
             st.rerun()
@@ -178,7 +178,7 @@ if st.session_state.logged_in:
                 encoded_thumbnail = io.BytesIO()
                 image.save(encoded_thumbnail, format='JPEG')
                 encoded_thumbnail = encoded_thumbnail.getvalue()            
-                tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
+                tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False, text = "🎉 Bild übernommen")
                 st.session_state.expanded = ""
                 st.rerun()
 
@@ -216,7 +216,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False, text = "🎉 Bild übernommen!")
             st.session_state.expanded = key
             st.rerun()
 
@@ -244,7 +244,7 @@ if st.session_state.logged_in:
             encoded_thumbnail = io.BytesIO()
             image.save(encoded_thumbnail, format='JPEG')
             encoded_thumbnail = encoded_thumbnail.getvalue()            
-            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False)
+            tools.update_confirm(collection, x, {"data": encoded_image, "thumbnail": encoded_thumbnail, "bearbeitet": bearbeitet}, reset = False, text = "🎉 Bild übernommen!")
             st.session_state.expanded = key
             st.rerun()
             

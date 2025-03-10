@@ -42,14 +42,15 @@ def move_alldown(collection, x, query = {}):
 def remove_from_list(collection, id, field, element):
     collection.update_one({"_id": id}, {"$pull": {field: element}})
 
-def update_confirm(collection, x, x_updated, reset = True):
+def update_confirm(collection, x, x_updated, reset = True, text = "🎉 Erfolgreich geändert!"):
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} Item {repr(collection, x['_id'])} geändert.")
     collection.update_one({"_id" : x["_id"]}, {"$set": x_updated })
     if reset:
         reset_vars("")
-    st.success("🎉 Erfolgreich geändert!")
+    st.success(text)
+    st.toast(text)
 
-def new(collection, ini = {}, switch = True):
+def new(collection, ini = {}, switch = True, text = "Erfolgreich angelegt!"):
     if list(collection.find({ "rang" : { "$exists": True }})) != []:
         z = list(collection.find(sort = [("rang", pymongo.ASCENDING)]))
         rang = z[0]["rang"]-1
@@ -58,6 +59,7 @@ def new(collection, ini = {}, switch = True):
         st.session_state.new[collection][key] = value
     st.session_state.new[collection].pop("_id", None)
     x = collection.insert_one(st.session_state.new[collection])
+    st.success(text)
     if switch:
         st.session_state.edit=x.inserted_id
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} ein neues Item angelegt.")

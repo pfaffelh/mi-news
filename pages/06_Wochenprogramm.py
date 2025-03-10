@@ -180,7 +180,7 @@ if st.session_state.logged_in:
                     "calendar_url" : calendar_url,
                     "kommentar" : kommentar
                 }
-                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, ), key = f"save_{x['_id']}")
+                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, "🎉 Gespeichert!"), key = f"save_{x['_id']}")
 
     st.subheader("Events")
     for x in events:
@@ -221,7 +221,7 @@ if st.session_state.logged_in:
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
-                _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
+                _public_default = col3.toggle("Vorträge bereits beim Anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
                 lang_default = col1.selectbox("Typische Sprache", ["en", "deutsch"], index = 1 if x["lang_default"] == "deutsch" else 0, key = f"lang_default_{x['_id']}")
                 title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
@@ -275,7 +275,7 @@ if st.session_state.logged_in:
                     "calendar_url" : calendar_url,
                     "kommentar" : kommentar
                 }
-                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, ), key = f"save_{x['_id']}")                
+                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, False, "🎉 Gespeichert!"), key = f"save_{x['_id']}")                
 
 else: 
     switch_page("NEWS")

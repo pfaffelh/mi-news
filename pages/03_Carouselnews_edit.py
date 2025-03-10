@@ -81,7 +81,7 @@ if st.session_state.logged_in:
                     new["bearbeitet"] = bearbeitet
                     new["rang"] = min([x["rang"] for x in list(collection.find())])-1
                     st.session_state.expanded = "grunddaten"            
-                    tools.new(collection, ini = new)
+                    tools.new(collection, ini = new, text = "🎉 Carouselnews kopiert!")
 
             with colu2: 
                 st.button(label="Abbrechen", on_click = st.success, args=("Nicht kopiert!",), key = f"not-copied-{x['_id']}")
@@ -117,7 +117,7 @@ if st.session_state.logged_in:
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
             x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "bearbeitet": bearbeitet, "kommentar": kommentar, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
-            tools.update_confirm(collection, x, x_updated, False)
+            tools.update_confirm(collection, x, x_updated, False, "🎉 Grunddaten geändert!")
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
         st.write("\n  ")
@@ -138,7 +138,7 @@ if st.session_state.logged_in:
 
     if save_all:
         x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "bearbeitet": bearbeitet, "kommentar" : kommentar, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
-        tools.update_confirm(collection, x, x_updated, False)
+        tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
         switch_page("carouselnews")
     st.write(x["bearbeitet"])
 

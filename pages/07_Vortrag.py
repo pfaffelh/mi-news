@@ -29,8 +29,7 @@ tools.display_navigation()
 st.session_state.collection = st.session_state.vortrag
 
 def save(x_updated, text):
-    tools.update_confirm(st.session_state.collection, x, x_updated, False)
-    st.success(text)
+    tools.update_confirm(st.session_state.collection, x, x_updated, False, "Gespeichert!")
     st.session_state.expanded = ""
 
 # Ab hier wird die Seite angezeigt
@@ -68,36 +67,32 @@ if st.session_state.logged_in:
         kommentar_de = ""
         kommentar_en = ""
         kommentar_intern = st.text_area("Kommentar (intern)", "",  key = f"kommentar_intern_new")
-        submit = st.button("Speichern", type='primary', key = f"speichern_{x['_id']}")
-        if submit:
-            x_updated = { 
-                            "vortragsreihe" : vortragsreihe,
-                            "sprecher_de" : sprecher_de,
-                            "sprecher_en" : sprecher_en,
-                            "sprecher_affiliation_de" : sprecher_affiliation_de,
-                            "sprecher_affiliation_en" : sprecher_affiliation_en,
-                            "ort_de" : ort_de,
-                            "ort_en" : ort_en,
-                            "gastgeber" : gastgeber,
-                            "sekretariat" : sekretariat,
-                            "title_de" : title_de,
-                            "title_en" : title_en,
-                            "text_de" : text_de,
-                            "text_en" : text_en,
-                            "url" : url, 
-                            "lang" : lang,
-                            "_public" : _public,
-                            "start" : start,
-                            "end" : end,
-                            "bearbeitet": f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}", 
-                            "kommentar_de" : kommentar_de,
-                            "kommentar_en" : kommentar_en,
-                            "kommentar_intern" : kommentar_intern,
-                            }
-            tools.new(st.session_state.collection, x_updated, False)
-            st.success("Vortrag angelegt!")
-            time.sleep(1)
-            
+        x_updated = { 
+                        "vortragsreihe" : vortragsreihe,
+                        "sprecher_de" : sprecher_de,
+                        "sprecher_en" : sprecher_en,
+                        "sprecher_affiliation_de" : sprecher_affiliation_de,
+                        "sprecher_affiliation_en" : sprecher_affiliation_en,
+                        "ort_de" : ort_de,
+                        "ort_en" : ort_en,
+                        "gastgeber" : gastgeber,
+                        "sekretariat" : sekretariat,
+                        "title_de" : title_de,
+                        "title_en" : title_en,
+                        "text_de" : text_de,
+                        "text_en" : text_en,
+                        "url" : url, 
+                        "lang" : lang,
+                        "_public" : _public,
+                        "start" : start,
+                        "end" : end,
+                        "bearbeitet": f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}", 
+                        "kommentar_de" : kommentar_de,
+                        "kommentar_en" : kommentar_en,
+                        "kommentar_intern" : kommentar_intern,
+                        }
+        submit = st.button("Speichern", type="primary", on_click = tools.new, args = (st.session_state.collection, x_updated, False, "🎉 Vortrag erfolgreich angelegt!"), key = f"save_{x['_id']}")
+    
     vor = list(st.session_state.collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
     vorreihe = list(st.session_state.vortragsreihe.find({}, sort=[("rang", pymongo.ASCENDING)]))
     save_all = False
@@ -181,8 +176,7 @@ if st.session_state.logged_in:
                              "kommentar_en" : kommentar_en,
                              "kommentar_intern" : kommentar_intern,
                              }
-                tools.update_confirm(st.session_state.collection, y, y_updated, False)
-                st.success("Daten des Vortrages geändert!")
+                tools.update_confirm(st.session_state.collection, y, y_updated, False, "🎉 Daten des Vortrages geändert!")
                 time.sleep(1)
                 save_all = False
                 st.rerun()

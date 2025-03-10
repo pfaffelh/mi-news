@@ -30,7 +30,7 @@ collection = st.session_state.news
 bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 def save(x_updated, text):
-    tools.update_confirm(collection, x, x_updated, False)
+    tools.update_confirm(collection, x, x_updated, False, "🎉 Gespeichert!")
     st.success(text)
     st.session_state.expanded = ""
 
@@ -126,7 +126,7 @@ if st.session_state.logged_in:
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
             x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
-            tools.update_confirm(collection, x, x_updated, False)
+            tools.update_confirm(collection, x, x_updated, False, text = "🎉 Grunddaten geändert!")
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
         fuermonitor = st.toggle("Für den Monitor", value = x["monitor"]["fuermonitor"], help = "News erscheint auf dem Monitor.")
@@ -166,7 +166,7 @@ if st.session_state.logged_in:
 
     if save_all:
         x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
-        tools.update_confirm(collection, x, x_updated, False)
+        tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
         switch_page("new")
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
@@ -220,7 +220,7 @@ if st.session_state.logged_in:
             if takecss:
                 img = [{"_id": x["image"][0]["_id"], "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
                 st.session_state.expanded = ""
-                tools.update_confirm(collection, x, { "image" : img, "bearbeitet": bearbeitet }, False)
+                tools.update_confirm(collection, x, { "image" : img, "bearbeitet": bearbeitet }, False, "🎉 Daten übernommen!")
                 switch_page("News_edit")
     st.write(x["bearbeitet"])
 

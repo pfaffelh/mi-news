@@ -74,7 +74,7 @@ if st.session_state.logged_in:
                 "bearbeitet": bearbeitet,
                 "rang" : min([b["rang"] for b in bilder]) - 1 
             }
-            tools.new(collection, ini = ini, switch = True)
+            tools.new(collection, ini = ini, switch = True, text = "🎉 Bild neu angelegt!")
     
     if bilder is not None:
         for b in bilder:
