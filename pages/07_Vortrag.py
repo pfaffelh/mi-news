@@ -4,7 +4,7 @@ from streamlit_image_select import image_select
 import pymongo
 from datetime import datetime, timedelta
 from PIL import Image
-import io, sys
+import io, sys, time
 from datetime import datetime 
 
 # Seiten-Layout
@@ -94,9 +94,10 @@ if st.session_state.logged_in:
                             "kommentar_en" : kommentar_en,
                             "kommentar_intern" : kommentar_intern,
                             }
-            st.success("Vortrag angelegt!")
             tools.new(st.session_state.collection, x_updated, False)
-
+            st.success("Vortrag angelegt!")
+            time.sleep(1)
+            
     vor = list(st.session_state.collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
     vorreihe = list(st.session_state.vortragsreihe.find({}, sort=[("rang", pymongo.ASCENDING)]))
     save_all = False
@@ -180,8 +181,9 @@ if st.session_state.logged_in:
                              "kommentar_en" : kommentar_en,
                              "kommentar_intern" : kommentar_intern,
                              }
-                st.success("Daten des Vortrages geändert!")
                 tools.update_confirm(st.session_state.collection, y, y_updated, False)
+                st.success("Daten des Vortrages geändert!")
+                time.sleep(1)
                 save_all = False
                 st.rerun()
 
