@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-from pytz import UTC # timezone
-import glob, os
+# from pytz import UTC # timezone
+# import glob, os
 
 import pymongo
 from pymongo import MongoClient
