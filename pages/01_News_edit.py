@@ -83,6 +83,7 @@ if st.session_state.logged_in:
                 if submit:
                     new = st.session_state.new[collection]
                     if kopiere_grunddaten:
+                        new["tags"] = x["tags"]
                         new["image"] = x["image"]
                         new["_public"] = x["_public"]
                         new["showlastday"] = x["showlastday"]
@@ -118,6 +119,7 @@ if st.session_state.logged_in:
                 st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
 
     with st.expander("Grunddaten", expanded = True if st.session_state.expanded == "grunddaten" else False):
+        tags = st.multiselect("Tags", alltags, x["tags"], help = "Die Tags steuern, wo die News zu sehen sein wird.")
         _public = st.toggle("Veröffentlicht", value = x["_public"], help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = x["showlastday"], help = "News erscheint gelb am letzten Tag.")
         archiv = st.toggle("Ins Archiv aufnehmen", value = x["archiv"], help = "Erscheint nach Ablauf im Archiv auf der Homepage.")        
@@ -129,7 +131,8 @@ if st.session_state.logged_in:
             tools.update_confirm(collection, x, x_updated, False, text = "🎉 Grunddaten geändert!")
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
-        fuermonitor = st.toggle("Für den Monitor", value = x["monitor"]["fuermonitor"], help = "News erscheint auf dem Monitor.")
+        st.write("Eine Eingabe ist nur dann möglich, wenn die News den Tag 'Monitor' hat. Dies wird in den Grundeinstellungen festgelegt.")
+        fuermonitor = "Monitor" in x["tags"]
         title = st.text_input("Titel", x["monitor"]["title"], disabled = not fuermonitor)
         text = st.text_area("Text", x["monitor"]["text"], disabled = not fuermonitor)
         col1, col2 = st.columns([1,1])
@@ -141,10 +144,10 @@ if st.session_state.logged_in:
             enddatum_monitor = st.date_input("Enddatum", value = x["monitor"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_monitor", disabled = not fuermonitor)
         with col2:
             endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor", disabled = not fuermonitor)
-        btnmonitor = st.button("Monitordaten ändern", on_click=save, args = ({ "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} },"Monitordaten erfolgreich geändert!",))
+        btnmonitor = st.button("Monitordaten ändern", on_click=save, args = ({ "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} },"Monitordaten erfolgreich geändert!",))
     with st.expander("Daten für Lehre-Homepage ändern", expanded = True if st.session_state.expanded == "homepagedaten" else False):
-        fuerhome = st.toggle("Für Lehre-Homepage", value =  x["home"]["fuerhome"], disabled = True if x["image"] == [] else False, help = "Kann hier nur mit Bild veröffentlicht werden!")
-        fuerhome = fuerhome and x["image"] != []
+        st.write("Eine Eingabe ist nur dann möglich, wenn die News ein Bild besitzt und ein entsprechendes Tag besitzt. Tags werden in den Grundeinstellungen festgelegt.")
+        fuerhome = (len([i for i in x["tags"] if x != "Monitor"]) > 0) and x["image"] != []
         title_de = st.text_input("Titel (de)", x["home"]["title_de"], disabled = not fuerhome)
         title_en = st.text_input("Titel (en)", x["home"]["title_en"], disabled = not fuerhome)
         text_de = st.text_area("Text (de)", x["home"]["text_de"], disabled = not fuerhome)
@@ -162,10 +165,10 @@ if st.session_state.logged_in:
             enddatum_home = st.date_input("Enddatum", value = x["home"]["end"].date(), format = "DD.MM.YYYY", key = "enddatum_home", disabled = not fuerhome)
         with col2:
             endzeit_home = st.time_input("Endzeit", value = x["home"]["end"].time(), key = "endzeit_home", disabled = not fuerhome)
-        btnhome = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
+        btnhome = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
 
     if save_all:
-        x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : {"fuermonitor": fuermonitor, "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"fuerhome": fuerhome, "title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+        x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : { "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
         switch_page("new")
 

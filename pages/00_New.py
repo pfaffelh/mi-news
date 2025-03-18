@@ -59,10 +59,9 @@ if st.session_state.logged_in:
 
     key = "news_anlegen"
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
-        _public = st.toggle("Veröffentlicht", value = False, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
+        _public = st.toggle("Veröffentlicht", value = True, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
-        fuermonitor = st.toggle("Für den Monitor", value = True, help = "News erscheint auf dem Monitor.")
-        fuerhome = st.toggle("Für Lehre-Homepage", value = True, help = "News erscheint auf der Lehre-Homepage.")
+        tags = st.multiselect("Tags", alltags, ["Institut"], help = "Steuert, wo die News erscheint.")
         title = st.text_input("Titel", "")
         text = st.text_area("Text", "")
         col1, col2 = st.columns([1,1])
@@ -86,10 +85,9 @@ if st.session_state.logged_in:
         btn = st.button("News anlegen")
         if btn:
             new = st.session_state.new[collection]
+            new["tags"] = tags
             new["_public"] = _public
             new["showlastday"] = showlastday
-            new["home"]["fuerhome"] = fuerhome
-            new["monitor"]["fuermonitor"] = fuermonitor
             new["home"]["title_de"] = title
             new["monitor"]["title"] = title
             new["home"]["text_de"] = text
@@ -120,8 +118,8 @@ if st.session_state.logged_in:
         me = x["monitor"]["end"]
         hs = x["home"]["start"]
         he = x["home"]["end"]
-        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if x["monitor"]["fuermonitor"] else " -- "
-        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if x["home"]["fuerhome"] else " -- "
+        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if "Monitor" in x["tags"] else " -- "
+        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if [i for i in x["tags"] if i != "Monitor"] else " -- "
         with co1: 
             st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
         with co2:

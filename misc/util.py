@@ -128,6 +128,7 @@ def setup_session_state():
             "text": ""
         },
         st.session_state.news: {
+            "tags" : ["Institut"],
             "link": "",
             "image": [],
             "_public": True,

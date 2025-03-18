@@ -19,4 +19,5 @@ log_file = 'mi.log'
 # Feste Vortragsreihen, deren Kurzname nicht gelöscht werden soll:
 kurznamen = ["Logik", "Kolloquium", "GeoAna", "FDMAI", "DiffGeo", "Stochastik", "AM", "Algebra", "Didaktik", "alle"]
 
-    
+# Falls alltags geändert wird, muss das Datenbank-Schema angepasst werden.
+alltags = ["Monitor", "Lehre", "Institut"]
