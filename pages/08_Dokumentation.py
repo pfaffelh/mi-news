@@ -1,4 +1,3 @@
-
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page 
 
@@ -44,11 +43,11 @@ if st.session_state.logged_in:
         Hier kann man sowohl Bilder in eine Datenbank laden, als auch News (sowohl als Carouselnews oben im Monitor, als auch Einzelmeldungen) verfassen. Der übliche Workflow einer News sieht wiefolgt aus:  
         
         - Eine News kommt herein, und man loggt sich in die App ein.  
-        - Soll ein Bild mit angezeigt werden, braucht man ei entsprechendes jpg oder png, sowie eine Idee, ob die News auf dem Bildschirm und/oder der Homepage angezeigt werden soll.  
-        - Das Bild lädt man in die Datenbank ('Bilder' in der Navigation). Dort hat man auch eine beschränkte Möglichkeit, das Bild zu bearbeiten (Drehen, zuschneiden, Datei verkleinern. In der Bildunterschrift sieht man jeweils ein paar Daten des Bildes, etwa die Dateigröße.).
+        - Soll ein Bild mit angezeigt werden, braucht man ei entsprechendes jpg oder png, sowie eine Idee, ob die News auf dem Bildschirm und/oder der Homepage und/oder der Lehre-Homepage angezeigt werden soll. Diese _Tags_ kann man beim Anlegen der News auswählen.
+        - Das Bild lädt man in die Datenbank ('Bilder' in der Navigation). Dort hat man auch eine beschränkte Möglichkeit, das Bild zu bearbeiten (drehen, zuschneiden, Qualität reduzieren. In der Bildunterschrift sieht man jeweils ein paar Daten des Bildes, insbesondere die Dateigröße).
         - Unter News -> Neue News anlegen bekommt man ein paar der möglichen Felder angezeigt. Hier ist _Veröffentlicht_ zunächst noch nicht angegeben, weil man ja erstmal die News ansehen will, bevor man sie veröffentlicht. Titel (das ist der Titel auf dem Monitor und der deutsche Titel auf der Homepage), Start/Enddatum der Anzeige lassen sich angeben, sowie das soeben angelegte Bild.  
         - Man schaut etwa [hier](https://www.math.uni-freiburg.de/nlehre/monitortest/), wie die News angezeigt wird, und kann sie dann den eigenen Wünschen folgend ändern.  
-        - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [hier](https://www.math.uni-freiburg.de/nlehre/monitor/) ansehen.
+        - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [auf dem Monitor](https://www.math.uni-freiburg.de/nlehre/monitor/), der [Lehre-Homepage](https://www.math.uni-freiburg.de/nlehre/) und der [Instituts-Homepage](https://www.math.uni-freiburg.de/) ansehen. 
         """
         st.markdown(text)
         
