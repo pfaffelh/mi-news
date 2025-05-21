@@ -1,6 +1,5 @@
 import streamlit as st
 import time
-from streamlit_extras.switch_page_button import switch_page 
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
@@ -34,7 +33,7 @@ if submit:
             util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
             # make all neccesary variables available to session_state
             time.sleep(1)
-            switch_page("new")
+            st.switch_page("pages/00_New.py")
         else:
             st.error("Nicht genügend Rechte, um NEWS zu editieren.")
             util.logger.info(f"User {kennung} hatte nicht gebügend Rechte, um sich einzuloggen.")

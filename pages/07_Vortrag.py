@@ -1,6 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
-from streamlit_image_select import image_select
 import pymongo
 from datetime import datetime, timedelta
 from PIL import Image
@@ -12,7 +10,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 # load css styles
 from misc.css_styles import init_css
@@ -183,7 +181,7 @@ if st.session_state.logged_in:
 
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)
 

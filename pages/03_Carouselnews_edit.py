@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
 from streamlit_image_select import image_select
 import pymongo
 from datetime import datetime, timedelta
@@ -11,7 +10,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 # load css styles
 from misc.css_styles import init_css
@@ -60,7 +59,7 @@ if st.session_state.logged_in:
 
     with col1:
         if st.button("Zurück (ohne Speichern)"):
-            switch_page("Carouselnews")
+            st.switch_page("pages/02_Carouselnews.py")
     with col2:
         if st.button("Alles Speichern (außer Änderungen am Bild)", type = 'primary'):
             save_all = True # the actual saving needs to be done after the expanders
@@ -139,10 +138,10 @@ if st.session_state.logged_in:
     if save_all:
         x_updated = {"_public" : _public, "text" : text, "left" : left, "right" : right, "bottom" : bottom, "interval" : interval, "bearbeitet": bearbeitet, "kommentar" : kommentar, "start" : datetime.combine(startdatum, startzeit), "end" : datetime.combine(enddatum, endzeit), "rang" : min([x["rang"] for x in list(collection.find())])-1}
         tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
-        switch_page("carouselnews")
+        st.switch_page("pages/02_Carouselnews.py")
     st.write(x["bearbeitet"])
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)
