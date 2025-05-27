@@ -99,7 +99,7 @@ if st.session_state.logged_in:
         if submit:
             st.session_state.edit = x["_id"]
             st.session_state.expanded = ""
-            st.switch_page("pages/03_Carouselnews edit")
+            st.switch_page("pages/03_Carouselnews_edit.py")
 
 
 else: 
