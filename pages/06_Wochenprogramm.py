@@ -133,8 +133,8 @@ if st.session_state.logged_in:
                     st.success(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
 
                 col1, col2, col3 = st.columns([1,1,1])
-                sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
-                _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
+                sichtbar = col1.toggle("Aktuell (für obige Auswahl)", x["sichtbar"], key = f"sichtbar_{x['_id']}")
+                _public = col2.toggle("Im Wochenprogramm sichtbar", x["_public"], key = f"public_{x['_id']}")
                 _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
                 lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 1 if x["lang_default"] == "de" else 0, key = f"lang_default_{x['_id']}")
@@ -219,8 +219,8 @@ if st.session_state.logged_in:
                     st.write(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
 
                 col1, col2, col3 = st.columns([1,1,1])
-                sichtbar = col1.toggle("Aktuell", x["sichtbar"], key = f"sichtbar_{x['_id']}")
-                _public = col2.toggle("Veröffentlicht", x["_public"], key = f"public_{x['_id']}")
+                sichtbar = col1.toggle("Aktuell (für obige Auswahl)", x["sichtbar"], key = f"sichtbar_{x['_id']}")
+                _public = col2.toggle("Im Wochenprogramm sichtbar", x["_public"], key = f"public_{x['_id']}")
                 _public_default = col3.toggle("Vorträge bereits beim Anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
                 lang_default = col1.selectbox("Typische Sprache", ["en", "deutsch"], index = 1 if x["lang_default"] == "deutsch" else 0, key = f"lang_default_{x['_id']}")

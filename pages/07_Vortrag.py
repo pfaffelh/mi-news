@@ -44,7 +44,10 @@ if st.session_state.logged_in:
         col1, col2 = st.columns([1,1])
         lang = col1.selectbox("Sprache", sprachen, sprachen.index(x["lang_default"]), key = "lang_new")
         _public = col2.toggle("Veröffentlicht", x["_public_default"], key = "public_new")
-        vortragsreihe = [util.leer[st.session_state.vortragsreihe], st.session_state.edit]
+        if x["_public"]:
+            vortragsreihe = [util.leer[st.session_state.vortragsreihe], st.session_state.edit]
+        else:
+            vortragsreihe = [st.session_state.edit]
         startdatum = st.date_input("Datum", value = x["start"].date() if x["event"] else datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
         startzeit = st.time_input("Uhrzeit", value = datetime.min.time(), key = "startzeit_new")
         start = datetime.combine(startdatum, startzeit)
