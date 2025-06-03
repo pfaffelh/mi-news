@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
 from streamlit_image_select import image_select
 import pymongo
 from datetime import datetime, timedelta
@@ -12,7 +11,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 # load css styles
 from misc.css_styles import init_css
@@ -64,7 +63,7 @@ if st.session_state.logged_in:
 
     with col1:
         if st.button("Zurück (ohne Speichern)"):
-            switch_page("new")
+            st.switch_page("pages/00_New.py")
     with col2:
         if st.button("Alles Speichern (außer Änderungen am Bild)", type = 'primary'):
             save_all = True # the actual saving needs to be done after the expanders
@@ -170,7 +169,7 @@ if st.session_state.logged_in:
     if save_all:
         x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : { "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
-        switch_page("new")
+        st.switch_page("pages/00_New.py")
 
     with st.expander("Bild", expanded = True if st.session_state.expanded == "bild" else False): 
         st.write("\n  ")
@@ -224,10 +223,10 @@ if st.session_state.logged_in:
                 img = [{"_id": x["image"][0]["_id"], "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
                 st.session_state.expanded = ""
                 tools.update_confirm(collection, x, { "image" : img, "bearbeitet": bearbeitet }, False, "🎉 Daten übernommen!")
-                switch_page("News_edit")
+                st.switch_page("pages/01_News_edit")
     st.write(x["bearbeitet"])
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS".py)
 
 st.sidebar.button("logout", on_click = tools.logout)

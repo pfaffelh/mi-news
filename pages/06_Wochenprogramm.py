@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
 from datetime import datetime, timedelta 
 import pandas as pd
 import pymongo
@@ -11,7 +10,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 from misc.config import *
 import misc.util as util
@@ -107,7 +106,7 @@ if st.session_state.logged_in:
             submit = st.button('Zu den Vorträgen', key=f'talks-{x["_id"]}')
             if submit:
                 st.session_state.edit = x["_id"]
-                switch_page("Vortrag")
+                st.switch_page("pages/07_Vortrag.py")
         with co3:
             with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
                 with st.popover('Veranstaltungsreihe löschen'):
@@ -193,7 +192,7 @@ if st.session_state.logged_in:
             submit = st.button('Zu den Vorträgen', key=f'talks-{x["_id"]}')
             if submit:
                 st.session_state.edit = x["_id"]
-                switch_page("Vortrag")
+                st.switch_page("pages/07_Vortrag.py")
         with co3:
             with st.expander(f"**{tools.repr(collection, x['_id'], False, False)}**"):
                 with st.popover('Event löschen'):
@@ -278,6 +277,6 @@ if st.session_state.logged_in:
                 submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, False, "🎉 Gespeichert!"), key = f"save_{x['_id']}")                
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)

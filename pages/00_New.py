@@ -25,7 +25,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 from misc.config import *
 import misc.util as util
@@ -140,7 +140,7 @@ if st.session_state.logged_in:
         if submit:
             st.session_state.edit = x["_id"]
             st.session_state.expanded = ""
-            switch_page("news edit")
+            st.switch_page("pages/01_News_edit.py")
 
     st.divider()        
     with st.expander("Download data"):
@@ -168,6 +168,6 @@ if st.session_state.logged_in:
         )
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)

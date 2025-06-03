@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
 import pymongo
 from PIL import Image
 import io, sys
@@ -10,7 +9,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 from misc.config import *
 import misc.util as util
@@ -93,9 +92,9 @@ if st.session_state.logged_in:
             if submit:
                 st.session_state.edit = b["_id"]
                 st.session_state.uploaded_file = None
-                switch_page("bild edit")
+                st.switch_page("pages/05_Bild_edit.py")
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)

@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
 from PIL import Image
 import io, sys
 from datetime import datetime
@@ -9,7 +8,7 @@ st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sid
 
 # check if session_state is initialized if not change to main page
 if 'logged_in' not in st.session_state:
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 from misc.config import *
 import misc.util as util
@@ -37,7 +36,7 @@ if st.session_state.logged_in:
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("Zurück ohne Speichern"):
-            switch_page("Bild")
+            st.switch_page("pages/04_Bild.py")
     with col2:
         with st.popover('Bild löschen'):
             s = ("  \n".join(tools.find_dependent_items(collection, x["_id"])))
@@ -251,6 +250,6 @@ if st.session_state.logged_in:
     st.write(x["bearbeitet"])
 
 else: 
-    switch_page("NEWS")
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)
