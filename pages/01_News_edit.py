@@ -223,7 +223,7 @@ if st.session_state.logged_in:
                 img = [{"_id": x["image"][0]["_id"], "stylehome": stylehome, "stylemonitor": stylemonitor, "widthmonitor": widthmonitor}]
                 st.session_state.expanded = ""
                 tools.update_confirm(collection, x, { "image" : img, "bearbeitet": bearbeitet }, False, "🎉 Daten übernommen!")
-                st.switch_page("pages/01_News_edit")
+                st.switch_page("pages/01_News_edit.py")
     st.write(x["bearbeitet"])
 
 else: 
