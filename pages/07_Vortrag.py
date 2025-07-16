@@ -34,7 +34,8 @@ def save(x_updated, text):
 if st.session_state.logged_in:
     x = st.session_state.vortragsreihe.find_one({"_id": st.session_state.edit})
     st.subheader(tools.repr(st.session_state.vortragsreihe, x['_id']))
-    st.write("Der Zeitraum, in dem Vorträge angezeigt werden, kann links oben eingestellt werden.")
+    st.write(f"**Es werden die Vorträge der letzten {st.session_state.tage} angezeigt. Kann links oben geändert werden.**")
+
     if x['url'] != "":
         st.write(f"Die veröffentlichte Ansicht der Vorträge ist [hier]({x['url']})")
     sprachen = ["en", "de"]

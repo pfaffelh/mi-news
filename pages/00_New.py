@@ -58,6 +58,7 @@ if st.session_state.logged_in:
         st.write(f"[Veröffentlichte Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
 
     key = "news_anlegen"
+    st.write(f"**Es werden die News der letzten {st.session_state.tage} angezeigt. Kann links oben geändert werden.**")
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = True, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
