@@ -76,7 +76,7 @@ if st.session_state.logged_in:
             st.session_state.expanded = "grunddaten"
             tools.new(collection, ini = ini, switch = True)
 
-    carouselnews_display = list(collection.find({"end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}},sort=[("rang", pymongo.ASCENDING)]))
+    carouselnews_display = list(collection.find({"end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}},sort=[("end", pymongo.DESCENDING)]))
 
     co1, co2, co3, co4, co5 = st.columns([1,1,3,10,5]) 
     for x in carouselnews_display:
@@ -85,10 +85,10 @@ if st.session_state.logged_in:
         ms = x["start"]
         me = x["end"]
         monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if ms < me else " -- "
-        with co1: 
-            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
-        with co2:
-            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
+        #with co1: 
+        #    st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
+        #with co2:
+        #    st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
         with co3:
             b = st.session_state.bild.find_one({"_id": x["image_id"]})
             st.image(b["thumbnail"])

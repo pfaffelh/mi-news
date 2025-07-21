@@ -107,7 +107,8 @@ if st.session_state.logged_in:
         return max(n["home"]["end"], n["monitor"]["end"])   
 
     news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]}, sort=[("rang", pymongo.ASCENDING)]))
-
+    news_display = sorted(news_display, key=compute_end, reverse = True)
+    
     co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
     co4.markdown("**Titel**")
     co5.markdown("Monitor")
@@ -121,10 +122,10 @@ if st.session_state.logged_in:
         he = x["home"]["end"]
         monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if "Monitor" in x["tags"] else " -- "
         homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if [i for i in x["tags"] if i != "Monitor"] else " -- "
-        with co1: 
-            st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
-        with co2:
-            st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
+        #with co1: 
+        #    st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
+        #with co2:
+        #    st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
         with co3:
             if x["image"] != []:
 #                st.write(x)
