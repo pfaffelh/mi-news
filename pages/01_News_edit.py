@@ -126,7 +126,7 @@ if st.session_state.logged_in:
         kommentar = st.text_input('Kommentar', x["kommentar"])
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
-            x_updated = { "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
+            x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
             tools.update_confirm(collection, x, x_updated, False, text = "🎉 Grunddaten geändert!")
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
@@ -145,8 +145,8 @@ if st.session_state.logged_in:
             endzeit_monitor = st.time_input("Endzeit", value = x["monitor"]["end"].time(), key = "endzeit_monitor", disabled = not fuermonitor)
         btnmonitor = st.button("Monitordaten ändern", on_click=save, args = ({ "monitor" : {"title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)} },"Monitordaten erfolgreich geändert!",))
     with st.expander("Daten für Lehre-Homepage ändern", expanded = True if st.session_state.expanded == "homepagedaten" else False):
-        st.write("Eine Eingabe ist nur dann möglich, wenn die News ein Bild besitzt und ein entsprechendes Tag besitzt. Tags werden in den Grundeinstellungen festgelegt.")
-        fuerhome = (len([i for i in x["tags"] if x != "Monitor"]) > 0) and x["image"] != []
+        st.write("Eine Eingabe ist nur dann möglich, wenn die News ein entsprechendes Tag besitzt. Tags werden in den Grundeinstellungen festgelegt.")
+        fuerhome = (len([i for i in x["tags"] if x != "Monitor"]) > 0) # and x["image"] != []
         title_de = st.text_input("Titel (de)", x["home"]["title_de"], disabled = not fuerhome)
         title_en = st.text_input("Titel (en)", x["home"]["title_en"], disabled = not fuerhome)
         text_de = st.text_area("Text (de)", x["home"]["text_de"], disabled = not fuerhome)
