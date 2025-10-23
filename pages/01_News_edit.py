@@ -86,6 +86,7 @@ if st.session_state.logged_in:
                         new["image"] = x["image"]
                         new["_public"] = x["_public"]
                         new["showlastday"] = x["showlastday"]
+                        new["highlight"] = x["highlight"]
                         new["archiv"] = x["archiv"]
                         new["link"] = x["link"]
                     if kopiere_monitor:
@@ -121,12 +122,13 @@ if st.session_state.logged_in:
         tags = st.multiselect("Tags", alltags, x["tags"], help = "Die Tags steuern, wo die News zu sehen sein wird.")
         _public = st.toggle("Veröffentlicht", value = x["_public"], help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = x["showlastday"], help = "News erscheint gelb am letzten Tag.")
+        highlight = st.toggle("Highlight", value = x["highlight"], help = "News erscheint daerhaft gelb.")
         archiv = st.toggle("Ins Archiv aufnehmen", value = x["archiv"], help = "Erscheint nach Ablauf im Archiv auf der Homepage.")        
         link = st.text_input('Link', x["link"])
         kommentar = st.text_input('Kommentar', x["kommentar"])
         changegrunddaten = st.button("Grunddaten ändern")
         if changegrunddaten:
-            x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
+            x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "highlight" : highlight, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
             tools.update_confirm(collection, x, x_updated, False, text = "🎉 Grunddaten geändert!")
             st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
@@ -167,7 +169,7 @@ if st.session_state.logged_in:
         btnhome = st.button("Homepage, Daten ändern", on_click=save, args = ({ "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }, "Homepage, Daten erfolgreich geändert!",))
 
     if save_all:
-        x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : { "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
+        x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "highlight" : highlight, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar, "monitor" : { "title" : title, "text" : text, "start" : datetime.combine(startdatum_monitor, startzeit_monitor), "end" : datetime.combine(enddatum_monitor, endzeit_monitor)}, "home" : {"title_de" : title_de, "title_en" : title_en,  "text_de" : text_de, "text_en" : text_en, "popover_title_de" : popover_title_de, "popover_title_en" : popover_title_en,  "popover_text_de" : popover_text_de, "popover_text_en" : popover_text_en, "start" : datetime.combine(startdatum_home, startzeit_home), "end" : datetime.combine(enddatum_home, endzeit_home)} }
         tools.update_confirm(collection, x, x_updated, False, "🎉 Alles gespeichert!")
         st.switch_page("pages/00_New.py")
 
