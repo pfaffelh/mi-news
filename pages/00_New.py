@@ -62,6 +62,7 @@ if st.session_state.logged_in:
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = True, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
+        highlight = st.toggle("Highlight", value = False, help = "News erscheint immer gelb.")
         tags = st.multiselect("Tags", alltags, ["Institut"], help = "Steuert, wo die News erscheint.")
         title = st.text_input("Titel", "")
         text = st.text_area("Text", "")
@@ -89,6 +90,7 @@ if st.session_state.logged_in:
             new["tags"] = tags
             new["_public"] = _public
             new["showlastday"] = showlastday
+            new["highlight"] = highlight
             new["home"]["title_de"] = title
             new["monitor"]["title"] = title
             new["home"]["text_de"] = text
