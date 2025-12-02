@@ -146,6 +146,7 @@ def reset_vars(text=""):
     st.session_state.edit = ""
     if text != "":
         st.success(text)
+    st.switch_page("pages/00_New.py")
 
 def display_navigation():
     st.markdown("<style>.st-emotion-cache-16txtl3 { padding: 2rem 2rem; }</style>", unsafe_allow_html=True)

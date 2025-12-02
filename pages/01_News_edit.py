@@ -229,6 +229,6 @@ if st.session_state.logged_in:
     st.write(x["bearbeitet"])
 
 else: 
-    st.switch_page("NEWS".py)
+    st.switch_page("NEWS.py")
 
 st.sidebar.button("logout", on_click = tools.logout)

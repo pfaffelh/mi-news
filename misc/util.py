@@ -89,6 +89,8 @@ def setup_session_state():
         st.session_state.changeimage = False
     if "leer" not in st.session_state:
         st.session_state.leer = ""
+    if 'initial_zeit' not in st.session_state:
+        st.session_state.initial_zeit = datetime.now().time()
 
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",

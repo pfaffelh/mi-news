@@ -38,6 +38,10 @@ tools.display_navigation()
 collection = st.session_state.news
 bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
 
+
+if 'initial_zeit' not in st.session_state:
+    st.session_state.initial_zeit = datetime.now().time()
+
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("News")
@@ -46,7 +50,7 @@ if st.session_state.logged_in:
     with col1: 
         ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
     with col2: 
-        ansicht_zeit = st.time_input("Zeit", value = datetime.now().time(), key = "ansicht_zeit")
+        ansicht_zeit = st.time_input("Zeit", value = st.session_state.initial_zeit, key = "ansicht_zeit")
     with col1: 
         t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
         st.write(f"[Testansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitortest/{t})")
