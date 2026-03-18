@@ -55,7 +55,7 @@ if st.session_state.logged_in:
         sekretariat_default = col2.text_input("Typisches bearbeitendes Sekretariat", "")
         ort_de_default = "" if lang_default == "en" else col1.text_input("Typischer Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
         ort_en_default = "" if lang_default != "en" else col1.text_input("Typischer Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
-        duration_default = col2.number_input("Typische Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", 90) 
+        duration_default = col2.number_input("Typische Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", min_value = 0, value = 90) 
         sync_with_calendar = False # st.toggle("Mit einem Kalender synchronisieren", value = False)
         calendar_url = "" # st.text_area("URL des Kalenders", "")
         kommentar = st.text_input("Kommentar", "")
