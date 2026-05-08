@@ -29,8 +29,7 @@ collection = st.session_state.news
 bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
 def save(x_updated, text):
-    tools.update_confirm(collection, x, x_updated, False, "🎉 Gespeichert!")
-    st.success(text)
+    tools.update_confirm(collection, x, x_updated, False, text)
     st.session_state.expanded = ""
 
 # dictionary saving keys from all expanders
@@ -130,7 +129,6 @@ if st.session_state.logged_in:
         if changegrunddaten:
             x_updated = {"tags" : tags, "_public" : _public, "showlastday": showlastday, "highlight" : highlight, "archiv" : archiv, "link" : link, "bearbeitet": bearbeitet, "kommentar" : kommentar}
             tools.update_confirm(collection, x, x_updated, False, text = "🎉 Grunddaten geändert!")
-            st.success("Grunddaten geändert!")
     with st.expander("Daten für Monitor ändern", expanded = True if st.session_state.expanded == "monitordaten" else False):
         st.write("Eine Eingabe ist nur dann möglich, wenn die News den Tag 'Monitor' hat. Dies wird in den Grundeinstellungen festgelegt.")
         fuermonitor = "Monitor" in x["tags"]
@@ -192,7 +190,7 @@ if st.session_state.logged_in:
                 deleteimage = st.button("Bild löschen", key = "delete_image")   
                 if deleteimage:                    
                     collection.update_one({"_id": x["_id"]}, { "$set": { "image" : [] }})
-                    st.success("Bild erfolgreich gelöscht!")
+                    tools.flash("Bild erfolgreich gelöscht!")
                     st.rerun()
         else:
             stylehome = ""

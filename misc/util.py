@@ -23,12 +23,16 @@ logger = configure_logging(log_file)
 datetime_format = '%d.%m.%y (%H:%M)'
 dateshort_format = '%d.%m'
 
+@st.cache_resource
+def get_mongo_client():
+    return pymongo.MongoClient(mongo_location)
+
 def setup_session_state():
-    # Das ist die mongodb; 
-    # news enthält alle News. 
+    # Das ist die mongodb;
+    # news enthält alle News.
     # user ist aus dem Cluster user und wird nur bei der Authentifizierung benötigt
     try:
-        cluster = pymongo.MongoClient(mongo_location)
+        cluster = get_mongo_client()
         mongo_db_users = cluster["user"]
         st.session_state.users = mongo_db_users["user"]
         st.session_state.group = mongo_db_users["group"]
@@ -40,13 +44,14 @@ def setup_session_state():
         st.session_state.vortragsreihe = mongo_db["vortragsreihe"]
         st.session_state.vortrag = mongo_db["vortrag"]
 
-        # ids von nicht-editierbare Kurznamen
-        st.session_state.nonedit_ids = []
-        for k in kurznamen:
-            x = st.session_state.vortragsreihe.find_one({"kurzname" : k})
-            st.session_state.nonedit_ids.append(x["_id"])
+        # ids von nicht-editierbaren Kurznamen — einmal pro Session.
+        if "nonedit_ids" not in st.session_state:
+            st.session_state.nonedit_ids = []
+            for k in kurznamen:
+                x = st.session_state.vortragsreihe.find_one({"kurzname" : k})
+                st.session_state.nonedit_ids.append(x["_id"])
 
-    except: 
+    except:
         logger.error("Verbindung zur Datenbank nicht möglich!")
         st.write("**Verbindung zur Datenbank nicht möglich!**  \nKontaktieren Sie den Administrator.")
 
@@ -87,8 +92,6 @@ def setup_session_state():
         st.session_state.crop_bottom = 0
     if "changeimage" not in st.session_state:
         st.session_state.changeimage = False
-    if "leer" not in st.session_state:
-        st.session_state.leer = ""
     if 'initial_zeit' not in st.session_state:
         st.session_state.initial_zeit = datetime.now().time()
 
@@ -100,33 +103,37 @@ def setup_session_state():
         st.session_state.vortrag: "Vortrag"
     }
 
-    leer = st.session_state.leer = {
-                st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"],
-                st.session_state.vortragsreihe: st.session_state.vortragsreihe.find_one({"kurzname": "alle"})["_id"]
-                }
+    # leer: zwei find_one auf praktisch unveränderliche Anker-Datensätze.
+    # Einmal pro Session reicht.
+    if "leer" not in st.session_state:
+        st.session_state.leer = {
+            st.session_state.bild: st.session_state.bild.find_one({"filename": "white.jpg"})["_id"],
+            st.session_state.vortragsreihe: st.session_state.vortragsreihe.find_one({"kurzname": "alle"})["_id"]
+        }
+    leer = st.session_state.leer
 
     st.session_state.new = {
-        st.session_state.bild: { 
+        st.session_state.bild: {
             "data": base64.b64encode(b""),
             "menu": True,
-            "mime": "", 
-            "filename": "", 
-            "titel": "", 
-            "bearbeitet": "", 
-            "kommentar": "", 
+            "mime": "",
+            "filename": "",
+            "titel": "",
+            "bearbeitet": "",
+            "kommentar": "",
             "bildnachweis": ""},
         st.session_state.carouselnews: {
-            "test": True, 
-            "_public": True, 
+            "test": True,
+            "_public": True,
             "start": datetime.combine(datetime.today(), datetime.min.time()),
             "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
-            "interval": 5000, 
+            "interval": 5000,
             "image_id": leer[st.session_state.bild],
             "left": 30,
-            "right": 70, 
+            "right": 70,
             "bottom": 30,
-            "bearbeitet": "", 
-            "kommentar": "", 
+            "bearbeitet": "",
+            "kommentar": "",
             "text": ""
         },
         st.session_state.news: {
@@ -136,8 +143,8 @@ def setup_session_state():
             "_public": True,
             "archiv": True,
             "showlastday": True,
-            "bearbeitet": "", 
-            "kommentar": "", 
+            "bearbeitet": "",
+            "kommentar": "",
             "home": {
                 "start": datetime.now(),
                 "end": datetime.now() + timedelta(days=7),
@@ -157,41 +164,41 @@ def setup_session_state():
                 "text": ""
             }
         },
-        st.session_state.vortragsreihe: { 
-            "kurzname" : "", 
-            "title_de" : "", 
-            "title_en" : "", 
-            "text_de" : "", 
-            "text_en" : "", 
+        st.session_state.vortragsreihe: {
+            "kurzname" : "",
+            "title_de" : "",
+            "title_en" : "",
+            "text_de" : "",
+            "text_en" : "",
             "url" : "",
             "ort_de_ default" : "",
             "duration_default" : 90,
             "ort_en_default" : "",
-            "_public" : False, 
-            "_public_default" : False, 
-            "sync_with_calendar" : False, 
-            "calendar_url" : "", 
-            "bearbeitet" : "", 
+            "_public" : False,
+            "_public_default" : False,
+            "sync_with_calendar" : False,
+            "calendar_url" : "",
+            "bearbeitet" : "",
             "kommentar" : ""
         },
-        st.session_state.vortrag: { 
-            "vortragsreihe" : [], 
-            "sprecher" : "", 
-            "sprecher_en" : "", 
-            "sprecher_affiliation_de" : "", 
-            "sprecher_affiliation_en" : "", 
-            "ort_de" : "", 
-            "ort_en" : "", 
-            "title_de" : "", 
-            "title_en" : "", 
-            "text_de" : "", 
-            "text_en" : "", 
-            "link" : "", 
-            "lang" : "deutsch", 
-            "_public" : False, 
+        st.session_state.vortrag: {
+            "vortragsreihe" : [],
+            "sprecher" : "",
+            "sprecher_en" : "",
+            "sprecher_affiliation_de" : "",
+            "sprecher_affiliation_en" : "",
+            "ort_de" : "",
+            "ort_en" : "",
+            "title_de" : "",
+            "title_en" : "",
+            "text_de" : "",
+            "text_en" : "",
+            "link" : "",
+            "lang" : "deutsch",
+            "_public" : False,
             "start" : datetime.combine(datetime.today(), datetime.min.time()),
             "end" : datetime.combine(datetime.today(), datetime.min.time()),
-            "bearbeitet" : "", 
+            "bearbeitet" : "",
             "kommentar_de" : "",
             "kommentar_en" : "",
             "kommentar_intern" : ""
@@ -212,5 +219,14 @@ def setup_session_state():
 
 date_format = '%d.%m.%Y um %H:%M:%S.'
 date_format_no_space = '%Y%m%d%H%M'
-setup_session_state()
-leer = st.session_state.leer
+
+_news_db = get_mongo_client()["news"]
+bild = _news_db["bild"]
+carouselnews = _news_db["carouselnews"]
+news = _news_db["news"]
+vortragsreihe = _news_db["vortragsreihe"]
+vortrag = _news_db["vortrag"]
+
+_user_db = get_mongo_client()["user"]
+users = _user_db["user"]
+group = _user_db["group"]

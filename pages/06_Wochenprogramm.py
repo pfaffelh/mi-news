@@ -118,7 +118,7 @@ if st.session_state.logged_in:
                         st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
                     colu1, colu2, colu3 = st.columns([1,1,1])
                     with colu1:
-                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
+                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == st.session_state.leer[collection] else False)
                     if submit:
                         tools.delete_item_update_dependent_items(collection, x['_id'], False)
                         st.rerun()
@@ -204,7 +204,7 @@ if st.session_state.logged_in:
                         st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
                     colu1, colu2, colu3 = st.columns([1,1,1])
                     with colu1:
-                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == util.leer[collection] else False)
+                        submit = st.button(label = "Ja", type = 'primary', key = f"delete-{x['_id']}", disabled = True if x['_id'] == st.session_state.leer[collection] else False)
                     if submit:
                         tools.delete_item_update_dependent_items(collection, x['_id'], False)
                         st.rerun()
