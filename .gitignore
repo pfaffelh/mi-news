@@ -3,4 +3,5 @@
 /__pycache__/
 /venv/
 /mongo/backup/
+/mongo/*_backup*
 *.log
