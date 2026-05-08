@@ -44,7 +44,7 @@ if st.session_state.logged_in:
         lang = col1.selectbox("Sprache", sprachen, sprachen.index(x["lang_default"]), key = "lang_new")
         _public = col2.toggle("Veröffentlicht", x["_public_default"], key = "public_new")
         if x["_public"]:
-            vortragsreihe = [util.leer[st.session_state.vortragsreihe], st.session_state.edit]
+            vortragsreihe = [st.session_state.leer[st.session_state.vortragsreihe], st.session_state.edit]
         else:
             vortragsreihe = [st.session_state.edit]
         startdatum = st.date_input("Datum", value = x["start"].date() if x["event"] else datetime.now().date(), format = "DD.MM.YYYY", key = "startdatum_new")
@@ -96,7 +96,7 @@ if st.session_state.logged_in:
         submit = st.button("Speichern", type="primary", on_click = tools.new, args = (st.session_state.collection, x_updated, False, "🎉 Vortrag erfolgreich angelegt!"), key = f"save_{x['_id']}")
     
     vor = list(st.session_state.collection.find( {"start" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)},  "vortragsreihe" : { "$elemMatch" : { "$eq" : st.session_state.edit}}}, sort = [("start", pymongo.DESCENDING)]))
-    vorreihe = list(st.session_state.vortragsreihe.find({}, sort=[("rang", pymongo.ASCENDING)]))
+    vortragsreihe_ids = [v['_id'] for v in st.session_state.vortragsreihe.find(sort=[("kurzname", pymongo.DESCENDING)])]
     save_all = False
     for y in vor:
         with st.expander(tools.repr(st.session_state.collection, y['_id'], False, False).replace("\n", "")):
@@ -121,7 +121,7 @@ if st.session_state.logged_in:
             col2.write("")
             col2.write(y["bearbeitet"])
             col1, col2 = st.columns([1,1])
-            vortragsreihe = col1.multiselect("Vortragsreihen", [y['_id'] for y in st.session_state.vortragsreihe.find(sort = [("kurzname", pymongo.DESCENDING)])], y["vortragsreihe"], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
+            vortragsreihe = col1.multiselect("Vortragsreihen", vortragsreihe_ids, y["vortragsreihe"], format_func = (lambda a: tools.repr(st.session_state.vortragsreihe, a, True, False)), placeholder = "Bitte auswählen", key = f"vortragsreihe_{y['_id']}")
             col2.write("")
             _public =col2.toggle("Veröffentlicht", y["_public"], key = f"public_{y['_id']}")
 
@@ -179,7 +179,6 @@ if st.session_state.logged_in:
                              "kommentar_intern" : kommentar_intern,
                              }
                 tools.update_confirm(st.session_state.collection, y, y_updated, False, "🎉 Daten des Vortrages geändert!")
-                time.sleep(1)
                 save_all = False
                 st.rerun()
 

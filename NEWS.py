@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
@@ -21,28 +20,20 @@ with placeholder.form("login"):
 
 if submit:
     st.session_state.user = kennung
-    if tools.authenticate(kennung, password): 
+    if tools.authenticate(kennung, password):
         if tools.can_edit(kennung):
             # If the form is submitted and the email and password are correct,
             # clear the form/container and display a success message
             placeholder.empty()
             st.session_state.logged_in = True
-            st.success("Login successful")
             u = st.session_state.users.find_one({"rz": st.session_state.user})
             st.session_state.username = " ".join([u["vorname"], u["name"]])
             util.logger.info(f"User {st.session_state.user} hat in sich erfolgreich eingeloggt.")
-            # make all neccesary variables available to session_state
-            time.sleep(1)
+            tools.flash("Login successful")
             st.switch_page("pages/00_New.py")
         else:
             st.error("Nicht genügend Rechte, um NEWS zu editieren.")
             util.logger.info(f"User {kennung} hatte nicht gebügend Rechte, um sich einzuloggen.")
-            time.sleep(2)
-            st.rerun()
-    else: 
+    else:
         st.error("Login nicht korrekt, oder RZ-Authentifizierung nicht möglich. (Z.B., falls nicht mit VPN verbunden.)")
         util.logger.info(f"Ein falscher Anmeldeversuch.")
-        time.sleep(2)
-        st.rerun()
-
-

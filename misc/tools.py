@@ -1,17 +1,37 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page 
+from streamlit_extras.switch_page_button import switch_page
 import pymongo
-import time
 import ldap
 import misc.util as util
 from bson import ObjectId
 from misc.config import *
-from datetime import datetime, timedelta 
+from datetime import datetime, timedelta
 from PIL import Image
 import io
 
+# st.toast() direkt vor st.rerun() (oder am Ende eines on_click-Callbacks) wird
+# oft nur als Flash gezeigt: der Rerun beginnt, bevor das Frontend den Toast
+# voll dargestellt hat. flash() parkt die Nachricht in session_state;
+# show_pending_toasts() (im display_navigation aufgerufen) zeigt sie auf dem
+# nächsten Run mit voller Standard-Dauer an.
+def flash(msg):
+    st.session_state.setdefault("_pending_toasts", []).append(msg)
+
+def show_pending_toasts():
+    for msg in st.session_state.pop("_pending_toasts", []):
+        st.toast(msg)
+
+# Dedupliziert find_one-Lookups innerhalb eines Reruns (und über kurze
+# Rerun-Folgen via TTL). Streamlits Hasher kennt bson.ObjectId nicht, daher
+# zwingend hash_funcs={ObjectId: str}; ein führender Underscore wäre falsch
+# (würde alle IDs auf denselben Cache-Slot mappen).
+@st.cache_data(ttl=5, hash_funcs={ObjectId: str})
+def _doc(coll_name, doc_id):
+    coll = util._news_db[coll_name]
+    return coll.find_one({"_id": doc_id})
+
 def get_thumbnail(_id):
-    b = st.session_state.bild.find_one({"_id": _id})
+    b = _doc("bild", _id)
     try:
         res = Image.open(io.BytesIO(b["thumbnail"]))
     except:
@@ -23,43 +43,48 @@ def move_up(collection, x, query = {}):
     target = collection.find_one(query, sort = [("rang",pymongo.DESCENDING)])
     if target:
         n= target["rang"]
-        collection.update_one({"_id": target["_id"]}, {"$set": {"rang": x["rang"]}})    
-        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": n}})    
+        collection.update_one({"_id": target["_id"]}, {"$set": {"rang": x["rang"]}})
+        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": n}})
+        _doc.clear()
 
 def move_down(collection, x, query = {}):
     query["rang"] = {"$gt": x["rang"]}
     target = collection.find_one(query, sort = [("rang", pymongo.ASCENDING)])
     if target:
         n= target["rang"]
-        collection.update_one({"_id": target["_id"]}, {"$set": {"rang": x["rang"]}})    
-        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": n}})    
+        collection.update_one({"_id": target["_id"]}, {"$set": {"rang": x["rang"]}})
+        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": n}})
+        _doc.clear()
 
 def move_alldown(collection, x, query = {}):
-    highestrank = max([x["rang"] for x in collection.find()])    
+    highestrank = max([x["rang"] for x in collection.find()])
     if highestrank:
-        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": highestrank+1}})    
+        collection.update_one({"_id": x["_id"]}, {"$set": {"rang": highestrank+1}})
+        _doc.clear()
 
 def remove_from_list(collection, id, field, element):
     collection.update_one({"_id": id}, {"$pull": {field: element}})
+    _doc.clear()
 
 def update_confirm(collection, x, x_updated, reset = True, text = "🎉 Erfolgreich geändert!"):
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} Item {repr(collection, x['_id'])} geändert.")
     collection.update_one({"_id" : x["_id"]}, {"$set": x_updated })
+    _doc.clear()
     if reset:
         reset_vars("")
-    st.success(text)
-    st.toast(text)
+    flash(text)
 
 def new(collection, ini = {}, switch = True, text = "Erfolgreich angelegt!"):
     if list(collection.find({ "rang" : { "$exists": True }})) != []:
         z = list(collection.find(sort = [("rang", pymongo.ASCENDING)]))
         rang = z[0]["rang"]-1
-        st.session_state.new[collection]["rang"] = rang    
+        st.session_state.new[collection]["rang"] = rang
     for key, value in ini.items():
         st.session_state.new[collection][key] = value
     st.session_state.new[collection].pop("_id", None)
     x = collection.insert_one(st.session_state.new[collection])
-    st.success(text)
+    _doc.clear()
+    flash(text)
     if switch:
         st.session_state.edit=x.inserted_id
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} ein neues Item angelegt.")
@@ -69,10 +94,10 @@ def new(collection, ini = {}, switch = True, text = "Erfolgreich angelegt!"):
 
 # Finde in collection.field die id, und gebe im Datensatz return_field zurück. Falls list=True,
 # dann ist collection.field ein array.
-def references(collection, field, list = False):    
+def references(collection, field, list = False):
     res = {}
     for x in st.session_state.abhaengigkeit[collection]:
-        res = res | { collection: references(x["collection"], x["field"], x["list"]) } 
+        res = res | { collection: references(x["collection"], x["field"], x["list"]) }
     if list:
         z = list(collection.find({field: {"$elemMatch": {"$eq": id}}}))
     else:
@@ -97,7 +122,7 @@ def find_dependent_items(collection, id, ini = {}):
 
 def delete_item_update_dependent_items(collection, id, switch = True):
     if collection in st.session_state.leer.keys() and id == st.session_state.leer[collection]:
-        st.toast("Fehler! Dieses Item kann nicht gelöscht werden!")
+        flash("Fehler! Dieses Item kann nicht gelöscht werden!")
         reset_vars("")
     else:
         for x in st.session_state.abhaengigkeit[collection]:
@@ -105,14 +130,14 @@ def delete_item_update_dependent_items(collection, id, switch = True):
                 x["collection"].update_many({x["field"].replace(".$",""): { "$elemMatch": { "$eq": id }}}, {"$pull": { x["field"] : id}})
             else:
                 st.write(st.session_state.collection_name[x["collection"]])
-                x["collection"].update_many({x["field"]: id}, { "$set": { x["field"].replace(".", ".$."): st.session_state.leer[collection]}})             
+                x["collection"].update_many({x["field"]: id}, { "$set": { x["field"].replace(".", ".$."): st.session_state.leer[collection]}})
         s = ("  \n".join(find_dependent_items(collection, id)))
         if s:
-            s = f"\n{s}  \ngeändert."     
+            s = f"\n{s}  \ngeändert."
         util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} item {repr(collection, id)} gelöscht, und abhängige Felder geändert.")
         collection.delete_one({"_id": id})
-        st.success(f"🎉 Erfolgreich gelöscht!  {s}")
-        time.sleep(.2)
+        _doc.clear()
+        flash(f"🎉 Erfolgreich gelöscht!  {s}")
         if switch:
             reset_vars("")
             switch_page(st.session_state.collection_name[collection].lower())
@@ -145,10 +170,11 @@ def logout():
 def reset_vars(text=""):
     st.session_state.edit = ""
     if text != "":
-        st.success(text)
+        flash(text)
     st.switch_page("pages/00_New.py")
 
 def display_navigation():
+    show_pending_toasts()
     st.markdown("<style>.st-emotion-cache-16txtl3 { padding: 2rem 2rem; }</style>", unsafe_allow_html=True)
     st.sidebar.image("static/ufr.png", use_container_width=True)
     st.session_state.tage = st.sidebar.slider("Welche News sollen angezeigt werden?", 0, 500, 25)
@@ -165,8 +191,8 @@ def display_navigation():
 
 # short Version ohne abhängige Variablen
 def repr(collection, id, short = False, show_collection = True):
-    x = collection.find_one({"_id": id})
-    if collection == st.session_state.news:        
+    x = _doc(collection.name, id)
+    if collection == st.session_state.news:
         title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
         title = f"**{title.strip()}**"
         ms = x["monitor"]["start"]
