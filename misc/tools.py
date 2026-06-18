@@ -127,9 +127,12 @@ def delete_item_update_dependent_items(collection, id, switch = True):
     else:
         for x in st.session_state.abhaengigkeit[collection]:
             if x["list"]:
-                x["collection"].update_many({x["field"].replace(".$",""): { "$elemMatch": { "$eq": id }}}, {"$pull": { x["field"] : id}})
+                key = x.get("key")                       # None → Array aus Werten; sonst Array aus Dicts
+                sel = {key: id} if key else {"$eq": id}
+                x["collection"].update_many(
+                    {x["field"]: {"$elemMatch": sel}},
+                    {"$pull": {x["field"]: ({key: id} if key else id)}})
             else:
-                st.write(st.session_state.collection_name[x["collection"]])
                 x["collection"].update_many({x["field"]: id}, { "$set": { x["field"].replace(".", ".$."): st.session_state.leer[collection]}})
         s = ("  \n".join(find_dependent_items(collection, id)))
         if s:

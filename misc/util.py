@@ -209,7 +209,7 @@ def setup_session_state():
     st.session_state.abhaengigkeit = {
         st.session_state.bild: [
             {"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
-            {"collection": st.session_state.news, "field": "image", "list": True}],
+            {"collection": st.session_state.news, "field": "image", "list": True, "key": "_id"}],
         st.session_state.news: [],
         st.session_state.carouselnews: [],
         st.session_state.vortragsreihe: [

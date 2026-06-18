@@ -180,9 +180,12 @@ if st.session_state.logged_in:
             widthmonitor = x["image"][0]["widthmonitor"]
             with co1:
                 b = st.session_state.bild.find_one({"_id": x["image"][0]["_id"] })
-                image = Image.open(io.BytesIO(b["data"]))
-                wi, he = image.size            
-                st.image(b["data"], caption = f"{b['filename']}, width: wi, height: he, Größe {int(sys.getsizeof(b['data'])/1024)} kb")                
+                if b is not None:
+                    image = Image.open(io.BytesIO(b["data"]))
+                    wi, he = image.size
+                    st.image(b["data"], caption = f"{b['filename']}, width: wi, height: he, Größe {int(sys.getsizeof(b['data'])/1024)} kb")
+                else:
+                    st.warning("Das verknüpfte Bild existiert nicht mehr. Bitte ein neues Bild auswählen oder die Verknüpfung entfernen.")
             with co3: 
                 changeimage = st.session_state.changeimage
                 changeimage = st.toggle("Bild ändern", value = False, key = "changeimage")
