@@ -10,63 +10,128 @@ Branch: `instagram`
 
 ## 1. Welcher Instagram-Account? Wer beantragt was?
 
-Instagram lässt **kein automatisches Posten von privaten Accounts** zu. Die
-offizielle „Content Publishing API" ist Teil der **Meta / Instagram Graph API**
-und funktioniert nur mit einem ganzen Stapel verknüpfter Konten.
+Instagram lässt **kein automatisches Posten von privaten Accounts** zu; nötig ist
+ein **Instagram Professional Account**. Die Kontenkette ist aber deutlich kürzer
+als früher — siehe den Kasten unten.
+
+> **Korrigiert (verifiziert gegen die Meta-Doku, Juli 2026).** Dieser Abschnitt
+> hat ursprünglich behauptet, ein Instagram-Business-Account müsse zwingend mit
+> einer **Facebook-Seite** verknüpft sein. Das galt für die klassische
+> Instagram-Graph-API („Instagram API with Facebook Login"). Seit Juli 2024 gibt
+> es daneben die **„Instagram API with Instagram Login"**, und dort steht
+> ausdrücklich: *„This API setup does not require a Facebook Page to be linked to
+> the Instagram professional account."* Sie unterstützt Content Publishing und ist
+> für uns der richtige Weg. Damit entfallen Facebook-Seite und Business Portfolio
+> als technische Voraussetzung.
+>
+> Quellen: [Instagram Platform –
+> Overview](https://developers.facebook.com/docs/instagram-platform/overview/),
+> [Instagram API with Instagram
+> Login](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/),
+> [Content
+> Publishing](https://developers.facebook.com/docs/instagram-platform/content-publishing/)
 
 ### Benötigte Konten (Kette)
 
 | # | Was | Zweck | Wer / Hinweis |
 |---|-----|-------|---------------|
-| 1 | **Instagram Professional Account** (Typ *Business*, nicht *Creator*) | Das eigentliche Konto `@...` des Mathematischen Instituts | Falls schon ein Insta-Account existiert: in den Einstellungen zu „Professional / Business" umstellen (kostenlos, reversibel). |
-| 2 | **Facebook-Seite** des Instituts | Instagram-Business-Accounts müssen zwingend mit einer FB-Seite verknüpft sein — auch wenn die Seite selbst nicht bespielt wird | Muss existieren und mit (1) verknüpft werden. |
-| 3 | **Meta Business Portfolio** (früher „Business Manager") | Klammer um Seite, Insta-Konto und App; hier hängt die Verifizierung | Auf `business.facebook.com` anlegen. |
-| 4 | **Meta Developer App** (Typ *Business*) | Die technische App, die die API-Calls macht und den Access-Token trägt | Auf `developers.facebook.com` anlegen. |
-| 5 | **Long-Lived Access Token** mit den passenden Permissions | Token, den unsere App zum Posten benutzt | Wird über die App/Graph-API-Explorer erzeugt, siehe unten. |
+| 1 | **Instagram Professional Account** (Typ *Business*, nicht *Creator*) | Das eigentliche Konto `@math_uni_freiburg` des Instituts | Anlegen auf die **institutionelle Funktions-Mail**; in den Einstellungen auf „Professional / Business" umstellen (kostenlos, reversibel). |
+| 2 | **Meta Developer App** (Typ *Business*) | Die technische App, die die API-Calls macht und den Access-Token trägt | Auf `developers.facebook.com` anlegen, Produkt „Instagram" → *Instagram API with Instagram Login* hinzufügen. |
+| 3 | **Long-Lived Access Token** | Token, den die NEWS-App zum Posten benutzt | Direkt im **App-Dashboard** erzeugbar (kein Login-Flow nötig). Gültig **60 Tage**, muss erneuert werden — siehe unten. |
 
-### Benötigte Permissions (App Review)
-- `instagram_basic`
-- `instagram_content_publish`  ← Kernberechtigung fürs Posten
-- `pages_read_engagement` / `business_management` (für die Verknüpfung)
+**Nicht (mehr) nötig:** Facebook-Seite, Meta Business Portfolio, Business
+Verification, App Review.
 
-> **App Review nötig:** Solange die App im *Development*-Modus ist, kann sie nur
-> auf Konten posten, deren Nutzer als **Tester/Admin** in der App eingetragen
-> sind. Für unseren Fall (wir posten nur auf **unser eigenes** Institutskonto)
-> reicht das — **eine öffentliche App-Review durch Meta ist NICHT zwingend**,
-> solange nur das eigene, in der App als Rolle hinterlegte Konto bespielt wird.
-> Das spart die 2–4 Wochen Review-Zeit. (App-Review wird erst nötig, wenn man
-> auf *fremde* Konten posten will.)
+Ein **Business Portfolio** (`business.facebook.com`) bleibt trotzdem sinnvoll —
+nicht für die API, sondern für die **Rollenverwaltung**: Instagram selbst kennt
+nur einen einzigen Login, und Passwörter im Institut herumzureichen ist genau die
+Übergabefalle, die die Uni-Guidelines mit „Accounts gehören der Universität"
+adressieren. Über das Portfolio bekommen Personen Zugriff über ihre *eigenen*
+Logins und lassen sich sauber wieder entfernen.
+
+### Benötigte Permissions
+
+- `instagram_business_basic`
+- `instagram_business_content_publish` ← Kernberechtigung fürs Posten
+
+> **Achtung, alte Scopes sind tot:** `instagram_basic`, `instagram_content_publish`
+> und `pages_read_engagement` gehören zum Facebook-Login-Pfad; die alten
+> Scope-Werte wurden am **27.01.2025 abgeschaltet**. Nicht mehr verwenden.
+
+### App Review: nicht nötig — aber aus einem anderen Grund als gedacht
+
+Die ursprüngliche Einschätzung („keine App Review nötig") **stimmt**, die
+Begründung war aber falsch. Es liegt nicht am *Development-Modus mit
+Tester-Rollen*, sondern an der Zugriffsstufe:
+
+- **Standard Access** genügt, wenn die App *„only serves your Instagram
+  professional account or an account you manage"* — also genau unser Fall.
+- **Advanced Access** (mit App Review **und** Business Verification, 2–4 Wochen)
+  braucht man erst, wenn die App auf **fremde** Konten postet.
+
+Da wir ausschließlich auf unser eigenes Institutskonto posten, reicht Standard
+Access. Wir brauchen deshalb auch **keinen OAuth-Login-Flow** in der NEWS-App:
+Der Token wird einmal im App-Dashboard erzeugt und als Secret hinterlegt.
+
+### Betriebsrisiko: der Token läuft nach 60 Tagen ab
+
+Der wichtigste operative Punkt, der bisher fehlte. Tokens aus dem App-Dashboard
+sind **long-lived und 60 Tage gültig** (die aus dem Business-Login-Flow sogar nur
+1 Stunde). Ohne Erneuerung hört das Posten nach zwei Monaten **stillschweigend**
+auf.
+
+Zu planen ist daher ein **Token-Refresh** (`GET /refresh_access_token` mit
+`grant_type=ig_refresh_token` gegen `graph.instagram.com`), der den Token
+rechtzeitig vor Ablauf verlängert — als Cronjob auf `www2` oder beim App-Start,
+plus eine sichtbare Warnung im Editor, wenn der Token in weniger als *n* Tagen
+abläuft. Ein Token, der klaglos abläuft, ist die wahrscheinlichste Ursache dafür,
+dass diese Integration in einem Jahr nicht mehr funktioniert.
+
+### Weitere harte Grenzen
+
+- **Host ist `graph.instagram.com`**, nicht `graph.facebook.com` (der gehört zum
+  Facebook-Login-Pfad).
+- **Rate Limit: max. 100 per API veröffentlichte Posts pro 24 Stunden.** Für uns
+  völlig unkritisch (ein Karussell zählt als ein Post).
 
 ### Wer sollte das beantragen? — Empfehlung
 Das ist **keine rein technische, sondern eine institutionelle/Marken-Frage**.
 Die Konten repräsentieren offiziell das Mathematische Institut.
 
-1. **Kontoinhaber = Institut, nicht Privatperson.** Instagram-, FB-Seiten- und
-   Business-Portfolio-Konten sollten auf einer **institutionellen Funktions-Mail**
+1. **Kontoinhaber = Institut, nicht Privatperson.** Der Instagram-Account (und ein
+   etwaiges Business-Portfolio) muss auf einer **institutionellen Funktions-Mail**
    laufen (z. B. `oeffentlichkeitsarbeit@math.uni-freiburg.de` oder ein eigens
    dafür angelegtes Postfach), damit die Konten beim Personalwechsel nicht
-   verloren gehen. **Kein privater Google/Facebook-Account.**
+   verloren gehen. **Kein privater Google/Facebook-Account.** Das ist der eine
+   Schritt, der sich später nicht mehr sauber reparieren lässt.
 2. **Antragsteller / Verantwortliche:** Geschäftsführung des Instituts bzw. die
    Person, die für Öffentlichkeitsarbeit / Web zuständig ist. Ggf. Abstimmung
    mit der **zentralen Presse-/Öffentlichkeitsarbeit der Uni Freiburg** — die Uni
    hat Social-Media-Guidelines und ggf. schon ein Meta-Business-Portfolio, unter
    dem das Institut als Asset laufen kann.
-3. **Datenschutz (wichtig an einer Uni):** Vor dem Livegang die
-   **Datenschutzbeauftragte / Stabsstelle Datenschutz** einbinden. Meta verarbeitet
-   Daten in den USA; es braucht ggf. eine Datenschutzerklärung / Impressum für den
-   Insta-Auftritt. Das ist ein Freigabe-Schritt, kein Code-Schritt, aber er gehört
-   in die Planung.
+3. **Datenschutz (wichtig an einer Uni):** Vor dem Livegang sind fünf Dokumente
+   Pflicht — Nutzungskonzept, Datenschutzerklärung, DSFA, Netiquette, Disclaimer —
+   und müssen sichtbar im Profil verlinkt sein. Entwürfe liegen in
+   [`docs/social-media/`](docs/social-media/README.md). Das ist ein
+   Freigabe-Schritt, kein Code-Schritt, aber er gehört in die Planung.
 4. **Technischer Admin (Rolle in der Meta-App):** Der/die App-Betreiber (du) wird
    als Admin/Developer in der Meta Developer App eingetragen, um Token zu erzeugen
    und zu erneuern.
 
 **Konkrete Reihenfolge zum Beantragen:**
-1. Geschäftsführung/ÖA-Verantwortliche klärt: Gibt es schon einen Insta-Auftritt
-   des Instituts? Gibt es ein Uni-weites Meta-Business-Portfolio?
+1. Zustimmung der Geschäftsführenden Direktion einholen; klären, ob es schon einen
+   Insta-Auftritt des Instituts gibt und ob die Uni ein Meta-Business-Portfolio hat,
+   unter dem wir als Asset laufen können.
 2. Institutionelle Funktions-Mail bereitstellen (Rechenzentrum / RZ-Ticket).
-3. Auf dieser Mail: FB-Seite + Instagram-Business-Account + Business-Portfolio anlegen/verknüpfen.
-4. Datenschutz-Freigabe einholen.
-5. Meta Developer App anlegen, technische Admins eintragen, Token erzeugen.
+3. Auf dieser Mail: Instagram-Account `@math_uni_freiburg` anlegen, auf
+   *Professional / Business* umstellen, 2FA aktivieren.
+4. Die fünf Pflichtdokumente freigeben lassen, auf `math.uni-freiburg.de`
+   veröffentlichen und im Profil verlinken; Account über das
+   [Uni-Formular](https://uni-freiburg.de/formulare/anmeldung-social-media-account/)
+   melden.
+5. Meta Developer App (Typ *Business*) anlegen, Produkt *Instagram API with
+   Instagram Login* hinzufügen, technische Admins eintragen, Long-Lived Token
+   erzeugen — und **den Token-Refresh gleich mitbauen**.
 
 ---
 
