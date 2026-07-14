@@ -44,19 +44,11 @@ sie inzwischen veraltet oder fehlerhaft sind:
    **Datenschutzbeauftragte der Universität**
    (<datenschutzbeauftragter@uni-freiburg.de>); das ist hier so eingetragen.
 
-## Was noch zu tun ist
-
-**Platzhalter ausfüllen.** Alle offenen Stellen sind mit `«…»` markiert:
-
-```
-grep -rn '«' docs/social-media/
-```
-
 ## Beteiligte
 
 | Rolle | Person | Kontakt |
 |---|---|---|
-| Redaktionelle Betreuung | **Carolin Mann** | persönliche Uni-Adresse (fürs Formular) |
+| Redaktionelle Betreuung | **Carolin Mann**, Assistenz Studiendekanat | persönliche Uni-Adresse (fürs Formular) |
 | Inhaltliche Verantwortung | **Thorsten Schmidt**, Öffentlichkeitsbeauftragter | persönliche Uni-Adresse (fürs Formular) |
 | Account-Login, öffentlicher Kontakt | — (Funktionsadresse) | <socialmedia@math.uni-freiburg.de> ✅ eingerichtet |
 
@@ -71,13 +63,19 @@ Funktion/Abteilung, E-Mail **und Telefon** verlangt, also erreichbare Personen m
 ihren persönlichen Uni-Adressen. Eine eigene Funktionsadresse für die
 Verantwortlichkeit wird nicht angelegt.
 
-**Noch offen:** die Funktions-/Abteilungsbezeichnung von Carolin Mann sowie die
-Telefonnummern beider Personen — beides fragt das Formular ab.
+## Was noch zu tun ist
+
+Die Dokumente sind inhaltlich vollständig — es sind keine Platzhalter mehr offen.
+Für das **Anmeldeformular** der Universität werden zusätzlich noch die
+Telefonnummern von Carolin Mann und Thorsten Schmidt gebraucht; die gehören aber
+nicht in die Dokumente.
 
 **Der Handle ist vorläufig auf `@math_uni_freiburg` gesetzt** — analog zum
-Namensschema der Rechtswissenschaftlichen Fakultät (`@jura_uni_freiburg`). Vor
-der Anmeldung ist zu prüfen, ob er auf Instagram noch frei ist; andernfalls sind
-die beiden Fundstellen in `nutzungskonzept.md` und `datenschutzerklaerung.md`
+Namensschema der Rechtswissenschaftlichen Fakultät (`@jura_uni_freiburg`). Ein
+Aufruf von <https://www.instagram.com/math_uni_freiburg/> liefert Instagrams
+404-Seite, der Name ist also aller Wahrscheinlichkeit nach frei. Verlässlich ist
+das erst bei der Registrierung; weicht ihr auf einen anderen Handle aus, sind die
+beiden Fundstellen in `nutzungskonzept.md` und `datenschutzerklaerung.md`
 anzupassen.
 
 **Eine inhaltliche Entscheidung ist noch offen: Kommentarfunktion.**

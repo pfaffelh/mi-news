@@ -99,7 +99,7 @@ nützt.
 ## 4. Verantwortlichkeiten für die redaktionelle/technische Betreuung
 
 Die Verantwortlichkeit für die redaktionelle Betreuung liegt bei
-**Carolin Mann**, «FUNKTION/ABTEILUNG».
+**Carolin Mann**, Assistenz Studiendekanat.
 
 Die inhaltliche Verantwortung im Sinne der Social-Media-Guidelines der
 Universität trägt **Thorsten Schmidt**, Öffentlichkeitsbeauftragter des
