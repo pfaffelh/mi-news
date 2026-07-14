@@ -13,6 +13,13 @@ für einen offiziellen Social-Media-Kanal einer Einrichtung verlangt. Sie müsse
 | [dsfa.md](dsfa.md) | Datenschutz-Folgenabschätzung nach Art. 35 DSGVO |
 | [netiquette.md](netiquette.md) | Verhaltensregeln für Nutzer:innen |
 | [disclaimer.md](disclaimer.md) | Bedeutung von Abos/Likes, Verhältnis zu Meta |
+| [mail-datenschutzbeauftragter.md](mail-datenschutzbeauftragter.md) | Anfrage nach Art. 35 Abs. 2 DSGVO — abgeschickt 14.07.2026, Antwort dort eintragen |
+
+**Veröffentlicht sind die Dokumente als Webseiten im Repo `mi-hp`**
+(`templates/instagram/`, Routen in `app.py`). Live unter
+<https://www.math.uni-freiburg.de/nlehre/de/instagram/> — das ist die Adresse für
+die Instagram-Bio. Änderungen an den Texten müssen an beiden Orten nachgezogen
+werden.
 
 Zusätzlich Pflicht, aber kein eigenes Dokument: ein **Impressum**. Ein Link auf das
 Impressum der Institutshomepage genügt — das ist
