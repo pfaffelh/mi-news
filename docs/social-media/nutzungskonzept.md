@@ -99,11 +99,11 @@ nützt.
 ## 4. Verantwortlichkeiten für die redaktionelle/technische Betreuung
 
 Die Verantwortlichkeit für die redaktionelle Betreuung liegt bei
-«NAME, FUNKTION — z. B. Öffentlichkeitsarbeit des Mathematischen Instituts».
+**Carolin Mann**, «FUNKTION/ABTEILUNG».
 
 Die inhaltliche Verantwortung im Sinne der Social-Media-Guidelines der
-Universität trägt «NAME — in der Regel die Geschäftsführende Direktion des
-Mathematischen Instituts».
+Universität trägt **Thorsten Schmidt**, «FUNKTION — vermutlich Geschäftsführende
+Direktion; bitte bestätigen».
 
 Der Account läuft auf die institutionelle Funktions-Mailadresse
 <socialmedia@math.uni-freiburg.de> und nicht auf eine private Adresse. Diese

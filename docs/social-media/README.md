@@ -52,21 +52,29 @@ sie inzwischen veraltet oder fehlerhaft sind:
 grep -rn '«' docs/social-media/
 ```
 
-Offen sind noch die redaktionell betreuende Person und die verantwortliche Person.
+## Beteiligte
 
-Als Funktionsadresse ist **socialmedia@math.uni-freiburg.de** eingetragen — sie
-ist zugleich die E-Mail, auf der der Instagram-Account läuft, und der öffentliche
-Kontakt in Datenschutzerklärung und Netiquette. Sie sollte ein **Verteiler mit
-mindestens zwei Empfänger:innen** sein, damit weder Account-Wiederherstellung noch
-Datenschutz-Kontakt an einer einzelnen Person hängen.
+| Rolle | Person | Kontakt |
+|---|---|---|
+| Redaktionelle Betreuung | **Carolin Mann** | persönliche Uni-Adresse (fürs Formular) |
+| Inhaltliche Verantwortung | **Thorsten Schmidt** | Adresse der Direktion (fürs Formular) |
+| Account-Login, öffentlicher Kontakt | — (Funktionsadresse) | <socialmedia@math.uni-freiburg.de> ✅ eingerichtet |
+
+Die Funktionsadresse ist zugleich die E-Mail, auf der der Instagram-Account läuft,
+und der öffentliche Kontakt in Datenschutzerklärung und Netiquette. Sie sollte ein
+**Verteiler mit mindestens zwei Empfänger:innen** sein, damit weder
+Account-Wiederherstellung noch Datenschutz-Kontakt an einer einzelnen Person hängen.
 
 Im **Anmeldeformular** der Universität ist diese Adresse dagegen *nicht* das, was
 gefragt ist: Dort werden für die betreuende und die verantwortliche Person Name,
-Funktion, E-Mail **und Telefon** verlangt, also erreichbare Personen. Betreuende
-Person = die Person, die tatsächlich postet, mit ihrer persönlichen Uni-Adresse;
-verantwortliche Person = Geschäftsführende Direktion mit der bestehenden
-Direktionsadresse. Eine eigene Funktionsadresse für die Verantwortlichkeit wird
-nicht angelegt.
+Funktion/Abteilung, E-Mail **und Telefon** verlangt, also erreichbare Personen —
+Carolin Mann mit ihrer persönlichen Uni-Adresse, Thorsten Schmidt mit der Adresse
+der Direktion. Eine eigene Funktionsadresse für die Verantwortlichkeit wird nicht
+angelegt.
+
+**Noch offen:** die genauen Funktions-/Abteilungsbezeichnungen der beiden (das
+Formular fragt sie ab, und sie stehen als `«FUNKTION»` im Nutzungskonzept) sowie
+die zugehörigen Telefonnummern.
 
 **Der Handle ist vorläufig auf `@math_uni_freiburg` gesetzt** — analog zum
 Namensschema der Rechtswissenschaftlichen Fakultät (`@jura_uni_freiburg`). Vor
