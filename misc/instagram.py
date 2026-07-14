@@ -24,12 +24,16 @@ Barrierefreiheitsproblem ist (BITV).
 """
 
 import io
+import json
+import netrc
 import os
 import re
+from datetime import datetime, timedelta, timezone
 
 from PIL import Image, ImageDraw, ImageFont
 
 from misc.config import (
+    ig_api_host,
     ig_caption_maxlen,
     ig_einrichtung,
     ig_font_bold,
@@ -37,8 +41,11 @@ from misc.config import (
     ig_hashtag_max,
     ig_hashtags_default,
     ig_min_source_px,
+    ig_netrc_machine,
     ig_ratio_default,
     ig_ratios,
+    ig_token_file,
+    netrc_file,
     ufr_blau,
     ufr_gelb,
     ufr_schwarz,
@@ -363,32 +370,131 @@ class NotConfigured(Exception):
     """Zugangsdaten oder Bild-Route fehlen — es kann nicht gepostet werden."""
 
 
-SECRETS_PFADE = [
-    os.path.join(".streamlit", "secrets.toml"),
-    os.path.expanduser("~/.streamlit/secrets.toml"),
-]
+def _netrc_eintrag():
+    """(app_id, ig_user_id, app_secret) aus der .netrc — oder None.
+
+    Hausstil, wie in mi-hp: statische Zugangsdaten stehen in der .netrc. Der
+    rotierende Token gehört ausdrücklich NICHT hierher (siehe misc/config.py).
+
+    Belegung des Eintrags:
+        machine graph.instagram.com
+          login    <IG_APP_ID>
+          account  <IG_USER_ID>
+          password <IG_APP_SECRET>
+    """
+    if not os.path.exists(netrc_file):
+        return None
+    try:
+        return netrc.netrc(netrc_file).authenticators(ig_netrc_machine)
+    except (netrc.NetrcParseError, OSError):
+        return None
+
+
+def lade_token():
+    """Den aktuellen Long-Lived Token laden — oder None.
+
+    Rückgabe: dict mit 'access_token' und 'expires_at' (ISO-8601).
+    """
+    if not os.path.exists(ig_token_file):
+        return None
+    try:
+        with open(ig_token_file, encoding="utf-8") as f:
+            daten = json.load(f)
+    except (OSError, ValueError):
+        return None
+    return daten if daten.get("access_token") else None
+
+
+def speichere_token(access_token, expires_in):
+    """Token atomar schreiben.
+
+    Erst in eine Nachbardatei, dann umbenennen: Ein Absturz mitten im Schreiben
+    darf keinen halben Token hinterlassen — der wäre nicht mehr refreshbar, und
+    dann hilft nur noch das Meta-Dashboard.
+    """
+    os.makedirs(os.path.dirname(ig_token_file), exist_ok=True)
+    daten = {
+        "access_token": access_token,
+        "expires_at": (
+            datetime.now(timezone.utc) + timedelta(seconds=int(expires_in))
+        ).isoformat(),
+        "refreshed_at": datetime.now(timezone.utc).isoformat(),
+    }
+    tmp = f"{ig_token_file}.tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(daten, f, indent=2)
+    os.chmod(tmp, 0o600)
+    os.replace(tmp, ig_token_file)          # atomar
+    return daten
+
+
+def token_restlaufzeit():
+    """Tage bis der Token abläuft — oder None, wenn es keinen gibt.
+
+    Kann negativ sein. Dann ist er tot und lässt sich auch nicht mehr erneuern.
+    """
+    daten = lade_token()
+    if not daten or not daten.get("expires_at"):
+        return None
+    try:
+        ende = datetime.fromisoformat(daten["expires_at"])
+    except ValueError:
+        return None
+    return (ende - datetime.now(timezone.utc)).days
 
 
 def is_configured():
     """Kann überhaupt gepostet werden?
 
-    Nein, solange es weder Account noch Token noch die öffentliche Bild-Route
-    gibt. Siehe `insta.md`.
-
-    Wichtig: Erst prüfen, ob überhaupt eine secrets.toml existiert. Ein Zugriff
-    auf `st.secrets` ohne Datei rendert eine rote Fehlerbox in die Seite — und
-    zwar bevor man die Exception abfangen kann.
+    Braucht beides: die statischen Daten aus der .netrc und einen lebenden
+    Token. Die öffentliche Bild-Route in mi-hp fehlt weiterhin — deshalb wirft
+    `publish()` noch.
     """
-    if not any(os.path.exists(p) for p in SECRETS_PFADE):
+    daten = lade_token()
+    if not daten:
         return False
-    try:
-        import streamlit as st
+    rest = token_restlaufzeit()
+    if rest is not None and rest < 0:
+        return False
+    return _netrc_eintrag() is not None
 
-        return bool(
-            st.secrets.get("IG_USER_ID") and st.secrets.get("IG_ACCESS_TOKEN")
+
+def refresh_token():
+    """Den Long-Lived Token gegen einen frischen tauschen (60 Tage ab jetzt).
+
+    Bedingungen von Meta: Der Token muss mindestens 24 Stunden alt und darf
+    nicht abgelaufen sein. Ein abgelaufener Token ist endgültig verloren —
+    dann muss im Meta-App-Dashboard von Hand ein neuer erzeugt werden.
+
+    Wird vom Cron-Job bin/refresh_ig_token.py aufgerufen (wöchentlich).
+    """
+    import requests
+
+    daten = lade_token()
+    if not daten:
+        raise NotConfigured(
+            f"Kein Token in {ig_token_file}. Einmalig im Meta-App-Dashboard "
+            f"erzeugen und dort ablegen."
         )
-    except Exception:
-        return False
+
+    rest = token_restlaufzeit()
+    if rest is not None and rest < 0:
+        raise NotConfigured(
+            f"Der Token ist seit {-rest} Tagen abgelaufen und kann nicht mehr "
+            f"erneuert werden. Im Meta-App-Dashboard einen neuen erzeugen."
+        )
+
+    r = requests.get(
+        f"{ig_api_host}/refresh_access_token",
+        params={
+            "grant_type": "ig_refresh_token",
+            "access_token": daten["access_token"],
+        },
+        timeout=30,
+    )
+    r.raise_for_status()
+    antwort = r.json()
+    return speichere_token(antwort["access_token"], antwort["expires_in"])
 
 
 def publish(image_bytes, caption):
@@ -398,7 +504,7 @@ def publish(image_bytes, caption):
 
     1. POST /media          → Container. Braucht eine **öffentliche** image_url;
                               die Route dafür (`/nlehre/insta/<token>.jpg` in
-                              mi-hp) gibt es noch nicht.
+                              mi-hp) gibt es noch nicht. Das ist der Blocker.
     2. POST /media_publish  → Beitrag ist live, liefert die Media-ID.
     3. POST /<media-id>?comment_enabled=false
                             → Kommentare aus. **Pflicht**: Nutzungskonzept,
@@ -408,7 +514,7 @@ def publish(image_bytes, caption):
                               Schritt fehl, muss das laut scheitern.
     """
     raise NotConfigured(
-        "Veröffentlichen ist noch nicht angebunden: Es fehlen der "
-        "Instagram-Account, der API-Token und die öffentliche Bild-Route in "
-        "mi-hp. Siehe insta.md."
+        "Veröffentlichen ist noch nicht angebunden: Es fehlt die öffentliche "
+        "Bild-Route in mi-hp (Meta lädt das Bild selbst von einer URL herunter, "
+        "einen Upload gibt es nicht). Siehe insta.md."
     )

@@ -6,5 +6,4 @@
 /mongo/backup/
 /mongo/*_backup*
 *.log
-# Zugangsdaten für die Instagram-API. Vorlage: .streamlit/secrets.toml.example
-/.streamlit/secrets.toml
+# Zugangsdaten liegen ausserhalb des Repos (siehe misc/config.py, netrc.example).

@@ -42,6 +42,20 @@ if st.session_state.logged_in:
             "Entwürfe lassen sich trotzdem anlegen, gestalten und als Bild "
             "herunterladen."
         )
+    else:
+        # Ein Token, der klaglos abläuft, ist die wahrscheinlichste Ursache
+        # dafür, dass das Posten irgendwann nicht mehr funktioniert. Deshalb
+        # sichtbar machen, bevor es passiert: Ist er einmal abgelaufen, lässt
+        # er sich nicht mehr erneuern.
+        rest = insta.token_restlaufzeit()
+        if rest is not None and rest < ig_token_warn_days:
+            st.warning(
+                f"**Der Instagram-Token läuft in {rest} Tagen ab.** Er lässt "
+                "sich nur erneuern, solange er lebt — danach muss im "
+                "Meta-App-Dashboard von Hand ein neuer erzeugt werden. Bitte "
+                "prüfen, ob der wöchentliche Refresh-Job (`bin/refresh_ig_token.py`) "
+                "noch läuft."
+            )
 
     if st.button("Neuen Post anlegen", type="primary"):
         # switch=True springt via switch_page("instagram edit") direkt in den

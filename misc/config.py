@@ -1,3 +1,4 @@
+import os
 import socket
 
 # Das ist der LDAP-Server der Universität, der für die Authentifizierung verwendet wird.
@@ -60,3 +61,51 @@ ig_hashtags_default = ["#unifreiburg", "#mathematik"]
 # Universität Freiburg" — im CD wird die Einrichtung darunter genannt, sonst
 # sieht der Post aus, als poste die Universität.
 ig_einrichtung = "Mathematisches Institut"
+
+# --- Zugangsdaten -------------------------------------------------------------
+#
+# Nichts davon liegt im Repo. Auf www2 wird per `git pull` + rsync deployt --
+# alles, was im Baum liegt, wird dabei überschrieben, und die (auskommentierte)
+# --delete-Zeile in deploy-mi-news.sh würde es sogar löschen. Die Geheimnisse
+# liegen deshalb außerhalb von Checkout UND rsync-Ziel.
+#
+# Zwei Dateien, weil sich die eine nie und die andere alle 60 Tage ändert:
+#
+#   .netrc         statisch (App-ID, App-Secret, IG-User-ID). Hausstil, wie in
+#                  mi-hp. Nur lesen.
+#   ig_token.json  der Long-Lived Token. Rotiert -- den schreibt ausschließlich
+#                  der Refresh-Job (bin/refresh_ig_token.py), atomar. Bewusst
+#                  NICHT in der .netrc: Ein fehlerhafter Rewrite dort würde
+#                  LDAP-, SMTP- und DeepL-Zugänge mitreißen.
+#
+# Auf www2 läuft die App als www-data (streamlit-mi-news.service); beide Dateien
+# müssen www-data gehören, mode 600.
+
+if socket.gethostname() == "www2":
+    secrets_dir = "/var/lib/mi-news"
+else:
+    secrets_dir = os.path.expanduser("~/.mi-news")
+
+# Lokal die übliche ~/.netrc (dort liegen schon LDAP, SMTP, DeepL);
+# auf dem Server eine eigene neben der Token-Datei.
+if socket.gethostname() == "www2":
+    netrc_file = os.path.join(secrets_dir, ".netrc")
+else:
+    netrc_file = os.path.expanduser("~/.netrc")
+
+ig_token_file = os.path.join(secrets_dir, "ig_token.json")
+
+# Der Eintrag in der .netrc, unter dem App-ID/-Secret und die User-ID stehen.
+ig_netrc_machine = "graph.instagram.com"
+
+# Graph-API. Host ist graph.instagram.com (Instagram Login), NICHT
+# graph.facebook.com -- der gehört zum alten Facebook-Login-Pfad.
+ig_api_host = "https://graph.instagram.com"
+ig_api_version = "v25.0"
+
+# Der Token ist 60 Tage gültig und lässt sich nur erneuern, solange er noch
+# lebt: "Tokens that have not been refreshed in 60 days will expire and can no
+# longer be refreshed." Danach hilft nur noch ein neuer Token von Hand im
+# Meta-App-Dashboard. Deshalb wöchentlich refreshen statt das Fenster
+# auszureizen -- dann darf der Job siebenmal scheitern, bevor etwas kaputtgeht.
+ig_token_warn_days = 14
