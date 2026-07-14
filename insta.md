@@ -53,6 +53,9 @@ Logins und lassen sich sauber wieder entfernen.
 
 - `instagram_business_basic`
 - `instagram_business_content_publish` ← Kernberechtigung fürs Posten
+- `instagram_business_manage_comments` ← **zwingend nötig**, um Kommentare
+  abzuschalten (siehe „Kommentare müssen aus" weiter unten). Leicht zu übersehen,
+  weil es nach einer Funktion klingt, die wir gar nicht wollen.
 
 > **Achtung, alte Scopes sind tot:** `instagram_basic`, `instagram_content_publish`
 > und `pages_read_engagement` gehören zum Facebook-Login-Pfad; die alten
@@ -86,6 +89,65 @@ rechtzeitig vor Ablauf verlängert — als Cronjob auf `www2` oder beim App-Star
 plus eine sichtbare Warnung im Editor, wenn der Token in weniger als *n* Tagen
 abläuft. Ein Token, der klaglos abläuft, ist die wahrscheinlichste Ursache dafür,
 dass diese Integration in einem Jahr nicht mehr funktioniert.
+
+### Kommentare müssen aus — und das kostet einen dritten API-Call
+
+**Das betrifft das Interface direkt.** Unsere veröffentlichten Pflichtdokumente
+([Nutzungskonzept](docs/social-media/nutzungskonzept.md),
+[Datenschutzerklärung](docs/social-media/datenschutzerklaerung.md),
+[DSFA](docs/social-media/dsfa.md)) sagen an drei Stellen zu, dass die
+**Kommentarfunktion deaktiviert** ist — und die DSFA stützt ihre Risikobewertung
+ausdrücklich mit darauf. Diese Zusage muss die App technisch einlösen; sie darf
+nicht an der Disziplin der postenden Person hängen.
+
+**Verifiziert gegen die Meta-Doku (Juli 2026):**
+
+- Es gibt **keinen** Kommentar-Parameter beim Erstellen des Containers
+  (`POST /media`). Die dort erlaubten Felder sind `image_url`, `media_type`,
+  `caption`, `alt_text`, `is_carousel_item`, `user_tags`, `is_ai_generated`,
+  `is_paid_partnership`, `branded_content_sponsor_ids` — kein
+  `comment_enabled`.
+- Es gibt auch keinen Parameter bei `POST /media_publish`.
+- Kommentare lassen sich **nur nachträglich am fertigen Beitrag** abschalten:
+
+  ```
+  POST https://graph.instagram.com/v25.0/<IG_MEDIA_ID>
+       ?comment_enabled=false
+       &access_token=<TOKEN>
+  → {"success": true}
+  ```
+
+- Dafür braucht die App die Permission **`instagram_business_manage_comments`**.
+- Kontrollierbar ist das Ergebnis über das GET-Feld **`is_comment_enabled`** am
+  Media-Objekt. (`comment_enabled` gibt es nur als POST-Parameter, nicht als
+  lesbares Feld — beim Nachprüfen leicht zu verwechseln.)
+- Es gibt **keinen kontoweiten Schalter**, weder in der App noch in der API. Auch
+  manuell muss man Kommentare bei jedem einzelnen Beitrag abschalten.
+
+**Der Posting-Flow ist damit dreistufig, nicht zweistufig:**
+
+1. `POST /media` → Container-ID
+2. `POST /media_publish` → **Media-ID**, Beitrag ist live
+3. `POST /<media-id>?comment_enabled=false` → Kommentare aus
+
+**Bekannte Lücke:** Zwischen Schritt 2 und 3 ist der Beitrag für einige Sekunden
+mit *offenen* Kommentaren live. Das lässt sich mit der API nicht vermeiden — es
+gibt keinen Weg, den Beitrag von vornherein ohne Kommentare zu veröffentlichen.
+Praktisch ist das Fenster winzig, aber es ist nicht null; wer das für relevant
+hält, muss den Kanal manuell bespielen (dort ist es allerdings genauso).
+
+**Anforderungen ans Interface, die daraus folgen:**
+
+- Schritt 3 gehört **fest in die Publish-Funktion**, nicht in einen optionalen
+  Haken. Es darf keinen Pfad geben, auf dem ein Beitrag mit offenen Kommentaren
+  stehen bleibt.
+- Schlägt Schritt 3 fehl (Netzwerk, Token, Rate Limit), muss das **laut** scheitern:
+  Fehlermeldung im Editor, Retry, und der Beitrag ist als „Kommentare offen"
+  markiert, bis es geklappt hat. Ein stiller Fehlschlag macht unsere DSFA falsch.
+- Sinnvoll wäre ein **Nachlauf-Check**, der per `GET ?fields=is_comment_enabled`
+  über die letzten Beiträge geht und meldet, wenn bei einem die Kommentare offen
+  sind — als Cronjob oder als Anzeige im Editor. Das fängt auch Beiträge ab, die
+  jemand von Hand über die Instagram-App gepostet hat.
 
 ### Weitere harte Grenzen
 

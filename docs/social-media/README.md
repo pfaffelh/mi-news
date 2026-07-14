@@ -100,6 +100,14 @@ geändert, müssen beide Dokumente angepasst werden — die DSFA stützt ihre
 Risikobewertung mit auf die deaktivierten Kommentare, und es bräuchte dann eine
 feste Zuständigkeit für tägliches Monitoring.
 
+> **Achtung, das ist eine Zusage mit technischer Konsequenz.** Instagram hat
+> keinen kontoweiten Schalter für Kommentare — sie lassen sich nur **pro Beitrag**
+> abschalten, und per API erst *nach* dem Veröffentlichen
+> (`POST /<media-id>?comment_enabled=false`). Wird das bei einem einzigen Beitrag
+> vergessen, sind diese Dokumente falsch. Die Anforderungen, die daraus für die
+> NEWS-App folgen, stehen in [`insta.md`](../../insta.md) unter „Kommentare müssen
+> aus". Wer die Texte hier ändert, muss dort nachsehen — und umgekehrt.
+
 **Vor der Vorlage beim Datenschutzbeauftragten bitte bestätigen:** Die
 [Datenschutzerklärung](datenschutzerklaerung.md) enthält in Abschnitt 2 einen
 Absatz zur **Rechtsgrundlage** (Art. 6 Abs. 1 lit. e DSGVO i. V. m. § 4 LDSG BW für
