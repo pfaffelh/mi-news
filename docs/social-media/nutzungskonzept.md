@@ -102,8 +102,8 @@ Die Verantwortlichkeit für die redaktionelle Betreuung liegt bei
 **Carolin Mann**, «FUNKTION/ABTEILUNG».
 
 Die inhaltliche Verantwortung im Sinne der Social-Media-Guidelines der
-Universität trägt **Thorsten Schmidt**, «FUNKTION — vermutlich Geschäftsführende
-Direktion; bitte bestätigen».
+Universität trägt **Thorsten Schmidt**, Öffentlichkeitsbeauftragter des
+Mathematischen Instituts.
 
 Der Account läuft auf die institutionelle Funktions-Mailadresse
 <socialmedia@math.uni-freiburg.de> und nicht auf eine private Adresse. Diese
