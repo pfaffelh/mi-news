@@ -6,7 +6,7 @@ Platforms, Inc.**, 1 Meta Way, Menlo Park, CA 94025, USA. Verantwortlich für di
 Datenverarbeitung von außerhalb der Vereinigten Staaten lebenden Personen ist die
 **Meta Platforms Ireland Limited**, Merrion Road, Dublin 4, D04 X2K5, Irland.
 
-Unser Profil finden Sie unter «HANDLE, z. B. https://www.instagram.com/math.unifreiburg/».
+Unser Profil finden Sie unter <https://www.instagram.com/math_uni_freiburg/>.
 
 Wir weisen Sie darauf hin, dass Sie das hier angebotene Instagram-Profil und
 dessen Funktionen **in eigener Verantwortung** nutzen. Dies gilt insbesondere für

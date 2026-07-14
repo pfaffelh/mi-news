@@ -52,8 +52,14 @@ sie inzwischen veraltet oder fehlerhaft sind:
 grep -rn '«' docs/social-media/
 ```
 
-Es geht im Wesentlichen um den Instagram-Handle, die Funktions-Mailadresse für
-Social Media, die redaktionell betreuende Person und die verantwortliche Person.
+Offen sind noch die Funktions-Mailadresse für Social Media, die redaktionell
+betreuende Person, die verantwortliche Person und die Postingfrequenz.
+
+**Der Handle ist vorläufig auf `@math_uni_freiburg` gesetzt** — analog zum
+Namensschema der Rechtswissenschaftlichen Fakultät (`@jura_uni_freiburg`). Vor
+der Anmeldung ist zu prüfen, ob er auf Instagram noch frei ist; andernfalls sind
+die beiden Fundstellen in `nutzungskonzept.md` und `datenschutzerklaerung.md`
+anzupassen.
 
 **Eine inhaltliche Entscheidung ist noch offen: Kommentarfunktion.**
 Die Entwürfe gehen — wie bei der Rechtswissenschaftlichen Fakultät — davon aus,

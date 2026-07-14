@@ -49,7 +49,7 @@ Reaktion auf das jeweilige Geschehen.
 
 ## 3. Art und Umfang der Nutzung
 
-Das Instagram-Profil «HANDLE, z. B. @math.unifreiburg» informiert über
+Das Instagram-Profil [@math_uni_freiburg](https://www.instagram.com/math_uni_freiburg/) informiert über
 Wissenswertes rund um das Institutsleben sowie über aktuelle Themen,
 Veranstaltungen und Serviceangebote. Typische Inhalte sind:
 
