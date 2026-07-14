@@ -91,10 +91,10 @@ Es gilt:
 - Es wird ausschließlich auf **Deutsch oder Englisch** gepostet; das entspricht
   zugleich der Vorgabe der Universität.
 
-Zielgröße für die Frequenz: «z. B. 1–2 Beiträge pro Woche während der
-Vorlesungszeit, seltener in der vorlesungsfreien Zeit». Eine Untergrenze ist
-bewusst gesetzt: Ein Kanal, der über Monate nicht bespielt wird, schadet dem
-Außenbild mehr, als er nützt.
+Zielgröße für die Frequenz: **ein Beitrag pro Woche** während der Vorlesungszeit,
+seltener in der vorlesungsfreien Zeit. Eine Untergrenze ist bewusst gesetzt: Ein
+Kanal, der über Monate nicht bespielt wird, schadet dem Außenbild mehr, als er
+nützt.
 
 ## 4. Verantwortlichkeiten für die redaktionelle/technische Betreuung
 

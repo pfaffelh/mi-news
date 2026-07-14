@@ -52,8 +52,7 @@ sie inzwischen veraltet oder fehlerhaft sind:
 grep -rn '«' docs/social-media/
 ```
 
-Offen sind noch die redaktionell betreuende Person, die verantwortliche Person
-und die Postingfrequenz.
+Offen sind noch die redaktionell betreuende Person und die verantwortliche Person.
 
 Als Funktionsadresse ist **socialmedia@math.uni-freiburg.de** eingetragen — sie
 ist zugleich die E-Mail, auf der der Instagram-Account läuft, und der öffentliche
