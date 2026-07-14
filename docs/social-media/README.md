@@ -4,7 +4,7 @@ Dieser Ordner enthält Entwürfe der fünf Dokumente, die die Universität Freib
 für einen offiziellen Social-Media-Kanal einer Einrichtung verlangt. Sie müssen
 **vor dem Start** des Accounts sichtbar im Instagram-Profil verlinkt sein
 (in der Praxis: ein Link in der Bio auf eine Sammelseite unter
-`math.uni-freiburg.de`, die auf diese fünf Texte verweist).
+`uni-freiburg.de/math/`, die auf diese fünf Texte verweist).
 
 | Datei | Zweck |
 |---|---|
@@ -14,8 +14,17 @@ für einen offiziellen Social-Media-Kanal einer Einrichtung verlangt. Sie müsse
 | [netiquette.md](netiquette.md) | Verhaltensregeln für Nutzer:innen |
 | [disclaimer.md](disclaimer.md) | Bedeutung von Abos/Likes, Verhältnis zu Meta |
 
-Zusätzlich Pflicht, aber kein eigenes Dokument: ein **Impressum**. Ein Link auf
-das Impressum der Institutshomepage genügt.
+Zusätzlich Pflicht, aber kein eigenes Dokument: ein **Impressum**. Ein Link auf das
+Impressum der Institutshomepage genügt — das ist
+<https://uni-freiburg.de/math/impressum/>. Dort ist als Verantwortlicher bereits
+**Prof. Dr. Thorsten Schmidt** eingetragen, also dieselbe Person, die für den
+Instagram-Kanal die inhaltliche Verantwortung trägt. Es muss dafür nichts
+geändert werden.
+
+**Domain-Hinweis:** `www.math.uni-freiburg.de` liefert einen 301-Redirect auf
+`uni-freiburg.de/math/`. Die Dokumente verwenden deshalb durchgängig die
+kanonische Adresse `https://uni-freiburg.de/math/`. (Die *Mail*-Domain
+`@math.uni-freiburg.de` ist davon unberührt.)
 
 ## Herkunft der Texte
 
@@ -78,21 +87,27 @@ das erst bei der Registrierung; weicht ihr auf einen anderen Handle aus, sind di
 beiden Fundstellen in `nutzungskonzept.md` und `datenschutzerklaerung.md`
 anzupassen.
 
-**Eine inhaltliche Entscheidung ist noch offen: Kommentarfunktion.**
-Die Entwürfe gehen — wie bei der Rechtswissenschaftlichen Fakultät — davon aus,
-dass die **Kommentarfunktion deaktiviert** ist und Instagram als Einweg-Kanal
-genutzt wird. Das senkt den Monitoring-Aufwand und das Risiko in der DSFA
-spürbar. Wollt ihr Kommentare zulassen, müssen Nutzungskonzept und DSFA an den
-markierten Stellen angepasst werden; die Netiquette wird dann deutlich wichtiger,
-und ihr braucht eine feste Zuständigkeit für tägliches Monitoring (die Uni
-verlangt „regelmäßiges Monitoring", um Rechtsverstöße zeitnah zu bemerken).
+**Entschieden: keine Kommentarfunktion.** Instagram wird als Einweg-Kanal genutzt;
+Nutzungskonzept (Abschnitt 1) und DSFA (Abschnitt 2) sagen das so. Wird das später
+geändert, müssen beide Dokumente angepasst werden — die DSFA stützt ihre
+Risikobewertung mit auf die deaktivierten Kommentare, und es bräuchte dann eine
+feste Zuständigkeit für tägliches Monitoring.
+
+**Vor der Vorlage beim Datenschutzbeauftragten bitte bestätigen:** Die
+[Datenschutzerklärung](datenschutzerklaerung.md) enthält in Abschnitt 2 einen
+Absatz zur **Rechtsgrundlage** (Art. 6 Abs. 1 lit. e DSGVO i. V. m. § 4 LDSG BW für
+die Öffentlichkeitsarbeit, Art. 6 Abs. 1 lit. a für Personenfotos). Dieser Absatz
+steht so **nicht** in den Vorlagen der Universität — er ist hier ergänzt worden,
+weil Art. 13 Abs. 1 lit. c DSGVO die Angabe der Rechtsgrundlage verlangt. Fachlich
+ist das die Verbesserung gegenüber der Vorlage; formal ist es eine Abweichung, die
+jemand mit Datenschutz-Zuständigkeit abnicken sollte.
 
 ## Ablauf bis zum Livegang
 
 1. Zustimmung der **Geschäftsführenden Direktion** einholen (ohne sie darf kein
    Account im Namen einer Organisationseinheit eingerichtet werden).
 2. Diese fünf Dokumente finalisieren, von der Institutsleitung freigeben lassen
-   und auf `math.uni-freiburg.de` veröffentlichen.
+   und auf `uni-freiburg.de/math/` veröffentlichen.
 3. Rückfrage an <socialmedia@zv.uni-freiburg.de>: Gibt es eine offizielle Vorlage,
    und genügt die Adaption der zentralen DSFA für eine Einrichtung? Ggf. den
    Datenschutzbeauftragten einbinden.

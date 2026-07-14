@@ -21,12 +21,6 @@ Instagram-Feed lesen können. Vorteile von Instagram sind seine große Reichweit
 und die Nutzung von Hashtags zur thematischen Zuordnung und Suche von Inhalten.
 Mehr Informationen zu Instagram finden Sie hier: <https://www.instagram.com/about/us/>.
 
-> **Entscheidungspunkt Kommentarfunktion.** Dieses Konzept geht davon aus, dass
-> Kommentare deaktiviert sind und Instagram als Einweg-Informationskanal genutzt
-> wird. Sollen Kommentare zugelassen werden, ist dieser Absatz zu ändern und in
-> Abschnitt 4 eine feste Zuständigkeit für das tägliche Monitoring zu benennen;
-> zudem ist die [DSFA](dsfa.md) an den dort markierten Stellen anzupassen.
-
 ## 2. Zweck der Nutzung von Instagram durch das Mathematische Institut
 
 Durch das Instagram-Profil werden die bestehenden Kommunikationskanäle — der
@@ -119,7 +113,7 @@ Wir weisen die Nutzer:innen darauf hin, dass das Instagram-Profil lediglich eine
 **zusätzliche** Option darstellt, um mit dem Mathematischen Institut in Kontakt
 zu treten oder Informationen von diesem zu erhalten. Alle wesentlichen
 Informationen sind auch ohne Instagram-Konto über unser Internet-Angebot unter
-<https://www.math.uni-freiburg.de> abrufbar. Ein Instagram-Konto ist für den
+<https://uni-freiburg.de/math/> abrufbar. Ein Instagram-Konto ist für den
 Kontakt mit dem Institut zu keiner Zeit erforderlich.
 
 Mit allen Anfragen können Sie sich an <socialmedia@math.uni-freiburg.de> wenden.

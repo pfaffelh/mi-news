@@ -16,7 +16,7 @@ Informationen und Veröffentlichungen handelt es sich um ein **freiwilliges
 Zusatzangebot**. Der Besuch unseres Instagram-Profils ist nur für angemeldete
 Nutzer:innen der Plattform Instagram vollständig möglich. Alternativ können Sie
 die über dieses Profil angebotenen studien- oder arbeitsrelevanten Informationen
-auch auf unserem Internet-Angebot unter <https://www.math.uni-freiburg.de>
+auch auf unserem Internet-Angebot unter <https://uni-freiburg.de/math/>
 abrufen.
 
 ## 1. Von Instagram verarbeitete Daten

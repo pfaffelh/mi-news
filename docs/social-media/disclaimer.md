@@ -53,6 +53,6 @@ Privatsphäre vornehmen:
 - keine Freigabe von Standortdaten
 
 Alle über unser Instagram-Profil verbreiteten Informationen sind auch ohne
-Instagram-Konto über <https://www.math.uni-freiburg.de> zugänglich.
+Instagram-Konto über <https://uni-freiburg.de/math/> zugänglich.
 
 Stand: Juli 2026

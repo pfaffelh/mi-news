@@ -124,20 +124,12 @@ Teil schon für Meta verfügbar. Insbesondere entsteht durch das Angebot des
 Instituts **kein Zwang**, einen Instagram-Account zu erstellen, da genügend
 alternative Kontakt- und Informationsmöglichkeiten zum Institut bestehen — alle
 über Instagram verbreiteten Informationen sind auch über
-<https://www.math.uni-freiburg.de> zugänglich.
+<https://uni-freiburg.de/math/> zugänglich.
 
 Risikomindernd wirkt zusätzlich, dass das Institut die **Kommentarfunktion
 deaktiviert** hat. Damit entfällt die Verarbeitung von Kommentardaten ebenso wie
 das Risiko nachteiliger gesellschaftlicher Folgen durch unangebrachte oder
 diskriminierende Kommentare unter den Beiträgen des Instituts.
-
-> **Anpassung bei aktiver Kommentarfunktion.** Werden Kommentare zugelassen, ist
-> dieser Absatz zu streichen und stattdessen — analog zur zentralen Fassung der
-> Universität — aufzunehmen, dass „die Offenheit für Besucher:innen-Beiträge zu
-> nachteiligen gesellschaftlichen Folgen wie unangebrachten oder diskriminierenden
-> Kommentaren oder der Verbreitung sensibler Daten führen“ kann, und als
-> Abhilfemaßnahme das laufende Monitoring durch die Redaktion sowie die
-> [Netiquette](netiquette.md) zu benennen.
 
 ## 3. Risikobewertung
 
