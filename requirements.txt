@@ -6,3 +6,4 @@ extra-streamlit-components==0.1.70
 python-ldap==3.4.4
 translators==5.9.2
 streamlit-image-select==0.6.0
+requests==2.32.3
