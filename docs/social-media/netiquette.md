@@ -60,7 +60,7 @@ geduldet. Ebenso wenig werden sexistische Äußerungen toleriert.
 angegriffen oder beleidigt fühlen, bleiben Sie sachlich und fair. Wenn Sie sich
 nicht richtig behandelt fühlen, können Sie uns gerne darüber informieren — am
 einfachsten mit einer Direktnachricht an die Seitenadministration oder mit einer
-E-Mail an «FUNKTIONS-MAIL».
+E-Mail an <socialmedia@math.uni-freiburg.de>.
 
 ## 6. Sprache
 

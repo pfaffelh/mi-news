@@ -117,8 +117,8 @@ Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO ein.
 
 ## 3. Rechte, Dokumentation, Evaluation
 
-Bei Fragen zu unserem Informationsangebot können Sie uns unter «FUNKTIONS-MAIL»
-erreichen.
+Bei Fragen zu unserem Informationsangebot können Sie uns unter
+<socialmedia@math.uni-freiburg.de> erreichen.
 
 Ihre Rechte auf Auskunft, Berichtigung, Sperrung oder Löschung von Daten sowie
 Ihr Beschwerderecht können Sie gegenüber dem/der **Datenschutzbeauftragten der

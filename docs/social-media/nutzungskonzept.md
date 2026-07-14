@@ -106,8 +106,10 @@ Universität trägt «NAME — in der Regel die Geschäftsführende Direktion de
 Mathematischen Instituts».
 
 Der Account läuft auf die institutionelle Funktions-Mailadresse
-«FUNKTIONS-MAIL, z. B. socialmedia@math.uni-freiburg.de» und nicht auf eine
-private Adresse. Accounts, die im Namen einer Organisationseinheit eingerichtet
+<socialmedia@math.uni-freiburg.de> und nicht auf eine private Adresse. Diese
+Adresse ist ein Verteiler mit mindestens zwei Empfänger:innen, damit weder die
+Account-Wiederherstellung noch der Datenschutz-Kontakt an einer einzelnen Person
+hängt. Accounts, die im Namen einer Organisationseinheit eingerichtet
 werden, gehören der Universität; beim Ausscheiden der betreuenden Person werden
 die Administrationsrechte an die/den Vorgesetzte:n übergeben.
 
@@ -120,7 +122,8 @@ Informationen sind auch ohne Instagram-Konto über unser Internet-Angebot unter
 <https://www.math.uni-freiburg.de> abrufbar. Ein Instagram-Konto ist für den
 Kontakt mit dem Institut zu keiner Zeit erforderlich.
 
-Mit allen Anfragen können Sie sich an «FUNKTIONS-MAIL» wenden. Für Fragen zum
+Mit allen Anfragen können Sie sich an <socialmedia@math.uni-freiburg.de> wenden.
+Für Fragen zum
 Studium wenden Sie sich bitte an die Studienberatung des Instituts.
 
 ## 6. Selbstverpflichtung

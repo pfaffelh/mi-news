@@ -52,8 +52,22 @@ sie inzwischen veraltet oder fehlerhaft sind:
 grep -rn '«' docs/social-media/
 ```
 
-Offen sind noch die Funktions-Mailadresse für Social Media, die redaktionell
-betreuende Person, die verantwortliche Person und die Postingfrequenz.
+Offen sind noch die redaktionell betreuende Person, die verantwortliche Person
+und die Postingfrequenz.
+
+Als Funktionsadresse ist **socialmedia@math.uni-freiburg.de** eingetragen — sie
+ist zugleich die E-Mail, auf der der Instagram-Account läuft, und der öffentliche
+Kontakt in Datenschutzerklärung und Netiquette. Sie sollte ein **Verteiler mit
+mindestens zwei Empfänger:innen** sein, damit weder Account-Wiederherstellung noch
+Datenschutz-Kontakt an einer einzelnen Person hängen.
+
+Im **Anmeldeformular** der Universität ist diese Adresse dagegen *nicht* das, was
+gefragt ist: Dort werden für die betreuende und die verantwortliche Person Name,
+Funktion, E-Mail **und Telefon** verlangt, also erreichbare Personen. Betreuende
+Person = die Person, die tatsächlich postet, mit ihrer persönlichen Uni-Adresse;
+verantwortliche Person = Geschäftsführende Direktion mit der bestehenden
+Direktionsadresse. Eine eigene Funktionsadresse für die Verantwortlichkeit wird
+nicht angelegt.
 
 **Der Handle ist vorläufig auf `@math_uni_freiburg` gesetzt** — analog zum
 Namensschema der Rechtswissenschaftlichen Fakultät (`@jura_uni_freiburg`). Vor
