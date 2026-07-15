@@ -37,9 +37,15 @@ ufr_schwarz = "#000000"       # offiziell reines Schwarz (war fälschlich #2A2A2
 ufr_weiss = "#FFFFFF"
 
 # Die Hausschrift der CD-Vorlagen ist Arial (LaTeX-Vorlage: \usepackage{helvet}).
-# Arimo ist metrisch identisch und frei lizenziert — deshalb kein Lizenzproblem.
-ig_font_regular = "/usr/share/fonts/truetype/croscore/Arimo-Regular.ttf"
-ig_font_bold = "/usr/share/fonts/truetype/croscore/Arimo-Bold.ttf"
+# Arimo ist metrisch identisch und frei lizenziert (SIL Open Font License).
+#
+# Die Schrift liegt IM Repo (static/fonts/), nicht als System-Paket: Auf www2
+# ist fonts-croscore nicht installiert, und Pillows eingebaute Ersatzschrift hat
+# keine deutschen Umlaute — ä/ö/ü/ß erschienen dort als leere Kästchen. Gebündelt
+# wird die Schrift per rsync mitdeployt und ist überall verfügbar. Relativer
+# Pfad wie bei den Logos (App läuft aus dem Repo-Wurzelverzeichnis).
+ig_font_regular = "static/fonts/Arimo-Regular.ttf"
+ig_font_bold = "static/fonts/Arimo-Bold.ttf"
 
 # Zulässige Instagram-Formate für Feed-Posts (Breite × Höhe in px).
 # Erlaubt ist alles zwischen 4:5 (hoch) und 1.91:1 (quer).

@@ -7,3 +7,4 @@
 /mongo/*_backup*
 *.log
 # Zugangsdaten liegen ausserhalb des Repos (siehe misc/config.py, netrc.example).
+/bin/__pycache__/
