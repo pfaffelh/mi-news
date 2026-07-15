@@ -42,7 +42,12 @@ with col3:
     with st.popover("Post löschen"):
         st.write("Eintrag wirklich löschen?")
         if st.button("Ja", type="primary", key=f"delete-{x['_id']}"):
-            tools.delete_item_update_dependent_items(collection, x["_id"])
+            # switch=False, damit nicht die generische Weiterleitung auf die
+            # News-Seite (reset_vars -> 00_New.py) greift. Stattdessen zurück
+            # zur Instagram-Übersicht.
+            tools.delete_item_update_dependent_items(collection, x["_id"], switch=False)
+            st.session_state.edit = ""
+            st.switch_page("pages/09_Instagram.py")
         st.button("Nein", on_click=st.success, args=("Nicht gelöscht!",),
                   key=f"not-deleted-{x['_id']}")
 
