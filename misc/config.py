@@ -25,12 +25,15 @@ alltags = ["Monitor", "Lehre", "Institut"]
 
 # ----------------------------------------------------------------- Instagram --
 
-# Farben aus dem Corporate Design der Universität (Slide-Master von
-# poster-A3.potx, cd.uni-freiburg.de). Achtung: Das Theme in mi-hp verwendet
-# #34499a; verbindlich ist der Wert hier aus der offiziellen Vorlage.
-ufr_blau = "#344A9A"
-ufr_gelb = "#FFE863"
-ufr_schwarz = "#2A2A2A"
+# Farben aus dem Corporate Design der Universität (offizielle Farbvorgaben,
+# cd.uni-freiburg.de). HEX-Werte 1:1 aus dem CD-Dokument "Corporate Design
+# Farbvorgaben".
+ufr_blau = "#344A9A"          # Hauptfarbe Blau 100 %
+ufr_dunkelblau = "#00004A"    # Nachtblau — Schrift auf hellen Flächen
+ufr_gelb = "#FFE863"          # Zusatzfarbe Schwefelgelb
+ufr_gruen = "#00A082"         # Zusatzfarbe Türkisgrün
+ufr_sand = "#F6F1E3"          # Hintergrundfarbe Sand (wärmer als Weiß)
+ufr_schwarz = "#000000"       # offiziell reines Schwarz (war fälschlich #2A2A2A)
 ufr_weiss = "#FFFFFF"
 
 # Die Hausschrift der CD-Vorlagen ist Arial (LaTeX-Vorlage: \usepackage{helvet}).
@@ -59,8 +62,26 @@ ig_hashtags_default = ["#unifreiburg", "#mathematik"]
 
 # Steht unter der Wortmarke. Die Wortmarke allein sagt nur "Albert-Ludwigs-
 # Universität Freiburg" — im CD wird die Einrichtung darunter genannt, sonst
-# sieht der Post aus, als poste die Universität.
-ig_einrichtung = "Mathematisches Institut"
+# sieht der Post aus, als poste die Universität. Zweisprachig, passend zum
+# zweisprachigen Kanal (deutscher BSc, englischer MSc).
+ig_einrichtung = {
+    "de": "Mathematisches Institut",
+    "en": "Mathematical Institute",
+}
+
+# CD-Assets (aus dem offiziellen Vorlagen-Kit, cd.uni-freiburg.de):
+#   Logo (Wortmarke "universität freiburg") in drei Farben, transparent
+#   Siegel als dezentes Wasserzeichen
+#   Blatt = Vierblatt-Gestaltungselement, weiße Silhouette zum Einfärben
+ig_logo = {
+    "blau": "static/ufr-logo-blau.png",
+    "weiss": "static/ufr-logo-weiss.png",
+    "schwarz": "static/ufr-logo-schwarz.png",
+}
+# Siegel-Linien als transparente Silhouette (aus dem deckenden Original
+# extrahiert), damit es sich auf jedem Hintergrund tonal einfärben lässt.
+ig_siegel = "static/ufr-siegel-linien.png"
+ig_blatt = "static/ufr-blatt.png"
 
 # --- Zugangsdaten -------------------------------------------------------------
 #

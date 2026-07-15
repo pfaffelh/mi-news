@@ -34,50 +34,92 @@ from PIL import Image, ImageDraw, ImageFont
 
 from misc.config import (
     ig_api_host,
+    ig_blatt,
     ig_caption_maxlen,
     ig_einrichtung,
     ig_font_bold,
     ig_font_regular,
     ig_hashtag_max,
     ig_hashtags_default,
+    ig_logo,
     ig_min_source_px,
     ig_netrc_machine,
     ig_ratio_default,
     ig_ratios,
+    ig_siegel,
     ig_token_file,
     netrc_file,
     ufr_blau,
+    ufr_dunkelblau,
     ufr_gelb,
-    ufr_schwarz,
+    ufr_sand,
     ufr_weiss,
 )
 
-# Die drei CD-Varianten für Standard-Bilder. Jede legt Hintergrund, Textfarbe
-# und die passende Wortmarke fest — die Redaktion wählt nur den Namen.
+# Die CD-Varianten für Standard-Bilder. Jede legt Hintergrund, Textfarbe, Logo-
+# und Blattfarbe fest — die Redaktion wählt nur den Namen.
 #
-# Die Wortmarke der Universität ist blau (#344A9A), nicht schwarz; es gibt sie
-# nur in Blau und in Weiß. Auf Gelb und Weiß steht die blaue, auf Blau die weiße.
+# Das Logo der Universität gibt es in Blau (#344A9A), Weiß und Schwarz. Auf
+# hellen Flächen steht das blaue, auf Blau das weiße. Schrift auf hellen Flächen
+# ist Nachtblau (#00004A), auf Blau weiß.
+# Blatt und Siegel werden NICHT in einer Komplementärfarbe halbtransparent
+# gezeichnet — Blau bei 55 % über Gelb ergibt grauen Matsch. Stattdessen ein
+# **deckender Ton des Hintergrunds** (Hintergrund Richtung Textfarbe gemischt).
+# Das ist zugleich der CD-Ansatz: die Gestaltungselemente sind Tonabstufungen,
+# keine Fremdfarben.
 VARIANTEN = {
     "gelb": {
         "label": "Gelb",
         "bg": ufr_gelb,
-        "fg": ufr_schwarz,
-        "logo": "static/ufr-wortmarke-blau.png",
+        "fg": ufr_dunkelblau,
+        "logo": ig_logo["blau"],
     },
     "blau": {
         "label": "Blau",
         "bg": ufr_blau,
         "fg": ufr_weiss,
-        "logo": "static/ufr-wortmarke-weiss.png",
+        "logo": ig_logo["weiss"],
     },
     "weiss": {
         "label": "Weiß",
         "bg": ufr_weiss,
         "fg": ufr_blau,
-        "logo": "static/ufr-wortmarke-blau.png",
+        "logo": ig_logo["blau"],
+    },
+    "sand": {
+        "label": "Sand",
+        "bg": ufr_sand,
+        "fg": ufr_blau,
+        "logo": ig_logo["blau"],
     },
 }
 VARIANTE_DEFAULT = "gelb"
+
+
+def _hex_rgb(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def _mische(a, b, t):
+    """Farbe a nach b mischen (t=0 -> a, t=1 -> b)."""
+    ra, rb = _hex_rgb(a), _hex_rgb(b)
+    return tuple(round(ra[i] + (rb[i] - ra[i]) * t) for i in range(3))
+
+
+def _tint(silhouette_pfad, farbe, alpha):
+    """Weiße Silhouette (Blatt/Siegel) in `farbe` einfärben, mit `alpha` (0..1).
+
+    Gibt ein RGBA-Bild zurück, dessen Deckung sich nach der Silhouette und dem
+    Alpha richtet — so lässt sich dieselbe Datei als kräftiger Akzent oder als
+    dezentes Wasserzeichen verwenden.
+    """
+    sil = Image.open(silhouette_pfad).convert("RGBA")
+    r, g, b = _hex_rgb(farbe) if isinstance(farbe, str) else farbe
+    farbschicht = Image.new("RGBA", sil.size, (r, g, b, 0))
+    a = sil.getchannel("A").point(lambda v: round(v * alpha))
+    farbschicht.putalpha(a)
+    return farbschicht
 
 
 # ---------------------------------------------------------------- Caption ----
@@ -199,8 +241,12 @@ def _passende_groesse(draw, text, pfad, max_breite, max_hoehe, start, minimum=28
 
 
 def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
-                    ratio=ig_ratio_default):
-    """CD-Hintergrund mit Wortmarke, Überschrift und Unterzeile rendern.
+                    ratio=ig_ratio_default, lang="de"):
+    """CD-Hintergrund mit Logo, Institutsname, Überschrift und Unterzeile.
+
+    Enthält die CD-Gestaltungselemente: das Siegel als dezentes Wasserzeichen
+    unten rechts und die Vierblatt-Form als Akzent oben rechts. Der
+    Institutsname ist zweisprachig (`lang` = "de"/"en").
 
     Gibt (PIL.Image, warnungen) zurück — exakt das Bild, das gepostet würde.
     """
@@ -209,10 +255,31 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
     warnungen = []
 
     bild = Image.new("RGB", (breite, hoehe), v["bg"])
-    draw = ImageDraw.Draw(bild)
 
     rand = round(breite * 0.09)
     inhalt_breite = breite - 2 * rand
+
+    # --- Siegel als Wasserzeichen: unten rechts, über den Rand hinaus, sehr
+    # dezent. Deckender Ton, nur leicht vom Hintergrund abgesetzt.
+    try:
+        siegel_farbe = _mische(v["bg"], v["fg"], 0.10)
+        sg = round(breite * 0.85)
+        siegel = _tint(ig_siegel, siegel_farbe, 1.0).resize((sg, sg), Image.LANCZOS)
+        bild.paste(siegel, (breite - round(sg * 0.72), hoehe - round(sg * 0.72)), siegel)
+    except OSError:
+        pass  # ohne Siegel ist der Post immer noch gültig
+
+    # --- Vierblatt-Akzent: oben rechts, über den Rand hinaus. Etwas kräftiger
+    # als das Siegel, aber ebenfalls ein deckender Ton — nie halbtransparent.
+    try:
+        blatt_farbe = _mische(v["bg"], v["fg"], 0.20)
+        bg = round(breite * 0.42)
+        blatt = _tint(ig_blatt, blatt_farbe, 1.0).resize((bg, bg), Image.LANCZOS)
+        bild.paste(blatt, (breite - round(bg * 0.55), -round(bg * 0.30)), blatt)
+    except OSError:
+        pass
+
+    draw = ImageDraw.Draw(bild)
 
     if not font_verfuegbar():
         warnungen.append(
@@ -220,11 +287,11 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
             "wird mit einer Notschrift gerendert und entspricht nicht dem CD."
         )
 
-    # Wortmarke oben links, auf 55 % der Inhaltsbreite.
+    # Logo oben links, auf 50 % der Inhaltsbreite.
     y = rand
     try:
         logo = Image.open(v["logo"]).convert("RGBA")
-        logo_breite = round(inhalt_breite * 0.55)
+        logo_breite = round(inhalt_breite * 0.50)
         logo = logo.resize(
             (logo_breite, round(logo.height * logo_breite / logo.width)),
             Image.LANCZOS,
@@ -233,16 +300,17 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
         y += logo.height
     except OSError:
         warnungen.append(
-            "Die Wortmarke wurde nicht gefunden (static/ufr-wortmarke-*.png). "
+            "Das Logo wurde nicht gefunden (static/ufr-logo-*.png). "
             "Das Bild wird ohne Logo gerendert."
         )
 
-    # Einrichtung unter die Wortmarke — sonst sieht der Post aus, als poste die
-    # Universität und nicht das Institut.
-    if ig_einrichtung:
+    # Einrichtung unter das Logo — sonst sieht der Post aus, als poste die
+    # Universität und nicht das Institut. Zweisprachig je nach `lang`.
+    name = ig_einrichtung.get(lang) or ig_einrichtung["de"]
+    if name:
         font_e = _font(ig_font_bold, round(hoehe * 0.032))
         y += round(hoehe * 0.018)
-        draw.text((rand, y), ig_einrichtung, font=font_e, fill=v["fg"])
+        draw.text((rand, y), name, font=font_e, fill=v["fg"])
         y += round(font_e.size * 1.25)
 
     kopf_unterkante = y + round(hoehe * 0.05)
@@ -353,6 +421,7 @@ def render(post, bild_data=None):
         post.get("subline", ""),
         variante=post.get("variante", VARIANTE_DEFAULT),
         ratio=post.get("ratio", ig_ratio_default),
+        lang=post.get("lang", "de"),
     )
 
 

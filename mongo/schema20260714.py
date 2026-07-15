@@ -30,8 +30,12 @@ instapost_validator = {
                 "description": "Woher das Bild kommt -- required"
             },
             "variante": {
-                "enum": ["gelb", "blau", "weiss"],
+                "enum": ["gelb", "blau", "weiss", "sand"],
                 "description": "CD-Farbvariante, nur bei bildtyp 'standard'"
+            },
+            "lang": {
+                "enum": ["de", "en"],
+                "description": "Sprache des Institutsnamens auf dem Standard-Bild"
             },
             "headline": {
                 "bsonType": "string",

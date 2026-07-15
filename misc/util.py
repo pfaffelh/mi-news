@@ -192,6 +192,7 @@ def setup_session_state():
             "titel": "",             # nur intern, für die Liste
             "bildtyp": "standard",   # "standard" (CD-Hintergrund) | "bild"
             "variante": "gelb",      # bei bildtyp "standard"
+            "lang": "de",            # Sprache des Institutsnamens: "de" | "en"
             "headline": "",
             "subline": "",
             "image_id": None,        # bei bildtyp "bild"

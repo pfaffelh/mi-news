@@ -84,24 +84,37 @@ with links:
     )
 
     variante = x.get("variante", insta.VARIANTE_DEFAULT)
+    lang = x.get("lang", "de")
     headline = x.get("headline", "")
     subline = x.get("subline", "")
     image_id = x.get("image_id")
     fit = x.get("fit", "cover")
 
     if bildtyp == "standard":
-        varianten = list(insta.VARIANTEN.keys())
-        variante = st.radio(
-            "Farbe", varianten,
-            index=varianten.index(variante) if variante in varianten else 0,
-            format_func=lambda v: insta.VARIANTEN[v]["label"],
-            horizontal=True,
-        )
+        c_farbe, c_lang = st.columns([2, 1])
+        with c_farbe:
+            varianten = list(insta.VARIANTEN.keys())
+            variante = st.radio(
+                "Farbe", varianten,
+                index=varianten.index(variante) if variante in varianten else 0,
+                format_func=lambda v: insta.VARIANTEN[v]["label"],
+                horizontal=True,
+            )
+        with c_lang:
+            lang = st.radio(
+                "Sprache (Institutsname)", ["de", "en"],
+                index=0 if lang == "de" else 1,
+                format_func=lambda l: {"de": "Deutsch", "en": "English"}[l],
+                horizontal=True,
+                help="Bestimmt, ob „Mathematisches Institut“ oder „Mathematical "
+                     "Institute“ auf dem Bild steht.",
+            )
         headline = st.text_area("Überschrift", headline, height=80)
         subline = st.text_area("Unterzeile", subline, height=80)
         st.caption(
-            "Die Schriftgröße passt sich automatisch an die Textlänge an. "
-            "Die Wortmarke und „Mathematisches Institut“ stehen immer oben."
+            "Die Schriftgröße passt sich automatisch an die Textlänge an. Logo, "
+            "Institutsname und die CD-Gestaltungselemente (Siegel, Vierblatt) "
+            "werden automatisch gesetzt."
         )
     else:
         bilder = list(st.session_state.bild.find({"menu": True},
@@ -145,7 +158,7 @@ with links:
 # --- Vorschau -----------------------------------------------------------------
 
 post = {
-    "bildtyp": bildtyp, "variante": variante, "headline": headline,
+    "bildtyp": bildtyp, "variante": variante, "lang": lang, "headline": headline,
     "subline": subline, "image_id": image_id, "fit": fit, "ratio": ratio,
 }
 
@@ -197,9 +210,10 @@ with c1:
             collection, x,
             {
                 "titel": titel, "bildtyp": bildtyp, "variante": variante,
-                "headline": headline, "subline": subline, "image_id": image_id,
-                "fit": fit, "ratio": ratio, "caption": caption,
-                "kommentar": kommentar, "bearbeitet": bearbeitet,
+                "lang": lang, "headline": headline, "subline": subline,
+                "image_id": image_id, "fit": fit, "ratio": ratio,
+                "caption": caption, "kommentar": kommentar,
+                "bearbeitet": bearbeitet,
             },
             False, "🎉 Entwurf gespeichert!",
         )
