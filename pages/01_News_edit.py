@@ -108,19 +108,25 @@ if st.session_state.logged_in:
                 st.button(label="Abbrechen", on_click = st.success, args=("Nicht kopiert!",), key = f"not-copied-{x['_id']}")
 
     with col4:
-        # Legt einen neuen, eigenständigen Instagram-Post an, vorbelegt aus dieser
-        # News (Titel als Überschrift, Caption aus Titel + Text), und springt in
-        # den Instagram-Editor. Verwendet die gespeicherte News.
-        if st.button('Insta Post erzeugen', key=f"insta-{x['_id']}",
-                     help="Erzeugt einen neuen Instagram-Post aus dieser News und "
-                          "öffnet den Editor. Bild und Text sind danach frei "
-                          "änderbar."):
+        # Zwei gestapelte Buttons: erzeugen je einen neuen, eigenständigen
+        # Instagram-Post aus dieser News, vorbelegt in der gewählten Sprache
+        # (Überschrift und Caption aus title_{lang}/text_{lang}, Institutsname
+        # de/en), und springen in den Instagram-Editor. Bild und Text sind
+        # danach frei änderbar.
+        def _insta_aus_news(lang):
             st.session_state.expanded = ""
             tools.new(
                 st.session_state.instapost,
-                ini={**insta.prefill_from_news(x), "bearbeitet": bearbeitet},
+                ini={**insta.prefill_from_news(x, lang), "bearbeitet": bearbeitet},
                 text="🎉 Instagram-Post aus News erzeugt!",
             )
+
+        if st.button('Insta Post (deutsch)', key=f"insta-de-{x['_id']}",
+                     help="Neuer Instagram-Post, deutsch vorbelegt."):
+            _insta_aus_news("de")
+        if st.button('Insta Post (englisch)', key=f"insta-en-{x['_id']}",
+                     help="Neuer Instagram-Post, englisch vorbelegt."):
+            _insta_aus_news("en")
 
     with col5:
         with st.popover('News löschen'):
