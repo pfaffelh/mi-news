@@ -223,7 +223,11 @@ def _font(pfad, groesse):
     try:
         return ImageFont.truetype(pfad, groesse)
     except OSError:
-        return ImageFont.load_default()
+        # Fehlt die Datei, liefert truetype in aktuellem Pillow schon selbst eine
+        # skalierbare Ersatzschrift; dieser Zweig greift nur bei älterem Pillow.
+        # Dort MUSS die Größe mitgegeben werden — load_default() ohne Größe wäre
+        # eine feste 10-px-Schrift (winziger, unlesbarer Text).
+        return ImageFont.load_default(size=groesse)
 
 
 def font_verfuegbar():
