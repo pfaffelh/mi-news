@@ -187,6 +187,8 @@ def display_navigation():
     # st.sidebar.page_link("pages/02_Carouselnews.py", label="Carouselnews")
     st.sidebar.page_link("pages/04_Bild.py", label="Bilder")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
+    st.sidebar.page_link("pages/09_Instagram.py", label="Instagram")
+    st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/06_Wochenprogramm.py", label="Wochenprogramm")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/08_Dokumentation.py", label="Dokumentation")
@@ -210,6 +212,12 @@ def repr(collection, id, short = False, show_collection = True):
         res = x['text'][0:50]
     elif collection == st.session_state.bild:
         res = x['titel']
+    elif collection == st.session_state.instapost:
+        res = x['titel'] or x['headline'] or "(ohne Titel)"
+        if x.get("status") == "veroeffentlicht":
+            res = f"{res} ✅"
+        elif x.get("status") == "fehler":
+            res = f"{res} ⚠️"
     elif collection == st.session_state.vortragsreihe:
         res = x['kurzname'] if short else (x['title_de'] if x['title_de']!="" else x['title_en'])
     elif collection == st.session_state.vortrag:

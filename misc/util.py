@@ -43,6 +43,9 @@ def setup_session_state():
         st.session_state.news = mongo_db["news"]
         st.session_state.vortragsreihe = mongo_db["vortragsreihe"]
         st.session_state.vortrag = mongo_db["vortrag"]
+        # Instagram-Posts sind eigenständig: Bild und Text sind in der Regel
+        # andere als in einer News, die Beschreibung ist meist länger.
+        st.session_state.instapost = mongo_db["instapost"]
 
         # ids von nicht-editierbaren Kurznamen — einmal pro Session.
         if "nonedit_ids" not in st.session_state:
@@ -100,7 +103,11 @@ def setup_session_state():
         st.session_state.news: "News",
         st.session_state.carouselnews: "Carouselnews",
         st.session_state.vortragsreihe: "Vortragsreihe",
-        st.session_state.vortrag: "Vortrag"
+        st.session_state.vortrag: "Vortrag",
+        # Muss zum Dateinamen der Edit-Seite passen: tools.new() springt per
+        # switch_page(f"{name.lower()} edit") -> "instagram edit" ->
+        # pages/10_Instagram_edit.py
+        st.session_state.instapost: "Instagram"
     }
 
     # leer: zwei find_one auf praktisch unveränderliche Anker-Datensätze.
@@ -181,6 +188,24 @@ def setup_session_state():
             "bearbeitet" : "",
             "kommentar" : ""
         },
+        st.session_state.instapost: {
+            "titel": "",             # nur intern, für die Liste
+            "bildtyp": "standard",   # "standard" (CD-Hintergrund) | "bild"
+            "variante": "gelb",      # bei bildtyp "standard"
+            "lang": "de",            # Sprache des Institutsnamens: "de" | "en"
+            "headline": "",
+            "subline": "",
+            "image_id": None,        # bei bildtyp "bild"
+            "fit": "cover",
+            "ratio": "4:5",
+            "caption": "",           # Beschreibung des Posts, darf lang sein
+            "status": "entwurf",     # "entwurf" | "veroeffentlicht" | "fehler"
+            "ig_media_id": "",
+            "published_at": None,
+            "last_error": "",
+            "bearbeitet": "",
+            "kommentar": ""
+        },
         st.session_state.vortrag: {
             "vortragsreihe" : [],
             "sprecher" : "",
@@ -209,9 +234,11 @@ def setup_session_state():
     st.session_state.abhaengigkeit = {
         st.session_state.bild: [
             {"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
-            {"collection": st.session_state.news, "field": "image", "list": True, "key": "_id"}],
+            {"collection": st.session_state.news, "field": "image", "list": True, "key": "_id"},
+            {"collection": st.session_state.instapost, "field": "image_id", "list": False}],
         st.session_state.news: [],
         st.session_state.carouselnews: [],
+        st.session_state.instapost: [],
         st.session_state.vortragsreihe: [
             {"collection": st.session_state.vortrag, "field": "vortragsreihe", "list": True}],
         st.session_state.vortrag: []
@@ -224,6 +251,7 @@ _news_db = get_mongo_client()["news"]
 bild = _news_db["bild"]
 carouselnews = _news_db["carouselnews"]
 news = _news_db["news"]
+instapost = _news_db["instapost"]
 vortragsreihe = _news_db["vortragsreihe"]
 vortrag = _news_db["vortrag"]
 
