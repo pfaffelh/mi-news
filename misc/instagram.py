@@ -50,7 +50,6 @@ from misc.config import (
     ig_token_file,
     netrc_file,
     ufr_blau,
-    ufr_dunkelblau,
     ufr_gelb,
     ufr_sand,
     ufr_weiss,
@@ -71,7 +70,7 @@ VARIANTEN = {
     "gelb": {
         "label": "Gelb",
         "bg": ufr_gelb,
-        "fg": ufr_dunkelblau,
+        "fg": ufr_blau,           # gleich wie das blaue Logo — einheitlich
         "logo": ig_logo["blau"],
     },
     "blau": {
@@ -291,6 +290,10 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
     y = rand
     try:
         logo = Image.open(v["logo"]).convert("RGBA")
+        # Auf den sichtbaren Schriftzug zuschneiden: Die Logodatei hat ~6,5 %
+        # transparenten Rand links. Ohne Zuschnitt stünde der Institutsname (der
+        # bei x=rand beginnt) weiter links als der sichtbare Schriftzug.
+        logo = logo.crop(logo.getbbox())
         logo_breite = round(inhalt_breite * 0.50)
         logo = logo.resize(
             (logo_breite, round(logo.height * logo_breite / logo.width)),
