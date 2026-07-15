@@ -46,6 +46,16 @@ with col3:
         st.button("Nein", on_click=st.success, args=("Nicht gelöscht!",),
                   key=f"not-deleted-{x['_id']}")
 
+st.info(
+    "**„Link in Bio“:** Links im Post-Text sind auf Instagram **nicht "
+    "anklickbar** — nur @Erwähnungen und #Hashtags werden verlinkt. Der einzige "
+    "klickbare Link im ganzen Account steht in der **Profil-Bio** von "
+    "[@math_uni_freiburg](https://www.instagram.com/math_uni_freiburg/) und gilt "
+    "für alle Posts gleich. Schreibe im Text also „Mehr Infos: Link in Bio“ statt "
+    "einer URL. Die Bio wird direkt in der Instagram-App gepflegt (Profil "
+    "bearbeiten), nicht hier."
+)
+
 if veroeffentlicht:
     pa = x.get("published_at")
     st.success(
