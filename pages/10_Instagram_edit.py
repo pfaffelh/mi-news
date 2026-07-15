@@ -84,15 +84,10 @@ with links:
         help="4:5 nutzt im Feed die größte Fläche und ist die übliche Wahl.",
     )
 
-    bildtyp = st.radio(
-        "Bildquelle", ["standard", "bild"],
-        index=0 if x.get("bildtyp", "standard") == "standard" else 1,
-        format_func=lambda t: {
-            "standard": "Standard-Bild (Uni-Hintergrund mit Text)",
-            "bild": "Eigenes Bild aus der Bild-Sammlung",
-        }[t],
-    )
-
+    # Zurzeit nur Standard-Bilder (CD-Hintergrund mit Text). Die Auswahl der
+    # Bildquelle ist bewusst ausgeblendet; die Code-Pfade für eigene Bilder
+    # (render_bild, image_id, fit) bleiben im Modul erhalten für später.
+    bildtyp = "standard"
     variante = x.get("variante", insta.VARIANTE_DEFAULT)
     lang = x.get("lang", "de")
     headline = x.get("headline", "")
@@ -100,54 +95,31 @@ with links:
     image_id = x.get("image_id")
     fit = x.get("fit", "cover")
 
-    if bildtyp == "standard":
-        c_farbe, c_lang = st.columns([2, 1])
-        with c_farbe:
-            varianten = list(insta.VARIANTEN.keys())
-            variante = st.radio(
-                "Farbe", varianten,
-                index=varianten.index(variante) if variante in varianten else 0,
-                format_func=lambda v: insta.VARIANTEN[v]["label"],
-                horizontal=True,
-            )
-        with c_lang:
-            lang = st.radio(
-                "Sprache (Institutsname)", ["de", "en"],
-                index=0 if lang == "de" else 1,
-                format_func=lambda l: {"de": "Deutsch", "en": "English"}[l],
-                horizontal=True,
-                help="Bestimmt, ob „Mathematisches Institut“ oder „Mathematical "
-                     "Institute“ auf dem Bild steht.",
-            )
-        headline = st.text_area("Überschrift", headline, height=80)
-        subline = st.text_area("Unterzeile", subline, height=80)
-        st.caption(
-            "Die Schriftgröße passt sich automatisch an die Textlänge an. Logo, "
-            "Institutsname und die CD-Gestaltungselemente (Siegel, Vierblatt) "
-            "werden automatisch gesetzt."
+    c_farbe, c_lang = st.columns([2, 1])
+    with c_farbe:
+        varianten = list(insta.VARIANTEN.keys())
+        variante = st.radio(
+            "Farbe", varianten,
+            index=varianten.index(variante) if variante in varianten else 0,
+            format_func=lambda v: insta.VARIANTEN[v]["label"],
+            horizontal=True,
         )
-    else:
-        bilder = list(st.session_state.bild.find({"menu": True},
-                                                 sort=[("rang", pymongo.ASCENDING)]))
-        if bilder:
-            ids = [b["_id"] for b in bilder]
-            idx = ids.index(image_id) if image_id in ids else 0
-            gewaehlt = st.selectbox(
-                "Bild", bilder, index=idx,
-                format_func=lambda b: b["titel"] or b["filename"],
-            )
-            image_id = gewaehlt["_id"]
-        else:
-            st.warning("Es sind keine Bilder in der Bild-Sammlung vorhanden.")
-            image_id = None
-        fit = st.radio(
-            "Zuschnitt", ["cover", "contain"],
-            index=0 if fit == "cover" else 1,
-            format_func=lambda f: {
-                "cover": "Formatfüllend (schneidet Ränder ab)",
-                "contain": "Vollständig sichtbar (mit Rand)",
-            }[f],
+    with c_lang:
+        lang = st.radio(
+            "Sprache (Institutsname)", ["de", "en"],
+            index=0 if lang == "de" else 1,
+            format_func=lambda l: {"de": "Deutsch", "en": "English"}[l],
+            horizontal=True,
+            help="Bestimmt, ob „Mathematisches Institut“ oder „Mathematical "
+                 "Institute“ auf dem Bild steht.",
         )
+    headline = st.text_area("Überschrift", headline, height=80)
+    subline = st.text_area("Unterzeile", subline, height=80)
+    st.caption(
+        "Die Schriftgröße passt sich automatisch an die Textlänge an. Logo, "
+        "Institutsname und die CD-Gestaltungselemente (Siegel, Vierblatt) "
+        "werden automatisch gesetzt."
+    )
 
     st.markdown("### Beschreibung")
 
@@ -162,6 +134,14 @@ with links:
                f"{n_hashtags} / {ig_hashtag_max} Hashtags")
     for p in probleme:
         st.error(p)
+
+    st.caption(
+        "**Sinnvolle Erwähnungen:** @unifreiburg (zentrale Uni) und "
+        "@fsmathefreiburg (Fachschaft) — Institutionen erwähnen ist unkritisch "
+        "und gut für die Reichweite. **Personen** (z. B. „@… wir gratulieren“) "
+        "nur mit deren Einwilligung markieren — eine @Erwähnung ist eine "
+        "Datenverarbeitung im Sinne der DSFA."
+    )
 
     kommentar = st.text_input("Interner Kommentar", x.get("kommentar", ""))
 

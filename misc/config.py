@@ -58,7 +58,7 @@ ig_caption_maxlen = 2200
 ig_hashtag_max = 30
 
 # Vorschlag, den die Redaktion im Editor überschreiben kann.
-ig_hashtags_default = ["#unifreiburg", "#mathematik"]
+ig_hashtags_default = ["#mathematik", "#unifreiburg"]
 
 # Steht unter der Wortmarke. Die Wortmarke allein sagt nur "Albert-Ludwigs-
 # Universität Freiburg" — im CD wird die Einrichtung darunter genannt, sonst
