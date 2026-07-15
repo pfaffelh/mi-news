@@ -20,6 +20,7 @@ init_css()
 from misc.config import *
 import misc.util as util
 import misc.tools as tools
+import misc.instagram as insta
 
 # Navigation in Sidebar anzeigen
 tools.display_navigation()
@@ -58,7 +59,7 @@ if st.session_state.logged_in:
         st.write(f"[Veröffentlichte Ansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/de/{t})")
         st.write(f"[Veröffentlichte Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
     
-    col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+    col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])
 
     with col1:
         if st.button("Zurück (ohne Speichern)"):
@@ -103,10 +104,25 @@ if st.session_state.logged_in:
                     st.session_state.expanded = "grunddaten"            
                     tools.new(collection, new)
 
-            with colu2: 
+            with colu2:
                 st.button(label="Abbrechen", on_click = st.success, args=("Nicht kopiert!",), key = f"not-copied-{x['_id']}")
 
     with col4:
+        # Legt einen neuen, eigenständigen Instagram-Post an, vorbelegt aus dieser
+        # News (Titel als Überschrift, Caption aus Titel + Text), und springt in
+        # den Instagram-Editor. Verwendet die gespeicherte News.
+        if st.button('Insta Post erzeugen', key=f"insta-{x['_id']}",
+                     help="Erzeugt einen neuen Instagram-Post aus dieser News und "
+                          "öffnet den Editor. Bild und Text sind danach frei "
+                          "änderbar."):
+            st.session_state.expanded = ""
+            tools.new(
+                st.session_state.instapost,
+                ini={**insta.prefill_from_news(x), "bearbeitet": bearbeitet},
+                text="🎉 Instagram-Post aus News erzeugt!",
+            )
+
+    with col5:
         with st.popover('News löschen'):
             st.write("Eintrag wirklich löschen?  \nEs gibt keine abhängigen Items.")
             colu1, colu2, colu3 = st.columns([1,1,1])

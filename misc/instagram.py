@@ -139,21 +139,31 @@ def to_plain(text):
     return _BLANK_RUN.sub("\n\n", text).strip()
 
 
+def _news_titel(news, lang="de"):
+    """Titel einer News: Homepage-Titel, sonst Monitor-Titel."""
+    home = news.get("home", {})
+    return (
+        to_plain(home.get(f"title_{lang}", ""))
+        or to_plain(news.get("monitor", {}).get("title", ""))
+    )
+
+
+def _news_text(news, lang="de"):
+    """Fließtext einer News: Homepage-Text, sonst Monitor-Text."""
+    home = news.get("home", {})
+    return (
+        to_plain(home.get(f"text_{lang}", ""))
+        or to_plain(news.get("monitor", {}).get("text", ""))
+    )
+
+
 def caption_from_news(news, lang="de"):
     """Caption-Vorschlag aus einer News — nur als Startpunkt.
 
     Der Post ist danach eigenständig; die Redaktion schreibt den Text ohnehin
     meist um und länger.
     """
-    home = news.get("home", {})
-    teile = [
-        t
-        for t in (
-            to_plain(home.get(f"title_{lang}", "")),
-            to_plain(home.get(f"text_{lang}", "")),
-        )
-        if t
-    ]
+    teile = [t for t in (_news_titel(news, lang), _news_text(news, lang)) if t]
 
     link = (news.get("link") or "").strip()
     if link:
@@ -166,6 +176,25 @@ def caption_from_news(news, lang="de"):
         teile.append(" ".join(ig_hashtags_default))
 
     return "\n\n".join(teile)
+
+
+def prefill_from_news(news, lang="de"):
+    """Felder für einen neuen Instagram-Post, vorbelegt aus einer News.
+
+    Default: Standard-Bild (CD-Hintergrund) mit dem News-Titel als Überschrift
+    und einer aus der News gebauten Caption. Der Post ist danach eigenständig —
+    Bild und Text lassen sich im Editor frei ändern.
+    """
+    titel = _news_titel(news, lang)
+    return {
+        "titel": titel or "Instagram-Post",
+        "bildtyp": "standard",
+        "variante": VARIANTE_DEFAULT,
+        "lang": lang,
+        "headline": titel,
+        "subline": "",
+        "caption": caption_from_news(news, lang),
+    }
 
 
 def caption_stats(caption):
