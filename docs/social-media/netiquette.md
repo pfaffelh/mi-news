@@ -67,7 +67,28 @@ E-Mail an <socialmedia@math.uni-freiburg.de>.
 Um den Austausch für alle zugänglich und verständlich zu machen, schreiben Sie uns
 bitte nur auf **Deutsch oder Englisch**.
 
-## 7. Ausschluss bei wiederholten Verstößen
+## 7. Meinungen der Nutzer:innen und Markenzeichen
+
+Die auf dem Instagram-Profil des Mathematischen Instituts geposteten Kommentare,
+Meinungen und Links von Nutzerinnen und Nutzern geben nicht zwangsläufig die
+Meinung der Albert-Ludwigs-Universität Freiburg wieder. Des Weiteren dürfen
+urheberrechtlich geschützte Werke oder Markenzeichen der Albert-Ludwigs-Universität
+nicht ohne vorherige schriftliche Zustimmung der Universität verwendet werden.
+
+## 8. Bezug zur Universität
+
+Alle Beiträge müssen einen konkreten, unmittelbaren Bezug zur Tätigkeit der
+Albert-Ludwigs-Universität Freiburg haben und Kommentare sich auf den kommentierten
+Beitrag beziehen. Im Zweifel sollte vor dem Posten die Seitenadministration
+kontaktiert werden.
+
+## 9. Entfernung von Verstößen
+
+Beiträge und Inhalte, die gegen die hier formulierten Grundsätze verstoßen, werden
+umgehend entfernt. Die Autorin oder der Autor wird davon in Kenntnis gesetzt und
+ermahnt.
+
+## 10. Ausschluss bei wiederholten Verstößen
 
 Nutzerinnen oder Nutzer, die die Netiquette unserer Social-Media-Seiten trotz
 mehrfacher Ermahnung ignorieren, werden von der Benutzung unserer
@@ -78,7 +99,7 @@ melden. Diese haben eigene Community Standards, die auch unserer Netiquette
 zugrunde liegen. Als Beispiel verweisen wir auf die
 [Community-Richtlinien von Instagram](https://help.instagram.com/477434105621119).
 
-## 8. Verantwortung für eigene Beiträge
+## 11. Verantwortung für eigene Beiträge
 
 Es ist uns nicht möglich, alle an uns gerichteten Beiträge umgehend zu überprüfen.
 Die Seitenadministratorinnen und Seitenadministratoren können deshalb nicht für
