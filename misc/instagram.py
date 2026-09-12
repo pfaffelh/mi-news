@@ -28,12 +28,15 @@ import json
 import netrc
 import os
 import re
+import secrets
+import time
 from datetime import datetime, timedelta, timezone
 
 from PIL import Image, ImageDraw, ImageFont
 
 from misc.config import (
     ig_api_host,
+    ig_api_version,
     ig_blatt,
     ig_caption_maxlen,
     ig_einrichtung,
@@ -41,13 +44,16 @@ from misc.config import (
     ig_font_regular,
     ig_hashtag_max,
     ig_hashtags_default,
+    ig_insta_bild_ttl,
     ig_logo,
     ig_min_source_px,
     ig_netrc_machine,
+    ig_public_image_base,
     ig_ratio_default,
     ig_ratios,
     ig_siegel,
     ig_token_file,
+    mongo_location,
     netrc_file,
     ufr_blau,
     ufr_gelb,
@@ -552,8 +558,8 @@ def is_configured():
     """Kann überhaupt gepostet werden?
 
     Braucht beides: die statischen Daten aus der .netrc und einen lebenden
-    Token. Die öffentliche Bild-Route in mi-hp fehlt weiterhin — deshalb wirft
-    `publish()` noch.
+    Token. Die öffentliche Bild-Route in mi-hp (/nlehre/insta/<token>.jpg) ist
+    inzwischen vorhanden; fehlt nur eines davon, bleibt der Post-Button aus.
     """
     daten = lade_token()
     if not daten:
@@ -602,24 +608,148 @@ def refresh_token():
     return speichere_token(antwort["access_token"], antwort["expires_in"])
 
 
+_mongo_client = None
+
+
+def _insta_bild_collection():
+    """Die Collection insta_bild — mi-hp liest daraus, mi-news schreibt hinein.
+
+    Legt idempotent den TTL-Index an (Absicherung gegen liegengebliebene Bilder,
+    falls das Aufräumen nach dem Posten mal ausfällt).
+    """
+    global _mongo_client
+    if _mongo_client is None:
+        from pymongo import MongoClient
+        _mongo_client = MongoClient(mongo_location)
+    coll = _mongo_client["news"]["insta_bild"]
+    coll.create_index("created_at", expireAfterSeconds=ig_insta_bild_ttl)
+    return coll
+
+
+def _bild_bereitstellen(coll, image_bytes):
+    """Bild unter einem unratbaren Token in insta_bild ablegen; Token zurück.
+
+    Der Token muss zur Validierung in mi-hp passen (alphanumerisch, 16–128
+    Zeichen): token_hex(16) liefert 32 Hex-Zeichen — passt. token_urlsafe wäre
+    falsch (enthält '-'/'_' und würde dort mit 404 abgelehnt).
+    """
+    token = secrets.token_hex(16)
+    coll.insert_one({
+        "token": token,
+        "data": image_bytes,
+        "created_at": datetime.now(timezone.utc),
+    })
+    return token
+
+
+def _graph_fehler(r, kontext=""):
+    """Bei HTTP-Fehler eine sprechende Exception werfen (Graph-Fehlertext)."""
+    if r.status_code < 400:
+        return
+    try:
+        meldung = r.json().get("error", {}).get("message", r.text)
+    except ValueError:
+        meldung = r.text
+    prefix = f"{kontext}: " if kontext else ""
+    raise RuntimeError(f"{prefix}Instagram-API {r.status_code}: {meldung}")
+
+
+def _warte_auf_fertig(base, container_id, token, versuche=20, pause=3):
+    """Auf FINISHED des Media-Containers warten (Meta lädt das Bild von image_url)."""
+    import requests
+
+    for _ in range(versuche):
+        r = requests.get(
+            f"{base}/{container_id}",
+            params={"fields": "status_code", "access_token": token},
+            timeout=30,
+        )
+        _graph_fehler(r)
+        status = r.json().get("status_code")
+        if status == "FINISHED":
+            return
+        if status in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Media-Container {status} — Bild-URL nicht erreichbar?")
+        time.sleep(pause)
+    raise RuntimeError("Zeitüberschreitung: Media-Container wurde nicht FINISHED.")
+
+
 def publish(image_bytes, caption):
-    """Post veröffentlichen — noch nicht angebunden.
+    """Post veröffentlichen. Gibt die Instagram-Media-ID zurück oder wirft.
 
     Der Flow ist dreistufig (siehe `insta.md`, „Kommentare müssen aus"):
 
-    1. POST /media          → Container. Braucht eine **öffentliche** image_url;
-                              die Route dafür (`/nlehre/insta/<token>.jpg` in
-                              mi-hp) gibt es noch nicht. Das ist der Blocker.
+    0. Bild unter einem Token in insta_bild ablegen → öffentliche image_url
+       (mi-hp liefert sie unter /nlehre/insta/<token>.jpg aus).
+    1. POST /media          → Container. Meta lädt das Bild SELBST von image_url.
     2. POST /media_publish  → Beitrag ist live, liefert die Media-ID.
     3. POST /<media-id>?comment_enabled=false
                             → Kommentare aus. **Pflicht**: Nutzungskonzept,
                               Datenschutzerklärung und DSFA sagen zu, dass die
-                              Kommentarfunktion deaktiviert ist, und die DSFA
-                              stützt ihre Risikobewertung darauf. Schlägt dieser
-                              Schritt fehl, muss das laut scheitern.
+                              Kommentarfunktion deaktiviert ist. Schlägt dieser
+                              Schritt fehl, scheitert publish() laut — mit der
+                              Media-ID im Fehlertext, damit man von Hand nachfassen
+                              kann (der Beitrag ist dann bereits live).
     """
-    raise NotConfigured(
-        "Veröffentlichen ist noch nicht angebunden: Es fehlt die öffentliche "
-        "Bild-Route in mi-hp (Meta lädt das Bild selbst von einer URL herunter, "
-        "einen Upload gibt es nicht). Siehe insta.md."
+    import requests
+
+    if not is_configured():
+        raise NotConfigured(
+            "Nicht konfiguriert: Es fehlt ein gültiger Token (ig_token.json) "
+            "oder die .netrc-Zugangsdaten. Siehe insta.md / docs/social-media."
+        )
+
+    app_id, ig_user_id, app_secret = _netrc_eintrag()
+    token = lade_token()["access_token"]
+    base = f"{ig_api_host}/{ig_api_version}"
+
+    coll = _insta_bild_collection()
+    bild_token = _bild_bereitstellen(coll, image_bytes)
+    image_url = f"{ig_public_image_base}/nlehre/insta/{bild_token}.jpg"
+
+    try:
+        # 1. Media-Container anlegen (Meta lädt image_url herunter).
+        r = requests.post(
+            f"{base}/{ig_user_id}/media",
+            data={"image_url": image_url, "caption": caption, "access_token": token},
+            timeout=60,
+        )
+        _graph_fehler(r, "Container anlegen")
+        container_id = r.json()["id"]
+
+        # 2. Warten, bis Meta das Bild geholt und verarbeitet hat.
+        _warte_auf_fertig(base, container_id, token)
+
+        # 3. Veröffentlichen.
+        r = requests.post(
+            f"{base}/{ig_user_id}/media_publish",
+            data={"creation_id": container_id, "access_token": token},
+            timeout=60,
+        )
+        _graph_fehler(r, "Veröffentlichen")
+        media_id = r.json()["id"]
+    finally:
+        # Das Bild wird nur bis Schritt 1/2 gebraucht — danach immer aufräumen,
+        # egal ob es geklappt hat. Der TTL-Index fängt den Rest ab.
+        coll.delete_one({"token": bild_token})
+
+    # 4. Kommentare deaktivieren — Pflicht. Der Beitrag ist ab jetzt live; scheitert
+    # dieser Schritt, muss es laut scheitern, aber die Media-ID darf nicht verloren
+    # gehen (sonst kommt man an den Beitrag zum Nachbessern nicht mehr heran).
+    r = requests.post(
+        f"{base}/{media_id}",
+        data={"comment_enabled": "false", "access_token": token},
+        timeout=60,
     )
+    if r.status_code >= 400:
+        try:
+            meldung = r.json().get("error", {}).get("message", r.text)
+        except ValueError:
+            meldung = r.text
+        raise RuntimeError(
+            f"Beitrag {media_id} ist veröffentlicht, aber die Kommentare ließen "
+            f"sich NICHT deaktivieren (Instagram-API {r.status_code}: {meldung}). "
+            f"Bitte umgehend von Hand am Beitrag {media_id} abschalten."
+        )
+
+    return media_id

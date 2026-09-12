@@ -130,6 +130,17 @@ ig_netrc_machine = "graph.instagram.com"
 ig_api_host = "https://graph.instagram.com"
 ig_api_version = "v25.0"
 
+# Öffentliche Basis-URL, unter der mi-hp das gerenderte Bild ausliefert
+# (Route /nlehre/insta/<token>.jpg). Meta lädt das Bild SELBST von dieser URL
+# herunter (die Graph-API kennt keinen Upload) -- sie muss also von außen
+# erreichbar sein: die kanonische Domain, nicht die VPN-interne Editor-App.
+ig_public_image_base = "https://www.math.uni-freiburg.de"
+
+# TTL für die Bilder in der Collection insta_bild (Sekunden). Das Bild wird nur
+# während der Container-Erstellung gebraucht; mi-news löscht es danach selbst.
+# Der TTL-Index ist die Absicherung, falls das Aufräumen mal ausfällt.
+ig_insta_bild_ttl = 3600
+
 # Der Token ist 60 Tage gültig und lässt sich nur erneuern, solange er noch
 # lebt: "Tokens that have not been refreshed in 60 days will expire and can no
 # longer be refreshed." Danach hilft nur noch ein neuer Token von Hand im

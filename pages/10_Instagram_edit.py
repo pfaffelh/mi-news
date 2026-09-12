@@ -220,8 +220,8 @@ with c2:
                   help="Doppeltes Posten wird verhindert.")
     elif not insta.is_configured():
         st.button("Auf Instagram veröffentlichen", disabled=True,
-                  help="Account, Token und öffentliche Bild-Route fehlen noch. "
-                       "Siehe insta.md.")
+                  help="Account und Token fehlen noch (ig_token.json / .netrc). "
+                       "Siehe insta.md / docs/social-media.")
     else:
         if st.button("Auf Instagram veröffentlichen", disabled=not kann_posten):
             try:
