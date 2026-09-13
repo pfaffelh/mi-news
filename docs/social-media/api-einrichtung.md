@@ -120,8 +120,9 @@ selbst**.
 **Der Failure-Fall:** Nur wenn der Refresh **60 Tage am Stück** nicht durchläuft
 (≈ 8 verpasste Montage), läuft der Token ab und ist **endgültig verloren** (Metas
 Regel: nach 60 Tagen ohne Refresh nicht mehr erneuerbar). Dann: im Dashboard einen
-**neuen** Token erzeugen (§3) und neu ablegen (§8, Sysadmin-Schritt 3 — vorher das
-tote `/var/lib/mi-news/ig_token.json` entfernen lassen).
+**neuen** Token erzeugen (§3) und mit `set_ig_token.py` neu ablegen (§8, Schritt 3).
+Ein **abgelaufener** Token (Restlaufzeit < 0) wird dabei automatisch überschrieben —
+`--force` ist nur bei einem noch gültigen Token nötig.
 
 **Warum wöchentlich statt „kurz vor Ablauf":** Das gibt **~7–8 Rettungsversuche**,
 bevor überhaupt etwas kaputtgeht. Bei monatlichem Lauf blieben nur zwei.
@@ -184,14 +185,27 @@ z. B. aus einer vorbereiteten Datei:
 install -o www-data -g www-data -m 600 /pfad/zur/.netrc /var/lib/mi-news/.netrc
 ```
 
-**3. Initialen Token einmalig bootstrappen** (der Cron erneuert nur, er legt nicht
-an). Als `www-data`, Token via stdin (nicht als Argument, damit er nicht in `ps`
-auftaucht):
+**3. Initialen Token einmalig ablegen** mit `bin/set_ig_token.py` (der Cron erneuert
+nur, er legt nicht an). Immer als **`www-data`** ausführen. Zwei Wege:
+
+*Variante A* — die lokal erzeugte `ig_token.json` nach www2 kopieren und einspielen
+(das Skript zieht `access_token` selbst heraus):
 ```bash
-printf '%s' '<LONG_LIVED_TOKEN>' | sudo -u www-data /usr/local/lib/mi-news/venv/bin/python -c \
-  "import sys; sys.path.insert(0,'/usr/local/lib/mi-news'); from misc import instagram as ig; ig.speichere_token(sys.stdin.read().strip(), 60*24*3600)"
+# lokal -> www2 kopieren (z. B. nach ~flask-reader/ig_token.json), dann:
+sudo -u www-data /usr/local/lib/mi-news/venv/bin/python \
+    /usr/local/lib/mi-news/bin/set_ig_token.py /pfad/zur/kopierten/ig_token.json
 ```
-Das schreibt `/var/lib/mi-news/ig_token.json` (mode 600, owner www-data).
+
+*Variante B* — Token via stdin (nicht als Argument, damit er nicht in `ps` auftaucht):
+```bash
+printf '%s' '<LONG_LIVED_TOKEN>' | sudo -u www-data \
+    /usr/local/lib/mi-news/venv/bin/python \
+    /usr/local/lib/mi-news/bin/set_ig_token.py
+```
+
+Beides schreibt `/var/lib/mi-news/ig_token.json` (mode 600, owner www-data). Ein
+bereits vorhandener, **noch gültiger** Token wird ohne `--force` **nicht**
+überschrieben (schützt den vom Cron rotierten Token).
 
 **4. Log-Datei anlegen** (www-data muss hineinschreiben können):
 ```bash
@@ -259,7 +273,7 @@ Erledigt und **live verifiziert**:
 - [x] `ig_token.json` lokal geschrieben, `is_configured()` → `True` (lokal)
 - [ ] mi-news (`main`) auf www2 deployt (`sudo deploy-mi-news.sh`)
 - [ ] **Sysadmins:** `/var/lib/mi-news/.netrc` angelegt (owner www-data, 600)
-- [ ] **Sysadmins:** initiales `ig_token.json` gebootstrappt
+- [ ] **Sysadmins:** initiales `ig_token.json` abgelegt (`bin/set_ig_token.py`)
 - [ ] **Sysadmins:** Cron-Eintrag angelegt (§8, Schritt 5)
 - [ ] mi-hp (`master`) auf www2 deployt (öffentliche Bild-Route erreichbar)
 - [ ] Datenschutz-Freigabe liegt vor
