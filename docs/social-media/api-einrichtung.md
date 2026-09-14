@@ -214,26 +214,34 @@ Beides schreibt `/var/local/lib/mi-news/ig_token.json` (mode 600, owner www-data
 bereits vorhandener, **noch gültiger** Token wird ohne `--force` **nicht**
 überschrieben (schützt den vom Cron rotierten Token).
 
-**4. Log-Datei anlegen** (www-data muss hineinschreiben können):
-```bash
-install -o www-data -g www-data -m 640 /dev/null /var/log/mi-news-token.log
-```
-
-**5. Cron-Eintrag** — die Zeile für die Crontab:
+**4. Cron-Eintrag** — die Zeile für die Crontab:
 
 Variante A — Datei `/etc/cron.d/mi-news-token` (**mit** User-Feld, empfohlen):
 ```
-17 3 * * 1 www-data /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py >> /var/log/mi-news-token.log 2>&1
+17 3 * * 1 www-data /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py --quiet
 ```
 
 Variante B — User-Crontab via `crontab -u www-data -e` (**ohne** User-Feld):
 ```
-17 3 * * 1 /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py >> /var/log/mi-news-token.log 2>&1
+17 3 * * 1 /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py --quiet
 ```
 
 Bedeutung der Felder: **jeden Montag um 03:17 Uhr** (`Min Std * * Wochentag`).
-Für E-Mail-Alarm bei Fehlern das abschließende `2>&1` weglassen (dann geht stderr
-an Cron → Mail, sofern ein MTA/`MAILTO` eingerichtet ist).
+
+`--quiet` unterdrückt die Erfolgsmeldung; Fehler gehen unverändert nach stderr.
+Damit gilt die übliche Cron-Arbeitsteilung: **keine Ausgabe = keine Mail**, und
+eine Mail bedeutet immer, dass jemand etwas tun muss. Voraussetzung ist ein
+MTA bzw. ein `MAILTO=` in der Crontab — ohne das verfällt die Meldung stumm, und
+dann ist die Log-Variante die bessere Wahl.
+
+Log-Variante (statt `--quiet`, wenn ihr den Nachweis wollt, dass der Job
+überhaupt gelaufen ist — jeder Lauf schreibt dann eine Zeile):
+```bash
+install -o www-data -g www-data -m 640 /dev/null /var/log/mi-news-token.log
+```
+```
+17 3 * * 1 www-data /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py >> /var/log/mi-news-token.log 2>&1
+```
 
 ### Verifikation (nach dem Provisionieren)
 
@@ -281,7 +289,7 @@ Erledigt und **live verifiziert**:
 - [ ] mi-news (`main`) auf www2 deployt (`sudo deploy-mi-news.sh`)
 - [ ] **Sysadmins:** `/var/local/lib/mi-news/.netrc` angelegt (owner www-data, 600)
 - [ ] **Sysadmins:** initiales `ig_token.json` abgelegt (`bin/set_ig_token.py`)
-- [ ] **Sysadmins:** Cron-Eintrag angelegt (§8, Schritt 5)
+- [ ] **Sysadmins:** Cron-Eintrag angelegt (§8, Schritt 4)
 - [ ] mi-hp (`master`) auf www2 deployt (öffentliche Bild-Route erreichbar)
 - [ ] Datenschutz-Freigabe liegt vor
 - [ ] End-to-End-Testpost aufs eigene Konto gemacht

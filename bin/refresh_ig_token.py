@@ -19,11 +19,19 @@ Einrichtung auf www2 (App laeuft als www-data):
 
     # /etc/cron.d/mi-news-token
     17 3 * * 1 www-data /usr/local/lib/mi-news/venv/bin/python \
-        /usr/local/lib/mi-news/bin/refresh_ig_token.py >> /var/log/mi-news-token.log 2>&1
+        /usr/local/lib/mi-news/bin/refresh_ig_token.py --quiet
+
+Mit --quiet gibt der Job im Erfolgsfall nichts aus; Fehler gehen unveraendert
+nach stderr. In Verbindung mit Cron ist das die uebliche Arbeitsteilung: keine
+Ausgabe = keine Mail, eine Mail bedeutet immer, dass etwas zu tun ist. Ohne
+--quiet (und mit >> /var/log/mi-news-token.log 2>&1) schreibt jeder Lauf eine
+Zeile ins Log -- das ist der Preis fuer den Nachweis, dass der Job ueberhaupt
+gelaufen ist.
 
 Exit-Codes: 0 = erneuert, 1 = Fehler (Cron schickt dann eine Mail).
 """
 
+import argparse
 import os
 import sys
 
@@ -36,6 +44,13 @@ from misc.config import ig_token_file
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Erneuert den Instagram-Long-Lived-Token.")
+    parser.add_argument("--quiet", "-q", action="store_true",
+                        help="Im Erfolgsfall nichts ausgeben. Fehler gehen "
+                             "weiterhin nach stderr.")
+    args = parser.parse_args()
+
     vorher = ig.token_restlaufzeit()
     if vorher is None:
         print(f"FEHLER: Kein Token in {ig_token_file}.", file=sys.stderr)
@@ -57,9 +72,11 @@ def main():
               f"laufen; danach ist der Token verloren.", file=sys.stderr)
         return 1
 
-    nachher = ig.token_restlaufzeit()
-    jetzt = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
-    print(f"{jetzt}  Token erneuert: {vorher} -> {nachher} Tage Restlaufzeit.")
+    if not args.quiet:
+        nachher = ig.token_restlaufzeit()
+        jetzt = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
+        print(f"{jetzt}  Token erneuert: {vorher} -> {nachher} Tage "
+              f"Restlaufzeit.")
     return 0
 
 
