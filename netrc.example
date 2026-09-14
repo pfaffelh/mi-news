@@ -2,8 +2,8 @@
 #
 # Diese Datei ist NUR eine Vorlage. Die echten Werte kommen nie ins Repo:
 #
-#   lokal:   ~/.netrc                  (dort stehen schon LDAP, SMTP, DeepL)
-#   www2:    /var/lib/mi-news/.netrc   (owner www-data, mode 600)
+#   lokal:   ~/.netrc                        (dort stehen schon LDAP, SMTP, DeepL)
+#   www2:    /var/local/lib/mi-news/.netrc   (owner www-data, mode 600)
 #
 # Bewusst ausserhalb von /home/flask-reader/mi-news (Git-Checkout) UND
 # /usr/local/lib/mi-news (rsync-Ziel): deploy-mi-news.sh ueberschreibt den
@@ -11,7 +11,7 @@
 # darin wuerde die Dateien sogar loeschen.
 #
 # Nur die statischen Werte! Der Long-Lived Token rotiert alle 60 Tage und
-# liegt daher in /var/lib/mi-news/ig_token.json, das nur der Refresh-Job
+# liegt daher in /var/local/lib/mi-news/ig_token.json, das nur der Refresh-Job
 # schreibt. Ein fehlerhafter Rewrite der .netrc wuerde sonst LDAP, SMTP und
 # DeepL mitreissen.
 

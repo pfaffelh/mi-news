@@ -70,7 +70,7 @@ Warum außerhalb des Git-Checkouts und des rsync-Ziels: siehe `netrc.example` un
 das nicht mitbekommen.
 
 **`.netrc`** (nur die statischen Werte; Vorlage: `netrc.example`)
-- lokal: `~/.netrc` · auf www2: `/var/lib/mi-news/.netrc` (owner `www-data`, mode 600)
+- lokal: `~/.netrc` · auf www2: `/var/local/lib/mi-news/.netrc` (owner `www-data`, mode 600)
 
 ```
 machine graph.instagram.com
@@ -144,7 +144,10 @@ gelten Besonderheiten.
 ### Die Randbedingungen auf www2 (ermittelt Sept. 2026)
 
 - **Hostname** ist exakt `www2` → in `misc/config.py` greift der `== "www2"`-Zweig,
-  die App sucht die Secrets in **`/var/lib/mi-news/`** (absolut, **kein** Home).
+  die App sucht die Secrets in **`/var/local/lib/mi-news/`** (absolut, **kein** Home).
+  `/var/local`, nicht `/var/lib`: die App selbst liegt unter `/usr/local/lib/mi-news`,
+  und die FHS trennt lokal installierte Software samt ihrer veränderlichen Daten von
+  dem, was aus Distributionspaketen kommt.
 - Alle Apps laufen als **`www-data`**; mi-news liegt in **`/usr/local/lib/mi-news`**
   (venv daneben, Start via `run.sh`). **mi-hp** wird über **Apache** ausgeliefert,
   Deploy via `deploy-hp.sh`.
@@ -168,10 +171,14 @@ verändert.** Daher:
 Die geheimen Werte (App-Geheimcode, Token) kommen sicher (KeePass), **nicht** per
 Repo/Mail.
 
-**1. Verzeichnis anlegen**
+**1. Verzeichnis anlegen** — ✅ am 14.09.2026 angelegt.
 ```bash
-install -d -o www-data -g www-data -m 700 /var/lib/mi-news
+install -d -o www-data -g www-data -m 700 /var/local/lib/mi-news
 ```
+Es existiert derzeit als `drwxr-sr-x` (2755) statt 700. Die Geheimnisse selbst sind
+dadurch nicht lesbar (die Dateien darin sind 600), aber jeder Account auf www2 kann
+das Verzeichnis auflisten. Beim nächsten Handgriff mit root-Rechten bitte
+`chmod 700` nachziehen.
 
 **2. `.netrc` ablegen** — Inhalt (App-ID + User-ID nicht geheim, Geheimcode geheim):
 ```
@@ -182,7 +189,7 @@ machine graph.instagram.com
 ```
 z. B. aus einer vorbereiteten Datei:
 ```bash
-install -o www-data -g www-data -m 600 /pfad/zur/.netrc /var/lib/mi-news/.netrc
+install -o www-data -g www-data -m 600 /pfad/zur/.netrc /var/local/lib/mi-news/.netrc
 ```
 
 **3. Initialen Token einmalig ablegen** mit `bin/set_ig_token.py` (der Cron erneuert
@@ -203,7 +210,7 @@ printf '%s' '<LONG_LIVED_TOKEN>' | sudo -u www-data \
     /usr/local/lib/mi-news/bin/set_ig_token.py
 ```
 
-Beides schreibt `/var/lib/mi-news/ig_token.json` (mode 600, owner www-data). Ein
+Beides schreibt `/var/local/lib/mi-news/ig_token.json` (mode 600, owner www-data). Ein
 bereits vorhandener, **noch gültiger** Token wird ohne `--force` **nicht**
 überschrieben (schützt den vom Cron rotierten Token).
 
@@ -272,7 +279,7 @@ Erledigt und **live verifiziert**:
 - [x] `.netrc`-Werte bekannt (App ID, IG User ID, App Secret)
 - [x] `ig_token.json` lokal geschrieben, `is_configured()` → `True` (lokal)
 - [ ] mi-news (`main`) auf www2 deployt (`sudo deploy-mi-news.sh`)
-- [ ] **Sysadmins:** `/var/lib/mi-news/.netrc` angelegt (owner www-data, 600)
+- [ ] **Sysadmins:** `/var/local/lib/mi-news/.netrc` angelegt (owner www-data, 600)
 - [ ] **Sysadmins:** initiales `ig_token.json` abgelegt (`bin/set_ig_token.py`)
 - [ ] **Sysadmins:** Cron-Eintrag angelegt (§8, Schritt 5)
 - [ ] mi-hp (`master`) auf www2 deployt (öffentliche Bild-Route erreichbar)

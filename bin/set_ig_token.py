@@ -13,7 +13,8 @@ Token-Quelle (in dieser Reihenfolge):
   2. sonst stdin:         printf '%s' '<TOKEN>' | set_ig_token.py
 
 Geschrieben wird nach misc.config.ig_token_file (auf www2:
-/var/lib/mi-news/ig_token.json), mode 600, im selben Format wie der Refresh-Job.
+/var/local/lib/mi-news/ig_token.json), mode 600, im selben Format wie der
+Refresh-Job.
 
 Sicherung: Ein bereits vorhandener, noch gueltiger Token wird NICHT ohne --force
 ueberschrieben -- sonst wuerde ein Deploy/Fehlgriff den vom Cron frisch rotierten

@@ -12,9 +12,9 @@ bevor ueberhaupt etwas kaputtgeht. Bei monatlichem Lauf reichen zwei Ausfaelle.
 
 Einrichtung auf www2 (App laeuft als www-data):
 
-    sudo mkdir -p /var/lib/mi-news
-    sudo chown www-data: /var/lib/mi-news
-    sudo chmod 700 /var/lib/mi-news
+    sudo mkdir -p /var/local/lib/mi-news
+    sudo chown www-data: /var/local/lib/mi-news
+    sudo chmod 700 /var/local/lib/mi-news
     # .netrc und ig_token.json dort ablegen, mode 600, owner www-data
 
     # /etc/cron.d/mi-news-token

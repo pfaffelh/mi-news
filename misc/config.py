@@ -109,7 +109,7 @@ ig_blatt = "static/ufr-blatt.png"
 # müssen www-data gehören, mode 600.
 
 if socket.gethostname() == "www2":
-    secrets_dir = "/var/lib/mi-news"
+    secrets_dir = "/var/local/lib/mi-news"
 else:
     secrets_dir = os.path.expanduser("~/.mi-news")
 
