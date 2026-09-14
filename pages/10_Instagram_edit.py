@@ -32,6 +32,17 @@ if x is None:
 
 veroeffentlicht = x.get("status") == "veroeffentlicht"
 
+# Gelöscht werden dürfen nur Entwürfe. Bei allem anderen kann ein Beitrag auf
+# Instagram stehen, den dieser Eintrag als einziger nachweist: Media-ID und
+# Permalink stehen nur hier. Löschen liesse den Beitrag draussen stehen und
+# nähme uns den Weg dorthin -- und über die API bekommen wir ihn nicht zurück,
+# der DELETE-Endpunkt gilt nur für die Facebook-Login-Variante.
+#
+# "fehler" zählt ausdrücklich nicht als Entwurf: Scheitert das Abschalten der
+# Kommentare (Schritt 4 in publish()), ist der Beitrag bereits veröffentlicht,
+# der Status hier aber "fehler".
+loeschbar = x.get("status", "entwurf") == "entwurf"
+
 st.subheader(x.get("titel") or x.get("headline") or "Instagram-Post")
 
 col1, col2, col3 = st.columns([1, 1, 1])
@@ -39,17 +50,32 @@ with col1:
     if st.button("Zurück (ohne Speichern)"):
         st.switch_page("pages/09_Instagram.py")
 with col3:
-    with st.popover("Post löschen"):
-        st.write("Eintrag wirklich löschen?")
-        if st.button("Ja", type="primary", key=f"delete-{x['_id']}"):
-            # switch=False, damit nicht die generische Weiterleitung auf die
-            # News-Seite (reset_vars -> 00_New.py) greift. Stattdessen zurück
-            # zur Instagram-Übersicht.
-            tools.delete_item_update_dependent_items(collection, x["_id"], switch=False)
-            st.session_state.edit = ""
-            st.switch_page("pages/09_Instagram.py")
-        st.button("Nein", on_click=st.success, args=("Nicht gelöscht!",),
-                  key=f"not-deleted-{x['_id']}")
+    if not loeschbar:
+        st.button(
+            "Post löschen", disabled=True,
+            help=("Veröffentlichte Posts lassen sich hier nicht löschen. Dieser "
+                  "Eintrag ist der einzige Nachweis des Beitrags (Media-ID und "
+                  "Link). Den Beitrag selbst löscht man in der Instagram-App — "
+                  "über die API geht es bei unserem Zugang nicht."
+                  if veroeffentlicht else
+                  "Der letzte Veröffentlichungsversuch ist fehlgeschlagen. "
+                  "Möglicherweise steht der Beitrag trotzdem auf Instagram — "
+                  "bitte erst dort nachsehen. Gelöscht werden können nur "
+                  "Entwürfe."),
+        )
+    else:
+        with st.popover("Post löschen"):
+            st.write("Eintrag wirklich löschen?")
+            if st.button("Ja", type="primary", key=f"delete-{x['_id']}"):
+                # switch=False, damit nicht die generische Weiterleitung auf die
+                # News-Seite (reset_vars -> 00_New.py) greift. Stattdessen zurück
+                # zur Instagram-Übersicht.
+                tools.delete_item_update_dependent_items(
+                    collection, x["_id"], switch=False)
+                st.session_state.edit = ""
+                st.switch_page("pages/09_Instagram.py")
+            st.button("Nein", on_click=st.success, args=("Nicht gelöscht!",),
+                      key=f"not-deleted-{x['_id']}")
 
 st.info(
     "**„Link in Bio“:** Links im Post-Text sind auf Instagram **nicht "
@@ -214,19 +240,25 @@ with rechts:
 st.divider()
 c1, c2 = st.columns([1, 1])
 
+# Der Stand, den der Editor gerade anzeigt. BEIDE Knöpfe schreiben ihn.
+#
+# Vorher hat "Veröffentlichen" nur die Status-Felder gespeichert: Gepostet wurde
+# das, was im Formular stand, abgelegt blieb der alte Entwurf. Beim ersten
+# Testpost am 14.09.2026 ist genau das passiert -- auf Instagram ein blauer Post
+# mit Überschrift, in der Datenbank ein leerer gelber Entwurf. Der Eintrag ist
+# aber der einzige Nachweis dessen, was veröffentlicht wurde.
+inhalt = {
+    "titel": titel, "bildtyp": bildtyp, "variante": variante,
+    "lang": lang, "headline": headline, "subline": subline,
+    "image_id": image_id, "fit": fit, "ratio": ratio,
+    "caption": caption, "kommentar": kommentar,
+    "bearbeitet": bearbeitet,
+}
+
 with c1:
     if st.button("Entwurf speichern", type="primary"):
-        tools.update_confirm(
-            collection, x,
-            {
-                "titel": titel, "bildtyp": bildtyp, "variante": variante,
-                "lang": lang, "headline": headline, "subline": subline,
-                "image_id": image_id, "fit": fit, "ratio": ratio,
-                "caption": caption, "kommentar": kommentar,
-                "bearbeitet": bearbeitet,
-            },
-            False, "🎉 Entwurf gespeichert!",
-        )
+        tools.update_confirm(collection, x, inhalt, False,
+                             "🎉 Entwurf gespeichert!")
 
 with c2:
     kann_posten = (insta.is_configured() and vorschau is not None
@@ -253,7 +285,8 @@ with c2:
                 media_id = insta.publish(insta.to_jpeg(vorschau), caption)
                 tools.update_confirm(
                     collection, x,
-                    {"status": "veroeffentlicht", "ig_media_id": media_id,
+                    {**inhalt,
+                     "status": "veroeffentlicht", "ig_media_id": media_id,
                      "permalink": insta.permalink(media_id),
                      # Bewusst UTC: dieser Zeitstempel wird mit dem von Meta
                      # verglichen, und MongoDB legt Datumswerte ohnehin als UTC
@@ -267,7 +300,8 @@ with c2:
                 util.logger.error(f"Instagram-Post fehlgeschlagen: {e}")
                 collection.update_one(
                     {"_id": x["_id"]},
-                    {"$set": {"status": "fehler", "last_error": str(e)}},
+                    {"$set": {**inhalt, "status": "fehler",
+                              "last_error": str(e)}},
                 )
                 st.error(f"Veröffentlichen fehlgeschlagen: {e}")
 

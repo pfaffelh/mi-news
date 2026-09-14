@@ -220,11 +220,11 @@ def caption_stats(caption):
 def post_probleme(post, caption):
     """Was das Veröffentlichen verhindern muss — leere Posts abfangen.
 
-    Der erste Live-Testpost (14.09.2026) war ein versehentlich veröffentlichter
-    leerer Entwurf: keine Überschrift, keine Caption, also eine nackte gelbe
-    Fläche ohne jeden Text. So etwas sieht man erst auf Instagram, und weg
-    bekommt man es nur von Hand in der App — die Content-Publishing-API kennt
-    keinen Lösch-Endpunkt. Deshalb eine Bremse und nicht bloß eine Warnung.
+    Ein Post ohne Überschrift und ohne Text sieht man erst auf Instagram, und
+    weg bekommt man ihn nur von Hand in der App: Der Lösch-Endpunkt der API
+    steht nur der Facebook-Login-Variante offen, nicht unserem Zugang. Ein
+    Fehlgriff ist hier also eine Einbahnstraße — deshalb eine Bremse und nicht
+    bloß eine Warnung.
 
     Gibt eine Liste von Klartext-Gründen zurück; leer heißt: darf raus.
     """
