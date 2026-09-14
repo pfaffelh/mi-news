@@ -307,7 +307,11 @@ Erledigt und **live verifiziert**:
       nicht: nachzuweisen ist, dass gefragt wurde, nicht, dass zugestimmt wurde.
 - [ ] Antwort (oder ein Vermerk über die verstrichene Frist) in
       `mail-datenschutzbeauftragter.md` unter „Antwort“ nachgetragen
-- [ ] End-to-End-Testpost aufs eigene Konto gemacht
+- [x] End-to-End-Testpost gemacht — 14.09.2026, 12:36 Uhr:
+      <https://www.instagram.com/p/DdQ76Y3CIHK/>. Er bleibt stehen und ist
+      damit der Auftaktbeitrag des Kanals. Kommentare nachweislich aus
+      (`is_comment_enabled: false` über die API geprüft).
+- [x] Link in der Instagram-Bio gesetzt (Sammelseite mit den Pflichtdokumenten)
 
 ### Offene Nachträge an die Sysadmins (Stand 14.09.2026)
 
@@ -328,13 +332,35 @@ Zwei Dinge bleiben dazu anzumerken:
 
 Offen sind noch:
 
-1. **`--quiet` an die Cron-Zeile** anhängen. Ohne das meldet sich der Job jeden
-   Montag auch im Erfolgsfall per Mail.
+1. **`--quiet` an die Cron-Zeile** anhängen (am 14.09.2026 an die Sysadmins
+   gemeldet). Ohne das meldet sich der Job jeden Montag auch im Erfolgsfall
+   per Mail.
 2. **`MAILTO=` setzen** in `/etc/cron.d/mi-news`. Ein MTA ist vorhanden, aber
    ohne `MAILTO` adressiert Cron an `www-data`, und `/etc/aliases` existiert auf
    www2 nicht — die Fehlermeldung landet dann in einer Mailbox, in die niemand
    sieht. Das ist genau der Fall, für den sie gedacht ist.
 3. **`chmod 700 /var/local/lib/mi-news`** — derzeit 2755. Betrifft nur noch
    die Token-Datei; die `.netrc` liegt inzwischen woanders.
+
+## Was der erste Testpost ergeben hat (14.09.2026)
+
+Die API-Kette lief auf Anhieb durch: Meta hat das Bild selbst von der
+öffentlichen Route geholt, der Beitrag wurde veröffentlicht, die Kommentare
+wurden abgeschaltet, und das Zwischenbild in `insta_bild` war danach wieder weg.
+Zwei Fehler in der App sind dabei aufgefallen und behoben:
+
+1. **Der Inhalt wurde beim Veröffentlichen nicht gespeichert.** Gepostet wurde
+   der Formularstand, zurückgeschrieben nur `status`, `ig_media_id` und
+   `published_at` — in der Datenbank blieb der alte Entwurf stehen. Der Eintrag
+   ist aber der einzige Nachweis dessen, was veröffentlicht wurde. Jetzt
+   schreiben beide Knöpfe denselben Stand.
+2. **Ein Post ohne Inhalt ließ sich veröffentlichen**, und ein veröffentlichter
+   Eintrag ließ sich löschen — beides Einbahnstraßen, weil der DELETE-Endpunkt
+   der API unserem Zugang nicht offensteht. Jetzt sperrt ein fehlender
+   Überschrift- oder Caption-Text den Post-Knopf, und gelöscht werden dürfen
+   nur Entwürfe.
+
+Der Datensatz des Testposts wurde nachträglich aus dem Beitrag rekonstruiert;
+sein `kommentar`-Feld hält fest, welche Angabe woher stammt.
 
 Stand: 14. September 2026
