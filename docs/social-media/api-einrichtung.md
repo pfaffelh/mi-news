@@ -65,12 +65,12 @@ Refresh-Cron am Leben (§7).
 
 ## 5. Eintragen — dort, wo der Code sie sucht
 
-Warum außerhalb des Git-Checkouts und des rsync-Ziels: siehe `netrc.example` und
-`misc/config.py`. Beim Deploy wird der Baum überschrieben; die Geheimnisse dürfen
-das nicht mitbekommen.
+Nie im Git-Checkout: von dort wird deployt, ein Fehlgriff wäre einen Commit
+entfernt. Warum die Token-Datei zusätzlich außerhalb des rsync-Ziels liegt:
+siehe `netrc.example` und `misc/config.py`.
 
 **`.netrc`** (nur die statischen Werte; Vorlage: `netrc.example`)
-- lokal: `~/.netrc` · auf www2: `/var/local/lib/mi-news/.netrc` (owner `www-data`, mode 600)
+- lokal: `~/.netrc` · auf www2: `/usr/local/lib/mi-news/.netrc` (owner `www-data`, mode 600)
 
 ```
 machine graph.instagram.com
@@ -143,11 +143,19 @@ gelten Besonderheiten.
 
 ### Die Randbedingungen auf www2 (ermittelt Sept. 2026)
 
-- **Hostname** ist exakt `www2` → in `misc/config.py` greift der `== "www2"`-Zweig,
-  die App sucht die Secrets in **`/var/local/lib/mi-news/`** (absolut, **kein** Home).
-  `/var/local`, nicht `/var/lib`: die App selbst liegt unter `/usr/local/lib/mi-news`,
-  und die FHS trennt lokal installierte Software samt ihrer veränderlichen Daten von
-  dem, was aus Distributionspaketen kommt.
+- **Hostname** ist exakt `www2` → in `misc/config.py` greift der `== "www2"`-Zweig.
+  Die beiden Dateien liegen dort **nicht** am selben Ort:
+  - **`.netrc`** neben dem Code, in **`/usr/local/lib/mi-news/.netrc`** — die
+    Hauskonvention der Sysadmins, `mi-hp` hält es mit `/usr/local/lib/mi-hp/.netrc`
+    genauso. (`misc/config.py` prüft zuerst diesen Pfad und fällt auf
+    `/var/local/lib/mi-news/.netrc` zurück, falls die Datei später doch dorthin
+    wandert.)
+  - **`ig_token.json`** in **`/var/local/lib/mi-news/`**, also außerhalb des
+    rsync-Ziels. Diese Datei wird laufend neu geschrieben, und ihr Verlust wäre
+    endgültig — ein abgelaufener Token lässt sich nicht mehr erneuern.
+    `/var/local`, nicht `/var/lib`: die App liegt unter `/usr/local/lib`, und die
+    FHS trennt lokal installierte Software samt ihrer veränderlichen Daten von dem,
+    was aus Distributionspaketen kommt.
 - Alle Apps laufen als **`www-data`**; mi-news liegt in **`/usr/local/lib/mi-news`**
   (venv daneben, Start via `run.sh`). **mi-hp** wird über **Apache** ausgeliefert,
   Deploy via `deploy-hp.sh`.
@@ -189,7 +197,7 @@ machine graph.instagram.com
 ```
 z. B. aus einer vorbereiteten Datei:
 ```bash
-install -o www-data -g www-data -m 600 /pfad/zur/.netrc /var/local/lib/mi-news/.netrc
+install -o www-data -g www-data -m 600 /pfad/zur/.netrc /usr/local/lib/mi-news/.netrc
 ```
 
 **3. Initialen Token einmalig ablegen** mit `bin/set_ig_token.py` (der Cron erneuert
@@ -286,12 +294,42 @@ Erledigt und **live verifiziert**:
 - [x] Token generiert (60 Tage)
 - [x] `.netrc`-Werte bekannt (App ID, IG User ID, App Secret)
 - [x] `ig_token.json` lokal geschrieben, `is_configured()` → `True` (lokal)
-- [ ] mi-news (`main`) auf www2 deployt (`sudo deploy-mi-news.sh`)
-- [ ] **Sysadmins:** `/var/local/lib/mi-news/.netrc` angelegt (owner www-data, 600)
-- [ ] **Sysadmins:** initiales `ig_token.json` abgelegt (`bin/set_ig_token.py`)
-- [ ] **Sysadmins:** Cron-Eintrag angelegt (§8, Schritt 4)
-- [ ] mi-hp (`master`) auf www2 deployt (öffentliche Bild-Route erreichbar)
+- [x] mi-news (`main`) auf www2 deployt — 14.09.2026, Stand `86ad6a7`, Dienst neu gestartet
+- [x] **Sysadmins:** `.netrc` abgelegt — 14.09.2026 unter
+      `/usr/local/lib/mi-news/.netrc`; `misc/config.py` folgt diesem Pfad
+- [x] **Sysadmins:** initiales `ig_token.json` abgelegt — 14.09.2026
+- [x] **Sysadmins:** Cron-Eintrag angelegt (`/etc/cron.d/mi-news`) — siehe Nachträge unten
+- [x] mi-hp (`master`) auf www2 deployt — Bild-Route live (404 auf unbekannten
+      Token), Rechtsseiten unter `/nlehre/de/instagram/` liefern 200
 - [ ] Datenschutz-Freigabe liegt vor
 - [ ] End-to-End-Testpost aufs eigene Konto gemacht
 
-Stand: 13. September 2026
+### Offene Nachträge an die Sysadmins (Stand 14.09.2026)
+
+Die `.netrc` ist **erledigt**: Sie liegt unter `/usr/local/lib/mi-news/.netrc`,
+und `misc/config.py` sucht seit dem 14.09.2026 genau dort — die Hauskonvention
+der Sysadmins (wie `mi-hp`) hat Vorrang vor dem ursprünglich geplanten Pfad.
+Zwei Dinge bleiben dazu anzumerken:
+
+- Das Code-Verzeichnis ist das rsync-Ziel von `deploy-mi-news.sh`. Solange die
+  `--delete`-Zeile darin auskommentiert bleibt, überlebt die Datei jeden Deploy
+  (verifiziert am 14.09.2026). Wird sie je scharf geschaltet, ist die `.netrc`
+  weg und muss neu abgelegt werden — die Token-Datei liegt deshalb weiterhin
+  außerhalb.
+- Die Datei ist 601 Byte groß, also offenbar die vereinigte
+  `~flask-reader/netrc` mit allen sechs Maschinen (LDAP, DAViCal, SWFR, DeepL,
+  SMTP, Instagram). Nötig ist für mi-news nur der Block `graph.instagram.com`.
+  Kein Fehler, aber mehr Zugangsdaten als die App braucht.
+
+Offen sind noch:
+
+1. **`--quiet` an die Cron-Zeile** anhängen. Ohne das meldet sich der Job jeden
+   Montag auch im Erfolgsfall per Mail.
+2. **`MAILTO=` setzen** in `/etc/cron.d/mi-news`. Ein MTA ist vorhanden, aber
+   ohne `MAILTO` adressiert Cron an `www-data`, und `/etc/aliases` existiert auf
+   www2 nicht — die Fehlermeldung landet dann in einer Mailbox, in die niemand
+   sieht. Das ist genau der Fall, für den sie gedacht ist.
+3. **`chmod 700 /var/local/lib/mi-news`** — derzeit 2755. Betrifft nur noch
+   die Token-Datei; die `.netrc` liegt inzwischen woanders.
+
+Stand: 14. September 2026

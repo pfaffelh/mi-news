@@ -3,12 +3,18 @@
 # Diese Datei ist NUR eine Vorlage. Die echten Werte kommen nie ins Repo:
 #
 #   lokal:   ~/.netrc                        (dort stehen schon LDAP, SMTP, DeepL)
-#   www2:    /var/local/lib/mi-news/.netrc   (owner www-data, mode 600)
+#   www2:    /usr/local/lib/mi-news/.netrc   (owner www-data, mode 600)
 #
-# Bewusst ausserhalb von /home/flask-reader/mi-news (Git-Checkout) UND
-# /usr/local/lib/mi-news (rsync-Ziel): deploy-mi-news.sh ueberschreibt den
-# rsync-Zielbaum bei jedem Deploy, und die auskommentierte --delete-Zeile
-# darin wuerde die Dateien sogar loeschen.
+# Auf www2 liegt sie neben dem Code -- Hauskonvention der Sysadmins, mi-hp
+# haelt es mit /usr/local/lib/mi-hp/.netrc genauso. Nie im Git-Checkout
+# (/home/flask-reader/mi-news): von dort aus wird deployt, und ein Fehlgriff
+# waere einen Commit entfernt.
+#
+# Zu wissen: Das Code-Verzeichnis ist zugleich das rsync-Ziel von
+# deploy-mi-news.sh. Ohne --delete laesst rsync eine Datei, die im Checkout
+# nicht vorkommt, in Ruhe -- wird die auskommentierte --delete-Zeile jemals
+# scharf geschaltet, ist die .netrc beim naechsten Deploy weg und muss neu
+# abgelegt werden.
 #
 # Nur die statischen Werte! Der Long-Lived Token rotiert alle 60 Tage und
 # liegt daher in /var/local/lib/mi-news/ig_token.json, das nur der Refresh-Job

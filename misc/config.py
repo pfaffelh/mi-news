@@ -113,11 +113,34 @@ if socket.gethostname() == "www2":
 else:
     secrets_dir = os.path.expanduser("~/.mi-news")
 
-# Lokal die übliche ~/.netrc (dort liegen schon LDAP, SMTP, DeepL);
-# auf dem Server eine eigene neben der Token-Datei.
+# Lokal die übliche ~/.netrc (dort liegen schon LDAP, SMTP, DeepL).
+#
+# Auf www2 liegt sie neben dem Code, in /usr/local/lib/mi-news/.netrc. Das ist
+# die Hauskonvention der Sysadmins -- mi-hp hält es seit jeher genauso
+# (/usr/local/lib/mi-hp/.netrc), und dort wurde sie am 14.09.2026 auch für
+# mi-news abgelegt. Wir folgen dem, statt eine zweite Datei daneben zu
+# verlangen; secrets_dir bleibt als Fallback stehen, falls sie später doch
+# dorthin wandert.
+#
+# Ein Vorbehalt, damit er nicht verlorengeht: Das Code-Verzeichnis ist zugleich
+# das rsync-Ziel von deploy-mi-news.sh. Solange --delete dort auskommentiert
+# ist, lässt rsync eine Datei, die im Checkout nicht vorkommt, in Ruhe -- wird
+# die Zeile jemals scharf geschaltet, ist die .netrc beim nächsten Deploy weg.
+# Die Token-Datei bleibt deshalb ausserhalb: die wird laufend neu geschrieben,
+# und ihr Verlust wäre endgültig (kein Refresh mehr möglich).
+
+app_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 if socket.gethostname() == "www2":
-    netrc_file = os.path.join(secrets_dir, ".netrc")
+    _netrc_kandidaten = [
+        os.path.join(app_dir, ".netrc"),       # Hauskonvention, wie mi-hp
+        os.path.join(secrets_dir, ".netrc"),   # Fallback
+    ]
+    netrc_file = next((f for f in _netrc_kandidaten if os.path.exists(f)),
+                      _netrc_kandidaten[0])
 else:
+    # Bewusst NICHT app_dir: eine .netrc im Checkout wäre einen Fehlgriff vom
+    # Commit entfernt. (Sicherheitshalber steht sie auch in .gitignore.)
     netrc_file = os.path.expanduser("~/.netrc")
 
 ig_token_file = os.path.join(secrets_dir, "ig_token.json")

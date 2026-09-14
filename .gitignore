@@ -8,3 +8,5 @@
 *.log
 # Zugangsdaten liegen ausserhalb des Repos (siehe misc/config.py, netrc.example).
 /bin/__pycache__/
+# Echte Zugangsdaten gehoeren nie ins Repo (siehe netrc.example).
+/.netrc
