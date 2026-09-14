@@ -301,7 +301,12 @@ Erledigt und **live verifiziert**:
 - [x] **Sysadmins:** Cron-Eintrag angelegt (`/etc/cron.d/mi-news`) — siehe Nachträge unten
 - [x] mi-hp (`master`) auf www2 deployt — Bild-Route live (404 auf unbekannten
       Token), Rechtsseiten unter `/nlehre/de/instagram/` liefern 200
-- [ ] Datenschutz-Freigabe liegt vor
+- [x] Rat des/der Datenschutzbeauftragten eingeholt (Art. 35 Abs. 2 DSGVO) —
+      Mail vom 14.07.2026, 15:02 Uhr; Original im Wortlaut in
+      `mail-datenschutzbeauftragter.md` archiviert. Eine „Freigabe“ gibt es
+      nicht: nachzuweisen ist, dass gefragt wurde, nicht, dass zugestimmt wurde.
+- [ ] Antwort (oder ein Vermerk über die verstrichene Frist) in
+      `mail-datenschutzbeauftragter.md` unter „Antwort“ nachgetragen
 - [ ] End-to-End-Testpost aufs eigene Konto gemacht
 
 ### Offene Nachträge an die Sysadmins (Stand 14.09.2026)
