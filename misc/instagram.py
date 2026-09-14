@@ -217,6 +217,31 @@ def caption_stats(caption):
     return len(caption), len(hashtags), probleme
 
 
+def post_probleme(post, caption):
+    """Was das Veröffentlichen verhindern muss — leere Posts abfangen.
+
+    Der erste Live-Testpost (14.09.2026) war ein versehentlich veröffentlichter
+    leerer Entwurf: keine Überschrift, keine Caption, also eine nackte gelbe
+    Fläche ohne jeden Text. So etwas sieht man erst auf Instagram, und weg
+    bekommt man es nur von Hand in der App — die Content-Publishing-API kennt
+    keinen Lösch-Endpunkt. Deshalb eine Bremse und nicht bloß eine Warnung.
+
+    Gibt eine Liste von Klartext-Gründen zurück; leer heißt: darf raus.
+    """
+    probleme = []
+    if post.get("bildtyp") == "standard" and not (post.get("headline") or "").strip():
+        probleme.append(
+            "Das Standardbild trägt keine Überschrift — der Post wäre eine leere "
+            "Farbfläche. Bitte eine Überschrift eintragen."
+        )
+    if not (caption or "").strip():
+        probleme.append(
+            "Der Post hat keine Bildunterschrift. Auf Instagram stünde er ohne "
+            "jeden Text da."
+        )
+    return probleme
+
+
 # ------------------------------------------------------------ Standardbild ----
 
 
@@ -753,3 +778,32 @@ def publish(image_bytes, caption):
         )
 
     return media_id
+
+
+def permalink(media_id):
+    """Die öffentliche URL des Beitrags (https://www.instagram.com/p/<code>/).
+
+    Aus der Media-ID allein kommt man nicht dorthin — der Kurzcode in der URL
+    lässt sich nicht aus ihr ableiten. Meta gibt ihn auf Nachfrage heraus,
+    deshalb dieser eine zusätzliche Aufruf direkt nach dem Posten.
+
+    Scheitert er, ist nichts kaputt: Der Beitrag ist veröffentlicht, es fehlt
+    nur der bequeme Link. Darum "" statt einer Exception — ein Fehler hier darf
+    nicht so aussehen, als sei das Posten schiefgegangen.
+    """
+    import requests
+
+    daten = lade_token()
+    if not daten:
+        return ""
+    try:
+        r = requests.get(
+            f"{ig_api_host}/{ig_api_version}/{media_id}",
+            params={"fields": "permalink", "access_token": daten["access_token"]},
+            timeout=30,
+        )
+        if r.status_code >= 400:
+            return ""
+        return r.json().get("permalink") or ""
+    except Exception:
+        return ""

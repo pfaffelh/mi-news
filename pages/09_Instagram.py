@@ -93,9 +93,11 @@ if st.session_state.logged_in:
         with col3:
             status = p.get("status", "entwurf")
             if status == "veroeffentlicht":
-                pa = p.get("published_at")
+                pa = util.lokal(p.get("published_at"))
                 wann = pa.strftime(util.datetime_format) if pa else ""
                 st.success(f"Veröffentlicht {wann}")
+                if p.get("permalink"):
+                    st.markdown(f"[Beitrag ansehen]({p['permalink']})")
             elif status == "fehler":
                 st.error("Fehlgeschlagen")
                 if p.get("last_error"):
