@@ -10,3 +10,8 @@
 /bin/__pycache__/
 # Echte Zugangsdaten gehoeren nie ins Repo (siehe netrc.example).
 /.netrc
+# LaTeX-Hilfsdateien der Poster (docs/poster). Die .tex und die
+# eingefaerbten PNGs gehoeren ins Repo, das Uebersetzungsergebnis nicht.
+/docs/poster/*.aux
+/docs/poster/*.pdf
+/docs/poster/*.out

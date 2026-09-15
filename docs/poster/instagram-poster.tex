@@ -1,0 +1,156 @@
+% Poster: "Folgt dem Mathematischen Institut auf Instagram"
+%
+% A4 hoch, gelbe CD-Flaeche, Wortmarke, Vierblatt und Siegel -- dieselbe
+% Gestaltung wie die Instagram-Posts selbst (misc/instagram.py, Variante
+% "gelb"). Wer das Poster sieht und spaeter den Kanal, soll beides
+% zusammenbringen.
+%
+% Uebersetzen mit LuaLaTeX (nicht pdflatex -- fontspec braucht Lua/XeTeX):
+%
+%     lualatex instagram-poster.tex
+%
+% Die Schrift liegt im Repo (static/fonts/Arimo-*.ttf), es muss nichts
+% installiert werden. Arimo ist metrisch identisch zu Arial, der Hausschrift
+% der CD-Vorlagen, und frei lizenziert.
+%
+% Sprache umschalten: \sprachedetrue (deutsch, Standard) oder \sprachedefalse
+% (englisch) in der Zeile weiter unten.
+
+\documentclass[a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{qrcode}
+\usepackage{fontawesome5}
+\usepackage[margin=0pt]{geometry}
+
+\usetikzlibrary{positioning}
+
+% --- Sprache ------------------------------------------------------------------
+% Der Kanal ist zweisprachig (deutscher BSc, englischer MSc). Beide Fassungen
+% stehen hier; umgeschaltet wird mit true/false.
+\newif\ifsprachede
+\sprachedetrue           % true = deutsch, false = englisch
+
+% --- Farben (Corporate Design der Universitaet, cd.uni-freiburg.de) -----------
+\definecolor{ufrblau}{HTML}{344A9A}
+\definecolor{ufrdunkelblau}{HTML}{00004A}
+\definecolor{ufrgelb}{HTML}{FFE863}
+\definecolor{ufrweiss}{HTML}{FFFFFF}
+
+% --- Schrift ------------------------------------------------------------------
+\setmainfont{Arimo}[
+  Path           = ../../static/fonts/,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  Extension      = .ttf,
+]
+
+% --- Inhalt -------------------------------------------------------------------
+% Der Handle steht an drei Stellen (Text, QR-Ziel, Bildunterschrift) -- deshalb
+% einmal definiert.
+% \handle ist fuer den Fliesstext -- dort muss der Unterstrich escaped sein.
+% Im QR-Code steht die URL dagegen woertlich im \qrcode-Argument: Das Paket
+% liest es mit umgestellten Catcodes, ein blanker Unterstrich ist dort richtig
+% und ein escapeter waere ein Risiko. Beide muessen denselben Handle nennen.
+\newcommand{\handle}{math\_uni\_freiburg}
+
+% Der Zeilenumbruch der Ueberschrift steht von Hand: Auf einem Poster ist er
+% Gestaltung, nicht Zufall -- TeX wuerde nach Wortlaenge umbrechen, nicht nach
+% Sinn ("Follow the / Mathematical Institute / on Instagram").
+%
+% ACHTUNG, wer den Text aendert: Die Zeilen stehen in einem tikz-Knoten OHNE
+% text width. Zu lange Zeilen laufen deshalb stillschweigend ueber den Rand --
+% es gibt keine Overfull-Warnung. Nachmessen statt schaetzen:
+%
+%     \settowidth{\laenge}{<die laengste Zeile>}\typeout{\the\laenge}
+%
+% Ins Satzfeld passen 170 mm (A4 minus 2x20 mm Rand); bis etwa 163 mm bleibt
+% etwas Luft. Die Groessen unten sind so gewaehlt, dass die laengste Zeile
+% beider Sprachen knapp darunter bleibt: deutsch 161 mm, englisch 162 mm.
+\ifsprachede
+  \newcommand{\ueberschrift}{Folgt dem\\Mathematischen Institut\\auf Instagram}
+  \newcommand{\scanhinweis}{Code scannen und folgen}
+  \newcommand{\kopfgroesse}{\fontsize{40}{48}\selectfont}
+\else
+  \newcommand{\ueberschrift}{Follow the\\Mathematical Institute\\on Instagram}
+  \newcommand{\scanhinweis}{Scan the code and follow us}
+  \newcommand{\kopfgroesse}{\fontsize{44}{53}\selectfont}
+\fi
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+
+  % --- Hintergrund ------------------------------------------------------------
+  \fill[ufrgelb] (current page.south west) rectangle (current page.north east);
+
+  % --- Vierblatt oben rechts, ueber den Rand hinaus ---------------------------
+  % Wie im Post: ein deckender Ton, nie halbtransparent. Die Datei ist bereits
+  % eingefaerbt (mit der _tint()-Funktion der App erzeugt, 20 % Blau im Gelb).
+  \node[anchor=north east, inner sep=0pt]
+    at ([shift={(22mm,26mm)}] current page.north east)
+    {\includegraphics[width=92mm]{ufr-blatt-gelb.png}};
+
+  % --- Siegel als Wasserzeichen unten rechts ----------------------------------
+  \node[anchor=south east, inner sep=0pt]
+    at ([shift={(42mm,-46mm)}] current page.south east)
+    {\includegraphics[width=150mm]{ufr-siegel-gelb.png}};
+
+  % --- Kopf: Wortmarke + Einrichtung ------------------------------------------
+  % Der Institutsname gehoert unter die Wortmarke. Die Wortmarke allein sagt nur
+  % "Albert-Ludwigs-Universitaet Freiburg" -- ohne den Zusatz sieht das Poster
+  % aus, als werbe die Universitaet fuer ihren eigenen Kanal.
+  %
+  % Die zugeschnittene Fassung der Wortmarke, nicht die Datei aus static/: Die
+  % hat rundum einen transparenten Rand, links 6,5 % ihrer Breite. Ungeschnitten
+  % saesse der Schriftzug hier 5 mm weiter rechts als der Institutsname darunter
+  % -- die linke Blockkante waere sichtbar verrutscht. Erzeugt von assets.py.
+  \node[anchor=north west, inner sep=0pt]
+    at ([shift={(20mm,-20mm)}] current page.north west)
+    {\includegraphics[width=80mm]{ufr-logo-blau-beschnitten.png}};
+
+  % Beide Zeilen haengen an derselben x-Kante (20 mm). Der Abstand darunter ist
+  % knapp: Wortmarke und Einrichtung sind ein Block, nicht zwei Elemente.
+  \node[anchor=north west, inner sep=0pt, text=ufrblau,
+        font=\bfseries\fontsize{19}{23}\selectfont]
+    at ([shift={(20mm,-34mm)}] current page.north west)
+    {Mathematisches Institut};
+
+  % --- Ueberschrift -----------------------------------------------------------
+  \node[anchor=north west, inner sep=0pt, text=ufrblau, align=left,
+        font=\bfseries\kopfgroesse]
+    at ([shift={(20mm,-84mm)}] current page.north west)
+    {\ueberschrift};
+
+  % --- QR-Karte unten ---------------------------------------------------------
+  % Weisse Flaeche unter dem Code: Ein QR braucht hohen Kontrast UND einen
+  % ruhigen Rand ringsum (quiet zone), sonst finden ihn manche Scanner nicht.
+  % Das Weiss ist zugleich eine CD-Farbe, faellt also nicht aus dem Rahmen.
+  \node[anchor=south west, inner sep=0pt, fill=ufrweiss, rounded corners=4mm,
+        minimum width=170mm, minimum height=104mm]
+    (karte) at ([shift={(20mm,22mm)}] current page.south west) {};
+
+  % QR rechts in der Karte. Dunkelblau statt Blau: fast schwarz, damit auch
+  % aeltere Kameras sicher lesen -- und trotzdem eine CD-Farbe.
+  % 66 mm Kantenlaenge: Damit laesst sich der Code aus etwa 2 bis 3 m lesen --
+  % nachgemessen, indem der 300-dpi-Ausdruck stufenweise verkleinert und wieder
+  % dekodiert wurde (OpenCV). Die verbreitete Faustregel "lesbar aus dem
+  % Zehnfachen der Kantenlaenge" ist deutlich zu optimistisch. Fuer ein Poster
+  % im Flur reicht es: Wer scannt, tritt ohnehin heran.
+  \node[anchor=east, inner sep=0pt]
+    at ([shift={(-13mm,0mm)}] karte.east)
+    {\color{ufrdunkelblau}%
+     \qrcode[height=66mm, level=Q, padding]{https://www.instagram.com/math_uni_freiburg/}};
+
+  % Instagram-Zeichen, Handle und Hinweis links daneben, als ein Block.
+  \node[anchor=west, inner sep=0pt, align=left, text=ufrblau, text width=74mm,
+        font=\fontsize{15}{20}\selectfont]
+    at ([shift={(13mm,0mm)}] karte.west)
+    {{\fontsize{34}{34}\selectfont\faInstagram}\\[6mm]
+     {\bfseries\fontsize{19}{23}\selectfont @\handle}\\[4mm]
+     \scanhinweis\par};
+
+\end{tikzpicture}
+\end{document}
