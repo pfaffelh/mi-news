@@ -1,16 +1,22 @@
 # Anfrage an den Datenschutzbeauftragten (Art. 35 Abs. 2 DSGVO)
 
-**Status: abgeschickt am 14.07.2026 durch Peter Pfaffelhuber.**
+**Status: abgeschickt am 14.07.2026 um 15:02 Uhr durch Peter Pfaffelhuber.**
+Der Wortlaut unten ist seit dem 14.09.2026 gegen die tatsächlich versandte Mail
+geprüft und stimmt mit ihr überein.
 
 Diese Datei dokumentiert, dass das Institut vor dem Start des Instagram-Kanals den
 Rat des/der Datenschutzbeauftragten eingeholt hat. **Die Antwort — oder, falls
 keine kommt, ein Vermerk über die verstrichene Frist — bitte hier ergänzen.**
 Nachzuweisen ist, dass gefragt wurde, nicht, dass zugestimmt wurde.
 
-## Verschickter Text
+## Verschickte Mail (Original)
 
 > **An:** datenschutzbeauftragter@uni-freiburg.de
-> **Betreff:** Instagram-Auftritt des Mathematischen Instituts — Bitte um Stellungnahme nach Art. 35 Abs. 2 DSGVO
+> **In Kopie:** Thorsten Schmidt, Öffentlichkeitsbeauftragter (persönliche
+> Uni-Adresse — dieses Repo ist öffentlich, deshalb hier nur die Rolle)
+> **Von:** Peter Pfaffelhuber
+> **Datum:** 14. Juli 2026, 15:02 Uhr
+> **Betreff:** Neuer Instagram-Account des Mathematischen Instituts
 >
 > Sehr geehrte Damen und Herren,
 >
@@ -42,10 +48,19 @@ Nachzuweisen ist, dass gefragt wurde, nicht, dass zugestimmt wurde.
 >
 > Peter Pfaffelhuber
 
+**Korrektur gegenüber der bisherigen Fassung dieser Datei:** Hier stand als
+Betreff „Instagram-Auftritt des Mathematischen Instituts — Bitte um Stellungnahme
+nach Art. 35 Abs. 2 DSGVO". Das war der Entwurf; verschickt wurde „Neuer
+Instagram-Account des Mathematischen Instituts". Für die Pflicht aus Art. 35
+Abs. 2 ist das unerheblich — die Bitte um Stellungnahme unter ausdrücklicher
+Nennung der Vorschrift steht im Text der Mail. Ebenfalls neu belegt: Die Mail
+ging in Kopie an den Öffentlichkeitsbeauftragten.
+
 ## Was in der verschickten Fassung nicht enthalten war
 
-Der Entwurf hatte zusätzlich drei Punkte ausdrücklich zur Prüfung gestellt und eine
-Frage gestellt. Sie sind nicht mitgeschickt worden und bleiben damit **offen**:
+Der Entwurf hatte zusätzlich drei Punkte ausdrücklich zur Prüfung gestellt. Der
+Abgleich mit dem Original am 14.09.2026 bestätigt: Sie sind nicht mitgeschickt
+worden und bleiben damit **offen**:
 
 1. **Rechtsgrundlage.** Die [Datenschutzerklärung](datenschutzerklaerung.md) nennt
    in Abschnitt 2 Art. 6 Abs. 1 lit. e DSGVO i. V. m. § 4 LDSG BW sowie Art. 6

@@ -13,7 +13,7 @@ für einen offiziellen Social-Media-Kanal einer Einrichtung verlangt. Sie müsse
 | [dsfa.md](dsfa.md) | Datenschutz-Folgenabschätzung nach Art. 35 DSGVO |
 | [netiquette.md](netiquette.md) | Verhaltensregeln für Nutzer:innen |
 | [disclaimer.md](disclaimer.md) | Bedeutung von Abos/Likes, Verhältnis zu Meta |
-| [mail-datenschutzbeauftragter.md](mail-datenschutzbeauftragter.md) | Anfrage nach Art. 35 Abs. 2 DSGVO — abgeschickt 14.07.2026, Antwort dort eintragen |
+| [mail-datenschutzbeauftragter.md](mail-datenschutzbeauftragter.md) | Anfrage nach Art. 35 Abs. 2 DSGVO — abgeschickt 14.07.2026, Original archiviert; Antwort dort eintragen |
 | [zugangsdaten.md](zugangsdaten.md) | Wie Passwort, 2FA-Seed und Backup-Codes verwaltet werden (keine Geheimnisse im Repo) |
 
 **Veröffentlicht sind die Dokumente als Webseiten im Repo `mi-hp`**

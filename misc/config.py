@@ -109,15 +109,38 @@ ig_blatt = "static/ufr-blatt.png"
 # müssen www-data gehören, mode 600.
 
 if socket.gethostname() == "www2":
-    secrets_dir = "/var/lib/mi-news"
+    secrets_dir = "/var/local/lib/mi-news"
 else:
     secrets_dir = os.path.expanduser("~/.mi-news")
 
-# Lokal die übliche ~/.netrc (dort liegen schon LDAP, SMTP, DeepL);
-# auf dem Server eine eigene neben der Token-Datei.
+# Lokal die übliche ~/.netrc (dort liegen schon LDAP, SMTP, DeepL).
+#
+# Auf www2 liegt sie neben dem Code, in /usr/local/lib/mi-news/.netrc. Das ist
+# die Hauskonvention der Sysadmins -- mi-hp hält es seit jeher genauso
+# (/usr/local/lib/mi-hp/.netrc), und dort wurde sie am 14.09.2026 auch für
+# mi-news abgelegt. Wir folgen dem, statt eine zweite Datei daneben zu
+# verlangen; secrets_dir bleibt als Fallback stehen, falls sie später doch
+# dorthin wandert.
+#
+# Ein Vorbehalt, damit er nicht verlorengeht: Das Code-Verzeichnis ist zugleich
+# das rsync-Ziel von deploy-mi-news.sh. Solange --delete dort auskommentiert
+# ist, lässt rsync eine Datei, die im Checkout nicht vorkommt, in Ruhe -- wird
+# die Zeile jemals scharf geschaltet, ist die .netrc beim nächsten Deploy weg.
+# Die Token-Datei bleibt deshalb ausserhalb: die wird laufend neu geschrieben,
+# und ihr Verlust wäre endgültig (kein Refresh mehr möglich).
+
+app_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 if socket.gethostname() == "www2":
-    netrc_file = os.path.join(secrets_dir, ".netrc")
+    _netrc_kandidaten = [
+        os.path.join(app_dir, ".netrc"),       # Hauskonvention, wie mi-hp
+        os.path.join(secrets_dir, ".netrc"),   # Fallback
+    ]
+    netrc_file = next((f for f in _netrc_kandidaten if os.path.exists(f)),
+                      _netrc_kandidaten[0])
 else:
+    # Bewusst NICHT app_dir: eine .netrc im Checkout wäre einen Fehlgriff vom
+    # Commit entfernt. (Sicherheitshalber steht sie auch in .gitignore.)
     netrc_file = os.path.expanduser("~/.netrc")
 
 ig_token_file = os.path.join(secrets_dir, "ig_token.json")
@@ -129,6 +152,17 @@ ig_netrc_machine = "graph.instagram.com"
 # graph.facebook.com -- der gehört zum alten Facebook-Login-Pfad.
 ig_api_host = "https://graph.instagram.com"
 ig_api_version = "v25.0"
+
+# Öffentliche Basis-URL, unter der mi-hp das gerenderte Bild ausliefert
+# (Route /nlehre/insta/<token>.jpg). Meta lädt das Bild SELBST von dieser URL
+# herunter (die Graph-API kennt keinen Upload) -- sie muss also von außen
+# erreichbar sein: die kanonische Domain, nicht die VPN-interne Editor-App.
+ig_public_image_base = "https://www.math.uni-freiburg.de"
+
+# TTL für die Bilder in der Collection insta_bild (Sekunden). Das Bild wird nur
+# während der Container-Erstellung gebraucht; mi-news löscht es danach selbst.
+# Der TTL-Index ist die Absicherung, falls das Aufräumen mal ausfällt.
+ig_insta_bild_ttl = 3600
 
 # Der Token ist 60 Tage gültig und lässt sich nur erneuern, solange er noch
 # lebt: "Tokens that have not been refreshed in 60 days will expire and can no

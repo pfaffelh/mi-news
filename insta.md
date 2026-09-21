@@ -4,7 +4,25 @@ Ziel: In der bestehenden Streamlit-News-App soll man bei jeder News optional
 einen Instagram-Post erzeugen können. Bild in korrekter Größe, editierbarer
 Text mit Live-Vorschau, Veröffentlichung über die Instagram-API.
 
-Branch: `instagram`
+Branch: in `main` gemergt (der frühere `instagram`-Branch ist aufgeräumt).
+
+> **Umsetzungsstand (Sept. 2026) — Code fertig und in `main`.**
+> Die Integration ist implementiert und gemergt (mi-news `main`, mi-hp `master`).
+> Was weiter unten teils noch als „zu bauen" formuliert ist, ist **erledigt**:
+> - **mi-news:** Bild-Rendering (CD-Standardbild + eigenes Bild), Caption-Editor
+>   mit Live-Vorschau, Post-Verwaltung in einer **eigenen Collection `instapost`**
+>   (nicht als Feld an der News — anders als in §3a ursprünglich geplant), und
+>   **`publish()`** — der dreistufige Post inkl. Pflicht-Deaktivierung der Kommentare.
+> - **mi-hp:** öffentliche Bild-Route `GET /nlehre/insta/<token>.jpg`
+>   (`utils/util_instagram.py`) + die Pflicht-Rechtsseiten.
+> - **Bild-Bridge:** mi-news legt das gerenderte JPEG unter einem Token in der
+>   Collection **`insta_bild`** ab (`{token, data, created_at}`, TTL-Index); mi-hp
+>   liefert es aus; nach dem Posten räumt mi-news es wieder weg.
+>
+> **Noch offen — rein organisatorisch, kein Code:** Instagram-Account + Meta-App +
+> Token (`ig_token.json`) und `.netrc` hinterlegen (dann schaltet `is_configured()`
+> den Post-Button frei) · mi-hp auf www2 deployen · Datenschutz-Freigabe ·
+> End-to-End-Testpost aufs eigene Konto.
 
 ---
 
@@ -226,21 +244,24 @@ sind zwei verschiedene Dinge.
   `www2` bereits einen öffentlichen Server, der ohnehin schon Bild-Blobs aus
   derselben DB ausliefert. Meta erreicht `www2`, nur die Editor-App selbst nicht.
 
-### Gewählte Lösung — Option A: öffentliche Bild-Route in `mi-hp` (auf www2)
-1. **Editor (hinter VPN):** schneidet das Bild auf ein zulässiges Insta-Format
-   (Default 1080×1350) zu und legt das gerenderte JPEG in Mongo ab — Feld
-   `news.instagram.rendered` (binData) oder Mini-Collection `insta_bild` — mit
-   einem **unratbaren Zufalls-Token**.
-2. **`mi-hp` (öffentlich, separates Repo):** neue Route
-   `GET /nlehre/insta/<token>.jpg` → liest den Blob aus Mongo → streamt ihn
-   (Content-Type `image/jpeg`). ~15 Zeilen Flask.
+### Gewählte Lösung — Option A: öffentliche Bild-Route in `mi-hp` (auf www2) ✅ umgesetzt
+1. **Editor (hinter VPN):** schneidet/rendert das Bild auf ein zulässiges Insta-Format
+   (Default 1080×1350) und legt das gerenderte JPEG in der Collection **`insta_bild`**
+   ab (`{token, data, created_at}`) unter einem **`secrets.token_hex(16)`-Token**
+   (32 Hex-Zeichen, alphanumerisch — passt zur Validierung in mi-hp). → `misc/instagram.py`:
+   `_bild_bereitstellen`, aufgerufen aus `publish()`.
+2. **`mi-hp` (öffentlich, separates Repo):** Route
+   `GET /nlehre/insta/<token>.jpg` → liest den Blob aus `insta_bild` → streamt ihn
+   (`image/jpeg`, `Cache-Control: no-store`, 404 bei unbekanntem/ungültigem Token).
+   → `app.py` + `utils/util_instagram.py`.
 3. **Editor:** ruft Metas API auf und übergibt
-   `image_url = https://www.math.uni-freiburg.de/nlehre/insta/<token>.jpg`.
-4. Meta lädt das Bild in Sekunden; danach kann Blob/Token wieder gelöscht werden.
+   `image_url = {ig_public_image_base}/nlehre/insta/<token>.jpg`.
+4. Meta lädt das Bild in Sekunden; danach löscht `publish()` den Eintrag wieder
+   (im `finally`); ein TTL-Index auf `insta_bild` fängt Orphans ab.
 
-> **Achtung — betrifft zwei Repos:** Diese Änderung erfordert einen kleinen Eingriff
-> im **separaten `mi-hp`-Repo** (die neue Flask-Route), zusätzlich zu den Änderungen
-> hier. Beim Umsetzen mit einplanen.
+> **Betrifft zwei Repos** — beide Seiten sind umgesetzt: mi-news schreibt in
+> `insta_bild`, mi-hp liefert aus. Datenform und Token-Regeln sind zwischen beiden
+> abgestimmt.
 
 **Datenschutz:** Das Bild wird durchs Posten ohnehin öffentlich auf Instagram. Die
 kurzzeitige, Token-geschützte Auslieferung über `www2` ist daher kein zusätzliches
@@ -410,22 +431,29 @@ mit try/except und Logging über das vorhandene `mi.log`.
 
 ## 5. Umsetzungs-Schritte (Reihenfolge)
 
+Code-Schritte 2–8 sind **erledigt** (in `main` / `master`). Hinweis: statt des in
+§3/§4 skizzierten News-Felds + `render_preview_image`/`upload_and_publish` wurde eine
+**eigene Collection `instapost`** mit den Funktionen `render`/`caption_from_news`/
+`publish` umgesetzt — sauberer, weil ein Post eigenständig ist.
+
 1. **Konten & Freigaben** (kein Code): §1 abarbeiten — Institut/ÖA + Datenschutz +
-   Meta-Konten + Token. **Blocker für den Livegang, nicht für die Entwicklung.**
-2. **Öffentliche Bild-Route in `mi-hp` bauen** (§2a, Option A) — `GET /nlehre/insta/<token>.jpg`
-   im separaten `mi-hp`-Repo, plus Ablage des gerenderten Blobs + Token in Mongo.
-   Vorab mit einem Test-Bild + Test-Token die Graph-API-Zwei-Schritt-Kette manuell
-   durchspielen (curl), um sie zu verstehen. **Betrifft zwei Repos.**
-3. **Datenmodell** erweitern (Schema + `util.py`-Default).
-4. **`misc/instagram.py`** mit `build_caption` + `render_preview_image` (rein lokal,
-   ohne API testbar) — inkl. sRGB/JPEG/Ratio-Logik.
-5. **UI-Expander** in `01_News_edit.py`: Toggle, Ratio-Auswahl, Bild-Vorschau,
-   Caption-Editor mit Zählern, Post-Vorschau-Kachel, „Entwurf speichern".
-6. **Secrets** (`secrets.toml` + `.gitignore`), `requests` in `requirements.txt`.
-7. **`upload_and_publish`** anbinden, mit dem in Schritt 2 gewählten Bild-Weg.
-8. **„Jetzt veröffentlichen"** verdrahten, Fehler-/Doppelpost-Handling, Logging.
-9. **End-to-End-Test** auf dem echten (eigenen) Institutskonto.
-10. Optional: Übersichtsseite, geplantes Posten (Scheduling) später.
+   Meta-Konten + Token. **Blocker für den Livegang, nicht für die Entwicklung.** ⏳ offen
+2. ✅ **Öffentliche Bild-Route in `mi-hp`** — `GET /nlehre/insta/<token>.jpg`
+   (`utils/util_instagram.py`), liest aus `insta_bild`. **Zwei Repos, beide fertig.**
+3. ✅ **Datenmodell** — eigene Collection `instapost` (Schema `mongo/schema20260714.py`,
+   `util.py`-Default) + `insta_bild` als transiente Bild-Bridge.
+4. ✅ **`misc/instagram.py`** — Rendering (CD-Standard + eigenes Bild), Caption,
+   Statistik; rein lokal ohne API getestet (sRGB/JPEG/Ratio).
+5. ✅ **UI** — `pages/09_Instagram.py` (Übersicht) + `pages/10_Instagram_edit.py`
+   (Editor mit Live-Vorschau, Zählern, „Entwurf speichern") + Button in `01_News_edit.py`.
+6. ✅ **Zugangsdaten/Deps** — `.netrc` + `ig_token.json` (nicht `secrets.toml`),
+   `requests` in `requirements.txt`, Token-Refresh `bin/refresh_ig_token.py`.
+7. ✅ **`publish()`** angebunden — dreistufiger Post über die `insta_bild`/mi-hp-Bridge.
+8. ✅ **„Veröffentlichen" verdrahtet** — Fehler-/Doppelpost-Handling, Logging,
+   Pflicht-Kommentar-Deaktivierung (scheitert laut).
+9. ⏳ **End-to-End-Test** auf dem echten (eigenen) Institutskonto — sobald Token/`.netrc`
+   stehen und mi-hp auf www2 deployt ist.
+10. Optional: geplantes Posten (Scheduling), Carousel/Reels/Stories — später.
 
 ---
 

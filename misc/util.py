@@ -2,7 +2,7 @@ import streamlit as st
 from misc.config import *
 import pymongo
 import base64
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Initialize logging
 import logging
@@ -201,6 +201,7 @@ def setup_session_state():
             "caption": "",           # Beschreibung des Posts, darf lang sein
             "status": "entwurf",     # "entwurf" | "veroeffentlicht" | "fehler"
             "ig_media_id": "",
+            "permalink": "",         # öffentliche URL, kommt beim Posten von Meta
             "published_at": None,
             "last_error": "",
             "bearbeitet": "",
@@ -243,6 +244,22 @@ def setup_session_state():
             {"collection": st.session_state.vortrag, "field": "vortragsreihe", "list": True}],
         st.session_state.vortrag: []
         }
+
+def lokal(dt):
+    """Einen in UTC gespeicherten Zeitstempel als lokale Zeit ausgeben.
+
+    published_at wird seit dem 14.09.2026 als echte UTC-Zeit geschrieben
+    (datetime.now(timezone.utc)); pymongo gibt sie naiv zurück, weshalb hier die
+    Zeitzone wieder angeheftet wird. Ältere Einträge enthalten Ortszeit, die als
+    UTC abgelegt wurde — die zeigt diese Funktion um den Zonenversatz falsch an.
+    Betrifft genau einen Datensatz, den Testpost vom 14.09.2026.
+    """
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone()
+
 
 date_format = '%d.%m.%Y um %H:%M:%S.'
 date_format_no_space = '%Y%m%d%H%M'
