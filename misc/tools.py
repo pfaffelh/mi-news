@@ -179,6 +179,11 @@ def reset_vars(text=""):
 def display_navigation():
     show_pending_toasts()
     st.markdown("<style>.st-emotion-cache-16txtl3 { padding: 2rem 2rem; }</style>", unsafe_allow_html=True)
+    # Lange Einträge in Multiselect-Tags vollständig anzeigen (umbrechen statt abschneiden)
+    st.markdown("""<style>
+        .stMultiSelect span[data-baseweb="tag"] { max-width: none !important; height: auto !important; }
+        .stMultiSelect span[data-baseweb="tag"] span[title] { max-width: none !important; overflow: visible !important; white-space: normal !important; text-overflow: clip !important; }
+        </style>""", unsafe_allow_html=True)
     st.sidebar.image("static/ufr.png", use_container_width=True)
     st.session_state.tage = st.sidebar.slider("Welche News sollen angezeigt werden?", 0, 500, 25)
     st.sidebar.write("Nur News der letzten ", st.session_state.tage, "Tage werden angezeigt.")
