@@ -312,58 +312,60 @@ with c2:
                 )
                 st.error(f"Veröffentlichen fehlgeschlagen: {e}")
 
-# --- Geplantes Posten ----------------------------------------------------------
-#
-# Ausgefuehrt wird es nicht hier: Streamlit laeuft nur, solange jemand die Seite
-# offen hat. Diese Seite setzt bloss Zeitpunkt und Status; veroeffentlicht wird
-# von bin/post_geplante.py, das als Cron-Job alle 15 Minuten nachsieht.
-if not veroeffentlicht:
-    st.divider()
-    geplant = x.get("status") == "geplant"
-    lauf = util.lokal(x.get("geplant_fuer"))
-    if geplant and lauf:
-        st.info(f"**Geplant für {lauf.strftime(util.datetime_format)}.** "
-                "Der Post geht automatisch raus; bis dahin lässt er sich hier "
-                "weiter bearbeiten. *Entwurf speichern* ändert die Planung nicht.")
+    # --- Geplantes Posten -----------------------------------------------------
+    #
+    # Ausgefuehrt wird es nicht hier: Streamlit laeuft nur, solange jemand die
+    # Seite offen hat. Hier werden bloss Zeitpunkt und Status gesetzt;
+    # veroeffentlicht wird von bin/post_geplante.py, das als Cron-Job alle 15
+    # Minuten nachsieht.
+    if not veroeffentlicht:
+        geplant = x.get("status") == "geplant"
+        lauf = util.lokal(x.get("geplant_fuer"))
+        with st.popover("Später posten" + ("  ●" if geplant else "")):
+            vorgabe = lauf or (datetime.now().astimezone() + timedelta(days=1))
+            p_datum = st.date_input("Datum", value=vorgabe.date(),
+                                    format="DD.MM.YYYY", key="plan_datum")
+            p_zeit = st.time_input(
+                "Uhrzeit",
+                value=vorgabe.time().replace(second=0, microsecond=0),
+                key="plan_zeit")
+            zeitpunkt = util.nach_utc(p_datum, p_zeit)
+            vergangen = (zeitpunkt is not None
+                         and zeitpunkt <= datetime.now(timezone.utc))
+            if st.button("Planung aktualisieren" if geplant else "Posten planen",
+                         type="primary", disabled=vergangen or not kann_posten):
+                tools.update_confirm(
+                    collection, x,
+                    {**inhalt, "status": "geplant", "geplant_fuer": zeitpunkt,
+                     "last_error": ""},
+                    False, "🎉 Posten geplant!")
+                st.rerun()
+            if geplant and st.button("Planung aufheben"):
+                tools.update_confirm(
+                    collection, x,
+                    {"status": "entwurf", "geplant_fuer": None},
+                    False, "Planung aufgehoben — der Post ist wieder ein Entwurf.")
+                st.rerun()
 
-    g1, g2, g3 = st.columns([1, 1, 1])
-    with g1:
-        vorgabe = lauf or (datetime.now().astimezone() + timedelta(days=1))
-        p_datum = st.date_input("Datum", value=vorgabe.date(), format="DD.MM.YYYY",
-                                key="plan_datum")
-    with g2:
-        p_zeit = st.time_input("Uhrzeit", value=vorgabe.time().replace(second=0,
-                                                                      microsecond=0),
-                               key="plan_zeit")
-    with g3:
-        st.markdown("<div style='height:28px'></div>", unsafe_allow_html=True)
-        zeitpunkt = util.nach_utc(p_datum, p_zeit)
-        vergangen = zeitpunkt is not None and zeitpunkt <= datetime.now(timezone.utc)
-        if st.button("Planung aktualisieren" if geplant else "Posten planen",
-                     disabled=vergangen or not kann_posten):
-            tools.update_confirm(
-                collection, x,
-                {**inhalt, "status": "geplant", "geplant_fuer": zeitpunkt,
-                 "last_error": ""},
-                False, "🎉 Posten geplant!")
-            st.rerun()
-        if geplant and st.button("Planung aufheben"):
-            tools.update_confirm(
-                collection, x,
-                {"status": "entwurf", "geplant_fuer": None},
-                False, "Planung aufgehoben — der Post ist wieder ein Entwurf.")
-            st.rerun()
+            if vergangen:
+                st.caption("Der Zeitpunkt liegt in der Vergangenheit.")
+            elif not kann_posten:
+                st.caption("Planen geht erst, wenn der Post auch sofort "
+                           "veröffentlicht werden könnte — siehe die Hinweise "
+                           "am Veröffentlichen-Knopf.")
+            else:
+                st.caption("Veröffentlicht wird im 15-Minuten-Takt, der Post "
+                           "kann also wenige Minuten später erscheinen. Liegt "
+                           "der Zeitpunkt beim Lauf mehr als 24 Stunden zurück "
+                           "(z. B. nach einem Serverausfall), wird nicht mehr "
+                           "gepostet, sondern gemeldet.")
 
-    if vergangen:
-        st.caption("Der gewählte Zeitpunkt liegt in der Vergangenheit.")
-    elif not kann_posten:
-        st.caption("Planen geht erst, wenn der Post auch sofort veröffentlicht "
-                   "werden könnte — siehe die Hinweise am Veröffentlichen-Knopf.")
-    else:
-        st.caption("Veröffentlicht wird im 15-Minuten-Takt, der Post kann also "
-                   "wenige Minuten später erscheinen. Liegt der Zeitpunkt beim "
-                   "Lauf mehr als 24 Stunden zurück (z. B. nach einem "
-                   "Serverausfall), wird nicht mehr gepostet, sondern gemeldet.")
+        # Ausserhalb des Popovers, damit man ohne Aufklappen sieht, dass etwas
+        # ansteht.
+        if geplant and lauf:
+            st.info(f"**Geplant für {lauf.strftime(util.datetime_format)}.** "
+                    "Bis dahin lässt sich der Post weiter bearbeiten; "
+                    "*Entwurf speichern* ändert die Planung nicht.")
 
 st.write(x.get("bearbeitet", ""))
 st.sidebar.button("logout", on_click=tools.logout)
