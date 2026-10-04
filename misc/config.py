@@ -59,6 +59,13 @@ ig_ratio_default = "4:5"
 # Instagram skaliert unter 320 px hoch — das sieht man.
 ig_min_source_px = 320
 
+# Grenzen für Bilder, die unverändert ("original") gepostet werden. Instagram
+# akzeptiert im Feed nur Seitenverhältnisse zwischen 4:5 (= 0.8) und 1.91:1.
+# Breiter als 1440 px wird von Instagram heruntergerechnet — kein Fehler.
+ig_ratio_min = 0.8
+ig_ratio_max = 1.91
+ig_max_width = 1440
+
 # Harte Grenzen der Caption.
 ig_caption_maxlen = 2200
 ig_hashtag_max = 30

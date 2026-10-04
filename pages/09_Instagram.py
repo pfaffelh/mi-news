@@ -1,6 +1,6 @@
 import streamlit as st
 import pymongo
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -22,6 +22,8 @@ bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.n
 
 STATUS_TEXT = {
     "entwurf": "Entwurf",
+    "geplant": "Geplant",
+    "wird_gepostet": "Wird gerade gepostet",
     "veroeffentlicht": "Veröffentlicht",
     "fehler": "Fehlgeschlagen",
 }
@@ -57,17 +59,63 @@ if st.session_state.logged_in:
                 "noch läuft."
             )
 
-    if st.button("Neuen Post anlegen", type="primary"):
-        # switch=True springt via switch_page("instagram edit") direkt in den
-        # Editor und setzt st.session_state.edit.
-        tools.new(collection, ini={"bearbeitet": bearbeitet},
-                  text="🎉 Post angelegt!")
+    # Zwei Arten von Posts, zwei Knoepfe, zwei Editorseiten. Die Wahl faellt
+    # einmal beim Anlegen und steht dann im Feld `bildtyp` -- so kommen sich die
+    # beiden Varianten im Editor nicht in die Quere.
+    EDITOR = {
+        "standard": "pages/10_Instagram_edit.py",
+        "bild": "pages/11_Instagram_bild_edit.py",
+    }
+
+    def anlegen(bildtyp, extra=None):
+        # switch=False: die generische Weiterleitung von tools.new() kennt nur
+        # eine Editorseite pro Collection. Hier haengt das Ziel am Bildtyp.
+        st.session_state.edit = tools.new(
+            collection,
+            ini={"bearbeitet": bearbeitet, "bildtyp": bildtyp, **(extra or {})},
+            switch=False, text="🎉 Post angelegt!")
+        st.switch_page(EDITOR[bildtyp])
+
+    b1, b2, _ = st.columns([1, 1, 2])
+    with b1:
+        if st.button("Neuen Post aus Text anlegen", type="primary",
+                     help="Ein Bild im Uni-Design, auf das Überschrift und "
+                          "Unterzeile geschrieben werden."):
+            anlegen("standard", {"fit": "cover", "image_id": None})
+    with b2:
+        if st.button("Neuen Post aus Bild anlegen", type="primary",
+                     help="Ein vorhandenes Bild aus der Bilddatenbank, "
+                          "wahlweise unverändert oder zugeschnitten."):
+            anlegen("bild", {"fit": "auto"})
 
     st.divider()
 
-    posts = list(collection.find(sort=[("rang", pymongo.ASCENDING)]))
-    if not posts:
+    # Chronologisch rueckwaerts, neueste zuerst. Massgeblich ist der Zeitpunkt
+    # der Veroeffentlichung; fuer Entwuerfe, die noch keinen haben, der
+    # Anlagezeitpunkt. Den traegt die ObjectId ohnehin in sich, ein eigenes
+    # Feld dafuer braucht es nicht. Beides in UTC: published_at wird so
+    # geschrieben (siehe util.lokal), generation_time ist es von Haus aus.
+    def zeitpunkt(p):
+        for feld in ("published_at", "geplant_fuer"):
+            w = p.get(feld)
+            if w is not None:
+                return w if w.tzinfo else w.replace(tzinfo=timezone.utc)
+        return p["_id"].generation_time
+
+    # Ein fuer naechste Woche geplanter Post liegt in der Zukunft und faellt
+    # sonst aus jedem Fenster heraus -- genau ihn will man aber sehen.
+    grenze = datetime.now(timezone.utc) - timedelta(days=st.session_state.tage)
+    alle = list(collection.find())
+    posts = sorted((p for p in alle if zeitpunkt(p) >= grenze),
+                   key=zeitpunkt, reverse=True)
+
+    st.write(f"**Es werden die Posts der letzten {st.session_state.tage} Tage "
+             "angezeigt. Kann links oben geändert werden.**")
+    if not alle:
         st.write("Noch keine Posts angelegt.")
+    elif not posts:
+        st.write(f"Keine Posts in den letzten {st.session_state.tage} Tagen — "
+                 f"insgesamt gibt es {len(alle)}.")
 
     for p in posts:
         col1, col2, col3 = st.columns([2, 8, 3])
@@ -88,8 +136,16 @@ if st.session_state.logged_in:
             titel = p.get("titel") or p.get("headline") or "(ohne Titel)"
             if st.button(titel, key=f"edit-{p['_id']}"):
                 st.session_state.edit = p["_id"]
-                st.switch_page("pages/10_Instagram_edit.py")
-            st.caption(f"{p.get('ratio', '4:5')} · {(p.get('caption') or '')[:80]}")
+                st.switch_page(EDITOR.get(p.get("bildtyp", "standard"),
+                                          EDITOR["standard"]))
+            # Bei fit='auto' gibt es kein gewaehltes Format -- das Bild
+            # behaelt seins. Dann den gespeicherten ratio-Wert NICHT anzeigen,
+            # er sagt ueber diesen Post nichts aus.
+            if p.get("bildtyp") == "bild" and p.get("fit") == "auto":
+                form = "ohne Beschnitt"
+            else:
+                form = p.get("ratio", "4:5")
+            st.caption(f"{form} · {(p.get('caption') or '')[:80]}")
         with col3:
             status = p.get("status", "entwurf")
             if status == "veroeffentlicht":
@@ -102,6 +158,16 @@ if st.session_state.logged_in:
                 st.error("Fehlgeschlagen")
                 if p.get("last_error"):
                     st.caption(p["last_error"][:120])
+            elif status == "geplant":
+                gf = util.lokal(p.get("geplant_fuer"))
+                st.warning(f"Geplant für {gf.strftime(util.datetime_format)}"
+                           if gf else "Geplant (ohne Zeitpunkt)")
+            elif status == "wird_gepostet":
+                # Steht das laenger als ein paar Minuten so da, ist der Lauf von
+                # bin/post_geplante.py abgebrochen -- dann muss jemand nachsehen,
+                # ob der Beitrag trotzdem auf Instagram steht.
+                st.warning("Wird gerade gepostet — bleibt das stehen, bitte auf "
+                           "Instagram nachsehen.")
             else:
                 st.info("Entwurf")
 

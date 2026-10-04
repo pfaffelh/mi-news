@@ -9,6 +9,39 @@ from datetime import datetime, timedelta
 from PIL import Image
 import io
 
+# Laenge der laengeren Kante, auf die eine PDF-Seite gerastert wird. Unabhaengig
+# vom Papierformat, damit ein A3-Poster nicht viermal so viele Pixel ergibt wie
+# ein A4. 2000 px liegen deutlich ueber dem, was Instagram (max. 1440 px) oder
+# die Homepage brauchen.
+PDF_LANGE_KANTE = 2000
+
+
+def datei_als_bild(uploaded_file):
+    """Eine hochgeladene Datei als PIL-Bild -- Bilddatei oder PDF.
+
+    Von einer PDF wird die erste Seite gerastert; weitere Seiten werden
+    ignoriert. Gibt (bild, seitenzahl) zurueck; seitenzahl ist 0 bei einer
+    gewoehnlichen Bilddatei.
+    """
+    daten = uploaded_file.getvalue()
+    if not uploaded_file.name.lower().endswith(".pdf"):
+        return Image.open(io.BytesIO(daten)), 0
+
+    # pymupdf ist ein reines pip-Wheel ohne Systemabhaengigkeit -- poppler oder
+    # ghostscript gibt es auf www2 naemlich nicht.
+    import pymupdf
+    doc = pymupdf.open(stream=daten, filetype="pdf")
+    try:
+        seite = doc[0]
+        breite, hoehe = seite.rect.width, seite.rect.height   # in Punkt (1/72")
+        dpi = round(72 * PDF_LANGE_KANTE / max(breite, hoehe))
+        pix = seite.get_pixmap(dpi=dpi)
+        bild = Image.open(io.BytesIO(pix.tobytes("png")))
+        bild.load()          # vor doc.close(), sonst fehlen die Pixeldaten
+        return bild, doc.page_count
+    finally:
+        doc.close()
+
 # st.toast() direkt vor st.rerun() (oder am Ende eines on_click-Callbacks) wird
 # oft nur als Flash gezeigt: der Rerun beginnt, bevor das Frontend den Toast
 # voll dargestellt hat. flash() parkt die Nachricht in session_state;
@@ -90,6 +123,9 @@ def new(collection, ini = {}, switch = True, text = "Erfolgreich angelegt!"):
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} ein neues Item angelegt.")
     if switch:
         switch_page(f"{st.session_state.collection_name[collection].lower()} edit")
+    # Die neue id zurueckgeben: Wer switch=False nutzt, weil das Ziel nicht die
+    # eine generische Editorseite ist, braucht sie, um dorthin zu springen.
+    return x.inserted_id
 
 
 # Finde in collection.field die id, und gebe im Datensatz return_field zurück. Falls list=True,

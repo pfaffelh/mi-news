@@ -71,12 +71,15 @@ if st.session_state.logged_in:
 
     key = f"{x['filename']}_austauschen"
     with st.expander("Bild austauschen", expanded = True if st.session_state.expanded == key else False):
-        st.session_state.uploaded_file = st.file_uploader("Neue Bildatei", type = ["jpg", "jpeg", "png"], help = "Erlaubte Formate sind jpg/jpeg/png.", key=key)
+        st.session_state.uploaded_file = st.file_uploader("Neue Bildatei", type = ["jpg", "jpeg", "png", "pdf"], help = "Erlaubte Formate sind jpg/jpeg/png/pdf. Von einer PDF wird die erste Seite verwendet.", key=key)
         if st.session_state.uploaded_file is not None:
             filename = st.session_state.uploaded_file.name
-            filename = filename.replace(".png", ".jpg")
+            for endung in [".png", ".pdf"]:
+                filename = filename.replace(endung, ".jpg")
             image_data = st.session_state.uploaded_file.getvalue()
-            image = Image.open(io.BytesIO(image_data))
+            image, seiten = tools.datei_als_bild(st.session_state.uploaded_file)
+            if seiten > 1:
+                st.warning(f"Die PDF hat {seiten} Seiten — verwendet wird nur die erste.")
             st.session_state.w, st.session_state.h = image.size
             #st.write(key)
             #st.write(f"{filename}_austauschen")

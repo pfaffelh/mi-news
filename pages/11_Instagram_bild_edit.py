@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_image_select import image_select
 import pymongo
 from datetime import datetime, timedelta, timezone
 
@@ -43,7 +44,7 @@ veroeffentlicht = x.get("status") == "veroeffentlicht"
 # der Status hier aber "fehler".
 loeschbar = x.get("status", "entwurf") == "entwurf"
 
-st.subheader(x.get("titel") or x.get("headline") or "Instagram-Post")
+st.subheader(x.get("titel") or "Instagram-Post aus Bild")
 
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
@@ -122,49 +123,98 @@ with links:
         help="Nur für die Übersicht in der App. Erscheint nicht im Post.",
     )
 
-    # Keine Formatauswahl: Ein selbst erzeugtes Bild hat kein eigenes
-    # Seitenverhaeltnis, dem man folgen muesste -- der Text wird in den Rahmen
-    # gesetzt, den man vorgibt. Dann nimmt man den groessten, den der Feed
-    # hergibt, und das ist 4:5. 1:1 oder 1.91:1 waeren nur weniger Flaeche fuer
-    # dieselbe Aussage.
-    ratio = ig_ratio_default
-
-    # Zurzeit nur Standard-Bilder (CD-Hintergrund mit Text). Die Auswahl der
-    # Bildquelle ist bewusst ausgeblendet; die Code-Pfade für eigene Bilder
-    # (render_bild, image_id, fit) bleiben im Modul erhalten für später.
-    bildtyp = "standard"
+    # Diese Seite bearbeitet ausschliesslich Posts aus einem vorhandenen Bild.
+    # Die Felder des Standardbildes (variante/lang/headline/subline) werden
+    # unveraendert durchgereicht, damit ein versehentlich falsch angelegter
+    # Post nichts verliert.
+    bildtyp = "bild"
     variante = x.get("variante", insta.VARIANTE_DEFAULT)
     lang = x.get("lang", "de")
     headline = x.get("headline", "")
     subline = x.get("subline", "")
     image_id = x.get("image_id")
-    fit = x.get("fit", "cover")
 
-    c_farbe, c_lang = st.columns([2, 1])
-    with c_farbe:
-        varianten = list(insta.VARIANTEN.keys())
-        variante = st.radio(
-            "Farbe", varianten,
-            index=varianten.index(variante) if variante in varianten else 0,
-            format_func=lambda v: insta.VARIANTEN[v]["label"],
-            horizontal=True,
+    # Nur Bilder aus dem links oben eingestellten Zeitraum. Ein Hochladedatum
+    # fuehrt die bild-Collection nicht -- die ObjectId traegt den Zeitpunkt
+    # aber ohnehin in sich.
+    #
+    # Das bereits gewaehlte Bild bleibt IMMER in der Liste, auch wenn es aus
+    # dem Zeitraum faellt: Sonst wuerde das blosse Oeffnen eines aelteren
+    # Posts sein Bild stillschweigend gegen ein anderes austauschen.
+    grenze = datetime.now(timezone.utc) - timedelta(days=st.session_state.tage)
+    alle_bilder = list(st.session_state.bild.find(
+        {"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+    bilderliste = [b for b in alle_bilder
+                   if b["_id"].generation_time >= grenze or b["_id"] == image_id]
+
+    if not alle_bilder:
+        st.warning("Es gibt keine Bilder in der Datenbank.")
+    elif not bilderliste:
+        st.warning(
+            f"In den letzten {st.session_state.tage} Tagen wurde kein Bild "
+            f"hochgeladen (insgesamt gibt es {len(alle_bilder)}). Den Zeitraum "
+            "links oben vergrößern, um ältere Bilder zu sehen."
         )
-    with c_lang:
-        lang = st.radio(
-            "Sprache (Institutsname)", ["de", "en"],
-            index=0 if lang == "de" else 1,
-            format_func=lambda l: {"de": "Deutsch", "en": "English"}[l],
-            horizontal=True,
-            help="Bestimmt, ob „Mathematisches Institut“ oder „Mathematical "
-                 "Institute“ auf dem Bild steht.",
+    else:
+        ids = [b["_id"] for b in bilderliste]
+        gewaehlt = image_select(
+            "Bild auswählen",
+            [tools.get_thumbnail(b["_id"]) for b in bilderliste],
+            captions=[(b.get("titel") or b.get("filename") or "")[:28]
+                      for b in bilderliste],
+            index=ids.index(image_id) if image_id in ids else 0,
+            return_value="index", use_container_width=False,
+            key=f"bildwahl_{x['_id']}",
         )
-    headline = st.text_area("Überschrift", headline, height=80)
-    subline = st.text_area("Unterzeile", subline, height=80)
-    st.caption(
-        "Die Schriftgröße passt sich automatisch an die Textlänge an. Logo, "
-        "Institutsname und die CD-Gestaltungselemente (Siegel, Vierblatt) "
-        "werden automatisch gesetzt."
+        image_id = ids[gewaehlt]
+        st.caption(
+            f"Zur Auswahl stehen {len(bilderliste)} von {len(alle_bilder)} "
+            f"Bildern — die der letzten {st.session_state.tage} Tage. Der "
+            "Zeitraum lässt sich links oben ändern. Ein bereits gewähltes "
+            "älteres Bild bleibt immer sichtbar."
+        )
+
+    fits = ["auto", "cover", "contain"]
+    f = x.get("fit", "auto")
+    fit = st.radio(
+        "Zuschnitt", fits,
+        index=fits.index(f) if f in fits else 0,
+        format_func=lambda f: {
+            "auto": "Nichts abschneiden (Rand nur wenn nötig)",
+            "cover": "Formatfüllend (schneidet ab)",
+            "contain": "Vollständig sichtbar im gewählten Format (mit Rand)",
+        }[f],
+        help="Instagram akzeptiert jedes Seitenverhältnis zwischen 4:5 und "
+             "1.91:1, nicht nur die drei runden Werte. Die erste Option nutzt "
+             "das aus: Das Bild bleibt wie es ist und bekommt nur dann Rand, "
+             "wenn es aus diesem Bereich herausfällt.",
     )
+
+    st.caption(
+        "**Hochformat wird am größten gezeigt.** Instagram erlaubt alles "
+        "zwischen **4:5** (hoch) und **1.91:1** (quer) — die Grenze ist "
+        "unsymmetrisch: nach quer ist viel Luft, nach hoch fast keine. "
+        "4:5 füllt den Feed am besten aus, ein breites Bild wirkt als schmaler "
+        "Streifen. Plakate und Poster (A4/A3) sind hochformatiger als 4:5 und "
+        "bekommen deshalb schmale Ränder links und rechts — das ist der "
+        "Normalfall und kein Fehler. Die meisten Bilder in der Datenbank sind "
+        "dagegen Querformat, weil sie für Homepage und Monitor angelegt wurden."
+    )
+
+    if fit == "auto":
+        # Ohne feste Zielgroesse ist jede Formatwahl gegenstandslos; ein Feld
+        # ohne Wirkung waere irrefuehrend. `ratio` bleibt gespeichert, damit
+        # beim Umschalten auf cover/contain die letzte Wahl wieder da ist.
+        ratio = x.get("ratio", ig_ratio_default)
+    else:
+        ratio = st.radio(
+            "Format", list(ig_ratios.keys()),
+            index=list(ig_ratios.keys()).index(x.get("ratio", ig_ratio_default)),
+            horizontal=True,
+            help="4:5 (hoch) nutzt im Feed die größte Fläche und ist die übliche "
+                 "Wahl. 1.91:1 ist das äußerste Querformat und wirkt als schmaler "
+                 "Streifen.",
+        )
 
     st.markdown("### Beschreibung")
 
@@ -218,11 +268,17 @@ leer_probleme = insta.post_probleme(post, caption)
 with rechts:
     st.markdown("### Vorschau")
     if vorschau is None:
-        st.warning("Kein Bild — bitte eine Bildquelle wählen.")
+        st.warning("Es ist kein Bild ausgewählt.")
     else:
-        # Genau das Bild, das gepostet würde: richtige Größe, sRGB, JPEG.
-        st.image(vorschau, use_container_width=True)
-        st.caption(f"{vorschau.width} × {vorschau.height} px — so wird der Post aussehen.")
+        # Ein einziges Vorschaubild: der fertige Post, umrandet von einer
+        # duennen schwarzen Linie. Die Linie wird nicht mitgepostet -- ohne sie
+        # waere ein weisser Rand auf weissem Seitenhintergrund unsichtbar, und
+        # genau den will man beurteilen.
+        zbild, ztext = insta.zuschnitt_vorschau(bild_data, ratio, fit)
+        st.image(zbild)
+        st.caption(f"{vorschau.width} × {vorschau.height} px — {ztext} "
+                   "Die schwarze Linie zeigt nur die Ausdehnung und gehört "
+                   "nicht zum Post.")
 
     for w in warnungen:
         st.warning(w)
@@ -236,7 +292,8 @@ with rechts:
         st.download_button(
             "Bild herunterladen (JPEG)",
             data=insta.to_jpeg(vorschau),
-            file_name=f"instagram-{ratio.replace(':', 'x')}.jpg",
+            file_name=("instagram-original.jpg" if fit == "auto"
+                       else f"instagram-{ratio.replace(':', 'x')}.jpg"),
             mime="image/jpeg",
             help="Nützlich, solange der Account noch nicht steht: Bild "
                  "herunterladen und von Hand posten.",
@@ -283,7 +340,7 @@ with c2:
         for p in leer_probleme:
             st.warning(p)
         if vorschau is None:
-            st.warning("Es gibt kein Bild — bitte eine Bildquelle wählen.")
+            st.warning("Es ist kein Bild ausgewählt.")
         elif caption_probleme:
             st.warning("Die Caption ist noch zu lang bzw. hat zu viele Hashtags "
                        "— siehe die Meldung am Textfeld.")

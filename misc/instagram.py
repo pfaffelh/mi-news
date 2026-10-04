@@ -25,6 +25,7 @@ Barrierefreiheitsproblem ist (BITV).
 
 import io
 import json
+import math
 import netrc
 import os
 import re
@@ -46,10 +47,13 @@ from misc.config import (
     ig_hashtags_default,
     ig_insta_bild_ttl,
     ig_logo,
+    ig_max_width,
     ig_min_source_px,
     ig_netrc_machine,
     ig_public_image_base,
     ig_ratio_default,
+    ig_ratio_max,
+    ig_ratio_min,
     ig_ratios,
     ig_siegel,
     ig_token_file,
@@ -427,17 +431,171 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
 # ------------------------------------------------------------- Eigenes Bild --
 
 
+def erlaubter_rahmen(w, h):
+    """Kleinster von Instagram akzeptierter Rahmen, in den (w, h) ohne
+    Beschnitt passt.
+
+    Instagram nimmt im Feed jedes Seitenverhaeltnis zwischen 4:5 und 1.91:1 --
+    nicht bloss die drei runden Werte. Liegt das Bild schon in diesem Band,
+    bleibt es unveraendert; sonst wird nur so viel Rand ergaenzt, wie noetig
+    ist, um die naechste Grenze zu erreichen. Abgeschnitten wird nie.
+    """
+    r = w / h
+    # Aufgerundet wird IN das Band hinein, nicht auf den naechsten Pixel:
+    # 1024 px breit / 1.91 ergibt 536.1 -- bei 536 px Hoehe waere das Ergebnis
+    # 1.9104 und damit knapp ausserhalb, und Instagram lehnte es ab. Ein Pixel
+    # mehr Rand kostet nichts, ein Pixel zu wenig den ganzen Post.
+    if r < ig_ratio_min:            # zu hochformatig -> links/rechts auffuellen
+        return max(1, math.ceil(h * ig_ratio_min)), h
+    if r > ig_ratio_max:            # zu breit -> oben/unten auffuellen
+        return w, max(1, math.ceil(w / ig_ratio_max))
+    return w, h
+
+
+def auto_groesse(w, h):
+    """Was im Modus "auto" aus einem Bild (w, h) wird.
+
+    Gibt (breite, hoehe, skaliert, inhalt_w, inhalt_h) zurueck: die Groesse des
+    fertigen Bildes, ob dafuer verkleinert wurde, und wie gross der Bildinhalt
+    darin ist (kleiner als der Rahmen, wenn Rand dazukam).
+
+    Einzige Quelle fuer diese Rechnung -- render_bild() und bild_warnungen()
+    benutzen sie beide, damit die angezeigte Warnung nicht etwas anderes
+    behauptet als das, was am Ende herauskommt.
+    """
+    skaliert = w > ig_max_width
+    if skaliert:
+        h = max(1, round(h * ig_max_width / w))
+        w = ig_max_width
+    rahmen_w, rahmen_h = erlaubter_rahmen(w, h)
+    return rahmen_w, rahmen_h, skaliert, w, h
+
+
+def bild_warnungen(data):
+    """Schoenheitsfehler eines Bildes. Nichts davon verhindert das Posten."""
+    warnungen = []
+    try:
+        src = Image.open(io.BytesIO(data))
+    except Exception:
+        return ["Das Bild laesst sich nicht lesen."]
+
+    w, h, skaliert, iw, ih = auto_groesse(src.width, src.height)
+
+    if skaliert:
+        warnungen.append(
+            f"Das Bild ist {src.width} px breit und wird auf {ig_max_width} px "
+            "verkleinert — mehr zeigt Instagram ohnehin nicht an. Abgeschnitten "
+            "wird nichts."
+        )
+    # Gemessen wird am fertigen Bild, nicht an der Quelle: Verkleinern kann ein
+    # Bild unter die Grenze druecken, Auffuellen kann es darueber heben.
+    if min(w, h) < ig_min_source_px:
+        warnungen.append(
+            f"Der Post waere nur {w}×{h} px gross. Instagram rechnet unter "
+            f"{ig_min_source_px} px hoch; er wird unscharf."
+        )
+    if (w, h) != (iw, ih):
+        anteil = 1 - (iw * ih) / (w * h)
+        # In welche Richtung das Bild aus dem Band faellt, gehoert in den Text:
+        # "zu hochformatig" allein klingt, als sei Hochformat das Problem --
+        # dabei ist 4:5 gerade das Format, das Instagram am groessten zeigt.
+        if w > iw:
+            richtung = (
+                f"Das Bild ist hochformatiger ({src.width/src.height:.2f}), als Instagram "
+                f"zulaesst — am hochkantigsten darf 4:5 ({ig_ratio_min:.2f}) sein. "
+                "Es bekommt links und rechts je einen Rand"
+            )
+        else:
+            richtung = (
+                f"Das Bild ist breiter ({src.width/src.height:.2f}), als Instagram "
+                f"zulaesst — am breitesten darf 1.91:1 ({ig_ratio_max:.2f}) sein. "
+                "Es bekommt oben und unten je einen Rand"
+            )
+        warnungen.append(
+            f"{richtung}: {w}×{h} px, {anteil*100:.0f} % Rand. Abgeschnitten wird nichts."
+        )
+    return warnungen
+
+
+def zuschnitt_vorschau(data, ratio=ig_ratio_default, fit="auto", bg=ufr_weiss,
+                       max_kante=620):
+    """Der fertige Post, wie er aussehen wird -- plus ein Satz, was passiert ist.
+
+    Gezeigt wird genau das Bild, das gepostet wird, mit einer duennen schwarzen
+    Linie aussen herum. Die Linie gehoert nicht zum Post: Sie zeigt, wie weit
+    das Bild reicht, denn ein weisser Rand auf weissem Seitenhintergrund waere
+    sonst nicht von der Seite zu unterscheiden -- und gerade der Rand ist das,
+    was man beurteilen will.
+
+    Nichts Farbiges in dieser Darstellung: Alles Bunte koennte fuer Bildinhalt
+    gehalten werden, der spaeter wirklich auf Instagram erscheint.
+
+    Gibt (bild, text) zurueck.
+    """
+    src = Image.open(io.BytesIO(data)).convert("RGB")
+    out, _ = render_bild(data, ratio=ratio, fit=fit, bg=bg)
+
+    if fit == "cover":
+        ziel_w, ziel_h = ig_ratios[ratio]
+        skala = max(ziel_w / src.width, ziel_h / src.height)
+        bleibt_w = min(src.width, ziel_w / skala)
+        bleibt_h = min(src.height, ziel_h / skala)
+        weg_x, weg_y = round(src.width - bleibt_w), round(src.height - bleibt_h)
+        if max(weg_x, weg_y) == 0:
+            text = "Das Bild passt genau in dieses Format — nichts abgeschnitten."
+        else:
+            wo = (f"links und rechts je {weg_x // 2} px" if weg_x > weg_y
+                  else f"oben und unten je {weg_y // 2} px")
+            weg = 1 - (bleibt_w * bleibt_h) / (src.width * src.height)
+            text = (f"Abgeschnitten: {wo}, zusammen {weg*100:.0f} % der "
+                    "Bildflaeche.")
+    else:
+        if fit == "auto":
+            w, h, _, iw, ih = auto_groesse(src.width, src.height)
+        else:
+            ziel_w, ziel_h = ig_ratios[ratio]
+            skala = min(ziel_w / src.width, ziel_h / src.height)
+            w, h = ziel_w, ziel_h
+            iw = max(1, round(src.width * skala))
+            ih = max(1, round(src.height * skala))
+        farbe = "weisser" if bg == ufr_weiss else f"{bg}-"
+        if (w, h) == (iw, ih):
+            text = "Das Bild passt genau so, wie es ist — kein Rand, kein Beschnitt."
+        elif w > iw:
+            text = (f"{farbe} Rand links und rechts, je {(w - iw) // 2} px "
+                    f"({(w - iw) / w * 100:.0f} % der Breite). Abgeschnitten wird nichts.")
+        else:
+            text = (f"{farbe} Rand oben und unten, je {(h - ih) // 2} px "
+                    f"({(h - ih) / h * 100:.0f} % der Hoehe). Abgeschnitten wird nichts.")
+
+    # Die Linie kommt auf eine Kopie -- das Original ist das, was gepostet wird.
+    out = out.copy()
+    ImageDraw.Draw(out).rectangle(
+        (0, 0, out.width - 1, out.height - 1), outline="#000000",
+        width=max(1, round(max(out.size) / 400)))
+    if max(out.size) > max_kante:
+        f = max_kante / max(out.size)
+        out = out.resize((max(1, round(out.width * f)), max(1, round(out.height * f))),
+                         Image.LANCZOS)
+    return out, text
+
+
 def render_bild(data, ratio=ig_ratio_default, fit="cover", bg=ufr_weiss):
     """Ein Bild aus der bild-Collection auf ein Instagram-Format bringen.
 
-    `fit` — "cover" (formatfüllend, schneidet ab) oder
-            "contain" (vollständig sichtbar, füllt mit `bg` auf)
+    `fit` — "auto" (nichts abschneiden: das Bild behaelt seine Groesse und
+            bekommt nur dann einen Rand, wenn sein Seitenverhaeltnis ausserhalb
+            des von Instagram akzeptierten Bandes liegt; `ratio` unbeachtet),
+            "cover" (formatfüllend, schneidet ab) oder
+            "contain" (vollständig sichtbar im gewaehlten `ratio`, füllt auf)
     """
     ziel_w, ziel_h = ig_ratios[ratio]
     warnungen = []
 
     src = Image.open(io.BytesIO(data))
-    if src.width < ig_min_source_px or src.height < ig_min_source_px:
+    if fit == "auto":
+        warnungen = bild_warnungen(data)
+    elif src.width < ig_min_source_px or src.height < ig_min_source_px:
         warnungen.append(
             f"Quellbild ist nur {src.width}×{src.height} px. Instagram verlangt "
             f"mindestens {ig_min_source_px} px; der Post wird unscharf."
@@ -451,6 +609,24 @@ def render_bild(data, ratio=ig_ratio_default, fit="cover", bg=ufr_weiss):
         src = flach
     else:
         src = src.convert("RGB")
+
+    # "auto": nie skalieren, nie schneiden. Nur wenn das Seitenverhaeltnis
+    # ausserhalb des erlaubten Bandes liegt, kommt ringsum so wenig Rand dazu
+    # wie noetig.
+    if fit == "auto":
+        # Ueber 1440 px Breite rechnet Instagram ohnehin herunter -- die
+        # Mehraufloesung landet also nie im Feed, kostet aber Dateigroesse.
+        # Ein Foto aus der Bilddatenbank kam so auf 4,7 MB, bei einer harten
+        # Grenze von 8 MB. Herunterrechnen schneidet nichts weg, es nimmt nur
+        # Pixel, die Instagram selbst verworfen haette.
+        w, h, skaliert, iw, ih = auto_groesse(src.width, src.height)
+        if skaliert:
+            src = src.resize((iw, ih), Image.LANCZOS)
+        if (w, h) == (iw, ih):
+            return src, warnungen
+        out = Image.new("RGB", (w, h), bg)
+        out.paste(src, ((w - iw) // 2, (h - ih) // 2))
+        return out, warnungen
 
     if fit == "cover":
         skala = max(ziel_w / src.width, ziel_h / src.height)
@@ -699,22 +875,14 @@ def _warte_auf_fertig(base, container_id, token, versuche=20, pause=3):
     raise RuntimeError("Zeitüberschreitung: Media-Container wurde nicht FINISHED.")
 
 
-def publish(image_bytes, caption):
-    """Post veröffentlichen. Gibt die Instagram-Media-ID zurück oder wirft.
+def _container_anlegen(image_bytes, caption):
+    """Schritte 0-2: Bild bereitstellen, Media-Container anlegen, auf FINISHED warten.
 
-    Der Flow ist dreistufig (siehe `insta.md`, „Kommentare müssen aus"):
+    Der Container ist NICHT oeffentlich -- erst media_publish schaltet ihn live.
+    Deshalb teilen sich publish() und probelauf() diesen Teil: Der Probelauf
+    hoert hier auf.
 
-    0. Bild unter einem Token in insta_bild ablegen → öffentliche image_url
-       (mi-hp liefert sie unter /nlehre/insta/<token>.jpg aus).
-    1. POST /media          → Container. Meta lädt das Bild SELBST von image_url.
-    2. POST /media_publish  → Beitrag ist live, liefert die Media-ID.
-    3. POST /<media-id>?comment_enabled=false
-                            → Kommentare aus. **Pflicht**: Nutzungskonzept,
-                              Datenschutzerklärung und DSFA sagen zu, dass die
-                              Kommentarfunktion deaktiviert ist. Schlägt dieser
-                              Schritt fehl, scheitert publish() laut — mit der
-                              Media-ID im Fehlertext, damit man von Hand nachfassen
-                              kann (der Beitrag ist dann bereits live).
+    Gibt (base, ig_user_id, token, container_id) zurueck.
     """
     import requests
 
@@ -744,19 +912,73 @@ def publish(image_bytes, caption):
 
         # 2. Warten, bis Meta das Bild geholt und verarbeitet hat.
         _warte_auf_fertig(base, container_id, token)
-
-        # 3. Veröffentlichen.
-        r = requests.post(
-            f"{base}/{ig_user_id}/media_publish",
-            data={"creation_id": container_id, "access_token": token},
-            timeout=60,
-        )
-        _graph_fehler(r, "Veröffentlichen")
-        media_id = r.json()["id"]
     finally:
-        # Das Bild wird nur bis Schritt 1/2 gebraucht — danach immer aufräumen,
-        # egal ob es geklappt hat. Der TTL-Index fängt den Rest ab.
+        # Das Bild wird nur bis hierher gebraucht — danach immer aufräumen, egal
+        # ob es geklappt hat. Der TTL-Index fängt den Rest ab.
         coll.delete_one({"token": bild_token})
+
+    return base, ig_user_id, token, container_id
+
+
+def probelauf(image_bytes, caption):
+    """Die ganze Kette durchspielen, ohne dass etwas auf Instagram erscheint.
+
+    Legt einen Media-Container an und wartet, bis Meta ihn fertig verarbeitet
+    hat -- veroeffentlicht ihn aber nicht. Damit ist geprueft, was sonst
+    niemand prueft:
+
+    * Der Token ist gueltig.
+    * Meta erreicht unsere Bild-URL auf www2 (die mi-hp-Route). Das ist das
+      fragilste Glied der Kette und faellt sonst erst beim echten Posten auf.
+    * Instagram akzeptiert Seitenverhaeltnis, Groesse und Format des Bildes.
+
+    Nicht geprueft wird nur der letzte Schritt (media_publish) und das
+    Abschalten der Kommentare -- beides geht erst, wenn der Beitrag live ist.
+
+    Nicht veroeffentlichte Container verfallen bei Meta nach 24 Stunden von
+    selbst; es bleibt also nichts zurueck.
+
+    Gibt die Container-ID zurueck oder wirft.
+    """
+    _, _, _, container_id = _container_anlegen(image_bytes, caption)
+    return container_id
+
+
+def publish(image_bytes, caption):
+    """Post veröffentlichen. Gibt die Instagram-Media-ID zurück oder wirft.
+
+    Der Flow ist dreistufig (siehe `insta.md`, „Kommentare müssen aus"):
+
+    0. Bild unter einem Token in insta_bild ablegen → öffentliche image_url
+       (mi-hp liefert sie unter /nlehre/insta/<token>.jpg aus).
+    1. POST /media          → Container. Meta lädt das Bild SELBST von image_url.
+    2. POST /media_publish  → Beitrag ist live, liefert die Media-ID.
+    3. POST /<media-id>?comment_enabled=false
+                            → Kommentare aus. **Pflicht**: Nutzungskonzept,
+                              Datenschutzerklärung und DSFA sagen zu, dass die
+                              Kommentarfunktion deaktiviert ist. Schlägt dieser
+                              Schritt fehl, scheitert publish() laut — mit der
+                              Media-ID im Fehlertext, damit man von Hand nachfassen
+                              kann (der Beitrag ist dann bereits live).
+    """
+    import requests
+
+    if not is_configured():
+        raise NotConfigured(
+            "Nicht konfiguriert: Es fehlt ein gültiger Token (ig_token.json) "
+            "oder die .netrc-Zugangsdaten. Siehe insta.md / docs/social-media."
+        )
+
+    base, ig_user_id, token, container_id = _container_anlegen(image_bytes, caption)
+
+    # 3. Veröffentlichen.
+    r = requests.post(
+        f"{base}/{ig_user_id}/media_publish",
+        data={"creation_id": container_id, "access_token": token},
+        timeout=60,
+    )
+    _graph_fehler(r, "Veröffentlichen")
+    media_id = r.json()["id"]
 
     # 4. Kommentare deaktivieren — Pflicht. Der Beitrag ist ab jetzt live; scheitert
     # dieser Schritt, muss es laut scheitern, aber die Media-ID darf nicht verloren
