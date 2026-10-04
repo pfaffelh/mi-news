@@ -221,6 +221,26 @@ def caption_stats(caption):
     return len(caption), len(hashtags), probleme
 
 
+def ist_leerer_entwurf(post):
+    """Ein Post, in den nie etwas eingetragen wurde.
+
+    tools.new() legt den Datensatz schon beim Klick auf "Neuen Post anlegen"
+    an, nicht erst beim Speichern. Wer den Editor mit "Zurueck (ohne
+    Speichern)" verlaesst, liesse sonst eine leere Huelle in der Liste zurueck
+    -- gespeichert wurde ja nichts, trotzdem steht sie da.
+
+    Geprueft wird der Stand in der Datenbank, nicht der im Formular: Nur was
+    nie gespeichert wurde, darf verschwinden.
+    """
+    if post.get("status") != "entwurf":
+        return False
+    if post.get("image_id") or post.get("ig_media_id"):
+        return False
+    return not any((post.get(k) or "").strip()
+                   for k in ("titel", "caption", "headline", "subline",
+                             "kommentar"))
+
+
 def post_probleme(post, caption):
     """Was das Veröffentlichen verhindern muss — leere Posts abfangen.
 

@@ -49,6 +49,12 @@ st.subheader(x.get("titel") or "Instagram-Post aus Bild")
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     if st.button("Zurück (ohne Speichern)"):
+        # Der Datensatz entsteht schon beim Anlegen, nicht erst beim Speichern.
+        # Wurde nie etwas eingetragen, bliebe hier sonst eine leere Huelle in
+        # der Liste stehen -- obwohl der Knopf das Gegenteil verspricht.
+        if insta.ist_leerer_entwurf(x):
+            collection.delete_one({"_id": x["_id"]})
+            tools.flash("Leerer Entwurf verworfen.")
         st.switch_page("pages/09_Instagram.py")
 with col2:
     # Gespeichert wird erst ganz unten: `inhalt` steht erst fest, wenn alle
