@@ -1,18 +1,25 @@
-# Poster für den Instagram-Kanal
+# Werbemittel für den Instagram-Kanal
 
-Aushang fürs Institut: gelbe CD-Fläche, Wortmarke, Überschrift, QR-Code zum
-Profil. Die Gestaltung ist dieselbe wie bei den Instagram-Posts selbst
-(`misc/instagram.py`, Variante „gelb") — wer das Poster im Flur sieht und später
-einen Beitrag im Feed, soll beides zusammenbringen.
+Aushang fürs Institut und Postkarte zum Mitnehmen: gelbe CD-Fläche, Wortmarke,
+Überschrift, QR-Code zum Profil. Die Gestaltung ist dieselbe wie bei den
+Instagram-Posts selbst (`misc/instagram.py`, Variante „gelb") — wer das Poster
+im Flur sieht und später einen Beitrag im Feed, soll beides zusammenbringen.
 
 | Datei | Zweck |
 |---|---|
 | [instagram-poster.tex](instagram-poster.tex) | Das Poster, A4 hoch |
+| [postkarte-a6.tex](postkarte-a6.tex) | Die Postkarte, A6 hoch, mit Anschnitt |
 | [assets.py](assets.py) | Erzeugt die drei abgeleiteten Bilddateien aus `static/` |
 | `ufr-blatt-gelb.png`, `ufr-siegel-gelb.png` | Vierblatt und Siegel, im Gelbton eingefärbt |
 | `ufr-logo-blau-beschnitten.png` | Wortmarke ohne ihren transparenten Rand |
 
-## Übersetzen
+Beide Dateien sind eigenständig und teilen sich nur die Bilddateien. **Der
+Handle steht in beiden** — wird er geändert, muss er an beiden Stellen geändert
+werden, und in jeder Datei zweimal (Fließtext und QR-Ziel).
+
+## Poster (A4)
+
+### Übersetzen
 
 ```bash
 lualatex instagram-poster.tex
@@ -25,7 +32,7 @@ abgelegt, erst der zweite setzt ihn. Zu installieren ist nichts: Die Schrift
 Pakete `qrcode`, `fontawesome5` und `tikz` sind in jeder TeX-Live-Vollinstallation
 enthalten.
 
-## Sprache
+### Sprache
 
 Der Kanal ist deutsch, das Poster deshalb auch — **Deutsch ist der Standard.**
 Für eine englische Fassung (etwa für die Master-Studiengänge) genügt Zeile 33:
@@ -37,7 +44,7 @@ Für eine englische Fassung (etwa für die Master-Studiengänge) genügt Zeile 3
 
 Beide Fassungen sind gesetzt und geprüft.
 
-## Wenn der Text geändert wird
+### Wenn der Text geändert wird
 
 Die Überschrift steht in einem TikZ-Knoten **ohne** `text width`, und ihre
 Zeilenumbrüche stehen von Hand — auf einem Poster ist der Umbruch Gestaltung,
@@ -54,7 +61,7 @@ Deshalb sind die Schriftgrößen sprachabhängig: Bei einheitlichen 46 pt wäre
 „Mathematischen Institut" 185 mm breit geworden und 15 mm über den Rand gelaufen.
 Jetzt sind es 40 pt (deutsch, 161 mm) und 44 pt (englisch, 162 mm).
 
-## Der QR-Code
+### Der QR-Code
 
 Ziel ist `https://www.instagram.com/math_uni_freiburg/`. Die URL steht **wörtlich**
 im `\qrcode`-Argument, mit blankem Unterstrich: Das Paket liest das Argument mit
@@ -77,16 +84,100 @@ ein Tipp auf „Folgen". Das ist der beste erreichbare Weg — eine URL, die das
 direkt auslöst, gibt es bei Instagram nicht. Wer die App nicht hat, landet im
 Browser auf derselben Profilseite.
 
-## Drucken
+### Drucken
 
 Das PDF ist randlos angelegt: Die gelbe Fläche und die beiden
 Gestaltungselemente laufen über den Blattrand hinaus. Ein normaler Bürodrucker
 lässt ringsum einen weißen Rand stehen — das sieht ordentlich aus, ist aber nicht
-die gedachte Wirkung. Für den randlosen Druck braucht die Druckerei eine Fassung
-mit Beschnittzugabe; das sind drei Zeilen in der Präambel, sagt Bescheid.
+die gedachte Wirkung. **Beschnittzugabe hat das Poster nicht** (die Postkarte
+dagegen schon, siehe unten); für den Druckereiauftrag müsste sie nachgerüstet
+werden — es sind dieselben paar Zeilen wie in `postkarte-a6.tex`.
 
 Beim Vergrößern auf A3 bleibt alles proportional, der QR-Code wird dann 93 mm
 groß und entsprechend weiter lesbar.
+
+## Postkarte (A6)
+
+```bash
+lualatex postkarte-a6.tex
+lualatex postkarte-a6.tex
+```
+
+Einseitig (4/0), **die Rückseite bleibt leer.** Sprache umschalten wie beim
+Poster, mit `\sprachedetrue` / `\sprachedefalse`.
+
+### Warum keine verkleinerte Fassung des Posters
+
+A6 ist geometrisch exakt ein Viertel von A4, das Poster ließe sich also mit
+Faktor 0,5 skalieren (`pdfjam --paper a6paper --scale 1.0`). Das Ergebnis wäre
+sauber, aber an beiden Enden falsch gerechnet: Die Schriftgrößen des Posters
+folgen der Leseentfernung im Flur (2 bis 3 m), eine Postkarte hält man in der
+Hand (30 cm). Beim reinen Skalieren wäre die Überschrift unnötig groß und die
+Hinweiszeile mit 7,5 pt unnötig klein.
+
+| Element | Poster A4 | skaliert (verworfen) | Postkarte A6 |
+|---|---|---|---|
+| Überschrift | 40 pt, 3 Zeilen | 20 pt | **28 pt, 4 Zeilen** |
+| Institutsname, Handle | 19 pt | 9,5 pt | 9,5 / 11 pt |
+| Hinweiszeile | 15 pt | 7,5 pt | **9 pt** |
+| Instagram-Zeichen | 34 pt | 17 pt | 20 pt |
+| QR-Code | 66 mm | 33 mm | 28 mm |
+| Rand | 20 mm | 10 mm | 10 mm |
+
+Die größere Überschrift wird durch den vierzeiligen Umbruch möglich: Die längste
+Zeile ist dann „Mathematischen" (77 mm bei 28 pt) statt „Mathematischen Institut"
+(das wäre bei 28 pt 112 mm und liefe weit über das 85 mm breite Satzfeld).
+Getrennt wird nur innerhalb von „Mathematischen Institut"; „auf Instagram"
+bleibt zusammen. Nach oben begrenzt nicht die Breite, sondern die Höhe: Vier
+Zeilen passen zwischen Institutsnamen und Karte bis etwa 29 pt.
+
+Beide Sprachen stehen deshalb in 28 pt, obwohl die englische Fassung breiter
+werden könnte („Mathematical" misst nur 62 mm) — sie hat rechts eben mehr Luft.
+Die Zeile „Mathematisches Institut" bleibt auch in der englischen Fassung
+deutsch; das ist aus dem Poster übernommen.
+
+### Anschnitt und Endformat
+
+Die Seite ist **111 × 154 mm**, nicht 105 × 148: Das Endformat plus 3 mm
+Beschnittzugabe ringsum. Ohne sie blitzt bei der Schnitttoleranz der Druckerei
+das weiße Papier am Rand durch, weil das Gelb bis an die Kante läuft. Die
+`/TrimBox` ist im PDF eingetragen, die Preflight-Prüfung der Druckerei findet
+das Endformat also von selbst:
+
+```
+MediaBox:   0.00   0.00  314.65  436.53     (111 × 154 mm)
+TrimBox:    8.50   8.50  306.14  428.03     (105 × 148 mm)
+```
+
+Alles Inhaltliche hält 10 mm Abstand zur Endformatkante, liegt also auch bei
+ungünstigem Schnitt sicher.
+
+Für den eigenen Ausdruck zum Selberschneiden gibt es `\markentrue` in der
+Präambel: Dann wird die Seite 123 × 166 mm und bekommt Schnittmarken, die 1 mm
+hinter dem Anschnitt beginnen. Druckereien wollen das meist *nicht* — dort gilt
+der Standard `\markenfalse`.
+
+Eine Fußangel beim Setzen der TrimBox: `\pdfvariable pageattr` schreibt seinen
+Inhalt wörtlich ins PDF, ohne Makros zu expandieren. Die Werte müssen vorher
+per `\edef` ausgerechnet werden, sonst stehen die Makronamen samt geschweiften
+Klammern im PDF und die Datei ist defekt.
+
+### Der QR-Code auf der Karte
+
+Dieselbe URL, derselbe Level Q, also derselbe Code wie auf dem Poster — nur
+kleiner gesetzt. Nachgeprüft: Die 33 × 33 Module des gerasterten Ausdrucks
+stimmen Modul für Modul mit denen des Posters überein, inklusive der drei
+Suchmuster an den Ecken.
+
+Bei 28 mm Kantenlänge ist ein Modul **0,85 mm** breit; als Untergrenze für
+sicheres Scannen gelten 0,4 mm. Die 66 mm des Posters braucht die Karte nicht —
+die hält man in der Hand, nicht im Flur. Die gewonnene Breite geht an den
+Textblock links, der sonst zu eng für eine einzeilige Hinweiszeile wäre.
+
+Der Code sitzt 3 mm von der Kartenkante entfernt, links stehen 6,5 mm. Das ist
+Absicht und keine Schlamperei: Die Option `padding` gibt dem Code seine Quiet
+Zone von 4 Modulen (gut 3 mm) im eigenen Kasten mit. Mit gleichen Zahlen auf
+beiden Seiten sähe die Karte rechts sichtbar zu luftig aus.
 
 ## Herkunft der Elemente
 

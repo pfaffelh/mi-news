@@ -1,0 +1,233 @@
+% Postkarte: "Folgt dem Mathematischen Institut auf Instagram"
+%
+% A6 hoch (105 x 148 mm), dieselbe Gestaltung wie instagram-poster.tex und wie
+% die Instagram-Posts selbst (misc/instagram.py, Variante "gelb").
+%
+% Uebersetzen mit LuaLaTeX, zweimal (der QR-Code steht erst im zweiten Lauf):
+%
+%     lualatex postkarte-a6.tex
+%     lualatex postkarte-a6.tex
+%
+% Einseitig (4/0) -- die Rueckseite bleibt leer.
+%
+% ACHTUNG: Der Handle steht auch in instagram-poster.tex. Wird er hier
+% geaendert, muss er dort mitgeaendert werden (und umgekehrt).
+%
+% --- Warum das keine einfach verkleinerte Fassung des Posters ist ------------
+% A6 ist geometrisch exakt ein Viertel von A4, das Poster liesse sich also mit
+% Faktor 0,5 skalieren. Das waere aber falsch gerechnet: Die Schriftgroessen des
+% Posters folgen der Leseentfernung im Flur (2 bis 3 m), die Karte haelt man in
+% der Hand (30 cm). Beim reinen Skalieren waere die Ueberschrift fuer die
+% Karte unnoetig gross und die Hinweiszeile mit 7,5 pt unnoetig klein -- also
+% beides am falschen Ende. Hier ist die Ueberschrift darum vierzeilig und mit
+% 28 pt deutlich groesser als die skalierten 20 pt, und die Kleinschrift ist
+% von 7,5 pt auf 9 pt angehoben.
+
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{qrcode}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+
+\usetikzlibrary{positioning}
+
+% --- Sprache ------------------------------------------------------------------
+\newif\ifsprachede
+\sprachedetrue           % true = deutsch, false = englisch
+
+% --- Schnittmarken ------------------------------------------------------------
+% false (Standard): Seite = Endformat + 3 mm Anschnitt ringsum, also
+%   111 x 154 mm, ohne Marken. Das ist, was Online-Druckereien wollen.
+% true: zusaetzlich 6 mm Markenrand, also 123 x 166 mm, mit Schnittmarken --
+%   fuer den eigenen Ausdruck zum Selberschneiden oder fuer Druckereien,
+%   die Marken verlangen.
+\newif\ifmarken
+\markenfalse
+
+\newlength{\ueberstand}      % Abstand Blattkante <-> Endformatkante
+\ifmarken
+  \setlength{\ueberstand}{9mm}
+\else
+  \setlength{\ueberstand}{3mm}
+\fi
+
+\newlength{\anschnitt}       % so weit laeuft die Gestaltung ueber das Endformat
+\setlength{\anschnitt}{3mm}
+
+\geometry{
+  papersize={\dimexpr 105mm+2\ueberstand\relax, \dimexpr 148mm+2\ueberstand\relax},
+  margin=0pt,
+}
+
+% TrimBox eintragen: Damit weiss die Druckerei (und die Preflight-Pruefung),
+% wo das Endformat liegt und was Anschnitt ist. PDF rechnet in bp, TeX in pt --
+% 1 bp = 1.00375 pt, deshalb der Faktor.
+% \pdfvariable schreibt seinen Inhalt woertlich ins PDF, ohne Makros zu
+% expandieren -- die Zahlen muessen deshalb vorher ausgerechnet werden.
+\makeatletter
+% #1 steht bereits in einem \dimexpr, darf also "3mm+105mm" sein.
+\newcommand{\inbp}[1]{\strip@pt\dimexpr 0.996264\dimexpr#1\relax\relax}
+\edef\pk@trimbox{/TrimBox [\inbp{\ueberstand} \inbp{\ueberstand}
+  \inbp{\ueberstand+105mm} \inbp{\ueberstand+148mm}]}
+\begingroup
+  \edef\@tempa{\endgroup\noexpand\pdfvariable pageattr{\pk@trimbox}}
+\@tempa
+\makeatother
+
+% --- Farben (Corporate Design der Universitaet, cd.uni-freiburg.de) -----------
+\definecolor{ufrblau}{HTML}{344A9A}
+\definecolor{ufrdunkelblau}{HTML}{00004A}
+\definecolor{ufrgelb}{HTML}{FFE863}
+\definecolor{ufrweiss}{HTML}{FFFFFF}
+
+% --- Schrift ------------------------------------------------------------------
+\setmainfont{Arimo}[
+  Path           = ../../static/fonts/,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  Extension      = .ttf,
+]
+
+% --- Inhalt -------------------------------------------------------------------
+% \handle ist fuer den Fliesstext -- dort muss der Unterstrich escaped sein.
+% Im QR-Code steht die URL woertlich im \qrcode-Argument: Das Paket liest es
+% mit umgestellten Catcodes, ein blanker Unterstrich ist dort richtig.
+\newcommand{\handle}{math\_uni\_freiburg}
+
+% Die Zeilenumbrueche der Ueberschrift stehen von Hand -- sie sind Gestaltung,
+% nicht Zufall. Vierzeilig statt dreizeilig wie auf dem Poster: Die laengste
+% Zeile ist damit "Mathematischen" statt "Mathematischen Institut", und das
+% erlaubt 28 pt statt 20 pt. Getrennt wird nur innerhalb von "Mathematischen
+% Institut"; "auf Instagram" bleibt zusammen.
+%
+% ACHTUNG, wer den Text aendert: Die Zeilen stehen in einem tikz-Knoten OHNE
+% text width. Zu lange Zeilen laufen stillschweigend ueber den Rand -- es gibt
+% keine Overfull-Warnung. Nachmessen statt schaetzen:
+%
+%     \settowidth{\laenge}{<die laengste Zeile>}\typeout{\the\laenge}
+%
+% Ins Satzfeld passen 85 mm (105 mm minus 2x10 mm Rand); bis etwa 82 mm bleibt
+% Luft. Gesetzt ist: deutsch "Mathematischen" 77 mm, englisch "Mathematical"
+% 62 mm. Beide Sprachen stehen in 28 pt -- die englische Fassung koennte breiter
+% werden, aber nicht hoeher: Vier Zeilen passen in der Hoehe nur bis etwa 29 pt
+% zwischen Institutsnamen und Karte.
+\ifsprachede
+  \newcommand{\ueberschrift}{Folgt dem\\Mathematischen\\Institut\\auf Instagram}
+  \newcommand{\scanhinweis}{Code scannen und folgen}
+\else
+  \newcommand{\ueberschrift}{Follow the\\Mathematical\\Institute\\on Instagram}
+  \newcommand{\scanhinweis}{Scan the code and follow us}
+\fi
+\newcommand{\kopfgroesse}{\fontsize{28}{34}\selectfont}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+
+  % --- Bezugspunkte -----------------------------------------------------------
+  % Alles haengt am Endformat (trim), nicht an der Blattkante: So stimmt das
+  % Layout unabhaengig davon, ob mit oder ohne Markenrand gesetzt wird.
+  \coordinate (trim nw) at ([xshift=\ueberstand,  yshift=-\ueberstand] current page.north west);
+  \coordinate (trim ne) at ([xshift=-\ueberstand, yshift=-\ueberstand] current page.north east);
+  \coordinate (trim sw) at ([xshift=\ueberstand,  yshift=\ueberstand]  current page.south west);
+  \coordinate (trim se) at ([xshift=-\ueberstand, yshift=\ueberstand]  current page.south east);
+
+  % --- Hintergrund ------------------------------------------------------------
+  % Bis 3 mm ueber das Endformat hinaus -- das ist der Anschnitt. Ohne ihn
+  % blitzt bei der Schnitttoleranz der Druckerei das weisse Papier durch.
+  \fill[ufrgelb] ([xshift=-\anschnitt, yshift=-\anschnitt] trim sw)
+    rectangle ([xshift=\anschnitt, yshift=\anschnitt] trim ne);
+
+  % --- Vierblatt oben rechts, ueber den Rand hinaus ---------------------------
+  % Die Datei ist bereits eingefaerbt (20 % Blau im Gelb, erzeugt von
+  % assets.py). Wie im Post: ein deckender Ton, nie halbtransparent.
+  \begin{scope}
+    \clip ([xshift=-\anschnitt, yshift=-\anschnitt] trim sw)
+      rectangle ([xshift=\anschnitt, yshift=\anschnitt] trim ne);
+    \node[anchor=north east, inner sep=0pt]
+      at ([xshift=11mm, yshift=13mm] trim ne)
+      {\includegraphics[width=46mm]{ufr-blatt-gelb.png}};
+
+    % --- Siegel als Wasserzeichen unten rechts --------------------------------
+    \node[anchor=south east, inner sep=0pt]
+      at ([xshift=21mm, yshift=-23mm] trim se)
+      {\includegraphics[width=75mm]{ufr-siegel-gelb.png}};
+  \end{scope}
+
+  % --- Kopf: Wortmarke + Einrichtung ------------------------------------------
+  % Der Institutsname gehoert unter die Wortmarke. Die Wortmarke allein sagt nur
+  % "Albert-Ludwigs-Universitaet Freiburg" -- ohne den Zusatz saehe die Karte
+  % aus, als werbe die Universitaet fuer ihren eigenen Kanal.
+  %
+  % Die zugeschnittene Fassung der Wortmarke, nicht die Datei aus static/: Die
+  % hat rundum einen transparenten Rand, links 6,5 % ihrer Breite -- der
+  % Schriftzug saesse sonst sichtbar weiter rechts als der Institutsname
+  % darunter. Erzeugt von assets.py.
+  \node[anchor=north west, inner sep=0pt]
+    at ([xshift=10mm, yshift=-10mm] trim nw)
+    {\includegraphics[width=40mm]{ufr-logo-blau-beschnitten.png}};
+
+  % Beide Zeilen haengen an derselben x-Kante (10 mm). Der Abstand darunter ist
+  % knapp: Wortmarke und Einrichtung sind ein Block, nicht zwei Elemente.
+  \node[anchor=north west, inner sep=0pt, text=ufrblau,
+        font=\bfseries\fontsize{9.5}{11.5}\selectfont]
+    at ([xshift=10mm, yshift=-17mm] trim nw)
+    {Mathematisches Institut};
+
+  % --- Ueberschrift -----------------------------------------------------------
+  \node[anchor=north west, inner sep=0pt, text=ufrblau, align=left,
+        font=\bfseries\kopfgroesse]
+    at ([xshift=10mm, yshift=-33mm] trim nw)
+    {\ueberschrift};
+
+  % --- QR-Karte unten ---------------------------------------------------------
+  % Weisse Flaeche unter dem Code: Ein QR braucht hohen Kontrast UND einen
+  % ruhigen Rand ringsum (quiet zone), sonst finden ihn manche Scanner nicht.
+  % Das Weiss ist zugleich eine CD-Farbe, faellt also nicht aus dem Rahmen.
+  \node[anchor=south west, inner sep=0pt, fill=ufrweiss, rounded corners=2mm,
+        minimum width=85mm, minimum height=46mm]
+    (karte) at ([xshift=10mm, yshift=11mm] trim sw) {};
+
+  % QR rechts in der Karte. Dunkelblau statt Blau: fast schwarz, damit auch
+  % aeltere Kameras sicher lesen -- und trotzdem eine CD-Farbe.
+  %
+  % 28 mm Kantenlaenge. Der Code hat 33 Module, ein Modul ist hier also rund
+  % 0,85 mm breit; als Untergrenze fuer sicheres Scannen gelten 0,4 mm. Das
+  % Poster braucht seine 66 mm, weil man es aus 2 bis 3 m anscannt -- die Karte
+  % haelt man in der Hand, da ist die Haelfte reichlich. Die gewonnene Breite
+  % geht an den Textblock links, der sonst zu eng fuer eine einzeilige
+  % Hinweiszeile waere.
+  % 3 mm Abstand zur Kartenkante, nicht 6 mm wie links: Der Code bringt mit
+  % "padding" seine eigene Quiet Zone von 4 Modulen (gut 3 mm) mit. Mit
+  % gleichen Zahlen auf beiden Seiten saehe die Karte rechts zu luftig aus.
+  \node[anchor=east, inner sep=0pt]
+    at ([xshift=-3mm] karte.east)
+    {\color{ufrdunkelblau}%
+     \qrcode[height=28mm, level=Q, padding]{https://www.instagram.com/math_uni_freiburg/}};
+
+  % Instagram-Zeichen, Handle und Hinweis links daneben, als ein Block.
+  % text width 42 mm: Darin bleiben "@math_uni_freiburg" (11 pt, 38 mm) und
+  % beide Hinweiszeilen (9 pt, deutsch 36 mm, englisch 40 mm) einzeilig.
+  \node[anchor=west, inner sep=0pt, align=left, text=ufrblau, text width=42mm,
+        font=\fontsize{9}{12}\selectfont]
+    at ([xshift=6.5mm] karte.west)
+    {{\fontsize{20}{20}\selectfont\faInstagram}\\[3.5mm]
+     {\bfseries\fontsize{11}{13}\selectfont @\handle}\\[2.5mm]
+     \scanhinweis\par};
+
+  % --- Schnittmarken ----------------------------------------------------------
+  % Beginnen 1 mm hinter dem Anschnitt, damit sie nicht im Gelb liegen.
+  \ifmarken
+    \begin{scope}[ufrdunkelblau, line width=0.25pt]
+      \foreach \ecke/\dx/\dy in {{trim nw}/-1/1, {trim ne}/1/1, {trim sw}/-1/-1, {trim se}/1/-1} {
+        \draw ([xshift=\dx*4mm] \ecke) -- ([xshift=\dx*8mm] \ecke);
+        \draw ([yshift=\dy*4mm] \ecke) -- ([yshift=\dy*8mm] \ecke);
+      }
+    \end{scope}
+  \fi
+
+\end{tikzpicture}
+\end{document}
