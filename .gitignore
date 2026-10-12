@@ -15,3 +15,6 @@
 /docs/poster/*.aux
 /docs/poster/*.pdf
 /docs/poster/*.out
+# Ausgabe von bin/render_ig_hintergruende.py -- jederzeit neu erzeugbar,
+# gehoert deshalb nicht ins Repo.
+/ig-hintergruende/
