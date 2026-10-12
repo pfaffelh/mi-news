@@ -104,9 +104,10 @@ def setup_session_state():
         st.session_state.carouselnews: "Carouselnews",
         st.session_state.vortragsreihe: "Vortragsreihe",
         st.session_state.vortrag: "Vortrag",
-        # Muss zum Dateinamen der Edit-Seite passen: tools.new() springt per
-        # switch_page(f"{name.lower()} edit") -> "instagram edit" ->
-        # pages/10_Instagram_edit.py
+        # Instagram-Posts haben zwei Editorseiten (10_ fuer Text, 11_ fuer
+        # Bild). Die generische Weiterleitung von tools.new() kennt nur eine
+        # und wird hier deshalb nicht benutzt -- 09_Instagram.py legt mit
+        # switch=False an und springt selbst ans richtige Ziel.
         st.session_state.instapost: "Instagram"
     }
 
@@ -199,7 +200,8 @@ def setup_session_state():
             "fit": "cover",
             "ratio": "4:5",
             "caption": "",           # Beschreibung des Posts, darf lang sein
-            "status": "entwurf",     # "entwurf" | "veroeffentlicht" | "fehler"
+            "status": "entwurf",     # entwurf|geplant|wird_gepostet|veroeffentlicht|fehler
+            "geplant_fuer": None,    # Zeitpunkt des geplanten Postens, in UTC
             "ig_media_id": "",
             "permalink": "",         # öffentliche URL, kommt beim Posten von Meta
             "published_at": None,
@@ -259,6 +261,17 @@ def lokal(dt):
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone()
+
+
+def nach_utc(datum, uhrzeit):
+    """Datum und Uhrzeit aus einem Eingabefeld (Ortszeit) als UTC.
+
+    Gegenstueck zu lokal(). Die Felder einer Streamlit-Seite liefern naive
+    Werte in Ortszeit; in der Datenbank steht alles in UTC.
+    """
+    if datum is None or uhrzeit is None:
+        return None
+    return datetime.combine(datum, uhrzeit).astimezone().astimezone(timezone.utc)
 
 
 date_format = '%d.%m.%Y um %H:%M:%S.'

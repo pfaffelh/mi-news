@@ -36,17 +36,20 @@ if st.session_state.logged_in:
         menu = st.toggle("In Auswahlmenüs sichtbar", value = True, key = "menu")
         kommentar = st.text_input("Kommentar")
         col1, col2 = st.columns([1,1]) 
-        uploaded_file = col1.file_uploader("Bildatei", type = ["jpg", "jpeg", "png"], help = "Erlaubte Formate sind jpg/jpeg/png.")
+        uploaded_file = col1.file_uploader("Bildatei", type = ["jpg", "jpeg", "png", "pdf"], help = "Erlaubte Formate sind jpg/jpeg/png/pdf. Von einer PDF wird die erste Seite verwendet. Für Instagram eignet sich Hochformat am besten (4:5); Plakate im A-Format bekommen dort schmale Ränder.")
         st.session_state.uploaded_file = uploaded_file
         filename = ""
         if st.session_state.uploaded_file is not None:
             filename = st.session_state.uploaded_file.name
-            filename = filename.replace(".png", ".jpg")
+            for endung in [".png", ".pdf"]:
+                filename = filename.replace(endung, ".jpg")
             image_data = st.session_state.uploaded_file.getvalue()
-            image = Image.open(io.BytesIO(image_data))
+            image, seiten = tools.datei_als_bild(st.session_state.uploaded_file)
+            if seiten > 1:
+                col1.warning(f"Die PDF hat {seiten} Seiten — verwendet wird nur die erste.")
             w, h = image.size                   
             col1.write(f"width: {w}, height: {h}, Größe {int(sys.getsizeof(image_data)/1024)} kb")
-            col2.image(image_data, caption = filename)
+            col2.image(image, caption = filename)
 
 
         submit = st.button("Bild anlegen")

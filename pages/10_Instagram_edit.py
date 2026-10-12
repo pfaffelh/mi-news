@@ -1,6 +1,6 @@
 import streamlit as st
 import pymongo
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 # Seiten-Layout
 st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -48,7 +48,20 @@ st.subheader(x.get("titel") or x.get("headline") or "Instagram-Post")
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     if st.button("Zurück (ohne Speichern)"):
+        # Der Datensatz entsteht schon beim Anlegen, nicht erst beim Speichern.
+        # Wurde nie etwas eingetragen, bliebe hier sonst eine leere Huelle in
+        # der Liste stehen -- obwohl der Knopf das Gegenteil verspricht.
+        if insta.ist_leerer_entwurf(x):
+            collection.delete_one({"_id": x["_id"]})
+            tools.flash("Leerer Entwurf verworfen.")
         st.switch_page("pages/09_Instagram.py")
+with col2:
+    # Gespeichert wird erst ganz unten: `inhalt` steht erst fest, wenn alle
+    # Eingabefelder gelesen sind, und die kommen im Skript nach diesem Knopf.
+    # Hier also nur merken, dass geklickt wurde (wie in mi-person,
+    # 03_Personen_edit.py). Der Klick-Rerun liefert die aktuellen Feldwerte
+    # ohnehin mit, es geht nichts verloren.
+    speichern_oben = st.button("Entwurf speichern", type="primary", key="speichern_oben")
 with col3:
     if not loeschbar:
         st.button(
@@ -115,12 +128,12 @@ with links:
         help="Nur für die Übersicht in der App. Erscheint nicht im Post.",
     )
 
-    ratio = st.radio(
-        "Format", list(ig_ratios.keys()),
-        index=list(ig_ratios.keys()).index(x.get("ratio", ig_ratio_default)),
-        horizontal=True,
-        help="4:5 nutzt im Feed die größte Fläche und ist die übliche Wahl.",
-    )
+    # Keine Formatauswahl: Ein selbst erzeugtes Bild hat kein eigenes
+    # Seitenverhaeltnis, dem man folgen muesste -- der Text wird in den Rahmen
+    # gesetzt, den man vorgibt. Dann nimmt man den groessten, den der Feed
+    # hergibt, und das ist 4:5. 1:1 oder 1.91:1 waeren nur weniger Flaeche fuer
+    # dieselbe Aussage.
+    ratio = ig_ratio_default
 
     # Zurzeit nur Standard-Bilder (CD-Hintergrund mit Text). Die Auswahl der
     # Bildquelle ist bewusst ausgeblendet; die Code-Pfade für eigene Bilder
@@ -256,9 +269,9 @@ inhalt = {
 }
 
 with c1:
-    if st.button("Entwurf speichern", type="primary"):
-        tools.update_confirm(collection, x, inhalt, False,
-                             "🎉 Entwurf gespeichert!")
+    speichern_unten = st.button("Entwurf speichern", type="primary")
+if speichern_oben or speichern_unten:
+    tools.update_confirm(collection, x, inhalt, False, "🎉 Entwurf gespeichert!")
 
 with c2:
     kann_posten = (insta.is_configured() and vorschau is not None
@@ -304,6 +317,61 @@ with c2:
                               "last_error": str(e)}},
                 )
                 st.error(f"Veröffentlichen fehlgeschlagen: {e}")
+
+    # --- Geplantes Posten -----------------------------------------------------
+    #
+    # Ausgefuehrt wird es nicht hier: Streamlit laeuft nur, solange jemand die
+    # Seite offen hat. Hier werden bloss Zeitpunkt und Status gesetzt;
+    # veroeffentlicht wird von bin/post_geplante.py, das als Cron-Job alle 15
+    # Minuten nachsieht.
+    if not veroeffentlicht:
+        geplant = x.get("status") == "geplant"
+        lauf = util.lokal(x.get("geplant_fuer"))
+        with st.popover("Später posten" + ("  ●" if geplant else "")):
+            vorgabe = lauf or (datetime.now().astimezone() + timedelta(days=1))
+            p_datum = st.date_input("Datum", value=vorgabe.date(),
+                                    format="DD.MM.YYYY", key="plan_datum")
+            p_zeit = st.time_input(
+                "Uhrzeit",
+                value=vorgabe.time().replace(second=0, microsecond=0),
+                key="plan_zeit")
+            zeitpunkt = util.nach_utc(p_datum, p_zeit)
+            vergangen = (zeitpunkt is not None
+                         and zeitpunkt <= datetime.now(timezone.utc))
+            if st.button("Planung aktualisieren" if geplant else "Posten planen",
+                         type="primary", disabled=vergangen or not kann_posten):
+                tools.update_confirm(
+                    collection, x,
+                    {**inhalt, "status": "geplant", "geplant_fuer": zeitpunkt,
+                     "last_error": ""},
+                    False, "🎉 Posten geplant!")
+                st.rerun()
+            if geplant and st.button("Planung aufheben"):
+                tools.update_confirm(
+                    collection, x,
+                    {"status": "entwurf", "geplant_fuer": None},
+                    False, "Planung aufgehoben — der Post ist wieder ein Entwurf.")
+                st.rerun()
+
+            if vergangen:
+                st.caption("Der Zeitpunkt liegt in der Vergangenheit.")
+            elif not kann_posten:
+                st.caption("Planen geht erst, wenn der Post auch sofort "
+                           "veröffentlicht werden könnte — siehe die Hinweise "
+                           "am Veröffentlichen-Knopf.")
+            else:
+                st.caption("Veröffentlicht wird im 15-Minuten-Takt, der Post "
+                           "kann also wenige Minuten später erscheinen. Liegt "
+                           "der Zeitpunkt beim Lauf mehr als 24 Stunden zurück "
+                           "(z. B. nach einem Serverausfall), wird nicht mehr "
+                           "gepostet, sondern gemeldet.")
+
+        # Ausserhalb des Popovers, damit man ohne Aufklappen sieht, dass etwas
+        # ansteht.
+        if geplant and lauf:
+            st.info(f"**Geplant für {lauf.strftime(util.datetime_format)}.** "
+                    "Bis dahin lässt sich der Post weiter bearbeiten; "
+                    "*Entwurf speichern* ändert die Planung nicht.")
 
 st.write(x.get("bearbeitet", ""))
 st.sidebar.button("logout", on_click=tools.logout)

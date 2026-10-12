@@ -1,0 +1,434 @@
+import streamlit as st
+from streamlit_image_select import image_select
+import pymongo
+from datetime import datetime, timedelta, timezone
+
+# Seiten-Layout
+st.set_page_config(page_title="NEWS", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
+
+# check if session_state is initialized if not change to main page
+if 'logged_in' not in st.session_state:
+    st.switch_page("NEWS.py")
+
+from misc.css_styles import init_css
+init_css()
+
+from misc.config import *
+import misc.util as util
+import misc.tools as tools
+import misc.instagram as insta
+
+# Navigation in Sidebar anzeigen
+tools.display_navigation()
+
+collection = st.session_state.instapost
+bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"
+
+if not st.session_state.logged_in:
+    st.switch_page("NEWS.py")
+
+x = collection.find_one({"_id": st.session_state.edit})
+if x is None:
+    st.switch_page("pages/09_Instagram.py")
+
+veroeffentlicht = x.get("status") == "veroeffentlicht"
+
+# Gelöscht werden dürfen nur Entwürfe. Bei allem anderen kann ein Beitrag auf
+# Instagram stehen, den dieser Eintrag als einziger nachweist: Media-ID und
+# Permalink stehen nur hier. Löschen liesse den Beitrag draussen stehen und
+# nähme uns den Weg dorthin -- und über die API bekommen wir ihn nicht zurück,
+# der DELETE-Endpunkt gilt nur für die Facebook-Login-Variante.
+#
+# "fehler" zählt ausdrücklich nicht als Entwurf: Scheitert das Abschalten der
+# Kommentare (Schritt 4 in publish()), ist der Beitrag bereits veröffentlicht,
+# der Status hier aber "fehler".
+loeschbar = x.get("status", "entwurf") == "entwurf"
+
+st.subheader(x.get("titel") or "Instagram-Post aus Bild")
+
+col1, col2, col3 = st.columns([1, 1, 1])
+with col1:
+    if st.button("Zurück (ohne Speichern)"):
+        # Der Datensatz entsteht schon beim Anlegen, nicht erst beim Speichern.
+        # Wurde nie etwas eingetragen, bliebe hier sonst eine leere Huelle in
+        # der Liste stehen -- obwohl der Knopf das Gegenteil verspricht.
+        if insta.ist_leerer_entwurf(x):
+            collection.delete_one({"_id": x["_id"]})
+            tools.flash("Leerer Entwurf verworfen.")
+        st.switch_page("pages/09_Instagram.py")
+with col2:
+    # Gespeichert wird erst ganz unten: `inhalt` steht erst fest, wenn alle
+    # Eingabefelder gelesen sind, und die kommen im Skript nach diesem Knopf.
+    # Hier also nur merken, dass geklickt wurde (wie in mi-person,
+    # 03_Personen_edit.py). Der Klick-Rerun liefert die aktuellen Feldwerte
+    # ohnehin mit, es geht nichts verloren.
+    speichern_oben = st.button("Entwurf speichern", type="primary", key="speichern_oben")
+with col3:
+    if not loeschbar:
+        st.button(
+            "Post löschen", disabled=True,
+            help=("Veröffentlichte Posts lassen sich hier nicht löschen. Dieser "
+                  "Eintrag ist der einzige Nachweis des Beitrags (Media-ID und "
+                  "Link). Den Beitrag selbst löscht man in der Instagram-App — "
+                  "über die API geht es bei unserem Zugang nicht."
+                  if veroeffentlicht else
+                  "Der letzte Veröffentlichungsversuch ist fehlgeschlagen. "
+                  "Möglicherweise steht der Beitrag trotzdem auf Instagram — "
+                  "bitte erst dort nachsehen. Gelöscht werden können nur "
+                  "Entwürfe."),
+        )
+    else:
+        with st.popover("Post löschen"):
+            st.write("Eintrag wirklich löschen?")
+            if st.button("Ja", type="primary", key=f"delete-{x['_id']}"):
+                # switch=False, damit nicht die generische Weiterleitung auf die
+                # News-Seite (reset_vars -> 00_New.py) greift. Stattdessen zurück
+                # zur Instagram-Übersicht.
+                tools.delete_item_update_dependent_items(
+                    collection, x["_id"], switch=False)
+                st.session_state.edit = ""
+                st.switch_page("pages/09_Instagram.py")
+            st.button("Nein", on_click=st.success, args=("Nicht gelöscht!",),
+                      key=f"not-deleted-{x['_id']}")
+
+st.info(
+    "**„Link in Bio“:** Links im Post-Text sind auf Instagram **nicht "
+    "anklickbar** — nur @Erwähnungen und #Hashtags werden verlinkt. Der einzige "
+    "klickbare Link im ganzen Account steht in der **Profil-Bio** von "
+    "[@math_uni_freiburg](https://www.instagram.com/math_uni_freiburg/) und gilt "
+    "für alle Posts gleich. Schreibe im Text also „Mehr Infos: Link in Bio“ statt "
+    "einer URL. Die Bio wird direkt in der Instagram-App gepflegt (Profil "
+    "bearbeiten), nicht hier."
+)
+
+if veroeffentlicht:
+    pa = util.lokal(x.get("published_at"))
+    pl = x.get("permalink")
+    # Der Link ist der kürzeste Weg zur Kontrolle, ob der Beitrag so aussieht
+    # wie gedacht. Fehlt er (ältere Posts, oder der Abruf ging daneben), führt
+    # wenigstens das Profil hin.
+    ziel = (f"[Beitrag auf Instagram ansehen]({pl})" if pl else
+            "[Zum Profil](https://www.instagram.com/math_uni_freiburg/) — der "
+            "direkte Link zu diesem Beitrag wurde nicht gespeichert.")
+    st.success(
+        f"Dieser Post wurde am {pa.strftime(util.date_format) if pa else '—'} "
+        f"veröffentlicht (Media-ID {x.get('ig_media_id') or '—'}). {ziel}  \n"
+        "Eine veröffentlichte Caption lässt sich über die API nicht mehr ändern; "
+        "Änderungen hier wirken nur auf den gespeicherten Entwurf."
+    )
+
+# Die Seite ist zweispaltig: links wird eingegeben, rechts steht durchgehend die
+# Vorschau. Streamlit rendert bei jeder Eingabe neu, die Vorschau ist also live.
+links, rechts = st.columns([1, 1])
+
+with links:
+    st.markdown("### Bild")
+
+    titel = st.text_input(
+        "Interner Titel", x.get("titel", ""),
+        help="Nur für die Übersicht in der App. Erscheint nicht im Post.",
+    )
+
+    # Diese Seite bearbeitet ausschliesslich Posts aus einem vorhandenen Bild.
+    # Die Felder des Standardbildes (variante/lang/headline/subline) werden
+    # unveraendert durchgereicht, damit ein versehentlich falsch angelegter
+    # Post nichts verliert.
+    bildtyp = "bild"
+    variante = x.get("variante", insta.VARIANTE_DEFAULT)
+    lang = x.get("lang", "de")
+    headline = x.get("headline", "")
+    subline = x.get("subline", "")
+    image_id = x.get("image_id")
+
+    # Nur Bilder aus dem links oben eingestellten Zeitraum. Ein Hochladedatum
+    # fuehrt die bild-Collection nicht -- die ObjectId traegt den Zeitpunkt
+    # aber ohnehin in sich.
+    #
+    # Das bereits gewaehlte Bild bleibt IMMER in der Liste, auch wenn es aus
+    # dem Zeitraum faellt: Sonst wuerde das blosse Oeffnen eines aelteren
+    # Posts sein Bild stillschweigend gegen ein anderes austauschen.
+    grenze = datetime.now(timezone.utc) - timedelta(days=st.session_state.tage)
+    alle_bilder = list(st.session_state.bild.find(
+        {"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
+    bilderliste = [b for b in alle_bilder
+                   if b["_id"].generation_time >= grenze or b["_id"] == image_id]
+
+    if not alle_bilder:
+        st.warning("Es gibt keine Bilder in der Datenbank.")
+    elif not bilderliste:
+        st.warning(
+            f"In den letzten {st.session_state.tage} Tagen wurde kein Bild "
+            f"hochgeladen (insgesamt gibt es {len(alle_bilder)}). Den Zeitraum "
+            "links oben vergrößern, um ältere Bilder zu sehen."
+        )
+    else:
+        ids = [b["_id"] for b in bilderliste]
+        gewaehlt = image_select(
+            "Bild auswählen",
+            [tools.get_thumbnail(b["_id"]) for b in bilderliste],
+            captions=[(b.get("titel") or b.get("filename") or "")[:28]
+                      for b in bilderliste],
+            index=ids.index(image_id) if image_id in ids else 0,
+            return_value="index", use_container_width=False,
+            key=f"bildwahl_{x['_id']}",
+        )
+        image_id = ids[gewaehlt]
+        st.caption(
+            f"Zur Auswahl stehen {len(bilderliste)} von {len(alle_bilder)} "
+            f"Bildern — die der letzten {st.session_state.tage} Tage. Der "
+            "Zeitraum lässt sich links oben ändern. Ein bereits gewähltes "
+            "älteres Bild bleibt immer sichtbar."
+        )
+
+    fits = ["auto", "cover", "contain"]
+    f = x.get("fit", "auto")
+    fit = st.radio(
+        "Zuschnitt", fits,
+        index=fits.index(f) if f in fits else 0,
+        format_func=lambda f: {
+            "auto": "Nichts abschneiden (Rand nur wenn nötig)",
+            "cover": "Formatfüllend (schneidet ab)",
+            "contain": "Vollständig sichtbar im gewählten Format (mit Rand)",
+        }[f],
+        help="Instagram akzeptiert jedes Seitenverhältnis zwischen 4:5 und "
+             "1.91:1, nicht nur die drei runden Werte. Die erste Option nutzt "
+             "das aus: Das Bild bleibt wie es ist und bekommt nur dann Rand, "
+             "wenn es aus diesem Bereich herausfällt.",
+    )
+
+    st.caption(
+        "**Hochformat wird am größten gezeigt.** Instagram erlaubt alles "
+        "zwischen **4:5** (hoch) und **1.91:1** (quer) — die Grenze ist "
+        "unsymmetrisch: nach quer ist viel Luft, nach hoch fast keine. "
+        "4:5 füllt den Feed am besten aus, ein breites Bild wirkt als schmaler "
+        "Streifen. Plakate und Poster (A4/A3) sind hochformatiger als 4:5 und "
+        "bekommen deshalb schmale Ränder links und rechts — das ist der "
+        "Normalfall und kein Fehler. Die meisten Bilder in der Datenbank sind "
+        "dagegen Querformat, weil sie für Homepage und Monitor angelegt wurden."
+    )
+
+    if fit == "auto":
+        # Ohne feste Zielgroesse ist jede Formatwahl gegenstandslos; ein Feld
+        # ohne Wirkung waere irrefuehrend. `ratio` bleibt gespeichert, damit
+        # beim Umschalten auf cover/contain die letzte Wahl wieder da ist.
+        ratio = x.get("ratio", ig_ratio_default)
+    else:
+        ratio = st.radio(
+            "Format", list(ig_ratios.keys()),
+            index=list(ig_ratios.keys()).index(x.get("ratio", ig_ratio_default)),
+            horizontal=True,
+            help="4:5 (hoch) nutzt im Feed die größte Fläche und ist die übliche "
+                 "Wahl. 1.91:1 ist das äußerste Querformat und wirkt als schmaler "
+                 "Streifen.",
+        )
+
+    st.markdown("### Beschreibung")
+
+    caption = st.text_area(
+        "Caption", x.get("caption", ""), height=260,
+        help="Reiner Text. Instagram kennt kein Fett/Kursiv, und ausgeschriebene "
+             "Links sind im Post NICHT anklickbar — nur @Erwähnungen und #Hashtags.",
+    )
+
+    # Zwei Sorten von Problemen, bewusst getrennt: Was die Caption betrifft,
+    # steht hier am Feld. Was den Post als Ganzes betrifft (leere Überschrift,
+    # fehlende Caption), steht unten am Knopf, den es sperrt -- doppelt anzeigen
+    # wäre nur Rauschen.
+    n_zeichen, n_hashtags, caption_probleme = insta.caption_stats(caption)
+    st.caption(f"{n_zeichen} / {ig_caption_maxlen} Zeichen · "
+               f"{n_hashtags} / {ig_hashtag_max} Hashtags")
+    for p in caption_probleme:
+        st.error(p)
+
+    st.caption(
+        "**Sinnvolle Erwähnungen:** @unifreiburg (zentrale Uni) und "
+        "@fsmathefreiburg (Fachschaft) — Institutionen erwähnen ist unkritisch "
+        "und gut für die Reichweite. **Personen** (z. B. „@… wir gratulieren“) "
+        "nur mit deren Einwilligung markieren — eine @Erwähnung ist eine "
+        "Datenverarbeitung im Sinne der DSFA."
+    )
+
+    kommentar = st.text_input("Interner Kommentar", x.get("kommentar", ""))
+
+# --- Vorschau -----------------------------------------------------------------
+
+post = {
+    "bildtyp": bildtyp, "variante": variante, "lang": lang, "headline": headline,
+    "subline": subline, "image_id": image_id, "fit": fit, "ratio": ratio,
+}
+
+bild_data = None
+if bildtyp == "bild" and image_id:
+    b = st.session_state.bild.find_one({"_id": image_id})
+    if b is None:
+        st.warning("Das verknüpfte Bild existiert nicht mehr.")
+    else:
+        bild_data = b["data"]
+
+vorschau, warnungen = insta.render(post, bild_data)
+
+# Leere Posts lassen sich auf Instagram nicht mehr rückgängig machen -- sie
+# blockieren das Veröffentlichen, statt nur zu warnen. Siehe post_probleme().
+leer_probleme = insta.post_probleme(post, caption)
+
+with rechts:
+    st.markdown("### Vorschau")
+    if vorschau is None:
+        st.warning("Es ist kein Bild ausgewählt.")
+    else:
+        # Ein einziges Vorschaubild: der fertige Post, umrandet von einer
+        # duennen schwarzen Linie. Die Linie wird nicht mitgepostet -- ohne sie
+        # waere ein weisser Rand auf weissem Seitenhintergrund unsichtbar, und
+        # genau den will man beurteilen.
+        zbild, ztext = insta.zuschnitt_vorschau(bild_data, ratio, fit)
+        st.image(zbild)
+        st.caption(f"{vorschau.width} × {vorschau.height} px — {ztext} "
+                   "Die schwarze Linie zeigt nur die Ausdehnung und gehört "
+                   "nicht zum Post.")
+
+    for w in warnungen:
+        st.warning(w)
+
+    if caption.strip():
+        # Captions sind Plain Text, die Vorschau ist damit echtes WYSIWYG.
+        st.markdown("**@math_uni_freiburg**")
+        st.text(caption)
+
+    if vorschau is not None:
+        st.download_button(
+            "Bild herunterladen (JPEG)",
+            data=insta.to_jpeg(vorschau),
+            file_name=("instagram-original.jpg" if fit == "auto"
+                       else f"instagram-{ratio.replace(':', 'x')}.jpg"),
+            mime="image/jpeg",
+            help="Nützlich, solange der Account noch nicht steht: Bild "
+                 "herunterladen und von Hand posten.",
+        )
+
+# --- Speichern und Veröffentlichen --------------------------------------------
+
+st.divider()
+c1, c2 = st.columns([1, 1])
+
+# Der Stand, den der Editor gerade anzeigt. BEIDE Knöpfe schreiben ihn.
+#
+# Vorher hat "Veröffentlichen" nur die Status-Felder gespeichert: Gepostet wurde
+# das, was im Formular stand, abgelegt blieb der alte Entwurf. Beim ersten
+# Testpost am 14.09.2026 ist genau das passiert -- auf Instagram ein blauer Post
+# mit Überschrift, in der Datenbank ein leerer gelber Entwurf. Der Eintrag ist
+# aber der einzige Nachweis dessen, was veröffentlicht wurde.
+inhalt = {
+    "titel": titel, "bildtyp": bildtyp, "variante": variante,
+    "lang": lang, "headline": headline, "subline": subline,
+    "image_id": image_id, "fit": fit, "ratio": ratio,
+    "caption": caption, "kommentar": kommentar,
+    "bearbeitet": bearbeitet,
+}
+
+with c1:
+    speichern_unten = st.button("Entwurf speichern", type="primary")
+if speichern_oben or speichern_unten:
+    tools.update_confirm(collection, x, inhalt, False, "🎉 Entwurf gespeichert!")
+
+with c2:
+    kann_posten = (insta.is_configured() and vorschau is not None
+                   and not caption_probleme and not leer_probleme)
+    if veroeffentlicht:
+        st.button("Bereits veröffentlicht", disabled=True,
+                  help="Doppeltes Posten wird verhindert.")
+    elif not insta.is_configured():
+        st.button("Auf Instagram veröffentlichen", disabled=True,
+                  help="Account und Token fehlen noch (ig_token.json / .netrc). "
+                       "Siehe insta.md / docs/social-media.")
+    else:
+        # Ein grauer Knopf ohne Begründung ist eine Sackgasse: hier steht,
+        # was noch fehlt. (Caption-Probleme stehen schon am Feld selbst.)
+        for p in leer_probleme:
+            st.warning(p)
+        if vorschau is None:
+            st.warning("Es ist kein Bild ausgewählt.")
+        elif caption_probleme:
+            st.warning("Die Caption ist noch zu lang bzw. hat zu viele Hashtags "
+                       "— siehe die Meldung am Textfeld.")
+        if st.button("Auf Instagram veröffentlichen", disabled=not kann_posten):
+            try:
+                media_id = insta.publish(insta.to_jpeg(vorschau), caption)
+                tools.update_confirm(
+                    collection, x,
+                    {**inhalt,
+                     "status": "veroeffentlicht", "ig_media_id": media_id,
+                     "permalink": insta.permalink(media_id),
+                     # Bewusst UTC: dieser Zeitstempel wird mit dem von Meta
+                     # verglichen, und MongoDB legt Datumswerte ohnehin als UTC
+                     # ab. Zur Anzeige rechnet util.lokal() zurueck.
+                     "published_at": datetime.now(timezone.utc),
+                     "last_error": ""},
+                    False, "🎉 Auf Instagram veröffentlicht!",
+                )
+                st.rerun()
+            except Exception as e:
+                util.logger.error(f"Instagram-Post fehlgeschlagen: {e}")
+                collection.update_one(
+                    {"_id": x["_id"]},
+                    {"$set": {**inhalt, "status": "fehler",
+                              "last_error": str(e)}},
+                )
+                st.error(f"Veröffentlichen fehlgeschlagen: {e}")
+
+    # --- Geplantes Posten -----------------------------------------------------
+    #
+    # Ausgefuehrt wird es nicht hier: Streamlit laeuft nur, solange jemand die
+    # Seite offen hat. Hier werden bloss Zeitpunkt und Status gesetzt;
+    # veroeffentlicht wird von bin/post_geplante.py, das als Cron-Job alle 15
+    # Minuten nachsieht.
+    if not veroeffentlicht:
+        geplant = x.get("status") == "geplant"
+        lauf = util.lokal(x.get("geplant_fuer"))
+        with st.popover("Später posten" + ("  ●" if geplant else "")):
+            vorgabe = lauf or (datetime.now().astimezone() + timedelta(days=1))
+            p_datum = st.date_input("Datum", value=vorgabe.date(),
+                                    format="DD.MM.YYYY", key="plan_datum")
+            p_zeit = st.time_input(
+                "Uhrzeit",
+                value=vorgabe.time().replace(second=0, microsecond=0),
+                key="plan_zeit")
+            zeitpunkt = util.nach_utc(p_datum, p_zeit)
+            vergangen = (zeitpunkt is not None
+                         and zeitpunkt <= datetime.now(timezone.utc))
+            if st.button("Planung aktualisieren" if geplant else "Posten planen",
+                         type="primary", disabled=vergangen or not kann_posten):
+                tools.update_confirm(
+                    collection, x,
+                    {**inhalt, "status": "geplant", "geplant_fuer": zeitpunkt,
+                     "last_error": ""},
+                    False, "🎉 Posten geplant!")
+                st.rerun()
+            if geplant and st.button("Planung aufheben"):
+                tools.update_confirm(
+                    collection, x,
+                    {"status": "entwurf", "geplant_fuer": None},
+                    False, "Planung aufgehoben — der Post ist wieder ein Entwurf.")
+                st.rerun()
+
+            if vergangen:
+                st.caption("Der Zeitpunkt liegt in der Vergangenheit.")
+            elif not kann_posten:
+                st.caption("Planen geht erst, wenn der Post auch sofort "
+                           "veröffentlicht werden könnte — siehe die Hinweise "
+                           "am Veröffentlichen-Knopf.")
+            else:
+                st.caption("Veröffentlicht wird im 15-Minuten-Takt, der Post "
+                           "kann also wenige Minuten später erscheinen. Liegt "
+                           "der Zeitpunkt beim Lauf mehr als 24 Stunden zurück "
+                           "(z. B. nach einem Serverausfall), wird nicht mehr "
+                           "gepostet, sondern gemeldet.")
+
+        # Ausserhalb des Popovers, damit man ohne Aufklappen sieht, dass etwas
+        # ansteht.
+        if geplant and lauf:
+            st.info(f"**Geplant für {lauf.strftime(util.datetime_format)}.** "
+                    "Bis dahin lässt sich der Post weiter bearbeiten; "
+                    "*Entwurf speichern* ändert die Planung nicht.")
+
+st.write(x.get("bearbeitet", ""))
+st.sidebar.button("logout", on_click=tools.logout)
