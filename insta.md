@@ -60,12 +60,72 @@ als früher — siehe den Kasten unten.
 **Nicht (mehr) nötig:** Facebook-Seite, Meta Business Portfolio, Business
 Verification, App Review.
 
+> **Aber: ein persönliches Facebook-*Konto* braucht es doch — als Entwickler-Login.**
+> Nicht zu verwechseln mit der Facebook-*Seite* oben. Wer eine Meta Developer App
+> anlegen will, muss sich auf `developers.facebook.com` einloggen, und die
+> Registrierung sagt ausdrücklich: *„While logged into your Facebook account, go to
+> https://developers.facebook.com/async/registration."*
+>
+> Quelle: [Meta App Development –
+> Registration](https://developers.facebook.com/docs/development/register/)
+>
+> **Warum die Blogs „kein Facebook nötig!" schreiben.** Sie verwechseln zwei Logins.
+> *Instagram Login* betrifft, wie sich die **App-Nutzer** authentifizieren — da ist
+> Facebook tatsächlich raus, das ist die Neuerung von Juli 2024. Davon getrennt ist,
+> wie **du als Entwickler** ans Dashboard kommst; dieselbe Overview-Doku verlangt in
+> ihren Prerequisites schlicht „register as a Meta developer". Wer den ersten Satz
+> auf den zweiten Fall überträgt, sucht stundenlang einen Weg, den es nicht gibt.
+>
+> **Die vier Sackgassen — alle am 16.07.2026 in der UI durchprobiert**, damit das
+> niemand nochmal tut:
+>
+> | Weg | Ergebnis |
+> |---|---|
+> | Instagram-Login bei Meta for Developers | Gibt es nicht. Die Login-Seite bietet nur Facebook, „Neues Konto erstellen" und berufliches Meta-Konto. (`business.facebook.com` bietet Instagram an — daher die Verwechslung.) |
+> | „Mit einem beruflichen Meta-Konto anmelden" | Reines Login, kein Registrierungsweg: *„Gib ein Konto an, das dir deine Organisation zugewiesen hat."* Managed Meta Accounts stellt nur Meta aus, nach Einladung der Organisation. Mit einer `uni-freiburg.de`-Adresse getestet → *„Es scheint kein Konto … zu geben"*. Die Uni ist nicht im Programm. |
+> | „Neues Konto erstellen" | *„Du hast keinen Zugriff. Dieses Feature ist noch nicht für dich verfügbar."* |
+> | Business Portfolio als Umweg | Bringt dich in die Business Suite, nicht ins Developer-Dashboard. Einladungen ins Portfolio verlangen pro Person ein **Facebook- oder Instagram-Konto**. |
+>
+> **Kein Funktions-Konto anlegen.** Ein Facebook-Konto auf `socialmedia@…` wäre die
+> naheliegende Idee, verstößt aber gegen Facebooks Klarnamenpflicht (persönliche
+> Konten müssen eine reale Person abbilden). Solche Konten werden gesperrt — und mit
+> dem Konto fiele die App, die daran hängt. Das bricht später und unangekündigt.
+>
+> **Fazit:** reales, persönliches Konto einer beteiligten Person als
+> Entwickler-Login, aber sofort eine **zweite Person als Admin** in der App
+> eintragen (§1 Punkt 4), damit die App nicht an einer Person hängt. Das Konto ist
+> reiner Login: Es erscheint nicht im Instagram-Auftritt, braucht keine Seite und
+> postet nichts. Die Werte, auf die es ankommt (App-ID, Secret, Token), liegen in
+> der KeePass-Datei und auf `www2`, nicht im Facebook-Konto.
+
 Ein **Business Portfolio** (`business.facebook.com`) bleibt trotzdem sinnvoll —
 nicht für die API, sondern für die **Rollenverwaltung**: Instagram selbst kennt
 nur einen einzigen Login, und Passwörter im Institut herumzureichen ist genau die
 Übergabefalle, die die Uni-Guidelines mit „Accounts gehören der Universität"
 adressieren. Über das Portfolio bekommen Personen Zugriff über ihre *eigenen*
 Logins und lassen sich sauber wieder entfernen.
+
+> **Steht seit 16.07.2026:** Portfolio **„Mathematik, Uni Freiburg"**, angelegt über
+> den **Instagram-Login** des Instituts auf `business.facebook.com` (dort gibt es
+> „Weiter mit Instagram" — im Developer-Portal nicht). Es gehört damit dem
+> Institutskonto, nicht einer Privatperson. `@math_uni_freiburg` hängt als Asset
+> darin.
+>
+> Beim Instagram-Login teilt Meta eine provisorische Identität aus einem Pool zu
+> („UnclaimedBusinessUser FromPool"), zunächst **ohne Kontaktadresse** — dann gibt es
+> keinen Wiederherstellungsweg, wenn der Instagram-Login klemmt. Unter *Nutzer →
+> Personen → Kontaktinformationen hinzufügen* ist `socialmedia@math.uni-freiburg.de`
+> hinterlegt; der Nutzer steht auf „Aktiv". Diese Adresse muss deshalb ein
+> **Verteiler mit ≥ 2 Empfänger:innen** sein (siehe [`zugangsdaten.md`](docs/social-media/zugangsdaten.md)).
+>
+> **Einladungen** (*Personen einladen*) fragen nur nach einer E-Mail — beim
+> **Annehmen** verlangt Meta aber ein **Facebook- oder Instagram-Konto**. Ein
+> „berufliches Meta-Konto" lässt sich dort nicht erzeugen. Wer nur Instagram hat,
+> kommt also auch rein; ganz ohne Meta-Identität niemand.
+>
+> **Stolperfalle:** Die Einladung *nicht* mit dem Instagram-Login des Instituts
+> annehmen — der ist als Pool-Nutzer bereits Mitglied, und Meta quittiert das mit dem
+> irreführenden „Der Nutzer kann nicht zu dem Unternehmen hinzugefügt werden".
 
 ### Benötigte Permissions
 
@@ -198,20 +258,27 @@ Die Konten repräsentieren offiziell das Mathematische Institut.
    als Admin/Developer in der Meta Developer App eingetragen, um Token zu erzeugen
    und zu erneuern.
 
-**Konkrete Reihenfolge zum Beantragen:**
-1. Zustimmung der Geschäftsführenden Direktion einholen; klären, ob es schon einen
+**Konkrete Reihenfolge zum Beantragen** (Stand 16.07.2026: 1–3 und 5 erledigt):
+1. ~~Zustimmung der Geschäftsführenden Direktion einholen; klären, ob es schon einen
    Insta-Auftritt des Instituts gibt und ob die Uni ein Meta-Business-Portfolio hat,
-   unter dem wir als Asset laufen können.
-2. Institutionelle Funktions-Mail bereitstellen (Rechenzentrum / RZ-Ticket).
-3. Auf dieser Mail: Instagram-Account `@math_uni_freiburg` anlegen, auf
-   *Professional / Business* umstellen, 2FA aktivieren.
+   unter dem wir als Asset laufen können.~~
+2. ~~Institutionelle Funktions-Mail bereitstellen (Rechenzentrum / RZ-Ticket).~~
+   `socialmedia@math.uni-freiburg.de` — **noch zu prüfen:** Ist das ein Verteiler mit
+   ≥ 2 Empfänger:innen? Daran hängt die Wiederherstellung von Konto *und* Portfolio.
+3. ~~Auf dieser Mail: Instagram-Account `@math_uni_freiburg` anlegen, auf
+   *Professional / Business* umstellen, 2FA aktivieren.~~ Kanal aktiv, Bio und Links
+   stehen, Umstellung auf *Business* erfolgt. **2FA noch prüfen** (Authentifizierungs-App,
+   nicht SMS; TOTP-Seed in die KeePass-Datei, siehe [`zugangsdaten.md`](docs/social-media/zugangsdaten.md)).
 4. Die fünf Pflichtdokumente freigeben lassen, auf `math.uni-freiburg.de`
    veröffentlichen und im Profil verlinken; Account über das
    [Uni-Formular](https://uni-freiburg.de/formulare/anmeldung-social-media-account/)
    melden.
-5. Meta Developer App (Typ *Business*) anlegen, Produkt *Instagram API with
-   Instagram Login* hinzufügen, technische Admins eintragen, Long-Lived Token
-   erzeugen — und **den Token-Refresh gleich mitbauen**.
+5. ~~Business Portfolio anlegen~~ — „Mathematik, Uni Freiburg" steht (siehe Kasten oben).
+6. Klären, **wessen** persönliches Facebook-Konto als Entwickler-Login dient und
+   **wer zweite:r Admin** wird (siehe Kasten oben). Ohne das geht Schritt 7 nicht.
+7. Meta Developer App (Typ *Business*) anlegen, Produkt *Instagram API with
+   Instagram Login* hinzufügen, technische Admins eintragen (**beide, sofort**),
+   Long-Lived Token erzeugen — und **den Token-Refresh gleich mitbauen**.
 
 ---
 
@@ -465,11 +532,17 @@ Code-Schritte 2–8 sind **erledigt** (in `main` / `master`). Hinweis: statt des
 2. **Existiert schon** ein Instagram-Auftritt / ein Meta-Business-Portfolio des
    Instituts oder der Uni, unter dem wir andocken?
 3. **Datenschutz-Freigabe:** wer, bis wann? (Uni-Guidelines beachten.)
-4. **Zuschnitt-Tiefe:** reicht „Format wählen + cover/contain", oder echter
+4. **Zweite:r App-Administrator:** Die Meta Developer App hängt weiterhin an
+   *einem* persönlichen Facebook-Konto — ein Funktions-Konto scheidet aus
+   (Klarnamenpflicht, siehe Kasten in §1). Die angefragte zweite Person muss sich
+   dafür **selbst zuerst als Entwickler registrieren**; vorher weist Meta das
+   Hinzufügen ab („Nutzer ohne registrierte Benutzerkonten"). Anfrage ist raus,
+   Antwort steht aus.
+5. **Zuschnitt-Tiefe:** reicht „Format wählen + cover/contain", oder echter
    interaktiver Crop (aufwändiger)? Vorschlag: mit einfacher Variante starten.
-5. **Caption-Sprache:** deutsch (`home.title_de`/`text_de`) als Default? Oder wählbar de/en?
-6. **Nur Einzelbild** (Feed-Post) zum Start? Carousel/Reels/Stories bewusst später.
-7. **Token-Erneuerung:** manueller Prozess (alle 60 Tage) oder automatischer Refresh-Job?
+6. **Caption-Sprache:** deutsch (`home.title_de`/`text_de`) als Default? Oder wählbar de/en?
+7. **Nur Einzelbild** (Feed-Post) zum Start? Carousel/Reels/Stories bewusst später.
+8. **Token-Erneuerung:** manueller Prozess (alle 60 Tage) oder automatischer Refresh-Job?
 
 ---
 

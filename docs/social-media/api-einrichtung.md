@@ -342,6 +342,12 @@ Offen sind noch:
 3. **`chmod 700 /var/local/lib/mi-news`** — derzeit 2755. Betrifft nur noch
    die Token-Datei; die `.netrc` liegt inzwischen woanders.
 
+Unabhängig davon noch zu prüfen: Das **App-Secret** war während der Einrichtung
+zwischenzeitlich auf Screenshots sichtbar. Es wurde einmal zurückgesetzt — ob der
+Wert in der `.netrc` seither noch einmal erneuert wurde, ist nicht festgehalten.
+Im Zweifel im Dashboard zurücksetzen und den neuen Wert direkt in die `.netrc`
+schreiben, ohne Umweg über Datei oder Chat.
+
 ## Was der erste Testpost ergeben hat (14.09.2026)
 
 Die API-Kette lief auf Anhieb durch: Meta hat das Bild selbst von der
