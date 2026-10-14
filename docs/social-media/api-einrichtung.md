@@ -251,6 +251,58 @@ install -o www-data -g www-data -m 640 /dev/null /var/log/mi-news-token.log
 17 3 * * 1 www-data /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/refresh_ig_token.py >> /var/log/mi-news-token.log 2>&1
 ```
 
+Angelegt wurde am 14.09.2026 Variante A, allerdings unter dem Namen
+`/etc/cron.d/mi-news` (ohne `-token`). Das ist die Datei, in die auch Schritt 5
+gehört.
+
+**5. Zweiter Cron-Eintrag: fällige geplante Posts** — *nachgetragen 14.10.2026,
+noch nicht beauftragt.*
+
+Seit dem 04.10.2026 (`5cc12b3`) lässt sich im Editor ein Post für einen
+Zeitpunkt vormerken. Veröffentlicht wird er von `bin/post_geplante.py`, und das
+passiert **nur, wenn dieser Eintrag existiert** — als **zweite Zeile in der schon
+vorhandenen** `/etc/cron.d/mi-news`:
+
+```
+*/15 * * * * www-data /usr/local/lib/mi-news/venv/bin/python /usr/local/lib/mi-news/bin/post_geplante.py --quiet
+```
+
+Ebenfalls als `www-data`, aus demselben Grund wie der Token-Job: Das Skript liest
+`/var/local/lib/mi-news/ig_token.json`, mode 600, owner www-data.
+
+Warum überhaupt ein eigener Prozess: Der Editor ist eine Streamlit-App und führt
+nur Code aus, solange jemand die Seite offen hat. Um 9 Uhr morgens läuft dort
+nichts — ein eingetragener Termin allein veröffentlicht gar nichts.
+
+Alle 15 Minuten ist der Takt mit Absicht grob: Ein Post geht frühestens zum
+geplanten Zeitpunkt raus und spätestens eine Viertelstunde später. Auf die Minute
+genau brauchen wir es nicht, und jeder Lauf kostet eine Datenbankabfrage. Länger
+als 24 Stunden nach dem geplanten Zeitpunkt wird nichts mehr gepostet — ein
+Hinweis auf eine Veranstaltung von gestern hilft niemandem; solche Posts gehen
+auf `fehler` und melden sich.
+
+**Voraussetzung:** Ein Deploy nach dem 04.10.2026, sonst liegt
+`bin/post_geplante.py` auf www2 noch gar nicht.
+
+Prüfen lässt sich der Job gefahrlos, er postet dabei nichts:
+
+```bash
+# Nur rechnen: jeden geplanten Post rendern und prüfen, Lage ausgeben.
+# Braucht nicht einmal einen Token, geht also auch, bevor alles steht.
+sudo -u www-data /usr/local/lib/mi-news/venv/bin/python \
+    /usr/local/lib/mi-news/bin/post_geplante.py --dry-run
+
+# Die ganze Kette gegen Instagram durchspielen, aber nicht veröffentlichen:
+# Bild bereitstellen, Media-Container anlegen, auf FINISHED warten.
+sudo -u www-data /usr/local/lib/mi-news/venv/bin/python \
+    /usr/local/lib/mi-news/bin/post_geplante.py --probelauf
+```
+
+Exit-Code 0 heißt „nichts zu tun oder alles veröffentlicht", 1 heißt „mindestens
+ein Post ist liegengeblieben". Mit `--quiet` gibt der Job im Erfolgsfall nichts
+aus, es gilt also wieder: keine Mail = alles gut. **Hier hängt mehr daran als
+beim Token-Job** — siehe `MAILTO` unter den offenen Nachträgen.
+
 ### Verifikation (nach dem Provisionieren)
 
 `sudo -u www-data …` ad-hoc ist für flask-reader **nicht** erlaubt. Prüfung daher
@@ -299,6 +351,9 @@ Erledigt und **live verifiziert**:
       `/usr/local/lib/mi-news/.netrc`; `misc/config.py` folgt diesem Pfad
 - [x] **Sysadmins:** initiales `ig_token.json` abgelegt — 14.09.2026
 - [x] **Sysadmins:** Cron-Eintrag angelegt (`/etc/cron.d/mi-news`) — siehe Nachträge unten
+- [ ] **Sysadmins:** zweite Cron-Zeile für `bin/post_geplante.py` (geplante Posts)
+      — am 14.10.2026 nachgetragen, §8 Schritt 5. Bis dahin veröffentlicht sich
+      kein vorgemerkter Post von selbst.
 - [x] mi-hp (`master`) auf www2 deployt — Bild-Route live (404 auf unbekannten
       Token), Rechtsseiten unter `/nlehre/de/instagram/` liefern 200
 - [x] Rat des/der Datenschutzbeauftragten eingeholt (Art. 35 Abs. 2 DSGVO) —
@@ -339,8 +394,27 @@ Offen sind noch:
    ohne `MAILTO` adressiert Cron an `www-data`, und `/etc/aliases` existiert auf
    www2 nicht — die Fehlermeldung landet dann in einer Mailbox, in die niemand
    sieht. Das ist genau der Fall, für den sie gedacht ist.
+
+   **Seit dem 14.10.2026 wiegt das schwerer** (siehe Nachtrag unten): Beim
+   Token-Job war die Mail Komfort — der Token hält 60 Tage, der Job läuft
+   wöchentlich, sieben Ausfälle in Folge sind verkraftbar. Beim Posten-Job ist
+   die Mail der **einzige** Weg, auf dem jemand erfährt, dass ein Beitrag nicht
+   rausgegangen ist. Ohne `MAILTO` scheitert er still.
 3. **`chmod 700 /var/local/lib/mi-news`** — derzeit 2755. Betrifft nur noch
    die Token-Datei; die `.netrc` liegt inzwischen woanders.
+
+### Nachtrag 14.10.2026: der Cron für geplante Posts fehlt noch
+
+Das geplante Posten kam am 04.10.2026 dazu, also **nach** der Sysadmin-Runde vom
+14.09.2026 — der zugehörige Cron-Eintrag ist nie beauftragt worden und steht bis
+heute nicht auf www2. Folge: Ein im Editor vorgemerkter Post bleibt auf `geplant`
+stehen und geht nach 24 Stunden auf `fehler`. Im Editor sieht alles richtig aus,
+passieren tut nichts.
+
+Die Zeile und ihre Begründung stehen in §8 als Schritt 5. Zusammen damit
+anzufragen sind die beiden ohnehin offenen Punkte oben: `MAILTO=` (Punkt 2, jetzt
+wichtiger als im September) und ob seit dem 04.10.2026 deployt wurde — ohne
+Deploy liegt das Skript dort nicht.
 
 Unabhängig davon noch zu prüfen: Das **App-Secret** war während der Einrichtung
 zwischenzeitlich auf Screenshots sichtbar. Es wurde einmal zurückgesetzt — ob der
