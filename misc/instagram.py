@@ -327,24 +327,17 @@ def _passende_groesse(draw, text, pfad, max_breite, max_hoehe, start, minimum=28
     return font, _umbrechen(draw, text, font, max_breite)
 
 
-def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
-                    ratio=ig_ratio_default, lang="de"):
-    """CD-Hintergrund mit Logo, Institutsname, Überschrift und Unterzeile.
+def render_hintergrund(variante=VARIANTE_DEFAULT, ratio=ig_ratio_default):
+    """Nur der CD-Hintergrund: Farbfläche, Siegel-Wasserzeichen, Vierblatt.
 
-    Enthält die CD-Gestaltungselemente: das Siegel als dezentes Wasserzeichen
-    unten rechts und die Vierblatt-Form als Akzent oben rechts. Der
-    Institutsname ist zweisprachig (`lang` = "de"/"en").
-
-    Gibt (PIL.Image, warnungen) zurück — exakt das Bild, das gepostet würde.
+    Ohne Logo, Institutsname und Text — das setzt `render_standard` darauf.
+    Eigene Funktion, damit `bin/render_ig_hintergruende.py` dieselben Flächen
+    ausgibt, die die App verwendet, und nicht eine zweite Kopie der Maße.
     """
     v = VARIANTEN[variante]
     breite, hoehe = ig_ratios[ratio]
-    warnungen = []
 
     bild = Image.new("RGB", (breite, hoehe), v["bg"])
-
-    rand = round(breite * 0.09)
-    inhalt_breite = breite - 2 * rand
 
     # --- Siegel als Wasserzeichen: unten rechts, über den Rand hinaus, sehr
     # dezent. Deckender Ton, nur leicht vom Hintergrund abgesetzt.
@@ -365,6 +358,28 @@ def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
         bild.paste(blatt, (breite - round(bg * 0.55), -round(bg * 0.30)), blatt)
     except OSError:
         pass
+
+    return bild
+
+
+def render_standard(headline, subline="", variante=VARIANTE_DEFAULT,
+                    ratio=ig_ratio_default, lang="de"):
+    """CD-Hintergrund mit Logo, Institutsname, Überschrift und Unterzeile.
+
+    Enthält die CD-Gestaltungselemente: das Siegel als dezentes Wasserzeichen
+    unten rechts und die Vierblatt-Form als Akzent oben rechts. Der
+    Institutsname ist zweisprachig (`lang` = "de"/"en").
+
+    Gibt (PIL.Image, warnungen) zurück — exakt das Bild, das gepostet würde.
+    """
+    v = VARIANTEN[variante]
+    breite, hoehe = ig_ratios[ratio]
+    warnungen = []
+
+    bild = render_hintergrund(variante, ratio)
+
+    rand = round(breite * 0.09)
+    inhalt_breite = breite - 2 * rand
 
     draw = ImageDraw.Draw(bild)
 
