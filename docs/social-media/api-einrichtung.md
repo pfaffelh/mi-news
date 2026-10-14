@@ -255,8 +255,9 @@ Angelegt wurde am 14.09.2026 Variante A, allerdings unter dem Namen
 `/etc/cron.d/mi-news` (ohne `-token`). Das ist die Datei, in die auch Schritt 5
 gehört.
 
-**5. Zweiter Cron-Eintrag: fällige geplante Posts** — *nachgetragen 14.10.2026,
-noch nicht beauftragt.*
+**5. Zweiter Cron-Eintrag: fällige geplante Posts** — ✅ **steht seit dem
+14.10.2026 auf www2** (nachgeprüft am selben Tag: beide Zeilen in
+`/etc/cron.d/mi-news`).
 
 Seit dem 04.10.2026 (`5cc12b3`) lässt sich im Editor ein Post für einen
 Zeitpunkt vormerken. Veröffentlicht wird er von `bin/post_geplante.py`, und das
@@ -351,9 +352,8 @@ Erledigt und **live verifiziert**:
       `/usr/local/lib/mi-news/.netrc`; `misc/config.py` folgt diesem Pfad
 - [x] **Sysadmins:** initiales `ig_token.json` abgelegt — 14.09.2026
 - [x] **Sysadmins:** Cron-Eintrag angelegt (`/etc/cron.d/mi-news`) — siehe Nachträge unten
-- [ ] **Sysadmins:** zweite Cron-Zeile für `bin/post_geplante.py` (geplante Posts)
-      — am 14.10.2026 nachgetragen, §8 Schritt 5. Bis dahin veröffentlicht sich
-      kein vorgemerkter Post von selbst.
+- [x] **Sysadmins:** zweite Cron-Zeile für `bin/post_geplante.py` (geplante
+      Posts) — 14.10.2026 eingerichtet und nachgeprüft, §8 Schritt 5
 - [x] mi-hp (`master`) auf www2 deployt — Bild-Route live (404 auf unbekannten
       Token), Rechtsseiten unter `/nlehre/de/instagram/` liefern 200
 - [x] Rat des/der Datenschutzbeauftragten eingeholt (Art. 35 Abs. 2 DSGVO) —
@@ -395,26 +395,31 @@ Offen sind noch:
    www2 nicht — die Fehlermeldung landet dann in einer Mailbox, in die niemand
    sieht. Das ist genau der Fall, für den sie gedacht ist.
 
-   **Seit dem 14.10.2026 wiegt das schwerer** (siehe Nachtrag unten): Beim
-   Token-Job war die Mail Komfort — der Token hält 60 Tage, der Job läuft
-   wöchentlich, sieben Ausfälle in Folge sind verkraftbar. Beim Posten-Job ist
-   die Mail der **einzige** Weg, auf dem jemand erfährt, dass ein Beitrag nicht
-   rausgegangen ist. Ohne `MAILTO` scheitert er still.
+   **Seit dem 14.10.2026 wiegt das schwerer** (siehe Nachtrag unten): Seitdem
+   läuft der Posten-Job mit. Beim Token-Job war die Mail Komfort — der Token
+   hält 60 Tage, der Job läuft wöchentlich, sieben Ausfälle in Folge sind
+   verkraftbar. Beim Posten-Job ist die Mail der **einzige** Weg, auf dem jemand
+   erfährt, dass ein Beitrag nicht rausgegangen ist. Ohne `MAILTO` scheitert er
+   still. Stand 14.10.2026 steht in `/etc/cron.d/mi-news` kein `MAILTO`.
 3. **`chmod 700 /var/local/lib/mi-news`** — derzeit 2755. Betrifft nur noch
    die Token-Datei; die `.netrc` liegt inzwischen woanders.
 
-### Nachtrag 14.10.2026: der Cron für geplante Posts fehlt noch
+### Nachtrag 14.10.2026: Cron für geplante Posts — erledigt
 
 Das geplante Posten kam am 04.10.2026 dazu, also **nach** der Sysadmin-Runde vom
-14.09.2026 — der zugehörige Cron-Eintrag ist nie beauftragt worden und steht bis
-heute nicht auf www2. Folge: Ein im Editor vorgemerkter Post bleibt auf `geplant`
-stehen und geht nach 24 Stunden auf `fehler`. Im Editor sieht alles richtig aus,
-passieren tut nichts.
+14.09.2026. Der zugehörige Cron-Eintrag stand deshalb in keinem Dokument, sondern
+nur im Docstring von `bin/post_geplante.py`.
 
-Die Zeile und ihre Begründung stehen in §8 als Schritt 5. Zusammen damit
-anzufragen sind die beiden ohnehin offenen Punkte oben: `MAILTO=` (Punkt 2, jetzt
-wichtiger als im September) und ob seit dem 04.10.2026 deployt wurde — ohne
-Deploy liegt das Skript dort nicht.
+**Er ist inzwischen da.** Nachgeprüft am 14.10.2026 auf www2: `/etc/cron.d/mi-news`
+enthält beide Zeilen, den wöchentlichen Token-Refresh und den
+Viertelstunden-Lauf für die geplanten Posts. Auch das Skript selbst liegt dort
+(`/usr/local/lib/mi-news/bin/post_geplante.py`, seit dem Deploy vom 04.10.2026).
+Die Zeile und ihre Begründung stehen in §8 als Schritt 5; dokumentiert ist sie
+also nachträglich, nicht beauftragt.
+
+**Offen bleibt davon `MAILTO=`** (Punkt 2 oben). Die Datei hat keines — geprüft am
+14.10.2026. Solange das so ist, schreibt ein gescheiterter Posten-Lauf an
+`www-data`, und dort sieht niemand hin.
 
 Unabhängig davon noch zu prüfen: Das **App-Secret** war während der Einrichtung
 zwischenzeitlich auf Screenshots sichtbar. Es wurde einmal zurückgesetzt — ob der
