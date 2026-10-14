@@ -1,0 +1,37 @@
+% Poster auf A3: dieselbe Seite, um den Faktor Wurzel 2 vergroessert.
+%
+% Warum ein Wrapper und nicht \documentclass[a3paper] im Poster selbst:
+% Alle Elemente in instagram-poster.tex sind absolut positioniert, in
+% Millimetern ab den Seitenecken (shift={(20mm,-84mm)} und so fort). Auf
+% einem groesseren Blatt bliebe die Schrift 40 pt gross und das Layout
+% klebte in der linken oberen Ecke -- vergroessert wuerde das Papier, nicht
+% das Poster. Richtig ist, die fertige A4-Seite als Ganzes zu skalieren.
+%
+% A4 und A3 haben dasselbe Seitenverhaeltnis; was an Verzerrung bleibt, ist
+% die Rundung der ISO-Masse und liegt bei 0,01 % -- unsichtbar.
+%
+% Uebersetzen (pdflatex genuegt hier, die Schrift steckt schon im
+% eingebundenen PDF -- fontspec wird nicht gebraucht):
+%
+%     lualatex instagram-poster.tex        % zweimal, wegen des QR-Codes
+%     pdflatex instagram-poster-a3.tex
+%
+% Das Poster muss also zuerst gesetzt sein; dieser Wrapper liest nur dessen
+% PDF ein.
+
+\documentclass{article}
+
+\usepackage[paperwidth=297mm, paperheight=420mm, margin=0pt]{geometry}
+\usepackage{pdfpages}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% fitpaper=false ist wichtig: Sonst uebernaehme pdfpages die Seitengroesse
+% der eingebundenen Datei, und heraus kaeme wieder A4. width und height
+% zusammen fuellen das Blatt bis in die Ecken -- die gelbe Flaeche, das
+% Vierblatt und das Siegel laufen dann wie gewollt ueber den Rand hinaus.
+\includepdf[fitpaper=false, width=297mm, height=420mm]{instagram-poster.pdf}
+
+\end{document}

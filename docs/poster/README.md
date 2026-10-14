@@ -8,6 +8,7 @@ einen Beitrag im Feed, soll beides zusammenbringen.
 | Datei | Zweck |
 |---|---|
 | [instagram-poster.tex](instagram-poster.tex) | Das Poster, A4 hoch |
+| [instagram-poster-a3.tex](instagram-poster-a3.tex) | Dasselbe Poster auf A3, als Wrapper um das A4-PDF |
 | [assets.py](assets.py) | Erzeugt die drei abgeleiteten Bilddateien aus `static/` |
 | `ufr-blatt-gelb.png`, `ufr-siegel-gelb.png` | Vierblatt und Siegel, im Gelbton eingefärbt |
 | `ufr-logo-blau-beschnitten.png` | Wortmarke ohne ihren transparenten Rand |
@@ -85,8 +86,37 @@ lässt ringsum einen weißen Rand stehen — das sieht ordentlich aus, ist aber 
 die gedachte Wirkung. Für den randlosen Druck braucht die Druckerei eine Fassung
 mit Beschnittzugabe; das sind drei Zeilen in der Präambel, sagt Bescheid.
 
-Beim Vergrößern auf A3 bleibt alles proportional, der QR-Code wird dann 93 mm
-groß und entsprechend weiter lesbar.
+### A3
+
+Auf A3 bleibt alles proportional, der QR-Code wird dann 93 mm groß (nachgemessen
+am Ausdruck: 93,3 mm) und entsprechend weiter lesbar. A4 und A3 haben dasselbe
+Seitenverhältnis; was an Verzerrung bleibt, ist die Rundung der ISO-Maße und
+liegt bei 0,01 %.
+
+**Im Druckdialog** reicht Papierformat A3 und eine Skalierung von Hand auf
+**141 %** (√2, das exakte A4→A3-Verhältnis). Das ist zuverlässiger als „an Seite
+anpassen": Viele Treiber rechnen dabei auf den *bedruckbaren* Bereich statt aufs
+Blatt und lassen deshalb Rand stehen. Steht die Skalierung auf „tatsächliche
+Größe", sitzt das Poster in A4-Größe mitten auf dem A3-Bogen — das ist kein
+Fehler im Satz, sondern die Voreinstellung des Dialogs.
+
+**Als echtes A3-PDF** gibt es [instagram-poster-a3.tex](instagram-poster-a3.tex).
+Das Poster muss dafür schon gesetzt sein; der Wrapper liest nur dessen PDF ein:
+
+```bash
+lualatex instagram-poster.tex        # zweimal, wegen des QR-Codes
+pdflatex instagram-poster-a3.tex
+```
+
+Ein direktes `\documentclass[a3paper]` im Poster selbst hilft **nicht**: Alle
+Elemente sind absolut positioniert, in Millimetern ab den Seitenecken. Auf dem
+größeren Blatt bliebe die Schrift 40 pt groß und das Layout klebte in der linken
+oberen Ecke — vergrößert würde das Papier, nicht das Poster. Der Wrapper skaliert
+deshalb die fertige Seite als Ganzes.
+
+`pdfjam --paper a3paper` wäre der naheliegende Einzeiler, scheitert hier aber:
+pdfjam übergibt `geometry` eine leere Papierbreite und bricht mit
+`\paperwidth (0.0pt) too short` ab.
 
 ## Herkunft der Elemente
 
