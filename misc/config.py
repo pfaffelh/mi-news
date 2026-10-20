@@ -42,10 +42,15 @@ ufr_weiss = "#FFFFFF"
 # Die Schrift liegt IM Repo (static/fonts/), nicht als System-Paket: Auf www2
 # ist fonts-croscore nicht installiert, und Pillows eingebaute Ersatzschrift hat
 # keine deutschen Umlaute — ä/ö/ü/ß erschienen dort als leere Kästchen. Gebündelt
-# wird die Schrift per rsync mitdeployt und ist überall verfügbar. Relativer
-# Pfad wie bei den Logos (App läuft aus dem Repo-Wurzelverzeichnis).
-ig_font_regular = "static/fonts/Arimo-Regular.ttf"
-ig_font_bold = "static/fonts/Arimo-Bold.ttf"
+# wird die Schrift per rsync mitdeployt und ist überall verfügbar.
+#
+# Absolute Pfade (wie bei den Logos unten): Streamlit läuft aus dem Repo, der
+# Cron-Job bin/post_geplante.py aber nicht. Mit relativem Pfad fand er die
+# Schrift nicht, und geplante Posts kamen mit Pillows Ersatzschrift heraus —
+# Überschrift nicht fett.
+_repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ig_font_regular = os.path.join(_repo, "static/fonts/Arimo-Regular.ttf")
+ig_font_bold = os.path.join(_repo, "static/fonts/Arimo-Bold.ttf")
 
 # Zulässige Instagram-Formate für Feed-Posts (Breite × Höhe in px).
 # Erlaubt ist alles zwischen 4:5 (hoch) und 1.91:1 (quer).
@@ -87,14 +92,14 @@ ig_einrichtung = {
 #   Siegel als dezentes Wasserzeichen
 #   Blatt = Vierblatt-Gestaltungselement, weiße Silhouette zum Einfärben
 ig_logo = {
-    "blau": "static/ufr-logo-blau.png",
-    "weiss": "static/ufr-logo-weiss.png",
-    "schwarz": "static/ufr-logo-schwarz.png",
+    "blau": os.path.join(_repo, "static/ufr-logo-blau.png"),
+    "weiss": os.path.join(_repo, "static/ufr-logo-weiss.png"),
+    "schwarz": os.path.join(_repo, "static/ufr-logo-schwarz.png"),
 }
 # Siegel-Linien als transparente Silhouette (aus dem deckenden Original
 # extrahiert), damit es sich auf jedem Hintergrund tonal einfärben lässt.
-ig_siegel = "static/ufr-siegel-linien.png"
-ig_blatt = "static/ufr-blatt.png"
+ig_siegel = os.path.join(_repo, "static/ufr-siegel-linien.png")
+ig_blatt = os.path.join(_repo, "static/ufr-blatt.png")
 
 # --- Zugangsdaten -------------------------------------------------------------
 #
