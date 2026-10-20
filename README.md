@@ -23,6 +23,14 @@ allein darüber, wo sie auftaucht. Sichtbar wird sie erst, wenn zusätzlich
 „Veröffentlicht" gesetzt ist und das Anzeigedatum passt — Monitor und Homepage
 haben dafür getrennte Zeiträume.
 
+Die Reihenfolge legt mi-hp fest (`utils/util_news.py`). Auf den Homepages
+steht die News mit dem spätesten `home.start` oben; `rang` entscheidet nur bei
+gleichem Start. Der Monitor sortiert dagegen noch rein nach `rang`. Den
+vergibt mi-news beim Anlegen und Kopieren als kleinsten Wert minus 1,
+beim Bearbeiten bleibt er unverändert. Die Übersicht in `pages/00_New.py`
+sortiert wie die Homepage und färbt die Datumszelle grün, wenn die News gerade
+online ist, und orange, wenn sie im Zeitraum liegt, aber nicht veröffentlicht ist.
+
 ## Lokal starten
 
 ```bash
