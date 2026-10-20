@@ -63,6 +63,7 @@ if st.session_state.logged_in:
 
     key = "news_anlegen"
     st.write(f"**Es werden die News der letzten {st.session_state.tage} angezeigt. Kann links oben geändert werden.**")
+    st.write("Sortiert wie auf der Homepage: neueste (nach Startdatum) zuerst. :green-background[Grün] = gerade online, :orange-background[orange] = im Anzeigezeitraum, aber nicht veröffentlicht.")
     with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
         _public = st.toggle("Veröffentlicht", value = True, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
         showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")

@@ -48,6 +48,8 @@ if st.session_state.logged_in:
         - Unter News -> Neue News anlegen bekommt man ein paar der möglichen Felder angezeigt. Hier ist _Veröffentlicht_ zunächst noch nicht angegeben, weil man ja erstmal die News ansehen will, bevor man sie veröffentlicht. Titel (das ist der Titel auf dem Monitor und der deutsche Titel auf der Homepage), Start/Enddatum der Anzeige lassen sich angeben, sowie das soeben angelegte Bild.  
         - Man schaut etwa [hier](https://www.math.uni-freiburg.de/nlehre/monitortest/), wie die News angezeigt wird, und kann sie dann den eigenen Wünschen folgend ändern.  
         - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [auf dem Monitor](https://www.math.uni-freiburg.de/nlehre/monitor/), der [Lehre-Homepage](https://www.math.uni-freiburg.de/nlehre/) und der [Instituts-Homepage](https://www.math.uni-freiburg.de/) ansehen. 
+        
+        Reihenfolge auf den Homepages: Die News mit dem spätesten Startdatum steht oben. Wird eine alte News bearbeitet und mit neuem Zeitraum wiederverwendet, rutscht sie also entsprechend ihrem neuen Startdatum nach oben. Die News-Übersicht in dieser App ist genauso sortiert; was gerade online ist, ist dort grün markiert, was im Zeitraum liegt, aber noch nicht veröffentlicht ist, orange.
         """
         st.markdown(text)
         
