@@ -109,12 +109,22 @@ if st.session_state.logged_in:
             st.session_state.expanded = "grunddaten"
             tools.new(collection, ini = new, switch = True)
 
-    def compute_end(n):
-        return max(n["home"]["end"], n["monitor"]["end"])   
+    # Wie auf der Webseite: neueste zuerst. Reine Monitor-News nach Monitor-Start.
+    def compute_start(n):
+        if [i for i in n["tags"] if i != "Monitor"]:
+            return n["home"]["start"]
+        return n["monitor"]["start"]
 
     news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]}, sort=[("rang", pymongo.ASCENDING)]))
-    news_display = sorted(news_display, key=compute_end, reverse = True)
+    news_display = sorted(news_display, key=compute_start, reverse = True)
     
+    # Gerade online: grün; im Zeitraum, aber nicht öffentlich: orange
+    def mark(text, live, public):
+        if not live:
+            return text
+        return f":green-background[{text}]" if public else f":orange-background[{text} (nicht öffentlich)]"
+
+    jetzt = datetime.now()
     co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
     co4.markdown("**Titel**")
     co5.markdown("Monitor")
@@ -126,8 +136,10 @@ if st.session_state.logged_in:
         me = x["monitor"]["end"]
         hs = x["home"]["start"]
         he = x["home"]["end"]
-        monitordate = f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if "Monitor" in x["tags"] else " -- "
-        homedate = f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if [i for i in x["tags"] if i != "Monitor"] else " -- "
+        auf_monitor = "Monitor" in x["tags"]
+        auf_home = [i for i in x["tags"] if i != "Monitor"] != []
+        monitordate = mark(f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}", ms <= jetzt <= me, x["_public"]) if auf_monitor else " -- "
+        homedate = mark(f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}", hs <= jetzt <= he, x["_public"]) if auf_home else " -- "
         #with co1: 
         #    st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
         #with co2:
