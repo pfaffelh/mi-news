@@ -39,7 +39,6 @@ def setup_session_state():
         mongo_db = cluster["news"]
         logger.debug("Connected to MongoDB")
         st.session_state.bild = mongo_db["bild"]
-        st.session_state.carouselnews = mongo_db["carouselnews"]
         st.session_state.news = mongo_db["news"]
         st.session_state.vortragsreihe = mongo_db["vortragsreihe"]
         st.session_state.vortrag = mongo_db["vortrag"]
@@ -101,7 +100,6 @@ def setup_session_state():
     st.session_state.collection_name = {
         st.session_state.bild: "Bild",
         st.session_state.news: "News",
-        st.session_state.carouselnews: "Carouselnews",
         st.session_state.vortragsreihe: "Vortragsreihe",
         st.session_state.vortrag: "Vortrag",
         # Instagram-Posts haben zwei Editorseiten (10_ fuer Text, 11_ fuer
@@ -130,47 +128,25 @@ def setup_session_state():
             "bearbeitet": "",
             "kommentar": "",
             "bildnachweis": ""},
-        st.session_state.carouselnews: {
-            "test": True,
-            "_public": True,
-            "start": datetime.combine(datetime.today(), datetime.min.time()),
-            "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
-            "interval": 5000,
-            "image_id": leer[st.session_state.bild],
-            "left": 30,
-            "right": 70,
-            "bottom": 30,
-            "bearbeitet": "",
-            "kommentar": "",
-            "text": ""
-        },
+        # Eine News ist sofort veröffentlicht. Sichtbar ist sie, sobald
+        # der Zeitraum passt; title_monitor/text_monitor leer heißt: der
+        # Monitor zeigt title_de/text_de.
         st.session_state.news: {
             "tags" : ["Institut"],
             "link": "",
             "image": [],
-            "_public": True,
-            "archiv": True,
-            "showlastday": True,
+            "showlastday": False,
+            "highlight": False,
+            "start": datetime.combine(datetime.today(), datetime.min.time()),
+            "end": datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=7),
+            "title_de": "",
+            "title_en": "",
+            "text_de": "",
+            "text_en": "",
+            "title_monitor": "",
+            "text_monitor": "",
             "bearbeitet": "",
-            "kommentar": "",
-            "home": {
-                "start": datetime.now(),
-                "end": datetime.now() + timedelta(days=7),
-                "title_de": "",
-                "title_en": "",
-                "text_de": "",
-                "text_en": "",
-                "popover_title_de": "",
-                "popover_title_en": "",
-                "popover_text_de": "",
-                "popover_text_en": "",
-            },
-            "monitor": {
-                "start": datetime.now(),
-                "end": datetime.now() + timedelta(days=7),
-                "title": "",
-                "text": ""
-            }
+            "kommentar": ""
         },
         st.session_state.vortragsreihe: {
             "kurzname" : "",
@@ -236,11 +212,9 @@ def setup_session_state():
 
     st.session_state.abhaengigkeit = {
         st.session_state.bild: [
-            {"collection": st.session_state.carouselnews, "field": "image_id", "list": False},
             {"collection": st.session_state.news, "field": "image", "list": True, "key": "_id"},
             {"collection": st.session_state.instapost, "field": "image_id", "list": False}],
         st.session_state.news: [],
-        st.session_state.carouselnews: [],
         st.session_state.instapost: [],
         st.session_state.vortragsreihe: [
             {"collection": st.session_state.vortrag, "field": "vortragsreihe", "list": True}],
@@ -279,7 +253,6 @@ date_format_no_space = '%Y%m%d%H%M'
 
 _news_db = get_mongo_client()["news"]
 bild = _news_db["bild"]
-carouselnews = _news_db["carouselnews"]
 news = _news_db["news"]
 instapost = _news_db["instapost"]
 vortragsreihe = _news_db["vortragsreihe"]

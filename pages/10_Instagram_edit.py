@@ -49,11 +49,12 @@ col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     if st.button("Zurück (ohne Speichern)"):
         # Der Datensatz entsteht schon beim Anlegen, nicht erst beim Speichern.
-        # Wurde nie etwas eingetragen, bliebe hier sonst eine leere Huelle in
-        # der Liste stehen -- obwohl der Knopf das Gegenteil verspricht.
-        if insta.ist_leerer_entwurf(x):
+        # Wurde nie etwas eingetragen oder in dieser Session nie gespeichert
+        # (etwa ein aus einer News vorbelegter Post), bliebe hier sonst ein
+        # Entwurf in der Liste stehen -- obwohl der Knopf das Gegenteil verspricht.
+        if insta.ist_leerer_entwurf(x) or (loeschbar and not x.get("ig_media_id") and tools.insta_nie_gespeichert(x)):
             collection.delete_one({"_id": x["_id"]})
-            tools.flash("Leerer Entwurf verworfen.")
+            tools.flash("Nicht gespeicherter Entwurf verworfen.")
         st.switch_page("pages/09_Instagram.py")
 with col2:
     # Gespeichert wird erst ganz unten: `inhalt` steht erst fest, wenn alle

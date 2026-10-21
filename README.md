@@ -12,24 +12,30 @@ ist hier falsch.
 
 | Was | Wo es erscheint |
 |---|---|
-| News, Tag „Monitor" | [Bildschirm im EG](https://www.math.uni-freiburg.de/nlehre/monitor/) — zum Ausprobieren der [Testmonitor](https://www.math.uni-freiburg.de/nlehre/monitortest/) |
+| News, Tag „Monitor" | Bildschirm im EG, die News-App unter <http://mfs1.mathematik.privat:3000/> (nur im Institutsnetz); sie holt die News über `/nlehre/api/monitor/` von mi-hp |
 | News, Tag „Institut" | [Institutshomepage](https://www.math.uni-freiburg.de) |
 | News, Tag „Lehre" | [Lehre-Seiten](https://www.math.uni-freiburg.de/nlehre/de/) |
 | Vorträge | [Wochenprogramm](https://www.math.uni-freiburg.de/wochenprogramm/) |
 | Instagram-Posts | [@math_uni_freiburg](https://www.instagram.com/math_uni_freiburg/) |
 
 Die Tags einer News stehen in `misc/config.py` (`alltags`) und entscheiden
-allein darüber, wo sie auftaucht. Sichtbar wird sie erst, wenn zusätzlich
-„Veröffentlicht" gesetzt ist und das Anzeigedatum passt — Monitor und Homepage
-haben dafür getrennte Zeiträume.
+allein darüber, wo sie auftaucht. Es gibt kein „Veröffentlicht": Eine News ist
+sichtbar, sobald sie gespeichert ist und ihr Zeitraum (`start`, `end`) passt.
+Der Zeitraum gilt für Monitor und Homepage gemeinsam; ins Archiv kommt jede News.
 
-Die Reihenfolge legt mi-hp fest (`utils/util_news.py`). Auf den Homepages
-steht die News mit dem spätesten `home.start` oben; `rang` entscheidet nur bei
-gleichem Start. Der Monitor sortiert dagegen noch rein nach `rang`. Den
-vergibt mi-news beim Anlegen und Kopieren als kleinsten Wert minus 1,
-beim Bearbeiten bleibt er unverändert. Die Übersicht in `pages/00_New.py`
-sortiert wie die Homepage und färbt die Datumszelle grün, wenn die News gerade
-online ist, und orange, wenn sie im Zeitraum liegt, aber nicht veröffentlicht ist.
+Eine News hat einen Text für beides: `title_de`/`text_de`, dazu
+`title_en`/`text_en` für die englische Homepage (leer heißt: deutsch). Soll der
+Monitor etwas anderes zeigen, stehen dafür `title_monitor`/`text_monitor`;
+leer heißt: der Monitor zeigt den deutschen Text. Das Schema steht in
+`mongo/schema20261021.py`.
+
+Die Reihenfolge legt mi-hp fest (`utils/util_news.py`): überall die News mit
+dem spätesten `start` zuerst. Die Übersicht in `pages/00_New.py` sortiert
+genauso und färbt den Zeitraum grün, wenn die News gerade online ist.
+
+Eine neue oder kopierte News wird erst beim Speichern angelegt. Vorher ist sie
+nur eine Vorlage im Editor (`tools.news_vorlage_bearbeiten`), damit nichts
+Halbfertiges auf Monitor oder Homepage landet.
 
 ## Lokal starten
 
@@ -90,8 +96,7 @@ Wer sich anmelden kann, darf alles — feinere Rollen gibt es nicht.
 Die Seitenleiste wird **von Hand** gebaut (`tools.display_navigation()`); die
 eingebaute Navigation von Streamlit ist in `.streamlit/config.toml` abgeschaltet.
 Wer eine Seite hinzufügt, muss sie dort selbst eintragen, sonst ist sie nur über
-ihre URL erreichbar. So steht es gerade um `pages/02_Carouselnews.py` und
-`03_Carouselnews_edit.py`: Der Link ist auskommentiert, der Code lebt noch.
+ihre URL erreichbar.
 
 ## Die Datenbank
 
@@ -99,8 +104,7 @@ Alles liegt in der Datenbank `news`:
 
 | Collection | Inhalt |
 |---|---|
-| `news` | Die Meldungen, mit getrennten Feldern und Zeiträumen für Monitor und Homepage |
-| `carouselnews` | Lauftexte oben im Monitor |
+| `news` | Die Meldungen: ein Zeitraum und ein Text für Monitor und Homepage, optional ein abweichender Monitor-Text |
 | `bild` | Die Bilder selbst, als Binärdaten in der Datenbank — nicht im Dateisystem |
 | `vortragsreihe`, `vortrag` | Das Wochenprogramm |
 | `instapost` | Instagram-Beiträge. Eigenständig, nicht an eine News gehängt: Bild und Text sind meist andere, die Caption ist länger |

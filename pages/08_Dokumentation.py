@@ -23,7 +23,7 @@ if st.session_state.logged_in:
     with st.expander("# Allgemeines", expanded=True):
         text = """
         Diese App steuert das Wochenprogramm auf dieser [Seite](https://www.math.uni-freiburg.de/wochenprogramm/), sowie die News, die auf
-        * dem [Bildschirm im EG](https://www.math.uni-freiburg.de/nlehre/monitor/),
+        * dem [Bildschirm im EG](http://mfs1.mathematik.privat:3000/) (nur im Institutsnetz),
         * der [Instituts-Homepage](https://www.math.uni-freiburg.de)
         * der [Lehre-Homepage](https://www.math.uni-freiburg.de/nlehre/de/)
         zu sehen sind.""" 
@@ -40,16 +40,15 @@ if st.session_state.logged_in:
         st.markdown(text)
     with st.expander("# News", expanded=False):
         text = """        
-        Hier kann man sowohl Bilder in eine Datenbank laden, als auch News (sowohl als Carouselnews oben im Monitor, als auch Einzelmeldungen) verfassen. Der übliche Workflow einer News sieht wiefolgt aus:  
+        Hier kann man sowohl Bilder in eine Datenbank laden, als auch News verfassen. Der übliche Workflow einer News sieht wiefolgt aus:  
         
         - Eine News kommt herein, und man loggt sich in die App ein.  
-        - Soll ein Bild mit angezeigt werden, braucht man ei entsprechendes jpg oder png, sowie eine Idee, ob die News auf dem Bildschirm und/oder der Homepage und/oder der Lehre-Homepage angezeigt werden soll. Diese _Tags_ kann man beim Anlegen der News auswählen.
-        - Das Bild lädt man in die Datenbank ('Bilder' in der Navigation). Dort hat man auch eine beschränkte Möglichkeit, das Bild zu bearbeiten (drehen, zuschneiden, Qualität reduzieren. In der Bildunterschrift sieht man jeweils ein paar Daten des Bildes, insbesondere die Dateigröße).
-        - Unter News -> Neue News anlegen bekommt man ein paar der möglichen Felder angezeigt. Hier ist _Veröffentlicht_ zunächst noch nicht angegeben, weil man ja erstmal die News ansehen will, bevor man sie veröffentlicht. Titel (das ist der Titel auf dem Monitor und der deutsche Titel auf der Homepage), Start/Enddatum der Anzeige lassen sich angeben, sowie das soeben angelegte Bild.  
-        - Man schaut etwa [hier](https://www.math.uni-freiburg.de/nlehre/monitortest/), wie die News angezeigt wird, und kann sie dann den eigenen Wünschen folgend ändern.  
-        - Ist man zufrieden, dann clickt man bei der News auf _Veröffentlicht_, und kann das Ergebnis [auf dem Monitor](https://www.math.uni-freiburg.de/nlehre/monitor/), der [Lehre-Homepage](https://www.math.uni-freiburg.de/nlehre/) und der [Instituts-Homepage](https://www.math.uni-freiburg.de/) ansehen. 
+        - Soll ein Bild mit angezeigt werden, braucht man ein entsprechendes jpg, png oder pdf. Das Bild lädt man in die Datenbank ('Bilder' in der Navigation). Dort hat man auch eine beschränkte Möglichkeit, das Bild zu bearbeiten (drehen, zuschneiden, Qualität reduzieren. In der Bildunterschrift sieht man jeweils ein paar Daten des Bildes, insbesondere die Dateigröße).
+        - Unter News -> Neue News anlegen gibt man alles in einer Maske ein: Die _Tags_ legen fest, ob die News auf dem Monitor, der Lehre-Homepage und/oder der Instituts-Homepage erscheint. Der Zeitraum gilt für alle diese Stellen. Titel und Text (de) erscheinen auf der Homepage und auf dem Monitor; Titel und Text (en) auf der englischen Homepage. Soll auf dem Monitor etwas anderes stehen, füllt man den abweichenden Titel bzw. Text für den Monitor aus.
+        - Mit _Speichern_ ist die News sofort veröffentlicht: sie erscheint, sobald ihr Zeitraum beginnt, und kommt danach ins Archiv. Über die Links oben auf der Seite sieht man Monitor und Homepage zu einem wählbaren Zeitpunkt, auch in der Zukunft.
+        - _News kopieren_ öffnet eine neue News mit denselben Inhalten. Angelegt wird sie erst beim Speichern.
         
-        Reihenfolge auf den Homepages: Die News mit dem spätesten Startdatum steht oben. Wird eine alte News bearbeitet und mit neuem Zeitraum wiederverwendet, rutscht sie also entsprechend ihrem neuen Startdatum nach oben. Die News-Übersicht in dieser App ist genauso sortiert; was gerade online ist, ist dort grün markiert, was im Zeitraum liegt, aber noch nicht veröffentlicht ist, orange.
+        Reihenfolge: Die News mit dem spätesten Startdatum steht oben, auf Monitor und Homepages. Wird eine alte News bearbeitet und mit neuem Zeitraum wiederverwendet, rutscht sie also entsprechend ihrem neuen Startdatum nach oben. Die News-Übersicht in dieser App ist genauso sortiert; was gerade online ist, ist dort grün markiert.
         """
         st.markdown(text)
         

@@ -37,14 +37,7 @@ if st.session_state.logged_in:
         f"Kanal: [@math_uni_freiburg](https://www.instagram.com/math_uni_freiburg/)"
     )
 
-    if not insta.is_configured():
-        st.info(
-            "**Veröffentlichen ist noch nicht möglich.** Es fehlen der "
-            "Instagram-Account, der API-Token und die öffentliche Bild-Route. "
-            "Entwürfe lassen sich trotzdem anlegen, gestalten und als Bild "
-            "herunterladen."
-        )
-    else:
+    if insta.is_configured():
         # Ein Token, der klaglos abläuft, ist die wahrscheinlichste Ursache
         # dafür, dass das Posten irgendwann nicht mehr funktioniert. Deshalb
         # sichtbar machen, bevor es passiert: Ist er einmal abgelaufen, lässt
@@ -74,6 +67,7 @@ if st.session_state.logged_in:
             collection,
             ini={"bearbeitet": bearbeitet, "bildtyp": bildtyp, **(extra or {})},
             switch=False, text="🎉 Post angelegt!")
+        tools.insta_als_ungespeichert_merken(st.session_state.edit)
         st.switch_page(EDITOR[bildtyp])
 
     b1, b2, _ = st.columns([1, 1, 2])

@@ -150,20 +150,20 @@ def to_plain(text):
 
 
 def _news_titel(news, lang="de"):
-    """Titel einer News: Homepage-Titel, sonst Monitor-Titel."""
-    home = news.get("home", {})
+    """Titel einer News in der Sprache, sonst deutsch, sonst Monitor-Titel."""
     return (
-        to_plain(home.get(f"title_{lang}", ""))
-        or to_plain(news.get("monitor", {}).get("title", ""))
+        to_plain(news.get(f"title_{lang}", ""))
+        or to_plain(news.get("title_de", ""))
+        or to_plain(news.get("title_monitor", ""))
     )
 
 
 def _news_text(news, lang="de"):
-    """Fließtext einer News: Homepage-Text, sonst Monitor-Text."""
-    home = news.get("home", {})
+    """Fließtext einer News in der Sprache, sonst deutsch, sonst Monitor-Text."""
     return (
-        to_plain(home.get(f"text_{lang}", ""))
-        or to_plain(news.get("monitor", {}).get("text", ""))
+        to_plain(news.get(f"text_{lang}", ""))
+        or to_plain(news.get("text_de", ""))
+        or to_plain(news.get("text_monitor", ""))
     )
 
 

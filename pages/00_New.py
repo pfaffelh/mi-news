@@ -3,7 +3,6 @@ from streamlit_extras.switch_page_button import switch_page
 from datetime import datetime, timedelta 
 import pandas as pd
 import pymongo
-from streamlit_image_select import image_select
 from PIL import Image
 import io
 import tarfile
@@ -45,123 +44,41 @@ if 'initial_zeit' not in st.session_state:
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("News")
-    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
-    col1, col2 = st.columns([1, 1])
-    with col1: 
-        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
-    with col2: 
-        ansicht_zeit = st.time_input("Zeit", value = st.session_state.initial_zeit, key = "ansicht_zeit")
-    with col1: 
-        t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)        
-        st.write(f"[Testansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitortest/{t})")
-        st.write(f"[Veröffentlichte Ansicht des Monitors](https://www.math.uni-freiburg.de/nlehre/monitor/{t})")
-    with col2: 
-        st.write(f"[Testansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/test/de/{t})")
-        st.write(f"[Testansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/test/en/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/de/{t})")
-        st.write(f"[Veröffentlichte Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
+    tools.ansicht_links()
 
-    key = "news_anlegen"
-    st.write(f"**Es werden die News der letzten {st.session_state.tage} angezeigt. Kann links oben geändert werden.**")
-    st.write("Sortiert wie auf der Homepage: neueste (nach Startdatum) zuerst. :green-background[Grün] = gerade online, :orange-background[orange] = im Anzeigezeitraum, aber nicht veröffentlicht.")
-    with st.expander(f'Neue News anlegen', expanded = True if st.session_state.expanded == key else False):
-        _public = st.toggle("Veröffentlicht", value = True, help = "Falls nicht veröffentlicht, ist die News unter ...test zu sehen.")
-        showlastday = st.toggle("Letzten Tag anzeigen", value = False, help = "News erscheint gelb am letzten Tag.")
-        highlight = st.toggle("Highlight", value = False, help = "News erscheint immer gelb.")
-        tags = st.multiselect("Tags", alltags, ["Institut"], help = "Steuert, wo die News erscheint.")
-        title = st.text_input("Titel", "")
-        text = st.text_area("Text", "")
-        col1, col2 = st.columns([1,1])
-        with col1:
-            startdatum = st.date_input("Startdatum", value = datetime.today(), format = "DD.MM.YYYY", key = f"startdatum")
-        with col2:
-            startzeit = st.time_input("Startzeit", value = datetime.min.time(), key = f"startzeit")
-        with col1:
-            enddatum = st.date_input("Enddatum", value = datetime.today() + timedelta(days=7), format = "DD.MM.YYYY", key = f"enddatum")
-        with col2:
-            endzeit = st.time_input("Endzeit", value = datetime.min.time(), key = f"endzeit")
-        mitbild = st.toggle("...mit Bild", value = False, key=None, help="Gibt an, ob es kein oder ein Bild für die News gibt.")
-        if mitbild:
-            bilderliste = list(st.session_state.bild.find({"menu": True}, sort=[("rang", pymongo.ASCENDING)]))
-            images = [Image.open(io.BytesIO(b["thumbnail"])) for b in bilderliste]
-            img = image_select("Bild auswählen", images, return_value = "index")
-            img = bilderliste[img]["_id"]
-            img = [{"_id": img, "stylehome": "", "stylemonitor": "", "widthmonitor": 5}]
-        else:
-            img = []
-        btn = st.button("News anlegen")
-        if btn:
-            new = st.session_state.new[collection]
-            new["tags"] = tags
-            new["_public"] = _public
-            new["showlastday"] = showlastday
-            new["highlight"] = highlight
-            new["home"]["title_de"] = title
-            new["monitor"]["title"] = title
-            new["home"]["text_de"] = text
-            new["monitor"]["text"] = text
-            new["home"]["start"] = datetime.combine(startdatum, startzeit)
-            new["monitor"]["start"] = datetime.combine(startdatum, startzeit)
-            new["home"]["end"] = datetime.combine(enddatum, endzeit)
-            new["monitor"]["end"] = datetime.combine(enddatum, endzeit)
-            new["image"] = img
-            new["bearbeitet"] = bearbeitet
-            new["rang"] = min([x["rang"] for x in list(collection.find())])-1
-            st.session_state.expanded = "grunddaten"
-            tools.new(collection, ini = new, switch = True)
+    if st.button("Neue News anlegen", type = "primary"):
+        tools.news_vorlage_bearbeiten()
 
-    # Wie auf der Webseite: neueste zuerst. Reine Monitor-News nach Monitor-Start.
-    def compute_start(n):
-        if [i for i in n["tags"] if i != "Monitor"]:
-            return n["home"]["start"]
-        return n["monitor"]["start"]
+    st.write(f"**Es werden die News der letzten {st.session_state.tage} Tage angezeigt. Kann links oben geändert werden.**")
+    st.write("Sortiert wie auf der Homepage: neueste (nach Startdatum) zuerst. :green-background[Grün] = gerade online.")
 
-    news_display = list(collection.find({ "$or" : [{"home.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, {"monitor.end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}]}, sort=[("rang", pymongo.ASCENDING)]))
-    news_display = sorted(news_display, key=compute_start, reverse = True)
-    
-    # Gerade online: grün; im Zeitraum, aber nicht öffentlich: orange
-    def mark(text, live, public):
-        if not live:
-            return text
-        return f":green-background[{text}]" if public else f":orange-background[{text} (nicht öffentlich)]"
+    news_display = list(collection.find({"end" : {"$gte" : datetime.now() + timedelta(days = - st.session_state.tage)}}, sort=[("start", pymongo.DESCENDING)]))
 
     jetzt = datetime.now()
-    co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
-    co4.markdown("**Titel**")
-    co5.markdown("Monitor")
-    co6.markdown("Home")
+    co1, co2, co3, co4 = st.columns([3,10,5,5]) 
+    co2.markdown("**Titel**")
+    co3.markdown("Zeitraum")
+    co4.markdown("Wo")
     for x in news_display:
         st.divider()
-        co1, co2, co3, co4, co5, co6 = st.columns([1,1,3,10,5,5]) 
-        ms = x["monitor"]["start"]
-        me = x["monitor"]["end"]
-        hs = x["home"]["start"]
-        he = x["home"]["end"]
-        auf_monitor = "Monitor" in x["tags"]
-        auf_home = [i for i in x["tags"] if i != "Monitor"] != []
-        monitordate = mark(f"{ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}", ms <= jetzt <= me, x["_public"]) if auf_monitor else " -- "
-        homedate = mark(f"{hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}", hs <= jetzt <= he, x["_public"]) if auf_home else " -- "
-        #with co1: 
-        #    st.button('↓', key=f'down-{x["_id"]}', on_click = tools.move_down, args = (collection, x, ))
-        #with co2:
-        #    st.button('↑', key=f'up-{x["_id"]}', on_click = tools.move_up, args = (collection, x, ))
-        with co3:
+        co1, co2, co3, co4 = st.columns([3,10,5,5]) 
+        zeitraum = f"{x['start'].strftime(util.datetime_format)} bis {x['end'].strftime(util.datetime_format)}"
+        label = tools.repr(collection, x["_id"], False)
+        if x["start"] <= jetzt <= x["end"]:
+            label = f":green-background[{label}]"
+        with co1:
             if x["image"] != []:
-#                st.write(x)
                 b = st.session_state.bild.find_one({"_id": x["image"][0]["_id"]})
-#                st.write(x["image"][0])
                 if b is not None:
                     st.image(b["thumbnail"])
-        with co4:
-            abk = f"{x['monitor']['title'].strip()}"
-            submit = st.button(tools.repr(collection, x["_id"], False), key=f"edit-{x['_id']}")
-        with co5: 
-            st.write(monitordate)
-        with co6: 
-            st.write(homedate)
+        with co2:
+            submit = st.button(label, key=f"edit-{x['_id']}")
+        with co3: 
+            st.write(zeitraum)
+        with co4: 
+            st.write(", ".join(x["tags"]))
         if submit:
             st.session_state.edit = x["_id"]
-            st.session_state.expanded = ""
             st.switch_page("pages/01_News_edit.py")
 
     st.divider()        
@@ -170,8 +87,8 @@ if st.session_state.logged_in:
         data = []
         for x in news_display:
             item = {}
-            item["titel"] = x["home"]["title_de"]
-            item["text"] = x["home"]["text_de"]
+            item["titel"] = x["title_de"]
+            item["text"] = x["text_de"]
             item["link"] = x["link"]
             item["filename"] = ""
             if x["image"] != []:

@@ -102,6 +102,8 @@ def remove_from_list(collection, id, field, element):
 def update_confirm(collection, x, x_updated, reset = True, text = "🎉 Erfolgreich geändert!"):
     util.logger.info(f"User {st.session_state.user} hat in {st.session_state.collection_name[collection]} Item {repr(collection, x['_id'])} geändert.")
     collection.update_one({"_id" : x["_id"]}, {"$set": x_updated })
+    if collection == st.session_state.instapost:
+        st.session_state.get("insta_ungespeichert", set()).discard(x["_id"])
     _doc.clear()
     if reset:
         reset_vars("")
@@ -225,7 +227,6 @@ def display_navigation():
     st.sidebar.write("Nur News der letzten ", st.session_state.tage, "Tage werden angezeigt.")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/00_New.py", label="News")
-    # st.sidebar.page_link("pages/02_Carouselnews.py", label="Carouselnews")
     st.sidebar.page_link("pages/04_Bild.py", label="Bilder")
     st.sidebar.write("<hr style='height:1px;margin:0px;;border:none;color:#333;background-color:#333;' /> ", unsafe_allow_html=True)
     st.sidebar.page_link("pages/09_Instagram.py", label="Instagram")
@@ -239,18 +240,8 @@ def display_navigation():
 def repr(collection, id, short = False, show_collection = True):
     x = _doc(collection.name, id)
     if collection == st.session_state.news:
-        title = x['monitor']['title'] if x['monitor']['title']!="" else x["home"]["title_de"]
-        title = f"**{title.strip()}**"
-        ms = x["monitor"]["start"]
-        me = x["monitor"]["end"]
-        hs = x["home"]["start"]
-        he = x["home"]["end"]
-        monitordate = f"monitor: {ms.strftime(util.datetime_format)} bis {me.strftime(util.datetime_format)}" if ms < me else "monitor: -"
-        homedate = f"home: {hs.strftime(util.datetime_format)} bis {he.strftime(util.datetime_format)}" if hs < he else "home: -"
-        res = f"{title}  _{monitordate}; {homedate}_"
-        res = f"{title}"
-    elif collection == st.session_state.carouselnews:
-        res = x['text'][0:50]
+        title = x["title_de"] if x["title_de"] != "" else x["title_monitor"]
+        res = f"**{title.strip()}**"
     elif collection == st.session_state.bild:
         res = x['titel']
     elif collection == st.session_state.instapost:
@@ -278,8 +269,46 @@ def delete_temporary(except_field = ""):
     if not except_field == "veranstaltung_tmp":
         st.session_state.veranstaltung_tmp.clear()
 
+# Instagram-Posts entstehen in der Datenbank schon beim Anlegen, oft schon
+# vorbelegt (aus einer News). Bis zum ersten Speichern (update_confirm) merkt
+# sich die Session ihre ids, damit "Zurück (ohne Speichern)" sie verwerfen kann.
+def insta_als_ungespeichert_merken(id):
+    st.session_state.setdefault("insta_ungespeichert", set()).add(id)
+
+def insta_nie_gespeichert(x):
+    return x["_id"] in st.session_state.get("insta_ungespeichert", set())
+
 def heutenulluhr():
     return datetime.combine(datetime.today(), datetime.min.time())
+
+# Links auf Monitor und Homepage zu einem wählbaren Zeitpunkt, oben auf den
+# News-Seiten. Der Monitor (News-App) ist nur im Institutsnetz erreichbar.
+def ansicht_links():
+    st.write("Unter folgenden Links erreicht man die Ansichten auf Monitor und Homepage an folgendem Datum:")
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        ansicht_datum = st.date_input("Datum", value = datetime.now().date(), format = "DD.MM.YYYY", key = "ansicht_datum")
+    with col2:
+        ansicht_zeit = st.time_input("Zeit", value = st.session_state.initial_zeit, key = "ansicht_zeit")
+    t = datetime.combine(ansicht_datum, ansicht_zeit).strftime(util.date_format_no_space)
+    st.write(f"[Ansicht des Monitors](http://mfs1.mathematik.privat:3000/{t}) · "
+             f"[Ansicht der Homepage (de)](https://www.math.uni-freiburg.de/nlehre/de/{t}) · "
+             f"[Ansicht der Homepage (en)](https://www.math.uni-freiburg.de/nlehre/en/{t})")
+
+# Öffnet den Editor für eine noch nicht gespeicherte News. vorlage sind die
+# Felder (z. B. einer kopierten News); angelegt wird erst beim Speichern.
+def news_vorlage_bearbeiten(vorlage = {}):
+    neu = {**st.session_state.new[st.session_state.news], **vorlage}
+    neu.pop("_id", None)
+    neu["start"] = heutenulluhr()
+    neu["end"] = heutenulluhr() + timedelta(days=7)
+    neu["bearbeitet"] = ""
+    st.session_state.news_vorlage = neu
+    # Eigene Widget-Keys pro Vorlage, damit keine Eingaben einer früheren
+    # neuen News stehen bleiben.
+    st.session_state.neu_nr = st.session_state.get("neu_nr", 0) + 1
+    st.session_state.edit = None
+    st.switch_page("pages/01_News_edit.py")
 
 def changeimagefun(collection, x, x_updated):
     st.session_state.changeimage = False

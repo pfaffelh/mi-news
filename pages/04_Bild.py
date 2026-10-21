@@ -21,7 +21,6 @@ tools.display_navigation()
 # Es geht hier vor allem um diese Collection:
 bild = st.session_state.bild
 news = st.session_state.news
-carouselnews = st.session_state.carouselnews
 collection = bild
 bearbeitet = f"Zuletzt bearbeitet von {st.session_state.username} am {datetime.now().strftime(util.date_format)}"                    
 
