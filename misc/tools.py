@@ -8,6 +8,8 @@ from misc.config import *
 from datetime import datetime, timedelta
 from PIL import Image
 import io
+import re
+from urllib.parse import quote
 
 # Laenge der laengeren Kante, auf die eine PDF-Seite gerastert wird. Unabhaengig
 # vom Papierformat, damit ein A3-Poster nicht viermal so viele Pixel ergibt wie
@@ -254,7 +256,7 @@ def repr(collection, id, short = False, show_collection = True):
         res = x['kurzname'] if short else (x['title_de'] if x['title_de']!="" else x['title_en'])
     elif collection == st.session_state.vortrag:
         res = f"{x['start'].strftime('%d.%m.%Y')}: "
-        res = res + f"{x['sprecher_de'] if x['sprecher_de'] != '' else x['sprecher_en']}, {x['title_de'] if x['title_de'] != '' else x['title_en']}"
+        res = res + f"{x['sprecher']}, {x['title_de'] if x['title_de'] != '' else x['title_en']}"
         # vre = ", ".join([repr(st.session_state.vortragsreihe, y, True, False) for y in x['vortragsreihe']])
         # res = (res + f" ({vre})").replace("\n", "")
     if show_collection:
@@ -277,6 +279,33 @@ def insta_als_ungespeichert_merken(id):
 
 def insta_nie_gespeichert(x):
     return x["_id"] in st.session_state.get("insta_ungespeichert", set())
+
+# Eine Vortragsreihe hat zwei Adressen: ihre Seite im Wochenprogramm, die
+# mi-hp aus dem Kurznamen erzeugt, und optional eine externe Homepage (url).
+KURZNAME_HILFE = "Aus dem Kurznamen entsteht die Seite im Wochenprogramm. Am besten nur Buchstaben, Ziffern, - und _. Ändert man ihn, ändert sich auch diese Adresse."
+URL_HILFE = "Eine eigene Seite außerhalb des Wochenprogramms, etwa die Homepage eines Workshops. Bei Events verlinkt das Wochenprogramm darauf."
+
+def wochenprogramm_url(reihe, lang = "de"):
+    art = "event" if reihe["event"] else "vortragsreihe"
+    return f"https://www.math.uni-freiburg.de/wochenprogramm/{lang}/{art}/{quote(reihe['kurzname'], safe='')}/"
+
+def reihe_links(reihe):
+    if reihe["kurzname"] != "":
+        st.success(f"Seite im Wochenprogramm: [deutsch]({wochenprogramm_url(reihe, 'de')}) · [englisch]({wochenprogramm_url(reihe, 'en')})")
+    else:
+        st.warning("Kein Kurzname angegeben. Nur mit einem Kurznamen erscheint die Reihe im Wochenprogramm.")
+    if reihe["url"] != "":
+        st.write(f"Externe Homepage: [{reihe['url']}]({reihe['url']})")
+
+def kurzname_aus_titel(titel):
+    return re.sub(r"[^a-z0-9_-]", "", titel.lower())
+
+def kurzname_pruefen(kurzname, x = None):
+    if re.search(r"[^A-Za-z0-9_-]", kurzname):
+        st.warning("Der Kurzname enthält Leerzeichen oder Sonderzeichen. Der Link funktioniert trotzdem, ist aber schwer abzutippen.")
+    for e in st.session_state.vortragsreihe.find({"kurzname" : kurzname}):
+        if x is None or e["_id"] != x["_id"]:
+            st.warning(f"Achtung, Kurzname nicht eindeutig, schon bei {e['title_de']} {e['title_en']} verwendet!")
 
 def heutenulluhr():
     return datetime.combine(datetime.today(), datetime.min.time())

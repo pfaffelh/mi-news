@@ -22,6 +22,16 @@ tools.display_navigation()
 # Es geht hier vor allem um diese Collection:
 collection = st.session_state.vortragsreihe
 
+# Titel und Beschreibung immer in beiden Sprachen zeigen, die typische Sprache
+# zuerst. Versteckte Felder behielten sonst alte Werte, die dann auf der Seite
+# der anderen Sprache erscheinen.
+def sprachfeld(eingabe, label, x, feld, lang, key):
+    werte = {}
+    for l in ([lang, "en" if lang == "de" else "de"]):
+        zusatz = "" if l == lang else " – optional, sonst wird die andere Sprache angezeigt"
+        werte[l] = eingabe(f"{label} ({l}){zusatz}", x.get(f"{feld}_{l}", ""), key = f"{feld}_{l}_{key}")
+    return werte["de"], werte["en"]
+
 # Ab hier wird die Seite angezeigt
 if st.session_state.logged_in:
     st.header("Vortragsreihen und Events")
@@ -33,12 +43,11 @@ if st.session_state.logged_in:
         _public_default = col3.toggle("Vorträge bereits beim Anlegen veröffentlichen", value = False)
         col1, col2, col3 = st.columns([1,1,1])
         lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 0, key ="select_lang_new")
-        title_de = "" if lang_default == "en" else col2.text_input("Titel (de)", "")
-        title_en = "" if lang_default != "en" else col2.text_input("Titel (en)", "")
-        kurzname = col3.text_input("Kurzname", "")
-        text_de = "" if lang_default == "en" else st.text_area("Beschreibung (de)", "")
-        text_en = "" if lang_default != "en" else st.text_area("Beschreibung (en)", "")
-        url = st.text_input("URL für die Vortragsreihe", "")
+        kurzname = col2.text_input("Kurzname", "", help = tools.KURZNAME_HILFE)
+        tools.kurzname_pruefen(kurzname)
+        title_de, title_en = sprachfeld(st.text_input, "Titel", {}, "title", lang_default, "new")
+        text_de, text_en = sprachfeld(st.text_area, "Beschreibung", {}, "text", lang_default, "new")
+        url = st.text_input("Externe Homepage (optional)", "", help = tools.URL_HILFE)
         if event:
             col1, col2 = st.columns([1,1])        
             startdatum = col1.date_input("Startdatum", datetime.now())
@@ -53,8 +62,7 @@ if st.session_state.logged_in:
         col1, col2 = st.columns([1,1]) 
         gastgeber_default = col1.text_input("Typischer Gastgeber", "")
         sekretariat_default = col2.text_input("Typisches bearbeitendes Sekretariat", "")
-        ort_de_default = "" if lang_default == "en" else col1.text_input("Typischer Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
-        ort_en_default = "" if lang_default != "en" else col1.text_input("Typischer Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", "")
+        ort_default = col1.text_input("Typischer Raum, wird automatisch bei Anlegen eines neuen Termins angegeben", "")
         duration_default = col2.number_input("Typische Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", min_value = 0, value = 90) 
         sync_with_calendar = False # st.toggle("Mit einem Kalender synchronisieren", value = False)
         calendar_url = "" # st.text_area("URL des Kalenders", "")
@@ -73,8 +81,7 @@ if st.session_state.logged_in:
             new["text_de"] = text_de
             new["text_en"] = text_en
             new["url"] = url
-            new["ort_de_default"] = ort_de_default
-            new["ort_en_default"] = ort_en_default
+            new["ort_default"] = ort_default
             new["gastgeber_default"] = gastgeber_default
             new["sekretariat_default"] = sekretariat_default
             new["duration_default"] = duration_default
@@ -124,12 +131,7 @@ if st.session_state.logged_in:
                         st.rerun()
                     with colu3: 
                         st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
-                if x["kurzname"] != "":
-                    st.success(f"Das Event ist im Wochenprogramm [hier](https://www.math.uni-freiburg.de/wochenprogramm/de/vortragsreihe/{x['kurzname']}) zu finden.")
-                else:
-                    st.warning("Kein Kurzname angegeben. Nur mit einem Kurznamen kann das Event in das Wochenprogramm aufgenommen werden!")
-                if x["url"] != "":
-                    st.success(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
+                tools.reihe_links(x)
 
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell (für obige Auswahl)", x["sichtbar"], key = f"sichtbar_{x['_id']}")
@@ -137,23 +139,16 @@ if st.session_state.logged_in:
                 _public_default = col3.toggle("Vorträge bereits beim anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
                 lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 1 if x["lang_default"] == "de" else 0, key = f"lang_default_{x['_id']}")
-                title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
-                title_en = x["title_en"] if lang_default != "en" else col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
-                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}", disabled = True if x["_id"] in st.session_state.nonedit_ids else False)
-                ev = list(collection.find({"kurzname" : kurzname}))
-                for e in ev: 
-                    if e != x:
-                        st.warning(f"Achtung, Kurzname nicht eindeutig, schon bei {e['title_de']} {e['title_en']} verwendet!")
-                
-                text_de = x["text_de"] if lang_default == "en" else st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
-                text_en = x["text_de"] if lang_default != "en" else st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
-                url = st.text_input("URL für die Vortragsreihe", x["url"], key = f"url_{x['_id']}")
+                kurzname = col2.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}", disabled = True if x["_id"] in st.session_state.nonedit_ids else False, help = tools.KURZNAME_HILFE)
+                tools.kurzname_pruefen(kurzname, x)
+                title_de, title_en = sprachfeld(st.text_input, "Titel", x, "title", lang_default, x["_id"])
+                text_de, text_en = sprachfeld(st.text_area, "Beschreibung", x, "text", lang_default, x["_id"])
+                url = st.text_input("Externe Homepage (optional)", x["url"], key = f"url_{x['_id']}", help = tools.URL_HILFE)
                 col1, col2 = st.columns([1,1])        
                 gastgeber_default = col1.text_input("Typischer Gastgeber", x["gastgeber_default"], key = f"gastgeber_default_{x['_id']}")
                 sekretariat_default = col2.text_input("Typisches bearbeitenden Sekretariat", x["sekretariat_default"], key = f"sekretariat_default_{x['_id']}")
                 col1, col2 = st.columns([1,1]) 
-                ort_de_default = x["ort_de_default"] if lang_default == "en" else col1.text_input("Typischer Ort (de), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_de_default"], key = f"ort_de_default_{x['_id']}")
-                ort_en_default = x["ort_en_default"] if lang_default != "en" else col1.text_input("Typischer Ort (en), wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_en_default"], key = f"ort_en_default_{x['_id']}")
+                ort_default = col1.text_input("Typischer Raum, wird automatisch bei Anlegen eines neuen Termins angegeben", x["ort_default"], key = f"ort_default_{x['_id']}")
                 duration_default = col2.number_input("Typische Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
                 sync_with_calendar = False # st.toggle("Mit einem Kalender synchronisieren", x["sync_with_calendar"], key = f"sync_with_calendar_{x['_id']}")
                 calendar_url = "" # st.text_input("URL des Kalenders", x["calendar_url"], key = f"calendar_url_{x['_id']}") if sync_with_calendar else x["calendar_url"]
@@ -170,16 +165,14 @@ if st.session_state.logged_in:
                     "url" : url,
                     "gastgeber_default" : gastgeber_default,
                     "sekretariat_default" : sekretariat_default,
-                    "url" : url,
-                    "ort_de_default" : ort_de_default,
-                    "ort_en_default" : ort_en_default,
+                    "ort_default" : ort_default,
                     "duration_default" : duration_default,
                     "_public_default" : _public_default,
                     "sync_with_calendar" : sync_with_calendar,
                     "calendar_url" : calendar_url,
                     "kommentar" : kommentar
                 }
-                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, "🎉 Gespeichert!"), key = f"save_{x['_id']}")
+                submit = st.button("Speichern", type="primary", on_click = tools.update_confirm, args = (collection, x, x_updated, False, "🎉 Gespeichert!"), key = f"save_{x['_id']}")
 
     st.subheader("Events")
     for x in events:
@@ -210,30 +203,20 @@ if st.session_state.logged_in:
                         st.rerun()
                     with colu3: 
                         st.button(label="Nein", on_click = st.success, args=("Nicht gelöscht!",), key = f"not-deleted-{x['_id']}")
-                if x["kurzname"] != "":
-                    st.success(f"Das Event ist im Wochenprogramm [hier](https://www.math.uni-freiburg.de/wochenprogramm/de/event/{x['kurzname']}) zu finden.")
-                else:
-                    st.warning("Kein Kurzname angegeben. Nur mit einem Kurznamen kann das Event in das Wochenprogramm aufgenommen werden!")
-                if x["url"] != "":
-                    st.write(f"Die angegebene Homepage für as Event ist [hier]({x['url']}).")
+                tools.reihe_links(x)
 
                 col1, col2, col3 = st.columns([1,1,1])
                 sichtbar = col1.toggle("Aktuell (für obige Auswahl)", x["sichtbar"], key = f"sichtbar_{x['_id']}")
                 _public = col2.toggle("Im Wochenprogramm sichtbar", x["_public"], key = f"public_{x['_id']}")
                 _public_default = col3.toggle("Vorträge bereits beim Anlegen veröffentlichen", x["_public_default"], key = f"public_default_{x['_id']}")
                 col1, col2, col3 = st.columns([1,1,1])
-                lang_default = col1.selectbox("Typische Sprache", ["en", "deutsch"], index = 1 if x["lang_default"] == "deutsch" else 0, key = f"lang_default_{x['_id']}")
-                title_de = x["title_de"] if lang_default == "en" else col2.text_input("Titel (de)", x["title_de"], key = f"title_de_{x['_id']}")
-                title_en = x["title_de"] if lang_default != "en" else col2.text_input("Titel (en)", x["title_en"], key = f"title_en_{x['_id']}")
-                kurzname = col3.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}")
+                lang_default = col1.selectbox("Typische Sprache", ["en", "de"], index = 1 if x["lang_default"] == "de" else 0, key = f"lang_default_{x['_id']}")
+                kurzname = col2.text_input("Kurzname", x["kurzname"], key = f"kurzname_{x['_id']}", help = tools.KURZNAME_HILFE)
+                title_de, title_en = sprachfeld(st.text_input, "Titel", x, "title", lang_default, x["_id"])
 
                 if kurzname == "":
-                    kurzname = (title_de if lang_default == "de" else title_en).replace(" ", "").lower()
-
-                ev = list(collection.find({"kurzname" : kurzname}))
-                for e in ev: 
-                    if e != x:
-                        st.warning(f"Achtung, Kurzname nicht eindeutig, schon bei {e['title_de']} {e['title_en']} verwendet!")
+                    kurzname = tools.kurzname_aus_titel(title_de if lang_default == "de" else title_en)
+                tools.kurzname_pruefen(kurzname, x)
 
                 col1, col2 = st.columns([1,1])
                 startdatum = col1.date_input("Startdatum", value = x["start"].date(), format = "DD.MM.YYYY", key = f"startdatum_{x['_id']}")
@@ -241,15 +224,13 @@ if st.session_state.logged_in:
                 enddatum = col2.date_input("Enddatum", value = x["end"].date(), format = "DD.MM.YYYY", key = f"enddatum_{x['_id']}")
                 end = datetime.combine(enddatum, datetime.min.time())
                 
-                text_de = x["text_de"] if lang_default == "en" else st.text_area("Beschreibung (de)", x["text_de"], key = f"text_de_{x['_id']}")
-                text_en = x["text_en"] if lang_default != "en" else st.text_area("Beschreibung (en)", x["text_en"], key = f"text_en_{x['_id']}")
-                url = st.text_input("URL für das Event", x["url"], key = f"url_{x['_id']}")
+                text_de, text_en = sprachfeld(st.text_area, "Beschreibung", x, "text", lang_default, x["_id"])
+                url = st.text_input("Externe Homepage (optional)", x["url"], key = f"url_{x['_id']}", help = tools.URL_HILFE)
                 col1, col2 = st.columns([1,1])
                 gastgeber_default = col1.text_input("Gastgeber", x["gastgeber_default"], key = f"gastgeber_default_{x['_id']}")
                 sekretariat_default = col2.text_input("Sekretariat", x["sekretariat_default"], key = f"sekretariat_default_{x['_id']}")
                 col1, col2 = st.columns([1,1])
-                ort_de_default = x["ort_de_default"] if lang_default == "en" else col1.text_input("Ort (de)", x["ort_de_default"], key = f"ort_de_default_{x['_id']}")
-                ort_en_default = x["ort_en_default"] if lang_default != "en" else col1.text_input("Ort (en)", x["ort_en_default"], key = f"ort_en_default_{x['_id']}")
+                ort_default = col1.text_input("Raum", x["ort_default"], key = f"ort_default_{x['_id']}")
                 duration_default = col2.number_input("Typische Vortragsdauer in Minuten, wird automatisch bei Anlegen eines neuen Termins angegeben", x["duration_default"], key = f"duration_default_{x['_id']}") 
                 sync_with_calendar = False # st.toggle("Mit einem Kalender synchronisieren", x["sync_with_calendar"], key = f"sync_with_calendar_{x['_id']}")
                 calendar_url = "" # st.text_input("URL des Kalenders", x["calendar_url"], key = f"calendar_url_{x['_id']}") if sync_with_calendar else x["calendar_url"]
@@ -266,8 +247,9 @@ if st.session_state.logged_in:
                     "text_de" : text_de,
                     "text_en" : text_en,
                     "url" : url,
-                    "ort_de_default" : ort_de_default,
-                    "ort_en_default" : ort_en_default,
+                    "gastgeber_default" : gastgeber_default,
+                    "sekretariat_default" : sekretariat_default,
+                    "ort_default" : ort_default,
                     "duration_default" : duration_default,
                     "_public_default" : _public_default,
                     "sync_with_calendar" : sync_with_calendar,

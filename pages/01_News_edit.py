@@ -116,11 +116,11 @@ if st.session_state.logged_in:
         endzeit = st.time_input("Endzeit", value = x["end"].time(), key = f"endzeit_{xid}")
     title_de = st.text_input("Titel (de)", x["title_de"], help = "Erscheint auf der Homepage und auf dem Monitor.", key = f"title_de_{xid}")
     text_de = st.text_area("Text (de)", x["text_de"], help = "Erscheint auf der Homepage und auf dem Monitor.", key = f"text_de_{xid}")
-    title_en = st.text_input("Titel (en)", x["title_en"], help = "Für die englische Homepage. Leer: der deutsche Titel wird angezeigt.", key = f"title_en_{xid}")
-    text_en = st.text_area("Text (en)", x["text_en"], help = "Für die englische Homepage. Leer: der deutsche Text wird angezeigt.", key = f"text_en_{xid}")
+    title_en = st.text_input("Titel (en) – optional, sonst wird der deutsche Titel angezeigt", x["title_en"], help = "Für die englische Homepage.", key = f"title_en_{xid}")
+    text_en = st.text_area("Text (en) – optional, sonst wird der deutsche Text angezeigt", x["text_en"], help = "Für die englische Homepage.", key = f"text_en_{xid}")
     fuermonitor = "Monitor" in tags
-    title_monitor = st.text_input("Abweichender Titel für den Monitor", x["title_monitor"], help = "Nur ausfüllen, wenn auf dem Monitor etwas anderes stehen soll als der deutsche Titel.", disabled = not fuermonitor, key = f"title_monitor_{xid}")
-    text_monitor = st.text_area("Abweichender Text für den Monitor", x["text_monitor"], help = "Nur ausfüllen, wenn auf dem Monitor etwas anderes stehen soll als der deutsche Text.", disabled = not fuermonitor, key = f"text_monitor_{xid}")
+    title_monitor = st.text_input("Titel für den Monitor – optional, sonst wird der deutsche Titel angezeigt", x["title_monitor"], help = "Nur ausfüllen, wenn auf dem Monitor etwas anderes stehen soll, etwa eine kürzere Fassung. Nur mit dem Tag „Monitor“ bearbeitbar.", disabled = not fuermonitor, key = f"title_monitor_{xid}")
+    text_monitor = st.text_area("Text für den Monitor – optional, sonst wird der deutsche Text angezeigt", x["text_monitor"], help = "Nur ausfüllen, wenn auf dem Monitor etwas anderes stehen soll, etwa eine kürzere Fassung. Nur mit dem Tag „Monitor“ bearbeitbar.", disabled = not fuermonitor, key = f"text_monitor_{xid}")
     link = st.text_input('Link', x["link"], key = f"link_{xid}")
     kommentar = st.text_input('Kommentar', x["kommentar"], help = "Nur intern, erscheint nirgends.", key = f"kommentar_{xid}")
 

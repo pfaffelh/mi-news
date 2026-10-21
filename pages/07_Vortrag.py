@@ -26,6 +26,16 @@ tools.display_navigation()
 # Es geht hier vor allem um diese Collection:
 st.session_state.collection = st.session_state.vortrag
 
+# Titel, Abstract und Kommentar immer in beiden Sprachen zeigen, die Sprache des
+# Vortrags zuerst. Versteckte Felder behielten sonst alte Werte, die dann auf der
+# Seite der anderen Sprache erscheinen.
+def sprachfeld(eingabe, labels, y, feld, lang, key):
+    werte = {}
+    for l in ([lang, "en" if lang == "de" else "de"]):
+        zusatz = "" if l == lang else " – optional, sonst wird die andere Sprache angezeigt"
+        werte[l] = eingabe(f"{labels[l]}{zusatz}", y.get(f"{feld}_{l}", ""), key = f"{feld}_{l}_{key}")
+    return werte["de"], werte["en"]
+
 def save(x_updated, text):
     tools.update_confirm(st.session_state.collection, x, x_updated, False, "Gespeichert!")
     st.session_state.expanded = ""
@@ -36,8 +46,7 @@ if st.session_state.logged_in:
     st.subheader(tools.repr(st.session_state.vortragsreihe, x['_id']))
     st.write(f"**Es werden die Vorträge der letzten {st.session_state.tage} angezeigt. Kann links oben geändert werden.**")
 
-    if x['url'] != "":
-        st.write(f"Die veröffentlichte Ansicht der Vorträge ist [hier]({x['url']})")
+    tools.reihe_links(x)
     sprachen = ["en", "de"]
     with st.popover("Neuen Vortrag anlegen"):
         col1, col2 = st.columns([1,1])
@@ -53,14 +62,11 @@ if st.session_state.logged_in:
         end = start + timedelta(minutes = x["duration_default"])
 
         col1, col2 = st.columns([1,1])
-        sprecher_de = "" if lang == "en" else col1.text_input("Sprecher (de)", "", key = "sprecher_new")
-        sprecher_en = "" if lang != "en" else col1.text_input("Sprecher (en)", "", key = "sprecher_new_en")
-        sprecher_affiliation_de = "" if lang == "en" else col2.text_input("Sprecher Affiliation (de)", "",  key = "sprecher_affiliation_de_new")
-        sprecher_affiliation_en = "" if lang != "en" else col2.text_input("Sprecher Affiliation (en)", "",  key = "sprecher_affiliation_en_new")
+        sprecher = col1.text_input("Sprecher", "", key = "sprecher_new")
+        sprecher_affiliation = col2.text_input("Affiliation", "",  key = "sprecher_affiliation_new")
         gastgeber = x["gastgeber_default"]
         sekretariat = x["sekretariat_default"]
-        ort_de = x["ort_de_default"]
-        ort_en = x["ort_en_default"]
+        ort = st.text_input("Raum", x["ort_default"], key = f"ort_new_{x['_id']}")
         title_de = "" if lang == "en" else st.text_input("Titel (de)", "",  key = "title_de_new")
         title_en = "" if lang != "en" else st.text_input("Titel (en)", "",  key = "title_en_new")
         text_de = ""
@@ -71,12 +77,9 @@ if st.session_state.logged_in:
         kommentar_intern = st.text_area("Kommentar (intern)", "",  key = f"kommentar_intern_new")
         x_updated = { 
                         "vortragsreihe" : vortragsreihe,
-                        "sprecher_de" : sprecher_de,
-                        "sprecher_en" : sprecher_en,
-                        "sprecher_affiliation_de" : sprecher_affiliation_de,
-                        "sprecher_affiliation_en" : sprecher_affiliation_en,
-                        "ort_de" : ort_de,
-                        "ort_en" : ort_en,
+                        "sprecher" : sprecher,
+                        "sprecher_affiliation" : sprecher_affiliation,
+                        "ort" : ort,
                         "gastgeber" : gastgeber,
                         "sekretariat" : sekretariat,
                         "title_de" : title_de,
@@ -135,21 +138,15 @@ if st.session_state.logged_in:
             end = datetime.combine(enddatum, endzeit)
 
             col1, col2, col3 = st.columns([1,1,1])
-            sprecher_de = y["sprecher_de"] if lang == "en" else col1.text_input("Sprecher (de)", y["sprecher_de"], key = f"sprecher_{y['_id']}")
-            sprecher_affiliation_de = y["sprecher_affiliation_de"] if lang == "en" else col2.text_input("Sprecher Affiliation (de)", y["sprecher_affiliation_de"],  key = f"sprecher_affiliation_de_{y['_id']}")
-            sprecher_en = y["sprecher_en"] if lang != "en" else col1.text_input("Sprecher (en)", y["sprecher_en"],  key = f"sprecher_en_{y['_id']}")
-            sprecher_affiliation_en = y["sprecher_affiliation_en"] if lang != "en" else col2.text_input("Sprecher Affiliation (en)", y["sprecher_affiliation_en"],  key = f"sprecher_affiliation_en_{y['_id']}")
-            ort_de = y["ort_de"] if lang == "en" else col3.text_input("Raum (de)", y["ort_de"],  key = f"ort_de_{y['_id']}")
-            ort_en = y["ort_en"] if lang != "en" else col3.text_input("Raum (en)", y["ort_en"],  key = f"ort_en_{y['_id']}")
+            sprecher = col1.text_input("Sprecher", y["sprecher"], key = f"sprecher_{y['_id']}")
+            sprecher_affiliation = col2.text_input("Affiliation", y["sprecher_affiliation"],  key = f"sprecher_affiliation_{y['_id']}")
+            ort = col3.text_input("Raum", y["ort"],  key = f"ort_{y['_id']}")
 
-            title_de = y["title_de"] if lang == "en" else st.text_input("Titel (de)", y["title_de"],  key = f"title_de_{y['_id']}")
-            title_en = y["title_en"] if lang != "en" else st.text_input("Titel (en)", y["title_en"],  key = f"title_en_{y['_id']}")
-            text_de = y["text_de"] if lang == "en" else st.text_area("Zusammenfassung (de)", y["text_de"],  key = f"text_de_{y['_id']}")
-            text_en = y["text_en"] if lang != "en" else st.text_area("Abstract (en)", y["text_en"],  key = f"text_en_{y['_id']}")
+            title_de, title_en = sprachfeld(st.text_input, {"de" : "Titel (de)", "en" : "Titel (en)"}, y, "title", lang, y["_id"])
+            text_de, text_en = sprachfeld(st.text_area, {"de" : "Zusammenfassung (de)", "en" : "Abstract (en)"}, y, "text", lang, y["_id"])
             url = st.text_input("URL", y["url"],  key = f"url_{y['_id']}")
 
-            kommentar_de = y["kommentar_de"] if lang == "en" else st.text_area("Kommentar (de)", y["kommentar_de"],  key = f"kommentar_de_{y['_id']}")
-            kommentar_en = y["kommentar_en"] if lang != "en" else st.text_area("Kommentar (en)", y["kommentar_en"],  key = f"kommentar_en_{y['_id']}")
+            kommentar_de, kommentar_en = sprachfeld(st.text_area, {"de" : "Kommentar (de)", "en" : "Kommentar (en)"}, y, "kommentar", lang, y["_id"])
             kommentar_intern = st.text_area("Kommentar (intern)", y["kommentar_intern"],  key = f"kommentar_intern_{y['_id']}")
 
             submit = st.button("Speichern", type='primary', key = f"speichern_{y['_id']}")
@@ -158,12 +155,9 @@ if st.session_state.logged_in:
             if save_all:    
                 y_updated = { 
                              "vortragsreihe" : vortragsreihe,
-                             "sprecher_de" : sprecher_de,
-                             "sprecher_en" : sprecher_en,
-                             "sprecher_affiliation_de" : sprecher_affiliation_de,
-                             "sprecher_affiliation_en" : sprecher_affiliation_en,
-                             "ort_de" : ort_de,
-                             "ort_en" : ort_en,
+                             "sprecher" : sprecher,
+                             "sprecher_affiliation" : sprecher_affiliation,
+                             "ort" : ort,
                              "title_de" : title_de,
                              "title_en" : title_en,
                              "text_de" : text_de,

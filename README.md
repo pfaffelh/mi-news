@@ -106,7 +106,7 @@ Alles liegt in der Datenbank `news`:
 |---|---|
 | `news` | Die Meldungen: ein Zeitraum und ein Text für Monitor und Homepage, optional ein abweichender Monitor-Text |
 | `bild` | Die Bilder selbst, als Binärdaten in der Datenbank — nicht im Dateisystem |
-| `vortragsreihe`, `vortrag` | Das Wochenprogramm |
+| `vortragsreihe`, `vortrag` | Das Wochenprogramm. Raum, Sprecher und Affiliation gibt es nur einmal, Titel, Abstract und Kommentare je Sprache (`mongo/schema20261021b.py`). Die Seite einer Reihe im Wochenprogramm entsteht aus ihrem `kurzname`; `url` ist nur eine optionale externe Homepage |
 | `instapost` | Instagram-Beiträge. Eigenständig, nicht an eine News gehängt: Bild und Text sind meist andere, die Caption ist länger |
 | `insta_bild` | Kurzlebige Ablage für das gerenderte Post-Bild, mit TTL-Index (siehe unten) |
 
@@ -117,7 +117,7 @@ der App nicht löschen.
 `schemaYYYYMMDD.py` beschreibt den Validator, `changeYYYYMMDD.py` spielt ihn ein
 und migriert vorhandene Daten. Die Änderungsskripte sind idempotent und lassen
 sich gefahrlos mehrfach laufen lassen; im Kopf jeder Datei steht, was sich
-gegenüber dem Vorgänger ändert und warum. Die jüngsten sind die vom 04.10.2026.
+gegenüber dem Vorgänger ändert und warum. Die jüngsten sind die vom 21.10.2026: `schema20261021.py` (schlanke News) und `schema20261021b.py` (Raum, Sprecher und Affiliation nur einmal).
 
 ## Instagram
 
